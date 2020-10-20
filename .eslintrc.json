@@ -1,0 +1,28 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "json-format"
+    ],
+    "rules": {
+    },
+    "settings": {
+        "json/sort-package-json": "standard",
+        "json/ignore-files": ["**/package-lock.json"],
+        "json/json-with-comments-files": [".vscode/**"]
+    }
+}

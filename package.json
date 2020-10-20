@@ -1,0 +1,63 @@
+{
+  "name": "gumgum-design",
+  "version": "1.5.0",
+  "description": "GumGum's design system, Concrete.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}' ",
+    "styles:build": "node-sass --include-path scss scss/index.scss   dist/main.css --output-style compressed",
+    "styles:build2": "node-sass --include-path scss styles/main.scss   dist/main.css --output-style compressed",
+    "styles:watch": "node-sass -w scss -o temp/",
+    "browsersync": "browser-sync start --server --files dist/*",
+    "start": "npm-run-all --parallel styles:watch browsersync"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gumgum/design-system.git"
+  },
+  "keywords": [
+    "design",
+    "system",
+    "ds",
+    "gumgum",
+    "node-sass",
+    "scss",
+    "css",
+    "prettier"
+  ],
+  "author": "Garrett Whisten",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gumgum/design-system/issues"
+  },
+  "homepage": "https://github.com/gumgum/design-system#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@storybook/addon-actions": "^6.0.26",
+    "@storybook/addon-essentials": "^6.0.26",
+    "@storybook/addon-links": "^6.0.26",
+    "@storybook/html": "^6.0.26",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.13",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-json-format": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "react-is": "^16.13.1",
+    "stylelint": "^13.7.2",
+    "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0"
+  }
+}

@@ -1,0 +1,57 @@
+.gds-filters {
+  @extend .gds-page-header__secondary-nav__icon-holder;
+  width: 130px;
+  top: -10px;
+}
+
+.gds-filters__button {
+  @extend .gds-page-header__secondary-nav__icon;
+  right: 0;
+  left: auto;
+}
+
+.gds-filters__button-link {
+  @extend .gds-page-header__secondary-nav__icon--link;
+  border-radius: $unit;
+  border: 1px solid $gg-light-2;
+  color: $gg-light-3;
+  padding: $unit/4 $unit;
+  font-size: $font-size-minus-2;
+  width: 140px;
+  &:hover {
+    border-color: $pageHeaderSecondaryBackgroundColor;
+  }
+}
+
+.gds-filters__button--active .gds-filters__button-link {
+  border-color: $pageHeaderSecondaryBackgroundColor;
+  color: $pageHeaderSecondaryBackgroundColor;
+}
+
+.gds-filters__menu {
+  @extend .gds-bubble__menu;
+  padding: 0 0.75 * $unit 0.25 * $unit 0.75 * $unit;
+  background-color: white;
+  &:before {
+    right: 53px;
+  }
+  @media #{$desktop-width} {
+    width: 800px;
+  }
+  @media #{$laptop-width} {
+    width: 600px;
+  }
+  @media #{$tablet-width} {
+    width: 450px;
+  }
+  @media #{$phablet-width} {
+    width: 350px;
+  }
+  @media #{$phone-width} {
+    width: 250px;
+    right: -50px;
+    &:before {
+      right: 103px;
+    }
+  }
+}

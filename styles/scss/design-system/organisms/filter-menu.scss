@@ -1,0 +1,21 @@
+.gds-bubble__menu--vi-filtering {
+  margin-top: 6px;
+  right: -48px;
+}
+
+.gds-bubble__menu--vi-filtering:before {
+  right: 52px;
+}
+
+.gds-bubble__menu--vi-filtering__menu {
+  width: 800px;
+}
+
+@media (max-width: 991px) {
+  .gds-bubble__menu--vi-filtering__menu {
+    /* TODO */
+  }
+}
+.gds-bubble__menu--vi__tag {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}

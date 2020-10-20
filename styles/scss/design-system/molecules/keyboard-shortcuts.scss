@@ -1,0 +1,31 @@
+.gds-keyboard-shortcuts {
+  @extend .gds-card;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  bottom: $unit;
+  left: $unit;
+  padding: ($unit * 0.5) $unit ($unit * 0.75);
+  border-radius: $border-radius;
+  margin-bottom: 0;
+  @include transition-ease-out(all, 1000ms);
+}
+
+.gds-keyboard-shortcuts--shown {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.gds-keyboard-shortcuts__label {
+  @extend .gds-form-group__label;
+  color: $gg-dark-4;
+  margin-bottom: ($unit / 2);
+}
+
+.gds-keyboard-shortcuts__trigger {
+  display: inline-block;
+  text-align: center;
+  width: ($unit * 1.5);
+  margin: 0 ($unit / 2) ($unit / 2) 0;
+  @extend .gds-text--keyboard;
+}

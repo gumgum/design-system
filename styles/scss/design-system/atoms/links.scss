@@ -1,0 +1,17 @@
+.gds-text--link {
+  color: $primaryColor;
+
+  &:hover {
+    text-decoration: underline;
+    color: $primaryLight2Color;
+  }
+}
+
+.gds-text--link-secondary {
+  color: $secondaryColor;
+
+  &:hover {
+    text-decoration: underline;
+    color: $secondaryLight2Color;
+  }
+}

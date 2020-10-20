@@ -1,0 +1,52 @@
+// -------------------------------------------------- //
+// Button variables
+// -------------------------------------------------- //
+$btn-font-size-xsmall: $font-size-minus-3;
+$btn-font-size-small: $font-size-minus-2;
+$btn-font-size-normal: $font-size;
+$btn-font-size-large: $font-size-plus-3;
+
+$btn-padding-xsmall: ($unit * 0.45) ($unit * 0.5) ($unit * 0.55) ($unit * 0.5);
+$btn-padding-small: ($unit * 0.6) ($unit * 0.7) ($unit * 0.75) ($unit * 0.7);
+$btn-padding-normal: $unit ($unit * 1.1);
+$btn-padding-large: ($unit * 1.35) ($unit * 1.5);
+
+$btn-padding-h: $unit !default;
+$btn-padding-v: ($unit * 0.375) !default;
+$btn-font-weight: normal !default;
+
+$btn-primary-color: #fff !default;
+$btn-primary-bg: $primaryColor !default;
+$btn-primary-border: $primaryDark1Color !default;
+
+$btn-secondary-color: $gg-dark-3 !default;
+$btn-secondary-bg: #fff !default;
+$btn-secondary-border: #ccc !default;
+
+$btn-info-color: #fff !default;
+$btn-info-bg: $infoLight1Color !default;
+$btn-info-border: $infoLight2Color !default;
+
+$btn-success-color: #fff !default;
+$btn-success-bg: $successColor !default;
+$btn-success-border: $successDark1Color !default;
+
+$btn-warning-color: #fff !default;
+$btn-warning-bg: $warningColor !default;
+$btn-warning-border: $warningDark1Color !default;
+
+$btn-danger-color: #fff !default;
+$btn-danger-bg: $dangerColor !default;
+$btn-danger-border: $dangerDark1Color !default;
+
+$btn-link-disabled-color: $gg-light-3 !default;
+
+$btn-padding-h-sm: ($unit * 0.75) !default;
+$btn-padding-v-sm: ($unit * 0.25) !default;
+
+$btn-padding-h-lg: ($unit * 1.25) !default;
+$btn-padding-v-lg: ($unit * 0.75) !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-width: 1px;
+$btn-border-radius: $border-radius;

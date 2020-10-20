@@ -1,0 +1,72 @@
+.gds-badge {
+  @include no-select();
+
+  background: $primaryColor;
+  border-radius: $border-radius;
+  box-shadow: none !important;
+  color: #fff;
+  display: inline-block;
+  font-family: $pri-font-regular;
+  font-size: 60%;
+  letter-spacing: 0.5px;
+  margin: 0 ($unit / 4);
+  padding: 1px ($unit / 4) 0;
+  pointer-events: none;
+  text-shadow: none !important;
+  vertical-align: text-top;
+}
+
+.gds-badge--inverse {
+  color: $primaryColor;
+}
+
+.gds-badge--dark {
+  background: $gg-dark-4 !important;
+}
+
+.gds-badge--success {
+  background: $successColor;
+}
+
+.gds-badge--success-inverse {
+  color: $successColor;
+}
+
+.gds-badge--info {
+  background: $infoColor;
+}
+
+.gds-badge--info-inverse {
+  color: $infoColor;
+}
+
+.gds-badge--warning {
+  background: $warningColor;
+}
+
+.gds-badge--warning-inverse {
+  color: $warningColor;
+}
+
+.gds-badge--danger {
+  background: $dangerColor;
+}
+
+.gds-badge--danger-inverse {
+  color: $dangerColor;
+}
+
+.gds-badge--inverse,
+.gds-badge--success-inverse,
+.gds-badge--info-inverse,
+.gds-badge--warning-inverse,
+.gds-badge--danger-inverse {
+  background: #fff;
+}
+
+.gds-badge--empty {
+  border-radius: ($unit / 4);
+  height: ($unit / 2);
+  vertical-align: super;
+  width: ($unit / 2);
+}

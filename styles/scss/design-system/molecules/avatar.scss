@@ -1,0 +1,149 @@
+.gds-avatar {
+  display: inline-block;
+  height: ($unit * 2);
+  margin-left: $unit;
+  cursor: pointer;
+}
+
+.gds-avatar--simple {
+  font-size: ($unit * 1.85);
+  color: $gg-light-4;
+  margin-left: ($unit * 0.75);
+
+  &:after {
+    content: none;
+  }
+
+  &:hover {
+    color: $primaryColor;
+  }
+}
+
+.gds-avatar--menu-open {
+  .gds-avatar__menu {
+    @extend .gds-bubble__menu--menu-open;
+  }
+
+  .gds-avatar__image {
+    @extend .gds-avatar__image--active;
+  }
+}
+
+.gds-avatar__icon {
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1.83rem;
+  font-size: 1.3rem;
+  display: block;
+}
+
+.gds-avatar__image {
+  width: ($unit * 2);
+  height: ($unit * 2);
+  border-radius: $unit;
+  @include transition-back(all, 250ms);
+  border: 1px solid transparent;
+  transform-origin: 50% 50%;
+  // SVG gear icon
+  &:after {
+    content: "";
+    width: ($unit * 1.1);
+    height: ($unit * 1.1);
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2028%2028%22%20style%3D%22enable-background%3Anew%200%200%2028%2028%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23FFFFFF%3B%7D.st1%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23#{strip-hash($gg-light-4)}%3B%7D%3C%2Fstyle%3E%3Cg%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M11.9%2C27.9l-1-2.3l-2.1%2C1.5L5.3%2C25l0.3-2.5L3%2C22.7l-2.1-3.6l1.5-2.1l-2.3-1v-4.1l2.3-1L0.9%2C8.8L3%2C5.3l2.5%2C0.3L5.3%2C3l3.6-2.1l2.1%2C1.5l1-2.3h4.1l1%2C2.3l2.1-1.5L22.7%2C3l-0.3%2C2.5L25%2C5.3l2.1%2C3.6l-1.5%2C2.1l2.3%2C1v4.1l-2.3%2C1l1.5%2C2.1L25%2C22.7l-2.5-0.3l0.3%2C2.5l-3.6%2C2.1l-2.1-1.5l-1%2C2.3H11.9z%22%2F%3E%3Cpath%20class%3D%22st1%22%20d%3D%22M26%2C13.2v1.7l-2.3%2C1c-0.1%2C0.5-0.2%2C0.9-0.4%2C1.4l1.5%2C2L24%2C20.7l-2.5-0.3c-0.3%2C0.4-0.7%2C0.7-1%2C1l0.3%2C2.5l-1.4%2C0.8l-2-1.5c-0.5%2C0.2-0.9%2C0.3-1.4%2C0.4l-1%2C2.3h-1.7l-1-2.3c-0.5-0.1-0.9-0.2-1.4-0.4l-2%2C1.5L7.3%2C24l0.3-2.5c-0.4-0.3-0.7-0.7-1-1L4%2C20.7l-0.8-1.4l1.5-2c-0.2-0.5-0.3-0.9-0.4-1.4l-2.3-1v-1.7l2.3-1c0.1-0.5%2C0.2-0.9%2C0.4-1.4l-1.5-2L4%2C7.3l2.5%2C0.3c0.3-0.4%2C0.7-0.7%2C1-1L7.3%2C4l1.4-0.8l2%2C1.5c0.5-0.2%2C0.9-0.3%2C1.4-0.4l1-2.3h1.7l1%2C2.3c0.5%2C0.1%2C0.9%2C0.2%2C1.4%2C0.4l2-1.5L20.7%2C4l-0.3%2C2.5c0.4%2C0.3%2C0.7%2C0.7%2C1%2C1L24%2C7.3l0.8%2C1.4l-1.5%2C2c0.2%2C0.5%2C0.3%2C0.9%2C0.4%2C1.4L26%2C13.2z%20M14%2C6.9c-3.9%2C0-7.1%2C3.2-7.1%2C7.1s3.2%2C7.1%2C7.1%2C7.1s7.1-3.2%2C7.1-7.1S17.9%2C6.9%2C14%2C6.9z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    pointer-events: none;
+    @include transition-ease-out(all, 1000ms);
+  }
+  &:hover {
+    border-color: white;
+    box-shadow: 0 0 0 2px $primaryColor;
+    transform: scale(1.1);
+  }
+  > img {
+    border-radius: 50%;
+  }
+}
+
+.gds-avatar__image--no-image {
+  border-color: $gg-light-4;
+  color: $gg-light-4;
+
+  span {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    top: 1px;
+    left: 1px;
+  }
+}
+
+.gds-avatar__image--dark {
+  border: 1px solid $gg-light-4;
+  color: $gg-light-4;
+  // SVG gear icon
+  &:after {
+    background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27.8 27.8'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23444444;%7D.cls-2%7Bfill:%23f3f3f3;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EgearDark%3C/title%3E%3Cpath class='cls-1' d='M11.8,27.8l-1-2.3L8.7,27,5.2,24.9l0.3-2.5-2.6.2L0.8,19l1.5-2.1L0,15.9V11.8l2.3-1L0.8,8.7,2.9,5.2,5.4,5.5,5.2,2.9,8.8,0.8l2.1,1.5,1-2.3H16l1,2.3,2.1-1.5,3.5,2.1L22.3,5.4l2.6-.2L27,8.8l-1.5,2.1,2.3,1V16l-2.3,1L27,19.1l-2.1,3.5-2.5-.3,0.3,2.5-3.6,2.1L17,25.4l-1,2.3H11.8v0.1Z'/%3E%3Cpath class='cls-2' d='M25.9,13.1v1.7l-2.3,1a7.37,7.37,0,0,1-.4,1.4l1.5,2-0.8,1.4-2.5-.3a9.43,9.43,0,0,1-1,1l0.3,2.5-1.4.8-2-1.5a7.37,7.37,0,0,1-1.4.4l-1,2.3H13.2l-1-2.3a7.37,7.37,0,0,1-1.4-.4l-2,1.5-1.6-.7,0.3-2.5a9.43,9.43,0,0,1-1-1l-2.6.2L3.1,19.2l1.5-2a7.37,7.37,0,0,1-.4-1.4l-2.3-1V13.1l2.3-1a7.37,7.37,0,0,1,.4-1.4l-1.5-2L3.9,7.2,6.4,7.5a9.43,9.43,0,0,1,1-1L7.2,3.9l1.4-.8,2,1.5A7.37,7.37,0,0,1,12,4.2l1-2.3h1.7l1,2.3a7.37,7.37,0,0,1,1.4.4l2-1.5,1.5,0.8L20.3,6.4a9.43,9.43,0,0,1,1,1l2.6-.2,0.8,1.4-1.5,2a7.37,7.37,0,0,1,.4,1.4Zm-12-6.3A7.1,7.1,0,1,0,21,13.9,7.13,7.13,0,0,0,13.9,6.8Z'/%3E%3C/svg%3E");
+  }
+  &:hover {
+    border-color: $gg-dark-2;
+  }
+}
+
+.gds-avatar__image--active {
+  border-color: white;
+  box-shadow: 0 0 0 2px $primaryColor;
+  transform: scale(1);
+  &:after {
+    transform: rotate(360deg);
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2028%2028%22%20style%3D%22enable-background%3Anew%200%200%2028%2028%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23FFFFFF%3B%7D.st1%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%23#{strip-hash($primaryColor)}%3B%7D%3C%2Fstyle%3E%3Cg%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M11.9%2C27.9l-1-2.3l-2.1%2C1.5L5.3%2C25l0.3-2.5L3%2C22.7l-2.1-3.6l1.5-2.1l-2.3-1v-4.1l2.3-1L0.9%2C8.8L3%2C5.3l2.5%2C0.3L5.3%2C3l3.6-2.1l2.1%2C1.5l1-2.3h4.1l1%2C2.3l2.1-1.5L22.7%2C3l-0.3%2C2.5L25%2C5.3l2.1%2C3.6l-1.5%2C2.1l2.3%2C1v4.1l-2.3%2C1l1.5%2C2.1L25%2C22.7l-2.5-0.3l0.3%2C2.5l-3.6%2C2.1l-2.1-1.5l-1%2C2.3H11.9z%22%2F%3E%3Cpath%20class%3D%22st1%22%20d%3D%22M26%2C13.2v1.7l-2.3%2C1c-0.1%2C0.5-0.2%2C0.9-0.4%2C1.4l1.5%2C2L24%2C20.7l-2.5-0.3c-0.3%2C0.4-0.7%2C0.7-1%2C1l0.3%2C2.5l-1.4%2C0.8l-2-1.5c-0.5%2C0.2-0.9%2C0.3-1.4%2C0.4l-1%2C2.3h-1.7l-1-2.3c-0.5-0.1-0.9-0.2-1.4-0.4l-2%2C1.5L7.3%2C24l0.3-2.5c-0.4-0.3-0.7-0.7-1-1L4%2C20.7l-0.8-1.4l1.5-2c-0.2-0.5-0.3-0.9-0.4-1.4l-2.3-1v-1.7l2.3-1c0.1-0.5%2C0.2-0.9%2C0.4-1.4l-1.5-2L4%2C7.3l2.5%2C0.3c0.3-0.4%2C0.7-0.7%2C1-1L7.3%2C4l1.4-0.8l2%2C1.5c0.5-0.2%2C0.9-0.3%2C1.4-0.4l1-2.3h1.7l1%2C2.3c0.5%2C0.1%2C0.9%2C0.2%2C1.4%2C0.4l2-1.5L20.7%2C4l-0.3%2C2.5c0.4%2C0.3%2C0.7%2C0.7%2C1%2C1L24%2C7.3l0.8%2C1.4l-1.5%2C2c0.2%2C0.5%2C0.3%2C0.9%2C0.4%2C1.4L26%2C13.2z%20M14%2C6.9c-3.9%2C0-7.1%2C3.2-7.1%2C7.1s3.2%2C7.1%2C7.1%2C7.1s7.1-3.2%2C7.1-7.1S17.9%2C6.9%2C14%2C6.9z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  }
+}
+
+.gds-avatar__image--active.gds-avatar__image--dark {
+  border-color: $gg-dark-2;
+  &:after {
+    background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27.8 27.8'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23444;%7D.cls-2%7Bfill:%2300c4b4;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EgearActive%3C/title%3E%3Cpath class='cls-1' d='M11.8,27.8l-1-2.3L8.7,27,5.2,24.9l0.3-2.5-2.6.2L0.8,19l1.5-2.1L0,15.9V11.8l2.3-1L0.8,8.7,2.9,5.2,5.4,5.5,5.2,2.9,8.8,0.8l2.1,1.5,1-2.3H16l1,2.3,2.1-1.5,3.5,2.1L22.3,5.4l2.6-.2L27,8.8l-1.5,2.1,2.3,1V16l-2.3,1L27,19.1l-2.1,3.5-2.5-.3,0.3,2.5-3.6,2.1L17,25.4l-1,2.3H11.8v0.1Z'/%3E%3Cpath class='cls-2' d='M25.9,13.1v1.7l-2.3,1a7.37,7.37,0,0,1-.4,1.4l1.5,2-0.8,1.4-2.5-.3a9.43,9.43,0,0,1-1,1l0.3,2.5-1.4.8-2-1.5a7.37,7.37,0,0,1-1.4.4l-1,2.3H13.2l-1-2.3a7.37,7.37,0,0,1-1.4-.4l-2,1.5-1.6-.7,0.3-2.5a9.43,9.43,0,0,1-1-1l-2.6.2L3.1,19.2l1.5-2a7.37,7.37,0,0,1-.4-1.4l-2.3-1V13.1l2.3-1a7.37,7.37,0,0,1,.4-1.4l-1.5-2L3.9,7.2,6.4,7.5a9.43,9.43,0,0,1,1-1L7.2,3.9l1.4-.8,2,1.5A7.37,7.37,0,0,1,12,4.2l1-2.3h1.7l1,2.3a7.37,7.37,0,0,1,1.4.4l2-1.5,1.5,0.8L20.3,6.4a9.43,9.43,0,0,1,1,1l2.6-.2,0.8,1.4-1.5,2a7.37,7.37,0,0,1,.4,1.4Zm-12-6.3A7.1,7.1,0,1,0,21,13.9,7.13,7.13,0,0,0,13.9,6.8Z'/%3E%3C/svg%3E");
+  }
+}
+
+// Dropdown menu
+.gds-avatar__menu {
+  @extend .gds-bubble__menu;
+}
+
+.gds-avatar__menu--dark {
+  @extend .gds-bubble__menu--dark;
+}
+
+.gds-avatar__menu-list-link {
+  @extend .gds-bubble__menu-list-link;
+}
+
+.gds-avatar__menu-list-link--dark {
+  @extend .gds-bubble__menu-list-link--dark;
+}
+
+.gds-avatar__menu-list {
+  @extend .gds-bubble__menu-list;
+}
+
+.gds-avatar__menu-list--dark {
+  @extend .gds-bubble__menu-list--dark;
+}
+
+.gds-avatar__menu-list-item--dark {
+  @extend .gds-bubble__menu-list-item--dark;
+}
+
+.gds-avatar__menu-list-divider {
+  @extend .gds-bubble__menu-list-divider;
+}
+
+.gds-avatar__menu-list-divider--dark {
+  @extend .gds-bubble__menu-list-divider--dark;
+}

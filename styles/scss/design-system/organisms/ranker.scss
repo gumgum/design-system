@@ -1,0 +1,539 @@
+$rating-size: $unit * 1.5;
+$icon-size: $unit * 3;
+
+.gds-ranker {
+  display: flex;
+}
+
+.gds-ranker--vertical {
+  justify-content: left;
+  display: inline-block;
+}
+
+.gds-ranker__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+}
+
+.gds-ranker__list--vertical {
+  flex-direction: column;
+  align-items: flex-end;
+  width: auto;
+}
+
+.gds-ranker__list--vertical-inverted {
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+}
+
+.gds-ranker--no-line {
+  &:before {
+    // Horizontal lines
+    display: none;
+  }
+}
+
+.gds-ranker__connector {
+  position: absolute;
+  bottom: #{$rating-size/2};
+  left: $icon-size/2;
+  right: $icon-size/2;
+  height: 1px;
+  background-color: $gg-light-2;
+}
+
+.gds-ranker__connector--inverted {
+  bottom: 0;
+  top: #{$rating-size/2};
+}
+
+.gds-ranker__connector--lg {
+  left: $icon-size;
+  right: $icon-size;
+}
+.gds-ranker__connector--xl {
+  left: $icon-size * 1.5;
+  right: $icon-size * 1.5;
+}
+
+.gds-ranker__connector--vertical {
+  right: #{$rating-size/2};
+  left: auto;
+  height: auto;
+  top: $icon-size/1.5;
+  bottom: $icon-size/1.5;
+  width: 1px;
+}
+
+.gds-ranker__connector--vertical-lg {
+  @extend .gds-ranker__connector--vertical;
+  top: $icon-size * 1.25;
+  bottom: $icon-size * 1.25;
+  right: #{$rating-size/1.5};
+  left: auto;
+}
+
+.gds-ranker__connector--vertical-xl {
+  @extend .gds-ranker__connector--vertical;
+  top: $icon-size * 1.75;
+  bottom: $icon-size * 1.75;
+  right: #{$rating-size/1.25};
+  left: auto;
+}
+
+.gds-ranker__connector--vertical-inverted {
+  @extend .gds-ranker__connector--vertical;
+  left: #{$rating-size/2};
+  right: auto;
+  &.gds-ranker__connector--vertical-lg,
+  &.gds-ranker__connector--vertical-xl {
+    left: #{$rating-size/1.5};
+    right: auto;
+  }
+}
+
+.gds-ranker__item-label {
+  margin-bottom: $unit / 2;
+  color: $primaryColor;
+  text-align: center;
+}
+
+.gds-ranker__item-label--secondary {
+  color: $secondaryColor;
+}
+
+.gds-ranker__item-label--tertiary {
+  color: $tertiaryColor;
+}
+
+.gds-ranker__item-label--lg {
+  font-size: $font-size-plus-1;
+}
+
+.gds-ranker__item-label--xl {
+  font-size: $font-size-plus-2;
+}
+
+.gds-ranker__item-label--inverted {
+  text-align: center;
+}
+
+.gds-ranker__item-label--vertical {
+  text-align: right;
+}
+.gds-ranker__item-label--vertical-inverted {
+  text-align: left;
+}
+
+.gds-ranker__item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+
+  &:after {
+    // Vertical line
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 50px;
+    background-color: $gg-light-2;
+  }
+  &:only-child {
+    left: calc(50% - #{$icon-size/2});
+  }
+  &:hover .gds-ranker__image {
+    transform: scale(1.07);
+  }
+}
+
+.gds-ranker__item--lg {
+  &:after {
+    height: 60px;
+  }
+}
+
+.gds-ranker__item--xl {
+  &:after {
+    height: 75px;
+  }
+}
+
+.gds-ranker__item--inverted {
+  flex-direction: column-reverse;
+  &:after {
+    top: 0;
+    bottom: auto;
+  }
+}
+
+.gds-ranker__item--vertical {
+  flex-direction: row;
+  &:after {
+    height: 1px;
+    top: 50%;
+    left: auto;
+    right: 0;
+    width: 50px;
+  }
+}
+
+.gds-ranker__item--vertical-inverted {
+  @extend .gds-ranker__item--vertical;
+  flex-direction: row-reverse;
+  &:after {
+    height: 1px;
+    top: 50%;
+    left: 0;
+    right: auto;
+  }
+}
+
+.gds-ranker__item--vertical-lg {
+  @extend .gds-ranker__item--vertical;
+  &:after {
+    width: 60px;
+  }
+}
+
+.gds-ranker__item--vertical-xl {
+  @extend .gds-ranker__item--vertical;
+  &:after {
+    width: 75px;
+  }
+}
+
+.gds-ranker__item-icon {
+  width: $icon-size;
+  height: $icon-size;
+  z-index: $z-index-2;
+  display: block;
+  margin: $unit 0 $unit 0;
+  @extend .gds-tooltip--top;
+}
+
+.gds-ranker__item-icon--lg {
+  width: $icon-size * 2;
+  height: $icon-size * 2;
+  margin: $unit * 1.5 0 $unit * 1.5 0;
+}
+
+.gds-ranker__item-icon--xl {
+  width: $icon-size * 2.75;
+  height: $icon-size * 2.75;
+  margin: $unit * 2 0 $unit * 2 0;
+}
+
+.gds-ranker__item-icon--vertical {
+  margin: $unit;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.gds-ranker__item-icon--vertical-lg {
+  @extend .gds-ranker__item-icon--vertical;
+  @extend .gds-ranker__item-icon--lg;
+  margin: $unit * 1.5;
+}
+
+.gds-ranker__item-icon--vertical-xl {
+  @extend .gds-ranker__item-icon--vertical;
+  @extend .gds-ranker__item-icon--xl;
+  margin: $unit * 2;
+}
+
+.gds-ranker__image {
+  @extend .gds-circular-thumbnail;
+  @extend .gds-circular-thumbnail--sm;
+}
+
+.gds-ranker__image--secondary {
+  @extend .gds-circular-thumbnail--secondary;
+}
+
+.gds-ranker__image--tertiary {
+  @extend .gds-circular-thumbnail--tertiary;
+}
+
+.gds-ranker__image--lg {
+  @extend .gds-circular-thumbnail--lg;
+}
+
+.gds-ranker__image--xl {
+  @extend .gds-circular-thumbnail--xl;
+}
+
+.gds-ranker__item-number {
+  color: white;
+  text-align: center;
+  width: $rating-size;
+  height: $rating-size;
+  line-height: $rating-size;
+  z-index: $z-index-1;
+  border-radius: 50%;
+  margin: auto;
+  background-color: $primaryColor;
+  font-family: $pri-font-regular;
+  font-size: $font-size-minus-2;
+  flex-shrink: 0;
+}
+
+.gds-ranker__item-number--lg {
+  width: $rating-size * 1.25;
+  height: $rating-size * 1.25;
+  line-height: $rating-size * 1.25;
+  font-size: $font-size-minus-1;
+}
+
+.gds-ranker__item-number--xl {
+  width: $rating-size * 1.5;
+  height: $rating-size * 1.5;
+  line-height: $rating-size * 1.5;
+  font-size: $font-size;
+}
+
+.gds-ranker__item-number--vertical {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.gds-ranker__item-number--vertical-lg {
+  @extend .gds-ranker__item-number--vertical;
+  @extend .gds-ranker__item-number--lg;
+}
+
+.gds-ranker__item-number--vertical-xl {
+  @extend .gds-ranker__item-number--vertical;
+  @extend .gds-ranker__item-number--xl;
+}
+
+.gds-ranker__item-number-ordinal {
+  font-size: $font-size-minus-4;
+  vertical-align: top;
+  bottom: $unit / 10;
+}
+
+.gds-ranker__item-number--secondary {
+  background-color: $secondaryColor;
+}
+
+.gds-ranker__item-number--tertiary {
+  background-color: $tertiaryColor;
+}
+
+@media #{$phone-width} {
+  .gds-ranker {
+    justify-content: left;
+    display: inline-block;
+  }
+
+  .gds-ranker__list {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+
+  .gds-ranker__list--vertical {
+    flex-direction: column;
+    align-items: flex-end;
+    width: auto;
+  }
+
+  .gds-ranker__list--vertical-inverted {
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+  }
+
+  .gds-ranker__item {
+    flex-direction: row;
+    &:after {
+      height: 1px;
+      top: 50%;
+      left: auto;
+      right: 0;
+      width: 50px;
+    }
+  }
+
+  .gds-ranker__item--lg {
+    &:after {
+      width: 60px;
+    }
+  }
+
+  .gds-ranker__item--xl {
+    &:after {
+      width: 75px;
+    }
+  }
+
+  .gds-ranker__item--inverted {
+    flex-direction: row-reverse;
+    &:after {
+      height: 1px;
+      width: 50px;
+      top: 50%;
+      left: 0;
+      right: auto;
+    }
+    &.gds-ranker__item--lg {
+      &:after {
+        width: 60px;
+      }
+    }
+    &.gds-ranker__item--xl {
+      &:after {
+        width: 75px;
+      }
+    }
+  }
+
+  .gds-ranker__item--vertical {
+    flex-direction: row;
+    &:after {
+      height: 1px;
+      top: 50%;
+      left: auto;
+      right: 0;
+      width: 50px;
+    }
+    &.gds-ranker__item--lg,
+    &.gds-ranker__item--vertical-lg {
+      &:after {
+        width: 60px;
+      }
+    }
+    &.gds-ranker__item--xl,
+    &.gds-ranker__item--vertical-xl {
+      &:after {
+        width: 75px;
+      }
+    }
+  }
+
+  .gds-ranker__item--vertical-inverted {
+    flex-direction: row-reverse;
+    &:after {
+      height: 1px;
+      top: 50%;
+      left: 0;
+      right: auto;
+      width: 50px;
+    }
+    &.gds-ranker__item--lg,
+    &.gds-ranker__item--vertical-lg {
+      &:after {
+        width: 60px;
+      }
+    }
+    &.gds-ranker__item--xl,
+    &.gds-ranker__item--vertical-xl {
+      &:after {
+        width: 75px;
+      }
+    }
+  }
+
+  .gds-ranker__item-icon {
+    margin: $unit;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .gds-ranker__item-icon--lg,
+  .gds-ranker__item-icon--vertical-lg {
+    margin: $unit * 1.5;
+  }
+
+  .gds-ranker__item-icon--xl,
+  .gds-ranker__item-icon--vertical-xl {
+    margin: $unit * 2;
+  }
+
+  .gds-ranker__item-number {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .gds-ranker__item-label,
+  .gds-ranker__item-label--vertical {
+    text-align: right;
+  }
+
+  .gds-ranker__item-label--inverted,
+  .gds-ranker__item-label--vertical-inverted {
+    text-align: left;
+  }
+
+  .gds-ranker__connector {
+    right: #{$rating-size/2};
+    left: auto;
+    height: auto;
+    top: $icon-size/1.5;
+    bottom: $icon-size/1.5;
+    width: 1px;
+    &.gds-ranker__connector--lg {
+      top: $icon-size * 1.25;
+      bottom: $icon-size * 1.25;
+      right: #{$rating-size/1.5};
+    }
+    &.gds-ranker__connector--xl {
+      top: $icon-size * 1.75;
+      bottom: $icon-size * 1.75;
+      right: #{$rating-size/1.5};
+    }
+  }
+
+  .gds-ranker__connector--vertical {
+    right: #{$rating-size/2};
+    left: auto;
+    height: auto;
+    top: $icon-size/1.5;
+    bottom: $icon-size/1.5;
+    width: 1px;
+    &.gds-ranker__connector--lg,
+    &.gds-ranker__connector--vertical-lg {
+      top: $icon-size * 1.25;
+      bottom: $icon-size * 1.25;
+      right: #{$rating-size/1.5};
+    }
+    &.gds-ranker__connector--xl,
+    &.gds-ranker__connector--vertical-xl {
+      top: $icon-size * 1.75;
+      bottom: $icon-size * 1.75;
+      right: #{$rating-size/1.5};
+    }
+  }
+
+  .gds-ranker__connector--inverted,
+  .gds-ranker__connector--vertical-inverted {
+    left: #{$rating-size/2};
+    right: auto;
+    height: auto;
+    width: 1px;
+    top: $icon-size/1.5;
+    bottom: $icon-size/1.5;
+    &.gds-ranker__connector--lg,
+    &.gds-ranker__connector--vertical-lg {
+      top: $icon-size * 1.25;
+      bottom: $icon-size * 1.25;
+      left: #{$rating-size/1.5};
+      right: auto;
+    }
+    &.gds-ranker__connector--xl,
+    &.gds-ranker__connector--vertical-xl {
+      top: $icon-size * 1.75;
+      bottom: $icon-size * 1.75;
+      left: #{$rating-size/1.5};
+      right: auto;
+    }
+  }
+}

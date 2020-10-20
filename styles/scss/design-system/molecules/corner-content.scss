@@ -1,0 +1,77 @@
+.gds-corner-content {
+  position: fixed;
+  width: ($unit * 30);
+  bottom: 0;
+  transform: translateY(100%);
+  background-color: white;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+  z-index: $z-index-8;
+  @extend .-transition-out-250;
+
+  @media #{$phone-width}, #{$phablet-width} {
+    left: $unit;
+    right: $unit;
+    width: auto;
+  }
+}
+
+// Show .gds-corner-content
+.gds-corner-content--shown {
+  transform: translateY(0%);
+}
+
+.gds-corner-content--top {
+  top: 0;
+  bottom: auto;
+  transform: translateY(-100%);
+
+  &.gds-corner-content--shown {
+    transform: translateY(0%);
+  }
+
+  .gds-corner-content__header {
+    top: 100%;
+    bottom: auto;
+  }
+}
+
+.gds-corner-content--right {
+  right: $unit;
+}
+
+.gds-corner-content--left {
+  left: $unit;
+}
+
+.gds-corner-content__header {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  background-color: $gg-dark-3;
+  overflow: hidden;
+  border-radius: $border-radius $border-radius 0 0;
+  cursor: pointer;
+}
+
+.gds-corner-content__title {
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+  padding: ($unit * 0.4) 0 0 ($unit * 0.7);
+}
+
+// Buttons in .gds-corner-content__header
+.gds-corner-content__controls {
+  float: right;
+
+  &:after {
+    @extend .-clear-both;
+  }
+}
+
+.gds-corner-content__button {
+  @extend .gds-button;
+  @extend .gds-button--link;
+  @extend .gds-button--sm;
+}

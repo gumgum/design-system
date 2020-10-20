@@ -1,0 +1,666 @@
+.gds-legend--overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  pointer-events: none;
+}
+
+.gds-legend--overlay-center {
+  align-items: center;
+}
+
+.gds-legend__items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.gds-legend__items--stacked {
+  flex-direction: column;
+}
+
+.gds-legend__item {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  cursor: pointer;
+  margin: 0 $unit/3;
+  pointer-events: all;
+  &:hover {
+    .gds-legend__swatch,
+    .gds-legend__value {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.gds-legend__item--stacked {
+  line-height: 1.3;
+  .gds-legend__label {
+    display: block;
+  }
+}
+
+.gds-legend__label {
+  @extend .gds-form-group__label;
+  @extend .-va-top;
+  margin-bottom: 0;
+}
+
+.gds-legend__value,
+.gds-legend__value--md {
+  @extend .-inline-block;
+  @extend .gds-text--header-md;
+  @extend .gds-text--regular;
+  @include transition-back(all, 250ms);
+}
+
+.gds-legend__value.gds-legend__value--sm {
+  @extend .gds-text--header-sm;
+}
+
+.gds-legend__value.gds-legend__value--xs {
+  @extend .gds-text--body-xs;
+}
+
+.gds-legend__value.gds-legend__value--lg {
+  @extend .gds-text--header-lg;
+}
+
+.gds-legend__value.gds-legend__value--xl {
+  @extend .gds-text--header-xl;
+}
+
+.gds-legend__swatch {
+  display: inline-block;
+  height: $unit * 1.25;
+  width: $unit * 1.25;
+  background-color: black;
+  box-shadow: inset 0 0 0 1px white;
+  border-radius: 50%;
+  @include transition-back(all, 250ms);
+}
+
+.gds-legend__swatch--tip {
+  @extend .gds-tooltip--top;
+}
+
+.gds-legend__swatch--square {
+  border-radius: 0;
+}
+
+.gds-legend__swatch[data-gds-color="red"] {
+  background-color: $gg-red;
+  border: 1px solid $gg-red;
+}
+
+.gds-legend__swatch[data-gds-color="red-dk-1"] {
+  background-color: $gg-red-dark-1;
+  border: 1px solid $gg-red-dark-1;
+}
+
+.gds-legend__swatch[data-gds-color="red-dk-2"] {
+  background-color: $gg-red-dark-2;
+  border: 1px solid $gg-red-dark-2;
+}
+
+.gds-legend__swatch[data-gds-color="red-dk-3"] {
+  background-color: $gg-red-dark-3;
+  border: 1px solid $gg-red-dark-3;
+}
+
+.gds-legend__swatch[data-gds-color="red-dk-4"] {
+  background-color: $gg-red-dark-4;
+  border: 1px solid $gg-red-dark-4;
+}
+
+.gds-legend__swatch[data-gds-color="red-lt-1"] {
+  background-color: $gg-red-light-1;
+  border: 1px solid $gg-red-light-1;
+}
+
+.gds-legend__swatch[data-gds-color="red-lt-2"] {
+  background-color: $gg-red-light-2;
+  border: 1px solid $gg-red-light-2;
+}
+
+.gds-legend__swatch[data-gds-color="red-lt-3"] {
+  background-color: $gg-red-light-3;
+  border: 1px solid $gg-red-light-3;
+}
+
+.gds-legend__swatch[data-gds-color="red-lt-4"] {
+  background-color: $gg-red-light-4;
+  border: 1px solid $gg-red-light-4;
+}
+
+.gds-legend__swatch[data-gds-color="green"] {
+  background-color: $gg-green;
+  border: 1px solid $gg-green;
+}
+
+.gds-legend__swatch[data-gds-color="green-dk-1"] {
+  background-color: $gg-green-dark-1;
+  border: 1px solid $gg-green-dark-1;
+}
+
+.gds-legend__swatch[data-gds-color="green-dk-2"] {
+  background-color: $gg-green-dark-2;
+  border: 1px solid $gg-green-dark-2;
+}
+
+.gds-legend__swatch[data-gds-color="green-dk-3"] {
+  background-color: $gg-dkgreen-dark-3;
+  border: 1px solid $gg-dkgreen-dark-3;
+}
+
+.gds-legend__swatch[data-gds-color="green-dk-4"] {
+  background-color: $gg-green-dark-4;
+  border: 1px solid $gg-green-dark-4;
+}
+
+.gds-legend__swatch[data-gds-color="green-lt-1"] {
+  background-color: $gg-green-light-1;
+  border: 1px solid $gg-green-light-1;
+}
+
+.gds-legend__swatch[data-gds-color="green-lt-2"] {
+  background-color: $gg-green-light-2;
+  border: 1px solid $gg-green-light-2;
+}
+
+.gds-legend__swatch[data-gds-color="green-lt-3"] {
+  background-color: $gg-green-light-3;
+  border: 1px solid $gg-green-light-3;
+}
+
+.gds-legend__swatch[data-gds-color="green-lt-4"] {
+  background-color: $gg-green-light-4;
+  border: 1px solid $gg-green-light-4;
+}
+
+.gds-legend__swatch[data-gds-color="blue"] {
+  background-color: $gg-blue;
+  border: 1px solid $gg-blue;
+}
+
+.gds-legend__swatch[data-gds-color="blue-dk-1"] {
+  background-color: $gg-blue-dark-1;
+  border: 1px solid $gg-blue-dark-1;
+}
+
+.gds-legend__swatch[data-gds-color="blue-dk-2"] {
+  background-color: $gg-blue-dark-2;
+  border: 1px solid $gg-blue-dark-2;
+}
+
+.gds-legend__swatch[data-gds-color="blue-dk-3"] {
+  background-color: $gg-blue-dark-3;
+  border: 1px solid $gg-blue-dark-3;
+}
+
+.gds-legend__swatch[data-gds-color="blue-dk-4"] {
+  background-color: $gg-blue-dark-4;
+  border: 1px solid $gg-blue-dark-4;
+}
+
+.gds-legend__swatch[data-gds-color="blue-lt-1"] {
+  background-color: $gg-blue-light-1;
+  border: 1px solid $gg-blue-light-1;
+}
+
+.gds-legend__swatch[data-gds-color="blue-lt-2"] {
+  background-color: $gg-blue-light-2;
+  border: 1px solid $gg-blue-light-2;
+}
+
+.gds-legend__swatch[data-gds-color="blue-lt-3"] {
+  background-color: $gg-blue-light-3;
+  border: 1px solid $gg-blue-light-3;
+}
+
+.gds-legend__swatch[data-gds-color="blue-lt-4"] {
+  background-color: $gg-blue-light-4;
+  border: 1px solid $gg-blue-light-4;
+}
+
+.gds-legend__swatch[data-gds-color="gold"] {
+  background-color: $gg-gold;
+  border: 1px solid $gg-gold;
+}
+
+.gds-legend__swatch[data-gds-color="gold-dk-1"] {
+  background-color: $gg-gold-dark-1;
+  border: 1px solid $gg-gold-dark-1;
+}
+
+.gds-legend__swatch[data-gds-color="gold-dk-2"] {
+  background-color: $gg-gold-dark-2;
+  border: 1px solid $gg-gold-dark-2;
+}
+
+.gds-legend__swatch[data-gds-color="gold-dk-3"] {
+  background-color: $gg-gold-dark-3;
+  border: 1px solid $gg-gold-dark-3;
+}
+
+.gds-legend__swatch[data-gds-color="gold-dk-4"] {
+  background-color: $gg-gold-dark-4;
+  border: 1px solid $gg-gold-dark-4;
+}
+
+.gds-legend__swatch[data-gds-color="gold-lt-1"] {
+  background-color: $gg-gold-light-1;
+  border: 1px solid $gg-gold-light-1;
+}
+
+.gds-legend__swatch[data-gds-color="gold-lt-2"] {
+  background-color: $gg-gold-light-2;
+  border: 1px solid $gg-gold-light-2;
+}
+
+.gds-legend__swatch[data-gds-color="gold-lt-3"] {
+  background-color: $gg-gold-light-3;
+  border: 1px solid $gg-gold-light-3;
+}
+
+.gds-legend__swatch[data-gds-color="gold-lt-4"] {
+  background-color: $gg-gold-light-4;
+  border: 1px solid $gg-gold-light-4;
+}
+
+.gds-legend__swatch[data-gds-color="purple"] {
+  background-color: $gg-purple;
+  border: 1px solid $gg-purple;
+}
+
+.gds-legend__swatch[data-gds-color="purple-dk-1"] {
+  background-color: $gg-purple-dark-1;
+  border: 1px solid $gg-purple-dark-1;
+}
+
+.gds-legend__swatch[data-gds-color="purple-dk-2"] {
+  background-color: $gg-purple-dark-2;
+  border: 1px solid $gg-purple-dark-2;
+}
+
+.gds-legend__swatch[data-gds-color="purple-dk-3"] {
+  background-color: $gg-purple-dark-3;
+  border: 1px solid $gg-purple-dark-3;
+}
+
+.gds-legend__swatch[data-gds-color="purple-dk-4"] {
+  background-color: $gg-purple-dark-4;
+  border: 1px solid $gg-purple-dark-4;
+}
+
+.gds-legend__swatch[data-gds-color="purple-lt-1"] {
+  background-color: $gg-purple-light-1;
+  border: 1px solid $gg-purple-light-1;
+}
+
+.gds-legend__swatch[data-gds-color="purple-lt-2"] {
+  background-color: $gg-purple-light-2;
+  border: 1px solid $gg-purple-light-2;
+}
+
+.gds-legend__swatch[data-gds-color="purple-lt-3"] {
+  background-color: $gg-purple-light-3;
+  border: 1px solid $gg-purple-light-3;
+}
+
+.gds-legend__swatch[data-gds-color="purple-lt-4"] {
+  background-color: $gg-purple-light-4;
+  border: 1px solid $gg-purple-light-4;
+}
+
+.gds-legend__swatch[data-gds-color="dkgreen"] {
+  background-color: $gg-dkgreen;
+  border: 1px solid $gg-dkgreen;
+}
+
+.gds-legend__swatch[data-gds-color="dkgreen-dk-1"] {
+  background-color: $gg-dkgreen-dark-1;
+  border: 1px solid $gg-dkgreen-dark-1;
+}
+
+.gds-legend__swatch[data-gds-color="dkgreen-dk-2"] {
+  background-color: $gg-dkgreen-dark-2;
+  border: 1px solid $gg-dkgreen-dark-2;
+}
+
+.gds-legend__swatch[data-gds-color="dkgreen-dk-3"] {
+  background-color: $gg-dkgreen-dark-3;
+  border: 1px solid $gg-dkgreen-dark-3;
+}
+
+.gds-legend__swatch[data-gds-color="dkgreen-dk-4"] {
+  background-color: $gg-dkgreen-dark-4;
+  border: 1px solid $gg-dkgreen-dark-4;
+}
+
+.gds-legend__swatch[data-gds-color="dkgreen-lt-1"] {
+  background-color: $gg-dkgreen-light-1;
+  border: 1px solid $gg-dkgreen-light-1;
+}
+
+.gds-legend__swatch[data-gds-color="dkgreen-lt-2"] {
+  background-color: $gg-dkgreen-light-2;
+  border: 1px solid $gg-dkgreen-light-2;
+}
+
+.gds-legend__swatch[data-gds-color="dkgreen-lt-3"] {
+  background-color: $gg-dkgreen-light-3;
+  border: 1px solid $gg-dkgreen-light-3;
+}
+
+.gds-legend__swatch[data-gds-color="dkgreen-lt-4"] {
+  background-color: $gg-dkgreen-light-4;
+  border: 1px solid $gg-dkgreen-light-4;
+}
+
+.gds-legend__swatch[data-gds-color="orange"] {
+  background-color: $gg-orange;
+  border: 1px solid $gg-orange;
+}
+
+.gds-legend__swatch[data-gds-color="orange-dk-1"] {
+  background-color: $gg-orange-dark-1;
+  border: 1px solid $gg-orange-dark-1;
+}
+
+.gds-legend__swatch[data-gds-color="orange-dk-2"] {
+  background-color: $gg-orange-dark-2;
+  border: 1px solid $gg-orange-dark-2;
+}
+
+.gds-legend__swatch[data-gds-color="orange-dk-3"] {
+  background-color: $gg-orange-dark-3;
+  border: 1px solid $gg-orange-dark-3;
+}
+
+.gds-legend__swatch[data-gds-color="orange-dk-4"] {
+  background-color: $gg-orange-dark-4;
+  border: 1px solid $gg-orange-dark-4;
+}
+
+.gds-legend__swatch[data-gds-color="orange-lt-1"] {
+  background-color: $gg-orange-light-1;
+  border: 1px solid $gg-orange-light-1;
+}
+
+.gds-legend__swatch[data-gds-color="orange-lt-2"] {
+  background-color: $gg-orange-light-2;
+  border: 1px solid $gg-orange-light-2;
+}
+
+.gds-legend__swatch[data-gds-color="orange-lt-3"] {
+  background-color: $gg-orange-light-3;
+  border: 1px solid $gg-orange-light-3;
+}
+
+.gds-legend__swatch[data-gds-color="orange-lt-4"] {
+  background-color: $gg-orange-light-4;
+  border: 1px solid $gg-orange-light-4;
+}
+
+.gds-legend__value[data-gds-color="red"] {
+  color: $gg-red;
+}
+
+.gds-legend__value[data-gds-color="red-dk-1"] {
+  color: $gg-red-dark-1;
+}
+
+.gds-legend__value[data-gds-color="red-dk-2"] {
+  color: $gg-red-dark-2;
+}
+
+.gds-legend__value[data-gds-color="red-dk-3"] {
+  color: $gg-red-dark-3;
+}
+
+.gds-legend__value[data-gds-color="red-dk-4"] {
+  color: $gg-red-dark-4;
+}
+
+.gds-legend__value[data-gds-color="red-lt-1"] {
+  color: $gg-red-light-1;
+}
+
+.gds-legend__value[data-gds-color="red-lt-2"] {
+  color: $gg-red-light-2;
+}
+
+.gds-legend__value[data-gds-color="red-lt-3"] {
+  color: $gg-red-light-3;
+}
+
+.gds-legend__value[data-gds-color="red-lt-4"] {
+  color: $gg-red-light-4;
+}
+
+.gds-legend__value[data-gds-color="green"] {
+  color: $gg-green;
+}
+
+.gds-legend__value[data-gds-color="green-dk-1"] {
+  color: $gg-green-dark-1;
+}
+
+.gds-legend__value[data-gds-color="green-dk-2"] {
+  color: $gg-green-dark-2;
+}
+
+.gds-legend__value[data-gds-color="green-dk-3"] {
+  color: $gg-green-dark-3;
+}
+
+.gds-legend__value[data-gds-color="green-dk-4"] {
+  color: $gg-green-dark-4;
+}
+
+.gds-legend__value[data-gds-color="green-lt-1"] {
+  color: $gg-green-light-1;
+}
+
+.gds-legend__value[data-gds-color="green-lt-2"] {
+  color: $gg-green-light-2;
+}
+
+.gds-legend__value[data-gds-color="green-lt-3"] {
+  color: $gg-green-light-3;
+}
+
+.gds-legend__value[data-gds-color="green-lt-4"] {
+  color: $gg-green-light-4;
+}
+
+.gds-legend__value[data-gds-color="blue"] {
+  color: $gg-blue;
+}
+
+.gds-legend__value[data-gds-color="blue-dk-1"] {
+  color: $gg-blue-dark-1;
+}
+
+.gds-legend__value[data-gds-color="blue-dk-2"] {
+  color: $gg-blue-dark-2;
+}
+
+.gds-legend__value[data-gds-color="blue-dk-3"] {
+  color: $gg-blue-dark-3;
+}
+
+.gds-legend__value[data-gds-color="blue-dk-4"] {
+  color: $gg-blue-dark-4;
+}
+
+.gds-legend__value[data-gds-color="blue-lt-1"] {
+  color: $gg-blue-light-1;
+}
+
+.gds-legend__value[data-gds-color="blue-lt-2"] {
+  color: $gg-blue-light-2;
+}
+
+.gds-legend__value[data-gds-color="blue-lt-3"] {
+  color: $gg-blue-light-3;
+}
+
+.gds-legend__value[data-gds-color="blue-lt-4"] {
+  color: $gg-blue-light-4;
+}
+
+.gds-legend__value[data-gds-color="gold"] {
+  color: $gg-gold;
+}
+
+.gds-legend__value[data-gds-color="gold-dk-1"] {
+  color: $gg-gold-dark-1;
+}
+
+.gds-legend__value[data-gds-color="gold-dk-2"] {
+  color: $gg-gold-dark-2;
+}
+
+.gds-legend__value[data-gds-color="gold-dk-3"] {
+  color: $gg-gold-dark-3;
+}
+
+.gds-legend__value[data-gds-color="gold-dk-4"] {
+  color: $gg-gold-dark-4;
+}
+
+.gds-legend__value[data-gds-color="gold-lt-1"] {
+  color: $gg-gold-light-1;
+}
+
+.gds-legend__value[data-gds-color="gold-lt-2"] {
+  color: $gg-gold-light-2;
+}
+
+.gds-legend__value[data-gds-color="gold-lt-3"] {
+  color: $gg-gold-light-3;
+}
+
+.gds-legend__value[data-gds-color="gold-lt-4"] {
+  color: $gg-gold-light-4;
+}
+
+.gds-legend__value[data-gds-color="purple"] {
+  color: $gg-purple;
+}
+
+.gds-legend__value[data-gds-color="purple-dk-1"] {
+  color: $gg-purple-dark-1;
+}
+
+.gds-legend__value[data-gds-color="purple-dk-2"] {
+  color: $gg-purple-dark-2;
+}
+
+.gds-legend__value[data-gds-color="purple-dk-3"] {
+  color: $gg-purple-dark-3;
+}
+
+.gds-legend__value[data-gds-color="purple-dk-4"] {
+  color: $gg-purple-dark-4;
+}
+
+.gds-legend__value[data-gds-color="purple-lt-1"] {
+  color: $gg-purple-light-1;
+}
+
+.gds-legend__value[data-gds-color="purple-lt-2"] {
+  color: $gg-purple-light-2;
+}
+
+.gds-legend__value[data-gds-color="purple-lt-3"] {
+  color: $gg-purple-light-3;
+}
+
+.gds-legend__value[data-gds-color="purple-lt-4"] {
+  color: $gg-purple-light-4;
+}
+
+.gds-legend__value[data-gds-color="dkgreen"] {
+  color: $gg-dkgreen;
+}
+
+.gds-legend__value[data-gds-color="dkgreen-dk-1"] {
+  color: $gg-dkgreen-dark-1;
+}
+
+.gds-legend__value[data-gds-color="dkgreen-dk-2"] {
+  color: $gg-dkgreen-dark-2;
+}
+
+.gds-legend__value[data-gds-color="dkgreen-dk-3"] {
+  color: $gg-dkgreen-dark-3;
+}
+
+.gds-legend__value[data-gds-color="dkgreen-dk-4"] {
+  color: $gg-dkgreen-dark-4;
+}
+
+.gds-legend__value[data-gds-color="dkgreen-lt-1"] {
+  color: $gg-dkgreen-light-1;
+}
+
+.gds-legend__value[data-gds-color="dkgreen-lt-2"] {
+  color: $gg-dkgreen-light-2;
+}
+
+.gds-legend__value[data-gds-color="dkgreen-lt-3"] {
+  color: $gg-dkgreen-light-3;
+}
+
+.gds-legend__value[data-gds-color="dkgreen-lt-4"] {
+  color: $gg-dkgreen-light-4;
+}
+
+.gds-legend__value[data-gds-color="orange"] {
+  color: $gg-orange;
+}
+
+.gds-legend__value[data-gds-color="orange-dk-1"] {
+  color: $gg-orange-dark-1;
+}
+
+.gds-legend__value[data-gds-color="orange-dk-2"] {
+  color: $gg-orange-dark-2;
+}
+
+.gds-legend__value[data-gds-color="orange-dk-3"] {
+  color: $gg-orange-dark-3;
+}
+
+.gds-legend__value[data-gds-color="orange-dk-4"] {
+  color: $gg-orange-dark-4;
+}
+
+.gds-legend__value[data-gds-color="orange-lt-1"] {
+  color: $gg-orange-light-1;
+}
+
+.gds-legend__value[data-gds-color="orange-lt-2"] {
+  color: $gg-orange-light-2;
+}
+
+.gds-legend__value[data-gds-color="orange-lt-3"] {
+  color: $gg-orange-light-3;
+}
+
+.gds-legend__value[data-gds-color="orange-lt-4"] {
+  color: $gg-orange-light-4;
+}

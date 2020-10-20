@@ -1,0 +1,222 @@
+.gds-ranker-grid {
+  @extend .gds-flex;
+  border-radius: $border-radius * 2;
+  overflow: hidden;
+  border: 1px solid $gg-light-2;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.gds-ranker-ensign {
+  display: flex;
+  background-color: white;
+  padding: $unit;
+  border: 1px solid $gg-light-2;
+  font-family: $pri-font-regular;
+  // box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 $unit * 3 $unit * 3 0;
+    border-color: transparent $gg-light-3 transparent transparent;
+    @include transition-ease-out(border-color, 250ms);
+  }
+  &:hover {
+    &:before {
+      border-color: transparent $primaryColor transparent transparent;
+    }
+
+    .gds-ranker-ensign__thumbnail {
+      box-shadow: 0 0 0 1px $primaryColor;
+      transform: scale(1.07);
+    }
+    .gds-ranker-ensign__title {
+      color: $primaryColor;
+    }
+  }
+}
+
+.gds-ranker-ensign--secondary {
+  &:hover {
+    &:before {
+      border-color: transparent $secondaryColor transparent transparent;
+    }
+    .gds-ranker-ensign__thumbnail {
+      box-shadow: 0 0 0 1px $secondaryColor;
+    }
+    .gds-ranker-ensign__title {
+      color: $secondaryColor;
+    }
+  }
+}
+
+.gds-ranker-ensign--tertiary {
+  &:hover {
+    &:before {
+      border-color: transparent $tertiaryColor transparent transparent;
+    }
+    .gds-ranker-ensign__thumbnail {
+      box-shadow: 0 0 0 1px $tertiaryColor;
+    }
+    .gds-ranker-ensign__title {
+      color: $tertiaryColor;
+    }
+  }
+}
+
+.gds-ranker-ensign--xs {
+  padding: $unit / 2;
+  &:before {
+    border-width: 0 $unit * 2.5 $unit * 2.5 0;
+  }
+}
+
+.gds-ranker-ensign--sm {
+  padding: $unit / 1.5;
+  &:before {
+    border-width: 0 $unit * 2.5 $unit * 2.5 0;
+  }
+}
+
+.gds-ranker-ensign--lg {
+  padding: $unit * 1.5;
+  &:before {
+    border-width: 0 $unit * 4 $unit * 4 0;
+  }
+}
+
+.gds-ranker-ensign--xl {
+  padding: $unit * 2;
+  &:before {
+    border-width: 0 $unit * 5 $unit * 5 0;
+  }
+}
+
+.gds-ranker-ensign__thumbnail {
+  @extend .gds-circular-thumbnail;
+  @include transition-ease-out(all, 250ms);
+  flex-shrink: 0;
+  margin: 0 $unit 0 0;
+}
+
+.gds-ranker-ensign__thumbnail--secondary {
+  @extend .gds-circular-thumbnail--secondary;
+}
+
+.gds-ranker-ensign__thumbnail--tertiary {
+  @extend .gds-circular-thumbnail--tertiary;
+}
+
+.gds-ranker-ensign__thumbnail--xs {
+  @extend .gds-circular-thumbnail--xs;
+}
+
+.gds-ranker-ensign__thumbnail--sm {
+  @extend .gds-circular-thumbnail--sm;
+}
+
+.gds-ranker-ensign__thumbnail--lg {
+  @extend .gds-circular-thumbnail--lg;
+  margin: 0 $unit * 1.5 0 0;
+}
+
+.gds-ranker-ensign__thumbnail--xl {
+  @extend .gds-circular-thumbnail--xl;
+  margin: 0 $unit * 2 0 0;
+}
+
+.gds-ranker-ensign__content {
+  line-height: 1.1;
+  padding-right: $unit * 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gds-ranker-ensign__label {
+  font-size: $font-size-minus-2;
+  color: $gg-light-4;
+}
+
+.gds-ranker-ensign__label--xs,
+.gds-ranker-ensign__label--sm {
+  font-size: $font-size-minus-3;
+}
+
+.gds-ranker-ensign__label--lg {
+  font-size: $font-size-minus-1;
+}
+
+.gds-ranker-ensign__label--xl {
+  font-size: $font-size;
+}
+
+.gds-ranker-ensign__title {
+  font-size: $font-size;
+  color: $primaryColor;
+}
+
+.gds-ranker-ensign__title--xs {
+  font-size: $font-size-minus-2;
+}
+
+.gds-ranker-ensign__title--sm {
+  font-size: $font-size-minus-1;
+}
+
+.gds-ranker-ensign__title--lg {
+  font-size: $font-size-plus-1;
+}
+
+.gds-ranker-ensign__title--xl {
+  font-size: $font-size-plus-2;
+}
+
+.gds-ranker-ensign__title--secondary {
+  color: $secondaryColor;
+}
+
+.gds-ranker-ensign__title--tertiary {
+  color: $tertiaryColor;
+}
+
+.gds-ranker-ensign__number {
+  position: absolute;
+  top: -2px;
+  right: -6px;
+  height: 60px;
+  width: 40px;
+  text-align: center;
+  font-size: $font-size-minus-2;
+  color: white;
+}
+
+.gds-ranker-ensign__number--xs,
+.gds-ranker-ensign__number--sm {
+  font-size: $font-size-minus-3;
+  right: -9px;
+}
+
+.gds-ranker-ensign__number--lg {
+  font-size: $font-size-plus-1;
+  right: -2px;
+  top: 0px;
+}
+
+.gds-ranker-ensign__number--xl {
+  font-size: $font-size-plus-2;
+  right: 0;
+  top: 3px;
+}
+
+.gds-ranker-ensign__number--sup {
+  top: 1px;
+  right: 4px;
+  font-size: 8px;
+  color: white;
+}

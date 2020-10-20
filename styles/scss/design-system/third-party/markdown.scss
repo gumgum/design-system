@@ -1,0 +1,74 @@
+.gds-markdown {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  img,
+  blockquote,
+  ul,
+  ol {
+    @extend .-m-b-3;
+  }
+
+  h1 {
+    @extend .gds-text--header-xl;
+  }
+
+  h2 {
+    @extend .gds-text--header-lg;
+  }
+
+  h3 {
+    @extend .gds-text--header-md;
+  }
+
+  h4 {
+    @extend .gds-text--header-sm;
+  }
+
+  hr {
+    @extend .-m-v-4;
+  }
+
+  p {
+    @extend .gds-text--body-md;
+  }
+
+  a {
+    @extend .gds-text--link;
+  }
+
+  img {
+    @extend .gds-image;
+    @extend .gds-image--border;
+  }
+
+  blockquote {
+    @extend .gds-text--blockquote;
+  }
+
+  ul li {
+    @extend .gds-text__list-item--disc;
+    @extend .-m-l-3;
+  }
+
+  ol li {
+    @extend .gds-text__list-item--number;
+    @extend .-m-l-3;
+  }
+
+  code {
+    @extend .gds-text--code;
+  }
+
+  // Bold
+  strong {
+    @extend .gds-text--bold;
+  }
+
+  // Italic
+  em {
+    @extend .gds-text--italic;
+  }
+}

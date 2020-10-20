@@ -1,0 +1,180 @@
+.gds-radio-block {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 1px);
+  border: 1px solid white;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: 0px 1px 3px rgba(black, 0.3);
+}
+
+.gds-radio-block--dark {
+  border: 1px solid $gg-light-3;
+}
+
+.gds-radio-block--dark .gds-radio-block__button {
+  color: white;
+  border-right: 1px solid $gg-light-3;
+}
+
+.gds-radio-block__button {
+  @extend .gds-button;
+  color: inherit;
+  text-shadow: none !important;
+  margin: 0;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: $unit;
+  background-color: transparent !important;
+  border: none;
+  border-right: 1px solid white;
+  font-family: $pri-font-regular;
+  cursor: pointer;
+  border-radius: 0;
+  font-size: ($unit * 0.8);
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($radioBlockPrimaryColor, 0.3);
+    opacity: 1;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    transform: translateZ(0) scale(0.5);
+    background-color: $radioBlockPrimaryColor;
+    box-shadow: inset 0px 0px 0px 1px $primaryDark3Color;
+    opacity: 0;
+    filter: blur(10px);
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+    @include transition-ease-out(all, 200ms);
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.gds-radio-block__button-text {
+  color: white;
+  text-shadow: 0 1px 3px rgba(black, 0.9);
+  @include transition-ease-out(all, 150ms);
+  @extend .-z-1;
+}
+
+// Hover
+.gds-radio-block__button:hover,
+.gds-radio-block__button--active {
+  &:after {
+    opacity: 1;
+    transform: translateZ(0) scale(1);
+  }
+
+  .gds-radio-block__button-text {
+    color: white;
+  }
+}
+
+.gds-radio-block__button:hover .gds-radio-block__button-text {
+  transform: scale(1.025);
+}
+
+.gds-radio-block__button--active:hover .gds-radio-block__button-text {
+  transform: scale(1);
+}
+
+.gds-radio-block__button--sm {
+  padding: ($unit / 2);
+}
+
+.gds-radio-block__button--lg {
+  padding: ($unit * 1.5);
+}
+
+.gds-radio-block__button--no-pad {
+  padding: 0;
+}
+
+.gds-radio-block__button:active {
+  &:after {
+    background-color: $primaryDark1Color;
+    box-shadow: inset 0px 0px 0px 1px $primaryDark4Color;
+  }
+  .gds-radio-block__button-text {
+    transform: scale(1);
+  }
+}
+
+.gds-radio-block__button--secondary:before,
+.gds-radio-block__button--secondary:after {
+  background-color: rgba($radioBlockSecondaryColor, 0.75);
+  box-shadow: inset 0px 0px 0px 1px $secondaryDark3Color;
+}
+
+.gds-radio-block__button--secondary:before {
+  background-color: rgba($radioBlockSecondaryColor, 0.3);
+}
+
+.gds-radio-block__button--secondary.gds-radio-block__button--active:hover:after {
+  background-color: $secondaryLight2Color;
+  box-shadow: inset 0px 0px 0px 1px $secondaryDark2Color;
+}
+
+.gds-radio-block__button--secondary:active:after {
+  background-color: $secondaryDark1Color;
+  box-shadow: inset 0px 0px 0px 1px $secondaryDark4Color;
+}
+
+.gds-radio-block__button--tertiary:before,
+.gds-radio-block__button--tertiary:after {
+  background-color: rgba($radioBlockTertiaryColor, 0.75);
+  box-shadow: inset 0px 0px 0px 1px $tertiaryDark3Color;
+}
+
+.gds-radio-block__button--tertiary:before {
+  background-color: rgba($radioBlockTertiaryColor, 0.3);
+}
+
+.gds-radio-block__button--tertiary.gds-radio-block__button--active:hover:after {
+  background-color: $tertiaryLight2Color;
+  box-shadow: inset 0px 0px 0px 1px $tertiaryDark2Color;
+}
+
+.gds-radio-block__button--tertiary:active:after {
+  background-color: $tertiaryDark1Color;
+  box-shadow: inset 0px 0px 0px 1px $tertiaryDark4Color;
+}
+
+.gds-radio-block__button--quaternary:before,
+.gds-radio-block__button--quaternary:after {
+  background-color: rgba($radioBlockQuaternaryColor, 0.75);
+  box-shadow: inset 0px 0px 0px 1px $quaternaryDark3Color;
+}
+
+.gds-radio-block__button--quaternary:before {
+  background-color: rgba($radioBlockQuaternaryColor, 0.3);
+}
+
+.gds-radio-block__button--quaternary.gds-radio-block__button--active:hover:after {
+  background-color: $quaternaryLight2Color;
+  box-shadow: inset 0px 0px 0px 1px $quaternaryDark2Color;
+}
+
+.gds-radio-block__button--quaternary.gds-radio-block__button:active:after {
+  background-color: $quaternaryDark1Color;
+  box-shadow: inset 0px 0px 0px 1px $quaternaryDark4Color;
+}

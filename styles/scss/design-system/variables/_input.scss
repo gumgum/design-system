@@ -1,0 +1,15 @@
+// -------------------------------------------------- //
+// Input variables
+// -------------------------------------------------- //
+$input-height-xs: 29px;
+$input-height-sm: 37px;
+$input-height-md: 51px;
+$input-height-lg: 65px;
+
+$input-padding-xs: ($unit * 0.25) ($unit * 0.5);
+$input-padding-sm: ($unit * 0.5) ($unit * 0.75);
+$input-padding-md: $unit;
+$input-padding-lg: $unit ($unit * 1.25);
+
+$input-border-radius: $border-radius;
+$input-focus-effect: 0 0 10px rgba(0, 0, 0, 0.15); // For box-shadow

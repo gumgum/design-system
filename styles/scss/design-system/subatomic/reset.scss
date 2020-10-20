@@ -1,0 +1,304 @@
+// -------------------------------------------------- //
+// Basic resets
+// -------------------------------------------------- //
+* {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// CSS variables for colors
+// Usage: .element { background-color: --var(--gg-gold); }
+:root {
+  --primaryColor: $primaryColor;
+  --secondaryColor: $secondaryColor;
+  --tertiaryColor: $tertiaryColor;
+  --quaternaryColor: $quaternaryColor;
+  --successColor: $successColor;
+  --infoColor: $infoColor;
+  --warningColor: $warningColor;
+  --dangerColor: $dangerColor;
+  --headerPrimaryColor: $pageHeaderPrimaryBackgroundColor;
+  --headerUnderlineColor: $pageHeaderUnderlineColor;
+  --headerSecondaryColor: $pageHeaderSecondaryBackgroundColor;
+  --blueColor: $blueColor;
+  --goldColor: $goldColor;
+  --greenColor: $greenColor;
+  --orangeColor: $orangeColor;
+  --purpleColor: $purpleColor;
+  --redColor: $redColor;
+  --grayColor: $grayColor;
+  --darkBlueColor: $darkBlueColor;
+  --darkGoldColor: $darkGoldColor;
+  --darkGreenColor: $darkGreenColor;
+  --darkRedColor: $darkRedColor;
+  --magentaColor: $magentaColor;
+  --light1Color: $gg-light-1;
+  --light2Color: $gg-light-2;
+  --light3Color: $gg-light-3;
+  --light4Color: $gg-light-4;
+  --light5Color: $gg-light-5;
+  --dark1Color: $gg-dark-1;
+  --dark2Color: $gg-dark-2;
+  --dark3Color: $gg-dark-3;
+  --dark4Color: $gg-dark-4;
+  --dark5Color: $gg-dark-5;
+  --primaryDark1Color: $primaryDark1Color;
+  --primaryDark2Color: $primaryDark2Color;
+  --primaryDark3Color: $primaryDark3Color;
+  --primaryDark4Color: $primaryDark4Color;
+  --primaryDark5Color: $primaryDark5Color;
+  --primaryLight1Color: $primaryLight1Color;
+  --primaryLight2Color: $primaryLight2Color;
+  --primaryLight3Color: $primaryLight3Color;
+  --primaryLight4Color: $primaryLight4Color;
+  --primaryLight5Color: $primaryLight5Color;
+  --secondaryDark1Color: $secondaryDark1Color;
+  --secondaryDark2Color: $secondaryDark2Color;
+  --secondaryDark3Color: $secondaryDark3Color;
+  --secondaryDark4Color: $secondaryDark4Color;
+  --secondaryDark5Color: $secondaryDark5Color;
+  --secondaryLight1Color: $secondaryLight1Color;
+  --secondaryLight2Color: $secondaryLight2Color;
+  --secondaryLight3Color: $secondaryLight3Color;
+  --secondaryLight4Color: $secondaryLight4Color;
+  --secondaryLight5Color: $secondaryLight5Color;
+  --tertiaryDark1Color: $tertiaryDark1Color;
+  --tertiaryDark2Color: $tertiaryDark2Color;
+  --tertiaryDark3Color: $tertiaryDark3Color;
+  --tertiaryDark4Color: $tertiaryDark4Color;
+  --tertiaryDark5Color: $tertiaryDark5Color;
+  --tertiaryLight1Color: $tertiaryLight1Color;
+  --tertiaryLight2Color: $tertiaryLight2Color;
+  --tertiaryLight3Color: $tertiaryLight3Color;
+  --tertiaryLight4Color: $tertiaryLight4Color;
+  --tertiaryLight5Color: $tertiaryLight5Color;
+  --quaternaryDark1Color: $quaternaryDark1Color;
+  --quaternaryDark2Color: $quaternaryDark2Color;
+  --quaternaryDark3Color: $quaternaryDark3Color;
+  --quaternaryDark4Color: $quaternaryDark4Color;
+  --quaternaryDark5Color: $quaternaryDark5Color;
+  --quaternaryLight1Color: $quaternaryLight1Color;
+  --quaternaryLight2Color: $quaternaryLight2Color;
+  --quaternaryLight3Color: $quaternaryLight3Color;
+  --quaternaryLight4Color: $quaternaryLight4Color;
+  --quaternaryLight5Color: $quaternaryLight5Color;
+  --successDark1Color: $successDark1Color;
+  --successDark2Color: $successDark2Color;
+  --successDark3Color: $successDark3Color;
+  --successDark4Color: $successDark4Color;
+  --successDark5Color: $successDark5Color;
+  --successLight1Color: $successLight1Color;
+  --successLight2Color: $successLight2Color;
+  --successLight3Color: $successLight3Color;
+  --successLight4Color: $successLight4Color;
+  --successLight5Color: $successLight5Color;
+  --infoDark1Color: $infoDark1Color;
+  --infoDark2Color: $infoDark2Color;
+  --infoDark3Color: $infoDark3Color;
+  --infoDark4Color: $infoDark4Color;
+  --infoDark5Color: $infoDark5Color;
+  --infoLight1Color: $infoLight1Color;
+  --infoLight2Color: $infoLight2Color;
+  --infoLight3Color: $infoLight3Color;
+  --infoLight4Color: $infoLight4Color;
+  --infoLight5Color: $infoLight5Color;
+  --warningDark1Color: $warningDark1Color;
+  --warningDark2Color: $warningDark2Color;
+  --warningDark3Color: $warningDark3Color;
+  --warningDark4Color: $warningDark4Color;
+  --warningDark5Color: $warningDark5Color;
+  --warningLight1Color: $warningLight1Color;
+  --warningLight2Color: $warningLight2Color;
+  --warningLight3Color: $warningLight3Color;
+  --warningLight4Color: $warningLight4Color;
+  --warningLight5Color: $warningLight5Color;
+  --dangerDark1Color: $dangerDark1Color;
+  --dangerDark2Color: $dangerDark2Color;
+  --dangerDark3Color: $dangerDark3Color;
+  --dangerDark4Color: $dangerDark4Color;
+  --dangerDark5Color: $dangerDark5Color;
+  --dangerLight1Color: $dangerLight1Color;
+  --dangerLight2Color: $dangerLight2Color;
+  --dangerLight3Color: $dangerLight3Color;
+  --dangerLight4Color: $dangerLight4Color;
+  --dangerLight5Color: $dangerLight5Color;
+  --blueDark1Color: $blueDark1Color;
+  --blueDark2Color: $blueDark2Color;
+  --blueDark3Color: $blueDark3Color;
+  --blueDark4Color: $blueDark4Color;
+  --blueDark5Color: $blueDark5Color;
+  --blueLight1Color: $blueLight1Color;
+  --blueLight2Color: $blueLight2Color;
+  --blueLight3Color: $blueLight3Color;
+  --blueLight4Color: $blueLight4Color;
+  --blueLight5Color: $blueLight5Color;
+  --goldDark1Color: $goldDark1Color;
+  --goldDark2Color: $goldDark2Color;
+  --goldDark3Color: $goldDark3Color;
+  --goldDark4Color: $goldDark4Color;
+  --goldDark5Color: $goldDark5Color;
+  --goldLight1Color: $goldLight1Color;
+  --goldLight2Color: $goldLight2Color;
+  --goldLight3Color: $goldLight3Color;
+  --goldLight4Color: $goldLight4Color;
+  --goldLight5Color: $goldLight5Color;
+  --greenDark1Color: $greenDark1Color;
+  --greenDark2Color: $greenDark2Color;
+  --greenDark3Color: $greenDark3Color;
+  --greenDark4Color: $greenDark4Color;
+  --greenDark5Color: $greenDark5Color;
+  --greenLight1Color: $greenLight1Color;
+  --greenLight2Color: $greenLight2Color;
+  --greenLight3Color: $greenLight3Color;
+  --greenLight4Color: $greenLight4Color;
+  --greenLight5Color: $greenLight5Color;
+  --orangeDark1Color: $orangeDark1Color;
+  --orangeDark2Color: $orangeDark2Color;
+  --orangeDark3Color: $orangeDark3Color;
+  --orangeDark4Color: $orangeDark4Color;
+  --orangeDark5Color: $orangeDark5Color;
+  --orangeLight1Color: $orangeLight1Color;
+  --orangeLight2Color: $orangeLight2Color;
+  --orangeLight3Color: $orangeLight3Color;
+  --orangeLight4Color: $orangeLight4Color;
+  --orangeLight5Color: $orangeLight5Color;
+  --purpleDark1Color: $purpleDark1Color;
+  --purpleDark2Color: $purpleDark2Color;
+  --purpleDark3Color: $purpleDark3Color;
+  --purpleDark4Color: $purpleDark4Color;
+  --purpleDark5Color: $purpleDark5Color;
+  --purpleLight1Color: $purpleLight1Color;
+  --purpleLight2Color: $purpleLight2Color;
+  --purpleLight3Color: $purpleLight3Color;
+  --purpleLight4Color: $purpleLight4Color;
+  --purpleLight5Color: $purpleLight5Color;
+  --redDark1Color: $redDark1Color;
+  --redDark2Color: $redDark2Color;
+  --redDark3Color: $redDark3Color;
+  --redDark4Color: $redDark4Color;
+  --redDark5Color: $redDark5Color;
+  --redLight1Color: $redLight1Color;
+  --redLight2Color: $redLight2Color;
+  --redLight3Color: $redLight3Color;
+  --redLight4Color: $redLight4Color;
+  --redLight5Color: $redLight5Color;
+  --darkBlueDark1Color: $darkBlueDark1Color;
+  --darkBlueDark2Color: $darkBlueDark2Color;
+  --darkBlueDark3Color: $darkBlueDark3Color;
+  --darkBlueDark4Color: $darkBlueDark4Color;
+  --darkBlueDark5Color: $darkBlueDark5Color;
+  --darkBlueLight1Color: $darkBlueLight1Color;
+  --darkBlueLight2Color: $darkBlueLight2Color;
+  --darkBlueLight3Color: $darkBlueLight3Color;
+  --darkBlueLight4Color: $darkBlueLight4Color;
+  --darkBlueLight5Color: $darkBlueLight5Color;
+  --darkGoldDark1Color: $darkGoldDark1Color;
+  --darkGoldDark2Color: $darkGoldDark2Color;
+  --darkGoldDark3Color: $darkGoldDark3Color;
+  --darkGoldDark4Color: $darkGoldDark4Color;
+  --darkGoldDark5Color: $darkGoldDark5Color;
+  --darkGoldLight1Color: $darkGoldLight1Color;
+  --darkGoldLight2Color: $darkGoldLight2Color;
+  --darkGoldLight3Color: $darkGoldLight3Color;
+  --darkGoldLight4Color: $darkGoldLight4Color;
+  --darkGoldLight5Color: $darkGoldLight5Color;
+  --darkGreenDark1Color: $darkGreenDark1Color;
+  --darkGreenDark2Color: $darkGreenDark2Color;
+  --darkGreenDark3Color: $darkGreenDark3Color;
+  --darkGreenDark4Color: $darkGreenDark4Color;
+  --darkGreenDark5Color: $darkGreenDark5Color;
+  --darkGreenLight1Color: $darkGreenLight1Color;
+  --darkGreenLight2Color: $darkGreenLight2Color;
+  --darkGreenLight3Color: $darkGreenLight3Color;
+  --darkGreenLight4Color: $darkGreenLight4Color;
+  --darkGreenLight5Color: $darkGreenLight5Color;
+  --darkRedDark1Color: $darkRedDark1Color;
+  --darkRedDark2Color: $darkRedDark2Color;
+  --darkRedDark3Color: $darkRedDark3Color;
+  --darkRedDark4Color: $darkRedDark4Color;
+  --darkRedDark5Color: $darkRedDark5Color;
+  --darkRedLight1Color: $darkRedLight1Color;
+  --darkRedLight2Color: $darkRedLight2Color;
+  --darkRedLight3Color: $darkRedLight3Color;
+  --darkRedLight4Color: $darkRedLight4Color;
+  --darkRedLight5Color: $darkRedLight5Color;
+  --magentaDark1Color: $magentaDark1Color;
+  --magentaDark2Color: $magentaDark2Color;
+  --magentaDark3Color: $magentaDark3Color;
+  --magentaDark4Color: $magentaDark4Color;
+  --magentaDark5Color: $magentaDark5Color;
+  --magentaLight1Color: $magentaLight1Color;
+  --magentaLight2Color: $magentaLight2Color;
+  --magentaLight3Color: $magentaLight3Color;
+  --magentaLight4Color: $magentaLight4Color;
+  --magentaLight5Color: $magentaLight5Color;
+}
+
+html,
+body {
+  color: $gg-dark-4;
+  min-height: 100%;
+}
+
+html {
+  overflow-y: auto;
+
+  @media #{$phone-width} {
+    overflow-y: auto;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $gg-light-1;
+  z-index: $z-index-1;
+  -webkit-overflow-scrolling: touch;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.02em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $gg-light-3;
+  @extend .-m-v-1;
+}
+
+a,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style-position: inside !important;
+}
+
+ul {
+  list-style: disc;
+}
+
+li {
+  list-style: none;
+}
+
+th {
+  font-weight: normal;
+}
+
+/* Reset `button` and button-style `input` default styles */
+
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}

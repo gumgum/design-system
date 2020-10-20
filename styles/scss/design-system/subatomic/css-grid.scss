@@ -1,0 +1,126 @@
+$columnCounts: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16;
+$columnGap: ($unit / 2);
+
+.gds-grid__container {
+  display: grid;
+  grid-gap: $columnGap;
+  margin: 0;
+  max-width: 1200px;
+  grid-template-rows: auto;
+}
+
+.gds-grid__container--full-width {
+  max-width: none;
+}
+
+// Containers
+@mixin make-standard-pct-container($columnCount) {
+  .gds-grid__container--pct-#{$columnCount} {
+    $pct: percentage((1 / $columnCount));
+    $reduce: (($columnCount - 1) * $columnGap / $columnCount);
+    grid-template-columns: repeat(#{$columnCount}, calc(#{$pct} - #{$reduce}));
+    &.gds-grid__container--no-gap {
+      grid-template-columns: repeat($columnCount, $pct);
+    }
+  }
+}
+
+@mixin make-breakpoint-pct-container($breakpoint, $columnCount) {
+  .gds-grid__container--pct-#{$breakpoint}-#{$columnCount} {
+    $pct: percentage((1 / $columnCount));
+    $reduce: (($columnCount - 1) * $columnGap / $columnCount);
+    grid-template-columns: repeat(#{$columnCount}, calc(#{$pct} - #{$reduce}));
+    &.gds-grid__container--no-gap {
+      grid-template-columns: repeat($columnCount, $pct);
+    }
+  }
+}
+
+@mixin make-standard-fluid-container($columnCount) {
+  .gds-grid__container--fluid-#{$columnCount} {
+    grid-template-columns: repeat(#{$columnCount}, 1fr);
+  }
+}
+
+@mixin make-breakpoint-fluid-container($breakpoint, $columnCount) {
+  .gds-grid__container--fluid-#{$breakpoint}-#{$columnCount} {
+    grid-template-columns: repeat(#{$columnCount}, 1fr);
+  }
+}
+
+@mixin make-containers($breakpoints, $columns) {
+  @each $colNum in $columnCounts {
+    @include make-standard-pct-container($colNum);
+    @include make-standard-fluid-container($colNum);
+  }
+  @each $value, $key in $breakpoints {
+    @media (min-width: $key) {
+      @each $colNum in $columnCounts {
+        @include make-breakpoint-pct-container($value, $colNum);
+        @include make-breakpoint-fluid-container($value, $colNum);
+      }
+    }
+  }
+}
+
+@include make-containers($grid-breakpoints, $columnCounts);
+
+.gds-grid__container--no-gap {
+  grid-gap: 0;
+}
+
+// Col Spans
+@mixin make-standard-col-span($columnCount) {
+  .gds-grid__item--col-span-#{$columnCount} {
+    grid-column-end: span $columnCount;
+  }
+}
+
+@mixin make-breakpoint-col-span($breakpoint, $columnCount) {
+  .gds-grid__item--col-span-#{$breakpoint}-#{$columnCount} {
+    grid-column-end: span $columnCount;
+  }
+}
+
+@mixin make-col-spans($breakpoints, $columns) {
+  @each $colNum in $columnCounts {
+    @include make-standard-col-span($colNum);
+  }
+  @each $value, $key in $breakpoints {
+    @media (min-width: $key) {
+      @each $colNum in $columnCounts {
+        @include make-breakpoint-col-span($value, $colNum);
+      }
+    }
+  }
+}
+
+@include make-col-spans($grid-breakpoints, $columnCounts);
+
+// Row Spans
+@mixin make-standard-row-span($columnCount) {
+  .gds-grid__item--row-span-#{$columnCount} {
+    grid-row-end: span $columnCount;
+  }
+}
+
+@mixin make-breakpoint-row-span($breakpoint, $columnCount) {
+  .gds-grid__item--row-span-#{$breakpoint}-#{$columnCount} {
+    grid-row-end: span $columnCount;
+  }
+}
+
+@mixin make-row-spans($breakpoints, $columns) {
+  @each $colNum in $columnCounts {
+    @include make-standard-row-span($colNum);
+  }
+  @each $value, $key in $breakpoints {
+    @media (min-width: $key) {
+      @each $colNum in $columnCounts {
+        @include make-breakpoint-row-span($value, $colNum);
+      }
+    }
+  }
+}
+
+@include make-row-spans($grid-breakpoints, $columnCounts);

@@ -1,0 +1,427 @@
+$balloon-arrow-size: 13px;
+$balloon-bg-color: white;
+$balloon-bd-color: $gg-light-2;
+$balloon-tx-color: $gg-dark-4;
+$balloon-bg-dk-color: $gg-dark-4;
+$balloon-bd-dk-color: $gg-gray;
+$balloon-tx-dk-color: white;
+
+.gds-balloon {
+  position: absolute;
+  z-index: $z-index-9;
+  max-width: 250px;
+  border-radius: $border-radius;
+  background-color: $balloon-bg-color;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $balloon-bd-color;
+  color: $balloon-tx-color;
+  min-height: 90px;
+  box-shadow: 0 0 $unit rgba(black, 0.1);
+}
+
+.gds-balloon--right {
+  @include createNubbin(
+    "left",
+    $balloon-arrow-size,
+    $balloon-bg-color,
+    $balloon-bd-color
+  );
+}
+
+.gds-balloon--left {
+  @include createNubbin(
+    "right",
+    $balloon-arrow-size,
+    $balloon-bg-color,
+    $balloon-bd-color
+  );
+}
+
+.gds-balloon--top {
+  @include createNubbin(
+    "down",
+    $balloon-arrow-size,
+    $balloon-bg-color,
+    $balloon-bd-color
+  );
+}
+
+.gds-balloon--bottom {
+  @include createNubbin(
+    "up",
+    $balloon-arrow-size,
+    $balloon-bg-color,
+    $balloon-bd-color
+  );
+}
+
+.gds-balloon--contextual {
+  color: white;
+}
+
+.gds-balloon--primary {
+  @extend .gds-balloon--contextual;
+  background-color: $balloonPrimaryBackgroundColor;
+  border-color: $balloonPrimaryBorderColor;
+
+  &.gds-balloon--right {
+    @include createNubbin(
+      "left",
+      $balloon-arrow-size,
+      $balloonPrimaryBackgroundColor,
+      $balloonPrimaryBorderColor
+    );
+  }
+
+  &.gds-balloon--left {
+    @include createNubbin(
+      "right",
+      $balloon-arrow-size,
+      $balloonPrimaryBackgroundColor,
+      $balloonPrimaryBorderColor
+    );
+  }
+
+  &.gds-balloon--top {
+    @include createNubbin(
+      "down",
+      $balloon-arrow-size,
+      $balloonPrimaryBackgroundColor,
+      $balloonPrimaryBorderColor
+    );
+  }
+
+  &.gds-balloon--bottom {
+    @include createNubbin(
+      "up",
+      $balloon-arrow-size,
+      $balloonPrimaryBackgroundColor,
+      $balloonPrimaryBorderColor
+    );
+  }
+  .gds-balloon__group {
+    border-color: $balloonPrimaryBorderColor;
+  }
+}
+
+.gds-balloon--secondary {
+  @extend .gds-balloon--contextual;
+  background-color: $balloonSecondaryBackgroundColor;
+  border-color: $balloonSecondaryBorderColor;
+
+  &.gds-balloon--right {
+    @include createNubbin(
+      "left",
+      $balloon-arrow-size,
+      $balloonSecondaryBackgroundColor,
+      $balloonSecondaryBorderColor
+    );
+  }
+
+  &.gds-balloon--left {
+    @include createNubbin(
+      "right",
+      $balloon-arrow-size,
+      $balloonSecondaryBackgroundColor,
+      $balloonSecondaryBorderColor
+    );
+  }
+
+  &.gds-balloon--top {
+    @include createNubbin(
+      "down",
+      $balloon-arrow-size,
+      $balloonSecondaryBackgroundColor,
+      $balloonSecondaryBorderColor
+    );
+  }
+
+  &.gds-balloon--bottom {
+    @include createNubbin(
+      "up",
+      $balloon-arrow-size,
+      $balloonSecondaryBackgroundColor,
+      $balloonSecondaryBorderColor
+    );
+  }
+  .gds-balloon__group {
+    border-color: $balloonSecondaryBorderColor;
+  }
+}
+
+.gds-balloon--tertiary {
+  @extend .gds-balloon--contextual;
+  background-color: $balloonTertiaryBackgroundColor;
+  border-color: $balloonTertiaryBorderColor;
+
+  &.gds-balloon--right {
+    @include createNubbin(
+      "left",
+      $balloon-arrow-size,
+      $balloonTertiaryBackgroundColor,
+      $balloonTertiaryBorderColor
+    );
+  }
+
+  &.gds-balloon--left {
+    @include createNubbin(
+      "right",
+      $balloon-arrow-size,
+      $balloonTertiaryBackgroundColor,
+      $balloonTertiaryBorderColor
+    );
+  }
+
+  &.gds-balloon--top {
+    @include createNubbin(
+      "down",
+      $balloon-arrow-size,
+      $balloonTertiaryBackgroundColor,
+      $balloonTertiaryBorderColor
+    );
+  }
+
+  &.gds-balloon--bottom {
+    @include createNubbin(
+      "up",
+      $balloon-arrow-size,
+      $balloonTertiaryBackgroundColor,
+      $balloonTertiaryBorderColor
+    );
+  }
+  .gds-balloon__group {
+    border-color: $balloonTertiaryBorderColor;
+  }
+}
+
+.gds-balloon--success {
+  @extend .gds-balloon--contextual;
+  background-color: $successColor;
+  border-color: $successColor;
+  &.gds-balloon--right {
+    @include createNubbin(
+      "left",
+      $balloon-arrow-size,
+      $successColor,
+      $successColor
+    );
+  }
+
+  &.gds-balloon--left {
+    @include createNubbin(
+      "right",
+      $balloon-arrow-size,
+      $successColor,
+      $successColor
+    );
+  }
+
+  &.gds-balloon--top {
+    @include createNubbin(
+      "down",
+      $balloon-arrow-size,
+      $successColor,
+      $successColor
+    );
+  }
+
+  &.gds-balloon--bottom {
+    @include createNubbin(
+      "up",
+      $balloon-arrow-size,
+      $successColor,
+      $successColor
+    );
+  }
+  .gds-balloon__group {
+    border-color: $successColor;
+  }
+}
+
+.gds-balloon--warning {
+  @extend .gds-balloon--contextual;
+  background-color: $warningColor;
+  border-color: $warningColor;
+  &.gds-balloon--right {
+    @include createNubbin(
+      "left",
+      $balloon-arrow-size,
+      $warningColor,
+      $warningColor
+    );
+  }
+
+  &.gds-balloon--left {
+    @include createNubbin(
+      "right",
+      $balloon-arrow-size,
+      $warningColor,
+      $warningColor
+    );
+  }
+
+  &.gds-balloon--top {
+    @include createNubbin(
+      "down",
+      $balloon-arrow-size,
+      $warningColor,
+      $warningColor
+    );
+  }
+
+  &.gds-balloon--bottom {
+    @include createNubbin(
+      "up",
+      $balloon-arrow-size,
+      $warningColor,
+      $warningColor
+    );
+  }
+  .gds-balloon__group {
+    border-color: $warningColor;
+  }
+}
+
+.gds-balloon--danger {
+  @extend .gds-balloon--contextual;
+  background-color: $dangerColor;
+  border-color: $dangerColor;
+  &.gds-balloon--right {
+    @include createNubbin(
+      "left",
+      $balloon-arrow-size,
+      $dangerColor,
+      $dangerColor
+    );
+  }
+
+  &.gds-balloon--left {
+    @include createNubbin(
+      "right",
+      $balloon-arrow-size,
+      $dangerColor,
+      $dangerColor
+    );
+  }
+
+  &.gds-balloon--top {
+    @include createNubbin(
+      "down",
+      $balloon-arrow-size,
+      $dangerColor,
+      $dangerColor
+    );
+  }
+
+  &.gds-balloon--bottom {
+    @include createNubbin(
+      "up",
+      $balloon-arrow-size,
+      $dangerColor,
+      $dangerColor
+    );
+  }
+  .gds-balloon__group {
+    border-color: $dangerColor;
+  }
+}
+
+.gds-balloon--dark {
+  background-color: $balloon-bg-dk-color;
+  border: 1px solid $balloon-bd-dk-color;
+  color: $balloon-tx-dk-color;
+  box-shadow: 0 0 $unit/2 rgba(black, 0.65);
+  &.gds-balloon--right {
+    @include createNubbin(
+      "left",
+      $balloon-arrow-size,
+      $balloon-bg-dk-color,
+      $balloon-bd-dk-color
+    );
+  }
+
+  &.gds-balloon--left {
+    @include createNubbin(
+      "right",
+      $balloon-arrow-size,
+      $balloon-bg-dk-color,
+      $balloon-bd-dk-color
+    );
+  }
+
+  &.gds-balloon--top {
+    @include createNubbin(
+      "down",
+      $balloon-arrow-size,
+      $balloon-bg-dk-color,
+      $balloon-bd-dk-color
+    );
+  }
+
+  &.gds-balloon--bottom {
+    @include createNubbin(
+      "up",
+      $balloon-arrow-size,
+      $balloon-bg-dk-color,
+      $balloon-bd-dk-color
+    );
+  }
+  .gds-balloon__group {
+    border-color: $balloon-bd-dk-color;
+  }
+}
+
+.gds-balloon__description {
+  @extend .gds-text--body-sm;
+  font-family: $pri-font-regular;
+  color: inherit;
+  font-size: $font-size-minus-2;
+}
+.gds-balloon__label {
+  @extend .gds-form-group__label;
+  color: inherit;
+  font-size: $font-size-minus-3;
+}
+
+.gds-balloon__label--dark,
+.gds-balloon__label--primary,
+.gds-balloon__label--secondary,
+.gds-balloon__label--tertiary,
+.gds-balloon__label--success,
+.gds-balloon__label--warning,
+.gds-balloon__label--danger {
+  color: $balloon-tx-dk-color;
+}
+
+.gds-balloon__group {
+  padding: 0 $unit * 0.5;
+  border-color: $balloon-bd-color;
+}
+
+.gds-balloon__group--divide-bottom {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+
+  &.gds-balloon__group--success,
+  &.gds-balloon__group--warning,
+  &.gds-balloon__group--danger {
+    border-bottom: 1px solid rgba(black, 0.1);
+  }
+}
+.gds-balloon__group--divide-top {
+  border-top-width: 1px;
+  border-top-style: solid;
+  &.gds-balloon__group--dark {
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+  &.gds-balloon__group--primary,
+  &.gds-balloon__group--secondary,
+  &.gds-balloon__group--tertiary,
+  &.gds-balloon__group--success,
+  &.gds-balloon__group--warning,
+  &.gds-balloon__group--danger {
+    border-top: 1px solid rgba(black, 0.1);
+  }
+}

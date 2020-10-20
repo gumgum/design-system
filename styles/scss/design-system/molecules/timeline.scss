@@ -1,0 +1,299 @@
+.gds-timeline__items {
+  list-style: none;
+  text-align: justify;
+
+  &:after {
+    display: inline-block;
+    width: 100%;
+    content: "";
+  }
+}
+
+.gds-timeline__item {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+  &:hover {
+    .gds-timeline__item-icon {
+      transform: scale(1.05);
+      background-color: $gg-light-4;
+      border-color: white;
+      box-shadow: 0 0 0 2px $timelineBorderActiveColor;
+    }
+    .gds-timeline__item-label {
+      color: $timelineBorderActiveColor;
+    }
+  }
+
+  &:active {
+    color: $timelineBackgroundActiveColor;
+
+    .gds-timeline__item-icon {
+      transform: scale(0.99);
+      background-color: $timelineBackgroundActiveColor;
+    }
+  }
+
+  &:first-child {
+    .gds-timeline__item-icon:before {
+      content: none !important;
+    }
+  }
+
+  &:last-child {
+    .gds-timeline__item-icon:after {
+      content: none !important;
+    }
+  }
+}
+
+.gds-timeline__item--active {
+  &:hover {
+    .gds-timeline__item-icon {
+      background-color: $timelineBackgroundActiveColor;
+      border-color: white;
+      box-shadow: 0 0 0 2px $timelineBorderActiveColor;
+    }
+  }
+
+  .gds-timeline__item-icon {
+    background-color: $timelineBackgroundActiveColor;
+    border-color: white;
+    box-shadow: 0 0 0 2px $timelineBorderActiveColor;
+    &:before {
+      border-right: 8px solid $timelineBorderActiveColor;
+      transform: scale(1, 1);
+    }
+  }
+  .gds-timeline__item-label {
+    color: $timelineTextActiveColor;
+  }
+}
+
+.gds-timeline__item--completed {
+  color: $timelineTextCompletedColor;
+
+  .gds-timeline__item-icon {
+    background-color: $timelineBackgroundCompletedColor;
+    border-color: white;
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba($timelineBorderCompletedColor, 0),
+      0 0 0 2px $timelineBorderCompletedColor;
+    &:before {
+      border-right: 8px solid $timelineBorderCompletedColor;
+      transform: scale(1, 1);
+    }
+    &:after {
+      border-left: 8px solid $timelineBorderCompletedColor;
+      transform: scale(1, 1);
+    }
+  }
+
+  &:hover {
+    .gds-timeline__item-icon {
+      background-color: $timelineBackgroundActiveColor;
+      &:before {
+        border-right: 8px solid $timelineBorderActiveColor;
+        transform: scale(1, 1);
+      }
+      &:after {
+        border-left: 8px solid $timelineBorderActiveColor;
+        transform: scale(1, 1);
+      }
+    }
+  }
+
+  .gds-timeline__item-label {
+    color: $timelineTextCompletedColor;
+  }
+  .gds-timeine__item-indicator {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.gds-timeline__item-label {
+  display: block;
+  color: $gg-light-4;
+  width: ($unit * 5);
+  white-space: nowrap;
+  @include transition-ease-out(all, 150ms);
+}
+
+.gds-timeine__item-indicator {
+  color: white;
+  font-size: $unit / 1.5;
+  bottom: 6px;
+  opacity: 0;
+  transform: scale(0.75);
+  @include transition-ease-out(all, 150ms);
+}
+
+.gds-timeine__item-indicator--lg {
+  font-size: $unit;
+  bottom: -2px;
+}
+
+.gds-timeline__item-label--sm {
+  font-size: $font-size-minus-1;
+  width: ($unit * 3);
+}
+
+.gds-timeline__item-label--lg {
+  font-size: $font-size-plus-1;
+  width: ($unit * 6);
+}
+
+.gds-timeline__item-label--white {
+  color: white;
+}
+
+.gds-timeline__item-icon {
+  display: inline-block;
+  border-radius: 50%;
+  height: ($unit * 1.25);
+  width: ($unit * 1.25);
+  border: 1px solid transparent;
+  background-color: $gg-light-2;
+  transform-origin: 50% 50%;
+  vertical-align: center;
+  @include transition-ease-out(all, 150ms);
+  &:before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: calc(50% - 7px);
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 7px solid transparent;
+    transform-origin: 100% 50%;
+    transform: scale(0, 1);
+    @include transition-ease-out(all, 150ms);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    right: -9px;
+    top: calc(50% - 7px);
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid transparent;
+    transform-origin: 0 50%;
+    transform: scale(0, 1);
+    @include transition-ease-out(all, 150ms);
+  }
+}
+
+.gds-timeline__item-icon--sm {
+  height: ($unit * 0.5);
+  width: ($unit * 0.5);
+  &:before {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 4px solid transparent;
+    top: calc(50% - 4px);
+  }
+  &:after {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+    top: calc(50% - 4px);
+  }
+}
+
+.gds-timeline__item-icon--lg {
+  height: ($unit * 2);
+  width: ($unit * 2);
+  &:before {
+    top: calc(50% - 8px);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid transparent;
+  }
+  &:after {
+    top: calc(50% - 8px);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+  }
+}
+
+.gds-timeline__item-icon--white {
+  background-color: white;
+}
+
+.gds-timeline__progress-wrapper {
+  position: absolute;
+  overflow: hidden;
+  bottom: calc(50% + 3px);
+  height: 4px;
+  left: ($unit * 2.5);
+  right: ($unit * 2.5);
+  background-color: $gg-light-2;
+}
+
+.gds-timeline__progress-wrapper--no-label {
+  left: 2px;
+  right: 2px;
+  bottom: 79%;
+}
+
+.gds-timeline__progress-wrapper--white {
+  background-color: white;
+}
+
+.gds-timeline__progress-wrapper--sm {
+  bottom: 49%;
+  height: 2px;
+  left: ($unit * 1.5);
+  right: ($unit * 1.5);
+}
+
+.gds-timeline__progress-wrapper--lg {
+  bottom: 50%;
+  height: 6px;
+  left: ($unit * 2.5);
+  right: ($unit * 2.5);
+}
+
+.gds-timeline__progress-wrapper--sm.gds-timeline__progress-wrapper--no-label {
+  bottom: 72%;
+  left: 2px;
+  right: 2px;
+}
+
+.gds-timeline__progress-wrapper--lg.gds-timeline__progress-wrapper--no-label {
+  bottom: 72%;
+  left: 2px;
+  right: 2px;
+  &.gds-timeline__progress-wrapper--icons {
+    bottom: 69%;
+  }
+}
+
+.gds-timeline__progress-indicator {
+  background-color: $timelineProgressCompletedColor;
+  height: 100%;
+  width: 0%;
+  @include transition-ease-out(all, 150ms);
+}
+
+// Loop for sizing progress indicator
+@for $i from 2 through 20 {
+  $w: (100 / (-1 + $i));
+
+  @for $g from 1 through $i {
+    $s: $w * (-1 + $g);
+    .gds-timeline__item:first-child:nth-last-of-type(#{$i})
+      ~ .gds-timeline__item--active:nth-of-type(#{$g})
+      ~ .gds-timeline__progress-wrapper
+      .gds-timeline__progress-indicator {
+      width: #{$s}$percentage;
+    }
+  }
+}

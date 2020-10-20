@@ -1,0 +1,476 @@
+@mixin defaultShadows($borderColor, $dropShadow) {
+  box-shadow: inset 0 0 0 1px $borderColor,
+    // Border Cap
+    0 0 0px 0 rgba($dropShadow, 0); // Drop Shadow
+}
+@mixin hoverShadows($borderColor, $dropShadow) {
+  box-shadow: inset 0 0 0 1px $borderColor,
+    // Border Cap
+    0 0 3px 0 rgba($dropShadow, 0.3); // Drop Shadow
+}
+@mixin activeShadows($borderColor, $dropShadow) {
+  box-shadow: inset 0 0 0 1px $borderColor,
+    // Border Cap
+    0 0 1px 0 rgba($dropShadow, 0.4); // Drop Shadow
+}
+
+.gds-circular-button {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px white;
+  color: white;
+  cursor: pointer;
+  -webkit-appearance: button; /* for input */
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  @include no-select();
+  @include transition-ease-out(all, 250ms);
+  font-size: $c-btn-font-size-normal;
+  width: 58px;
+  height: 58px;
+  filter: grayscale(0%);
+  opacity: 1;
+
+  &:hover {
+    background-color: white;
+    border: 1px solid white;
+    box-shadow: inset 0 0 0 1px $gg-light-4;
+    transform: scale(1.02);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  > .fa {
+    vertical-align: middle;
+  }
+}
+
+// Inactive circular buttons
+.gds-circular-button--inactive {
+  filter: grayscale(80%);
+  opacity: 0.5;
+
+  &:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+}
+
+// Image inside circular button
+.gds-circular-button__image {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 2px;
+  border-radius: 50%;
+}
+
+// Tooltip Modifier
+.gds-circular-button--tooltip {
+  @extend .gds-tooltip--top;
+}
+
+// Disabled buttons
+.gds-circular-button[disabled="disabled"],
+.gds-circular-button[disabled],
+.gds-circular-button--disabled {
+  @extend .-disabled;
+}
+
+// Large circular buttons
+.gds-circular-button--lg {
+  font-size: $c-btn-font-size-large;
+  //padding: $c-btn-padding-large;
+  width: 72px;
+  height: 72px;
+}
+
+// Small circular buttons
+.gds-circular-button--sm {
+  font-size: $c-btn-font-size-small;
+  //padding: $c-btn-padding-small;
+  width: 40px;
+  height: 40px;
+}
+
+// X-small circular buttons
+.gds-circular-button--xs {
+  font-size: $c-btn-font-size-xsmall;
+  //padding: $c-btn-padding-xsmall;
+  width: 32px;
+  height: 32px;
+}
+
+// Plain circular buttons
+.gds-circular-button--default {
+  background-color: $gg-light-1;
+  border: 1px solid $gg-light-1;
+  @include defaultShadows($primaryColor, black);
+  color: $primaryColor;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: white;
+    border: 1px solid $gg-light-1;
+    @include hoverShadows($primaryColor, black);
+  }
+  &:active,
+  &:focus:active {
+    background-color: white;
+    @include activeShadows($primaryColor, black);
+  }
+}
+
+// Gray circular buttons
+.gds-circular-button--gray {
+  background-color: $gg-light-3;
+  border: 1px solid $gg-light-3;
+  @include defaultShadows(white, black);
+  color: white;
+  text-shadow: 0 1px 2px $gg-dark-4;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: mix($gg-light-2, black, 95%);
+    border: 1px solid $gg-light-3;
+    @include hoverShadows(white, black);
+  }
+  &:active,
+  &:focus:active {
+    background-color: mix($gg-light-3, black, 95%);
+    @include activeShadows(white, black);
+  }
+}
+
+// Primary circular buttons
+.gds-circular-button--primary {
+  background-color: $primaryColor;
+  border: 1px solid $primaryColor;
+  @include defaultShadows(white, black);
+  color: white;
+  text-shadow: 0 1px 2px $primaryDark4Color;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: $primaryLight3Color;
+    border: 1px solid $primaryColor;
+    @include hoverShadows(white, black);
+  }
+  &:active,
+  &:focus:active {
+    background-color: $primaryDark1Color;
+    @include activeShadows(white, black);
+  }
+}
+
+// Secondary circular buttons
+.gds-circular-button--secondary {
+  background-color: $secondaryColor;
+  border: 1px solid $secondaryColor;
+  @include defaultShadows(white, black);
+  color: $gg-light-1;
+  text-shadow: 0 1px 2px $secondaryDark4Color;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: $secondaryLight3Color;
+    border: 1px solid $secondaryColor;
+    @include hoverShadows(white, black);
+  }
+  &:active,
+  &:focus:active {
+    background-color: $secondaryDark1Color;
+    @include activeShadows(white, black);
+  }
+}
+
+// Tertiary circular buttons
+.gds-circular-button--tertiary {
+  background-color: $tertiaryColor;
+  border: 1px solid $tertiaryColor;
+  @include defaultShadows(white, black);
+  color: $gg-light-1;
+  text-shadow: 0 1px 2px $tertiaryDark4Color;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: $tertiaryLight3Color;
+    border: 1px solid $tertiaryColor;
+    @include hoverShadows(white, black);
+  }
+  &:active,
+  &:focus:active {
+    background-color: $tertiaryDark1Color;
+    @include activeShadows(white, black);
+  }
+}
+
+// Success circular buttons
+.gds-circular-button--success {
+  background-color: $successColor;
+  border: 1px solid $successColor;
+  @include defaultShadows(white, black);
+  color: $gg-light-1;
+  text-shadow: 0 1px 2px $successDark4Color;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: $successLight3Color;
+    border: 1px solid $successColor;
+    @include hoverShadows(white, black);
+  }
+  &:active,
+  &:focus:active {
+    background-color: $successDark1Color;
+    @include activeShadows(white, black);
+  }
+}
+
+// Info circular buttons
+.gds-circular-button--info {
+  background-color: $infoColor;
+  border: 1px solid $infoColor;
+  @include defaultShadows(white, black);
+  color: $gg-light-1;
+  text-shadow: 0 1px 2px $infoDark4Color;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: $infoLight3Color;
+    border: 1px solid $infoColor;
+    @include hoverShadows(white, black);
+  }
+  &:active,
+  &:focus:active {
+    background-color: $infoDark1Color;
+    @include activeShadows(white, black);
+  }
+}
+
+// Warning circular buttons
+.gds-circular-button--warning {
+  background-color: $warningColor;
+  border: 1px solid $warningColor;
+  @include defaultShadows(white, black);
+  color: $gg-light-1;
+  text-shadow: 0 1px 2px $warningDark4Color;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: $warningLight3Color;
+    border: 1px solid $warningColor;
+    @include hoverShadows(white, black);
+  }
+  &:active,
+  &:focus:active {
+    background-color: $warningDark1Color;
+    @include activeShadows(white, black);
+  }
+}
+
+// Danger circular buttons
+.gds-circular-button--danger {
+  background-color: $dangerColor;
+  border: 1px solid $dangerColor;
+  @include defaultShadows(white, black);
+  color: $gg-light-1;
+  text-shadow: 0 1px 2px $dangerDark4Color;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: $dangerLight3Color;
+    border: 1px solid $dangerColor;
+    @include hoverShadows(white, black);
+  }
+  &:active,
+  &:focus:active {
+    background-color: $dangerDark1Color;
+    @include activeShadows(white, black);
+  }
+}
+
+// Outlined circular buttons
+.gds-circular-button--outline {
+  background-color: transparent;
+  border: 1px solid transparent;
+  @include defaultShadows($gg-light-2, black);
+  color: $primaryColor;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    @include defaultShadows($primaryColor, black);
+    color: $primaryColor;
+  }
+  &:active,
+  &:focus:active {
+    @include activeShadows($primaryColor, black);
+  }
+}
+
+// White circular buttons
+.gds-circular-button--white {
+  background-color: rgba(white, 0);
+  border: 1px solid rgba(white, 0);
+  @include defaultShadows(white, black);
+  color: white;
+  text-shadow: 0 1px 2px $primaryDark4Color;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: rgba(white, 0.15);
+    border: 1px solid rgba(white, 0.15);
+    @include defaultShadows(white, black);
+  }
+  &:active,
+  &:focus:active {
+    background-color: rgba(black, 0.05);
+    @include activeShadows(white, black);
+  }
+}
+
+// Button toggle
+.gds-circular-button--toggle {
+  @extend .gds-circular-button--gray;
+  &.gds-circular-button--active {
+    @extend .gds-circular-button--primary;
+  }
+}
+
+// Dark circular buttons
+.gds-circular-button--dark {
+  background-color: transparent;
+  border: 1px solid transparent;
+  box-shadow: inset 0 0 0 1px $gg-light-3;
+  color: $primaryColor;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: rgba(white, 0.05);
+    border: 1px solid rgba(white, 0.05);
+    box-shadow: inset 0 0 0 1px $gg-light-3;
+    color: $primaryColor;
+  }
+}
+
+// Dark Primary circular buttons
+.gds-circular-button--dark-primary {
+  @extend .gds-circular-button--dark;
+  box-shadow: inset 0 0 0 1px $primaryColor;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: rgba(white, 0.05);
+    border: 1px solid rgba(white, 0.05);
+    box-shadow: inset 0 0 0 1px $primaryLight4Color;
+    color: $primaryColor;
+  }
+}
+
+// Dark Secondary circular buttons
+.gds-circular-button--dark-secondary {
+  @extend .gds-circular-button--dark;
+  box-shadow: inset 0 0 0 1px $secondaryColor;
+  color: $secondaryColor;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: rgba(white, 0.05);
+    border: 1px solid rgba(white, 0.05);
+    box-shadow: inset 0 0 0 1px $secondaryLight4Color;
+    color: $secondaryColor;
+  }
+}
+
+// Dark Tertiary circular buttons
+.gds-circular-button--dark-tertiary {
+  @extend .gds-circular-button--dark;
+  box-shadow: inset 0 0 0 1px $tertiaryColor;
+  color: $tertiaryColor;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: rgba(white, 0.05);
+    border: 1px solid rgba(white, 0.05);
+    box-shadow: inset 0 0 0 1px $tertiaryLight4Color;
+    color: $tertiaryColor;
+  }
+}
+
+// Dark Success circular buttons
+.gds-circular-button--dark-success {
+  @extend .gds-circular-button--dark;
+  box-shadow: inset 0 0 0 1px $successColor;
+  color: $successColor;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: rgba(white, 0.05);
+    border: 1px solid rgba(white, 0.05);
+    box-shadow: inset 0 0 0 1px $successLight4Color;
+    color: $successColor;
+  }
+}
+
+// Dark Info circular buttons
+.gds-circular-button--dark-info {
+  @extend .gds-circular-button--dark;
+  box-shadow: inset 0 0 0 1px $infoColor;
+  color: $infoColor;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: rgba(white, 0.05);
+    border: 1px solid rgba(white, 0.05);
+    box-shadow: inset 0 0 0 1px $infoLight4Color;
+    color: $infoColor;
+  }
+}
+
+// Dark Warning circular buttons
+.gds-circular-button--dark-warning {
+  @extend .gds-circular-button--dark;
+  box-shadow: inset 0 0 0 1px $warningColor;
+  color: $warningColor;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: rgba(white, 0.05);
+    border: 1px solid rgba(white, 0.05);
+    box-shadow: inset 0 0 0 1px $warningLight4Color;
+    color: $warningColor;
+  }
+}
+
+// Dark Danger circular buttons
+.gds-circular-button--dark-danger {
+  @extend .gds-circular-button--dark;
+  box-shadow: inset 0 0 0 1px $dangerColor;
+  color: $dangerColor;
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    background-color: rgba(white, 0.05);
+    border: 1px solid rgba(white, 0.05);
+    box-shadow: inset 0 0 0 1px $dangerLight4Color;
+    color: $dangerColor;
+  }
+}
+
+// Dark Danger circular buttons
+.gds-circular-button--dark-toggle {
+  @extend .gds-circular-button--dark;
+  color: $gg-light-3;
+  &.gds-circular-button--active {
+    @extend .gds-circular-button--dark-primary;
+  }
+}
