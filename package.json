@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}' ",
     "styles:build": "node-sass --include-path scss scss/index.scss   dist/main.css --output-style compressed",
     "styles:build2": "node-sass --include-path scss styles/main.scss   dist/main.css --output-style compressed",
     "styles:watch": "node-sass -w scss -o temp/",
@@ -46,18 +45,6 @@
     "@storybook/html": "^6.0.26",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.13",
-    "eslint": "^7.11.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-json-format": "^2.0.1",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.21.4",
-    "eslint-plugin-react-hooks": "^4.1.2",
-    "react-is": "^16.13.1",
-    "stylelint": "^13.7.2",
-    "stylelint-config-sass-guidelines": "^7.1.0",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.18.0"
+    "react-is": "^16.13.1"
   }
 }
