@@ -39,7 +39,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 6006",
-    "start:temp": "npm-run-all --parallel styles:watch browsersync",
+    "start:temp": "npm-run-all --parallel styles:watch browsersync:config",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
