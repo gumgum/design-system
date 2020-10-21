@@ -3,16 +3,6 @@
   "version": "1.5.0",
   "description": "GumGum's design system, Concrete.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "styles:build": "node-sass --include-path scss scss/index.scss   dist/main.css --output-style compressed",
-    "styles:build2": "node-sass --include-path scss styles/main.scss   dist/main.css --output-style compressed",
-    "styles:watch": "node-sass -w scss -o temp/",
-    "browsersync": "browser-sync start --server --files dist/*",
-    "start": "npm-run-all --parallel styles:watch browsersync"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gumgum/design-system.git"
@@ -45,6 +35,18 @@
     "@storybook/html": "^6.0.26",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.13",
+    "prettier": "2.1.2",
     "react-is": "^16.13.1"
+  },
+  "scripts": {
+    "start": "start-storybook -p 6006",
+    "start:temp": "npm-run-all --parallel styles:watch browsersync",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "styles:build": "node-sass --include-path scss styles/scss/main.scss  styles/compressed-css/index.css --output-style compressed",
+    "styles:watch": "node-sass -w styles/scss -o temp/",
+    "browsersync": "browser-sync start --server --files temp/",
+    "browsersync:config": "browser-sync start --config bs-config.js"
   }
 }
