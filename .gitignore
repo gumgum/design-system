@@ -1,3 +1,6 @@
+# Ignore Storybook Build
+storybook-static
+
 # Logs
 logs
 *.log

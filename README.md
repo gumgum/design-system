@@ -1,6 +1,10 @@
 # GumGum Design System
 
-Future home of GumGum Design System 2.0 [aka Concrete]
+## 🚧 Under Construction 🚧
+
+Future home of GumGum Design System 2.0 [aka Concrete] 🚧
+
+![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/gumgum/design-system/master)
 
 ---
 
