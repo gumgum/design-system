@@ -23,10 +23,7 @@
     "url": "https://github.com/gumgum/design-system/issues"
   },
   "homepage": "https://github.com/gumgum/design-system#readme",
-  "dependencies": {
-    "node-sass": "^4.14.1",
-    "npm-run-all": "^4.1.5"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@storybook/addon-actions": "^6.0.26",
@@ -35,6 +32,8 @@
     "@storybook/html": "^6.0.26",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.13",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "2.1.2",
     "react-is": "^16.13.1"
   },
