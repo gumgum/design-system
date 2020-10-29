@@ -1,114 +1,114 @@
 .-has-spa-header {
-  padding-top: ($unit * 4.5) !important;
+    padding-top: ($unit * 4.5) !important;
 }
 
 .gds-spa-header,
 .gds-spa-header__primary-nav,
 .gds-spa-header__secondary-nav,
 .gds-spa-header__section {
-  display: flex;
+    display: flex;
 }
 
 .gds-spa-header {
-  background-color: $spaHeaderBackgroundColor;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translateX(0);
-  width: 100%;
-  height: auto;
-  color: white;
-  z-index: $z-index-7;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
-  border-bottom: $cap-size solid $spaHeaderUnderlineColor;
+    background-color: $spaHeaderBackgroundColor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    width: 100%;
+    height: auto;
+    color: white;
+    z-index: $z-index-7;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.15);
+    border-bottom: $cap-size solid $spaHeaderUnderlineColor;
 }
 
 .gds-spa-header__primary-nav {
-  width: auto;
+    width: auto;
 }
 
 .gds-spa-header__secondary-nav {
-  flex: 1;
-  justify-content: flex-end;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .gds-spa-header__logo-image {
-  display: block;
-  max-width: 120px;
-  margin-left: ($unit / 2);
+    display: block;
+    max-width: 120px;
+    margin-left: ($unit / 2);
 }
 
 .gds-spa-header__logo-mark {
-  display: block;
-  height: 100%;
-  width: 100%;
-  padding: 0.5 * $unit 0.75 * $unit;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0.5*$unit 0.75*$unit;
 }
 
 .gds-spa-header__product-name {
-  display: block;
-  max-width: 100%;
-  height: $unit * 0.8;
+    display: block;
+    max-width: 100%;
+    height: $unit * 0.8;
 }
 
 .gds-spa-header__product-name--two-lines {
-  height: ($unit * 1.5);
+    height: ($unit * 1.5);
 }
 
 .gds-spa-header__section {
-  align-items: center;
-  padding: ($unit / 2);
-  border-left: 1px solid $spaHeaderBackgroundColor;
+    align-items: center;
+    padding: ($unit / 2);
+    border-left: 1px solid $spaHeaderBackgroundColor;
 }
 
 .gds-spa-header__section--product {
-  flex-shrink: 2;
-  padding: 0.5 * $unit 0.75 * $unit;
+    flex-shrink: 2;
+    padding: 0.5 * $unit 0.75 * $unit;
 }
 
 .gds-spa-header__section--white {
-  background-color: white;
-  border-left: none;
-
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: -$cap-size;
-    left: 0;
-    right: 0;
-    height: $cap-size;
-    background-color: #ccc;
-  }
-  &:hover {
     background-color: white;
-  }
+    border-left: none;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -$cap-size;
+        left: 0;
+        right: 0;
+        height: $cap-size;
+        background-color: #ccc;
+    }
+    &:hover {
+        background-color: white;
+    }
 }
 
 .gds-spa-header__section-icon {
-  width: ($unit * 3.5);
-  padding: 0;
-  justify-content: center;
-  font-size: ($unit * 1.25);
-  flex-shrink: 1;
+    width: ($unit * 3.5);
+    padding: 0;
+    justify-content: center;
+    font-size: ($unit * 1.25);
+    flex-shrink: 1;
 }
 
 .gds-spa-header__section-link {
-  color: white;
-  width: 100%;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  @include transition-ease-out(all, 100ms);
-  &:hover {
-    background-color: rgba(white, 0.1);
-    box-shadow: 0 0 5px rgba(black, 0.1);
-    text-shadow: 0 1px 2px rgba(black, 0.25);
-    z-index: 9;
-  }
-  &:active {
-    background-color: rgba(white, 0.25);
-    box-shadow: none;
-  }
+    color: white;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    @include transition-ease-out(all,100ms);
+    &:hover {
+        background-color: rgba(white, 0.1);
+        box-shadow: 0 0 5px rgba(black, 0.1);
+        text-shadow: 0 1px 2px rgba(black,0.25);
+        z-index: 9; 
+    }
+    &:active {
+        background-color: rgba(white, 0.25);
+        box-shadow: none;
+    }
 }

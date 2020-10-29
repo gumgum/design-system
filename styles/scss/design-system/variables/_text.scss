@@ -4,63 +4,54 @@
 // Proxima Nova webfonts
 
 @font-face {
-  font-family: 'pnlight';
-  font-style: normal;
-  font-weight: normal;
-  src:
-    url('https://assets.ggops.com/fonts/pns-light-webfont.eot') format('eot'),
-    url('https://assets.ggops.com/fonts/pns-light-webfont.svg') format('svg'),
-    url('https://assets.ggops.com/fonts/pns-light-webfont.ttf') format('ttf'),
-    url('https://assets.ggops.com/fonts/pns-light-webfont.woff') format('woff');
+    font-family: 'pnlight';
+    src: url('https://assets.ggops.com/fonts/pns-light-webfont.eot') format('eot'),
+        url('https://assets.ggops.com/fonts/pns-light-webfont.svg') format('svg'),
+        url('https://assets.ggops.com/fonts/pns-light-webfont.ttf') format('ttf'),
+        url('https://assets.ggops.com/fonts/pns-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'pnregular';
-  font-style: normal;
-  font-weight: normal;
-  src:
-    url('https://assets.ggops.com/fonts/pns-regular-webfont.eot')
-    format('eot'),
-    url('https://assets.ggops.com/fonts/pns-regular-webfont.svg') format('svg'),
-    url('https://assets.ggops.com/fonts/pns-regular-webfont.ttf') format('ttf'),
-    url('https://assets.ggops.com/fonts/pns-regular-webfont.woff')
-    format('woff');
+    font-family: 'pnregular';
+    src: url('https://assets.ggops.com/fonts/pns-regular-webfont.eot') format('eot'),
+        url('https://assets.ggops.com/fonts/pns-regular-webfont.svg') format('svg'),
+        url('https://assets.ggops.com/fonts/pns-regular-webfont.ttf') format('ttf'),
+        url('https://assets.ggops.com/fonts/pns-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'pnsemibold';
-  font-style: normal;
-  font-weight: normal;
-  src:
-    url('https://assets.ggops.com/fonts/pns-semibold-webfont.eot')
-    format('eot'),
-    url('https://assets.ggops.com/fonts/pns-semibold-webfont.svg') format('svg'),
-    url('https://assets.ggops.com/fonts/pns-semibold-webfont.ttf') format('ttf'),
-    url('https://assets.ggops.com/fonts/pns-semibold-webfont.woff')
-    format('woff');
+    font-family: 'pnsemibold';
+    src: url('https://assets.ggops.com/fonts/pns-semibold-webfont.eot') format('eot'),
+        url('https://assets.ggops.com/fonts/pns-semibold-webfont.svg') format('svg'),
+        url('https://assets.ggops.com/fonts/pns-semibold-webfont.ttf') format('ttf'),
+        url('https://assets.ggops.com/fonts/pns-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'pnbold';
-  font-style: normal;
-  font-weight: normal;
-  src:
-    url('https://assets.ggops.com/fonts/pns-bold-webfont.eot') format('eot'),
-    url('https://assets.ggops.com/fonts/pns-bold-webfont.svg') format('svg'),
-    url('https://assets.ggops.com/fonts/pns-bold-webfont.ttf') format('ttf'),
-    url('https://assets.ggops.com/fonts/pns-bold-webfont.woff') format('woff');
+    font-family: 'pnbold';
+    src: url('https://assets.ggops.com/fonts/pns-bold-webfont.eot') format('eot'),
+        url('https://assets.ggops.com/fonts/pns-bold-webfont.svg') format('svg'),
+        url('https://assets.ggops.com/fonts/pns-bold-webfont.ttf') format('ttf'),
+        url('https://assets.ggops.com/fonts/pns-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'gothambold';
-  font-style: normal;
-  font-weight: normal;
-  src:
-    url('https://assets.ggops.com/fonts/Gotham-Bold.eot') format('eot'),
-    url('https://assets.ggops.com/fonts/Gotham-Bold.svg') format('svg'),
-    url('https://assets.ggops.com/fonts/Gotham-Bold.ttf') format('ttf'),
-    url('https://assets.ggops.com/fonts/Gotham-Bold.woff') format('woff'),
-    url('https://assets.ggops.com/fonts/Gotham-Bold.woff2') format('woff2');
+    font-family: 'gothambold';
+    src: url('https://assets.ggops.com/fonts/Gotham-Bold.eot') format('eot'),
+        url('https://assets.ggops.com/fonts/Gotham-Bold.svg') format('svg'),
+        url('https://assets.ggops.com/fonts/Gotham-Bold.ttf') format('ttf'),
+        url('https://assets.ggops.com/fonts/Gotham-Bold.woff') format('woff'),
+        url('https://assets.ggops.com/fonts/Gotham-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 $pri-font: 'pnlight';

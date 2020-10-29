@@ -1,10 +1,10 @@
 .gds-segment {
-  max-height: 3000px;
-  overflow: hidden;
-  @include transition-ease-in(all, 250ms);
+    max-height:3000px;
+    overflow:hidden;
+    @include transition-ease-in(all, 250ms);
 }
 
 .gds-segment--collapse {
-  max-height: 0;
-  @include transition-ease-out(all, 250ms);
+    max-height:0;
+    @include transition-ease-out(all, 250ms);
 }

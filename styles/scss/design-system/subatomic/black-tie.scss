@@ -1,64 +1,28 @@
 @font-face {
-  font-family: "Black Tie";
-  src: url("https://assets.ggops.com/fonts/BlackTie-Solid-webfont.eot?v=1.0.0");
-  src: url("https://assets.ggops.com/fonts/BlackTie-Solid-webfont.eot?#iefix&v=1.0.0")
-      format("embedded-opentype"),
-    url("https://assets.ggops.com/fonts/BlackTie-Solid-webfont.woff2?v=1.0.0")
-      format("woff2"),
-    url("https://assets.ggops.com/fonts/BlackTie-Solid-webfont.woff?v=1.0.0")
-      format("woff"),
-    url("https://assets.ggops.com/fonts/BlackTie-Solid-webfont.ttf?v=1.0.0")
-      format("truetype"),
-    url("https://assets.ggops.com/fonts/BlackTie-Solid-webfont.svg?v=1.0.0#black_tiesolid")
-      format("svg");
+  font-family: 'Black Tie';
+  src: url('https://assets.ggops.com/fonts/BlackTie-Solid-webfont.eot?v=1.0.0');
+  src: url('https://assets.ggops.com/fonts/BlackTie-Solid-webfont.eot?#iefix&v=1.0.0') format('embedded-opentype'), url('https://assets.ggops.com/fonts/BlackTie-Solid-webfont.woff2?v=1.0.0') format('woff2'), url('https://assets.ggops.com/fonts/BlackTie-Solid-webfont.woff?v=1.0.0') format('woff'), url('https://assets.ggops.com/fonts/BlackTie-Solid-webfont.ttf?v=1.0.0') format('truetype'), url('https://assets.ggops.com/fonts/BlackTie-Solid-webfont.svg?v=1.0.0#black_tiesolid') format('svg');
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
-  font-family: "Black Tie";
-  src: url("https://assets.ggops.com/fonts/BlackTie-Bold-webfont.eot?v=1.0.0");
-  src: url("https://assets.ggops.com/fonts/BlackTie-Bold-webfont.eot?#iefix&v=1.0.0")
-      format("embedded-opentype"),
-    url("https://assets.ggops.com/fonts/BlackTie-Bold-webfont.woff2?v=1.0.0")
-      format("woff2"),
-    url("https://assets.ggops.com/fonts/BlackTie-Bold-webfont.woff?v=1.0.0")
-      format("woff"),
-    url("https://assets.ggops.com/fonts/BlackTie-Bold-webfont.ttf?v=1.0.0")
-      format("truetype"),
-    url("https://assets.ggops.com/fonts/BlackTie-Bold-webfont.svg?v=1.0.0#black_tiebold")
-      format("svg");
+  font-family: 'Black Tie';
+  src: url('https://assets.ggops.com/fonts/BlackTie-Bold-webfont.eot?v=1.0.0');
+  src: url('https://assets.ggops.com/fonts/BlackTie-Bold-webfont.eot?#iefix&v=1.0.0') format('embedded-opentype'), url('https://assets.ggops.com/fonts/BlackTie-Bold-webfont.woff2?v=1.0.0') format('woff2'), url('https://assets.ggops.com/fonts/BlackTie-Bold-webfont.woff?v=1.0.0') format('woff'), url('https://assets.ggops.com/fonts/BlackTie-Bold-webfont.ttf?v=1.0.0') format('truetype'), url('https://assets.ggops.com/fonts/BlackTie-Bold-webfont.svg?v=1.0.0#black_tiebold') format('svg');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "Black Tie";
-  src: url("https://assets.ggops.com/fonts/BlackTie-Regular-webfont.eot?v=1.0.0");
-  src: url("https://assets.ggops.com/fonts/BlackTie-Regular-webfont.eot?#iefix&v=1.0.0")
-      format("embedded-opentype"),
-    url("https://assets.ggops.com/fonts/BlackTie-Regular-webfont.woff2?v=1.0.0")
-      format("woff2"),
-    url("https://assets.ggops.com/fonts/BlackTie-Regular-webfont.woff?v=1.0.0")
-      format("woff"),
-    url("https://assets.ggops.com/fonts/BlackTie-Regular-webfont.ttf?v=1.0.0")
-      format("truetype"),
-    url("https://assets.ggops.com/fonts/BlackTie-Regular-webfont.svg?v=1.0.0#black_tieregular")
-      format("svg");
+  font-family: 'Black Tie';
+  src: url('https://assets.ggops.com/fonts/BlackTie-Regular-webfont.eot?v=1.0.0');
+  src: url('https://assets.ggops.com/fonts/BlackTie-Regular-webfont.eot?#iefix&v=1.0.0') format('embedded-opentype'), url('https://assets.ggops.com/fonts/BlackTie-Regular-webfont.woff2?v=1.0.0') format('woff2'), url('https://assets.ggops.com/fonts/BlackTie-Regular-webfont.woff?v=1.0.0') format('woff'), url('https://assets.ggops.com/fonts/BlackTie-Regular-webfont.ttf?v=1.0.0') format('truetype'), url('https://assets.ggops.com/fonts/BlackTie-Regular-webfont.svg?v=1.0.0#black_tieregular') format('svg');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Black Tie";
-  src: url("https://assets.ggops.com/fonts/BlackTie-Light-webfont.eot?v=1.0.0");
-  src: url("https://assets.ggops.com/fonts/BlackTie-Light-webfont.eot?#iefix&v=1.0.0")
-      format("embedded-opentype"),
-    url("https://assets.ggops.com/fonts/BlackTie-Light-webfont.woff2?v=1.0.0")
-      format("woff2"),
-    url("https://assets.ggops.com/fonts/BlackTie-Light-webfont.woff?v=1.0.0")
-      format("woff"),
-    url("https://assets.ggops.com/fonts/BlackTie-Light-webfont.ttf?v=1.0.0")
-      format("truetype"),
-    url("https://assets.ggops.com/fonts/BlackTie-Light-webfont.svg?v=1.0.0#black_tielight")
-      format("svg");
+  font-family: 'Black Tie';
+  src: url('https://assets.ggops.com/fonts/BlackTie-Light-webfont.eot?v=1.0.0');
+  src: url('https://assets.ggops.com/fonts/BlackTie-Light-webfont.eot?#iefix&v=1.0.0') format('embedded-opentype'), url('https://assets.ggops.com/fonts/BlackTie-Light-webfont.woff2?v=1.0.0') format('woff2'), url('https://assets.ggops.com/fonts/BlackTie-Light-webfont.woff?v=1.0.0') format('woff'), url('https://assets.ggops.com/fonts/BlackTie-Light-webfont.ttf?v=1.0.0') format('truetype'), url('https://assets.ggops.com/fonts/BlackTie-Light-webfont.svg?v=1.0.0#black_tielight') format('svg');
   font-weight: 200;
   font-style: normal;
 }
@@ -86,7 +50,7 @@
   font-weight: 200;
 }
 .bt-sm {
-  font-size: 0.7em;
+  font-size: .7em;
   vertical-align: baseline;
 }
 .bt-lg {
@@ -135,9 +99,9 @@
   left: -2em;
 }
 .bt-border {
-  padding: 0.2em;
+  padding: .2em;
   border: solid 0.08em #eeeeee;
-  border-radius: 0.1em;
+  border-radius: .1em;
 }
 .pull-right {
   float: right;
@@ -150,14 +114,14 @@
 .btr.pull-left,
 .btl.pull-left,
 .fab.pull-left {
-  margin-right: 0.3em;
+  margin-right: .3em;
 }
 .bts.pull-right,
 .btb.pull-right,
 .btr.pull-right,
 .btl.pull-right,
 .fab.pull-right {
-  margin-left: 0.3em;
+  margin-left: .3em;
 }
 .bt-spin {
   -webkit-animation: bt-spin 2s infinite linear;
@@ -237,7 +201,7 @@
   top: 0;
   left: 0;
   line-height: inherit;
-  font-size: 0.5em;
+  font-size: .5em;
 }
 .bt-stack-1x,
 .bt-stack-sm {

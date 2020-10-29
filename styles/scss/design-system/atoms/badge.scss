@@ -1,59 +1,58 @@
 .gds-badge {
-  @include no-select();
-
-  background: $primaryColor;
-  border-radius: $border-radius;
-  box-shadow: none !important;
-  color: #fff;
-  display: inline-block;
-  font-family: $pri-font-regular;
-  font-size: 60%;
-  letter-spacing: 0.5px;
-  margin: 0 ($unit / 4);
-  padding: 1px ($unit / 4) 0;
-  pointer-events: none;
-  text-shadow: none !important;
-  vertical-align: text-top;
+    display: inline-block;
+    font-size: 60%;
+    margin: 0 ($unit / 4);
+    background: $primaryColor;
+    color: white;
+    padding: 1px ($unit / 4) 0;
+    border-radius: $border-radius;
+    vertical-align: text-top;
+    font-family: $pri-font-regular;
+    letter-spacing: 0.5px;
+    pointer-events: none;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    @include no-select();
 }
 
 .gds-badge--inverse {
-  color: $primaryColor;
+    color: $primaryColor;
 }
 
 .gds-badge--dark {
-  background: $gg-dark-4 !important;
+    background: $gg-dark-4 !important;
 }
 
 .gds-badge--success {
-  background: $successColor;
+    background: $successColor;
 }
 
 .gds-badge--success-inverse {
-  color: $successColor;
+    color: $successColor;
 }
 
 .gds-badge--info {
-  background: $infoColor;
+    background: $infoColor;
 }
 
 .gds-badge--info-inverse {
-  color: $infoColor;
+    color: $infoColor;
 }
 
 .gds-badge--warning {
-  background: $warningColor;
+    background: $warningColor;
 }
 
 .gds-badge--warning-inverse {
-  color: $warningColor;
+    color: $warningColor;
 }
 
 .gds-badge--danger {
-  background: $dangerColor;
+    background: $dangerColor;
 }
 
 .gds-badge--danger-inverse {
-  color: $dangerColor;
+    color: $dangerColor;
 }
 
 .gds-badge--inverse,
@@ -61,12 +60,12 @@
 .gds-badge--info-inverse,
 .gds-badge--warning-inverse,
 .gds-badge--danger-inverse {
-  background: #fff;
+    background: white;
 }
 
 .gds-badge--empty {
-  border-radius: ($unit / 4);
-  height: ($unit / 2);
-  vertical-align: super;
-  width: ($unit / 2);
+    width: ($unit / 2);
+    height: ($unit / 2);
+    border-radius: ($unit / 4);
+    vertical-align: super;
 }

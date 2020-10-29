@@ -1,348 +1,328 @@
 // Theme color utilities
-$color-sfx: (
-  "pri",
-  "sec",
-  "ter",
-  "quat",
-  "suc",
-  "war",
-  "dan",
-  "inf",
-  "red",
-  "blue",
-  "gold",
-  "green",
-  "purple",
-  "orange",
-  "dkblue",
-  "dkgreen",
-  "dkred",
-  "dkgold",
-  "magenta"
-);
-$shade-sfx: (
-  "",
-  "-lt-1",
-  "-lt-2",
-  "-lt-3",
-  "-lt-4",
-  "-lt-5",
-  "-dk-1",
-  "-dk-2",
-  "-dk-3",
-  "-dk-4",
-  "-dk-5"
-);
-$defaults: (
-  (
-    $primaryColor,
-    $primaryLight1Color,
-    $primaryLight2Color,
-    $primaryLight3Color,
-    $primaryLight4Color,
-    $primaryLight5Color,
-    $primaryDark1Color,
-    $primaryDark2Color,
-    $primaryDark3Color,
-    $primaryDark4Color,
-    $primaryDark5Color
-  ),
-  (
-    $secondaryColor,
-    $secondaryLight1Color,
-    $secondaryLight2Color,
-    $secondaryLight3Color,
-    $secondaryLight4Color,
-    $secondaryLight5Color,
-    $secondaryDark1Color,
-    $secondaryDark2Color,
-    $secondaryDark3Color,
-    $secondaryDark4Color,
-    $secondaryDark5Color
-  ),
-  (
-    $tertiaryColor,
-    $tertiaryLight1Color,
-    $tertiaryLight2Color,
-    $tertiaryLight3Color,
-    $tertiaryLight4Color,
-    $tertiaryLight5Color,
-    $tertiaryDark1Color,
-    $tertiaryDark2Color,
-    $tertiaryDark3Color,
-    $tertiaryDark4Color,
-    $tertiaryDark5Color
-  ),
-  (
-    $quaternaryColor,
-    $quaternaryLight1Color,
-    $quaternaryLight2Color,
-    $quaternaryLight3Color,
-    $quaternaryLight4Color,
-    $quaternaryLight5Color,
-    $quaternaryDark1Color,
-    $quaternaryDark2Color,
-    $quaternaryDark3Color,
-    $quaternaryDark4Color,
-    $quaternaryDark5Color
-  ),
-  (
-    $successColor,
-    $successLight1Color,
-    $successLight2Color,
-    $successLight3Color,
-    $successLight4Color,
-    $successLight5Color,
-    $successDark1Color,
-    $successDark2Color,
-    $successDark3Color,
-    $successDark4Color,
-    $successDark5Color
-  ),
-  (
-    $warningColor,
-    $warningLight1Color,
-    $warningLight2Color,
-    $warningLight3Color,
-    $warningLight4Color,
-    $warningLight5Color,
-    $warningDark1Color,
-    $warningDark2Color,
-    $warningDark3Color,
-    $warningDark4Color,
-    $warningDark5Color
-  ),
-  (
-    $dangerColor,
-    $dangerLight1Color,
-    $dangerLight2Color,
-    $dangerLight3Color,
-    $dangerLight4Color,
-    $dangerLight5Color,
-    $dangerDark1Color,
-    $dangerDark2Color,
-    $dangerDark3Color,
-    $dangerDark4Color,
-    $dangerDark5Color
-  ),
-  (
-    $infoColor,
-    $infoLight1Color,
-    $infoLight2Color,
-    $infoLight3Color,
-    $infoLight4Color,
-    $infoLight5Color,
-    $infoDark1Color,
-    $infoDark2Color,
-    $infoDark3Color,
-    $infoDark4Color,
-    $infoDark5Color
-  ),
-  (
-    $redColor,
-    $redLight1Color,
-    $redLight2Color,
-    $redLight3Color,
-    $redLight4Color,
-    $redLight5Color,
-    $redDark1Color,
-    $redDark2Color,
-    $redDark3Color,
-    $redDark4Color,
-    $redDark5Color
-  ),
-  (
-    $blueColor,
-    $blueLight1Color,
-    $blueLight2Color,
-    $blueLight3Color,
-    $blueLight4Color,
-    $blueLight5Color,
-    $blueDark1Color,
-    $blueDark2Color,
-    $blueDark3Color,
-    $blueDark4Color,
-    $blueDark5Color
-  ),
-  (
-    $goldColor,
-    $goldLight1Color,
-    $goldLight2Color,
-    $goldLight3Color,
-    $goldLight4Color,
-    $goldLight5Color,
-    $goldDark1Color,
-    $goldDark2Color,
-    $goldDark3Color,
-    $goldDark4Color,
-    $goldDark5Color
-  ),
-  (
-    $greenColor,
-    $greenLight1Color,
-    $greenLight2Color,
-    $greenLight3Color,
-    $greenLight4Color,
-    $greenLight5Color,
-    $greenDark1Color,
-    $greenDark2Color,
-    $greenDark3Color,
-    $greenDark4Color,
-    $greenDark5Color
-  ),
-  (
-    $purpleColor,
-    $purpleLight1Color,
-    $purpleLight2Color,
-    $purpleLight3Color,
-    $purpleLight4Color,
-    $purpleLight5Color,
-    $purpleDark1Color,
-    $purpleDark2Color,
-    $purpleDark3Color,
-    $purpleDark4Color,
-    $purpleDark5Color
-  ),
-  (
-    $orangeColor,
-    $orangeLight1Color,
-    $orangeLight2Color,
-    $orangeLight3Color,
-    $orangeLight4Color,
-    $orangeLight5Color,
-    $orangeDark1Color,
-    $orangeDark2Color,
-    $orangeDark3Color,
-    $orangeDark4Color,
-    $orangeDark5Color
-  ),
-  (
-    $darkBlueColor,
-    $darkBlueLight1Color,
-    $darkBlueLight2Color,
-    $darkBlueLight3Color,
-    $darkBlueLight4Color,
-    $darkBlueLight5Color,
-    $darkBlueDark1Color,
-    $darkBlueDark2Color,
-    $darkBlueDark3Color,
-    $darkBlueDark4Color,
-    $darkBlueDark5Color
-  ),
-  (
-    $darkGreenColor,
-    $darkGreenLight1Color,
-    $darkGreenLight2Color,
-    $darkGreenLight3Color,
-    $darkGreenLight4Color,
-    $darkGreenLight5Color,
-    $darkGreenDark1Color,
-    $darkGreenDark2Color,
-    $darkGreenDark3Color,
-    $darkGreenDark4Color,
-    $darkGreenDark5Color
-  ),
-  (
-    $darkRedColor,
-    $darkRedLight1Color,
-    $darkRedLight2Color,
-    $darkRedLight3Color,
-    $darkRedLight4Color,
-    $darkRedLight5Color,
-    $darkRedDark1Color,
-    $darkRedDark2Color,
-    $darkRedDark3Color,
-    $darkRedDark4Color,
-    $darkRedDark5Color
-  ),
-  (
-    $darkGoldColor,
-    $darkGoldLight1Color,
-    $darkGoldLight2Color,
-    $darkGoldLight3Color,
-    $darkGoldLight4Color,
-    $darkGoldLight5Color,
-    $darkGoldDark1Color,
-    $darkGoldDark2Color,
-    $darkGoldDark3Color,
-    $darkGoldDark4Color,
-    $darkGoldDark5Color
-  ),
-  (
-    $magentaColor,
-    $magentaLight1Color,
-    $magentaLight2Color,
-    $magentaLight3Color,
-    $magentaLight4Color,
-    $magentaLight5Color,
-    $magentaDark1Color,
-    $magentaDark2Color,
-    $magentaDark3Color,
-    $magentaDark4Color,
-    $magentaDark5Color
-  )
+$color-sfx:('pri','sec','ter', 'quat', 'suc','war','dan','inf','red','blue','gold','green','purple','orange','dkblue','dkgreen','dkred','dkgold','magenta');
+$shade-sfx:('', '-lt-1', '-lt-2', '-lt-3', '-lt-4', '-lt-5', '-dk-1', '-dk-2', '-dk-3', '-dk-4', '-dk-5');
+$defaults:(
+    (
+        $primaryColor,
+        $primaryLight1Color,
+        $primaryLight2Color,
+        $primaryLight3Color,
+        $primaryLight4Color,
+        $primaryLight5Color,
+        $primaryDark1Color,
+        $primaryDark2Color,
+        $primaryDark3Color,
+        $primaryDark4Color,
+        $primaryDark5Color
+    ),
+    (
+        $secondaryColor,
+        $secondaryLight1Color,
+        $secondaryLight2Color,
+        $secondaryLight3Color,
+        $secondaryLight4Color,
+        $secondaryLight5Color,
+        $secondaryDark1Color,
+        $secondaryDark2Color,
+        $secondaryDark3Color,
+        $secondaryDark4Color,
+        $secondaryDark5Color
+    ),
+    (
+        $tertiaryColor,
+        $tertiaryLight1Color,
+        $tertiaryLight2Color,
+        $tertiaryLight3Color,
+        $tertiaryLight4Color,
+        $tertiaryLight5Color,
+        $tertiaryDark1Color,
+        $tertiaryDark2Color,
+        $tertiaryDark3Color,
+        $tertiaryDark4Color,
+        $tertiaryDark5Color
+    ),
+    (
+        $quaternaryColor,
+        $quaternaryLight1Color,
+        $quaternaryLight2Color,
+        $quaternaryLight3Color,
+        $quaternaryLight4Color,
+        $quaternaryLight5Color,
+        $quaternaryDark1Color,
+        $quaternaryDark2Color,
+        $quaternaryDark3Color,
+        $quaternaryDark4Color,
+        $quaternaryDark5Color
+    ),
+    (
+        $successColor,
+        $successLight1Color,
+        $successLight2Color,
+        $successLight3Color,
+        $successLight4Color,
+        $successLight5Color,
+        $successDark1Color,
+        $successDark2Color,
+        $successDark3Color,
+        $successDark4Color,
+        $successDark5Color
+    ),
+    (
+        $warningColor,
+        $warningLight1Color,
+        $warningLight2Color,
+        $warningLight3Color,
+        $warningLight4Color,
+        $warningLight5Color,
+        $warningDark1Color,
+        $warningDark2Color,
+        $warningDark3Color,
+        $warningDark4Color,
+        $warningDark5Color
+    ),
+    (
+        $dangerColor,
+        $dangerLight1Color,
+        $dangerLight2Color,
+        $dangerLight3Color,
+        $dangerLight4Color,
+        $dangerLight5Color,
+        $dangerDark1Color,
+        $dangerDark2Color,
+        $dangerDark3Color,
+        $dangerDark4Color,
+        $dangerDark5Color
+    ),
+    (
+        $infoColor,
+        $infoLight1Color,
+        $infoLight2Color,
+        $infoLight3Color,
+        $infoLight4Color,
+        $infoLight5Color,
+        $infoDark1Color,
+        $infoDark2Color,
+        $infoDark3Color,
+        $infoDark4Color,
+        $infoDark5Color
+    ),
+    (
+        $redColor,
+        $redLight1Color,
+        $redLight2Color,
+        $redLight3Color,
+        $redLight4Color,
+        $redLight5Color,
+        $redDark1Color,
+        $redDark2Color,
+        $redDark3Color,
+        $redDark4Color,
+        $redDark5Color
+    ),
+    (
+        $blueColor,
+        $blueLight1Color,
+        $blueLight2Color,
+        $blueLight3Color,
+        $blueLight4Color,
+        $blueLight5Color,
+        $blueDark1Color,
+        $blueDark2Color,
+        $blueDark3Color,
+        $blueDark4Color,
+        $blueDark5Color
+    ),
+    (
+        $goldColor,
+        $goldLight1Color,
+        $goldLight2Color,
+        $goldLight3Color,
+        $goldLight4Color,
+        $goldLight5Color,
+        $goldDark1Color,
+        $goldDark2Color,
+        $goldDark3Color,
+        $goldDark4Color,
+        $goldDark5Color
+    ),
+    (
+        $greenColor,
+        $greenLight1Color,
+        $greenLight2Color,
+        $greenLight3Color,
+        $greenLight4Color,
+        $greenLight5Color,
+        $greenDark1Color,
+        $greenDark2Color,
+        $greenDark3Color,
+        $greenDark4Color,
+        $greenDark5Color
+    ),
+    (
+        $purpleColor,
+        $purpleLight1Color,
+        $purpleLight2Color,
+        $purpleLight3Color,
+        $purpleLight4Color,
+        $purpleLight5Color,
+        $purpleDark1Color,
+        $purpleDark2Color,
+        $purpleDark3Color,
+        $purpleDark4Color,
+        $purpleDark5Color
+    ),
+    (
+        $orangeColor,
+        $orangeLight1Color,
+        $orangeLight2Color,
+        $orangeLight3Color,
+        $orangeLight4Color,
+        $orangeLight5Color,
+        $orangeDark1Color,
+        $orangeDark2Color,
+        $orangeDark3Color,
+        $orangeDark4Color,
+        $orangeDark5Color
+    ),
+    (
+        $darkBlueColor,
+        $darkBlueLight1Color,
+        $darkBlueLight2Color,
+        $darkBlueLight3Color,
+        $darkBlueLight4Color,
+        $darkBlueLight5Color,
+        $darkBlueDark1Color,
+        $darkBlueDark2Color,
+        $darkBlueDark3Color,
+        $darkBlueDark4Color,
+        $darkBlueDark5Color
+    ),
+    (
+        $darkGreenColor,
+        $darkGreenLight1Color,
+        $darkGreenLight2Color,
+        $darkGreenLight3Color,
+        $darkGreenLight4Color,
+        $darkGreenLight5Color,
+        $darkGreenDark1Color,
+        $darkGreenDark2Color,
+        $darkGreenDark3Color,
+        $darkGreenDark4Color,
+        $darkGreenDark5Color
+    ),
+    (
+        $darkRedColor,
+        $darkRedLight1Color,
+        $darkRedLight2Color,
+        $darkRedLight3Color,
+        $darkRedLight4Color,
+        $darkRedLight5Color,
+        $darkRedDark1Color,
+        $darkRedDark2Color,
+        $darkRedDark3Color,
+        $darkRedDark4Color,
+        $darkRedDark5Color
+    ),
+    (
+        $darkGoldColor,
+        $darkGoldLight1Color,
+        $darkGoldLight2Color,
+        $darkGoldLight3Color,
+        $darkGoldLight4Color,
+        $darkGoldLight5Color,
+        $darkGoldDark1Color,
+        $darkGoldDark2Color,
+        $darkGoldDark3Color,
+        $darkGoldDark4Color,
+        $darkGoldDark5Color
+    ),
+    (
+        $magentaColor,
+        $magentaLight1Color,
+        $magentaLight2Color,
+        $magentaLight3Color,
+        $magentaLight4Color,
+        $magentaLight5Color,
+        $magentaDark1Color,
+        $magentaDark2Color,
+        $magentaDark3Color,
+        $magentaDark4Color,
+        $magentaDark5Color
+    )
 );
 
 @for $i from 0 to length($defaults) {
-  $cl: nth($color-sfx, $i + 1);
-  $color-set: nth($defaults, $i + 1);
+    $cl: nth($color-sfx, $i + 1);
+    $color-set: nth($defaults, $i + 1);
 
-  @for $g from 0 to length($color-set) {
-    $sd: nth($shade-sfx, $g + 1);
-    $value: nth($color-set, $g + 1);
+    @for $g from 0 to length($color-set) {
+        $sd: nth($shade-sfx, $g + 1);
+        $value: nth($color-set, $g + 1);
 
-    .-color-bg-#{$cl + $sd} {
-      background-color: $value !important;
+        .-color-bg-#{$cl + $sd} {
+            background-color: $value !important;
+        }
+
+        .-color-bd-#{$cl + $sd} {
+            border-color: $value !important;
+        }
+
+        .-color-tx-#{$cl + $sd} {
+            color: $value !important;
+        }
     }
-
-    .-color-bd-#{$cl + $sd} {
-      border-color: $value !important;
-    }
-
-    .-color-tx-#{$cl + $sd} {
-      color: $value !important;
-    }
-  }
 }
 
 // Grayscale color utilities
-$grayscale-sfx: ("lt", "dk");
-$grayscale-shade-sfx: ("-1", "-2", "-3", "-4", "-5");
+$grayscale-sfx: ('lt','dk');
+$grayscale-shade-sfx: ('-1','-2','-3','-4','-5');
 $grayscale-defaults: (
-  ($gg-light-1, $gg-light-2, $gg-light-3, $gg-light-4, $gg-light-5),
-  ($gg-dark-1, $gg-dark-2, $gg-dark-3, $gg-dark-4, $gg-dark-5)
+    (
+        $gg-light-1,
+        $gg-light-2,
+        $gg-light-3,
+        $gg-light-4,
+        $gg-light-5
+    ),
+    (
+        $gg-dark-1,
+        $gg-dark-2,
+        $gg-dark-3,
+        $gg-dark-4,
+        $gg-dark-5
+    )
 );
 
 @for $i from 0 to length($grayscale-defaults) {
-  $cl: nth($grayscale-sfx, $i + 1);
-  $color-set: nth($grayscale-defaults, $i + 1);
+    $cl: nth($grayscale-sfx, $i + 1);
+    $color-set: nth($grayscale-defaults, $i + 1);
 
-  @for $g from 0 to length($color-set) {
-    $sd: nth($grayscale-shade-sfx, $g + 1);
-    $value: nth($color-set, $g + 1);
+    @for $g from 0 to length($color-set) {
+        $sd: nth($grayscale-shade-sfx, $g + 1);
+        $value: nth($color-set, $g + 1);
 
-    .-color-bg-#{$cl + $sd} {
-      background-color: $value !important;
+        .-color-bg-#{$cl + $sd} {
+            background-color: $value !important;
+        }
+
+        .-color-bd-#{$cl + $sd} {
+            border-color: $value !important;
+        }
+
+        .-color-tx-#{$cl + $sd} {
+            color: $value !important;
+        }
     }
-
-    .-color-bd-#{$cl + $sd} {
-      border-color: $value !important;
-    }
-
-    .-color-tx-#{$cl + $sd} {
-      color: $value !important;
-    }
-  }
 }
 
 .-color-bg-white {
-  background-color: white !important;
+    background-color: white !important;
 }
 
 .-color-bd-white {
-  border-color: white !important;
+    border-color: white !important;
 }
 
 .-color-tx-white {
-  color: white !important;
+    color: white !important;
 }

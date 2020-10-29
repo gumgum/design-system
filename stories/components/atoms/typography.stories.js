@@ -36,7 +36,7 @@ export default {
 };
 
 const Template = ({ children, size, type }) => {
-  const txt = document.createElement('h1');
+  const txt = type === 'header' ? document.createElement('h1') : document.createElement('p');
   txt.className = `gds-text--${type}-${size}`;
   txt.innerText = `${children}`;
   return txt;

@@ -1,72 +1,72 @@
 .gds-modal {
-  background-color: white;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  top: 0;
-  right: 0;
-  left: 0;
-  margin: ($unit * 6) auto;
-  max-width: 700px;
-  z-index: $z-index-9;
-  border-radius: $border-radius;
-  overflow: hidden;
-  outline: 0;
-  -webkit-overflow-scrolling: touch;
-  max-height: calc(100% - (#{$unit * 12}));
-  padding: 0;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: ($unit * 6) auto;
+    max-width: 700px;
+    z-index: $z-index-9;
+    border-radius: $border-radius;
+    overflow: hidden;
+    outline: 0;
+    -webkit-overflow-scrolling: touch;
+    max-height: calc(100% - (#{$unit * 12}));
+    padding: 0;
 
-  @media #{$tablet-width}, #{$phablet-width}, #{$phone-width} {
-    margin: $unit;
-    width: calc(100% - (#{$unit * 2}));
-    max-width: none;
-    max-height: calc(100% - (#{$unit * 2}));
-  }
+    @media #{$tablet-width}, #{$phablet-width}, #{$phone-width} {
+        margin: $unit;
+        width: calc(100% - (#{$unit * 2}));
+        max-width: none;
+        max-height: calc(100% - (#{$unit * 2}));
+    }
 }
 
 .gds-modal--dark {
-  background-color: $gg-dark-3;
-  border: 1px solid $gg-dark-4;
-  box-shadow: 0 0 10px rgba(black, 0.5);
-  color: white;
+    background-color: $gg-dark-3;
+    border: 1px solid $gg-dark-4;
+    box-shadow: 0 0 10px rgba(black, 0.5);
+    color: white;
 }
 
 // Add to <body> when modal is open
 .-has-modal {
-  height: 100%;
-  overflow: hidden;
+    height: 100%;
+    overflow: hidden;
 }
 
 .gds-modal__wrapper {
-  overflow-y: auto;
+    overflow-y: auto;
 }
 
 .gds-modal__overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: $trans-black-medium;
-  z-index: $z-index-8;
-  opacity: 0;
-  pointer-events: none;
-  @include transition(250);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $trans-black-medium;
+    z-index: $z-index-8;
+    opacity: 0;
+    pointer-events: none;
+    @include transition(250);
 }
 
 .gds-modal--shown {
-  opacity: 1;
-  pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .gds-modal__form {
-  display: flex;
-  flex-direction: column;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
 }
 
 .gds-modal__header,
@@ -76,109 +76,129 @@
 .gds-modal__footer--secondary,
 .gds-modal__footer--tertiary,
 .gds-modal__footer--quaternary {
-  display: block;
+    display: block;
 }
 
 .gds-modal__title,
 .gds-modal__content,
 .gds-modal__footer,
-.gds-modal__footer--secondary,
+.gds-modal__footer--secondary ,
 .gds-modal__footer--tertiary,
-.gds-modal__footer--quaternary {
-  padding: $unit;
+.gds-modal__footer--quaternary{
+    padding: $unit;
 }
 
 .gds-modal__header {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: $modalHeaderPrimaryUnderlineColor;
-  background-color: $modalHeaderPrimaryBackgroundColor;
-  color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: $modalHeaderPrimaryUnderlineColor;
+    background-color: $modalHeaderPrimaryBackgroundColor;
+    color:white;
 }
 
 .gds-modal__header--secondary {
-  border-bottom-color: $modalHeaderSecondaryUnderlineColor;
-  background-color: $modalHeaderSecondaryBackgroundColor;
-  color: white;
+    border-bottom-color: $modalHeaderSecondaryUnderlineColor;
+    background-color: $modalHeaderSecondaryBackgroundColor;
+    color: white;
 }
 
 .gds-modal__header--tertiary {
-  border-bottom-color: $modalHeaderTertiaryUnderlineColor;
-  background-color: $modalHeaderTertiaryBackgroundColor;
-  color: white;
+    border-bottom-color: $modalHeaderTertiaryUnderlineColor;
+    background-color: $modalHeaderTertiaryBackgroundColor;
+    color: white;
 }
 
 .gds-modal__header--quaternary {
-  border-bottom-color: $modalHeaderQuaternaryUnderlineColor;
-  background-color: $modalHeaderQuaternaryBackgroundColor;
-  color: white;
+    border-bottom-color: $modalHeaderQuaternaryUnderlineColor;
+    background-color: $modalHeaderQuaternaryBackgroundColor;
+    color: white;
 }
 
+
 .gds-modal__title {
-  width: calc(100% - #{$unit * 4});
-  @extend .-ellipsis;
+    width: calc(100% - #{$unit * 4});
+    @extend .gds-text--header-sm;
+    @extend .-ellipsis;
 }
 
 .gds-modal__close-button,
 .gds-modal__close-button--secondary,
 .gds-modal__close-button--tertiary,
 .gds-modal__close-button--quaternary {
-  @extend .gds-button--close-x;
-  background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22100%25%22%20height%3D%22100%25%22%0A%09%20viewBox%3D%220%200%2020px%2020px%22%20preserveAspectRatio%3D%22none%22%20fill%3D%22none%22%20stroke%3D%22%23#{strip-hash($gg-light-1)}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%0A%3C%2Fsvg%3E");
-  background-position: 22px 22px;
-  width: 66px;
-  height: 66px;
+    @extend .gds-button--close-x;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22100%25%22%20height%3D%22100%25%22%0A%09%20viewBox%3D%220%200%2020px%2020px%22%20preserveAspectRatio%3D%22none%22%20fill%3D%22none%22%20stroke%3D%22%23#{strip-hash($gg-light-1)}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%0A%3C%2Fsvg%3E");
+    background-position: 22px 22px;
+    width: 66px;
+    height: 66px;
 
-  &:hover {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23#{strip-hash($modalHeaderPrimaryUnderlineColor)}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E");
-    cursor: pointer;
-  }
+    &:hover {
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23#{strip-hash($modalHeaderPrimaryUnderlineColor)}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E");
+        cursor: pointer;
+    }
 }
 
 .gds-modal__close-button--secondary {
-  &:hover {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23#{strip-hash($modalHeaderSecondaryUnderlineColor)}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E");
-    cursor: pointer;
-  }
+    &:hover {
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23#{strip-hash($modalHeaderSecondaryUnderlineColor)}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E");
+        cursor: pointer;
+    }
 }
 
 .gds-modal__close-button--tertiary {
-  &:hover {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23#{strip-hash($modalHeaderTertiaryUnderlineColor)}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E");
-    cursor: pointer;
-  }
+    &:hover {
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23#{strip-hash($modalHeaderTertiaryUnderlineColor)}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E");
+        cursor: pointer;
+    }
 }
 
 .gds-modal__close-button--quaternary {
-  &:hover {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23#{strip-hash($modalHeaderQuaternaryUnderlineColor)}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E");
-    cursor: pointer;
-  }
+    &:hover {
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23#{strip-hash($modalHeaderQuaternaryUnderlineColor)}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E");
+        cursor: pointer;
+    }
+}
+
+// smaller modal header
+.gds-modal__header--sm {
+    .gds-modal__title {
+        padding: .5rem 1rem;
+        @extend .gds-text--header-xs;
+    }
+
+    .gds-modal__close-button,
+    .gds-modal__close-button--secondary,
+    .gds-modal__close-button--tertiary,
+    .gds-modal__close-button--quaternary {
+        background-size: auto;
+        background-position: 32px 12px;
+        width: 66px;
+        height: 100%;
+    }
 }
 
 .gds-modal__body {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  padding: $unit;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto
+;    -webkit-overflow-scrolling: touch;
+    padding: $unit;
 }
 
 .gds-modal__footer {
-  border-top-width: 2px;
-  border-top-style: solid;
-  border-color: $modalFooterPrimaryUnderlineColor;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-color: $modalFooterPrimaryUnderlineColor;
 
-  &--secondary {
-    border-color: $modalFooterSecondaryUnderlineColor;
-  }
+    &--secondary {
+        border-color: $modalFooterSecondaryUnderlineColor;
+    }
 
-  &--tertiary {
-    border-color: $modalFooterTertiaryUnderlineColor;
-  }
+    &--tertiary {
+        border-color: $modalFooterTertiaryUnderlineColor;
+    }
 
-  &--quaternary {
-    border-color: $modalFooterQuaternaryUnderlineColor;
-  }
+    &--quaternary {
+        border-color: $modalFooterQuaternaryUnderlineColor;
+    }
 }

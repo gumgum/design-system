@@ -1,67 +1,67 @@
 .gds-table-of-contents .nav > li > a {
-  border-left: ($unit / 6) solid transparent;
-  padding: ($unit / 4) ($unit * 1.25);
-  font-weight: 400;
+    border-left: ($unit / 6) solid transparent;
+    padding: ($unit / 4) ($unit * 1.25);
+    font-weight: 400;
 }
 
 // Nested links
 .gds-table-of-contents .nav .nav > li > a {
-  padding: 0 ($unit * 2);
-  font-weight: 300;
+    padding: 0 ($unit * 2);
+    font-weight: 300;
 }
 
 .gds-table-of-contents .nav .nav > li > a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 // Active & hover links
 .gds-table-of-contents .nav > .active > a,
 .gds-table-of-contents .nav > li > a:hover,
 .gds-table-of-contents .nav > li > a:focus {
-  border-left-color: $primaryColor;
-  text-decoration: none;
-  background-color: transparent;
+    border-left-color: $primaryColor;
+    text-decoration: none;
+    background-color: transparent;
 }
 
 // All active links
 .gds-table-of-contents .nav > .active > a,
 .gds-table-of-contents .nav > .active:hover > a,
 .gds-table-of-contents .nav > .active:focus > a {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 // Nested active links
 .gds-table-of-contents .nav .nav > .active > a,
 .gds-table-of-contents .nav .nav > .active:hover > a,
 .gds-table-of-contents .nav .nav > .active:focus > a {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 // Hide inactive nested list
 .gds-table-of-contents .nav ul.nav {
-  display: none;
+    display: none;
 }
 
 // Show active nested list
 .gds-table-of-contents .nav > .active > ul.nav {
-  display: block;
+    display: block;
 }
 
 .gds-table-of-contents__fixed-nav {
-  position: fixed;
-  top: ($unit * 7);
-  left: 0;
-  width: 100%;
-  z-index: $z-index-3;
-  -webkit-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: fixed;
+    top: ($unit * 7);
+    left: 0;
+    width: 100%;
+    z-index: $z-index-3;
+    -webkit-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .gds-table-of-contents__fixed-nav--scrolled {
-  top: ($unit * 5);
+    top: ($unit * 5);
 }
 
 .gds-slide-out .gds-table-of-contents__fixed-nav {
-  -webkit-transform: translateX($unit * 25);
-  transform: translateX($unit * 25);
+    -webkit-transform: translateX($unit * 25);
+    transform: translateX($unit * 25);
 }

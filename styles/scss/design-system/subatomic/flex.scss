@@ -1,332 +1,333 @@
 .gds-flex {
-  display: flex !important;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
 }
 
 @mixin make-flex-size($breakpoint) {
-  .gds-flex--direction-row-#{$breakpoint} {
-    flex-direction: row !important;
-  }
+    .gds-flex--direction-row-#{$breakpoint} {
+        flex-direction: row !important;
+    }
 
-  .gds-flex--direction-rowrev-#{$breakpoint} {
-    flex-direction: row-reverse !important;
-  }
+    .gds-flex--direction-rowrev-#{$breakpoint} {
+        flex-direction: row-reverse !important;
+    }
 
-  .gds-flex--direction-col-#{$breakpoint} {
-    flex-direction: column !important;
-  }
+    .gds-flex--direction-col-#{$breakpoint} {
+        flex-direction: column !important;
+    }
 
-  .gds-flex--direction-colrev-#{$breakpoint} {
-    flex-direction: column-reverse !important;
-  }
+    .gds-flex--direction-colrev-#{$breakpoint} {
+        flex-direction: column-reverse !important;
+    }
 
-  .gds-flex--wrap-#{$breakpoint} {
-    flex-wrap: wrap !important;
-  }
+    .gds-flex--wrap-#{$breakpoint} {
+        flex-wrap: wrap !important;
+    }
 
-  .gds-flex--wrap-no-#{$breakpoint} {
-    flex-wrap: nowrap !important;
-  }
+    .gds-flex--wrap-no-#{$breakpoint} {
+        flex-wrap: nowrap !important;
+    }
 
-  .gds-flex--wrap-rev-#{$breakpoint} {
-    flex-wrap: wrap-reverse !important;
-  }
+    .gds-flex--wrap-rev-#{$breakpoint} {
+        flex-wrap: wrap-reverse !important;
+    }
 
-  .gds-flex--justify-start-#{$breakpoint} {
-    justify-content: flex-start !important;
-  }
+    .gds-flex--justify-start-#{$breakpoint} {
+        justify-content: flex-start !important;
+    }
 
-  .gds-flex--justify-end-#{$breakpoint} {
-    justify-content: flex-end !important;
-  }
+    .gds-flex--justify-end-#{$breakpoint} {
+        justify-content: flex-end !important;
+    }
 
-  .gds-flex--justify-center-#{$breakpoint} {
-    justify-content: center !important;
-  }
+    .gds-flex--justify-center-#{$breakpoint} {
+        justify-content: center !important;
+    }
 
-  .gds-flex--justify-between-#{$breakpoint} {
-    justify-content: space-between !important;
-  }
+    .gds-flex--justify-between-#{$breakpoint} {
+        justify-content: space-between !important;
+    }
 
-  .gds-flex--justify-around-#{$breakpoint} {
-    justify-content: space-around !important;
-  }
+    .gds-flex--justify-around-#{$breakpoint} {
+        justify-content: space-around !important;
+    }
 
-  .gds-flex--align-start-#{$breakpoint} {
-    align-items: flex-start !important;
-  }
+    .gds-flex--align-start-#{$breakpoint} {
+        align-items: flex-start !important;
+    }
 
-  .gds-flex--align-end-#{$breakpoint} {
-    align-items: flex-end !important;
-  }
+    .gds-flex--align-end-#{$breakpoint} {
+        align-items: flex-end !important;
+    }
 
-  .gds-flex--align-center-#{$breakpoint} {
-    align-items: center !important;
-  }
+    .gds-flex--align-center-#{$breakpoint} {
+        align-items: center !important;
+    }
 
-  .gds-flex--align-baseline-#{$breakpoint} {
-    align-items: baseline !important;
-  }
+    .gds-flex--align-baseline-#{$breakpoint} {
+        align-items: baseline !important;
+    }
 
-  .gds-flex--align-stretch-#{$breakpoint} {
-    align-items: stretch !important;
-  }
+    .gds-flex--align-stretch-#{$breakpoint} {
+        align-items: stretch !important;
+    }
 
-  .gds-flex--content-start-#{$breakpoint} {
-    align-content: flex-start !important;
-  }
+    .gds-flex--content-start-#{$breakpoint} {
+        align-content: flex-start !important;
+    }
 
-  .gds-flex--content-end-#{$breakpoint} {
-    align-content: flex-end !important;
-  }
+    .gds-flex--content-end-#{$breakpoint} {
+        align-content: flex-end !important;
+    }
 
-  .gds-flex--content-center-#{$breakpoint} {
-    align-content: center !important;
-  }
+    .gds-flex--content-center-#{$breakpoint} {
+        align-content: center !important;
+    }
 
-  .gds-flex--content-between-#{$breakpoint} {
-    align-content: space-between !important;
-  }
+    .gds-flex--content-between-#{$breakpoint} {
+        align-content: space-between !important;
+    }
 
-  .gds-flex--content-around-#{$breakpoint} {
-    align-content: space-around !important;
-  }
+    .gds-flex--content-around-#{$breakpoint} {
+        align-content: space-around !important;
+    }
 
-  .gds-flex--content-stretch-#{$breakpoint} {
-    align-content: stretch !important;
-  }
+    .gds-flex--content-stretch-#{$breakpoint} {
+        align-content: stretch !important;
+    }
 }
 
-@mixin make-flex-rules($breakpoints) {
-  .gds-flex--direction-row {
-    flex-direction: row !important;
-  }
+@mixin make-flex-rules ($breakpoints) {
 
-  .gds-flex--direction-rowrev {
-    flex-direction: row-reverse !important;
-  }
-
-  .gds-flex--direction-col {
-    flex-direction: column !important;
-  }
-
-  .gds-flex--direction-colrev {
-    flex-direction: column-reverse !important;
-  }
-
-  .gds-flex--wrap {
-    flex-wrap: wrap !important;
-  }
-
-  .gds-flex--wrap-no {
-    flex-wrap: nowrap !important;
-  }
-
-  .gds-flex--wrap-rev {
-    flex-wrap: wrap-reverse !important;
-  }
-
-  .gds-flex--justify-start {
-    justify-content: flex-start !important;
-  }
-
-  .gds-flex--justify-end {
-    justify-content: flex-end !important;
-  }
-
-  .gds-flex--justify-center {
-    justify-content: center !important;
-  }
-
-  .gds-flex--justify-between {
-    justify-content: space-between !important;
-  }
-
-  .gds-flex--justify-around {
-    justify-content: space-around !important;
-  }
-
-  .gds-flex--align-start {
-    align-items: flex-start !important;
-  }
-
-  .gds-flex--align-end {
-    align-items: flex-end !important;
-  }
-
-  .gds-flex--align-center {
-    align-items: center !important;
-  }
-
-  .gds-flex--align-baseline {
-    align-items: baseline !important;
-  }
-
-  .gds-flex--align-stretch {
-    align-items: stretch !important;
-  }
-
-  .gds-flex--content-start {
-    align-content: flex-start !important;
-  }
-
-  .gds-flex--content-end {
-    align-content: flex-end !important;
-  }
-
-  .gds-flex--content-center {
-    align-content: center !important;
-  }
-
-  .gds-flex--content-between {
-    align-content: space-between !important;
-  }
-
-  .gds-flex--content-around {
-    align-content: space-around;
-  }
-
-  .gds-flex--content-stretch {
-    align-content: stretch !important;
-  }
-  @each $value, $key in $breakpoints {
-    @media (min-width: $key) {
-      @include make-flex-size($value);
+    .gds-flex--direction-row {
+        flex-direction: row !important;
     }
-  }
+
+    .gds-flex--direction-rowrev {
+        flex-direction: row-reverse !important;
+    }
+
+    .gds-flex--direction-col {
+        flex-direction: column !important;
+    }
+
+    .gds-flex--direction-colrev {
+        flex-direction: column-reverse !important;
+    }
+
+    .gds-flex--wrap {
+        flex-wrap: wrap !important;
+    }
+
+    .gds-flex--wrap-no {
+        flex-wrap: nowrap !important;
+    }
+
+    .gds-flex--wrap-rev {
+        flex-wrap: wrap-reverse !important;
+    }
+
+    .gds-flex--justify-start {
+        justify-content: flex-start !important;
+    }
+
+    .gds-flex--justify-end {
+        justify-content: flex-end !important;
+    }
+
+    .gds-flex--justify-center {
+        justify-content: center !important;
+    }
+
+    .gds-flex--justify-between {
+        justify-content: space-between !important;
+    }
+
+    .gds-flex--justify-around {
+        justify-content: space-around !important;
+    }
+
+    .gds-flex--align-start {
+        align-items: flex-start !important;
+    }
+
+    .gds-flex--align-end {
+        align-items: flex-end !important;
+    }
+
+    .gds-flex--align-center {
+        align-items: center !important;
+    }
+
+    .gds-flex--align-baseline {
+        align-items: baseline !important;
+    }
+
+    .gds-flex--align-stretch {
+        align-items: stretch !important;
+    }
+
+    .gds-flex--content-start {
+        align-content: flex-start !important;
+    }
+
+    .gds-flex--content-end {
+        align-content: flex-end !important;
+    }
+
+    .gds-flex--content-center {
+        align-content: center !important;
+    }
+
+    .gds-flex--content-between {
+        align-content: space-between !important;
+    }
+
+    .gds-flex--content-around {
+        align-content: space-around;
+    }
+
+    .gds-flex--content-stretch {
+        align-content: stretch !important;
+    }
+    @each $value, $key in $breakpoints {
+        @media (min-width: $key) {
+            @include make-flex-size($value);
+        }
+    }
 }
 
 @include make-flex-rules($grid-breakpoints);
 
 .gds-flex__item {
-  order: 1;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
+    order: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
 }
 
 $size-factors: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 $basis-factors: 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
-$basis-types: "fix", "pct";
+$basis-types: 'fix', 'pct';
 
 @mixin make-item-bp-layout-rules($breakpoint) {
-  .gds-flex__item--align-auto-#{$breakpoint} {
-    align-self: auto !important;
-  }
-  .gds-flex__item--align-start-#{$breakpoint} {
-    align-self: flex-start !important;
-  }
-  .gds-flex__item--align-end-#{$breakpoint} {
-    align-self: end !important;
-  }
-  .gds-flex__item--align-center-#{$breakpoint} {
-    align-self: center !important;
-  }
-  .gds-flex__item--align-baseline-#{$breakpoint} {
-    align-self: baseline !important;
-  }
-  .gds-flex__item--align-stretch-#{$breakpoint} {
-    align-self: stretch !important;
-  }
+    .gds-flex__item--align-auto-#{$breakpoint} {
+        align-self: auto !important;
+    }
+    .gds-flex__item--align-start-#{$breakpoint} {
+        align-self: flex-start !important;
+    }
+    .gds-flex__item--align-end-#{$breakpoint} {
+        align-self: end !important;
+    }
+    .gds-flex__item--align-center-#{$breakpoint} {
+        align-self: center !important;
+    }
+    .gds-flex__item--align-baseline-#{$breakpoint} {
+        align-self: baseline !important;
+    }
+    .gds-flex__item--align-stretch-#{$breakpoint} {
+        align-self: stretch !important;
+    }
 }
 
 @mixin make-item-bp-sizing($breakpoint, $factor) {
-  .gds-flex__item--grow-#{$breakpoint}-#{$factor} {
-    flex-grow: $factor !important;
-  }
-  .gds-flex__item--shrink-#{$breakpoint}-#{$factor} {
-    flex-shrink: $factor !important;
-  }
-  .gds-flex__item--order-#{$breakpoint}-#{$factor} {
-    order: $factor !important;
-  }
+    .gds-flex__item--grow-#{$breakpoint}-#{$factor} {
+        flex-grow: $factor !important;
+    }
+    .gds-flex__item--shrink-#{$breakpoint}-#{$factor} {
+        flex-shrink: $factor !important;
+    }
+    .gds-flex__item--order-#{$breakpoint}-#{$factor} {
+        order: $factor !important;
+    }
 }
 
 @mixin make-item-sizing($factor) {
-  .gds-flex__item--grow-#{$factor} {
-    flex-grow: $factor !important;
-  }
-  .gds-flex__item--shrink-#{$factor} {
-    flex-shrink: $factor !important;
-  }
-  .gds-flex__item--order-#{$factor} {
-    order: $factor !important;
-  }
+    .gds-flex__item--grow-#{$factor} {
+        flex-grow: $factor !important;
+    }
+    .gds-flex__item--shrink-#{$factor} {
+        flex-shrink: $factor !important;
+    }
+    .gds-flex__item--order-#{$factor} {
+        order: $factor !important;
+    }
 }
 
 @mixin make-item-basis-rules() {
-  @each $type in $basis-types {
-    @each $factor in $basis-factors {
-      @if $type == "fix" {
-        $amount: #{$factor * 10};
-        .gds-flex__item--basis-fix-#{$amount} {
-          flex-basis: #{$amount}px !important;
+    @each $type in $basis-types {
+        @each $factor in $basis-factors {
+            @if $type == 'fix' {
+                $amount: #{$factor*10};
+                .gds-flex__item--basis-fix-#{$amount} {
+                    flex-basis: #{$amount}px !important;
+                }
+            } @else {
+                $amount: #{$factor};
+                .gds-flex__item--basis-pct-#{$amount} {
+                    flex-basis: $amount + unquote('%') !important;
+                }
+            }
         }
-      } @else {
-        $amount: #{$factor};
-        .gds-flex__item--basis-pct-#{$amount} {
-          flex-basis: $amount + unquote("%") !important;
-        }
-      }
     }
-  }
 }
 
 @mixin make-item-bp-basis-rules($breakpoint) {
-  @each $type in $basis-types {
-    @each $factor in $basis-factors {
-      @if $type == "fix" {
-        $amount: #{$factor * 10};
-        .gds-flex__item--basis-fix-#{$breakpoint}-#{$amount} {
-          flex-basis: #{$amount}px !important;
+    @each $type in $basis-types {
+        @each $factor in $basis-factors {
+            @if $type == 'fix' {
+                $amount: #{$factor*10};
+                .gds-flex__item--basis-fix-#{$breakpoint}-#{$amount} {
+                    flex-basis: #{$amount}px !important;
+                }
+            } @else {
+                $amount: #{$factor};
+                .gds-flex__item--basis-pct-#{$breakpoint}-#{$amount} {
+                    flex-basis: $amount + unquote('%') !important;
+                }
+            }
         }
-      } @else {
-        $amount: #{$factor};
-        .gds-flex__item--basis-pct-#{$breakpoint}-#{$amount} {
-          flex-basis: $amount + unquote("%") !important;
-        }
-      }
     }
-  }
 }
 
 @mixin make-flex-item-rules($breakpoints) {
-  .gds-flex__item--align-auto {
-    align-self: auto !important;
-  }
-  .gds-flex__item--align-start {
-    align-self: flex-start !important;
-  }
-  .gds-flex__item--align-end {
-    align-self: end !important;
-  }
-  .gds-flex__item--align-center {
-    align-self: center !important;
-  }
-  .gds-flex__item--align-baseline {
-    align-self: baseline !important;
-  }
-  .gds-flex__item--align-stretch {
-    align-self: stretch !important;
-  }
-
-  @include make-item-basis-rules();
-  @each $size in $size-factors {
-    @include make-item-sizing($size);
-  }
-  @each $value, $key in $breakpoints {
-    @media (min-width: $key) {
-      @include make-item-bp-layout-rules($value);
-      @include make-item-bp-basis-rules($value);
-      @each $size in $size-factors {
-        @include make-item-bp-sizing($value, $size);
-      }
+    .gds-flex__item--align-auto {
+        align-self: auto !important;
     }
-  }
+    .gds-flex__item--align-start {
+        align-self: flex-start !important;
+    }
+    .gds-flex__item--align-end {
+        align-self: end !important;
+    }
+    .gds-flex__item--align-center {
+        align-self: center !important;
+    }
+    .gds-flex__item--align-baseline {
+        align-self: baseline !important;
+    }
+    .gds-flex__item--align-stretch {
+        align-self: stretch !important;
+    }
+
+    @include make-item-basis-rules();
+    @each $size in $size-factors {
+        @include make-item-sizing($size);
+    }
+    @each $value, $key in $breakpoints {
+        @media (min-width: $key) {
+            @include make-item-bp-layout-rules($value);
+            @include make-item-bp-basis-rules($value);
+            @each $size in $size-factors {
+                @include make-item-bp-sizing($value, $size);
+            }
+        }
+    }
 }
 
 @include make-flex-item-rules($grid-breakpoints);

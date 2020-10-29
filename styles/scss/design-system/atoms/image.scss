@@ -1,16 +1,16 @@
 .gds-image {
-  display: block;
-  max-width: 100%;
-  height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .gds-image--border {
-  border: 1px solid rgba(black, 0.1);
+    border: 1px solid rgba(black, 0.1);
 }
 
 .gds-image__label {
-  display: block;
-  font-size: ($unit * 0.8);
-  color: rgba(black, 0.3);
-  margin: ($unit / 2) 0 ($unit * 2);
+    display: block;
+    font-size: ($unit * 0.8);
+    color: rgba(black, 0.3);
+    margin: ($unit / 2) 0 ($unit * 2);
 }

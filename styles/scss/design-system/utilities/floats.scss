@@ -1,64 +1,64 @@
 .-float-right {
-  float: right !important;
+    float: right !important;
 }
 
 .-float-left {
-  float: left !important;
+    float: left !important;
 }
 
 .-float-none {
-  float: none !important;
+    float: none !important;
 }
 
 .-clear-right {
-  clear: right !important;
+    clear: right !important;
 }
 
 .-clear-left {
-  clear: left !important;
+    clear: left !important;
 }
 
 .-clear-both {
-  clear: both !important;
+    clear: both !important;
 }
 
 // Conditionally remove floats based on breakpoint
 @media #{$phone-width} {
-  .-float-none--xs,
-  .-float-none--sm,
-  .-float-none--md,
-  .-float-none--lg,
-  .-float-none--xl {
-    float: none !important;
-  }
+    .-float-none--xs,
+    .-float-none--sm,
+    .-float-none--md,
+    .-float-none--lg,
+    .-float-none--xl  {
+        float: none !important;
+    }
 }
 
 @media #{$phablet-width} {
-  .-float-none--sm,
-  .-float-none--md,
-  .-float-none--lg,
-  .-float-none--xl {
-    float: none !important;
-  }
+    .-float-none--sm,
+    .-float-none--md,
+    .-float-none--lg,
+    .-float-none--xl {
+        float: none !important;
+    }
 }
 
 @media #{$tablet-width} {
-  .-float-none--md,
-  .-float-none--lg,
-  .-float-none--xl {
-    float: none !important;
-  }
+    .-float-none--md,
+    .-float-none--lg,
+    .-float-none--xl  {
+        float: none !important;
+    }
 }
 
 @media #{$laptop-width} {
-  .-float-none--lg,
-  .-float-none--xl {
-    float: none !important;
-  }
+    .-float-none--lg,
+    .-float-none--xl {
+        float: none !important;
+    }
 }
 
 @media #{$desktop-width} {
-  .-float-none--xl {
-    float: none !important;
-  }
+    .-float-none--xl {
+        float: none !important;
+    }
 }

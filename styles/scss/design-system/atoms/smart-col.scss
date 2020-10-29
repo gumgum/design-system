@@ -2,41 +2,38 @@
 // Smart columns
 // -------------------------------------------------- //
 .gds-smart-fill {
-  display: block;
+    display:block;
 }
 
 .gds-smart-fill__col {
-  float: left;
-  position: relative;
-  min-height: 1px;
-  padding-right: 0.9375rem;
-  padding-left: 0.9375rem;
-  @include transition-back(all, 250ms);
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+    @include transition-back(all,250ms);
 }
 
 .gds-smart-fill__col--animated {
-  width: 0;
-  @include transition-back(all, 250ms);
+    width: 0;
+    @include transition-back(all,250ms);
 }
 
 @for $i from 1 through 12 {
-  $w: #{(100 / $i)}$percentage;
+    $w: #{(100 / $i)}$percentage;
 
-  .gds-smart-fill__col:first-child:nth-last-child(#{$i}),
-  .gds-smart-fill__col:first-child:nth-last-child(#{$i})
-    ~ .gds-smart-fill__col {
-    width: $w;
-  }
+    .gds-smart-fill__col:first-child:nth-last-child(#{$i}),
+    .gds-smart-fill__col:first-child:nth-last-child(#{$i}) ~ .gds-smart-fill__col {
+        width: $w;
+    }
 
-  .gds-smart-fill__col--animated:first-child:nth-last-child(#{$i}),
-  .gds-smart-fill__col--animated:first-child:nth-last-child(#{$i})
-    ~ .gds-smart-fill__col--animated {
-    width: 0;
-  }
+    .gds-smart-fill__col--animated:first-child:nth-last-child(#{$i}),
+    .gds-smart-fill__col--animated:first-child:nth-last-child(#{$i}) ~ .gds-smart-fill__col--animated {
+        width: 0;
+    }
 
-  .gds-smart-fill__col--open:first-child:nth-last-child(#{$i}),
-  .gds-smart-fill__col--open:first-child:nth-last-child(#{$i})
-    ~ .gds-smart-fill__col--open {
-    width: $w;
-  }
+    .gds-smart-fill__col--open:first-child:nth-last-child(#{$i}),
+    .gds-smart-fill__col--open:first-child:nth-last-child(#{$i}) ~ .gds-smart-fill__col--open {
+        width: $w;
+    }
 }

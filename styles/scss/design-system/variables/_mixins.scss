@@ -2,106 +2,102 @@
 // Mixins
 // -------------------------------------------------- //
 @mixin retina($width, $height) {
-  background-size: ($width / 2) ($height / 2);
-  height: ($height / 2);
-  width: ($width / 2);
+    width: ($width / 2);
+    height: ($height / 2);
+    background-size: ($width / 2) ($height / 2);
 }
 
 @mixin clearfix() {
-  &::before,
-  &::after {
-    content: ' ';
-    display: table;
-  }
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
 
-  &::after {
-    clear: both;
-  }
+    &:after {
+        clear: both;
+    }
 }
 
 @mixin no-select() {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-@mixin createNubbin($direction, $size, $baseColor, $borderColor) {
-  &::before,
-  &::after {
-    border-color: transparent;
-    border-style: solid;
-    content: '';
-    height: 0;
-    position: absolute;
-    width: 0;
-  }
-  @if $direction == 'left' {
-    &::before {
-      border-bottom: $size solid transparent;
-      border-right: #{$size + 1px} solid $borderColor;
-      border-top: $size solid transparent;
-      right: calc(100% + 1px);
-      top: calc(50% - #{$size});
+@mixin createNubbin( $direction, $size, $baseColor, $borderColor) {
+    &:before,
+    &:after {
+        content:'';
+        width: 0; 
+        height: 0; 
+        position: absolute;
+        border-style: solid;
+        border-color: transparent;
     }
-
-    &::after {
-      border-bottom: $balloon-arrow-size solid transparent;
-      border-right: $balloon-arrow-size solid $baseColor;
-      border-top: $balloon-arrow-size solid transparent;
-      right: 100%;
-      top: calc(50% - #{$size});
+    @if $direction == 'left' {
+        &:before {
+            top: calc(50% - #{$size});
+            right: calc(100% + 1px);
+            border-top: $size solid transparent;
+            border-bottom: $size solid transparent; 
+            border-right: #{$size + 1px} solid $borderColor;
+        }
+        &:after {
+            top: calc(50% - #{$size});
+            right: 100%;
+            border-top: $balloon-arrow-size solid transparent;
+            border-bottom: $balloon-arrow-size solid transparent; 
+            border-right:$balloon-arrow-size solid $baseColor;
+        }
     }
-  }
-  @if $direction == 'right' {
-    &::before {
-      border-bottom: $size solid transparent;
-      border-left: #{$size + 1px} solid $borderColor;
-      border-top: $size solid transparent;
-      left: calc(100% + 1px);
-      top: calc(50% - #{$size});
+    @if $direction == 'right' {
+        &:before {
+            top: calc(50% - #{$size});
+            left: calc(100% + 1px);
+            border-top: $size solid transparent;
+            border-bottom: $size solid transparent; 
+            border-left: #{$size + 1px} solid $borderColor;
+        }
+        &:after {
+            top: calc(50% - #{$size});
+            left: 100%;
+            border-top: $balloon-arrow-size solid transparent;
+            border-bottom: $balloon-arrow-size solid transparent; 
+            border-left:$balloon-arrow-size solid $baseColor;
+        }
     }
-
-    &::after {
-      border-bottom: $balloon-arrow-size solid transparent;
-      border-left: $balloon-arrow-size solid $baseColor;
-      border-top: $balloon-arrow-size solid transparent;
-      left: 100%;
-      top: calc(50% - #{$size});
+    @if $direction == 'up' {
+        &:before {
+            left: calc(50% - #{$size});
+            bottom: calc(100% + 1px);
+            border-left: $size solid transparent;
+            border-right: $size solid transparent; 
+            border-bottom: #{$size + 1px} solid $borderColor;
+        }
+        &:after {
+            left: calc(50% - #{$size});
+            bottom: 100%;
+            border-left: $balloon-arrow-size solid transparent;
+            border-right: $balloon-arrow-size solid transparent; 
+            border-bottom:$balloon-arrow-size solid $baseColor;
+        }
     }
-  }
-  @if $direction == 'up' {
-    &::before {
-      border-bottom: #{$size + 1px} solid $borderColor;
-      border-left: $size solid transparent;
-      border-right: $size solid transparent;
-      bottom: calc(100% + 1px);
-      left: calc(50% - #{$size});
+    @if $direction == 'down' {
+        &:before {
+            left: calc(50% - #{$size});
+            top: calc(100% + 1px);
+            border-left: $size solid transparent;
+            border-right: $size solid transparent; 
+            border-top: #{$size + 1px} solid $borderColor;
+        }
+        &:after {
+            left: calc(50% - #{$size});
+            top: 100%;
+            border-left: $balloon-arrow-size solid transparent;
+            border-right: $balloon-arrow-size solid transparent; 
+            border-top:$balloon-arrow-size solid $baseColor;
+        }
     }
-
-    &::after {
-      border-bottom: $balloon-arrow-size solid $baseColor;
-      border-left: $balloon-arrow-size solid transparent;
-      border-right: $balloon-arrow-size solid transparent;
-      bottom: 100%;
-      left: calc(50% - #{$size});
-    }
-  }
-  @if $direction == 'down' {
-    &::before {
-      border-left: $size solid transparent;
-      border-right: $size solid transparent;
-      border-top: #{$size + 1px} solid $borderColor;
-      left: calc(50% - #{$size});
-      top: calc(100% + 1px);
-    }
-
-    &::after {
-      border-left: $balloon-arrow-size solid transparent;
-      border-right: $balloon-arrow-size solid transparent;
-      border-top: $balloon-arrow-size solid $baseColor;
-      left: calc(50% - #{$size});
-      top: 100%;
-    }
-  }
 }

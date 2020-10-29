@@ -1,51 +1,29 @@
 .gds-skeleton {
-  width: 90%;
-  height: ($unit * 1.3);
-  margin-bottom: ($unit * 0.5);
-  background-color: rgb(219, 219, 219);
-  background: linear-gradient(
-    to right,
-    rgb(219, 219, 219) 0%,
-    rgba(255, 255, 255, 1) 50%,
-    rgb(219, 219, 219) 100%
-  );
-  background-repeat: repeat-x;
-  background-size: 1000px 100%;
-  -webkit-animation: slideFade 6s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-    infinite;
-  -moz-animation: slideFade 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-  animation: slideFade 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    width: 90%;
+    height: ($unit * 1.3);
+    margin-bottom: ($unit * 0.5);
+    background-color: rgb(219,219,219);
+    background: linear-gradient(to right, rgb(219,219,219) 0%,rgba(255,255,255,1) 50%, rgb(219,219,219) 100%);
+    background-repeat: repeat-x;
+    background-size: 1000px 100%;
+    -webkit-animation: slideFade 6s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+    -moz-animation: slideFade 6s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+    animation: slideFade 6s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
 }
 
-.gds-skeleton:nth-child(2) {
-  animation-delay: 0.1s;
-}
-.gds-skeleton:nth-child(3) {
-  animation-delay: 0.2s;
-}
-.gds-skeleton:nth-child(4) {
-  animation-delay: 0.3s;
-}
-.gds-skeleton:nth-child(5) {
-  animation-delay: 0.4s;
-}
-.gds-skeleton:nth-child(6) {
-  animation-delay: 0.5s;
-}
+.gds-skeleton:nth-child(2) { animation-delay: 0.1s; }
+.gds-skeleton:nth-child(3) { animation-delay: 0.2s; }
+.gds-skeleton:nth-child(4) { animation-delay: 0.3s; }
+.gds-skeleton:nth-child(5) { animation-delay: 0.4s; }
+.gds-skeleton:nth-child(6) { animation-delay: 0.5s; }
 
 .gds-skeleton--header {
-  height: ($unit * 2);
-  margin-bottom: $unit;
+    height: ($unit * 2);
+    margin-bottom: $unit;
 }
 
 @keyframes slideFade {
-  0% {
-    background-position: 1000px 50%;
-  }
-  50% {
-    background-position: -1000px 50%;
-  }
-  100% {
-    background-position: 1000px 50%;
-  }
+    0% { background-position: 1000px 50% }
+    50% { background-position: -1000px 50% }
+    100% { background-position: 1000px 50% }
 }

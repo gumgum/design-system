@@ -1,280 +1,265 @@
-.gds-hotkey-toggle {
-  color: $gg-light-4;
-  border-left: 1px solid $gg-light-3;
-  border-right: 1px solid $gg-light-3;
-  border-top: 1px solid $gg-light-3;
-  border-bottom: 2px solid $gg-light-3;
-  border-radius: $border-radius;
-  font-size: $font-size;
-  padding: $unit / 4;
-  cursor: pointer;
-  display: inline-block;
-  @include transition-ease-out(all, 250ms);
+.gds-hotkey-toggle  {
+    color: $gg-light-4;
+    border-left: 1px solid $gg-light-3;
+    border-right: 1px solid $gg-light-3;
+    border-top: 1px solid $gg-light-3;
+    border-bottom: 2px solid $gg-light-3;
+    border-radius: $border-radius;
+    font-size: $font-size;
+    padding: $unit / 4;
+    cursor: pointer;
+    display: inline-block;
+    @include transition-ease-out(all, 250ms);
 }
 
-.gds-hotkey-toggle--active,
-.gds-hotkey-toggle:hover {
-  color: white;
-  border-left: 1px solid $primaryDark2Color;
-  border-right: 1px solid $primaryDark2Color;
-  border-top: 1px solid $primaryDark2Color;
-  border-bottom: 2px solid $primaryDark2Color;
-  background-color: $primaryColor;
-  .gds-hotkey {
-    @extend .gds-hotkey--white;
-  }
-}
-
-.gds-hotkey-toggle--active .gds-hotkey-toggle__icon {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.gds-hotkey-toggle--primary {
-  &:hover,
-  &.gds-hotkey-toggle--active {
+.gds-hotkey-toggle--active, .gds-hotkey-toggle:hover {
+    color: white;
     border-left: 1px solid $primaryDark2Color;
     border-right: 1px solid $primaryDark2Color;
     border-top: 1px solid $primaryDark2Color;
     border-bottom: 2px solid $primaryDark2Color;
     background-color: $primaryColor;
-  }
-  .gds-hotkey {
-    @extend .gds-hotkey--primary;
-  }
+    .gds-hotkey {
+        @extend .gds-hotkey--white;
+    }
+}
+
+.gds-hotkey-toggle--active .gds-hotkey-toggle__icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.gds-hotkey-toggle--primary {
+    &:hover, &.gds-hotkey-toggle--active {
+        border-left: 1px solid $primaryDark2Color;
+        border-right: 1px solid $primaryDark2Color;
+        border-top: 1px solid $primaryDark2Color;
+        border-bottom: 2px solid $primaryDark2Color;
+        background-color: $primaryColor;
+    }
+    .gds-hotkey {
+        @extend .gds-hotkey--primary
+    }
 }
 
 .gds-hotkey-toggle--secondary {
-  &:hover,
-  &.gds-hotkey-toggle--active {
-    border-left: 1px solid $secondaryDark2Color;
-    border-right: 1px solid $secondaryDark2Color;
-    border-top: 1px solid $secondaryDark2Color;
-    border-bottom: 2px solid $secondaryDark2Color;
-    background-color: $secondaryColor;
-  }
-  .gds-hotkey {
-    @extend .gds-hotkey--secondary;
-  }
+    &:hover, &.gds-hotkey-toggle--active {
+        border-left: 1px solid $secondaryDark2Color;
+        border-right: 1px solid $secondaryDark2Color;
+        border-top: 1px solid $secondaryDark2Color;
+        border-bottom: 2px solid $secondaryDark2Color;
+        background-color: $secondaryColor;
+    }
+    .gds-hotkey {
+        @extend .gds-hotkey--secondary
+    }
 }
 
 .gds-hotkey-toggle--tertiary {
-  &:hover,
-  &.gds-hotkey-toggle--active {
-    border-left: 1px solid $tertiaryDark2Color;
-    border-right: 1px solid $tertiaryDark2Color;
-    border-top: 1px solid $tertiaryDark2Color;
-    border-bottom: 2px solid $tertiaryDark2Color;
-    background-color: $tertiaryColor;
-  }
-  .gds-hotkey {
-    @extend .gds-hotkey--tertiary;
-  }
+    &:hover, &.gds-hotkey-toggle--active {
+        border-left: 1px solid $tertiaryDark2Color;
+        border-right: 1px solid $tertiaryDark2Color;
+        border-top: 1px solid $tertiaryDark2Color;
+        border-bottom: 2px solid $tertiaryDark2Color;
+        background-color: $tertiaryColor;
+    }
+    .gds-hotkey {
+        @extend .gds-hotkey--tertiary
+    }
 }
 
 .gds-hotkey-toggle--success {
-  &:hover,
-  &.gds-hotkey-toggle--active {
-    border-left: 1px solid $successDark2Color;
-    border-right: 1px solid $successDark2Color;
-    border-top: 1px solid $successDark2Color;
-    border-bottom: 2px solid $successDark2Color;
-    background-color: $successColor;
-  }
-  .gds-hotkey {
-    @extend .gds-hotkey--success;
-  }
+    &:hover, &.gds-hotkey-toggle--active {
+        border-left: 1px solid $successDark2Color;
+        border-right: 1px solid $successDark2Color;
+        border-top: 1px solid $successDark2Color;
+        border-bottom: 2px solid $successDark2Color;
+        background-color: $successColor;
+    }
+    .gds-hotkey {
+        @extend .gds-hotkey--success
+    }
 }
 
 .gds-hotkey-toggle--warning {
-  &:hover,
-  &.gds-hotkey-toggle--active {
-    border-left: 1px solid $warningDark2Color;
-    border-right: 1px solid $warningDark2Color;
-    border-top: 1px solid $warningDark2Color;
-    border-bottom: 2px solid $warningDark2Color;
-    background-color: $warningColor;
-  }
-  .gds-hotkey {
-    @extend .gds-hotkey--warning;
-  }
+    &:hover, &.gds-hotkey-toggle--active {
+        border-left: 1px solid $warningDark2Color;
+        border-right: 1px solid $warningDark2Color;
+        border-top: 1px solid $warningDark2Color;
+        border-bottom: 2px solid $warningDark2Color;
+        background-color: $warningColor;
+    }
+    .gds-hotkey {
+        @extend .gds-hotkey--warning
+    }
 }
 
 .gds-hotkey-toggle--danger {
-  &:hover,
-  &.gds-hotkey-toggle--active {
-    border-left: 1px solid $dangerDark2Color;
-    border-right: 1px solid $dangerDark2Color;
-    border-top: 1px solid $dangerDark2Color;
-    border-bottom: 2px solid $dangerDark2Color;
-    background-color: $dangerColor;
-  }
-  .gds-hotkey {
-    @extend .gds-hotkey--danger;
-  }
+    &:hover, &.gds-hotkey-toggle--active {
+        border-left: 1px solid $dangerDark2Color;
+        border-right: 1px solid $dangerDark2Color;
+        border-top: 1px solid $dangerDark2Color;
+        border-bottom: 2px solid $dangerDark2Color;
+        background-color: $dangerColor;
+    }
+    .gds-hotkey {
+        @extend .gds-hotkey--danger
+    }
 }
 
 .gds-hotkey-toggle--info {
-  &:hover,
-  &.gds-hotkey-toggle--active {
-    border-left: 1px solid $infoDark2Color;
-    border-right: 1px solid $infoDark2Color;
-    border-top: 1px solid $infoDark2Color;
-    border-bottom: 2px solid $infoDark2Color;
-    background-color: $infoColor;
-  }
-  .gds-hotkey {
-    @extend .gds-hotkey--info;
-  }
+    &:hover, &.gds-hotkey-toggle--active {
+        border-left: 1px solid $infoDark2Color;
+        border-right: 1px solid $infoDark2Color;
+        border-top: 1px solid $infoDark2Color;
+        border-bottom: 2px solid $infoDark2Color;
+        background-color: $infoColor;
+    }
+    .gds-hotkey {
+        @extend .gds-hotkey--info
+    }
 }
 
 .gds-hotkey-toggle--dark-primary {
-  border-left: 1px solid $gg-light-4;
-  border-right: 1px solid $gg-light-4;
-  border-top: 1px solid $gg-light-4;
-  border-bottom: 2px solid $gg-light-4;
-  background-color: transparent;
-  color: white;
-  &:hover,
-  &.gds-hotkey-toggle--active {
-    @extend .gds-hotkey-toggle--primary.gds-hotkey-toggle--active;
-  }
-  .gds-hotkey {
-    @extend .gds-hotkey--primary-dark;
-  }
+    border-left: 1px solid $gg-light-4;
+    border-right: 1px solid $gg-light-4;
+    border-top: 1px solid $gg-light-4;
+    border-bottom: 2px solid $gg-light-4;
+    background-color: transparent;
+    color: white;
+    &:hover, &.gds-hotkey-toggle--active {
+        @extend .gds-hotkey-toggle--primary.gds-hotkey-toggle--active;
+    }
+    .gds-hotkey {
+        @extend .gds-hotkey--primary-dark;
+    }
 }
 
 .gds-hotkey-toggle--dark-secondary {
-  @extend .gds-hotkey-toggle--dark-primary;
-  &:hover,
-  &.gds-hotkey-toggle--active {
-    @extend .gds-hotkey-toggle--secondary.gds-hotkey-toggle--active;
-  }
-  .gds-hotkey {
-    @extend .gds-hotkey--secondary-dark;
-  }
+    @extend .gds-hotkey-toggle--dark-primary;
+    &:hover, &.gds-hotkey-toggle--active {
+        @extend .gds-hotkey-toggle--secondary.gds-hotkey-toggle--active;
+    }
+    .gds-hotkey {
+        @extend .gds-hotkey--secondary-dark;
+    }
 }
 
 .gds-hotkey-toggle--dark-tertiary {
-  @extend .gds-hotkey-toggle--dark-primary;
-  &:hover,
-  &.gds-hotkey-toggle--active {
-    @extend .gds-hotkey-toggle--tertiary.gds-hotkey-toggle--active;
-  }
-  .gds-hotkey {
-    @extend .gds-hotkey--tertiary-dark;
-  }
+    @extend .gds-hotkey-toggle--dark-primary;
+    &:hover, &.gds-hotkey-toggle--active {
+        @extend .gds-hotkey-toggle--tertiary.gds-hotkey-toggle--active;
+    }
+    .gds-hotkey {
+        @extend .gds-hotkey--tertiary-dark;
+    }
 }
 
 .gds-hotkey-toggle--dark-success {
-  @extend .gds-hotkey-toggle--dark-primary;
-  &:hover,
-  &.gds-hotkey-toggle--active {
-    @extend .gds-hotkey-toggle--success.gds-hotkey-toggle--active;
-  }
-  .gds-hotkey {
-    @extend .gds-hotkey--success-dark;
-  }
+    @extend .gds-hotkey-toggle--dark-primary;
+    &:hover, &.gds-hotkey-toggle--active {
+        @extend .gds-hotkey-toggle--success.gds-hotkey-toggle--active;
+    }
+    .gds-hotkey {
+        @extend .gds-hotkey--success-dark;
+    }
 }
 
 .gds-hotkey-toggle--dark-warning {
-  @extend .gds-hotkey-toggle--dark-primary;
-  &:hover,
-  &.gds-hotkey-toggle--active {
-    @extend .gds-hotkey-toggle--warning.gds-hotkey-toggle--active;
-  }
-  .gds-hotkey {
-    @extend .gds-hotkey--warning-dark;
-  }
+    @extend .gds-hotkey-toggle--dark-primary;
+    &:hover, &.gds-hotkey-toggle--active {
+        @extend .gds-hotkey-toggle--warning.gds-hotkey-toggle--active;
+    }
+    .gds-hotkey {
+        @extend .gds-hotkey--warning-dark;
+    }
 }
 
 .gds-hotkey-toggle--dark-danger {
-  @extend .gds-hotkey-toggle--dark-primary;
-  &:hover,
-  &.gds-hotkey-toggle--active {
-    @extend .gds-hotkey-toggle--danger.gds-hotkey-toggle--active;
-  }
-  .gds-hotkey {
-    @extend .gds-hotkey--danger-dark;
-  }
+    @extend .gds-hotkey-toggle--dark-primary;
+    &:hover, &.gds-hotkey-toggle--active {
+        @extend .gds-hotkey-toggle--danger.gds-hotkey-toggle--active;
+    }
+    .gds-hotkey {
+        @extend .gds-hotkey--danger-dark;
+    }
 }
 
 .gds-hotkey-toggle--dark-info {
-  @extend .gds-hotkey-toggle--dark-primary;
-  &:hover,
-  &.gds-hotkey-toggle--active {
-    @extend .gds-hotkey-toggle--info.gds-hotkey-toggle--active;
-  }
-  .gds-hotkey {
-    @extend .gds-hotkey--info-dark;
-  }
+    @extend .gds-hotkey-toggle--dark-primary;
+    &:hover, &.gds-hotkey-toggle--active {
+        @extend .gds-hotkey-toggle--info.gds-hotkey-toggle--active;
+    }
+    .gds-hotkey {
+        @extend .gds-hotkey--info-dark;
+    }
 }
 
 .gds-hotkey-toggle--block {
-  @extend .gds-button--block;
+    @extend .gds-button--block;
 }
 
 .gds-hotkey-toggle--xs {
-  padding: $unit / 5;
-  line-height: 0;
+    padding: $unit / 5;
+    line-height: 0;
 }
 
 .gds-hotkey-toggle--sm {
-  padding: $unit / 4;
-  line-height: 0.5;
+    padding: $unit / 4;
+    line-height: 0.5;
 }
 
 .gds-hotkey-toggle--lg {
-  padding: $unit / 2;
+    padding: $unit / 2;
 }
 
 .gds-hotkey-toggle--xl {
-  padding: $unit;
+    padding: $unit;
 }
 
 .gds-hotkey-toggle__thumb {
-  height: auto;
-  width: 100%;
+    height: auto;
+    width: 100%;
 }
 
 .gds-hotkey-toggle__label {
-  line-height: 0.8;
+    line-height: 0.8;
 }
 
 .gds-hotkey-toggle__label--xs {
-  font-size: $font-size-minus-2;
+    font-size: $font-size-minus-2;
 }
 
 .gds-hotkey-toggle__label--sm {
-  font-size: $font-size-minus-1;
+    font-size: $font-size-minus-1;
 }
 
 .gds-hotkey-toggle__label--lg {
-  font-size: $font-size-plus-1;
+    font-size: $font-size-plus-1;
 }
 
 .gds-hotkey-toggle__label--xl {
-  font-size: $font-size-plus-3;
+    font-size: $font-size-plus-3;
 }
 
 .gds-hotkey-toggle__icon {
-  position: absolute;
-  right: $unit/2;
-  top: calc(50% - #{$unit / 2.5});
-  font-size: $unit;
-  color: white;
-  opacity: 0;
-  line-height: 0.8;
-  transform: scale(0.5);
-  @include transition-ease-out(all, 150ms);
+    position:absolute;
+    right: $unit/2;
+    top: calc( 50% - #{$unit / 2.5} );
+    font-size: $unit;
+    color: white;
+    opacity: 0;
+    line-height: 0.8;
+    transform: scale(0.5);
+    @include transition-ease-out(all, 150ms);
 }
 
 .gds-hotkey-toggle__icon--xs {
-  line-height: 0.65;
+    line-height: 0.65;
 }
 
 .gds-hotkey-toggle__icon--sm {
-  line-height: 0.75;
+    line-height: 0.75;
 }
 
 .gds-hotkey-toggle__icon--overlay,
@@ -282,33 +267,32 @@
 .gds-hotkey-toggle__icon--overlay-sm,
 .gds-hotkey-toggle__icon--overlay-lg,
 .gds-hotkey-toggle__icon--overlay-xl {
-  width: 100%;
-  text-align: center;
-  left: 0;
-  right: 0;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    right: 0;
 }
 
-.gds-hotkey-toggle__icon--overlay-sm,
-.gds-hotkey-toggle__icon--overlay-xs {
-  top: calc(50% - 1.5rem);
-  font-size: 2rem;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+.gds-hotkey-toggle__icon--overlay-sm, .gds-hotkey-toggle__icon--overlay-xs {
+    top: calc(50% - 1.5rem);
+    font-size: 2rem;
+    text-shadow: 0 0 3px rgba(0,0,0,0.5);
 }
 
 .gds-hotkey-toggle__icon--overlay {
-  top: calc(50% - 2rem);
-  font-size: 3rem;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    top: calc(50% - 2rem);
+    font-size: 3rem;
+    text-shadow: 0 0 3px rgba(0,0,0,0.7);
 }
 
 .gds-hotkey-toggle__icon--overlay-lg {
-  top: calc(50% - 2.5rem);
-  font-size: 4rem;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    top: calc(50% - 2.5rem);
+    font-size: 4rem;
+    text-shadow: 0 0 5px rgba(0,0,0,0.8);
 }
 
 .gds-hotkey-toggle__icon--overlay-xl {
-  top: calc(50% - 3rem);
-  font-size: 5rem;
-  text-shadow: 0 0 7px rgba(0, 0, 0, 0.85);
+    top: calc(50% - 3rem);
+    font-size: 5rem;
+    text-shadow: 0 0 7px rgba(0,0,0,0.85);
 }

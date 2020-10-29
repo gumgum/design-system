@@ -1,71 +1,72 @@
 .gds-divider {
-  width: 100%;
-  height: $unit;
-  color: $gg-light-3;
-  display: flex;
-  margin-bottom: $unit;
+    width:100%;
+    height:$unit;
+    color:$gg-light-3;
+    display:flex;
+    margin-bottom:$unit;
+
 }
 
 .gds-divider--reversed {
-  flex-direction: row-reverse;
-  .gds-divider__label {
-    margin-left: $unit/4;
-    margin-right: 0;
-  }
-  .gds-divider__arrow {
-    margin-right: $unit/4;
-    margin-left: 0;
-  }
+    flex-direction: row-reverse;
+    .gds-divider__label {
+        margin-left:$unit/4;
+        margin-right:0;
+    }
+    .gds-divider__arrow {
+        margin-right:$unit/4;
+        margin-left:0;
+    }
 }
 
 .gds-divider--centered {
-  .gds-divider__label {
-    margin-left: $unit/4;
-  }
+    .gds-divider__label {
+        margin-left:$unit/4;
+    }
 }
 
 .gds-divider--collapsible {
-  cursor: pointer;
-  &:hover {
-    color: $dividerTextColor;
-    .gds-divider__line {
-      background-color: $dividerLineColor;
+    cursor:pointer;
+    &:hover {
+        color: $dividerTextColor;
+        .gds-divider__line {
+            background-color:$dividerLineColor;
+        }
+        .gds-divider__arrow {
+            border-top: $unit/3 solid $dividerArrowColor;
+        }
     }
-    .gds-divider__arrow {
-      border-top: $unit/3 solid $dividerArrowColor;
-    }
-  }
 }
 
 .gds-divider__label {
-  display: block;
-  font-size: $unit * 0.75;
-  flex-basis: auto;
-  margin-right: $unit/4;
-  @include transition-ease-out(all, 250ms);
+    display:block;
+    font-size:$unit*0.75;
+    flex-basis:auto;
+    margin-right:$unit/4;
+    @include transition-ease-out(all,250ms);
 }
 
 .gds-divider__line {
-  flex: 1;
-  display: block;
-  height: 1px;
-  background-color: $gg-light-2;
-  top: $unit * 0.6;
-  @include transition-ease-out(all, 250ms);
+    flex:1;
+    display:block;
+    height:1px;
+    background-color: $gg-light-2;
+    top:$unit*0.6;
+    @include transition-ease-out(all,250ms);
 }
 
 .gds-divider__arrow {
-  width: 0;
-  height: 0;
-  top: 0.5 * $unit;
-  border-left: $unit/3 solid transparent;
-  border-right: $unit/3 solid transparent;
-  border-top: $unit/3 solid $gg-light-2;
-  margin-left: $unit/4;
-  transform: rotate(0deg);
-  @include transition-ease-out(all, 250ms);
+    width: 0;
+    height: 0;
+    top:0.5*$unit;
+    border-left: $unit/3 solid transparent;
+    border-right: $unit/3 solid transparent;
+    border-top: $unit/3 solid $gg-light-2;
+    margin-left:$unit/4;
+    transform:rotate(0deg);
+    @include transition-ease-out(all,250ms);
 }
 
 .gds-divider__arrow--collapse {
-  transform: rotate(180deg);
+    transform:rotate(180deg);
 }

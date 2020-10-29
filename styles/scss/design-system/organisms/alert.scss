@@ -1,96 +1,96 @@
 .gds-alert {
-  @extend .gds-layout__column--md-4;
-  @extend .gds-layout__column--sm-6;
-  @extend .gds-layout__column--xs-10;
-  @extend .gds-layout__column--md-push-4;
-  @extend .gds-layout__column--sm-push-3;
-  @extend .gds-layout__column--xs-push-1;
-  position: fixed;
-  background-color: white;
-  z-index: 900;
-  border-radius: $border-radius;
-  overflow: hidden;
-  outline: 0;
-  -webkit-overflow-scrolling: touch;
-  height: auto;
-  padding: 0;
-  top: 25%;
-  box-shadow: 0px 0px 15px rgba(black, 0.15);
-  transform-origin: 50% 50%;
-  transform: scale(0.75);
-  @include transition-ease-in(all, 100ms);
+    @extend .gds-layout__column--md-4;
+    @extend .gds-layout__column--sm-6;
+    @extend .gds-layout__column--xs-10;
+    @extend .gds-layout__column--md-push-4;
+    @extend .gds-layout__column--sm-push-3;
+    @extend .gds-layout__column--xs-push-1;
+    position: fixed;
+    background-color: white;
+    z-index: 900;
+    border-radius: $border-radius;
+    overflow: hidden;
+    outline: 0;
+    -webkit-overflow-scrolling: touch;
+    height:auto;
+    padding: 0;
+    top:25%;
+    box-shadow:0px 0px 15px rgba(black,0.15);
+    transform-origin:50% 50%;
+    transform:scale(0.75);
+    @include transition-ease-in(all,100ms);
 }
 
 // Add to <body> when alert is open
 .-has-alert {
-  height: 100%;
-  overflow: hidden;
+    height: 100%;
+    overflow: hidden;
 }
 
 .gds-alert__overlay {
-  @extend .gds-modal__overlay;
-  @include transition-ease-in(all, 100ms);
+    @extend .gds-modal__overlay;
+    @include transition-ease-in(all,100ms);
 }
 
 .gds-alert--shown {
-  @extend .gds-modal--shown;
-  @include transition-ease-out(all, 100ms);
-  .gds-alert {
-    transform: scale(1);
-    @include transition-ease-out(all, 100ms);
-  }
+    @extend .gds-modal--shown;
+    @include transition-ease-out(all,100ms);
+    .gds-alert {
+        transform:scale(1);
+        @include transition-ease-out(all,100ms);
+    }
 }
 
 .gds-alert__header,
 .gds-alert__body,
 .gds-alert__footer {
-  display: block;
-  text-align: center;
+    display: block;
+    text-align:center;
 }
 
 .gds-alert__header {
-  text-align: center;
-  color: white;
-  padding: $unit * 2;
-  border-top-right-radius: $border-radius;
-  border-top-left-radius: $border-radius;
+    text-align: center;
+    color:white;
+    padding:$unit*2;
+    border-top-right-radius:$border-radius;
+    border-top-left-radius:$border-radius;
 }
 
 .gds-alert__header--danger {
-  background-color: $dangerColor;
+    background-color:$dangerColor;
 }
 .gds-alert__header--warning {
-  background-color: $warningColor;
+    background-color:$warningColor;
 }
 .gds-alert__header--success {
-  background-color: $successColor;
+    background-color:$successColor;
 }
 .gds-alert__header--info {
-  background-color: $infoColor;
+    background-color:$infoColor;
 }
 .gds-alert__header--primary {
-  background-color: $primaryColor;
+    background-color:$primaryColor;
 }
 .gds-alert__header--secondary {
-  background-color: $secondaryColor;
+    background-color:$secondaryColor;
 }
 
 .gds-alert__title {
-  @extend .-ellipsis;
-  @extend .gds-text--header-xs;
-  margin-top: $unit * 2;
+    @extend .-ellipsis;
+    @extend .gds-text--header-xs;
+    margin-top:$unit*2;
 }
 
 .gds-alert__icon {
-  @extend .gds-text--header-xxl;
-  display: block;
+    @extend .gds-text--header-xxl;
+    display: block;
 }
 
 .gds-alert__body {
-  position: relative;
-  padding: $unit;
+    position: relative;
+    padding:$unit;
 }
 
 .gds-alert__footer {
-  padding: 0 $unit $unit $unit;
+    padding:0 $unit $unit $unit;
 }

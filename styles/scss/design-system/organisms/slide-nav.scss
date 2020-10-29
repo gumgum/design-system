@@ -1,222 +1,222 @@
 .-has-slide-nav {
-  position: absolute !important;
-  width: 100%;
-  left: 0;
-  top: 0 !important;
-  @include transition-ease-out(all, 250ms);
-  overflow: hidden;
+    position: absolute !important;
+    width: 100%;
+    left: 0;
+    top: 0 !important;
+    @include transition-ease-out(all,250ms);
+    overflow: hidden;
 
-  &:before {
-    content: "";
-    @include transition-ease-out(all, 250ms);
-  }
+    &:before {
+        content: '';
+        @include transition-ease-out(all,250ms);
+    }
 }
 
 .gds-slide-out {
-  .gds-slide-content {
-    transform: translateX($nav-width);
+    .gds-slide-content {
+        transform:translateX($nav-width);
 
-    @media #{$phablet-width} {
-      $nav-width: ($unit * 20);
-      transform: translateX($nav-width);
+        @media #{$phablet-width} {
+            $nav-width: ($unit * 20);
+            transform: translateX($nav-width);
+        }
+
+        @media #{$phone-width} {
+            $nav-width: ($unit * 15);
+            transform: translateX($nav-width);
+        }
     }
 
-    @media #{$phone-width} {
-      $nav-width: ($unit * 15);
-      transform: translateX($nav-width);
-    }
-  }
+    .gds-slide-nav {
+        transform: translateX(25rem);
 
-  .gds-slide-nav {
-    transform: translateX(25rem);
+        @media #{$phablet-width} {
+            transform: translateX(20rem);
+        }
 
-    @media #{$phablet-width} {
-      transform: translateX(20rem);
+        @media #{$phone-width} {
+            transform: translateX(15rem);
+        }
     }
-
-    @media #{$phone-width} {
-      transform: translateX(15rem);
-    }
-  }
 }
 
 .gds-slide-content {
-  left: 0;
-  transform: translate3d(0, 0, 0);
-  @include transition-ease-out(all, 250ms);
+    left: 0;
+    transform: translate3d(0,0,0);
+    @include transition-ease-out(all,250ms);
 }
 
 .gds-slide-nav {
-  color: white;
-  position: fixed;
-  top: 0;
-  left: -25rem;
-  transform: translateX(0rem);
-  width: $nav-width;
-  height: 100%;
-  overflow-y: auto;
-  z-index: $z-index-8;
-  background: url("https://assets.ggops.com/images/tweed.png") top left repeat;
-  background-color: $gg-dark-4;
-  background-size: auto;
-  background-blend-mode: multiply;
-  box-shadow: inset #{$unit * -0.75} 0 #{$unit * 0.5} #{$unit * -0.5} rgba(0, 0, 0, 0.35);
-  @include transition-ease-out(all, 250ms);
-
-  @media #{$phablet-width} {
-    $nav-width: $unit * 20;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: -25rem;
+    transform: translateX(0rem);
     width: $nav-width;
-    left: -$nav-width;
-  }
+    height: 100%;
+    overflow-y: auto;
+    z-index: $z-index-8;
+    background: url('https://assets.ggops.com/images/tweed.png') top left repeat;
+    background-color: $gg-dark-4;
+    background-size: auto;
+    background-blend-mode: multiply;
+    box-shadow: inset #{$unit * -0.75} 0 #{$unit * 0.5} #{$unit * -0.5} rgba(0,0,0,0.35);
+    @include transition-ease-out(all,250ms);
 
-  @media #{$phone-width} {
-    $nav-width: ($unit * 15);
-    width: $nav-width;
-    left: -$nav-width;
-  }
+    @media #{$phablet-width} {
+        $nav-width: $unit*20;
+        width: $nav-width;
+        left: -$nav-width;
+    }
+
+    @media #{$phone-width} {
+        $nav-width: ($unit * 15);
+        width: $nav-width;
+        left: -$nav-width;
+    }
 }
 
 .gds-slide-nav__user-indicator {
-  padding: ($unit * 0.87);
+    padding: ($unit * 0.87);
 }
 
 .gds-slide-nav__user-text {
-  color: $gg-dark-4;
-  margin-bottom: 0;
+    color: $gg-dark-4;
+    margin-bottom: 0;
 }
 
 .gds-slide-nav__user-name {
-  padding: ($unit * 1.75);
-  color: $gg-dark-4;
-  margin-bottom: 0;
+    padding: ($unit * 1.75);
+    color: $gg-dark-4;
+    margin-bottom: 0;
 }
 
 .gds-slide-nav__group {
-  margin-bottom: ($unit * 2);
+    margin-bottom: ($unit * 2);
 }
 
 .gds-slide-nav__label {
-  width: 100%;
-  background-color: $primaryColor;
-  padding: ($unit / 3.5) 0 ($unit / 3.5) $list-padding;
-  position: relative;
-  box-shadow: inset 0 #{-$cap-size} 0 0 $primaryDark2Color;
-  font-weight: $font-weight-lighter;
-  font-size: $font-size-plus-2;
-  margin-bottom: 0;
-  display: inline-block;
+    width: 100%;
+    background-color: $primaryColor;
+    padding: ($unit / 3.5) 0 ($unit / 3.5) $list-padding;
+    position: relative;
+    box-shadow: inset 0 #{-$cap-size} 0 0 $primaryDark2Color;
+    font-weight: $font-weight-lighter;
+    font-size: $font-size-plus-2;
+    margin-bottom: 0;
+    display: inline-block;
 }
 
 .gds-slide-nav__list {
-  padding: 0;
-  color: white;
+    padding: 0;
+    color: white;
 }
 
 .gds-slide-nav__list--nested {
-  padding-left: $list-padding;
-  height: auto;
-  max-height: 0;
-  overflow: hidden;
-  @include transition-back(all, 500ms);
+    padding-left: $list-padding;
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    @include transition-back(all,500ms);
 }
 
 .gds-slide-nav__list--expanded {
-  max-height: ($unit * 55);
+    max-height: ($unit * 55);
 }
 
 .gds-slide-nav__list-item {
-  position: relative;
+    position: relative;
 }
 
 .gds-slide-nav__list-item--primary {
-  width: 100%;
+    width: 100%;
 
-  &:nth-child(even) {
-    background-color: $trans-white-x-light;
-  }
+    &:nth-child(even) {
+        background-color: $trans-white-x-light;
+    }
 }
 
 .gds-slide-nav__link {
-  color: white !important;
-  font-weight: $font-weight-lighter;
-  display: block;
-  height: 100%;
-  width: 100%;
-  padding: ($unit / 3.5) 0 ($unit / 3.5) ($list-padding);
-  @include transition-back(all, 250ms);
+    color: white !important;
+    font-weight: $font-weight-lighter;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: ($unit / 3.5) 0 ($unit / 3.5) ($list-padding);
+    @include transition-back(all,250ms);
 
-  &:hover {
-    text-decoration: none;
-    color: white;
-    padding-left: ($list-padding + $hover-shift);
-    background-color: $trans-white-light;
-  }
+    &:hover {
+        text-decoration: none;
+        color: white;
+        padding-left: ($list-padding + $hover-shift);
+        background-color: $trans-white-light;
+    }
 
-  &:visited,
-  &:focus {
-    text-decoration: none;
-    color: white;
-  }
+    &:visited,
+    &:focus {
+        text-decoration: none;
+        color: white;
+    }
 
-  &:active,
-  &:focus:active {
-    background-color: $primaryColor;
-  }
+    &:active,
+    &:focus:active {
+        background-color: $primaryColor;
+    }
 }
 
 .gds-slide-nav__link--expandable {
-  &:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: ($unit / 3) solid transparent;
-    border-bottom: ($unit / 3) solid transparent;
-    border-left: ($unit / 2) solid $primaryColor;
-    margin-left: ($unit * 1.5);
-    top: ($unit * 0.75);
-    @include transition-back(all, 250ms);
-  }
-
-  &:hover {
     &:after {
-      border-left: ($unit / 2) solid $secondaryColor;
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: ($unit / 3) solid transparent;
+        border-bottom: ($unit / 3) solid transparent;
+        border-left: ($unit / 2) solid $primaryColor;
+        margin-left: ($unit * 1.5);
+        top: ($unit * 0.75);
+        @include transition-back(all,250ms);
     }
-  }
+
+    &:hover {
+        &:after {
+            border-left: ($unit / 2) solid $secondaryColor;
+        }
+    }
 }
 
 .gds-slide-nav__link--expanded {
-  &:after {
-    transform: rotate(90deg);
-  }
+    &:after {
+        transform: rotate(90deg);
+    }
 }
 
 .gds-slide-nav__link-recent {
-  padding: ($unit / 3.5) 0 ($unit / 3.5) ($list-padding + ($unit * 1.75));
-
-  &:before {
-    content: "";
-    height: ($unit * 0.65);
-    width: ($unit * 0.65);
-    border-radius: 50%;
-    background-color: $primaryColor;
-    position: absolute;
-    left: $list-padding;
-    top: ($unit * 0.75);
-    @include transition-back(all, 250ms);
-  }
-
-  &:hover {
-    text-decoration: none;
-    color: white;
-    padding-left: ($list-padding + ($unit * 1.75) + $hover-shift);
-    background-color: $trans-white-light;
+    padding: ($unit / 3.5) 0 ($unit / 3.5) ($list-padding + ($unit * 1.75));
 
     &:before {
-      top: ($unit * 0.75) - ($hover-shift / 4);
-      height: ($unit * 0.65) + $hover-shift;
-      width: ($unit * 0.65) + $hover-shift;
-      background-color: $secondaryColor;
+        content: '';
+        height: ($unit * 0.65);
+        width: ($unit * 0.65);
+        border-radius: 50%;
+        background-color: $primaryColor;
+        position: absolute;
+        left: $list-padding;
+        top: ($unit * 0.75);
+        @include transition-back(all,250ms);
     }
-  }
+
+    &:hover {
+        text-decoration: none;
+        color: white;
+        padding-left: ($list-padding + ($unit * 1.75) + $hover-shift);
+        background-color: $trans-white-light;
+
+        &:before {
+            top: ($unit * 0.75) - ($hover-shift / 4);
+            height: ($unit * 0.65) + $hover-shift;
+            width: ($unit * 0.65) + $hover-shift;
+            background-color: $secondaryColor;
+        }
+    }
 }
