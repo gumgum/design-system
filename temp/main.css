@@ -2,26 +2,26 @@
 /* These are the main color assignments for this theme. All component color assignments within this theme are based on this subset of the overall palette. Editing these will have far-reaching effects. */
 /* These color assignments affect specific components and allow for fine grain control over the look of your theme. Edit these to change colors of individual components within the design system. */
 @font-face {
-  font-family: "pnlight";
-  src: url("https://assets.ggops.com/fonts/pns-light-webfont.eot") format("eot"), url("https://assets.ggops.com/fonts/pns-light-webfont.svg") format("svg"), url("https://assets.ggops.com/fonts/pns-light-webfont.ttf") format("ttf"), url("https://assets.ggops.com/fonts/pns-light-webfont.woff") format("woff");
+  font-family: "pslight";
+  src: url("../../../assets/fonts/Public_Sans/static/PublicSans-ExtraLight.ttf") format("ttf"), url("../../../assets/fonts/PublicSans-ExtraLight.woff") format("woff"), url("../../../assets/fonts/PublicSans-ExtraLight.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: "pnregular";
-  src: url("https://assets.ggops.com/fonts/pns-regular-webfont.eot") format("eot"), url("https://assets.ggops.com/fonts/pns-regular-webfont.svg") format("svg"), url("https://assets.ggops.com/fonts/pns-regular-webfont.ttf") format("ttf"), url("https://assets.ggops.com/fonts/pns-regular-webfont.woff") format("woff");
+  font-family: "psregular";
+  src: url("../../../assets/fonts/Public_Sans/static/PublicSans-Light.ttf") format("ttf");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: "pnsemibold";
-  src: url("https://assets.ggops.com/fonts/pns-semibold-webfont.eot") format("eot"), url("https://assets.ggops.com/fonts/pns-semibold-webfont.svg") format("svg"), url("https://assets.ggops.com/fonts/pns-semibold-webfont.ttf") format("ttf"), url("https://assets.ggops.com/fonts/pns-semibold-webfont.woff") format("woff");
+  font-family: "pssemibold";
+  src: url("../../../assets/fonts/Public_Sans/static/PublicSans-Medium.ttf") format("ttf");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: "pnbold";
-  src: url("https://assets.ggops.com/fonts/pns-bold-webfont.eot") format("eot"), url("https://assets.ggops.com/fonts/pns-bold-webfont.svg") format("svg"), url("https://assets.ggops.com/fonts/pns-bold-webfont.ttf") format("ttf"), url("https://assets.ggops.com/fonts/pns-bold-webfont.woff") format("woff");
+  font-family: "psbold";
+  src: url("../../../assets/fonts/Public_Sans/static/PublicSans-Bold.ttf") format("ttf");
   font-weight: normal;
   font-style: normal; }
 
@@ -12083,7 +12083,7 @@ button {
   /* easeOutQuart */ }
 
 body {
-  font-family: "pnlight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "pslight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.8; }
 
@@ -12105,7 +12105,7 @@ small {
 input,
 textarea,
 select {
-  font-family: "pnregular"; }
+  font-family: "psregular"; }
 
 .gds-text--uppercase {
   text-transform: uppercase; }
@@ -12208,13 +12208,13 @@ select {
 
 .gds-text--regular, .gds-legend__value,
 .gds-legend__value--md {
-  font-family: "pnregular"; }
+  font-family: "psregular"; }
 
 .gds-text--bold, .gds-conversation__name, .gds-markdown strong {
-  font-family: "pnsemibold"; }
+  font-family: "pssemibold"; }
 
 .gds-text--hero {
-  font-family: "pnbold"; }
+  font-family: "psbold"; }
 
 .gds-text--italic, .gds-markdown em {
   font-style: italic; }
@@ -12257,7 +12257,7 @@ select {
     color: #ffbf30; }
 
 .gds-button, .gds-button-group__button, .gds-button-dropdown--in-group .gds-button-dropdown__button, .gds-button-dropdown--in-group .gds-multi-select__button, .gds-button-dropdown__button, .gds-multi-select__button, .gds-corner-content__button, .gds-radio-block__button, .gds-toolbelt__item-input-button, .gds-onboarder__button, .gds-anim-timeline__button--remove, .gds-anim-timeline__button--add, .react-datepicker__today-button, .ReactTable .-pagination .-btn, .DayPicker-TodayButton {
-  font-family: "pnregular";
+  font-family: "psregular";
   display: inline-block;
   font-weight: normal;
   font-size: 1rem;
@@ -13002,7 +13002,7 @@ select {
   padding: 1px 0.25rem 0;
   border-radius: 2px;
   vertical-align: text-top;
-  font-family: "pnregular";
+  font-family: "psregular";
   letter-spacing: 0.5px;
   pointer-events: none;
   text-shadow: none !important;
@@ -13210,7 +13210,7 @@ select {
 [data-tooltip] {
   position: relative;
   display: inline-block;
-  font-family: "pnregular"; }
+  font-family: "psregular"; }
 
 [data-tooltip]:before,
 [data-tooltip]:after {
@@ -15844,7 +15844,7 @@ select {
   padding: 0 0.5rem;
   overflow: hidden;
   vertical-align: top;
-  font-family: "pnregular"; }
+  font-family: "psregular"; }
 
 .gds-tag--with-button, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice {
   padding-right: 2.75rem; }
@@ -16471,7 +16471,7 @@ select {
   border-color: #f25631; }
 
 .gds-well__text, .gds-snackbar__notification-text {
-  font-family: "pnregular";
+  font-family: "psregular";
   padding-right: 2.5rem; }
 
 .gds-well__button--dark,
@@ -17363,7 +17363,7 @@ select {
   z-index: 200;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 -0.125rem 0 rgba(0, 0, 0, 0.1);
-  font-family: "pnregular";
+  font-family: "psregular";
   color: #007591;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -17743,7 +17743,7 @@ select {
     width: 4rem !important; } }
 
 .gds-table {
-  font-family: "pnregular";
+  font-family: "psregular";
   width: 100%;
   max-width: 100%;
   font-size: 0.8rem;
@@ -18005,7 +18005,7 @@ select {
 .gds-table__sub-section {
   background-color: white;
   box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.5), inset 0px 1px 0px rgba(0, 0, 0, 0.25);
-  font-family: "pnbold";
+  font-family: "psbold";
   text-transform: uppercase;
   color: #5f5f5f;
   font-size: 0.75rem;
@@ -18760,7 +18760,7 @@ select {
     display: table; }
 
 .gds-form-group__label, .gds-keyboard-shortcuts__label, .gds-balloon__label, .gds-legend__label, .gds-ranker-card__label, .gds-toolbelt__item-label, .gds-anim-timeline__label {
-  font-family: "pnbold";
+  font-family: "psbold";
   font-size: 0.7rem;
   color: #7a7a7a;
   display: inline-block;
@@ -18801,7 +18801,7 @@ select {
   border-bottom-right-radius: 2px;
   color: white;
   display: block;
-  font-family: "pnregular";
+  font-family: "psregular";
   font-size: 0.7rem;
   padding: 0.125rem 0.5rem;
   position: relative;
@@ -21064,7 +21064,7 @@ select {
   background-color: white;
   text-shadow: none;
   text-align: left;
-  font-family: "pnregular";
+  font-family: "psregular";
   z-index: 300; }
   .gds-multi-select__button:hover {
     background-color: white;
@@ -21270,7 +21270,7 @@ select {
 .gds-card__footer,
 .gds-card__header {
   padding: 0.5rem;
-  font-family: "pnregular";
+  font-family: "psregular";
   font-size: 1rem;
   background-color: #005468;
   color: white;
@@ -23613,7 +23613,7 @@ select {
     border-color: #888888; }
 
 .gds-balloon__description {
-  font-family: "pnregular";
+  font-family: "psregular";
   color: inherit;
   font-size: 0.8rem; }
 
@@ -24519,7 +24519,7 @@ select {
   background-color: white;
   padding: 1rem;
   border: 1px solid #dbdbdb;
-  font-family: "pnregular";
+  font-family: "psregular";
   cursor: pointer; }
   .gds-ranker-ensign:before, .gds-ranker-grid__ensign:before {
     content: "";
@@ -24682,7 +24682,7 @@ select {
   color: white; }
 
 .gds-chooser {
-  font-family: "pnregular";
+  font-family: "psregular";
   background-color: #005468;
   display: flex;
   justify-content: space-between;
@@ -25180,7 +25180,7 @@ select {
   font-size: 2.5rem; }
 
 .gds-slab-nav__item-label, .gds-slab-nav__dropdown-label, .gds-slab-nav__dropdown-menu-link {
-  font-family: "pnbold";
+  font-family: "psbold";
   font-size: 0.7rem;
   text-transform: uppercase;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
@@ -25406,7 +25406,7 @@ select {
   background-color: transparent !important;
   border: none;
   border-right: 1px solid white;
-  font-family: "pnregular";
+  font-family: "psregular";
   cursor: pointer;
   border-radius: 0;
   font-size: 0.8rem;
@@ -26400,7 +26400,7 @@ select {
   border-radius: 50%;
   margin: auto;
   background-color: #007591;
-  font-family: "pnregular";
+  font-family: "psregular";
   font-size: 0.8rem;
   flex-shrink: 0; }
 
@@ -26616,7 +26616,7 @@ select {
   z-index: 200; }
 
 .gds-ranker-card__number {
-  font-family: "pnregular";
+  font-family: "psregular";
   position: absolute;
   top: 10px;
   left: 10px;
@@ -30188,7 +30188,7 @@ body.-has-persist-nav {
       background-repeat: no-repeat !important;
       background-position: 10px 10px !important; }
   .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices input {
-    font-family: "pnlight" !important;
+    font-family: "pslight" !important;
     letter-spacing: 0.5px; }
 
 .chosen-container .chosen-drop {
@@ -30332,7 +30332,7 @@ body.-has-persist-nav {
 
 .react-datepicker__day-name {
   color: #fff;
-  font-family: "pnbold";
+  font-family: "psbold";
   text-transform: uppercase;
   font-size: 0.7rem;
   margin-bottom: 0; }

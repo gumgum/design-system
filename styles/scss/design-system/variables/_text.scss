@@ -4,48 +4,84 @@
 // Proxima Nova webfonts
 
 @font-face {
-  font-family: "pnlight";
-  src: url("https://assets.ggops.com/fonts/pns-light-webfont.eot") format("eot"),
-    url("https://assets.ggops.com/fonts/pns-light-webfont.svg") format("svg"),
-    url("https://assets.ggops.com/fonts/pns-light-webfont.ttf") format("ttf"),
-    url("https://assets.ggops.com/fonts/pns-light-webfont.woff") format("woff");
+  font-family: "pslight";
+  src: url("../../../assets/fonts/PublicSans-ExtraLight.ttf") format("ttf"),
+    url("../../../assets/fonts/PublicSans-ExtraLight.woff") format("woff"),
+    url("../../../assets/fonts/PublicSans-ExtraLight.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "pnregular";
-  src: url("https://assets.ggops.com/fonts/pns-regular-webfont.eot")
-      format("eot"),
-    url("https://assets.ggops.com/fonts/pns-regular-webfont.svg") format("svg"),
-    url("https://assets.ggops.com/fonts/pns-regular-webfont.ttf") format("ttf"),
-    url("https://assets.ggops.com/fonts/pns-regular-webfont.woff")
-      format("woff");
+  font-family: "psregular";
+  src: url("../../../assets/fonts/PublicSans-Light.ttf") format("ttf"),
+    url("../../../assets/fonts/PublicSans-Light.woff") format("woff"),
+    url("../../../assets/fonts/PublicSans-Light.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "pnsemibold";
-  src: url("https://assets.ggops.com/fonts/pns-semibold-webfont.eot")
-      format("eot"),
-    url("https://assets.ggops.com/fonts/pns-semibold-webfont.svg") format("svg"),
-    url("https://assets.ggops.com/fonts/pns-semibold-webfont.ttf") format("ttf"),
-    url("https://assets.ggops.com/fonts/pns-semibold-webfont.woff")
-      format("woff");
+  font-family: "pssemibold";
+  src: url("../../../assets/fonts/PublicSans-Medium.ttf") format("ttf"),
+    url("../../../assets/fonts/PublicSans-Medium.woff") format("woff"),
+    url("../../../assets/fonts/PublicSans-Medium.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "pnbold";
-  src: url("https://assets.ggops.com/fonts/pns-bold-webfont.eot") format("eot"),
-    url("https://assets.ggops.com/fonts/pns-bold-webfont.svg") format("svg"),
-    url("https://assets.ggops.com/fonts/pns-bold-webfont.ttf") format("ttf"),
-    url("https://assets.ggops.com/fonts/pns-bold-webfont.woff") format("woff");
+  font-family: "psbold";
+  src: url("../../../assets/fonts/PublicSans-SemiBold.ttf") format("ttf"),
+    url("../../../assets/fonts/PublicSans-SemiBold.woff") format("woff"),
+    url("../../../assets/fonts/PublicSans-SemiBold.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
+
+// @font-face {
+//   font-family: "pnlight";
+//   src: url("https://assets.ggops.com/fonts/pns-light-webfont.eot") format("eot"),
+//     url("https://assets.ggops.com/fonts/pns-light-webfont.svg") format("svg"),
+//     url("https://assets.ggops.com/fonts/pns-light-webfont.ttf") format("ttf"),
+//     url("https://assets.ggops.com/fonts/pns-light-webfont.woff") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "pnregular";
+//   src: url("https://assets.ggops.com/fonts/pns-regular-webfont.eot")
+//       format("eot"),
+//     url("https://assets.ggops.com/fonts/pns-regular-webfont.svg") format("svg"),
+//     url("https://assets.ggops.com/fonts/pns-regular-webfont.ttf") format("ttf"),
+//     url("https://assets.ggops.com/fonts/pns-regular-webfont.woff")
+//       format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "pnsemibold";
+//   src: url("https://assets.ggops.com/fonts/pns-semibold-webfont.eot")
+//       format("eot"),
+//     url("https://assets.ggops.com/fonts/pns-semibold-webfont.svg") format("svg"),
+//     url("https://assets.ggops.com/fonts/pns-semibold-webfont.ttf") format("ttf"),
+//     url("https://assets.ggops.com/fonts/pns-semibold-webfont.woff")
+//       format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "pnbold";
+//   src: url("https://assets.ggops.com/fonts/pns-bold-webfont.eot") format("eot"),
+//     url("https://assets.ggops.com/fonts/pns-bold-webfont.svg") format("svg"),
+//     url("https://assets.ggops.com/fonts/pns-bold-webfont.ttf") format("ttf"),
+//     url("https://assets.ggops.com/fonts/pns-bold-webfont.woff") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 @font-face {
   font-family: "gothambold";
@@ -58,10 +94,10 @@
   font-style: normal;
 }
 
-$pri-font: "pnlight";
-$pri-font-regular: "pnregular";
-$pri-font-semibold: "pnsemibold";
-$pri-font-bold: "pnbold";
+$pri-font: "pslight";
+$pri-font-regular: "psregular";
+$pri-font-semibold: "pssemibold";
+$pri-font-bold: "psbold";
 
 $sec-font-bold: "gothambold";
 
