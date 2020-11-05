@@ -1,77 +1,27 @@
+@import "fontsource-public-sans/200.css";
+@import "fontsource-public-sans/300.css";
+@import "fontsource-public-sans/500.css";
+@import "fontsource-public-sans/700.css";
+
 // -------------------------------------------------- //
 // Text variables
 // -------------------------------------------------- //
-// Proxima Nova webfonts
+// Public Sans Fonts provided by fontsource. This helps provide font files to projects using CRA, Gatsby, Next, etc.
 
-@font-face {
-  font-family: "pnlight";
-  src: url("https://assets.ggops.com/fonts/pns-light-webfont.eot") format("eot"),
-    url("https://assets.ggops.com/fonts/pns-light-webfont.svg") format("svg"),
-    url("https://assets.ggops.com/fonts/pns-light-webfont.ttf") format("ttf"),
-    url("https://assets.ggops.com/fonts/pns-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+$pri-font: "Public Sans";
+$pri-font-regular: "Public Sans";
+$pri-font-semibold: "Public Sans";
+$pri-font-bold: "Public Sans";
 
-@font-face {
-  font-family: "pnregular";
-  src: url("https://assets.ggops.com/fonts/pns-regular-webfont.eot")
-      format("eot"),
-    url("https://assets.ggops.com/fonts/pns-regular-webfont.svg") format("svg"),
-    url("https://assets.ggops.com/fonts/pns-regular-webfont.ttf") format("ttf"),
-    url("https://assets.ggops.com/fonts/pns-regular-webfont.woff")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "pnsemibold";
-  src: url("https://assets.ggops.com/fonts/pns-semibold-webfont.eot")
-      format("eot"),
-    url("https://assets.ggops.com/fonts/pns-semibold-webfont.svg") format("svg"),
-    url("https://assets.ggops.com/fonts/pns-semibold-webfont.ttf") format("ttf"),
-    url("https://assets.ggops.com/fonts/pns-semibold-webfont.woff")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "pnbold";
-  src: url("https://assets.ggops.com/fonts/pns-bold-webfont.eot") format("eot"),
-    url("https://assets.ggops.com/fonts/pns-bold-webfont.svg") format("svg"),
-    url("https://assets.ggops.com/fonts/pns-bold-webfont.ttf") format("ttf"),
-    url("https://assets.ggops.com/fonts/pns-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "gothambold";
-  src: url("https://assets.ggops.com/fonts/Gotham-Bold.eot") format("eot"),
-    url("https://assets.ggops.com/fonts/Gotham-Bold.svg") format("svg"),
-    url("https://assets.ggops.com/fonts/Gotham-Bold.ttf") format("ttf"),
-    url("https://assets.ggops.com/fonts/Gotham-Bold.woff") format("woff"),
-    url("https://assets.ggops.com/fonts/Gotham-Bold.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-$pri-font: "pnlight";
-$pri-font-regular: "pnregular";
-$pri-font-semibold: "pnsemibold";
-$pri-font-bold: "pnbold";
-
-$sec-font-bold: "gothambold";
+$sec-font-bold: "Public Sans";
 
 $header-font: "ag2";
 
-$font-weight-lighter: 100;
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-bold: 600;
-$font-weight-bolder: 800;
+$font-weight-lighter: 200;
+$font-weight-light: 200;
+$font-weight-normal: 300;
+$font-weight-bold: 500;
+$font-weight-bolder: 700;
 
 $font-size: $unit;
 $font-size-minus-1: ($font-size * 0.9);
