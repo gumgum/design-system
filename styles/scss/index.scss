@@ -22,12 +22,18 @@ $image-path: "../images/";
 @import "design-system/variables/_percentages";
 
 // Icons
-@import "design-system/icons/fontawesome";
-@import "design-system/icons/light";
-@import "design-system/icons/regular";
-@import "design-system/icons/solid";
-@import "design-system/icons/brands";
-@import "design-system/icons/v4-shims";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/v4-shims";
+
+// @import "design-system/icons/fontawesome";
+// @import "design-system/icons/light"; -- will no longer have since we will be using Free Version
+// @import "design-system/icons/regular";
+// @import "design-system/icons/solid";
+// @import "design-system/icons/brands";
+// @import "design-system/icons/v4-shims";
 
 // Subatomic
 @import "design-system/subatomic/reset";

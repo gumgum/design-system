@@ -1,30 +1,12 @@
 /* This is Design System's complete color palette - all built-in themes are constructed from these colors */
 /* These are the main color assignments for this theme. All component color assignments within this theme are based on this subset of the overall palette. Editing these will have far-reaching effects. */
 /* These color assignments affect specific components and allow for fine grain control over the look of your theme. Edit these to change colors of individual components within the design system. */
-@font-face {
-  font-family: "pslight";
-  src: url("../../../assets/fonts/PublicSans-ExtraLight.ttf") format("ttf"), url("../../../assets/fonts/PublicSans-ExtraLight.woff") format("woff"), url("../../../assets/fonts/PublicSans-ExtraLight.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "psregular";
-  src: url("../../../assets/fonts/PublicSans-Light.ttf") format("ttf"), url("../../../assets/fonts/PublicSans-Light.woff") format("woff"), url("../../../assets/fonts/PublicSans-Light.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "pssemibold";
-  src: url("../../../assets/fonts/PublicSans-Medium.ttf") format("ttf"), url("../../../assets/fonts/PublicSans-Medium.woff") format("woff"), url("../../../assets/fonts/PublicSans-Medium.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "psbold";
-  src: url("../../../assets/fonts/PublicSans-SemiBold.ttf") format("ttf"), url("../../../assets/fonts/PublicSans-SemiBold.woff") format("woff"), url("../../../assets/fonts/PublicSans-SemiBold.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal; }
-
+@import url(~fontsource-public-sans/index.css);
+@import url(fontsource-public-sans/100.css);
+@import url(fontsource-public-sans/300.css);
+@import url(fontsource-public-sans/400.css);
+@import url(fontsource-public-sans/600.css);
+@import url(fontsource-public-sans/800.css);
 @font-face {
   font-family: "gothambold";
   src: url("https://assets.ggops.com/fonts/Gotham-Bold.eot") format("eot"), url("https://assets.ggops.com/fonts/Gotham-Bold.svg") format("svg"), url("https://assets.ggops.com/fonts/Gotham-Bold.ttf") format("ttf"), url("https://assets.ggops.com/fonts/Gotham-Bold.woff") format("woff"), url("https://assets.ggops.com/fonts/Gotham-Bold.woff2") format("woff2");
@@ -5573,14 +5555,14 @@ readers do not read off random characters that represent icons */
  * License - https://fontawesome.com/license (Commercial License)
  */
 @font-face {
-  font-family: 'Font Awesome 5 Pro';
+  font-family: "Font Awesome 5 Pro";
   font-style: normal;
   font-weight: 300;
   src: url("https://assets.ggops.com/fonts/fa55/fa-light-300.eot");
   src: url("https://assets.ggops.com/fonts/fa55/fa-light-300.eot?#iefix") format("embedded-opentype"), url("https://assets.ggops.com/fonts/fa55/fa-light-300.woff2") format("woff2"), url("https://assets.ggops.com/fonts/fa55/fa-light-300.woff") format("woff"), url("https://assets.ggops.com/fonts/fa55/fa-light-300.ttf") format("truetype"), url("https://assets.ggops.com/fonts/fa55/fa-light-300.svg#fontawesome") format("svg"); }
 
 .fal {
-  font-family: 'Font Awesome 5 Pro';
+  font-family: "Font Awesome 5 Pro";
   font-weight: 300; }
 
 /*!
@@ -5588,14 +5570,14 @@ readers do not read off random characters that represent icons */
  * License - https://fontawesome.com/license (Commercial License)
  */
 @font-face {
-  font-family: 'Font Awesome 5 Pro';
+  font-family: "Font Awesome 5 Pro";
   font-style: normal;
   font-weight: 400;
   src: url("https://assets.ggops.com/fonts/fa55/fa-regular-400.eot");
   src: url("https://assets.ggops.com/fonts/fa55/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("https://assets.ggops.com/fonts/fa55/fa-regular-400.woff2") format("woff2"), url("https://assets.ggops.com/fonts/fa55/fa-regular-400.woff") format("woff"), url("https://assets.ggops.com/fonts/fa55/fa-regular-400.ttf") format("truetype"), url("https://assets.ggops.com/fonts/fa55/fa-regular-400.svg#fontawesome") format("svg"); }
 
 .far {
-  font-family: 'Font Awesome 5 Pro';
+  font-family: "Font Awesome 5 Pro";
   font-weight: 400; }
 
 /*!
@@ -5603,7 +5585,7 @@ readers do not read off random characters that represent icons */
  * License - https://fontawesome.com/license (Commercial License)
  */
 @font-face {
-  font-family: 'Font Awesome 5 Pro';
+  font-family: "Font Awesome 5 Pro";
   font-style: normal;
   font-weight: 900;
   src: url("https://assets.ggops.com/fonts/fa55/fa-solid-900.eot");
@@ -5611,7 +5593,7 @@ readers do not read off random characters that represent icons */
 
 .fa,
 .fas {
-  font-family: 'Font Awesome 5 Pro';
+  font-family: "Font Awesome 5 Pro";
   font-weight: 900; }
 
 /*!
@@ -5619,14 +5601,14 @@ readers do not read off random characters that represent icons */
  * License - https://fontawesome.com/license (Commercial License)
  */
 @font-face {
-  font-family: 'Font Awesome 5 Brands';
+  font-family: "Font Awesome 5 Brands";
   font-style: normal;
   font-weight: normal;
   src: url("https://assets.ggops.com/fonts/fa55/fa-brands-400.eot");
   src: url("https://assets.ggops.com/fonts/fa55/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("https://assets.ggops.com/fonts/fa55/fa-brands-400.woff2") format("woff2"), url("https://assets.ggops.com/fonts/fa55/fa-brands-400.woff") format("woff"), url("https://assets.ggops.com/fonts/fa55/fa-brands-400.ttf") format("truetype"), url("https://assets.ggops.com/fonts/fa55/fa-brands-400.svg#fontawesome") format("svg"); }
 
 .fab {
-  font-family: 'Font Awesome 5 Brands'; }
+  font-family: "Font Awesome 5 Brands"; }
 
 /*!
  * Font Awesome Pro 5.5.0 by @fontawesome - https://fontawesome.com
@@ -12083,7 +12065,7 @@ button {
   /* easeOutQuart */ }
 
 body {
-  font-family: "pslight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.8; }
 
@@ -12105,7 +12087,7 @@ small {
 input,
 textarea,
 select {
-  font-family: "psregular"; }
+  font-family: "Public Sans"; }
 
 .gds-text--uppercase {
   text-transform: uppercase; }
@@ -12208,13 +12190,13 @@ select {
 
 .gds-text--regular, .gds-legend__value,
 .gds-legend__value--md {
-  font-family: "psregular"; }
+  font-family: "Public Sans"; }
 
 .gds-text--bold, .gds-conversation__name, .gds-markdown strong {
-  font-family: "pssemibold"; }
+  font-family: "Public Sans"; }
 
 .gds-text--hero {
-  font-family: "psbold"; }
+  font-family: "Public Sans"; }
 
 .gds-text--italic, .gds-markdown em {
   font-style: italic; }
@@ -12257,7 +12239,7 @@ select {
     color: #ffbf30; }
 
 .gds-button, .gds-button-group__button, .gds-button-dropdown--in-group .gds-button-dropdown__button, .gds-button-dropdown--in-group .gds-multi-select__button, .gds-button-dropdown__button, .gds-multi-select__button, .gds-corner-content__button, .gds-radio-block__button, .gds-toolbelt__item-input-button, .gds-onboarder__button, .gds-anim-timeline__button--remove, .gds-anim-timeline__button--add, .react-datepicker__today-button, .ReactTable .-pagination .-btn, .DayPicker-TodayButton {
-  font-family: "psregular";
+  font-family: "Public Sans";
   display: inline-block;
   font-weight: normal;
   font-size: 1rem;
@@ -13002,7 +12984,7 @@ select {
   padding: 1px 0.25rem 0;
   border-radius: 2px;
   vertical-align: text-top;
-  font-family: "psregular";
+  font-family: "Public Sans";
   letter-spacing: 0.5px;
   pointer-events: none;
   text-shadow: none !important;
@@ -13210,7 +13192,7 @@ select {
 [data-tooltip] {
   position: relative;
   display: inline-block;
-  font-family: "psregular"; }
+  font-family: "Public Sans"; }
 
 [data-tooltip]:before,
 [data-tooltip]:after {
@@ -15844,7 +15826,7 @@ select {
   padding: 0 0.5rem;
   overflow: hidden;
   vertical-align: top;
-  font-family: "psregular"; }
+  font-family: "Public Sans"; }
 
 .gds-tag--with-button, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice {
   padding-right: 2.75rem; }
@@ -16471,7 +16453,7 @@ select {
   border-color: #f25631; }
 
 .gds-well__text, .gds-snackbar__notification-text {
-  font-family: "psregular";
+  font-family: "Public Sans";
   padding-right: 2.5rem; }
 
 .gds-well__button--dark,
@@ -17363,7 +17345,7 @@ select {
   z-index: 200;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 -0.125rem 0 rgba(0, 0, 0, 0.1);
-  font-family: "psregular";
+  font-family: "Public Sans";
   color: #007591;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -17743,7 +17725,7 @@ select {
     width: 4rem !important; } }
 
 .gds-table {
-  font-family: "psregular";
+  font-family: "Public Sans";
   width: 100%;
   max-width: 100%;
   font-size: 0.8rem;
@@ -18005,7 +17987,7 @@ select {
 .gds-table__sub-section {
   background-color: white;
   box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.5), inset 0px 1px 0px rgba(0, 0, 0, 0.25);
-  font-family: "psbold";
+  font-family: "Public Sans";
   text-transform: uppercase;
   color: #5f5f5f;
   font-size: 0.75rem;
@@ -18760,7 +18742,7 @@ select {
     display: table; }
 
 .gds-form-group__label, .gds-keyboard-shortcuts__label, .gds-balloon__label, .gds-legend__label, .gds-ranker-card__label, .gds-toolbelt__item-label, .gds-anim-timeline__label {
-  font-family: "psbold";
+  font-family: "Public Sans";
   font-size: 0.7rem;
   color: #7a7a7a;
   display: inline-block;
@@ -18801,7 +18783,7 @@ select {
   border-bottom-right-radius: 2px;
   color: white;
   display: block;
-  font-family: "psregular";
+  font-family: "Public Sans";
   font-size: 0.7rem;
   padding: 0.125rem 0.5rem;
   position: relative;
@@ -21064,7 +21046,7 @@ select {
   background-color: white;
   text-shadow: none;
   text-align: left;
-  font-family: "psregular";
+  font-family: "Public Sans";
   z-index: 300; }
   .gds-multi-select__button:hover {
     background-color: white;
@@ -21270,7 +21252,7 @@ select {
 .gds-card__footer,
 .gds-card__header {
   padding: 0.5rem;
-  font-family: "psregular";
+  font-family: "Public Sans";
   font-size: 1rem;
   background-color: #005468;
   color: white;
@@ -23613,7 +23595,7 @@ select {
     border-color: #888888; }
 
 .gds-balloon__description {
-  font-family: "psregular";
+  font-family: "Public Sans";
   color: inherit;
   font-size: 0.8rem; }
 
@@ -24519,7 +24501,7 @@ select {
   background-color: white;
   padding: 1rem;
   border: 1px solid #dbdbdb;
-  font-family: "psregular";
+  font-family: "Public Sans";
   cursor: pointer; }
   .gds-ranker-ensign:before, .gds-ranker-grid__ensign:before {
     content: "";
@@ -24682,7 +24664,7 @@ select {
   color: white; }
 
 .gds-chooser {
-  font-family: "psregular";
+  font-family: "Public Sans";
   background-color: #005468;
   display: flex;
   justify-content: space-between;
@@ -25180,7 +25162,7 @@ select {
   font-size: 2.5rem; }
 
 .gds-slab-nav__item-label, .gds-slab-nav__dropdown-label, .gds-slab-nav__dropdown-menu-link {
-  font-family: "psbold";
+  font-family: "Public Sans";
   font-size: 0.7rem;
   text-transform: uppercase;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
@@ -25406,7 +25388,7 @@ select {
   background-color: transparent !important;
   border: none;
   border-right: 1px solid white;
-  font-family: "psregular";
+  font-family: "Public Sans";
   cursor: pointer;
   border-radius: 0;
   font-size: 0.8rem;
@@ -26400,7 +26382,7 @@ select {
   border-radius: 50%;
   margin: auto;
   background-color: #007591;
-  font-family: "psregular";
+  font-family: "Public Sans";
   font-size: 0.8rem;
   flex-shrink: 0; }
 
@@ -26616,7 +26598,7 @@ select {
   z-index: 200; }
 
 .gds-ranker-card__number {
-  font-family: "psregular";
+  font-family: "Public Sans";
   position: absolute;
   top: 10px;
   left: 10px;
@@ -30188,7 +30170,7 @@ body.-has-persist-nav {
       background-repeat: no-repeat !important;
       background-position: 10px 10px !important; }
   .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices input {
-    font-family: "pslight" !important;
+    font-family: "Public Sans" !important;
     letter-spacing: 0.5px; }
 
 .chosen-container .chosen-drop {
@@ -30332,7 +30314,7 @@ body.-has-persist-nav {
 
 .react-datepicker__day-name {
   color: #fff;
-  font-family: "psbold";
+  font-family: "Public Sans";
   text-transform: uppercase;
   font-size: 0.7rem;
   margin-bottom: 0; }

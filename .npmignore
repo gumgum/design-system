@@ -2,6 +2,7 @@
 .vscode
 .prettierrc.json
 .prettierignore
+.babelrc
 
 # Temp folder used for local testing
 temp
