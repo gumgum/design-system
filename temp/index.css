@@ -11258,7 +11258,7 @@ select {
 .gds-button, .gds-button-group__button, .gds-button-dropdown--in-group .gds-button-dropdown__button, .gds-button-dropdown--in-group .gds-multi-select__button, .gds-button-dropdown__button, .gds-multi-select__button, .gds-corner-content__button, .gds-radio-block__button, .gds-toolbelt__item-input-button, .gds-onboarder__button, .gds-anim-timeline__button--remove, .gds-anim-timeline__button--add, .react-datepicker__today-button, .ReactTable .-pagination .-btn, .DayPicker-TodayButton {
   display: inline-block;
   font-family: "Public Sans";
-  font-weight: normal;
+  font-weight: 300;
   font-size: 1rem;
   padding: 1rem 1.1rem;
   line-height: 1.2;
