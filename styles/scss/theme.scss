@@ -140,7 +140,7 @@ $magentaLight5Color: mix(white, $magentaColor, 50%) !default;
 /* These are the main color assignments for this theme. All component color assignments within this theme are based on this subset of the overall palette. Editing these will have far-reaching effects. */
 //[---------------------]//
 $primaryColor: $blueDark2Color !default;
-$secondaryColor: $goldDark1Color !default;
+$secondaryColor: $darkBlueColor !default;
 $tertiaryColor: $greenColor !default;
 $quaternaryColor: $magentaColor !default;
 $successColor: $greenColor !default;
