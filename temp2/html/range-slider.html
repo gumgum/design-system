@@ -1,0 +1,33 @@
+<div class="gds-layout__column--md-12">
+    <div class="gds-card gds-card--no-height -p-a-2">
+      <h4 class="gds-text__header--sm -m-b-1">Range Inputs</h4>
+        <div class="gds-form-group -m-b-1">
+          <label class="gds-form-group__label" for="range-input-0" >Basic Range Input</label>
+          <input class="gds-form-group__range-input" type="range" id='range-input-0' />
+        </div>
+        <div class="gds-form-group -m-b-1">
+            <label class="gds-form-group__label" for="range-input-1" >Dual Selector Range Input (Requires JS)</label>
+            <div class="gds-form-group__range-input gds-form-group__range-input--dual" id="range-input-1" data-gds-dual-range-slider data-gds-max-value="100" data-gds-min-value="0">
+                <div class="gds-form-group__range-wrapper" data-gds-range-wrapper>
+                    <div class="gds-form-group__range-thumb gds-form-group__range-thumb--dual" data-gds-range-thumb></div>
+                    <div class="gds-form-group__range-thumb gds-form-group__range-thumb--dual" data-gds-range-thumb></div>
+                </div>
+                <div class="gds-form-group__range-track" data-gds-range-track>
+                    <div class="gds-form-group__range-selected" data-gds-range-selected data-gds-range-selected="50" data-gds-range-low="20" data-gds-range-high="70"></div>
+                </div>
+            </div>
+        </div>
+        <div class="gds-form-group -m-b-1">
+            <label class="gds-form-group__label" for="range-input-1" >Dual Selector Range Input With Numbers(Requires JS)</label>
+            <div class="gds-form-group__range-input gds-form-group__range-input--numbers" id="range-input-2" data-gds-dual-range-slider data-gds-max-value="500" data-gds-min-value="50">
+                <div class="gds-form-group__range-wrapper" data-gds-range-wrapper>
+                    <div class="gds-form-group__range-thumb gds-form-group__range-thumb--dual gds-form-group__range-thumb--numbers" data-gds-range-thumb></div>
+                    <div class="gds-form-group__range-thumb gds-form-group__range-thumb--dual gds-form-group__range-thumb--numbers" data-gds-range-thumb></div>
+                </div>
+                <div class="gds-form-group__range-track" data-gds-range-track>
+                    <div class="gds-form-group__range-selected" data-gds-range-selected></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

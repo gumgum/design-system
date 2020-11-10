@@ -25,7 +25,13 @@ module.exports = {
     "watchOptions": {
         "ignoreInitial": true
     },
-    "server": ['temp', 'styles'],
+    "server2": ['temp','temp/index.html', 'temp/**/*.html', 'styles'],
+    "server": {
+        baseDir: ['temp', 'styles'],
+        routes: {
+            '/bower_components': 'bower_components'
+        }
+    },
     "proxy": false,
     "port": 8000,
     "middleware": false,

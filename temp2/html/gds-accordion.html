@@ -1,0 +1,2265 @@
+<div class="gds-layout__column--md-12">
+    <h3 class="gds-text--header-md -m-b-2">Accordion</h3>
+    <hr class="-m-b-3" />
+</div>
+<!-- ******************** -->
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+<section data-component-example>
+<h3 class="gds-text__header--sm -text-bold -m-b-1">Standard Accordion</h3>
+<div class="gds-accordion" id="exampleAccordion" data-gds-accordion>
+    <ul class="gds-accordion-list">
+        <li class="gds-accordion__item" id='exampleAccordionItem-1' data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title" data-gds-accordion-title>Lists<div class="gds-badge">32</div></h4>
+            <i class="gds-accordion__item-icon"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" id='exampleNestedAccordionItem-1' data-gds-accordion-item>
+                    <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                    <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                    <ul class="gds-accordion__child-items">
+                        <li class="gds-accordion__child-item">
+                            <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                        </li>
+                        <li class="gds-accordion__child-item gds-accordion__item" data-gds-accordion-item>
+                            <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                            <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                            <ul class="gds-accordion__child-items">
+                                <li class="gds-accordion__child-item">
+                                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                                </li>
+                                <li class="gds-accordion__child-item">
+                                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+        <li class="gds-accordion__item" id='exampleAccordionItem-2' data-gds-accordion-item data-gds-exampleItem2>
+            <h4 class="gds-accordion__item-title" data-gds-accordion-title>Controls</h4>
+            <i class="gds-accordion__item-icon"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <div class="gds-layout__row -p-a-3">
+                    <form class="gds-form -p-a-1">
+                        <div class="gds-layout__column--md-6">
+                            <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                <label class="gds-form-group__label" for="input-0" data-gds-label>Example Text Input</label>
+                                <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="Enter Text" data-gds-input>
+                            </div>
+                        </div>
+                        <div class="gds-layout__column--md-6">
+                            <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                <label class="gds-form-group__label" for="input-0" data-gds-label>Example Text Input</label>
+                                <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="Enter Text" data-gds-input>
+                            </div>
+                        </div>
+                        <div class="gds-layout__column--md-12">
+                            <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                <label class="gds-form-group__label" for="text-input-0" data-gds-label>Example Text Area</label>
+                                <textarea class="gds-form-group__text-area-input" id="text-input-0" placeholder="Enter Text" data-gds-input></textarea>
+                            </div>
+                        </div>
+                        <div class="gds-layout__column--md-6">
+                            <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                <label class="gds-form-group__label" for="select-input-0" data-gds-label>Basic Select Input</label>
+                                <select class="gds-form-group__select-input" id="select-input-0" data-gds-input>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="gds-layout__column--md-6">
+                            <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                <label class="gds-form-group__label" for="select-input-0" data-gds-label>Basic Select Input</label>
+                                <select class="gds-form-group__select-input" id="select-input-0" data-gds-input>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="gds-layout__column--md-12 -m-b-1">
+                            <button type="button" class="gds-button gds-button--default -float-right" data-feedback="Calculating">Cancel</button>
+                            <button type="button" class="gds-button gds-button--primary -m-r-1 -float-right" data-feedback="Calculating">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </ul>
+        </li>
+        <li class="gds-accordion__item" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title" data-gds-accordion-title>Tables</h4>
+            <i class="gds-accordion__item-icon"></i>
+            <!-- This is a nested list -->
+            <div class="gds-accordion__child-items">
+                <table class="gds-table gds-table--striped">
+                    <thead>
+                        <tr class="gds-table__row">
+                            <th class="gds-table__header">#</th>
+                            <th class="gds-table__header -text-left">First Name</th>
+                            <th class="gds-table__header -text-left">Last Name</th>
+                            <th class="gds-table__header gds-table__header--selected -text-left">Username (selected)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="gds-table__row">
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr class="gds-table__row">
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr class="gds-table__row">
+                            <th scope="row">3</th>
+                            <td>Someone</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr class="gds-table__row">
+                            <th scope="row">4</th>
+                            <td>Someone Else</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </li>
+    </ul>
+</div>
+</section>
+<div class="gds-divider gds-divider--collapsible -m-t-2" data-toggle-sample><span class="gds-divider__label">Toggle Code Sample</span><span class="gds-divider__line"></span><span class="gds-divider__arrow gds-divider__arrow--collapse" data-gds-arrow></span></div>
+<div class="gds-segment gds-segment--collapse" data-sample><div class="gds-container -color-bd-dk-1 -color-bg-dk-2 -color-tx-white"><pre class="-m-t-0 -m-h-4 -m-b-4"><code data-component-code></code></pre></div></div>
+</div>
+
+<!-- ******************** -->
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+<section data-component-example>
+<h3 class="gds-text__header--sm -text-bold -m-b-1">White Accordion</h3>
+<div class="gds-accordion gds-accordion--white" data-gds-accordion>
+    <ul class="gds-accordion-list">
+        <li class="gds-accordion__item" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title" data-gds-accordion-title>Lists<div class="gds-badge">32</div></h4>
+            <i class="gds-accordion__item-icon"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" data-gds-accordion-item>
+                    <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                    <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                    <ul class="gds-accordion__child-items">
+                        <li class="gds-accordion__child-item">
+                            <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                        </li>
+                        <li class="gds-accordion__child-item gds-accordion__item" data-gds-accordion-item>
+                            <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                            <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                            <ul class="gds-accordion__child-items">
+                                <li class="gds-accordion__child-item">
+                                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                                </li>
+                                <li class="gds-accordion__child-item">
+                                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+        <li class="gds-accordion__item" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title" data-gds-accordion-title>Controls</h4>
+            <i class="gds-accordion__item-icon"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <div class="gds-layout__row -p-a-3">
+                    <form class="gds-form -p-a-1">
+                        <div class="gds-layout__column--md-6">
+                            <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                <label class="gds-form-group__label" for="input-0" data-gds-label>Example Text Input</label>
+                                <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="Enter Text" data-gds-input>
+                            </div>
+                        </div>
+                        <div class="gds-layout__column--md-6">
+                            <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                <label class="gds-form-group__label" for="input-0" data-gds-label>Example Text Input</label>
+                                <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="Enter Text" data-gds-input>
+                            </div>
+                        </div>
+                        <div class="gds-layout__column--md-12">
+                            <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                <label class="gds-form-group__label" for="text-input-0" data-gds-label>Example Text Area</label>
+                                <textarea class="gds-form-group__text-area-input" id="text-input-0" placeholder="Enter Text" data-gds-input></textarea>
+                            </div>
+                        </div>
+                        <div class="gds-layout__column--md-6">
+                            <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                <label class="gds-form-group__label" for="select-input-0" data-gds-label>Basic Select Input</label>
+                                <select class="gds-form-group__select-input" id="select-input-0" data-gds-input>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="gds-layout__column--md-6">
+                            <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                <label class="gds-form-group__label" for="select-input-0" data-gds-label>Basic Select Input</label>
+                                <select class="gds-form-group__select-input" id="select-input-0" data-gds-input>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="gds-layout__column--md-12 -m-b-1">
+                            <button type="button" class="gds-button gds-button--default -float-right" data-feedback="Calculating">Cancel</button>
+                            <button type="button" class="gds-button gds-button--primary -m-r-1 -float-right" data-feedback="Calculating">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </ul>
+        </li>
+        <li class="gds-accordion__item" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title" data-gds-accordion-title>Tables</h4>
+            <i class="gds-accordion__item-icon"></i>
+            <!-- This is a nested list -->
+            <div class="gds-accordion__child-items">
+                <table class="gds-table gds-table--striped">
+                    <thead>
+                        <tr class="gds-table__row">
+                            <th class="gds-table__header">#</th>
+                            <th class="gds-table__header -text-left">First Name</th>
+                            <th class="gds-table__header -text-left">Last Name</th>
+                            <th class="gds-table__header gds-table__header--selected -text-left">Username (selected)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="gds-table__row">
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr class="gds-table__row">
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr class="gds-table__row">
+                            <th scope="row">3</th>
+                            <td>Someone</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr class="gds-table__row">
+                            <th scope="row">4</th>
+                            <td>Someone Else</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </li>
+    </ul>
+</div>
+</section>
+<div class="gds-divider gds-divider--collapsible -m-t-2" data-toggle-sample><span class="gds-divider__label">Toggle Code Sample</span><span class="gds-divider__line"></span><span class="gds-divider__arrow gds-divider__arrow--collapse" data-gds-arrow></span></div>
+<div class="gds-segment gds-segment--collapse" data-sample><div class="gds-container -color-bd-dk-1 -color-bg-dk-2 -color-tx-white"><pre class="-m-t-0 -m-h-4 -m-b-4"><code data-component-code></code></pre></div></div>
+</div> 
+
+<!-- ******************** -->
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+  <section data-component-example>
+  <h3 class="gds-text__header--sm -text-bold -m-b-1">White Accordion Secondary</h3>
+  <div class="gds-accordion gds-accordion--white-secondary" data-gds-accordion>
+      <ul class="gds-accordion-list">
+          <li class="gds-accordion__item" data-gds-accordion-item>
+              <h4 class="gds-accordion__item-title" data-gds-accordion-title>Lists<div class="gds-badge">32</div></h4>
+              <i class="gds-accordion__item-icon"></i>
+              <!-- This is a nested list -->
+              <ul class="gds-accordion__child-items">
+                  <li class="gds-accordion__child-item">
+                      <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                  </li>
+                  <li class="gds-accordion__child-item gds-accordion__item" data-gds-accordion-item>
+                      <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                      <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                      <ul class="gds-accordion__child-items">
+                          <li class="gds-accordion__child-item">
+                              <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                          </li>
+                          <li class="gds-accordion__child-item gds-accordion__item" data-gds-accordion-item>
+                              <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                              <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                              <ul class="gds-accordion__child-items">
+                                  <li class="gds-accordion__child-item">
+                                      <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                                  </li>
+                                  <li class="gds-accordion__child-item">
+                                      <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="gds-accordion__child-item">
+                      <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                  </li>
+                  <li class="gds-accordion__child-item">
+                      <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                  </li>
+                  <li class="gds-accordion__child-item">
+                      <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                  </li>
+              </ul>
+          </li>
+          <li class="gds-accordion__item" data-gds-accordion-item>
+              <h4 class="gds-accordion__item-title" data-gds-accordion-title>Controls</h4>
+              <i class="gds-accordion__item-icon"></i>
+              <!-- This is a nested list -->
+              <ul class="gds-accordion__child-items">
+                  <div class="gds-layout__row -p-a-3">
+                      <form class="gds-form -p-a-1">
+                          <div class="gds-layout__column--md-6">
+                              <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                  <label class="gds-form-group__label" for="input-0" data-gds-label>Example Text Input</label>
+                                  <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="Enter Text" data-gds-input>
+                              </div>
+                          </div>
+                          <div class="gds-layout__column--md-6">
+                              <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                  <label class="gds-form-group__label" for="input-0" data-gds-label>Example Text Input</label>
+                                  <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="Enter Text" data-gds-input>
+                              </div>
+                          </div>
+                          <div class="gds-layout__column--md-12">
+                              <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                  <label class="gds-form-group__label" for="text-input-0" data-gds-label>Example Text Area</label>
+                                  <textarea class="gds-form-group__text-area-input" id="text-input-0" placeholder="Enter Text" data-gds-input></textarea>
+                              </div>
+                          </div>
+                          <div class="gds-layout__column--md-6">
+                              <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                  <label class="gds-form-group__label" for="select-input-0" data-gds-label>Basic Select Input</label>
+                                  <select class="gds-form-group__select-input" id="select-input-0" data-gds-input>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="gds-layout__column--md-6">
+                              <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                  <label class="gds-form-group__label" for="select-input-0" data-gds-label>Basic Select Input</label>
+                                  <select class="gds-form-group__select-input" id="select-input-0" data-gds-input>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="gds-layout__column--md-12 -m-b-1">
+                              <button type="button" class="gds-button gds-button--default -float-right" data-feedback="Calculating">Cancel</button>
+                              <button type="button" class="gds-button gds-button--primary -m-r-1 -float-right" data-feedback="Calculating">Add</button>
+                          </div>
+                      </form>
+                  </div>
+              </ul>
+          </li>
+          <li class="gds-accordion__item" data-gds-accordion-item>
+              <h4 class="gds-accordion__item-title" data-gds-accordion-title>Tables</h4>
+              <i class="gds-accordion__item-icon"></i>
+              <!-- This is a nested list -->
+              <div class="gds-accordion__child-items">
+                  <table class="gds-table gds-table--striped">
+                      <thead>
+                          <tr class="gds-table__row">
+                              <th class="gds-table__header">#</th>
+                              <th class="gds-table__header -text-left">First Name</th>
+                              <th class="gds-table__header -text-left">Last Name</th>
+                              <th class="gds-table__header gds-table__header--selected -text-left">Username (selected)</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr class="gds-table__row">
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                          </tr>
+                          <tr class="gds-table__row">
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                          </tr>
+                          <tr class="gds-table__row">
+                              <th scope="row">3</th>
+                              <td>Someone</td>
+                              <td>the Bird</td>
+                              <td>@twitter</td>
+                          </tr>
+                          <tr class="gds-table__row">
+                              <th scope="row">4</th>
+                              <td>Someone Else</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </li>
+      </ul>
+  </div>
+  </section>
+  <div class="gds-divider gds-divider--collapsible -m-t-2" data-toggle-sample><span class="gds-divider__label">Toggle Code Sample</span><span class="gds-divider__line"></span><span class="gds-divider__arrow gds-divider__arrow--collapse" data-gds-arrow></span></div>
+  <div class="gds-segment gds-segment--collapse" data-sample><div class="gds-container -color-bd-dk-1 -color-bg-dk-2 -color-tx-white"><pre class="-m-t-0 -m-h-4 -m-b-4"><code data-component-code></code></pre></div></div>
+  </div> 
+
+  <!-- ******************** -->
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+  <section data-component-example>
+  <h3 class="gds-text__header--sm -text-bold -m-b-1">White Accordion Tertiary</h3>
+  <div class="gds-accordion gds-accordion--white-tertiary" data-gds-accordion>
+      <ul class="gds-accordion-list">
+          <li class="gds-accordion__item" data-gds-accordion-item>
+              <h4 class="gds-accordion__item-title" data-gds-accordion-title>Lists<div class="gds-badge">32</div></h4>
+              <i class="gds-accordion__item-icon"></i>
+              <!-- This is a nested list -->
+              <ul class="gds-accordion__child-items">
+                  <li class="gds-accordion__child-item">
+                      <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                  </li>
+                  <li class="gds-accordion__child-item gds-accordion__item" data-gds-accordion-item>
+                      <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                      <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                      <ul class="gds-accordion__child-items">
+                          <li class="gds-accordion__child-item">
+                              <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                          </li>
+                          <li class="gds-accordion__child-item gds-accordion__item" data-gds-accordion-item>
+                              <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                              <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                              <ul class="gds-accordion__child-items">
+                                  <li class="gds-accordion__child-item">
+                                      <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                                  </li>
+                                  <li class="gds-accordion__child-item">
+                                      <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="gds-accordion__child-item">
+                      <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                  </li>
+                  <li class="gds-accordion__child-item">
+                      <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                  </li>
+                  <li class="gds-accordion__child-item">
+                      <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                  </li>
+              </ul>
+          </li>
+          <li class="gds-accordion__item" data-gds-accordion-item>
+              <h4 class="gds-accordion__item-title" data-gds-accordion-title>Controls</h4>
+              <i class="gds-accordion__item-icon"></i>
+              <!-- This is a nested list -->
+              <ul class="gds-accordion__child-items">
+                  <div class="gds-layout__row -p-a-3">
+                      <form class="gds-form -p-a-1">
+                          <div class="gds-layout__column--md-6">
+                              <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                  <label class="gds-form-group__label" for="input-0" data-gds-label>Example Text Input</label>
+                                  <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="Enter Text" data-gds-input>
+                              </div>
+                          </div>
+                          <div class="gds-layout__column--md-6">
+                              <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                  <label class="gds-form-group__label" for="input-0" data-gds-label>Example Text Input</label>
+                                  <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="Enter Text" data-gds-input>
+                              </div>
+                          </div>
+                          <div class="gds-layout__column--md-12">
+                              <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                  <label class="gds-form-group__label" for="text-input-0" data-gds-label>Example Text Area</label>
+                                  <textarea class="gds-form-group__text-area-input" id="text-input-0" placeholder="Enter Text" data-gds-input></textarea>
+                              </div>
+                          </div>
+                          <div class="gds-layout__column--md-6">
+                              <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                  <label class="gds-form-group__label" for="select-input-0" data-gds-label>Basic Select Input</label>
+                                  <select class="gds-form-group__select-input" id="select-input-0" data-gds-input>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="gds-layout__column--md-6">
+                              <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                  <label class="gds-form-group__label" for="select-input-0" data-gds-label>Basic Select Input</label>
+                                  <select class="gds-form-group__select-input" id="select-input-0" data-gds-input>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="gds-layout__column--md-12 -m-b-1">
+                              <button type="button" class="gds-button gds-button--default -float-right" data-feedback="Calculating">Cancel</button>
+                              <button type="button" class="gds-button gds-button--primary -m-r-1 -float-right" data-feedback="Calculating">Add</button>
+                          </div>
+                      </form>
+                  </div>
+              </ul>
+          </li>
+          <li class="gds-accordion__item" data-gds-accordion-item>
+              <h4 class="gds-accordion__item-title" data-gds-accordion-title>Tables</h4>
+              <i class="gds-accordion__item-icon"></i>
+              <!-- This is a nested list -->
+              <div class="gds-accordion__child-items">
+                  <table class="gds-table gds-table--striped">
+                      <thead>
+                          <tr class="gds-table__row">
+                              <th class="gds-table__header">#</th>
+                              <th class="gds-table__header -text-left">First Name</th>
+                              <th class="gds-table__header -text-left">Last Name</th>
+                              <th class="gds-table__header gds-table__header--selected -text-left">Username (selected)</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr class="gds-table__row">
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                          </tr>
+                          <tr class="gds-table__row">
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                          </tr>
+                          <tr class="gds-table__row">
+                              <th scope="row">3</th>
+                              <td>Someone</td>
+                              <td>the Bird</td>
+                              <td>@twitter</td>
+                          </tr>
+                          <tr class="gds-table__row">
+                              <th scope="row">4</th>
+                              <td>Someone Else</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </li>
+      </ul>
+  </div>
+  </section>
+  <div class="gds-divider gds-divider--collapsible -m-t-2" data-toggle-sample><span class="gds-divider__label">Toggle Code Sample</span><span class="gds-divider__line"></span><span class="gds-divider__arrow gds-divider__arrow--collapse" data-gds-arrow></span></div>
+  <div class="gds-segment gds-segment--collapse" data-sample><div class="gds-container -color-bd-dk-1 -color-bg-dk-2 -color-tx-white"><pre class="-m-t-0 -m-h-4 -m-b-4"><code data-component-code></code></pre></div></div>
+  </div>
+
+<!-- ******************** -->
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+<section class="-p-a-3 -color-bg-dk-2" data-component-example>
+<h3 class="gds-text__header--sm -text-bold -m-b-1">Dark Accordion</h3>
+<div class="gds-card gds-card--dark">
+    <div class='gds-card__block'>
+        <div class="gds-accordion gds-accordion--dark" data-gds-accordion>
+            <ul class="gds-accordion-list">
+                <li class="gds-accordion__item gds-accordion__item--dark" data-gds-accordion-item>
+                    <h4 class="gds-accordion__item-title gds-accordion__item-title--dark" data-gds-accordion-title>Lists<div class="gds-badge">32</div></h4>
+                    <i class="gds-accordion__item-icon"></i>
+                    <!-- This is a nested list -->
+                    <ul class="gds-accordion__child-items gds-accordion__child-items--dark">
+                        <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                            <h4 class="gds-accordion__child-item-title gds-accordion__item-title--dark">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                        </li>
+                        <li class="gds-accordion__child-item gds-accordion__item gds-accordion__child-item--dark" data-gds-accordion-item>
+                            <h4 class="gds-accordion__child-item-title gds-accordion__item-title gds-accordion__item-title--dark" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                            <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                            <ul class="gds-accordion__child-items gds-accordion__child-items--dark">
+                                <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                                    <h4 class="gds-accordion__child-item-title  gds-accordion__item-title--dark">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                                </li>
+                                <li class="gds-accordion__child-item gds-accordion__item gds-accordion__child-item--dark" data-gds-accordion-item>
+                                    <h4 class="gds-accordion__child-item-title gds-accordion__item-title  gds-accordion__item-title--dark" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                                    <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                                    <ul class="gds-accordion__child-items gds-accordion__child-items--dark">
+                                        <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                                            <h4 class="gds-accordion__child-item-title gds-accordion__item-title--dark">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                                        </li>
+                                        <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                                            <h4 class="gds-accordion__child-item-title  gds-accordion__item-title--dark">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                            <h4 class="gds-accordion__child-item-title gds-accordion__item-title--dark">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                        </li>
+                        <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                            <h4 class="gds-accordion__child-item-title gds-accordion__item-title--dark">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                        </li>
+                        <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                            <h4 class="gds-accordion__child-item-title gds-accordion__item-title--dark">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                        </li>
+                    </ul>
+                </li>
+                <li class="gds-accordion__item gds-accordion__item--dark" data-gds-accordion-item>
+                    <h4 class="gds-accordion__item-title gds-accordion__item-title--dark" data-gds-accordion-title>Controls</h4>
+                    <i class="gds-accordion__item-icon"></i>
+                    <!-- This is a nested list -->
+                    <ul class="gds-accordion__child-items gds-accordion__child-items--dark">
+                        <div class="gds-layout__row -p-a-3">
+                            <form class="gds-form -p-a-1">
+                                <div class="gds-layout__column--md-6">
+                                    <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                        <label class="gds-form-group__label" for="input-0" data-gds-label>Example Text Input</label>
+                                        <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="Enter Text" data-gds-input>
+                                    </div>
+                                </div>
+                                <div class="gds-layout__column--md-6">
+                                    <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                        <label class="gds-form-group__label" for="input-0" data-gds-label>Example Text Input</label>
+                                        <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="Enter Text" data-gds-input>
+                                    </div>
+                                </div>
+                                <div class="gds-layout__column--md-12">
+                                    <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                        <label class="gds-form-group__label" for="text-input-0" data-gds-label>Example Text Area</label>
+                                        <textarea class="gds-form-group__text-area-input" id="text-input-0" placeholder="Enter Text" data-gds-input></textarea>
+                                    </div>
+                                </div>
+                                <div class="gds-layout__column--md-6">
+                                    <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                        <label class="gds-form-group__label" for="select-input-0" data-gds-label>Basic Select Input</label>
+                                        <select class="gds-form-group__select-input" id="select-input-0" data-gds-input>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="gds-layout__column--md-6">
+                                    <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                        <label class="gds-form-group__label" for="select-input-0" data-gds-label>Basic Select Input</label>
+                                        <select class="gds-form-group__select-input" id="select-input-0" data-gds-input>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="gds-layout__column--md-12 -m-b-1">
+                                    <button type="button" class="gds-button gds-button--default -float-right" data-feedback="Calculating">Cancel</button>
+                                    <button type="button" class="gds-button gds-button--primary -m-r-1 -float-right" data-feedback="Calculating">Add</button>
+                                </div>
+                            </form>
+                        </div>
+                    </ul>
+                </li>
+                <li class="gds-accordion__item gds-accordion__item--dark" data-gds-accordion-item>
+                    <h4 class="gds-accordion__item-title gds-accordion__item-title--dark" data-gds-accordion-title>Tables</h4>
+                    <i class="gds-accordion__item-icon"></i>
+                    <!-- This is a nested list -->
+                    <div class="gds-accordion__child-items gds-accordion__child-items--dark">
+                        <table class="gds-table gds-table--inverse gds-table--inverse-striped">
+                            <thead>
+                                <tr class="gds-table__row">
+                                    <th class="gds-table__header">#</th>
+                                    <th class="gds-table__header -text-left">First Name</th>
+                                    <th class="gds-table__header -text-left">Last Name</th>
+                                    <th class="gds-table__header gds-table__header--selected -text-left">Username (selected)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="gds-table__row gds-table__row--inverse">
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr class="gds-table__row gds-table__row--inverse">
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr class="gds-table__row gds-table__row--inverse">
+                                    <th scope="row">3</th>
+                                    <td>Someone</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                                <tr class="gds-table__row gds-table__row--inverse">
+                                    <th scope="row">4</th>
+                                    <td>Someone Else</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+<div class="gds-divider gds-divider--collapsible -m-t-2" data-toggle-sample><span class="gds-divider__label">Toggle Code Sample</span><span class="gds-divider__line"></span><span class="gds-divider__arrow gds-divider__arrow--collapse" data-gds-arrow></span></div>
+<div class="gds-segment gds-segment--collapse" data-sample><div class="gds-container -color-bd-dk-1 -color-bg-dk-2 -color-tx-white"><pre class="-m-t-0 -m-h-4 -m-b-4"><code data-component-code></code></pre></div></div>
+</div> 
+
+<!-- ******************** -->
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+  <section class="-p-a-3 -color-bg-dk-2" data-component-example>
+  <h3 class="gds-text__header--sm -text-bold -m-b-1">Dark Accordion Secondary</h3>
+  <div class="gds-card gds-card--dark">
+      <div class='gds-card__block'>
+          <div class="gds-accordion gds-accordion--dark-secondary" data-gds-accordion>
+              <ul class="gds-accordion-list">
+                  <li class="gds-accordion__item gds-accordion__item--dark" data-gds-accordion-item>
+                      <h4 class="gds-accordion__item-title gds-accordion__item-title--dark" data-gds-accordion-title>Lists<div class="gds-badge">32</div></h4>
+                      <i class="gds-accordion__item-icon"></i>
+                      <!-- This is a nested list -->
+                      <ul class="gds-accordion__child-items gds-accordion__child-items--dark">
+                          <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                              <h4 class="gds-accordion__child-item-title gds-accordion__item-title--dark">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                          </li>
+                          <li class="gds-accordion__child-item gds-accordion__item gds-accordion__child-item--dark" data-gds-accordion-item>
+                              <h4 class="gds-accordion__child-item-title gds-accordion__item-title gds-accordion__item-title--dark" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                              <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                              <ul class="gds-accordion__child-items gds-accordion__child-items--dark">
+                                  <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                                      <h4 class="gds-accordion__child-item-title  gds-accordion__item-title--dark">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                                  </li>
+                                  <li class="gds-accordion__child-item gds-accordion__item gds-accordion__child-item--dark" data-gds-accordion-item>
+                                      <h4 class="gds-accordion__child-item-title gds-accordion__item-title  gds-accordion__item-title--dark" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                                      <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                                      <ul class="gds-accordion__child-items gds-accordion__child-items--dark">
+                                          <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                                              <h4 class="gds-accordion__child-item-title gds-accordion__item-title--dark">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                                          </li>
+                                          <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                                              <h4 class="gds-accordion__child-item-title  gds-accordion__item-title--dark">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                                          </li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                              <h4 class="gds-accordion__child-item-title gds-accordion__item-title--dark">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                          </li>
+                          <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                              <h4 class="gds-accordion__child-item-title gds-accordion__item-title--dark">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                          </li>
+                          <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                              <h4 class="gds-accordion__child-item-title gds-accordion__item-title--dark">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="gds-accordion__item gds-accordion__item--dark" data-gds-accordion-item>
+                      <h4 class="gds-accordion__item-title gds-accordion__item-title--dark" data-gds-accordion-title>Controls</h4>
+                      <i class="gds-accordion__item-icon"></i>
+                      <!-- This is a nested list -->
+                      <ul class="gds-accordion__child-items gds-accordion__child-items--dark">
+                          <div class="gds-layout__row -p-a-3">
+                              <form class="gds-form -p-a-1">
+                                  <div class="gds-layout__column--md-6">
+                                      <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                          <label class="gds-form-group__label" for="input-0" data-gds-label>Example Text Input</label>
+                                          <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="Enter Text" data-gds-input>
+                                      </div>
+                                  </div>
+                                  <div class="gds-layout__column--md-6">
+                                      <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                          <label class="gds-form-group__label" for="input-0" data-gds-label>Example Text Input</label>
+                                          <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="Enter Text" data-gds-input>
+                                      </div>
+                                  </div>
+                                  <div class="gds-layout__column--md-12">
+                                      <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                          <label class="gds-form-group__label" for="text-input-0" data-gds-label>Example Text Area</label>
+                                          <textarea class="gds-form-group__text-area-input" id="text-input-0" placeholder="Enter Text" data-gds-input></textarea>
+                                      </div>
+                                  </div>
+                                  <div class="gds-layout__column--md-6">
+                                      <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                          <label class="gds-form-group__label" for="select-input-0" data-gds-label>Basic Select Input</label>
+                                          <select class="gds-form-group__select-input" id="select-input-0" data-gds-input>
+                                              <option>1</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  <div class="gds-layout__column--md-6">
+                                      <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                          <label class="gds-form-group__label" for="select-input-0" data-gds-label>Basic Select Input</label>
+                                          <select class="gds-form-group__select-input" id="select-input-0" data-gds-input>
+                                              <option>1</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  <div class="gds-layout__column--md-12 -m-b-1">
+                                      <button type="button" class="gds-button gds-button--default -float-right" data-feedback="Calculating">Cancel</button>
+                                      <button type="button" class="gds-button gds-button--primary -m-r-1 -float-right" data-feedback="Calculating">Add</button>
+                                  </div>
+                              </form>
+                          </div>
+                      </ul>
+                  </li>
+                  <li class="gds-accordion__item gds-accordion__item--dark" data-gds-accordion-item>
+                      <h4 class="gds-accordion__item-title gds-accordion__item-title--dark" data-gds-accordion-title>Tables</h4>
+                      <i class="gds-accordion__item-icon"></i>
+                      <!-- This is a nested list -->
+                      <div class="gds-accordion__child-items gds-accordion__child-items--dark">
+                          <table class="gds-table gds-table--inverse gds-table--inverse-striped">
+                              <thead>
+                                  <tr class="gds-table__row">
+                                      <th class="gds-table__header">#</th>
+                                      <th class="gds-table__header -text-left">First Name</th>
+                                      <th class="gds-table__header -text-left">Last Name</th>
+                                      <th class="gds-table__header gds-table__header--selected -text-left">Username (selected)</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr class="gds-table__row gds-table__row--inverse">
+                                      <th scope="row">1</th>
+                                      <td>Mark</td>
+                                      <td>Otto</td>
+                                      <td>@mdo</td>
+                                  </tr>
+                                  <tr class="gds-table__row gds-table__row--inverse">
+                                      <th scope="row">2</th>
+                                      <td>Jacob</td>
+                                      <td>Thornton</td>
+                                      <td>@fat</td>
+                                  </tr>
+                                  <tr class="gds-table__row gds-table__row--inverse">
+                                      <th scope="row">3</th>
+                                      <td>Someone</td>
+                                      <td>the Bird</td>
+                                      <td>@twitter</td>
+                                  </tr>
+                                  <tr class="gds-table__row gds-table__row--inverse">
+                                      <th scope="row">4</th>
+                                      <td>Someone Else</td>
+                                      <td>Otto</td>
+                                      <td>@mdo</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  </section>
+  <div class="gds-divider gds-divider--collapsible -m-t-2" data-toggle-sample><span class="gds-divider__label">Toggle Code Sample</span><span class="gds-divider__line"></span><span class="gds-divider__arrow gds-divider__arrow--collapse" data-gds-arrow></span></div>
+  <div class="gds-segment gds-segment--collapse" data-sample><div class="gds-container -color-bd-dk-1 -color-bg-dk-2 -color-tx-white"><pre class="-m-t-0 -m-h-4 -m-b-4"><code data-component-code></code></pre></div></div>
+  </div> 
+
+  <!-- ******************** -->
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+  <section class="-p-a-3 -color-bg-dk-2" data-component-example>
+  <h3 class="gds-text__header--sm -text-bold -m-b-1">Dark Accordion Tertiary</h3>
+  <div class="gds-card gds-card--dark">
+      <div class='gds-card__block'>
+          <div class="gds-accordion gds-accordion--dark-tertiary" data-gds-accordion>
+              <ul class="gds-accordion-list">
+                  <li class="gds-accordion__item gds-accordion__item--dark" data-gds-accordion-item>
+                      <h4 class="gds-accordion__item-title gds-accordion__item-title--dark" data-gds-accordion-title>Lists<div class="gds-badge">32</div></h4>
+                      <i class="gds-accordion__item-icon"></i>
+                      <!-- This is a nested list -->
+                      <ul class="gds-accordion__child-items gds-accordion__child-items--dark">
+                          <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                              <h4 class="gds-accordion__child-item-title gds-accordion__item-title--dark">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                          </li>
+                          <li class="gds-accordion__child-item gds-accordion__item gds-accordion__child-item--dark" data-gds-accordion-item>
+                              <h4 class="gds-accordion__child-item-title gds-accordion__item-title gds-accordion__item-title--dark" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                              <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                              <ul class="gds-accordion__child-items gds-accordion__child-items--dark">
+                                  <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                                      <h4 class="gds-accordion__child-item-title  gds-accordion__item-title--dark">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                                  </li>
+                                  <li class="gds-accordion__child-item gds-accordion__item gds-accordion__child-item--dark" data-gds-accordion-item>
+                                      <h4 class="gds-accordion__child-item-title gds-accordion__item-title  gds-accordion__item-title--dark" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                                      <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                                      <ul class="gds-accordion__child-items gds-accordion__child-items--dark">
+                                          <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                                              <h4 class="gds-accordion__child-item-title gds-accordion__item-title--dark">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                                          </li>
+                                          <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                                              <h4 class="gds-accordion__child-item-title  gds-accordion__item-title--dark">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                                          </li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                              <h4 class="gds-accordion__child-item-title gds-accordion__item-title--dark">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                          </li>
+                          <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                              <h4 class="gds-accordion__child-item-title gds-accordion__item-title--dark">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                          </li>
+                          <li class="gds-accordion__child-item gds-accordion__child-item--dark">
+                              <h4 class="gds-accordion__child-item-title gds-accordion__item-title--dark">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="gds-accordion__item gds-accordion__item--dark" data-gds-accordion-item>
+                      <h4 class="gds-accordion__item-title gds-accordion__item-title--dark" data-gds-accordion-title>Controls</h4>
+                      <i class="gds-accordion__item-icon"></i>
+                      <!-- This is a nested list -->
+                      <ul class="gds-accordion__child-items gds-accordion__child-items--dark">
+                          <div class="gds-layout__row -p-a-3">
+                              <form class="gds-form -p-a-1">
+                                  <div class="gds-layout__column--md-6">
+                                      <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                          <label class="gds-form-group__label" for="input-0" data-gds-label>Example Text Input</label>
+                                          <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="Enter Text" data-gds-input>
+                                      </div>
+                                  </div>
+                                  <div class="gds-layout__column--md-6">
+                                      <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                          <label class="gds-form-group__label" for="input-0" data-gds-label>Example Text Input</label>
+                                          <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="Enter Text" data-gds-input>
+                                      </div>
+                                  </div>
+                                  <div class="gds-layout__column--md-12">
+                                      <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                          <label class="gds-form-group__label" for="text-input-0" data-gds-label>Example Text Area</label>
+                                          <textarea class="gds-form-group__text-area-input" id="text-input-0" placeholder="Enter Text" data-gds-input></textarea>
+                                      </div>
+                                  </div>
+                                  <div class="gds-layout__column--md-6">
+                                      <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                          <label class="gds-form-group__label" for="select-input-0" data-gds-label>Basic Select Input</label>
+                                          <select class="gds-form-group__select-input" id="select-input-0" data-gds-input>
+                                              <option>1</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  <div class="gds-layout__column--md-6">
+                                      <div class="gds-form-group -m-b-1" data-gds-form-group>
+                                          <label class="gds-form-group__label" for="select-input-0" data-gds-label>Basic Select Input</label>
+                                          <select class="gds-form-group__select-input" id="select-input-0" data-gds-input>
+                                              <option>1</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  <div class="gds-layout__column--md-12 -m-b-1">
+                                      <button type="button" class="gds-button gds-button--default -float-right" data-feedback="Calculating">Cancel</button>
+                                      <button type="button" class="gds-button gds-button--primary -m-r-1 -float-right" data-feedback="Calculating">Add</button>
+                                  </div>
+                              </form>
+                          </div>
+                      </ul>
+                  </li>
+                  <li class="gds-accordion__item gds-accordion__item--dark" data-gds-accordion-item>
+                      <h4 class="gds-accordion__item-title gds-accordion__item-title--dark" data-gds-accordion-title>Tables</h4>
+                      <i class="gds-accordion__item-icon"></i>
+                      <!-- This is a nested list -->
+                      <div class="gds-accordion__child-items gds-accordion__child-items--dark">
+                          <table class="gds-table gds-table--inverse gds-table--inverse-striped">
+                              <thead>
+                                  <tr class="gds-table__row">
+                                      <th class="gds-table__header">#</th>
+                                      <th class="gds-table__header -text-left">First Name</th>
+                                      <th class="gds-table__header -text-left">Last Name</th>
+                                      <th class="gds-table__header gds-table__header--selected -text-left">Username (selected)</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr class="gds-table__row gds-table__row--inverse">
+                                      <th scope="row">1</th>
+                                      <td>Mark</td>
+                                      <td>Otto</td>
+                                      <td>@mdo</td>
+                                  </tr>
+                                  <tr class="gds-table__row gds-table__row--inverse">
+                                      <th scope="row">2</th>
+                                      <td>Jacob</td>
+                                      <td>Thornton</td>
+                                      <td>@fat</td>
+                                  </tr>
+                                  <tr class="gds-table__row gds-table__row--inverse">
+                                      <th scope="row">3</th>
+                                      <td>Someone</td>
+                                      <td>the Bird</td>
+                                      <td>@twitter</td>
+                                  </tr>
+                                  <tr class="gds-table__row gds-table__row--inverse">
+                                      <th scope="row">4</th>
+                                      <td>Someone Else</td>
+                                      <td>Otto</td>
+                                      <td>@mdo</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  </section>
+  <div class="gds-divider gds-divider--collapsible -m-t-2" data-toggle-sample><span class="gds-divider__label">Toggle Code Sample</span><span class="gds-divider__line"></span><span class="gds-divider__arrow gds-divider__arrow--collapse" data-gds-arrow></span></div>
+  <div class="gds-segment gds-segment--collapse" data-sample><div class="gds-container -color-bd-dk-1 -color-bg-dk-2 -color-tx-white"><pre class="-m-t-0 -m-h-4 -m-b-4"><code data-component-code></code></pre></div></div>
+  </div>
+
+<!-- ******************** -->
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+<section data-component-example>
+<h3 class="gds-text__header--sm -text-bold -m-b-1">Small Accordion</h3>
+<div class="gds-accordion" data-gds-accordion>
+    <ul class="gds-accordion-list">
+        <li class="gds-accordion__item" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title gds-accordion__item-title--sm" data-gds-accordion-title>Friends<div class="gds-badge">32</div></h4>
+            <i class="gds-accordion__item-icon gds-accordion__item-icon--sm"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items gds-accordion__child-items--sm">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+        <li class="gds-accordion__item" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title gds-accordion__item-title--sm" data-gds-accordion-title>Messages<div class="gds-badge">98</div></h4>
+            <i class="gds-accordion__item-icon gds-accordion__item-icon--sm"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items gds-accordion__child-items--sm">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">Friends<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">Friends<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">Friends<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+        <li class="gds-accordion__item" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title gds-accordion__item-title--sm" data-gds-accordion-title>Upcoming Events<div class="gds-badge">17</div></h4>
+            <i class="gds-accordion__item-icon gds-accordion__item-icon--sm"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items gds-accordion__child-items--sm">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">Monday<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">Tuesday<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title gds-accordion__child-item-title--sm">Wednesday<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</section>
+<div class="gds-divider gds-divider--collapsible -m-t-2" data-toggle-sample><span class="gds-divider__label">Toggle Code Sample</span><span class="gds-divider__line"></span><span class="gds-divider__arrow gds-divider__arrow--collapse" data-gds-arrow></span></div>
+<div class="gds-segment gds-segment--collapse" data-sample><div class="gds-container -color-bd-dk-1 -color-bg-dk-2 -color-tx-white"><pre class="-m-t-0 -m-h-4 -m-b-4"><code data-component-code></code></pre></div></div>
+</div>
+
+<!-- ******************** -->
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+<section data-component-example>
+<h4 class="gds-card__title gds-text--body-md -m-b-2">Complex Accordion Example</h4>
+<div class="gds-accordion" data-gds-accordion>
+    <ul class="gds-accordion-list" style="background-color:transparent;">
+        <!---Primary List Item--->
+        <li class="gds-accordion__item" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title" data-gds-accordion-title>Basic Settings</h4>
+            <i class="gds-accordion__item-icon"></i>
+            <!--Nested Block-->
+            <ul class="gds-accordion__child-items">
+                <!--Nested Block Item-->
+                <li class="gds-accordion__child-item" data-gds-edit-group>
+                    <div class="gds-layout__row">
+                        <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                            <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Unit Title:</h4>
+                        </div>
+                        <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                            <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>Studio AV</h4>
+                            <div class="gds-form-group -m-b-1 gds-layout__hidden-xs-up -p-r-6 -m-r-3 -m-t-2" data-gds-form-group data-gds-edit-value>
+                                <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="" value="Studio AV" data-gds-input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                </li>
+                <li class="gds-accordion__child-item" data-gds-edit-group>
+                    <div class="gds-layout__row">
+                        <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                            <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Package:</h4>
+                        </div>
+                        <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                            <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>AV Studio(5922) (Imps:500,000)</h4>
+                            <div class="gds-form-group -m-b-1 gds-layout__hidden-xs-up -p-r-6 -m-r-3 -m-t-2" data-gds-form-group data-gds-edit-value>
+                                <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="" value="AV Studio(5922) (Imps:500,000)" data-gds-input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                </li>
+                <li class="gds-accordion__child-item" data-gds-edit-group>
+                    <div class="gds-layout__row">
+                        <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                            <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Ad Group:</h4>
+                        </div>
+                        <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                            <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None</h4>
+                            <div class="gds-form-group -m-b-1 gds-layout__hidden-xs-up -p-r-6 -m-r-3 -m-t-2" data-gds-form-group data-gds-edit-value>
+                                <select class="gds-form-group__select-input -m-b-0" id="select-input-0" data-gds-input>
+                                    <option>None</option>
+                                    <option>Group 1</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                </li>
+                <li class="gds-accordion__child-item" data-gds-edit-group>
+                    <div class="gds-layout__row">
+                        <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                            <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Ad Reporting Group:</h4>
+                        </div>
+                        <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                            <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None</h4>
+                            <div class="gds-form-group -m-b-1 gds-layout__hidden-xs-up -p-r-6 -m-r-3 -m-t-2" data-gds-form-group data-gds-edit-value>
+                                <select class="gds-form-group__select-input -m-b-0" id="select-input-0" data-gds-input>
+                                    <option>None</option>
+                                    <option>Group 1</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                </li>
+                <li class="gds-accordion__child-item" data-gds-edit-group>
+                    <div class="gds-layout__row">
+                        <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                            <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Click URL:</h4>
+                        </div>
+                        <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                            <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=20&mc=click&pli=17125848&PluID=0&ord=[timestamp]</h4>
+                            <div class="gds-form-group -m-b-1 gds-layout__hidden-xs-up -p-r-6 -m-r-3 -m-t-2" data-gds-form-group data-gds-edit-value>
+                                <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="" value="https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=20&mc=click&pli=17125848&PluID=0&ord=[timestamp]" data-gds-input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                </li>
+                <li class="gds-accordion__child-item" data-gds-edit-group>
+                    <div class="gds-layout__row">
+                        <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                            <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Ad Unit Type:</h4>
+                        </div>
+                        <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                            <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>In-Image(3)</h4>
+                            <div class="gds-form-group -m-b-1 gds-layout__hidden-xs-up -p-r-6 -m-r-3 -m-t-2" data-gds-form-group data-gds-edit-value>
+                                <select class="gds-form-group__select-input -m-b-0" id="select-input-0" data-gds-input>
+                                    <option>In-Image(3)</option>
+                                    <option>In-Screen(10)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                </li>
+                <li class="gds-accordion__child-item" data-gds-edit-group>
+                    <div class="gds-layout__row">
+                        <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                            <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Start / End:</h4>
+                        </div>
+                        <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                            <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>Indefinite / Indefinite</h4>
+                            <div class=" gds-layout__hidden-xs-up" data-gds-edit-value>
+                                <div class="gds-form-group gds-form-group--inline -m-r-3 -m-t-2" data-gds-form-group>
+                                    <div class="gds-form-group__input-group gds-form-group__input-group--inline">
+                                        <div class="gds-form-group__date-group gds-form-group__date-group--addon">
+                                            <input class="gds-form-group__date-input gds-form-group__date-input--inline" type="text" maxlength="2" id="input-26" placeholder="mm" data-gds-input><span class="gds-form-group__date-divider">/</span>
+                                            <input class="gds-form-group__date-input gds-form-group__date-input--inline" type="text" maxlength="2" id="input-27" placeholder="dd" data-gds-input><span class="gds-form-group__date-divider">/</span>
+                                            <input class="gds-form-group__date-input gds-form-group__date-input--inline" type="text" maxlength="4" id="input-28" placeholder="yyyy" data-gds-input>
+                                        </div>
+                                        <div class="gds-form-group__date-group-addon"><button class="gds-button gds-button--primary gds-form-group__date-group-button"><i class="fa fa-calendar" aria-hidden="true"></i></button></div>
+                                    </div>
+                                </div>
+                                <div class="gds-form-group gds-form-group--inline -p-r-6 -m-r-3 -m-t-2" data-gds-form-group>
+                                    <div class="gds-form-group__input-group gds-form-group__input-group--inline">
+                                        <div class="gds-form-group__date-group gds-form-group__date-group--addon">
+                                            <input class="gds-form-group__date-input gds-form-group__date-input--inline" type="text" maxlength="2" id="input-26" placeholder="mm" data-gds-input><span class="gds-form-group__date-divider">/</span>
+                                            <input class="gds-form-group__date-input gds-form-group__date-input--inline" type="text" maxlength="2" id="input-27" placeholder="dd" data-gds-input><span class="gds-form-group__date-divider">/</span>
+                                            <input class="gds-form-group__date-input gds-form-group__date-input--inline" type="text" maxlength="4" id="input-28" placeholder="yyyy" data-gds-input>
+                                        </div>
+                                        <div class="gds-form-group__date-group-addon"><button class="gds-button gds-button--primary gds-form-group__date-group-button"><i class="fa fa-calendar" aria-hidden="true"></i></button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                </li>
+            </ul>
+        </li>
+        <!---Primary List Item--->
+        <li class="gds-accordion__item" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title" data-gds-accordion-title>Markup Settings</h4>
+            <i class="gds-accordion__item-icon"></i>
+            <ul class="gds-accordion__child-items">
+                <!--Nested Block Item-->
+                <li class="gds-accordion__child-item" data-gds-edit-group>
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Dimensions:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>300×100</h4>
+                        <div class="gds-layout__hidden-xs-up  -p-r-6 -m-r-3" data-gds-edit-value>
+                            <div class="gds-form-group gds-layout__column--xl-5 gds-layout__column--lg-5 gds-layout__column--md-5 gds-layout__column--sm-12 gds-layout__column--xs-12 -p-a-0" data-gds-form-group="">
+                                <div class="gds-form-group__input-group -m-v-2 -m-t-2-sm">
+                                    <input class="gds-form-group__text-input gds-form-group__text-input--addon" type="text" id="input-15" size="4" value="300" placeholder="width" data-gds-input="">
+                                    <div class="gds-form-group__input-group-addon">px</div>
+                                </div>
+                            </div>
+                            <div class="gds-text-bold gds-layout__column--xl-2 gds-layout__column--lg-2 gds-layout__column--md-2 gds-layout__column--sm-12 gds-layout__column--xs-12 -text-center -m-t-3 -m-v-0-sm -p-a-0">×</div>
+                            <div class="gds-form-group gds-layout__column--xl-5 gds-layout__column--lg-5 gds-layout__column--md-5 gds-layout__column--sm-12 gds-layout__column--xs-12 -p-a-0" data-gds-form-group="">
+                                <div class="gds-form-group__input-group -m-v-2 -m-b-2-sm">
+                                    <input class="gds-form-group__text-input gds-form-group__text-input--addon" type="text" id="input-15" size="4" value="100" placeholder="height" data-gds-input="">
+                                    <div class="gds-form-group__input-group-addon">px</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item" data-gds-edit-group>
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Height Multiplier:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>3.5</h4>
+                        <div class="gds-form-group -m-b-1 gds-layout__hidden-xs-up -p-r-6 -m-r-3 -m-t-2" data-gds-form-group data-gds-edit-value>
+                            <input class="gds-form-group__text-input" type="text" id="input-0" placeholder="" value="3.5" data-gds-input>
+                        </div>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item" data-gds-edit-group>
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Page/Image Width:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None to None</h4>
+                        <div class="gds-layout__hidden-xs-up  -p-r-6 -m-r-3" data-gds-edit-value>
+                            <div class="gds-form-group gds-layout__column--xl-5 gds-layout__column--lg-5 gds-layout__column--md-5 gds-layout__column--sm-12 gds-layout__column--xs-12 -p-a-0" data-gds-form-group="">
+                                <div class="gds-form-group__input-group -m-v-2 -m-t-2-sm">
+                                    <input class="gds-form-group__text-input gds-form-group__text-input--addon" type="text" id="input-15" size="4" value="0" placeholder="minimum width" data-gds-input="">
+                                    <div class="gds-form-group__input-group-addon">px</div>
+                                </div>
+                            </div>
+                            <div class="gds-text-bold gds-layout__column--xl-2 gds-layout__column--lg-2 gds-layout__column--md-2 gds-layout__column--sm-12 gds-layout__column--xs-12 -text-center -m-t-3 -m-v-0-sm -p-a-0">to</div>
+                            <div class="gds-form-group gds-layout__column--xl-5 gds-layout__column--lg-5 gds-layout__column--md-5 gds-layout__column--sm-12 gds-layout__column--xs-12 -p-a-0" data-gds-form-group="">
+                                <div class="gds-form-group__input-group -m-v-2 -m-b-2-sm">
+                                    <input class="gds-form-group__text-input gds-form-group__text-input--addon" type="text" id="input-15" size="4" value="0" placeholder="maximum width" data-gds-input="">
+                                    <div class="gds-form-group__input-group-addon">px</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item" data-gds-edit-group>
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Page/Image Height:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None to None</h4>
+                        <div class="gds-layout__hidden-xs-up  -p-r-6 -m-r-3" data-gds-edit-value>
+                            <div class="gds-form-group gds-layout__column--xl-5 gds-layout__column--lg-5 gds-layout__column--md-5 gds-layout__column--sm-12 gds-layout__column--xs-12 -p-a-0" data-gds-form-group="">
+                                <div class="gds-form-group__input-group -m-v-2 -m-t-2-sm">
+                                    <input class="gds-form-group__text-input gds-form-group__text-input--addon" type="text" id="input-15" size="4" value="0" placeholder="minimum width" data-gds-input="">
+                                    <div class="gds-form-group__input-group-addon">px</div>
+                                </div>
+                            </div>
+                            <div class="gds-text-bold gds-layout__column--xl-2 gds-layout__column--lg-2 gds-layout__column--md-2 gds-layout__column--sm-12 gds-layout__column--xs-12 -text-center -m-t-3 -m-v-0-sm -p-a-0">to</div>
+                            <div class="gds-form-group gds-layout__column--xl-5 gds-layout__column--lg-5 gds-layout__column--md-5 gds-layout__column--sm-12 gds-layout__column--xs-12 -p-a-0" data-gds-form-group="">
+                                <div class="gds-form-group__input-group -m-v-2 -m-b-2-sm">
+                                    <input class="gds-form-group__text-input gds-form-group__text-input--addon" type="text" id="input-15" size="4" value="0" placeholder="maximum width" data-gds-input="">
+                                    <div class="gds-form-group__input-group-addon">px</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item" data-gds-edit-group>
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Housing:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>With Info Icon White(30)</h4>
+                        <div class="gds-form-group -m-b-1 gds-layout__hidden-xs-up -p-r-6 -m-r-3 -m-t-2" data-gds-form-group data-gds-edit-value>
+                            <select class="gds-form-group__select-input -m-b-0" id="select-input-0" data-gds-input>
+                                <option>With Info Icon White (30)</option>
+                                <option>Without Info Icon White (20)</option>
+                                <option>With Info Icon Black (14)</option>
+                                <option>Without Info Icon Black (23)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item" data-gds-edit-group>
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Close Button Position:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>Top 19, Right 3</h4>
+                        <div class="gds-layout__hidden-xs-up  -p-r-6 -m-r-3 -m-t-2" data-gds-edit-value>
+                            <div class="gds-form-group gds-layout__column--xl-3 gds-layout__column--lg-3 gds-layout__column--md-3 gds-layout__column--sm-6 gds-layout__column--xs-12 -p-a-0 -m-b-2" data-gds-form-group="">
+                                <select class="gds-form-group__select-input -m-b-0" id="select-input-0" data-gds-input>
+                                    <option>Top</option>
+                                    <option>Bottom</option>
+                                </select>
+                            </div>
+                            <div class="gds-form-group gds-layout__column--xl-3 gds-layout__column--lg-3 gds-layout__column--md-3 gds-layout__column--sm-6 gds-layout__column--xs-12 -p-a-0 -p-r-2 -p-r-0-sm -m-b-2" data-gds-form-group="">
+                                <div class="gds-form-group__input-group">
+                                    <input class="gds-form-group__text-input gds-form-group__text-input--addon" type="text" id="input-15" size="4" value="0" placeholder="maximum width" data-gds-input="">
+                                    <div class="gds-form-group__input-group-addon">px</div>
+                                </div>
+                            </div>
+                            <div class="gds-form-group gds-layout__column--xl-3 gds-layout__column--lg-3 gds-layout__column--md-3 gds-layout__column--sm-6 gds-layout__column--xs-12 -p-a-0 -p-l-2 -p-l-0-sm -m-b-2" data-gds-form-group="">
+                                <select class="gds-form-group__select-input -m-b-0" id="select-input-0" data-gds-input>
+                                    <option>Left</option>
+                                    <option>Right</option>
+                                </select>
+                            </div>
+                            <div class="gds-form-group gds-layout__column--xl-3 gds-layout__column--lg-3 gds-layout__column--md-3 gds-layout__column--sm-6 gds-layout__column--xs-12 -p-a-0 -m-b-2" data-gds-form-group="">
+                                <div class="gds-form-group__input-group">
+                                    <input class="gds-form-group__text-input gds-form-group__text-input--addon" type="text" id="input-15" size="4" value="0" placeholder="maximum width" data-gds-input="">
+                                    <div class="gds-form-group__input-group-addon">px</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item" data-gds-edit-group>
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Attribution Position:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>Top 19, Right 27</h4>
+                        <div class="gds-layout__hidden-xs-up  -p-r-6 -m-r-3 -m-t-2" data-gds-edit-value>
+                            <div class="gds-form-group gds-layout__column--xl-3 gds-layout__column--lg-3 gds-layout__column--md-3 gds-layout__column--sm-6 gds-layout__column--xs-12 -p-a-0 -m-b-2" data-gds-form-group="">
+                                <select class="gds-form-group__select-input -m-b-0" id="select-input-0" data-gds-input>
+                                    <option>Top</option>
+                                    <option>Bottom</option>
+                                </select>
+                            </div>
+                            <div class="gds-form-group gds-layout__column--xl-3 gds-layout__column--lg-3 gds-layout__column--md-3 gds-layout__column--sm-6 gds-layout__column--xs-12 -p-a-0 -p-r-2 -p-r-0-sm -m-b-2" data-gds-form-group="">
+                                <div class="gds-form-group__input-group">
+                                    <input class="gds-form-group__text-input gds-form-group__text-input--addon" type="text" id="input-15" size="4" value="0" placeholder="maximum width" data-gds-input="">
+                                    <div class="gds-form-group__input-group-addon">px</div>
+                                </div>
+                            </div>
+                            <div class="gds-form-group gds-layout__column--xl-3 gds-layout__column--lg-3 gds-layout__column--md-3 gds-layout__column--sm-6 gds-layout__column--xs-12 -p-a-0 -p-l-2 -p-l-0-sm -m-b-2" data-gds-form-group="">
+                                <select class="gds-form-group__select-input -m-b-0" id="select-input-0" data-gds-input>
+                                    <option>Left</option>
+                                    <option>Right</option>
+                                </select>
+                            </div>
+                            <div class="gds-form-group gds-layout__column--xl-3 gds-layout__column--lg-3 gds-layout__column--md-3 gds-layout__column--sm-6 gds-layout__column--xs-12 -p-a-0 -m-b-2" data-gds-form-group="">
+                                <div class="gds-form-group__input-group">
+                                    <input class="gds-form-group__text-input gds-form-group__text-input--addon" type="text" id="input-15" size="4" value="0" placeholder="maximum width" data-gds-input="">
+                                    <div class="gds-form-group__input-group-addon">px</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+            </ul>
+        </li>
+        <li class="gds-accordion__item" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title" data-gds-accordion-title>Financial / Metrics Settings</h4>
+            <i class="gds-accordion__item-icon"></i>
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">RPM / CPM:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>$0.00 / $0.16</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">RPC / CPC:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>$0.00 / $0.00</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">RPV / CPV:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>$0.00 / $0.00</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">DMP:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--info -float-right"><i class="fa fa-fw fa-info" aria-hidden="true"></i></button><button class="gds-button gds-button--xs gds-button--primary -m-r-2"><i class="fa fa-fw fa-plus -m-r-1" aria-hidden="true"></i>Add</button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Weight:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>$100.00</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Goal Type:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>Impressions</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Impressions:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>537500 per Flight</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" data-gds-accordion-item>
+                    <div class="gds-accordion__child-item-expand-wrapper">
+                        <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6" style="cursor: pointer;" data-gds-accordion-title>
+                            <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Flight Segments:</h4>
+                        </div>
+                        <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6" data-gds-accordion-title style="height:100%">
+                            <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">&nbsp;</h4>
+                        </div>
+                        <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                        <div class="-clear-both"></div>
+                    </div>
+                    <ul class="gds-accordion__child-items">
+                        <li class="gds-accordion__child-item">
+                            <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6" style="cursor: pointer;">
+                                <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Segments:</h4>
+                            </div>
+                            <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--primary"><i class="fa fa-fw fa-plus -m-r-1" aria-hidden="true"></i>Add</button></div>
+                            <div class="-clear-both"></div>
+                        </li>
+                        <li class="gds-accordion__child-item gds-accordion__item" data-gds-accordion-item>
+                            <div class="gds-accordion__child-item-expand-wrapper">
+                                <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6" data-gds-accordion-title style="cursor: pointer;">
+                                    <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Segment 1:</h4>
+                                </div>
+                                <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6" data-gds-accordion-title style="cursor: pointer;">
+                                    <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>25% of Flight  /  50% of Impressions</h4>
+                                </div>
+                                <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                                <div class="-clear-both"></div>
+                            </div>
+                            <ul class="gds-accordion__child-items">
+                                <li class="gds-accordion__child-item">
+                                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Flight Percentage:</h4>
+                                    </div>
+                                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>25%</h4>
+                                    </div>
+                                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                                    <div class="-clear-both"></div>
+                                </li>
+                                <li class="gds-accordion__child-item">
+                                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Impression Percentage:</h4>
+                                    </div>
+                                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>75%</h4>
+                                    </div>
+                                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                                    <div class="-clear-both"></div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Delivery Schedule:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>Evenly</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Daily Impression Goal:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>4,881</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Daily Click Goal:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Daily Play Goal:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Daily Video Completion Goal:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+            </ul>
+        </li>
+        <li class="gds-accordion__item" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title" data-gds-accordion-title>AdOps Settings</h4>
+            <i class="gds-accordion__item-icon"></i>
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Status:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>Active</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--toggle gds-button--active -float-right" data-gds-toggle-trigger><i class="fa fa-fw fa-power-off"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Demo:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>False</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Engagements:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Frequency Cap:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" data-gds-accordion-item>
+                    <div class="gds-accordion__child-item-expand-wrapper">
+                        <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6" style="cursor: pointer;" data-gds-accordion-title>
+                            <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Ad Restrictions:</h4>
+                        </div>
+                        <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6" data-gds-accordion-title style="height:100%">
+                            <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">&nbsp;</h4>
+                        </div>
+                        <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                        <div class="-clear-both"></div>
+                    </div>
+                    <ul class="gds-accordion__child-items">
+                        <li class="gds-accordion__child-item">
+                            <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6" style="cursor: pointer;">
+                                <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Restrictions:</h4>
+                            </div>
+                            <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--primary"><i class="fa fa-fw fa-plus -m-r-1" aria-hidden="true"></i>Add</button></div>
+                            <div class="-clear-both"></div>
+                        </li>
+                        <li class="gds-accordion__child-item gds-accordion__item" data-gds-accordion-item>
+                            <div class="gds-accordion__child-item-expand-wrapper">
+                                <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6" data-gds-accordion-title style="cursor: pointer;">
+                                    <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Asset Sequence:</h4>
+                                </div>
+                                <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6" data-gds-accordion-title style="cursor: pointer;">
+                                    <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>Include 1,2</h4>
+                                </div>
+                                <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                                <div class="-clear-both"></div>
+                            </div>
+                            <ul class="gds-accordion__child-items">
+                                <li class="gds-accordion__child-item">
+                                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Type:</h4>
+                                    </div>
+                                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>Include</h4>
+                                    </div>
+                                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                                    <div class="-clear-both"></div>
+                                </li>
+                                <li class="gds-accordion__child-item">
+                                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Values:</h4>
+                                    </div>
+                                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>1, 2</h4>
+                                    </div>
+                                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                                    <div class="-clear-both"></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="gds-accordion__child-item gds-accordion__item" data-gds-accordion-item>
+                            <div class="gds-accordion__child-item-expand-wrapper">
+                                <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6" data-gds-accordion-title style="cursor: pointer;">
+                                    <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Vertical:</h4>
+                                </div>
+                                <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6" data-gds-accordion-title style="cursor: pointer;">
+                                    <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>Include 5 Verticals</h4>
+                                </div>
+                                <i class="gds-accordion__child-item-icon gds-accordion__item-icon"></i>
+                                <div class="-clear-both"></div>
+                            </div>
+                            <ul class="gds-accordion__child-items">
+                                <li class="gds-accordion__child-item">
+                                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Type:</h4>
+                                    </div>
+                                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>Include</h4>
+                                    </div>
+                                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                                    <div class="-clear-both"></div>
+                                </li>
+                                <li class="gds-accordion__child-item">
+                                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Values:</h4>
+                                    </div>
+                                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>5 Selected</h4>
+                                    </div>
+                                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                                    <div class="-clear-both"></div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Publisher Restrictions:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Zone Restrictions:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Safety Percentage:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Vehicle Percentage:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+            </ul>
+        </li>
+        <li class="gds-accordion__item" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title" data-gds-accordion-title>Advanced Settings</h4>
+            <i class="gds-accordion__item-icon"></i>
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Feed:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Jumping:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>False</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Click Filter:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>False</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Frame:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>True</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Pixel Impression Delay:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Min Scale:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>1.00</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <div class="gds-layout__column--xl-3 gds-layout__column--lg-4 gds-layout__column--md-4 gds-layout__column--sm-5 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title gds-text--bold -p-l-3 -p-r-0 -m-t-1 -ellipsis -text-right gds-text--body-sm -text-tr-up">Max CPM:</h4>
+                    </div>
+                    <div class="gds-layout__column--xl-9 gds-layout__column--lg-8 gds-layout__column--md-8 gds-layout__column--sm-7 gds-layout__column--xs-6">
+                        <h4 class="gds-accordion__child-item-title -p-l-3 -p-r-6 -ellipsis" data-gds-saved-value>None</h4>
+                    </div>
+                    <div class="-abs-t-r -m-r-3 -m-t-3"><button class="gds-button gds-button--xs gds-button--danger -float-right" data-gds-edit-toggle><i class="fa fa-fw fa-pencil-square-o"></i></button></div>
+                    <div class="-clear-both"></div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</section>
+<div class="gds-divider gds-divider--collapsible -m-t-2" data-toggle-sample><span class="gds-divider__label">Toggle Code Sample</span><span class="gds-divider__line"></span><span class="gds-divider__arrow gds-divider__arrow--collapse" data-gds-arrow></span></div>
+<div class="gds-segment gds-segment--collapse" data-sample><div class="gds-container -color-bd-dk-1 -color-bg-dk-2 -color-tx-white"><pre class="-m-t-0 -m-h-4 -m-b-4"><code data-component-code></code></pre></div></div>
+</div>
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+<section data-component-example>
+<h3 class="gds-text__header--sm -text-bold -m-b-1">Primary Accordion</h3>
+<div class="gds-accordion" id="exampleAccordion" data-gds-accordion>
+    <ul class="gds-accordion-list">
+        <li class="gds-accordion__item gds-accordion__item--primary" id='exampleAccordionItem-1' data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title gds-accordion__item-title--primary" data-gds-accordion-title>Lists</h4>
+            <i class="gds-accordion__item-icon gds-accordion__item-icon--white"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" id='exampleNestedAccordionItem-1' data-gds-accordion-item>
+                    <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+        <li class="gds-accordion__item gds-accordion__item--primary" id='exampleAccordionItem-2' data-gds-accordion-item data-gds-exampleItem2>
+            <h4 class="gds-accordion__item-title gds-accordion__item-title--primary" data-gds-accordion-title>Controls</h4>
+            <i class="gds-accordion__item-icon gds-accordion__item-icon--white"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" id='exampleNestedAccordionItem-1' data-gds-accordion-item>
+                    <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+        <li class="gds-accordion__item gds-accordion__item--primary" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title gds-accordion__item-title--primary" data-gds-accordion-title>Tables</h4>
+            <i class="gds-accordion__item-icon gds-accordion__item-icon--white"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" id='exampleNestedAccordionItem-1' data-gds-accordion-item>
+                    <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</section>
+<div class="gds-divider gds-divider--collapsible -m-t-2" data-toggle-sample><span class="gds-divider__label">Toggle Code Sample</span><span class="gds-divider__line"></span><span class="gds-divider__arrow gds-divider__arrow--collapse" data-gds-arrow></span></div>
+<div class="gds-segment gds-segment--collapse" data-sample><div class="gds-container -color-bd-dk-1 -color-bg-dk-2 -color-tx-white"><pre class="-m-t-0 -m-h-4 -m-b-4"><code data-component-code></code></pre></div></div>
+</div>
+<!-- ******************** -->
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+<section data-component-example>
+<h3 class="gds-text__header--sm -text-bold -m-b-1">Secondary Accordion</h3>
+<div class="gds-accordion" id="exampleAccordion" data-gds-accordion>
+    <ul class="gds-accordion-list">
+        <li class="gds-accordion__item gds-accordion__item--secondary" id='exampleAccordionItem-1' data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title gds-accordion__item-title--secondary" data-gds-accordion-title>Lists</h4>
+            <i class="gds-accordion__item-icon gds-accordion__item-icon--white"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" id='exampleNestedAccordionItem-1' data-gds-accordion-item>
+                    <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+        <li class="gds-accordion__item gds-accordion__item--secondary" id='exampleAccordionItem-2' data-gds-accordion-item data-gds-exampleItem2>
+            <h4 class="gds-accordion__item-title gds-accordion__item-title--secondary" data-gds-accordion-title>Controls</h4>
+            <i class="gds-accordion__item-icon gds-accordion__item-icon--white"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" id='exampleNestedAccordionItem-1' data-gds-accordion-item>
+                    <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+        <li class="gds-accordion__item gds-accordion__item--secondary" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title gds-accordion__item-title--secondary" data-gds-accordion-title>Tables</h4>
+            <i class="gds-accordion__item-icon gds-accordion__item-icon--white"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" id='exampleNestedAccordionItem-1' data-gds-accordion-item>
+                    <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</section>
+<div class="gds-divider gds-divider--collapsible -m-t-2" data-toggle-sample><span class="gds-divider__label">Toggle Code Sample</span><span class="gds-divider__line"></span><span class="gds-divider__arrow gds-divider__arrow--collapse" data-gds-arrow></span></div>
+<div class="gds-segment gds-segment--collapse" data-sample><div class="gds-container -color-bd-dk-1 -color-bg-dk-2 -color-tx-white"><pre class="-m-t-0 -m-h-4 -m-b-4"><code data-component-code></code></pre></div></div>
+</div>
+<!-- ******************** -->
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+<section data-component-example>
+<h3 class="gds-text__header--sm -text-bold -m-b-1">Tertiary Accordion</h3>
+<div class="gds-accordion" id="exampleAccordion" data-gds-accordion>
+    <ul class="gds-accordion-list">
+        <li class="gds-accordion__item gds-accordion__item--tertiary" id='exampleAccordionItem-1' data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title gds-accordion__item-title--tertiary" data-gds-accordion-title>Lists</h4>
+            <i class="gds-accordion__item-icon gds-accordion__item-icon--white"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" id='exampleNestedAccordionItem-1' data-gds-accordion-item>
+                    <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+        <li class="gds-accordion__item gds-accordion__item--tertiary" id='exampleAccordionItem-2' data-gds-accordion-item data-gds-exampleItem2>
+            <h4 class="gds-accordion__item-title gds-accordion__item-title--tertiary" data-gds-accordion-title>Controls</h4>
+            <i class="gds-accordion__item-icon gds-accordion__item-icon--white"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" id='exampleNestedAccordionItem-1' data-gds-accordion-item>
+                    <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+        <li class="gds-accordion__item gds-accordion__item--tertiary" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title gds-accordion__item-title--tertiary" data-gds-accordion-title>Tables</h4>
+            <i class="gds-accordion__item-icon gds-accordion__item-icon--white"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" id='exampleNestedAccordionItem-1' data-gds-accordion-item>
+                    <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</section>
+<div class="gds-divider gds-divider--collapsible -m-t-2" data-toggle-sample><span class="gds-divider__label">Toggle Code Sample</span><span class="gds-divider__line"></span><span class="gds-divider__arrow gds-divider__arrow--collapse" data-gds-arrow></span></div>
+<div class="gds-segment gds-segment--collapse" data-sample><div class="gds-container -color-bd-dk-1 -color-bg-dk-2 -color-tx-white"><pre class="-m-t-0 -m-h-4 -m-b-4"><code data-component-code></code></pre></div></div>
+</div>
+<!-- ******************** -->
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+<section data-component-example>
+<h3 class="gds-text__header--sm -text-bold -m-b-1">Quaternary Accordion</h3>
+<div class="gds-accordion" id="exampleAccordion" data-gds-accordion>
+    <ul class="gds-accordion-list">
+        <li class="gds-accordion__item gds-accordion__item--quaternary" id='exampleAccordionItem-1' data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title gds-accordion__item-title--quaternary" data-gds-accordion-title>Lists</h4>
+            <i class="gds-accordion__item-icon gds-accordion__item-icon--white"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" id='exampleNestedAccordionItem-1' data-gds-accordion-item>
+                    <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+        <li class="gds-accordion__item gds-accordion__item--quaternary" id='exampleAccordionItem-2' data-gds-accordion-item data-gds-exampleItem2>
+            <h4 class="gds-accordion__item-title gds-accordion__item-title--quaternary" data-gds-accordion-title>Controls</h4>
+            <i class="gds-accordion__item-icon gds-accordion__item-icon--white"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" id='exampleNestedAccordionItem-1' data-gds-accordion-item>
+                    <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+        <li class="gds-accordion__item gds-accordion__item--quaternary" data-gds-accordion-item>
+            <h4 class="gds-accordion__item-title gds-accordion__item-title--quaternary" data-gds-accordion-title>Tables</h4>
+            <i class="gds-accordion__item-icon gds-accordion__item-icon--white"></i>
+            <!-- This is a nested list -->
+            <ul class="gds-accordion__child-items">
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item gds-accordion__item" id='exampleNestedAccordionItem-1' data-gds-accordion-item>
+                    <h4 class="gds-accordion__child-item-title gds-accordion__item-title" data-gds-accordion-title>David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Christopher Clarke<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+                <li class="gds-accordion__child-item">
+                    <h4 class="gds-accordion__child-item-title">David Valdez<div class="gds-badge gds-badge--dark">32</div></h4>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</section>
+<div class="gds-divider gds-divider--collapsible -m-t-2" data-toggle-sample><span class="gds-divider__label">Toggle Code Sample</span><span class="gds-divider__line"></span><span class="gds-divider__arrow gds-divider__arrow--collapse" data-gds-arrow></span></div>
+<div class="gds-segment gds-segment--collapse" data-sample><div class="gds-container -color-bd-dk-1 -color-bg-dk-2 -color-tx-white"><pre class="-m-t-0 -m-h-4 -m-b-4"><code data-component-code></code></pre></div></div>
+</div>
+<!-- ******************** -->

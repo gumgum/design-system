@@ -57,6 +57,7 @@
     "styles:build": "node-sass --include-path scss styles/scss/index.scss  styles/compressed-css/index.css --output-style compressed",
     "styles:watch": "node-sass -w styles/scss -o temp/",
     "browsersync": "browser-sync start --server --files temp/",
-    "browsersync:config": "browser-sync start --config bs-config.js"
+    "browsersync:config": "browser-sync start --config bs-config.js",
+    "sass-test": "sass styles/scss/index.scss build/stylesheets/index.css"
   }
 }
