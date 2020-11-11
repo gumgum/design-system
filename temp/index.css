@@ -14999,13 +14999,13 @@ select {
   background-color: white;
   color: #acacac;
   border: 1px solid #dbdbdb;
-  border-bottom-width: 0.125rem;
   border-radius: 6px;
   margin: 0 0.5rem 0.5rem 0;
   padding: 0 0.5rem;
   overflow: hidden;
   vertical-align: top;
-  font-family: "Public Sans"; }
+  font-family: "Public Sans";
+  font-weight: 200; }
 
 .gds-tag--with-button, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice {
   padding-right: 2.75rem; }
@@ -15019,7 +15019,7 @@ select {
   height: 40px;
   transform: scale(0.7); }
   .gds-tag__button:before, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice .search-choice-close:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -0.25rem;
@@ -15044,7 +15044,7 @@ select {
   text-shadow: 0 0 0.25px #acacac;
   cursor: pointer; }
   .gds-tag__option:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -0.25rem;

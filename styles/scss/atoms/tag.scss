@@ -1,139 +1,138 @@
 .gds-tag {
-    display: inline-block;
-    background-color: white;
-    color: $gg-light-4;
-    border: 1px solid $gg-light-2;
-    border-bottom-width: $cap-size;
-    border-radius: $border-radius;
-    margin: 0 ($unit / 2) ($unit / 2) 0;
-    padding: 0 ($unit / 2);
-    overflow: hidden;
-    vertical-align: top;
-    font-family: $pri-font-regular;
+  display: inline-block;
+  background-color: white;
+  color: $gg-light-4;
+  border: 1px solid $gg-light-2;
+  border-radius: $border-radius;
+  margin: 0 ($unit / 2) ($unit / 2) 0;
+  padding: 0 ($unit / 2);
+  overflow: hidden;
+  vertical-align: top;
+  font-family: $pri-font-regular;
+  font-weight: $font-weight-light;
 }
 
 .gds-tag--with-button {
-    padding-right: ($unit * 2.75);
+  padding-right: ($unit * 2.75);
 }
 
 .gds-tag__button {
-    @extend .gds-button--close-x;
-    position: absolute;
-    top: -6px;
-    right: -3px;
-    background-position: 10px 10px;
-    width: 40px;
-    height: 40px;
-    transform: scale(0.7);
+  @extend .gds-button--close-x;
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  background-position: 10px 10px;
+  width: 40px;
+  height: 40px;
+  transform: scale(0.7);
 
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -($unit / 4);
-        width: 1px;
-        height: 100%;
-        background-color: $gg-light-2;
-        pointer-events: none;
-    }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -($unit / 4);
+    width: 1px;
+    height: 100%;
+    background-color: $gg-light-2;
+    pointer-events: none;
+  }
 }
 
 .gds-tag__option {
-    border: none;
-    text-align: center;
-    background-color: transparent !important;
+  border: none;
+  text-align: center;
+  background-color: transparent !important;
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  background-position: 10px 10px;
+  width: 40px;
+  height: 40px;
+  transform: scale(0.7);
+  font-size: $unit * 1.4;
+  color: inherit;
+  text-shadow: 0 0 0.25px $gg-light-4;
+  cursor: pointer;
+  &:before {
+    content: "";
     position: absolute;
-    top: -6px;
-    right: -3px;
-    background-position: 10px 10px;
-    width: 40px;
-    height: 40px;
-    transform: scale(0.7);
-    font-size: $unit * 1.4;
-    color: inherit;
-    text-shadow: 0 0 0.25px $gg-light-4;
-    cursor: pointer;
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -($unit / 4);
-        width: 1px;
-        height: 100%;
-        background-color: $gg-light-2;
-        pointer-events: none;
-    }
-    &:focus {
-        outline: none;
-    }
-    &:hover {
-        color: $primaryColor;
-        text-shadow: 0 0 0.5px $primaryColor;
-    }
+    top: 0;
+    left: -($unit / 4);
+    width: 1px;
+    height: 100%;
+    background-color: $gg-light-2;
+    pointer-events: none;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: $primaryColor;
+    text-shadow: 0 0 0.5px $primaryColor;
+  }
 }
 
 .gds-tag__button--dark,
 .gds-tag__option--dark {
-    &:before {
-        background-color: $gg-dark-4;
-    }
+  &:before {
+    background-color: $gg-dark-4;
+  }
 }
 
 .gds-tag--sm {
-    font-size: ($unit * 0.8);
+  font-size: ($unit * 0.8);
 }
 
 .gds-tag--xs {
-    font-size: ($unit * 0.7);
+  font-size: ($unit * 0.7);
 }
 
 .gds-tag--with-button-sm {
-    padding-right: ($unit * 2.25);
+  padding-right: ($unit * 2.25);
 }
 
 .gds-tag--with-button-xs {
-    padding-right: ($unit * 2);
+  padding-right: ($unit * 2);
 }
 
 .gds-tag__button--sm {
-    transform: scale(0.6);
-    width: 40px;
-    height: 40px;
-    background-position: 10px 10px;
-    top: -9px;
-    right: -7px;
+  transform: scale(0.6);
+  width: 40px;
+  height: 40px;
+  background-position: 10px 10px;
+  top: -9px;
+  right: -7px;
 }
 
 .gds-tag__button--xs {
-    transform: scale(0.45);
-    width: 40px;
-    height: 40px;
-    background-position: 10px 10px;
-    top: -10px;
-    right: -7px;
+  transform: scale(0.45);
+  width: 40px;
+  height: 40px;
+  background-position: 10px 10px;
+  top: -10px;
+  right: -7px;
 }
 
 .gds-tag__option--sm {
-    width: 34px;
-    height: 40px;
-    background-position: 10px 10px;
-    top: -8px;
-    right: -4px;
-    font-size: 1rem;
+  width: 34px;
+  height: 40px;
+  background-position: 10px 10px;
+  top: -8px;
+  right: -4px;
+  font-size: 1rem;
 }
 
 .gds-tag__option--xs {
-    width: 28px;
-    height: 40px;
-    background-position: 10px 10px;
-    top: -10px;
-    right: -2px;
-    font-size: $unit * 0.7;
+  width: 28px;
+  height: 40px;
+  background-position: 10px 10px;
+  top: -10px;
+  right: -2px;
+  font-size: $unit * 0.7;
 }
 
-
 .gds-tag--dark {
-    border-color: $gg-dark-4;
+  border-color: $gg-dark-4;
 }
 
 .gds-tag__option--primary,
@@ -166,20 +165,19 @@
 .gds-tag__option--darkgold-dark,
 .gds-tag__option--darkgreen-dark,
 .gds-tag__option--darkred-dark {
+  color: white;
+  text-shadow: 0 0 0.5px white;
+  &:before {
+    background-color: rgba($gg-dark-1, 0.15);
+  }
+  &:hover {
     color: white;
     text-shadow: 0 0 0.5px white;
-    &:before {
-        background-color: rgba($gg-dark-1, 0.15);
+    > * {
+      opacity: 0.7;
     }
-    &:hover {
-        color: white;
-        text-shadow: 0 0 0.5px white;
-        > * {
-            opacity: 0.7;
-        }
-    }
+  }
 }
-
 
 .gds-tag--dark,
 .gds-tag--primary-dark,
@@ -197,172 +195,172 @@
 .gds-tag--darkgold-dark,
 .gds-tag--darkgreen-dark,
 .gds-tag--darkred-dark {
-    background-color: $gg-dark-3;
+  background-color: $gg-dark-3;
 }
 
 // Primary tags
 .gds-tag--primary {
-    background-color: $primaryColor;
-    border-color: $primaryDark1Color;
+  background-color: $primaryColor;
+  border-color: $primaryDark1Color;
 }
 
 // Primary Dark tags
 .gds-tag--primary-dark {
-    border-color: $primaryColor;
+  border-color: $primaryColor;
 }
 
 // Primary tags
 .gds-tag--secondary {
-    background-color: $secondaryColor;
-    border-color: $secondaryDark1Color;
+  background-color: $secondaryColor;
+  border-color: $secondaryDark1Color;
 }
 
 // Secondary Dark tags
 .gds-tag--secondary-dark {
-    border-color: $secondaryColor;
+  border-color: $secondaryColor;
 }
 
 // Success tags
 .gds-tag--success {
-    background-color: $successColor;
-    border-color: $successDark1Color;
+  background-color: $successColor;
+  border-color: $successDark1Color;
 }
 
 // Secondary Dark tags
 .gds-tag--success-dark {
-    border-color: $successColor;
+  border-color: $successColor;
 }
 
 // Warning tags
 .gds-tag--warning {
-    background-color: $warningColor;
-    border-color: $warningDark1Color;
+  background-color: $warningColor;
+  border-color: $warningDark1Color;
 }
 
 // Warning Dark tags
 .gds-tag--warning-dark {
-    border-color: $warningColor;
+  border-color: $warningColor;
 }
 
 // Danger tags
 .gds-tag--danger {
-    background-color: $dangerColor;
-    border-color: $dangerDark1Color;
+  background-color: $dangerColor;
+  border-color: $dangerDark1Color;
 }
 
 // Danger Dark tags
 .gds-tag--danger-dark {
-    border-color: $dangerColor;
+  border-color: $dangerColor;
 }
 
 // Blue tags
 .gds-tag--blue {
-    background-color: $blueColor;
-    border-color: $blueDark1Color;
+  background-color: $blueColor;
+  border-color: $blueDark1Color;
 }
 
 // Blue Dark tags
 .gds-tag--blue-dark {
-    border-color: $blueColor;
+  border-color: $blueColor;
 }
 
 // Gold tags
 .gds-tag--gold {
-    background-color: $goldColor;
-    border-color: $goldDark1Color;
+  background-color: $goldColor;
+  border-color: $goldDark1Color;
 }
 
 // Gold Dark tags
 .gds-tag--gold-dark {
-    border-color: $goldColor;
+  border-color: $goldColor;
 }
 
 // Green tags
 .gds-tag--green {
-    background-color: $greenColor;
-    border-color: $greenDark1Color;
+  background-color: $greenColor;
+  border-color: $greenDark1Color;
 }
 
 // Green Dark tags
 .gds-tag--green-dark {
-    border-color: $greenColor;
+  border-color: $greenColor;
 }
 
 // Orange tags
 .gds-tag--orange {
-    background-color: $orangeColor;
-    border-color: $orangeDark1Color;
+  background-color: $orangeColor;
+  border-color: $orangeDark1Color;
 }
 
 // Orange Dark tags
 .gds-tag--orange-dark {
-    border-color: $orangeColor;
+  border-color: $orangeColor;
 }
 
 // Purple tags
 .gds-tag--purple {
-    background-color: $purpleColor;
-    border-color: $purpleDark1Color;
+  background-color: $purpleColor;
+  border-color: $purpleDark1Color;
 }
 
 // Purple Dark tags
 .gds-tag--purple-dark {
-    border-color: $purpleColor;
+  border-color: $purpleColor;
 }
 
 // Red tags
 .gds-tag--red {
-    background-color: $redColor;
-    border-color: $redDark1Color;
+  background-color: $redColor;
+  border-color: $redDark1Color;
 }
 
 // Red Dark tags
 .gds-tag--red-dark {
-    border-color: $redColor;
+  border-color: $redColor;
 }
 
 // Dark Blue tags
 .gds-tag--darkblue {
-    background-color: $darkBlueColor;
-    border-color: $darkBlueDark1Color;
+  background-color: $darkBlueColor;
+  border-color: $darkBlueDark1Color;
 }
 
 // Dark Blue Dark tags
 .gds-tag--darkblue-dark {
-    border-color: $darkBlueColor;
+  border-color: $darkBlueColor;
 }
 
 // Dark Gold tags
 .gds-tag--darkgold {
-    background-color: $darkGoldColor;
-    border-color: $darkGoldDark1Color;
+  background-color: $darkGoldColor;
+  border-color: $darkGoldDark1Color;
 }
 
 // Dark Gold Dark tags
 .gds-tag--darkgold-dark {
-    border-color: $darkGoldColor;
+  border-color: $darkGoldColor;
 }
 
 // Dark Green tags
 .gds-tag--darkgreen {
-    background-color: $darkGreenColor;
-    border-color: $darkGreenDark1Color;
+  background-color: $darkGreenColor;
+  border-color: $darkGreenDark1Color;
 }
 
 // Dark Green Dark tags
 .gds-tag--darkgreen-dark {
-    border-color: $darkGreenColor;
+  border-color: $darkGreenColor;
 }
 
 // Dark Red tags
 .gds-tag--darkred {
-    background-color: $darkRedColor;
-    border-color: $darkRedDark1Color;
+  background-color: $darkRedColor;
+  border-color: $darkRedDark1Color;
 }
 
 // Dark Red Dark tags
 .gds-tag--darkred-dark {
-    border-color: $darkRedColor;
+  border-color: $darkRedColor;
 }
 
 .gds-tag--primary,
@@ -395,112 +393,112 @@
 .gds-tag--darkgreen-dark,
 .gds-tag--darkred,
 .gds-tag--darkred-dark {
-    color: white;
-    text-shadow: 0 0 3px rgba(black, 0.35);
+  color: white;
+  text-shadow: 0 0 3px rgba(black, 0.35);
 }
 
 .gds-tag__button--primary-dark,
 .gds-tag__option--primary-dark {
-    &:before {
-        background-color: $primaryColor;
-    }
+  &:before {
+    background-color: $primaryColor;
+  }
 }
 
 .gds-tag__button--secondary-dark,
-.gds-tag__option--secondary-dark  {
-    &:before {
-        background-color: $secondaryColor;
-    }
+.gds-tag__option--secondary-dark {
+  &:before {
+    background-color: $secondaryColor;
+  }
 }
 
 .gds-tag__button--success-dark,
 .gds-tag__option--success-dark {
-    &:before {
-        background-color: $successColor;
-    }
+  &:before {
+    background-color: $successColor;
+  }
 }
 
 .gds-tag__button--warning-dark,
 .gds-tag__option--warning-dark {
-    &:before {
-        background-color: $warningColor;
-    }
+  &:before {
+    background-color: $warningColor;
+  }
 }
 
 .gds-tag__button--danger-dark,
 .gds-tag__option--danger-dark {
-    &:before {
-        background-color: $dangerColor;
-    }
+  &:before {
+    background-color: $dangerColor;
+  }
 }
 
 .gds-tag__button--blue-dark,
 .gds-tag__option--blue-dark {
-    &:before {
-        background-color: $blueColor;
-    }
+  &:before {
+    background-color: $blueColor;
+  }
 }
 
 .gds-tag__button--gold-dark,
-.gds-tag__option--gold-dark  {
-    &:before {
-        background-color: $goldColor;
-    }
+.gds-tag__option--gold-dark {
+  &:before {
+    background-color: $goldColor;
+  }
 }
 
 .gds-tag__button--green-dark,
 .gds-tag__option--green-dark {
-    &:before {
-        background-color: $greenColor;
-    }
+  &:before {
+    background-color: $greenColor;
+  }
 }
 
 .gds-tag__button--orange-dark,
 .gds-tag__option--orange-dark {
-    &:before {
-        background-color: $orangeColor;
-    }
+  &:before {
+    background-color: $orangeColor;
+  }
 }
 
 .gds-tag__button--purple-dark,
 .gds-tag__option--purple-dark {
-    &:before {
-        background-color: $purpleColor;
-    }
+  &:before {
+    background-color: $purpleColor;
+  }
 }
 .gds-tag__button--red-dark,
 .gds-tag__option--red-dark {
-    &:before {
-        background-color: $redColor;
-    }
+  &:before {
+    background-color: $redColor;
+  }
 }
 
 .gds-tag__button--darkblue-dark,
 .gds-tag__option--darkblue-dark {
-    &:before {
-        background-color: $darkBlueColor;
-    }
+  &:before {
+    background-color: $darkBlueColor;
+  }
 }
 
 .gds-tag__button--darkgold-dark,
 .gds-tag__option--darkgold-dark {
-    &:before {
-        background-color: $darkGoldColor;
-    }
+  &:before {
+    background-color: $darkGoldColor;
+  }
 }
 
 .gds-tag__button--darkgreen-dark,
 .gds-tag__option--darkgreen-dark {
-    &:before {
-        background-color: $darkGreenColor;
-    }
+  &:before {
+    background-color: $darkGreenColor;
+  }
 }
 
 .gds-tag__button--darkred-dark,
-.gds-tag__option--darkred-dark  {
-    &:before {
-        background-color: $darkRedColor;
-    }
+.gds-tag__option--darkred-dark {
+  &:before {
+    background-color: $darkRedColor;
+  }
 }
 .gds-tag__button--primary,
 .gds-tag__button--secondary,
@@ -517,9 +515,9 @@
 .gds-tag__button--darkgold,
 .gds-tag__button--darkgreen,
 .gds-tag__button--darkred {
-    &:before {
-        background-color: rgba($gg-dark-1, 0.15);
-    }
+  &:before {
+    background-color: rgba($gg-dark-1, 0.15);
+  }
 }
 
 .gds-tag__button--primary,
@@ -552,10 +550,10 @@
 .gds-tag__button--darkgreen-dark,
 .gds-tag__button--darkred,
 .gds-tag__button--darkred-dark {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23#{ffffff}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23#{ffffff}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E");
 
-    &:hover {
-        background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23#{ffffff}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E") !important;
-        opacity: 0.7;
-    }
+  &:hover {
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23#{ffffff}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E") !important;
+    opacity: 0.7;
+  }
 }
