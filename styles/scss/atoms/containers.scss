@@ -1,35 +1,35 @@
 .gds-container {
-    background-color: transparent;
-    border: 1px solid $gg-light-4;
-    padding: ($unit / 2);
-    border-radius: $border-radius;
+  background-color: transparent;
+  border: 1px solid $grayLight3Color;
+  padding: ($unit / 2);
+  border-radius: $border-radius;
 }
 
 .gds-container--sm {
-    padding: ($unit / 4);
+  padding: ($unit / 4);
 }
 
 .gds-container--lg {
-    padding: $unit;
+  padding: $unit;
 }
 
 .gds-container--gray {
-    background-color: rgba(black,0.1);
-    border-color: rgba(black,0.25);
+  background-color: rgba(black, 0.1);
+  border-color: rgba(black, 0.25);
 }
 
 .gds-container--primary {
-    border-color: $primaryColor;
+  border-color: $primaryColor;
 }
 
 .gds-container--success {
-    border-color: $successColor;
+  border-color: $successColor;
 }
 
 .gds-container--warning {
-    border-color: $warningColor;
+  border-color: $warningColor;
 }
 
 .gds-container--danger {
-    border-color: $dangerColor;
+  border-color: $dangerColor;
 }

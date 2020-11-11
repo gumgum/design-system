@@ -1,436 +1,461 @@
 [data-tooltip] {
-    position: relative;
-    display: inline-block;
-    font-family: $pri-font-regular;
+  position: relative;
+  display: inline-block;
+  font-family: $pri-font-regular;
+  font-weight: $font-weight-light;
 }
 
 [data-tooltip]:before,
 [data-tooltip]:after {
-    position: absolute;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    visibility: hidden;
-    opacity: 0;
-    z-index: 1000000;
-    pointer-events: none;
-    -webkit-transition: 0.3s ease;
-    -moz-transition: 0.3s ease;
-    transition: 0.3s ease;
-    -webkit-transition-delay: 0ms;
-    -moz-transition-delay: 0ms;
-    transition-delay: 0ms;
+  position: absolute;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1000000;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transition-delay: 0ms;
+  -moz-transition-delay: 0ms;
+  transition-delay: 0ms;
 }
 
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
-    -webkit-transition-delay: 100ms;
-    -moz-transition-delay: 100ms;
-    transition-delay: 100ms;
+  -webkit-transition-delay: 100ms;
+  -moz-transition-delay: 100ms;
+  transition-delay: 100ms;
 }
 
 [data-tooltip]:before {
-    content: '';
-    position: absolute;
-    background: transparent;
-    border: 6px solid transparent;
-    z-index: 1000001;
+  content: "";
+  position: absolute;
+  background: transparent;
+  border: 6px solid transparent;
+  z-index: 1000001;
 }
 
 [data-tooltip]:after {
-    content: attr(data-tooltip);
-    background: $gg-dark-2;
-    color: white;
-    padding: 8px 10px;
-    font-size: 12px;
-    line-height: 12px;
-    white-space: nowrap;
-    border-radius: $border-radius;
+  content: attr(data-tooltip);
+  background: $gg-dark-2;
+  color: white;
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 12px;
+  white-space: nowrap;
+  border-radius: $border-radius;
 }
 
-[data-tooltip='']:before,
-[data-tooltip='']:after {
-    display: none !important;
+[data-tooltip=""]:before,
+[data-tooltip=""]:after {
+  display: none !important;
 }
 
-.gds-card.gds-card--no-bg.-p-a-1.-m-b-1:nth-child(1){
-  background-color:red;
+.gds-card.gds-card--no-bg.-p-a-1.-m-b-1:nth-child(1) {
+  background-color: red;
 }
 
 // Tooltip positioning
 .gds-tooltip--top-left:before {
-    border-top-color: $gg-dark-2;
+  border-top-color: $gg-dark-2;
 }
 
 .gds-tooltip--top-right:before {
-    border-top-color: $gg-dark-2;
+  border-top-color: $gg-dark-2;
 }
 
 .gds-tooltip--top:before {
-    border-top-color: $gg-dark-2;
+  border-top-color: $gg-dark-2;
 }
 
 .gds-tooltip--bottom-left:before {
-    border-bottom-color: $gg-dark-2;
+  border-bottom-color: $gg-dark-2;
 }
 
 .gds-tooltip--bottom-right:before {
-    border-bottom-color: $gg-dark-2;
+  border-bottom-color: $gg-dark-2;
 }
 
 .gds-tooltip--bottom:before {
-    border-bottom-color: $gg-dark-2;
+  border-bottom-color: $gg-dark-2;
 }
 
 .gds-tooltip--left:before {
-    border-left-color: $gg-dark-2;
+  border-left-color: $gg-dark-2;
 }
 
 .gds-tooltip--right:before {
-    border-right-color: $gg-dark-2;
-} 
+  border-right-color: $gg-dark-2;
+}
 
 // Tooltip for block-level elements
 .gds-tooltip--block {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 // Top tooltip
 .gds-tooltip--top:before {
-    margin-bottom: -11px;
+  margin-bottom: -11px;
 }
 
-.gds-tooltip--top:before, .gds-tooltip--top:after {
-    bottom: 100%;
-    left: 50%;
+.gds-tooltip--top:before,
+.gds-tooltip--top:after {
+  bottom: 100%;
+  left: 50%;
 }
 
 .gds-tooltip--top:before {
-    left: calc(50% - 6px);
+  left: calc(50% - 6px);
 }
 
 .gds-tooltip--top:after {
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
-.gds-tooltip--top:hover:before, .gds-tooltip--top:focus:before {
-    -webkit-transform: translateY(-8px);
-    -moz-transform: translateY(-8px);
-    transform: translateY(-8px);
+.gds-tooltip--top:hover:before,
+.gds-tooltip--top:focus:before {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 
-.gds-tooltip--top:hover:after, .gds-tooltip--top:focus:after {
-    -webkit-transform: translateX(-50%) translateY(-8px);
-    -moz-transform: translateX(-50%) translateY(-8px);
-    transform: translateX(-50%) translateY(-8px);
+.gds-tooltip--top:hover:after,
+.gds-tooltip--top:focus:after {
+  -webkit-transform: translateX(-50%) translateY(-8px);
+  -moz-transform: translateX(-50%) translateY(-8px);
+  transform: translateX(-50%) translateY(-8px);
 }
 
 // Bottom tooltip
 .gds-tooltip--bottom:before {
-    margin-top: -11px;
+  margin-top: -11px;
 }
 
-.gds-tooltip--bottom:before, .gds-tooltip--bottom:after {
-    top: 100%;
-    left: 50%;
+.gds-tooltip--bottom:before,
+.gds-tooltip--bottom:after {
+  top: 100%;
+  left: 50%;
 }
 
 .gds-tooltip--bottom:before {
-    left: calc(50% - 6px);
+  left: calc(50% - 6px);
 }
 
 .gds-tooltip--bottom:after {
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
-.gds-tooltip--bottom:hover:before, .gds-tooltip--bottom:focus:before {
-    -webkit-transform: translateY(8px);
-    -moz-transform: translateY(8px);
-    transform: translateY(8px);
+.gds-tooltip--bottom:hover:before,
+.gds-tooltip--bottom:focus:before {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px);
 }
 
-.gds-tooltip--bottom:hover:after, .gds-tooltip--bottom:focus:after {
-    -webkit-transform: translateX(-50%) translateY(8px);
-    -moz-transform: translateX(-50%) translateY(8px);
-    transform: translateX(-50%) translateY(8px);
+.gds-tooltip--bottom:hover:after,
+.gds-tooltip--bottom:focus:after {
+  -webkit-transform: translateX(-50%) translateY(8px);
+  -moz-transform: translateX(-50%) translateY(8px);
+  transform: translateX(-50%) translateY(8px);
 }
 
 // Right tooltip
 .gds-tooltip--right:before {
-    margin-left: -11px;
-    margin-bottom: -6px;
+  margin-left: -11px;
+  margin-bottom: -6px;
 }
 
 .gds-tooltip--right:after {
-    margin-bottom: -14px;
+  margin-bottom: -14px;
 }
 
-.gds-tooltip--right:before, .gds-tooltip--right:after {
-    left: 100%;
-    bottom: 50%;
+.gds-tooltip--right:before,
+.gds-tooltip--right:after {
+  left: 100%;
+  bottom: 50%;
 }
 
-.gds-tooltip--right:hover:before, .gds-tooltip--right:focus:before {
-    -webkit-transform: translateX(8px);
-    -moz-transform: translateX(8px);
-    transform: translateX(8px);
+.gds-tooltip--right:hover:before,
+.gds-tooltip--right:focus:before {
+  -webkit-transform: translateX(8px);
+  -moz-transform: translateX(8px);
+  transform: translateX(8px);
 }
 
-.gds-tooltip--right:hover:after, .gds-tooltip--right:focus:after {
-    -webkit-transform: translateX(8px);
-    -moz-transform: translateX(8px);
-    transform: translateX(8px);
+.gds-tooltip--right:hover:after,
+.gds-tooltip--right:focus:after {
+  -webkit-transform: translateX(8px);
+  -moz-transform: translateX(8px);
+  transform: translateX(8px);
 }
 
 // Left tooltip
 .gds-tooltip--left:before {
-    margin-right: -11px;
-    margin-bottom: -6px;
+  margin-right: -11px;
+  margin-bottom: -6px;
 }
 
 .gds-tooltip--left:after {
-    margin-bottom: -14px;
+  margin-bottom: -14px;
 }
 
-.gds-tooltip--left:before, .gds-tooltip--left:after {
-    right: 100%;
-    bottom: 50%;
+.gds-tooltip--left:before,
+.gds-tooltip--left:after {
+  right: 100%;
+  bottom: 50%;
 }
 
-.gds-tooltip--left:hover:before, .gds-tooltip--left:focus:before {
-    -webkit-transform: translateX(-8px);
-    -moz-transform: translateX(-8px);
-    transform: translateX(-8px);
+.gds-tooltip--left:hover:before,
+.gds-tooltip--left:focus:before {
+  -webkit-transform: translateX(-8px);
+  -moz-transform: translateX(-8px);
+  transform: translateX(-8px);
 }
 
-.gds-tooltip--left:hover:after, .gds-tooltip--left:focus:after {
-    -webkit-transform: translateX(-8px);
-    -moz-transform: translateX(-8px);
-    transform: translateX(-8px);
+.gds-tooltip--left:hover:after,
+.gds-tooltip--left:focus:after {
+  -webkit-transform: translateX(-8px);
+  -moz-transform: translateX(-8px);
+  transform: translateX(-8px);
 }
 
 // Top-left tooltip
 .gds-tooltip--top-left:before {
-    margin-bottom: -11px;
+  margin-bottom: -11px;
 }
 
-.gds-tooltip--top-left:before, .gds-tooltip--top-left:after {
-    bottom: 100%;
-    left: 50%;
+.gds-tooltip--top-left:before,
+.gds-tooltip--top-left:after {
+  bottom: 100%;
+  left: 50%;
 }
 
 .gds-tooltip--top-left:before {
-    left: calc(50% - 6px);
+  left: calc(50% - 6px);
 }
 
 .gds-tooltip--top-left:after {
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 .gds-tooltip--top-left:after {
-    margin-left: 12px;
+  margin-left: 12px;
 }
 
-.gds-tooltip--top-left:hover:before, .gds-tooltip--top-left:focus:before {
-    -webkit-transform: translateY(-8px);
-    -moz-transform: translateY(-8px);
-    transform: translateY(-8px);
+.gds-tooltip--top-left:hover:before,
+.gds-tooltip--top-left:focus:before {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 
-.gds-tooltip--top-left:hover:after, .gds-tooltip--top-left:focus:after {
-    -webkit-transform: translateX(-100%) translateY(-8px);
-    -moz-transform: translateX(-100%) translateY(-8px);
-    transform: translateX(-100%) translateY(-8px);
+.gds-tooltip--top-left:hover:after,
+.gds-tooltip--top-left:focus:after {
+  -webkit-transform: translateX(-100%) translateY(-8px);
+  -moz-transform: translateX(-100%) translateY(-8px);
+  transform: translateX(-100%) translateY(-8px);
 }
 
 // Top-right tooltip
 .gds-tooltip--top-right:before {
-    margin-bottom: -11px;
+  margin-bottom: -11px;
 }
 
-.gds-tooltip--top-right:before, .gds-tooltip--top-right:after {
-    bottom: 100%;
-    left: 50%;
+.gds-tooltip--top-right:before,
+.gds-tooltip--top-right:after {
+  bottom: 100%;
+  left: 50%;
 }
 
 .gds-tooltip--top-right:before {
-    left: calc(50% - 6px);
+  left: calc(50% - 6px);
 }
 
 .gds-tooltip--top-right:after {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
 }
 
 .gds-tooltip--top-right:after {
-    margin-left: -12px;
+  margin-left: -12px;
 }
 
-.gds-tooltip--top-right:hover:before, .gds-tooltip--top-right:focus:before {
-    -webkit-transform: translateY(-8px);
-    -moz-transform: translateY(-8px);
-    transform: translateY(-8px);
+.gds-tooltip--top-right:hover:before,
+.gds-tooltip--top-right:focus:before {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 
-.gds-tooltip--top-right:hover:after, .gds-tooltip--top-right:focus:after {
-    -webkit-transform: translateY(-8px);
-    -moz-transform: translateY(-8px);
-    transform: translateY(-8px);
+.gds-tooltip--top-right:hover:after,
+.gds-tooltip--top-right:focus:after {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 
 // Bottom-left tooltip
 .gds-tooltip--bottom-left:before {
-    margin-top: -11px;
+  margin-top: -11px;
 }
 
-.gds-tooltip--bottom-left:before, .gds-tooltip--bottom-left:after {
-    top: 100%;
-    left: 50%;
+.gds-tooltip--bottom-left:before,
+.gds-tooltip--bottom-left:after {
+  top: 100%;
+  left: 50%;
 }
 
 .gds-tooltip--bottom-left:before {
-    left: calc(50% - 6px);
+  left: calc(50% - 6px);
 }
 
 .gds-tooltip--bottom-left:after {
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 .gds-tooltip--bottom-left:after {
-    margin-left: 12px;
+  margin-left: 12px;
 }
 
-.gds-tooltip--bottom-left:hover:before, .gds-tooltip--bottom-left:focus:before {
-    -webkit-transform: translateY(8px);
-    -moz-transform: translateY(8px);
-    transform: translateY(8px);
+.gds-tooltip--bottom-left:hover:before,
+.gds-tooltip--bottom-left:focus:before {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px);
 }
 
-.gds-tooltip--bottom-left:hover:after, .gds-tooltip--bottom-left:focus:after {
-    -webkit-transform: translateX(-100%) translateY(8px);
-    -moz-transform: translateX(-100%) translateY(8px);
-    transform: translateX(-100%) translateY(8px);
+.gds-tooltip--bottom-left:hover:after,
+.gds-tooltip--bottom-left:focus:after {
+  -webkit-transform: translateX(-100%) translateY(8px);
+  -moz-transform: translateX(-100%) translateY(8px);
+  transform: translateX(-100%) translateY(8px);
 }
 
 // Bottom-right tooltip
 .gds-tooltip--bottom-right:before {
-    margin-top: -11px;
+  margin-top: -11px;
 }
 
-.gds-tooltip--bottom-right:before, .gds-tooltip--bottom-right:after {
-    top: 100%;
-    left: 50%;
+.gds-tooltip--bottom-right:before,
+.gds-tooltip--bottom-right:after {
+  top: 100%;
+  left: 50%;
 }
 
 .gds-tooltip--bottom-right:before {
-    left: calc(50% - 6px);
+  left: calc(50% - 6px);
 }
 
 .gds-tooltip--bottom-right:after {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
 }
 
 .gds-tooltip--bottom-right:after {
-    margin-left: -12px;
+  margin-left: -12px;
 }
 
-.gds-tooltip--bottom-right:hover:before, .gds-tooltip--bottom-right:focus:before {
-    -webkit-transform: translateY(8px);
-    -moz-transform: translateY(8px);
-    transform: translateY(8px);
+.gds-tooltip--bottom-right:hover:before,
+.gds-tooltip--bottom-right:focus:before {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px);
 }
 
-.gds-tooltip--bottom-right:hover:after, .gds-tooltip--bottom-right:focus:after {
-    -webkit-transform: translateY(8px);
-    -moz-transform: translateY(8px);
-    transform: translateY(8px);
+.gds-tooltip--bottom-right:hover:after,
+.gds-tooltip--bottom-right:focus:after {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px);
 }
 
 // Large size
 .gds-tooltip--lg:after {
-    white-space: normal;
-    line-height: 1.4em;
-    font-size: ($unit * 1.5);
-    width: auto;
-    white-space: nowrap;
-    padding-left: $unit;
-    padding-right: $unit;
+  white-space: normal;
+  line-height: 1.4em;
+  font-size: ($unit * 1.5);
+  width: auto;
+  white-space: nowrap;
+  padding-left: $unit;
+  padding-right: $unit;
 }
 
-// Hint themes 
+// Hint themes
 
 [data-tooltip]:after {
-    text-shadow: 0 -1px 0 black;
+  text-shadow: 0 -1px 0 black;
 }
 
 .gds-tooltip--dark:after {
-    background-color: $gg-gray;
-    text-shadow: 0 -1px 0 $gg-dark-2;
+  background-color: $gg-gray;
+  text-shadow: 0 -1px 0 $gg-dark-2;
 }
 
 .gds-tooltip--dark.gds-tooltip--top-left:before {
-    border-top-color: $gg-gray;
+  border-top-color: $gg-gray;
 }
 
 .gds-tooltip--dark.gds-tooltip--top-right:before {
-    border-top-color: $gg-gray;
+  border-top-color: $gg-gray;
 }
 
 .gds-tooltip--dark.gds-tooltip--top:before {
-    border-top-color: $gg-gray;
+  border-top-color: $gg-gray;
 }
 
 .gds-tooltip--dark.gds-tooltip--bottom-left:before {
-    border-bottom-color: $gg-gray;
+  border-bottom-color: $gg-gray;
 }
 
 .gds-tooltip--dark.gds-tooltip--bottom-right:before {
-    border-bottom-color: $gg-gray;
+  border-bottom-color: $gg-gray;
 }
 
 .gds-tooltip--dark.gds-tooltip--bottom:before {
-    border-bottom-color: $gg-gray;
+  border-bottom-color: $gg-gray;
 }
 
 .gds-tooltip--dark.gds-tooltip--left:before {
-    border-left-color: $gg-gray;
+  border-left-color: $gg-gray;
 }
 
 .gds-tooltip--dark.gds-tooltip--right:before {
-    border-right-color: $gg-gray;
-} 
+  border-right-color: $gg-gray;
+}
 
-//Primary 
+//Primary
 .gds-tooltip--primary:after {
   background-color: $primaryColor;
   text-shadow: 0 -1px 0 $primaryColor;
-} 
+}
 
 .gds-tooltip--primary.gds-tooltip--top-left:before {
   border-top-color: $primaryColor;
-} 
+}
 
 .gds-tooltip--primary.gds-tooltip--top-right:before {
   border-top-color: $primaryColor;
-} 
+}
 
 .gds-tooltip--primary.gds-tooltip--top:before {
   border-top-color: $primaryColor;
@@ -450,9 +475,9 @@
 
 .gds-tooltip--primary.gds-tooltip--left:before {
   border-left-color: $primaryColor;
-}  
+}
 
-// secondary 
+// secondary
 .gds-tooltip--secondary:after {
   background-color: $secondaryColor;
   text-shadow: 0 -1px 0 $secondaryColor;
@@ -490,7 +515,7 @@
   border-right-color: $secondaryColor;
 }
 
-//tertiary 
+//tertiary
 .gds-tooltip--tertiary:after {
   background-color: $tertiaryColor;
   text-shadow: 0 -1px 0 $tertiaryColor;
@@ -535,7 +560,7 @@
 }
 
 .gds-tooltip--quaternary.gds-tooltip--top-left:before {
-border-top-color: $quaternaryColor;
+  border-top-color: $quaternaryColor;
 }
 
 .gds-tooltip--quaternary.gds-tooltip--top-left:before {
@@ -568,12 +593,12 @@ border-top-color: $quaternaryColor;
 
 .gds-tooltip--quaternary.gds-tooltip--right:before {
   border-right-color: $quaternaryColor;
-} 
+}
 
-//Danger  
+//Danger
 .gds-tooltip--danger:after {
-    background-color: $dangerColor;
-    text-shadow: 0 -1px 0 $dangerDark1Color;
+  background-color: $dangerColor;
+  text-shadow: 0 -1px 0 $dangerDark1Color;
 }
 
 .gds-tooltip--danger.gds-tooltip--top-left:before {
@@ -581,262 +606,268 @@ border-top-color: $quaternaryColor;
 }
 
 .gds-tooltip--danger.gds-tooltip--top-left:before {
-    border-top-color: $dangerColor;
+  border-top-color: $dangerColor;
 }
 
 .gds-tooltip--danger.gds-tooltip--top-right:before {
-    border-top-color: $dangerColor;
+  border-top-color: $dangerColor;
 }
 
 .gds-tooltip--danger.gds-tooltip--top:before {
-    border-top-color: $dangerColor;
+  border-top-color: $dangerColor;
 }
 
 .gds-tooltip--danger.gds-tooltip--bottom-left:before {
-    border-bottom-color: $dangerColor;
+  border-bottom-color: $dangerColor;
 }
 
 .gds-tooltip--danger.gds-tooltip--bottom-right:before {
-    border-bottom-color: $dangerColor;
+  border-bottom-color: $dangerColor;
 }
 
 .gds-tooltip--danger.gds-tooltip--bottom:before {
-    border-bottom-color: $dangerColor;
+  border-bottom-color: $dangerColor;
 }
 
 .gds-tooltip--danger.gds-tooltip--left:before {
-    border-left-color: $dangerColor;
+  border-left-color: $dangerColor;
 }
 
 .gds-tooltip--danger.gds-tooltip--right:before {
-    border-right-color: $dangerColor;
-} 
+  border-right-color: $dangerColor;
+}
 
 // Warning
 .gds-tooltip--warning:after {
-    background-color: $warningColor;
-    text-shadow: 0 -1px 0 $warningDark1Color;
+  background-color: $warningColor;
+  text-shadow: 0 -1px 0 $warningDark1Color;
 }
 
 .gds-tooltip--warning.gds-tooltip--top-left:before {
-    border-top-color: $warningColor;
+  border-top-color: $warningColor;
 }
 
 .gds-tooltip--warning.gds-tooltip--top-right:before {
-    border-top-color: $warningColor;
+  border-top-color: $warningColor;
 }
 
 .gds-tooltip--warning.gds-tooltip--top:before {
-    border-top-color: $warningColor;
+  border-top-color: $warningColor;
 }
 
 .gds-tooltip--warning.gds-tooltip--bottom-left:before {
-    border-bottom-color: $warningColor;
+  border-bottom-color: $warningColor;
 }
 
 .gds-tooltip--warning.gds-tooltip--bottom-right:before {
-    border-bottom-color: $warningColor;
+  border-bottom-color: $warningColor;
 }
 
 .gds-tooltip--warning.gds-tooltip--bottom:before {
-    border-bottom-color: $warningColor;
+  border-bottom-color: $warningColor;
 }
 
 .gds-tooltip--warning.gds-tooltip--left:before {
-    border-left-color: $warningColor;
+  border-left-color: $warningColor;
 }
 
 .gds-tooltip--warning.gds-tooltip--right:before {
-    border-right-color: $warningColor;
+  border-right-color: $warningColor;
 }
 
 // Info
 .gds-tooltip--info:after {
-    background-color: $infoColor;
-    text-shadow: 0 -1px 0 $infoDark1Color;
+  background-color: $infoColor;
+  text-shadow: 0 -1px 0 $infoDark1Color;
 }
 
 .gds-tooltip--info.gds-tooltip--top-left:before {
-    border-top-color: $infoColor;
+  border-top-color: $infoColor;
 }
 
 .gds-tooltip--info.gds-tooltip--top-right:before {
-    border-top-color: $infoColor;
+  border-top-color: $infoColor;
 }
 
 .gds-tooltip--info.gds-tooltip--top:before {
-    border-top-color: $infoColor;
+  border-top-color: $infoColor;
 }
 
 .gds-tooltip--info.gds-tooltip--bottom-left:before {
-    border-bottom-color: $infoColor;
+  border-bottom-color: $infoColor;
 }
 
 .gds-tooltip--info.gds-tooltip--bottom-right:before {
-    border-bottom-color: $infoColor;
+  border-bottom-color: $infoColor;
 }
 
 .gds-tooltip--info.gds-tooltip--bottom:before {
-    border-bottom-color: $infoColor;
+  border-bottom-color: $infoColor;
 }
 
 .gds-tooltip--info.gds-tooltip--left:before {
-    border-left-color: $infoColor;
+  border-left-color: $infoColor;
 }
 
 .gds-tooltip--info.gds-tooltip--right:before {
-    border-right-color: $infoColor;
+  border-right-color: $infoColor;
 }
 
 // Success
 .gds-tooltip--success:after {
-    background-color: $successColor;
-    text-shadow: 0 -1px 0 $successDark1Color;
+  background-color: $successColor;
+  text-shadow: 0 -1px 0 $successDark1Color;
 }
 
 .gds-tooltip--success.gds-tooltip--top-left:before {
-    border-top-color: $successColor;
+  border-top-color: $successColor;
 }
 
 .gds-tooltip--success.gds-tooltip--top-right:before {
-    border-top-color: $successColor;
+  border-top-color: $successColor;
 }
 
 .gds-tooltip--success.gds-tooltip--top:before {
-    border-top-color: $successColor;
+  border-top-color: $successColor;
 }
 
 .gds-tooltip--success.gds-tooltip--bottom-left:before {
-    border-bottom-color: $successColor;
+  border-bottom-color: $successColor;
 }
 
 .gds-tooltip--success.gds-tooltip--bottom-right:before {
-    border-bottom-color: $successColor;
+  border-bottom-color: $successColor;
 }
 
 .gds-tooltip--success.gds-tooltip--bottom:before {
-    border-bottom-color: $successColor;
+  border-bottom-color: $successColor;
 }
 
 .gds-tooltip--success.gds-tooltip--left:before {
-    border-left-color: $successColor;
+  border-left-color: $successColor;
 }
 
 .gds-tooltip--success.gds-tooltip--right:before {
-    border-right-color: $successColor;
+  border-right-color: $successColor;
 }
 
 // Hint always
-.gds-tooltip--always:after, .gds-tooltip--always:before {
-    opacity: 1;
-    visibility: visible;
+.gds-tooltip--always:after,
+.gds-tooltip--always:before {
+  opacity: 1;
+  visibility: visible;
 }
 
 .gds-tooltip--always.gds-tooltip--top:before {
-    -webkit-transform: translateY(-8px);
-    -moz-transform: translateY(-8px);
-    transform: translateY(-8px);
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 
 .gds-tooltip--always.gds-tooltip--top:after {
-    -webkit-transform: translateX(-50%) translateY(-8px);
-    -moz-transform: translateX(-50%) translateY(-8px);
-    transform: translateX(-50%) translateY(-8px);
+  -webkit-transform: translateX(-50%) translateY(-8px);
+  -moz-transform: translateX(-50%) translateY(-8px);
+  transform: translateX(-50%) translateY(-8px);
 }
 
 .gds-tooltip--always.gds-tooltip--top-left:before {
-    -webkit-transform: translateY(-8px);
-    -moz-transform: translateY(-8px);
-    transform: translateY(-8px);
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 
 .gds-tooltip--always.gds-tooltip--top-left:after {
-    -webkit-transform: translateX(-100%) translateY(-8px);
-    -moz-transform: translateX(-100%) translateY(-8px);
-    transform: translateX(-100%) translateY(-8px);
+  -webkit-transform: translateX(-100%) translateY(-8px);
+  -moz-transform: translateX(-100%) translateY(-8px);
+  transform: translateX(-100%) translateY(-8px);
 }
 
 .gds-tooltip--always.gds-tooltip--top-right:before {
-    -webkit-transform: translateY(-8px);
-    -moz-transform: translateY(-8px);
-    transform: translateY(-8px);
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 
 .gds-tooltip--always.gds-tooltip--top-right:after {
-    -webkit-transform: translateY(-8px);
-    -moz-transform: translateY(-8px);
-    transform: translateY(-8px);
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 
 .gds-tooltip--always.gds-tooltip--bottom:before {
-    -webkit-transform: translateY(8px);
-    -moz-transform: translateY(8px);
-    transform: translateY(8px);
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px);
 }
 
 .gds-tooltip--always.gds-tooltip--bottom:after {
-    -webkit-transform: translateX(-50%) translateY(8px);
-    -moz-transform: translateX(-50%) translateY(8px);
-    transform: translateX(-50%) translateY(8px);
+  -webkit-transform: translateX(-50%) translateY(8px);
+  -moz-transform: translateX(-50%) translateY(8px);
+  transform: translateX(-50%) translateY(8px);
 }
 
 .gds-tooltip--always.gds-tooltip--bottom-left:before {
-    -webkit-transform: translateY(8px);
-    -moz-transform: translateY(8px);
-    transform: translateY(8px);
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px);
 }
 
 .gds-tooltip--always.gds-tooltip--bottom-left:after {
-    -webkit-transform: translateX(-100%) translateY(8px);
-    -moz-transform: translateX(-100%) translateY(8px);
-    transform: translateX(-100%) translateY(8px);
+  -webkit-transform: translateX(-100%) translateY(8px);
+  -moz-transform: translateX(-100%) translateY(8px);
+  transform: translateX(-100%) translateY(8px);
 }
 
 .gds-tooltip--always.gds-tooltip--bottom-right:before {
-    -webkit-transform: translateY(8px);
-    -moz-transform: translateY(8px);
-    transform: translateY(8px);
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px);
 }
 
 .gds-tooltip--always.gds-tooltip--bottom-right:after {
-    -webkit-transform: translateY(8px);
-    -moz-transform: translateY(8px);
-    transform: translateY(8px);
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px);
 }
 
 .gds-tooltip--always.gds-tooltip--left:before {
-    -webkit-transform: translateX(-8px);
-    -moz-transform: translateX(-8px);
-    transform: translateX(-8px);
+  -webkit-transform: translateX(-8px);
+  -moz-transform: translateX(-8px);
+  transform: translateX(-8px);
 }
 
 .gds-tooltip--always.gds-tooltip--left:after {
-    -webkit-transform: translateX(-8px);
-    -moz-transform: translateX(-8px);
-    transform: translateX(-8px);
+  -webkit-transform: translateX(-8px);
+  -moz-transform: translateX(-8px);
+  transform: translateX(-8px);
 }
 
 .gds-tooltip--always.gds-tooltip--right:before {
-    -webkit-transform: translateX(8px);
-    -moz-transform: translateX(8px);
-    transform: translateX(8px);
+  -webkit-transform: translateX(8px);
+  -moz-transform: translateX(8px);
+  transform: translateX(8px);
 }
 
 .gds-tooltip--always.gds-tooltip--right:after {
-    -webkit-transform: translateX(8px);
-    -moz-transform: translateX(8px);
-    transform: translateX(8px);
+  -webkit-transform: translateX(8px);
+  -moz-transform: translateX(8px);
+  transform: translateX(8px);
 }
 
 // Hint effects
-.gds-tooltip--no-animate:before, .gds-tooltip--no-animate:after {
-    -webkit-transition-duration: 0ms;
-    -moz-transition-duration: 0ms;
-    transition-duration: 0ms;
+.gds-tooltip--no-animate:before,
+.gds-tooltip--no-animate:after {
+  -webkit-transition-duration: 0ms;
+  -moz-transition-duration: 0ms;
+  transition-duration: 0ms;
 }
 
-.gds-tooltip--bounce:before, .gds-tooltip--bounce:after {
-    -webkit-transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
-    -moz-transition: opacity 0.3s ease, visibility 0.3s ease, -moz-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+.gds-tooltip--bounce:before,
+.gds-tooltip--bounce:after {
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease,
+    -webkit-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -moz-transition: opacity 0.3s ease, visibility 0.3s ease,
+    -moz-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  transition: opacity 0.3s ease, visibility 0.3s ease,
+    transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
 }

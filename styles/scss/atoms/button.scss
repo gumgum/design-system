@@ -173,8 +173,8 @@
 
 .gds-button {
   display: inline-block;
-  font-family: $pri-font-regular;
-  font-weight: 300;
+  font-family: $pri-font;
+  font-weight: $font-weight-normal;
   font-size: $btn-font-size-normal;
   padding: $btn-padding-normal;
   line-height: 1.2;
@@ -189,41 +189,13 @@
   border: none;
   text-rendering: optimizeLegibility;
   letter-spacing: 0.03em;
-  //   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
   text-transform: none;
   overflow: visible;
   color: white;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
-  @include backgroundGradient(
-    $primaryLight2Color,
-    $primaryDark2Color,
-    "default"
-  );
   @include no-select();
   @include transition-ease-out(all, 500ms);
-
-  &:hover {
-    @include backgroundGradient(
-      $primaryLight2Color,
-      $primaryDark2Color,
-      "hover"
-    );
-  }
-
-  &:focus {
-    outline: none;
-    @include activeShadow($primaryLight4Color);
-  }
-
-  &:active {
-    @include backgroundGradient(
-      $primaryLight2Color,
-      $primaryDark2Color,
-      "active"
-    );
-    @include activeShadow($primaryLight4Color);
-  }
 
   > .fa {
     vertical-align: middle;
@@ -276,7 +248,9 @@
 
 // Plans to deprecate in 2.0
 .gds-button--default,
-.gds-button--gray {
+.gds-button--gray,
+.gds-circular-button--gray,
+.gds-circular-button--default {
   color: white;
   text-shadow: none;
   @include backgroundGradient($grayLight3Color, $grayLight4Color, "default");
@@ -299,11 +273,13 @@
 }
 
 // Button toggle
-.gds-button--dark-toggle {
+.gds-button--dark-toggle,
+.gds-circular-button--dark-toggle {
   @extend .gds-button--dark;
   color: $gg-light-4;
   &:hover,
-  &.gds-button--active {
+  &.gds-button--active,
+  &.gds-circular-button--active {
     @extend .gds-button--primary;
     color: white;
   }
@@ -318,7 +294,8 @@
   //height: $input-height-md;
 }
 
-.gds-button--outline {
+.gds-button--outline,
+.gds-circular-button--outline {
   color: $primaryColor;
   @include defaultShadows($gg-light-2, black, $primaryLight2Color, "true");
   @include backgroundGradient(transparent, transparent, "default");
@@ -346,7 +323,8 @@
   }
 }
 
-.gds-button--white {
+.gds-button--white,
+.gds-circular-button--white {
   color: #ffffff;
   @include defaultShadows(#ffffff, black, $primaryLight2Color, "true");
   @include backgroundGradient(transparent, transparent, "default");
@@ -380,7 +358,8 @@
 }
 
 // Button toggle
-.gds-button--toggle {
+.gds-button--toggle,
+.gds-circular-button--toggle {
   @extend .gds-button--gray;
 
   &.gds-button--active {
@@ -398,7 +377,8 @@
 }
 
 // Primary buttons
-.gds-button--primary {
+.gds-button--primary,
+.gds-circular-button--primary {
   @include backgroundGradient(
     $primaryLight2Color,
     $primaryDark2Color,
@@ -428,7 +408,8 @@
 }
 
 // Secondary buttons
-.gds-button--secondary {
+.gds-button--secondary,
+.gds-circular-button--secondary {
   @include backgroundGradient(
     $secondaryLight2Color,
     $secondaryDark2Color,
@@ -458,7 +439,8 @@
 }
 
 // Tertiary buttons
-.gds-button--tertiary {
+.gds-button--tertiary,
+.gds-circular-button--tertiary {
   @include backgroundGradient(
     $tertiaryLight2Color,
     $tertiaryDark2Color,
@@ -488,7 +470,8 @@
 }
 
 // Success buttons
-.gds-button--success {
+.gds-button--success,
+.gds-circular-button--success {
   @include backgroundGradient(
     $successLight2Color,
     $successDark2Color,
@@ -518,7 +501,8 @@
 }
 
 // Danger buttons
-.gds-button--danger {
+.gds-button--danger,
+.gds-circular-button--danger {
   @include backgroundGradient($dangerLight2Color, $dangerDark2Color, "default");
   &:hover {
     @include backgroundGradient($dangerLight2Color, $dangerDark2Color, "hover");
@@ -540,7 +524,8 @@
 }
 
 // Warning buttons
-.gds-button--warning {
+.gds-button--warning,
+.gds-circular-button--warning {
   color: $grayDark3Color;
   @include backgroundGradient(
     $warningLight2Color,
@@ -571,7 +556,8 @@
 }
 
 // Info buttons
-.gds-button--info {
+.gds-button--info,
+.gds-circular-button--info {
   @include backgroundGradient($infoLight2Color, $infoDark2Color, "default");
   &:hover {
     @include backgroundGradient($infoLight2Color, $infoDark2Color, "hover");
@@ -588,13 +574,15 @@
   }
 }
 
-.gds-button--dark {
+.gds-button--dark,
+.gds-circular-button--dark {
   color: $primaryLight3Color;
   @extend .gds-button--outline;
   background-color: rgba($primaryDark1Color, 0.1);
 }
 
-.gds-button--dark-primary {
+.gds-button--dark-primary,
+.gds-circular-button--dark-primary {
   color: $primaryLight3Color;
   @extend .gds-button--dark;
   @include defaultShadows($primaryColor, black, $primaryLight2Color, "true");
@@ -628,7 +616,8 @@
   }
 }
 
-.gds-button--dark-secondary {
+.gds-button--dark-secondary,
+.gds-circular-button--dark-secondary {
   color: $secondaryLight3Color;
   background-color: rgba($secondaryDark1Color, 0.1);
   @extend .gds-button--dark;
@@ -673,7 +662,8 @@
   }
 }
 
-.gds-button--dark-tertiary {
+.gds-button--dark-tertiary,
+.gds-circular-button--dark-tertiary {
   color: $tertiaryLight3Color;
   @extend .gds-button--dark;
   background-color: rgba($tertiaryDark1Color, 0.1);
@@ -708,7 +698,8 @@
   }
 }
 
-.gds-button--dark-success {
+.gds-button--dark-success,
+.gds-circular-button--dark-success {
   color: $successLight3Color;
   @extend .gds-button--dark;
   background-color: rgba($successDark1Color, 0.1);
@@ -743,7 +734,8 @@
   }
 }
 
-.gds-button--dark-warning {
+.gds-button--dark-warning,
+.gds-circular-button--dark-warning {
   color: $warningLight3Color;
   @extend .gds-button--dark;
   background-color: rgba($warningDark1Color, 0.1);
@@ -778,7 +770,8 @@
   }
 }
 
-.gds-button--dark-danger {
+.gds-button--dark-danger,
+.gds-circular-button--dark-danger {
   color: $dangerLight3Color;
   @extend .gds-button--dark;
   background-color: rgba($dangerDark1Color, 0.1);
@@ -813,7 +806,8 @@
   }
 }
 
-.gds-button--dark-info {
+.gds-button--dark-info,
+.gds-circular-button--dark-info {
   color: $infoLight3Color;
   @extend .gds-button--dark;
   background-color: rgba($infoDark1Color, 0.1);

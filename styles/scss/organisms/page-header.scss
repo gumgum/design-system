@@ -101,20 +101,11 @@
   transform: translateX(0);
   width: 100%;
   height: auto;
-  color: white;
+  color: $primaryDark2Color;
   padding: 0;
   z-index: $z-index-7;
-  border-bottom: 1px solid white;
-  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid $grayLight2Color;
   @include transition-ease-out(all, 250ms);
-
-  &:hover {
-    box-shadow: 0 ($unit / 2) $unit rgba(0, 0, 0, 0.15);
-
-    .gds-page-header__product-bar {
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    }
-  }
 }
 
 .gds-page-header--dark {
@@ -130,13 +121,12 @@
 
 .gds-page-header__product-bar {
   position: relative;
-  background-color: $pageHeaderPrimaryBackgroundColor;
+  background-color: #ffffff;
   width: 100%;
   padding: ($unit / 2);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
   z-index: $z-index-2;
   overflow: hidden;
-  border-bottom: $cap-size solid $pageHeaderUnderlineColor;
+  border-bottom: 1px solid $grayLight2Color;
   @include transition-ease-out(all, 250ms);
   height: 41px;
   display: flex;
@@ -176,6 +166,7 @@
   font-family: $sec-font-bold;
   font-weight: $font-weight-bolder;
   line-height: $unit;
+  color: $primaryDark5Color;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -224,7 +215,6 @@
 
 .gds-page-header__primary-nav {
   float: left;
-  display: inline-block;
   cursor: pointer;
   padding: ($unit * 0.5);
   overflow: hidden;
@@ -287,7 +277,7 @@
 
   &:before {
     content: "";
-    height: calc(100% + 5px);
+    height: calc(100% + 3px);
     width: 1px;
     background-color: rgba($gg-light-2, 0.75);
     position: absolute;

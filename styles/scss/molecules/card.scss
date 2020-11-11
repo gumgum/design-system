@@ -1,328 +1,328 @@
 $card-border-radius: $border-radius;
 
 .gds-card {
-    display: block;
-    position:relative;
-    margin-bottom: ($unit * 0.75);
-    border-radius: $border-radius;
-    background-color: white;
-    border: 1px solid $gg-light-2;
-    color: $gg-dark-4;
-    box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.1);
-    @include transition-back(all, 250ms);
+  display: block;
+  position: relative;
+  margin-bottom: ($unit * 0.75);
+  border-radius: $border-radius;
+  background-color: white;
+  border: 1px solid $gg-light-2;
+  color: $gg-dark-4;
+  @include transition-back(all, 250ms);
 
-    &.active {
-        box-shadow: $ds-nd-3, inset 0 0 ($unit * 2.5) rgba(0,0,0,0.05), inset 0 0 1px rgba($primaryColor,1);
-        border-color: $primaryDark2Color;
+  &.active {
+    box-shadow: $ds-nd-3, inset 0 0 ($unit * 2.5) rgba(0, 0, 0, 0.05),
+      inset 0 0 1px rgba($primaryColor, 1);
+    border-color: $primaryDark2Color;
 
-        .gds-card-footer,
-        .gds-card-header {
-            background: $primaryColor;
-            color: white;
-        }
+    .gds-card-footer,
+    .gds-card-header {
+      background: $primaryColor;
+      color: white;
     }
+  }
 }
 
 .gds-card--no-shadow {
-    border: none;
-    box-shadow: none;
+  border: none;
+  box-shadow: none;
 }
 
 .gds-card--dark {
-    background-color: $gg-dark-3;
-    border: 1px solid $gg-dark-4;
-    color: $gg-light-4;
-    box-shadow:0 0 3px 0 rgba(214, 155, 155, 0.65);
-    .gds-card__hero {
-        color: white;
-    }
+  background-color: $gg-dark-3;
+  border: 1px solid $gg-dark-4;
+  color: $gg-light-4;
+
+  .gds-card__hero {
+    color: white;
+  }
 }
 
 .gds-card--xl {
-    height: ($unit * 30);
+  height: ($unit * 30);
 }
 
 .gds-card--lg {
-    height: ($unit * 24);
+  height: ($unit * 24);
 }
 
 .gds-card--md {
-    height: ($unit * 18);
+  height: ($unit * 18);
 }
 
 .gds-card--sm {
-    height: ($unit * 12);
+  height: ($unit * 12);
 }
 
 .gds-card--xs {
-    height: ($unit * 8);
+  height: ($unit * 8);
 }
 
 .gds-card--no-height {
-    height: auto;
+  height: auto;
 }
 
 .gds-card--underlined {
-    border-bottom: $cap-size solid $primaryColor;
+  border-bottom: $cap-size solid $primaryColor;
 }
 
 .gds-card--underlined-secondary {
-    border-bottom: $cap-size solid $secondaryColor;
+  border-bottom: $cap-size solid $secondaryColor;
 }
 
 .gds-card--no-bg {
-    background: none;
-    box-shadow: 0 0 ($unit * 1.5) 0px rgba(0,0,0,0.1);
+  background: none;
+  box-shadow: 0 0 ($unit * 1.5) 0px rgba(0, 0, 0, 0.1);
 }
 
 .gds-card--white {
-    background: white;
+  background: white;
 }
 
 // Tile cards
 .gds-card--tile {
-    @extend .gds-card--md;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  @extend .gds-card--md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .gds-card--tile__block {
-    display: block;
+  display: block;
 }
 
 .gds-card--tile__icon {
-    height: ($unit * 4);
-    font-size: ($unit * 4);
-    line-height: ($unit * 4);
-    margin-bottom: ($unit / 2);
+  height: ($unit * 4);
+  font-size: ($unit * 4);
+  line-height: ($unit * 4);
+  margin-bottom: ($unit / 2);
 }
 
 .gds-card--tile__text {
-    height: ($unit * 6);
-    overflow: visible;
+  height: ($unit * 6);
+  overflow: visible;
 }
 
 // Header & footer
 .gds-card__footer,
 .gds-card__header {
-    padding: ($unit / 2);
-    font-family: $pri-font-regular;
-    font-size: $unit;
-    background-color: $cardCapBackgroundColor;
-    color: white;
-    border: none;
-    @include transition-back(all, 250ms);
+  padding: ($unit / 2);
+  font-family: $pri-font-regular;
+  font-size: $unit;
+  background-color: $cardCapBackgroundColor;
+  color: white;
+  border: none;
+  @include transition-back(all, 250ms);
 }
 
 .gds-card__footer {
-    border-top-width: 2px;
-    border-top-style: solid;
-    border-top-color: $cardCapUnderlineColor;
-    border-bottom-left-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: $cardCapUnderlineColor;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
 }
 
 .gds-card__header {
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-    border-bottom-color: $cardCapUnderlineColor;
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: $cardCapUnderlineColor;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
 }
 
 .gds-card__block {
-    padding: ($unit * 0.5);
-    height: 100%;
-    border-color: inherit;
+  padding: ($unit * 0.5);
+  height: 100%;
+  border-color: inherit;
 }
 
 .gds-card__block--divide-top {
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color: inherit;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: inherit;
 }
 
 .gds-card__block--divide-bottom {
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: inherit;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: inherit;
 }
 
 .gds-card__link {
-    @extend .gds-text--link;
+  @extend .gds-text--link;
 }
 
 .gds-card__block--abs {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .gds-card__title {
-    display: block;
-    cursor: pointer;
-    margin: 0;
+  display: block;
+  cursor: pointer;
+  margin: 0;
 }
 
 .gds-card__link {
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .gds-card__text {
-    color: $gg-light-5;
-    margin-bottom: $unit;
+  color: $gg-light-5;
+  margin-bottom: $unit;
 
-    &:last-child {
-        margin-bottom: 0;
-    }
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .gds-card__control {
-    z-index: $z-index-1;
+  z-index: $z-index-1;
 
-    > * {
-        display: block;
-    }
+  > * {
+    display: block;
+  }
 }
 
 .gds-card__control--t-r {
-    @extend .-abs-t-r;
-    @extend .-m-r-0;
-    @extend .-m-t-0;
+  @extend .-abs-t-r;
+  @extend .-m-r-0;
+  @extend .-m-t-0;
 }
 
 .gds-card__control--t-l {
-    @extend .-abs-t-l;
-    @extend .-m-l-0;
-    @extend .-m-t-0;
+  @extend .-abs-t-l;
+  @extend .-m-l-0;
+  @extend .-m-t-0;
 }
 
 .gds-card__control--b-r {
-    @extend .-abs-b-r;
-    @extend .-m-r-0;
-    @extend .-m-b-0;
+  @extend .-abs-b-r;
+  @extend .-m-r-0;
+  @extend .-m-b-0;
 }
 
 .gds-card__control--b-l {
-    @extend .-abs-b-l;
-    @extend .-m-l-0;
-    @extend .-m-b-0;
+  @extend .-abs-b-l;
+  @extend .-m-l-0;
+  @extend .-m-b-0;
 }
 
 .gds-card__chart {
-    height: 100%;
-    width: 100%;
-    opacity: 0.4;
-    @include transition-ease-out(all, 250ms);
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+  @include transition-ease-out(all, 250ms);
 }
 
 .gds-card__chart--abs {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: ($unit * 2) $unit $unit $unit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: ($unit * 2) $unit $unit $unit;
 }
 
 .gds-card__chart--no-fade {
-    opacity: 1;
+  opacity: 1;
 }
 
 .gds-card__trend {
-    display: inline-block;
+  display: inline-block;
 
-    &:before {
-        display: inline-block;
-        vertical-align: middle;
-        font-family: 'Font Awesome 5 Pro';
-        margin-right: ($unit / 4);
-        font-size: ($font-size * 0.75);
-        position: relative;
-        top: -2px;
-    }
+  &:before {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Font Awesome 5 Pro";
+    margin-right: ($unit / 4);
+    font-size: ($font-size * 0.75);
+    position: relative;
+    top: -2px;
+  }
 }
 
 .gds-card__trend--up {
-    color: $successColor;
+  color: $successColor;
 
-    &:before {
-        content: fa-content($fa-var-angle-up);
-    }
+  &:before {
+    content: fa-content($fa-var-angle-up);
+  }
 }
 
 .gds-card__trend--same {
-    color: $warningColor;
+  color: $warningColor;
 
-    &:before {
-        content: fa-content($fa-var-minus);
-    }
+  &:before {
+    content: fa-content($fa-var-minus);
+  }
 }
 
 .gds-card__trend--down {
-    color: $dangerColor;
+  color: $dangerColor;
 
-    &:before {
-        content: fa-content($fa-var-angle-down);
-    }
+  &:before {
+    content: fa-content($fa-var-angle-down);
+  }
 }
 
 .gds-card__trend--chart-trend {
-    position: absolute;
-    bottom: ($unit * 0.5);
-    right: ($unit * 0.5);
+  position: absolute;
+  bottom: ($unit * 0.5);
+  right: ($unit * 0.5);
 }
 
 .gds-card__img-container {
-    max-height: ($unit * 8);
-    overflow: hidden;
-    white-space: nowrap;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  max-height: ($unit * 8);
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gds-card__img-container--xs {
-    max-height: ($unit * 4);
+  max-height: ($unit * 4);
 }
 
 .gds-card__img-container--sm {
-    max-height: ($unit * 6);
+  max-height: ($unit * 6);
 }
 
 .gds-card__img-container--md {
-    max-height: ($unit * 8);
+  max-height: ($unit * 8);
 }
 
 .gds-card__img-container--lg {
-    max-height: ($unit * 10);
+  max-height: ($unit * 10);
 }
 
 .gds-card__img-container--xl {
-    max-height: ($unit * 12);
+  max-height: ($unit * 12);
 }
 
 .gds-card__img-container--top {
-    border-radius: $border-radius $border-radius 0 0;
+  border-radius: $border-radius $border-radius 0 0;
 }
 
 .gds-card__img-container--bottom {
-    border-radius: 0 0 $border-radius $border-radius;
+  border-radius: 0 0 $border-radius $border-radius;
 }
 
 .gds-card__img-helper {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 
 .gds-card__img {
-    vertical-align: middle;
-    width: 100%;
-    height: auto;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
 }

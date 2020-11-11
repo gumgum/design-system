@@ -54,7 +54,7 @@ module.exports = {
     "rewriteRules": [],
     "open": "local",
     "browser": "default",
-    "cors": false,
+    "cors": true,
     "xip": false,
     "hostnameSuffix": false,
     "reloadOnRestart": false,
