@@ -1,0 +1,91 @@
+.gds-badge {
+  display: inline-block;
+  font-size: 60%;
+  margin: 0 ($unit / 4);
+  background: $primaryLight5Color;
+  color: $primaryDark5Color;
+  padding: 1px ($unit / 4) 0;
+  border-radius: $border-radius;
+  vertical-align: text-top;
+  font-family: $pri-font-regular;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  @include no-select();
+  &--empty {
+    background: $primaryColor;
+  }
+}
+
+.gds-badge--inverse {
+  color: $primaryDark2Color;
+}
+
+.gds-badge--dark {
+  background: $gg-dark-4 !important;
+  color: #fff;
+}
+
+.gds-badge--success {
+  background: $successLight5Color;
+  color: $successDark5Color;
+  &.gds-badge--empty {
+    background: $successColor;
+  }
+}
+
+.gds-badge--success-inverse {
+  color: $successDark2Color;
+}
+
+.gds-badge--info {
+  background: $infoLight5Color;
+  color: $infoDark5Color;
+  &.gds-badge--empty {
+    background: $infoColor;
+  }
+}
+
+.gds-badge--info-inverse {
+  color: $infoDark2Color;
+}
+
+.gds-badge--warning {
+  background: $warningLight5Color;
+  color: $warningDark5Color;
+  &.gds-badge--empty {
+    background: $warningColor;
+  }
+}
+
+.gds-badge--warning-inverse {
+  color: $warningDark3Color;
+}
+
+.gds-badge--danger {
+  background: $dangerLight5Color;
+  color: $dangerDark5Color;
+  &.gds-badge--empty {
+    background: $dangerColor;
+  }
+}
+
+.gds-badge--danger-inverse {
+  color: $dangerDark2Color;
+}
+
+.gds-badge--inverse,
+.gds-badge--success-inverse,
+.gds-badge--info-inverse,
+.gds-badge--warning-inverse,
+.gds-badge--danger-inverse {
+  background: white;
+}
+
+.gds-badge--empty {
+  width: ($unit / 2);
+  height: ($unit / 2);
+  border-radius: ($unit / 4);
+  vertical-align: super;
+}

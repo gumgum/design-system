@@ -1,0 +1,963 @@
+// Base button
+@mixin defaultShadows($borderColor, $dropShadow, $focusGlow, $hasBorder) {
+  @if $hasBorder == "true" {
+    box-shadow: inset 0 0 0 0 $borderColor,
+      // Bottom Cap
+      inset
+        0
+        0
+        0
+        1px
+        $borderColor,
+      // Other Caps
+      0
+        0
+        0px
+        0px
+        rgba($focusGlow, 0),
+      // Focus Ring
+      0
+        0
+        0px
+        0
+        rgba($dropShadow, 0); // Drop Shadow
+  }
+  else {
+    box-shadow: inset 0 0 0 0 $borderColor,
+      // Bottom Cap
+      0 0 0px 1px rgba($focusGlow, 0),
+      // Focus Ring
+      0 0 0px 0 rgba($dropShadow, 0); // Drop Shadow
+  }
+}
+@mixin hoverShadows($borderColor, $dropShadow, $focusGlow, $hasBorder) {
+  @if $hasBorder == "true" {
+    box-shadow: inset 0 0 0 0 $borderColor,
+      // Bottom Cap
+      inset
+        0
+        0
+        0
+        1px
+        $borderColor,
+      // Other Caps
+      0
+        0
+        0px
+        1px
+        rgba($focusGlow, 0),
+      // Focus Ring
+      0
+        0
+        0
+        0
+        rgba($dropShadow, 0.2); // Drop Shadow
+  }
+  else {
+    box-shadow: inset 0 0 0 0 $borderColor,
+      // Bottom Cap
+      0 0 0px 1px rgba($focusGlow, 0),
+      // Focus Ring
+      0 0 3px 0 rgba($dropShadow, 0.2); // Drop Shadow
+  }
+}
+@mixin hoverFocusShadows($borderColor, $dropShadow, $focusGlow, $hasBorder) {
+  @if $hasBorder == "true" {
+    box-shadow: inset 0 0 0 0 $borderColor,
+      // Bottom Cap
+      inset
+        0
+        0
+        0
+        1px
+        $borderColor,
+      // Other Caps
+      0
+        0
+        1px
+        1px
+        rgba($focusGlow, 1),
+      // Focus Ring
+      0
+        0
+        0
+        2
+        rgba($borderColor, 0.6); // Drop Shadow
+  }
+  else {
+    box-shadow: inset 0 0 0 0 $borderColor,
+      // Bottom Cap
+      0 0 1px 1px rgba($focusGlow, 1),
+      // Focus Ring
+      0 0 3px 0 rgba($dropShadow, 0.2); // Drop Shadow
+  }
+}
+@mixin activeShadows($borderColor, $dropShadow, $focusGlow, $hasBorder) {
+  @if $hasBorder == "true" {
+    box-shadow: inset 0 0 0 0 $borderColor,
+      // Bottom Cap
+      inset
+        0
+        0
+        0
+        1px
+        $borderColor,
+      // Other Caps
+      0
+        0
+        0px
+        1px
+        rgba($focusGlow, 0),
+      // Focus Ring
+      0
+        0
+        0
+        2px
+        rgba($borderColor, 0.4); // Drop Shadow
+  }
+  else {
+    box-shadow: inset 0 0 0 0 $borderColor,
+      // Bottom Cap
+      0 0 0px 1px rgba($focusGlow, 0),
+      // Focus Ring
+      0 0 1px 0 rgba($dropShadow, 0.4); // Drop Shadow
+  }
+}
+@mixin focusShadows($borderColor, $dropShadow, $focusGlow, $hasBorder) {
+  @if $hasBorder == "true" {
+    box-shadow: inset 0 0 0 0 $borderColor,
+      // Bottom Cap
+      inset
+        0
+        0
+        0
+        1px
+        $borderColor,
+      // Other Caps
+      0
+        0
+        0
+        0
+        rgba($focusGlow, 1),
+      // Focus Ring
+      0
+        0
+        0
+        2px
+        rgba($borderColor, 0.4); // Drop Shadow
+  }
+  else {
+    box-shadow: inset 0 0 0 0 $borderColor,
+      // Bottom Cap
+      0 0 1px 1px rgba($focusGlow, 1),
+      // Focus Ring
+      0 0 0px 0 rgba($dropShadow, 0); // Drop Shadow
+  }
+}
+
+@mixin backgroundGradient($lightColor, $darkColor, $buttonState) {
+  @if $buttonState == "default" {
+    background: linear-gradient(180deg, $lightColor -10%, $darkColor 100%);
+  } @else if $buttonState == "hover" {
+    background: linear-gradient(180deg, $lightColor -10%, $lightColor 100%);
+  } @else if $buttonState == "active" {
+    background: linear-gradient(180deg, $darkColor -10%, $darkColor 100%);
+  } @else {
+    @error "Unknown button state #{$buttonState}.";
+  }
+}
+
+@mixin activeShadow($color) {
+  box-shadow: 0 0 0 2px $color;
+}
+
+.gds-button {
+  display: inline-block;
+  font-family: $pri-font;
+  font-weight: $font-weight-normal;
+  font-size: $btn-font-size-normal;
+  padding: $btn-padding-normal;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  margin-bottom: ($cap-size * 1.5);
+  border-radius: $btn-border-radius;
+  border: none;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  overflow: visible;
+  color: white;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  @include no-select();
+  @include transition-ease-out(all, 500ms);
+
+  > .fa {
+    vertical-align: middle;
+  }
+}
+
+.gds-button--inline-form-shift {
+  transform: translateY(0px);
+}
+
+.gds-button--no-grow:hover {
+  top: 0;
+}
+
+.gds-button--border {
+  border-width: 1px;
+  border-style: solid;
+}
+
+// Disabled buttons
+.gds-button[disabled="disabled"],
+.gds-button[disabled],
+.gds-button--disabled {
+  @extend .-disabled;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+// Large buttons
+.gds-button--lg {
+  font-size: $btn-font-size-large;
+  padding: $btn-padding-large;
+}
+
+// Small buttons
+.gds-button--sm {
+  font-size: $btn-font-size-small;
+  padding: $btn-padding-small;
+}
+
+// X-small buttons
+.gds-button--xs {
+  font-size: $btn-font-size-xsmall;
+  padding: $btn-padding-xsmall;
+}
+
+// Plain buttons
+
+// Plans to deprecate in 2.0
+.gds-button--default,
+.gds-button--gray,
+.gds-circular-button--gray,
+.gds-circular-button--default {
+  color: white;
+  text-shadow: none;
+  @include backgroundGradient($grayLight3Color, $grayLight4Color, "default");
+
+  &:hover {
+    @include backgroundGradient($grayLight3Color, $grayLight3Color, "hover");
+  }
+  &:focus:hover {
+    @include backgroundGradient($grayLight3Color, $grayLight3Color, "hover");
+    box-shadow: 0 0 0 2px $primaryLight4Color;
+  }
+  &:active,
+  &:active:focus {
+    @include backgroundGradient($grayLight4Color, $grayLight4Color, "active");
+    @include activeShadow($primaryLight4Color);
+  }
+  &:focus {
+    @include activeShadow($primaryLight4Color);
+  }
+}
+
+// Button toggle
+.gds-button--dark-toggle,
+.gds-circular-button--dark-toggle {
+  @extend .gds-button--dark;
+  color: $gg-light-4;
+  &:hover,
+  &.gds-button--active,
+  &.gds-circular-button--active {
+    @extend .gds-button--primary;
+    color: white;
+  }
+}
+
+// Button-capped inputs
+.gds-button--button-cap {
+  flex-basis: auto;
+  margin-bottom: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  //height: $input-height-md;
+}
+
+.gds-button--outline,
+.gds-circular-button--outline {
+  color: $primaryColor;
+  @include defaultShadows($gg-light-2, black, $primaryLight2Color, "true");
+  @include backgroundGradient(transparent, transparent, "default");
+  &:hover {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include hoverShadows($primaryColor, black, $primaryLight2Color, "true");
+  }
+  &:focus:hover {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include hoverFocusShadows(
+      $primaryColor,
+      black,
+      $primaryLight2Color,
+      "true"
+    );
+  }
+  &:active,
+  &:active:focus {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include activeShadows($primaryColor, black, $primaryLight2Color, "true");
+  }
+  &:focus {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include focusShadows($primaryColor, black, $primaryLight2Color, "true");
+  }
+}
+
+.gds-button--white,
+.gds-circular-button--white {
+  color: #ffffff;
+  @include defaultShadows(#ffffff, black, $primaryLight2Color, "true");
+  @include backgroundGradient(transparent, transparent, "default");
+  &:hover {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include hoverShadows($grayLight2Color, black, $primaryLight2Color, "true");
+  }
+  &:focus:hover {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include hoverFocusShadows(
+      $grayLight2Color,
+      black,
+      $primaryLight2Color,
+      "true"
+    );
+  }
+  &:active,
+  &:active:focus {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include activeShadows(
+      $grayLight1Color,
+      black,
+      $primaryLight2Color,
+      "true"
+    );
+  }
+  &:focus {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include focusShadows($grayLight2Color, black, $primaryLight2Color, "true");
+  }
+}
+
+// Button toggle
+.gds-button--toggle,
+.gds-circular-button--toggle {
+  @extend .gds-button--gray;
+
+  &.gds-button--active {
+    @extend .gds-button--primary;
+  }
+}
+
+// Text color toggle
+.gds-button--text-toggle {
+  color: $gg-light-2;
+
+  &.gds-button--active-success {
+    color: $successColor;
+  }
+}
+
+// Primary buttons
+.gds-button--primary,
+.gds-circular-button--primary {
+  @include backgroundGradient(
+    $primaryLight2Color,
+    $primaryDark2Color,
+    "default"
+  );
+  &:hover {
+    @include backgroundGradient(
+      $primaryLight2Color,
+      $primaryDark2Color,
+      "hover"
+    );
+  }
+
+  &:focus {
+    outline: none;
+    @include activeShadow($primaryLight4Color);
+  }
+
+  &:active {
+    @include backgroundGradient(
+      $primaryLight2Color,
+      $primaryDark2Color,
+      "active"
+    );
+    @include activeShadow($primaryLight4Color);
+  }
+}
+
+// Secondary buttons
+.gds-button--secondary,
+.gds-circular-button--secondary {
+  @include backgroundGradient(
+    $secondaryLight2Color,
+    $secondaryDark2Color,
+    "default"
+  );
+  &:hover {
+    @include backgroundGradient(
+      $secondaryLight2Color,
+      $secondaryDark2Color,
+      "hover"
+    );
+  }
+
+  &:focus {
+    outline: none;
+    @include activeShadow($secondaryLight4Color);
+  }
+
+  &:active {
+    @include backgroundGradient(
+      $secondaryLight2Color,
+      $secondaryDark2Color,
+      "active"
+    );
+    @include activeShadow($secondaryLight4Color);
+  }
+}
+
+// Tertiary buttons
+.gds-button--tertiary,
+.gds-circular-button--tertiary {
+  @include backgroundGradient(
+    $tertiaryLight2Color,
+    $tertiaryDark2Color,
+    "default"
+  );
+  &:hover {
+    @include backgroundGradient(
+      $tertiaryLight2Color,
+      $tertiaryDark2Color,
+      "hover"
+    );
+  }
+
+  &:focus {
+    outline: none;
+    @include activeShadow($tertiaryLight4Color);
+  }
+
+  &:active {
+    @include backgroundGradient(
+      $tertiaryLight2Color,
+      $tertiaryDark2Color,
+      "active"
+    );
+    @include activeShadow($tertiaryLight4Color);
+  }
+}
+
+// Success buttons
+.gds-button--success,
+.gds-circular-button--success {
+  @include backgroundGradient(
+    $successLight2Color,
+    $successDark2Color,
+    "default"
+  );
+  &:hover {
+    @include backgroundGradient(
+      $successLight2Color,
+      $successDark2Color,
+      "hover"
+    );
+  }
+
+  &:focus {
+    outline: none;
+    @include activeShadow($successLight4Color);
+  }
+
+  &:active {
+    @include backgroundGradient(
+      $successLight2Color,
+      $successDark2Color,
+      "active"
+    );
+    @include activeShadow($successLight4Color);
+  }
+}
+
+// Danger buttons
+.gds-button--danger,
+.gds-circular-button--danger {
+  @include backgroundGradient($dangerLight2Color, $dangerDark2Color, "default");
+  &:hover {
+    @include backgroundGradient($dangerLight2Color, $dangerDark2Color, "hover");
+  }
+
+  &:focus {
+    outline: none;
+    @include activeShadow($dangerLight4Color);
+  }
+
+  &:active {
+    @include backgroundGradient(
+      $dangerLight2Color,
+      $dangerDark2Color,
+      "active"
+    );
+    @include activeShadow($dangerLight4Color);
+  }
+}
+
+// Warning buttons
+.gds-button--warning,
+.gds-circular-button--warning {
+  color: $grayDark3Color;
+  @include backgroundGradient(
+    $warningLight2Color,
+    $warningDark2Color,
+    "default"
+  );
+  &:hover {
+    @include backgroundGradient(
+      $warningLight2Color,
+      $warningDark2Color,
+      "hover"
+    );
+  }
+
+  &:focus {
+    outline: none;
+    @include activeShadow($warningLight4Color);
+  }
+
+  &:active {
+    @include backgroundGradient(
+      $warningLight2Color,
+      $warningDark2Color,
+      "active"
+    );
+    @include activeShadow($warningLight4Color);
+  }
+}
+
+// Info buttons
+.gds-button--info,
+.gds-circular-button--info {
+  @include backgroundGradient($infoLight2Color, $infoDark2Color, "default");
+  &:hover {
+    @include backgroundGradient($infoLight2Color, $infoDark2Color, "hover");
+  }
+
+  &:focus {
+    outline: none;
+    @include activeShadow($infoLight4Color);
+  }
+
+  &:active {
+    @include backgroundGradient($infoLight2Color, $infoDark2Color, "active");
+    @include activeShadow($infoLight4Color);
+  }
+}
+
+.gds-button--dark,
+.gds-circular-button--dark {
+  color: $primaryLight3Color;
+  @extend .gds-button--outline;
+  background-color: rgba($primaryDark1Color, 0.1);
+}
+
+.gds-button--dark-primary,
+.gds-circular-button--dark-primary {
+  color: $primaryLight3Color;
+  @extend .gds-button--dark;
+  @include defaultShadows($primaryColor, black, $primaryLight2Color, "true");
+  &:hover {
+    @include hoverShadows(
+      $primaryLight4Color,
+      black,
+      $primaryLight2Color,
+      "true"
+    );
+  }
+  &:focus:hover {
+    @include hoverFocusShadows(
+      $primaryLight4Color,
+      black,
+      $primaryLight2Color,
+      "true"
+    );
+  }
+  &:active,
+  &:active:focus {
+    @include activeShadows($primaryColor, black, $primaryLight2Color, "true");
+  }
+  &:focus {
+    @include focusShadows(
+      $primaryLight4Color,
+      black,
+      $primaryLight2Color,
+      "true"
+    );
+  }
+}
+
+.gds-button--dark-secondary,
+.gds-circular-button--dark-secondary {
+  color: $secondaryLight3Color;
+  background-color: rgba($secondaryDark1Color, 0.1);
+  @extend .gds-button--dark;
+  @include defaultShadows(
+    $secondaryColor,
+    black,
+    $secondaryLight2Color,
+    "true"
+  );
+  &:hover {
+    @include hoverShadows(
+      $secondaryLight4Color,
+      black,
+      $secondaryLight2Color,
+      "true"
+    );
+  }
+  &:focus:hover {
+    @include hoverFocusShadows(
+      $secondaryLight4Color,
+      black,
+      $secondaryLight2Color,
+      "true"
+    );
+  }
+  &:active,
+  &:active:focus {
+    @include activeShadows(
+      $secondaryColor,
+      black,
+      $secondaryLight2Color,
+      "true"
+    );
+  }
+  &:focus {
+    @include focusShadows(
+      $secondaryLight4Color,
+      black,
+      $secondaryLight2Color,
+      "true"
+    );
+  }
+}
+
+.gds-button--dark-tertiary,
+.gds-circular-button--dark-tertiary {
+  color: $tertiaryLight3Color;
+  @extend .gds-button--dark;
+  background-color: rgba($tertiaryDark1Color, 0.1);
+  @include defaultShadows($tertiaryColor, black, $tertiaryLight2Color, "true");
+  &:hover {
+    @include hoverShadows(
+      $tertiaryLight4Color,
+      black,
+      $tertiaryLight2Color,
+      "true"
+    );
+  }
+  &:focus:hover {
+    @include hoverFocusShadows(
+      $tertiaryLight4Color,
+      black,
+      $tertiaryLight2Color,
+      "true"
+    );
+  }
+  &:active,
+  &:active:focus {
+    @include activeShadows($tertiaryColor, black, $tertiaryLight2Color, "true");
+  }
+  &:focus {
+    @include focusShadows(
+      $tertiaryLight4Color,
+      black,
+      $tertiaryLight2Color,
+      "true"
+    );
+  }
+}
+
+.gds-button--dark-success,
+.gds-circular-button--dark-success {
+  color: $successLight3Color;
+  @extend .gds-button--dark;
+  background-color: rgba($successDark1Color, 0.1);
+  @include defaultShadows($successColor, black, $successLight2Color, "true");
+  &:hover {
+    @include hoverShadows(
+      $successLight4Color,
+      black,
+      $successLight2Color,
+      "true"
+    );
+  }
+  &:focus:hover {
+    @include hoverFocusShadows(
+      $successLight4Color,
+      black,
+      $successLight2Color,
+      "true"
+    );
+  }
+  &:active,
+  &:active:focus {
+    @include activeShadows($successColor, black, $successLight2Color, "true");
+  }
+  &:focus {
+    @include focusShadows(
+      $successLight4Color,
+      black,
+      $successLight2Color,
+      "true"
+    );
+  }
+}
+
+.gds-button--dark-warning,
+.gds-circular-button--dark-warning {
+  color: $warningLight3Color;
+  @extend .gds-button--dark;
+  background-color: rgba($warningDark1Color, 0.1);
+  @include defaultShadows($warningColor, black, $warningLight2Color, "true");
+  &:hover {
+    @include hoverShadows(
+      $warningLight4Color,
+      black,
+      $warningLight2Color,
+      "true"
+    );
+  }
+  &:focus:hover {
+    @include hoverFocusShadows(
+      $warningLight4Color,
+      black,
+      $warningLight2Color,
+      "true"
+    );
+  }
+  &:active,
+  &:active:focus {
+    @include activeShadows($warningColor, black, $warningLight2Color, "true");
+  }
+  &:focus {
+    @include focusShadows(
+      $warningLight4Color,
+      black,
+      $warningLight2Color,
+      "true"
+    );
+  }
+}
+
+.gds-button--dark-danger,
+.gds-circular-button--dark-danger {
+  color: $dangerLight3Color;
+  @extend .gds-button--dark;
+  background-color: rgba($dangerDark1Color, 0.1);
+  @include defaultShadows($dangerColor, black, $dangerLight2Color, "true");
+  &:hover {
+    @include hoverShadows(
+      $dangerLight4Color,
+      black,
+      $dangerLight2Color,
+      "true"
+    );
+  }
+  &:focus:hover {
+    @include hoverFocusShadows(
+      $dangerLight4Color,
+      black,
+      $dangerLight2Color,
+      "true"
+    );
+  }
+  &:active,
+  &:active:focus {
+    @include activeShadows($dangerColor, black, $dangerLight2Color, "true");
+  }
+  &:focus {
+    @include focusShadows(
+      $dangerLight4Color,
+      black,
+      $dangerLight2Color,
+      "true"
+    );
+  }
+}
+
+.gds-button--dark-info,
+.gds-circular-button--dark-info {
+  color: $infoLight3Color;
+  @extend .gds-button--dark;
+  background-color: rgba($infoDark1Color, 0.1);
+  @include defaultShadows($infoColor, black, $infoLight2Color, "true");
+  &:hover {
+    @include hoverShadows($infoLight4Color, black, $infoLight2Color, "true");
+  }
+  &:focus:hover {
+    @include hoverFocusShadows(
+      $infoLight4Color,
+      black,
+      $infoLight2Color,
+      "true"
+    );
+  }
+  &:active,
+  &:active:focus {
+    @include activeShadows($infoColor, black, $infoLight2Color, "true");
+  }
+  &:focus {
+    @include focusShadows($infoLight4Color, black, $infoLight2Color, "true");
+  }
+}
+
+// Transparent link buttons
+.gds-button--link {
+  color: $primaryDark2Color;
+  border-color: $gg-light-2;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  border-width: 0;
+  @include backgroundGradient(transparent, transparent, "default");
+  &:hover,
+  &:active,
+  &:focus,
+  &:active:focus {
+    text-decoration: none;
+    color: $primaryLight4Color;
+    top: 0;
+    background: transparent;
+    border-color: $primaryLight3Color;
+    box-shadow: none;
+  }
+
+  &:focus,
+  &:active:focus {
+    border-color: $primaryLight2Color;
+    box-shadow: none;
+  }
+}
+
+// Close button
+.gds-button--close-x {
+  border: none;
+  background-color: transparent !important;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22100%25%22%20height%3D%22100%25%22%0A%09%20viewBox%3D%220%200%2020px%2020px%22%20preserveAspectRatio%3D%22none%22%20fill%3D%22none%22%20stroke%3D%22%23#{strip-hash($gg-light-4)}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%0A%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: 20px 20px;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &:hover {
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23#{strip-hash($primaryColor)}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E");
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Get rid of focus style
+.gds-button:focus,
+.gds-button.focus,
+.gds-button:active:focus,
+.gds-button:active.focus,
+.gds-button.active:focus,
+.gds-button.active.focus {
+  outline: none;
+}
+
+// Block buttons
+.gds-button--block {
+  display: block;
+  width: 100%;
+}
+
+// Conditionally set buttons to display block, based on breakpoint
+@media #{$phone-width} {
+  .gds-button--block-xs,
+  .gds-button--block-sm,
+  .gds-button--block-md,
+  .gds-button--block-lg,
+  .gds-button--block-xl {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media #{$phablet-width} {
+  .gds-button--block-sm,
+  .gds-button--block-md,
+  .gds-button--block-lg,
+  .gds-button--block-xl {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media #{$tablet-width} {
+  .gds-button--block-md,
+  .gds-button--block-lg,
+  .gds-button--block-xl {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media #{$laptop-width} {
+  .gds-button--block-lg,
+  .gds-button--block-xl {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media #{$desktop-width} {
+  .gds-button--block-xl {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Animated ellipsis, after clicking button
+.gds-button .gds-button__thinking {
+  font-size: 10px;
+  white-space: pre;
+  font-family: monospace;
+}
+
+.gds-button--large .gds-button__thinking,
+.gds-button__group--large .gds-button__thinking {
+  font-size: $btn-font-size-large;
+}
+
+.gds-button--small .gds-button__thinking,
+.gds-button__group--small .gds-button__thinking {
+  font-size: $btn-font-size-small;
+}

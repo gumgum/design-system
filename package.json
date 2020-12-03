@@ -45,6 +45,7 @@
     "prettier": "2.1.2",
     "react-is": "^16.13.1",
     "resolve-url-loader": "^3.1.2",
+    "sass": "^1.29.0",
     "sass-loader": "^10.0.4",
     "style-loader": "^2.0.0"
   },
@@ -57,6 +58,7 @@
     "styles:build": "node-sass --include-path scss styles/scss/index.scss  styles/compressed-css/index.css --output-style compressed",
     "styles:watch": "node-sass -w styles/scss -o temp/",
     "browsersync": "browser-sync start --server --files temp/",
-    "browsersync:config": "browser-sync start --config bs-config.js"
+    "browsersync:config": "browser-sync start --config bs-config.js",
+    "sass-test": "sass styles/scss/index.scss build/stylesheets/index.css"
   }
 }

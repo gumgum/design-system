@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <title>GumGum Design System</title>
+        <meta name="description" content="">
+        <meta name="author" content="Myles O'Connor">
+        <link rel="stylesheet" data-css-file>
+    </head>
+    <body>
+        <!-- Begin component -->
+        <header class="gds-spa-header">
+            <div class="gds-spa-header__primary-nav">
+                <div class="gds-spa-header__section gds-spa-header__section-icon">
+                    <a class="gds-spa-header__section-link" href="#back"><i class="btl bt-arrow-left"></i></a>
+                </div>
+                <div class="gds-spa-header__section gds-spa-header__section-icon">
+                    <img class="gds-spa-header__logo-mark" src="https://gumgum-design-system.s3.amazonaws.com/mark--white.svg" />
+                </div>
+                <div class="gds-spa-header__section gds-spa-header__section--product">
+                    <h6 class="gds-page-header__product-name">Product Name</h6>
+                </div>
+            </div>
+            <div class="gds-spa-header__secondary-nav">
+                <div class="gds-spa-header__section gds-spa-header__section-icon">
+                    <a class="gds-spa-header__section-link" href="#search"><i class="btl bt-search"></i></a>
+                </div>
+                <div class="gds-spa-header__section gds-spa-header__section-icon">
+                    <a class="gds-spa-header__section-link" href="#alerts"><i class="btl bt-bell"></i></a>
+                </div>
+                <div class="gds-spa-header__section gds-spa-header__section--white">
+                    <div class="gds-avatar -m-l-2" data-gds-avatar>
+                        <div class="gds-avatar__image">
+                            <img src="https://c.gumgum.com/ads/com/gumgum/documentation/avatars/avatar--default2.jpg" alt="User Name" height="100%" />
+                        </div>
+                        <div class="gds-avatar__menu">
+                            <ul class="gds-avatar__menu-list">
+                                <li class="gds-avatar__menu-list-item -ellipsis"><a class="gds-avatar__menu-list-link" href="#profile">Profile</a></li>
+                                <li class="gds-avatar__menu-list-item -ellipsis"><a class="gds-avatar__menu-list-link" href="#settings">Settings</a></li>
+                                <li class="gds-avatar__menu-list-divider"></li>
+                                <li class="gds-avatar__menu-list-item -ellipsis"><a class="gds-avatar__menu-list-link" href="#logout">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End component -->
+
+        <script src="https://assets.ggops.com/stable/app.js"></script>
+        <script>
+            const isLocal = (window.location.hostname === 'localhost') ? true : false;
+            const cssFile = document.querySelector('[data-css-file]');
+
+            // Update CSS file to match environment
+            (isLocal) ? cssFile.href = "http://localhost:9000/styles/theme-vi.css" : cssFile.href = "https://assets.ggops.com/stable/theme-vi.css";
+        </script>
+    </body>
+</html>
