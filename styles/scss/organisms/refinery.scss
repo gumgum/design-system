@@ -1,98 +1,99 @@
 .gds-refinery {
-	position: relative;
-	display: inline-block;
-	z-index: $z-index-1;
+  position: relative;
+  display: inline-block;
+  z-index: $z-index-1;
 }
 
 .gds-refinery__container {
-	position: absolute;
-	right: 0;
-	top: -40px;
-	transform: translateY(-100%);
-	@include transition-ease-out(all, 250ms);
+  position: absolute;
+  right: 0;
+  top: -40px;
+  transform: translateY(-100%);
+  @include transition-ease-out(all, 250ms);
 }
 
 .gds-refinery--menu-open {
-	@media #{$phone-width} {
-		display: block;
-	}
+  @media #{$phone-width} {
+    display: block;
+  }
 
-	.gds-refinery__container {
-		transform: translateY(0);
+  .gds-refinery__container {
+    transform: translateY(0);
 
-		@media #{$phone-width} {
-			top: 39px;
+    @media #{$phone-width} {
+      top: 39px;
+    }
+  }
 
-		}
-	}
+  .gds-refinery__button {
+    .gds-refinery__open-icon {
+      display: inline-block;
+    }
 
-	.gds-refinery__button {
-
-		.gds-refinery__open-icon {
-			display:inline-block;
-		}
-
-		.gds-refinery__close-icon {
-			display:none;
-		}
-
-	}
+    .gds-refinery__close-icon {
+      display: none;
+    }
+  }
 }
 
 .gds-refinery--menu-disabled {
-    .gds-tag {
-        @extend .-disabled;
-        pointer-events: none;
-    }
+  .gds-tag {
+    opacity: 0.5;
+    filter: grayscale(75%);
+    pointer-events: none;
+    pointer-events: none;
+  }
 }
 
 .gds-refinery__menu {
-	position: relative;
-	right: 0;
-	top: 0;
-	z-index: 1;
-	@include transition-ease-out(all, 250ms);
-	background-color: $gg-light-1;
-	border-radius: $border-radius;
-	border-bottom-right-radius:0;
-	border: 1px solid $gg-light-2;
-	box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.1);
-	padding: ($unit * 0.5) $unit ($unit * 0.25);
+  position: relative;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  @include transition-ease-out(all, 250ms);
+  background-color: $gg-light-1;
+  border-radius: $border-radius;
+  border-bottom-right-radius: 0;
+  border: 1px solid $gg-light-2;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+  padding: ($unit * 0.5) $unit ($unit * 0.25);
 
-	@media #{$desktop-width} {
-		width: 800px;
-	}
-	@media #{$laptop-width} {
-		width: 600px;
-	}
-	@media #{$tablet-width} {
-		width: 450px;
-	}
-	@media #{$phablet-width} {
-		width: 350px;
-	}
-	@media #{$phone-width} {
-		width: calc(100vw - 2rem);
-		height: calc(100vh - 155px); // 88px header, 51px bottom tab/button, 16px = 1rem of empty space on bottom
-		padding-bottom: ($unit * 0.75);
-		overflow-y: auto;
-		right: 0;
-	}
+  @media #{$desktop-width} {
+    width: 800px;
+  }
+  @media #{$laptop-width} {
+    width: 600px;
+  }
+  @media #{$tablet-width} {
+    width: 450px;
+  }
+  @media #{$phablet-width} {
+    width: 350px;
+  }
+  @media #{$phone-width} {
+    width: calc(100vw - 2rem);
+    height: calc(
+      100vh - 155px
+    ); // 88px header, 51px bottom tab/button, 16px = 1rem of empty space on bottom
+    padding-bottom: ($unit * 0.75);
+    overflow-y: auto;
+    right: 0;
+  }
 }
 
 .gds-refinery__button {
-	position: absolute;
-	top: auto;
-	right: 0px;
-	bottom: -54px;
-    @extend .-bor-rad-tl-0;
-    @extend .-bor-rad-tr-0;
+  position: absolute;
+  top: auto;
+  right: 0px;
+  bottom: -54px;
+  @extend .-bor-rad-tl-0;
+  @extend .-bor-rad-tr-0;
 
-	.gds-refinery__open-icon {
-		display:none;
-	}
+  .gds-refinery__open-icon {
+    display: none;
+  }
 
-	.gds-badge {
-		padding: 0.2rem 0.3rem;
-	}
+  .gds-badge {
+    padding: 0.2rem 0.3rem;
+  }
 }

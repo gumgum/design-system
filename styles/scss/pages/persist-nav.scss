@@ -2,250 +2,254 @@ $persistant-menu-width: ($unit * 14);
 
 // Add to <body> if using persist-nav
 body.-has-persist-nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .gds-persist-nav {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
 }
 
 .gds-persist-nav--page-header {
-    padding-top: 88px;
+  padding-top: 88px;
 }
 
 .gds-persist-nav--spa-header {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 // Out by default on desktop
 .gds-persist-nav__sidebar {
-    width: $persistant-menu-width;
-    padding: ($unit * 0.75) 0 ($unit * 2);
-    background-color: mix($gg-light-1, white, 35);
-    transition: all 250ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
-    white-space: nowrap;
-    overflow-y: auto;
-    box-shadow: inset -1px 0 0 0 $gg-light-2;
+  width: $persistant-menu-width;
+  padding: ($unit * 0.75) 0 ($unit * 2);
+  background-color: mix($gg-light-1, white, 35);
+  transition: all 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  white-space: nowrap;
+  overflow-y: auto;
+  box-shadow: inset -1px 0 0 0 $gg-light-2;
 
-    * {
-        opacity: 1;
-        transition: opacity 250ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
-    }
+  * {
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
 
-    // In by default on mobile
-    @media #{$phablet-width} {
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: -$persistant-menu-width;
-        background-color: white;
-        z-index: $z-index-6; // Can't @extend inside @media
-    }
+  // In by default on mobile
+  @media #{$phablet-width} {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: -$persistant-menu-width;
+    background-color: white;
+    z-index: $z-index-6; // Can't @extend inside @media
+  }
 }
 
 .-dark-mode .gds-persist-nav__sidebar {
-    // In by default on mobile
-    @media #{$phablet-width} {
-        // Show box-shadow only on mobile width, and only when the menu is toggled open
-        &.gds-persist-nav__sidebar--toggle {
-            box-shadow: inset -1px 0 0 0 #acacac;
-        }
+  // In by default on mobile
+  @media #{$phablet-width} {
+    // Show box-shadow only on mobile width, and only when the menu is toggled open
+    &.gds-persist-nav__sidebar--toggle {
+      box-shadow: inset -1px 0 0 0 #acacac;
     }
+  }
 }
 
 .gds-persist-nav__sidebar--dark {
-    background-color: mix($gg-dark-2, white, 95);
-    box-shadow: inset -1px 0 0 0 $gg-light-4;
+  background-color: mix($gg-dark-2, white, 95);
+  box-shadow: inset -1px 0 0 0 $gg-light-4;
 }
 
 // Transparent div to toggle sidebar closed on mobile
 .gds-persist-nav__mobile-close {
-    pointer-events: none;
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: $z-index-5;
-    cursor: pointer;
+  pointer-events: none;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $z-index-5;
+  cursor: pointer;
 }
 
 // Only show on mobile, when menu is toggled open
 @media #{$phablet-width} {
-    .gds-persist-nav__sidebar--toggle + .gds-persist-nav__mobile-close {
-        pointer-events: auto;
-        background-color: rgba(white, 0.65);
-    }
+  .gds-persist-nav__sidebar--toggle + .gds-persist-nav__mobile-close {
+    pointer-events: auto;
+    background-color: rgba(white, 0.65);
+  }
 
-    .-dark-mode .gds-persist-nav__sidebar--toggle + .gds-persist-nav__mobile-close {
-        background-color: rgba(black, 0.65);
-    }
+  .-dark-mode
+    .gds-persist-nav__sidebar--toggle
+    + .gds-persist-nav__mobile-close {
+    background-color: rgba(black, 0.65);
+  }
 }
 
 @media #{$phablet-width} {
-    .gds-persist-nav--page-header .gds-persist-nav__sidebar {
-        top: 88px;
-    }
+  .gds-persist-nav--page-header .gds-persist-nav__sidebar {
+    top: 88px;
+  }
 
-    .gds-persist-nav--spa-header .gds-persist-nav__sidebar {
-        top: 50px;
-    }
+  .gds-persist-nav--spa-header .gds-persist-nav__sidebar {
+    top: 50px;
+  }
 }
 
 // Out by default on desktop
 .gds-persist-nav__sidebar--toggle {
-    width: ($unit * 0);
-    padding-top: $unit * 3;
-    border-right: none;
+  width: ($unit * 0);
+  padding-top: $unit * 3;
+  border-right: none;
+
+  * {
+    opacity: 0;
+  }
+
+  // In by default on mobile
+  @media #{$phablet-width} {
+    width: $persistant-menu-width;
+    padding-top: ($unit * 0.75);
+    left: 0;
 
     * {
-        opacity: 0;
+      opacity: 1;
     }
-
-    // In by default on mobile
-    @media #{$phablet-width} {
-        width: $persistant-menu-width;
-        padding-top: ($unit * 0.75);
-        left: 0;
-
-        * {
-            opacity: 1;
-        }
-    }
+  }
 }
 
 .gds-persist-nav__icon {
-    color: $persistNavDefaultIconColor;
+  color: $persistNavDefaultIconColor;
 }
 
 .gds-persist-nav__sub-nav {
-    @extend .gds-tree__sub-nav;
-    padding-left: ($unit * 2.75);
+  @extend .gds-tree__sub-nav;
+  padding-left: ($unit * 2.75);
 
-    &:before {
-        left: ($unit * 1.75);
-        bottom: calc(#{$unit} - 2px);
-    }
+  &:before {
+    left: ($unit * 1.75);
+    bottom: calc(#{$unit} - 2px);
+  }
 }
 
 .gds-persist-nav__sub-nav--dark:before {
-    background-color: $gg-gray;
+  background-color: $gg-gray;
 }
 
 .gds-persist-nav__sub-item {
-    @extend .gds-tree__sub-item;
+  @extend .gds-tree__sub-item;
+
+  &:before {
+    width: calc(#{$unit} - 1px);
+  }
+
+  .gds-persist-nav__link {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    font-size: $font-size-minus-2;
+    z-index: $z-index-1;
 
     &:before {
-        width: calc(#{$unit} - 1px);
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      height: 5px;
+      width: 5px;
+      top: calc(50% - 2.5px);
+      left: 2px;
+      background-color: $gg-light-3;
+      border: 1px solid mix($gg-light-1, white, 35);
+      box-shadow: 0px 0px 0px 1px $gg-light-3;
+      @include transition-ease-out(all, 150ms);
+      z-index: $z-index-2;
     }
+  }
 
-    .gds-persist-nav__link {
-        border-top-left-radius: $border-radius;
-        border-bottom-left-radius: $border-radius;
-        font-size: $font-size-minus-2;
-        z-index: $z-index-1;
-
-        &:before {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
-            height: 5px;
-            width: 5px;
-            top: calc(50% - 2.5px);
-            left: 2px;
-            background-color: $gg-light-3;
-            border: 1px solid mix($gg-light-1, white, 35);
-            box-shadow: 0px 0px 0px 1px $gg-light-3;
-            @include transition-ease-out(all, 150ms);
-            z-index: $z-index-2;
-        }
-    }
-
-    &:hover:before {
-        right: calc(100% - #{$unit*0.25} - 2px);
-        width: calc(#{$unit * 1.25} + 1px);
-    }
+  &:hover:before {
+    right: calc(100% - #{$unit * 0.25} - 2px);
+    width: calc(#{$unit * 1.25} + 1px);
+  }
 }
 
 .gds-persist-nav__sub-item--dark:before {
-    background-color: $gg-gray;
+  background-color: $gg-gray;
 }
 
 .gds-persist-nav__link {
-    @include transition-ease-out(all, 150ms);
-    @extend .-ellipsis;
-    display: block;
-    color: $persistNavDefaultTextColor;
-    padding: ($unit/4) ($unit) ($unit/4) ($unit * 1.25);
-    box-shadow: inset -1px 0 0 0 $gg-light-2, 0px 0px 0px 0px rgba(black, 0);
-
+  @include transition-ease-out(all, 150ms);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  color: $persistNavDefaultTextColor;
+  padding: ($unit/4) ($unit) ($unit/4) ($unit * 1.25);
+  box-shadow: inset -1px 0 0 0 $gg-light-2, 0px 0px 0px 0px rgba(black, 0);
 }
 
 .gds-persist-nav__link--dark {
-    color: $gg-light-4;
-    box-shadow: inset -1px 0 0 0 $gg-light-4;
+  color: $gg-light-4;
+  box-shadow: inset -1px 0 0 0 $gg-light-4;
 
-    &:before {
-        background-color: $gg-gray;
-        border: 1px solid mix($gg-dark-2, white, 95) !important;
-        box-shadow: 0px 0px 0px 1px $gg-gray;
-    }
+  &:before {
+    background-color: $gg-gray;
+    border: 1px solid mix($gg-dark-2, white, 95) !important;
+    box-shadow: 0px 0px 0px 1px $gg-gray;
+  }
 }
 
 .gds-persist-nav__link:hover,
 .gds-persist-nav__link--active {
-    @include no-select();
-    color: $persistNavActiveTextColor;
-    padding-left: $unit * 1.5;
-    box-shadow: inset -5px 0 0 0 $persistNavActiveInsetColor, 0px 0px 3px 0px rgba(black, 0.2);
-    background-color: rgba(white, 0.6);
+  @include no-select();
+  color: $persistNavActiveTextColor;
+  padding-left: $unit * 1.5;
+  box-shadow: inset -5px 0 0 0 $persistNavActiveInsetColor,
+    0px 0px 3px 0px rgba(black, 0.2);
+  background-color: rgba(white, 0.6);
 
-    &:before {
-        left: calc(#{$unit * 0.25} + 2px);
-        background-color: $persistNavActiveTextColor;
-        box-shadow: 0px 0px 0px 1px $persistNavActiveTextColor;
-    }
+  &:before {
+    left: calc(#{$unit * 0.25} + 2px);
+    background-color: $persistNavActiveTextColor;
+    box-shadow: 0px 0px 0px 1px $persistNavActiveTextColor;
+  }
 
-    .gds-persist-nav__icon {
-        color: $persistNavActiveIconColor;
-    }
+  .gds-persist-nav__icon {
+    color: $persistNavActiveIconColor;
+  }
 }
 
 .gds-persist-nav__link:active {
-    background-color: rgba(white, 1);
+  background-color: rgba(white, 1);
 }
 
 .gds-persist-nav__link--dark:hover,
 .gds-persist-nav__link--dark--active {
-    background-color: rgba($gg-dark-3, 0.5);
+  background-color: rgba($gg-dark-3, 0.5);
 }
 
 .gds-persist-nav__link--dark:active {
-    background-color: rgba($gg-dark-3, 1);
+  background-color: rgba($gg-dark-3, 1);
 }
 
 // Main content area
 .gds-persist-nav__main-content {
-    flex: 1;
-    flex-direction: column;
-    overflow-y: scroll;
-    padding-bottom: ($unit * 3);
+  flex: 1;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding-bottom: ($unit * 3);
 
-     // Container inside main-content
-    .gds-layout__container {
-        padding-left: ($unit * 2);
-        padding-right: ($unit * 2);
+  // Container inside main-content
+  .gds-layout__container {
+    padding-left: ($unit * 2);
+    padding-right: ($unit * 2);
 
-        @media #{$phablet-width} {
-            padding-left: ($unit / 2);
-            padding-right: ($unit / 2);
-        }
+    @media #{$phablet-width} {
+      padding-left: ($unit / 2);
+      padding-right: ($unit / 2);
     }
+  }
 }

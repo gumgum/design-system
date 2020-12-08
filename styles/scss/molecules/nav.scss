@@ -1,4 +1,5 @@
-.gds-nav {
+.gds-nav,
+.gds-nav-tabs {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -17,13 +18,15 @@
   }
 }
 
-.gds-nav__list-item {
+.gds-nav__list-item,
+.gds-nav-tabs__list-item {
   float: left;
   display: block;
   font-size: inherit;
 }
 
-.gds-nav__link {
+.gds-nav__link,
+.gds-nav-tabs__link {
   color: $tabPrimaryTextDefaultColor; ///this needs fixing
   cursor: pointer;
   display: block;
@@ -35,33 +38,38 @@
   color: white;
 }
 
-.gds-nav--lg {
+.gds-nav--lg,
+.gds-nav-tabs--lg {
   font-size: $font-size-plus-1;
 
-  .gds-nav__link {
+  .gds-nav__link,
+  .gds-nav-tabs__link {
     padding: $unit ($unit * 3);
   }
 }
 
-.gds-nav--md {
+.gds-nav--md,
+.gds-nav-tabs--md {
   font-size: $font-size;
 
-  .gds-nav__link {
+  .gds-nav__link,
+  .gds-nav-tabs__link {
     padding: ($unit * 0.5) ($unit * 2);
   }
 }
 
-.gds-nav--sm {
+.gds-nav--sm,
+.gds-nav-tabs--sm {
   font-size: $font-size-minus-2;
 
-  .gds-nav__link {
+  .gds-nav__link,
+  .gds-nav-tabs__link {
     padding: ($unit * 0.25) $unit;
   }
 }
 
 // Tab navs
 .gds-nav-tabs {
-  @extend .gds-nav;
   border-bottom: $cap-size solid $tabPrimaryUnderlineDefaultColor;
 
   @media #{$phone-width}, #{$phablet-width} {
@@ -83,21 +91,13 @@
 }
 
 .gds-nav-tabs--lg {
-  @extend .gds-nav--lg;
-
   .gds-nav-tabs__list-item--active .gds-nav-tabs__link {
     padding-top: $unit;
     padding-bottom: $unit;
   }
 }
 
-.gds-nav-tabs--md {
-  @extend .gds-nav--md;
-}
-
 .gds-nav-tabs--sm {
-  @extend .gds-nav--sm;
-
   .gds-nav-tabs__link {
     padding-top: ($unit * 0.25);
 
@@ -136,7 +136,6 @@
 }
 
 .gds-nav-tabs__list-item {
-  @extend .gds-nav__list-item;
   margin-right: ($unit / 4);
   @include transition-ease-out(all, 250ms);
 
@@ -310,7 +309,6 @@
 }
 
 .gds-nav-tabs__link {
-  @extend .gds-nav__link;
   border-radius: $border-radius $border-radius 0 0;
   z-index: $z-index-1;
 
@@ -346,7 +344,7 @@
 }
 
 .gds-nav-tabs__link--dark {
-  @extend .gds-nav__link--dark;
+  color: white;
   &:before {
     background-color: $gg-dark-3;
     border-left: 1px solid $gg-dark-4;
@@ -413,12 +411,11 @@
     box-shadow: 0px 0px 5px rgba(black, 0.1);
   }
 
-  .gds-nav-tabs__link--underline:hover {
-    color: rgba(white, 1) !important;
-  }
-
   .gds-nav-tabs__link--underline {
     color: rgba(white, 0.8) !important;
+    &:hover {
+      color: rgba(white, 1) !important;
+    }
   }
 
   .gds-nav-tabs__list-item--disabled .gds-nav-tabs__link--underline {
@@ -635,7 +632,9 @@
 
 .gds-nav-pills__list-item--disabled,
 .gds-nav-pills__list-item--disabled .gds-nav-pills__link {
-  @extend .-disabled;
+  opacity: 0.5;
+  filter: grayscale(75%);
+  pointer-events: none;
 }
 
 .gds-nav-pills__link {

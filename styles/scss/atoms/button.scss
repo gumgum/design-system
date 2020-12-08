@@ -171,7 +171,12 @@
   box-shadow: 0 0 0 2px $color;
 }
 
-.gds-button {
+.gds-button,
+.gds-corner-content__button,
+.gds-circular-button,
+.gds-button-dropdown__button,
+.gds-button-group__button,
+.gds-button-dropdown--in-group > .gds-button-dropdown__button {
   display: inline-block;
   font-family: $pri-font;
   font-weight: $font-weight-normal;
@@ -219,7 +224,9 @@
 .gds-button[disabled="disabled"],
 .gds-button[disabled],
 .gds-button--disabled {
-  @extend .-disabled;
+  opacity: 0.5;
+  filter: grayscale(75%);
+  pointer-events: none;
 
   &:hover {
     box-shadow: none;
@@ -250,10 +257,12 @@
 .gds-button--default,
 .gds-button--gray,
 .gds-circular-button--gray,
-.gds-circular-button--default {
+.gds-circular-button--default,
+.gds-button--toggle,
+.gds-circular-button--toggle {
   color: white;
   text-shadow: none;
-  @include backgroundGradient($grayLight3Color, $grayLight4Color, "default");
+  @include backgroundGradient($grayLight4Color, $grayLight5Color, "default");
 
   &:hover {
     @include backgroundGradient($grayLight3Color, $grayLight3Color, "hover");
@@ -270,17 +279,29 @@
   &:focus {
     @include activeShadow($primaryLight4Color);
   }
+
+  // For the toggle button
+  &.gds-button--active {
+    @include backgroundGradient(
+      $primaryLight2Color,
+      $primaryDark2Color,
+      "active"
+    );
+  }
 }
 
 // Button toggle
 .gds-button--dark-toggle,
 .gds-circular-button--dark-toggle {
-  @extend .gds-button--dark;
   color: $gg-light-4;
   &:hover,
   &.gds-button--active,
   &.gds-circular-button--active {
-    @extend .gds-button--primary;
+    @include backgroundGradient(
+      $primaryDark1Color,
+      $primaryDark1Color,
+      "active"
+    );
     color: white;
   }
 }
@@ -354,16 +375,6 @@
   &:focus {
     @include backgroundGradient(transparent, transparent, "hover");
     @include focusShadows($grayLight2Color, black, $primaryLight2Color, "true");
-  }
-}
-
-// Button toggle
-.gds-button--toggle,
-.gds-circular-button--toggle {
-  @extend .gds-button--gray;
-
-  &.gds-button--active {
-    @extend .gds-button--primary;
   }
 }
 
@@ -575,16 +586,39 @@
 }
 
 .gds-button--dark,
-.gds-circular-button--dark {
+.gds-circular-button--dark,
+.gds-button--dark-toggle,
+.gds-circular-button--dark-toggle,
+.gds-button--dark-primary,
+.gds-circular-button--dark-primary,
+.gds-button-dropdown__button--dark,
+.gds-button-dropdown__button--dark-primary {
   color: $primaryLight3Color;
-  @extend .gds-button--outline;
   background-color: rgba($primaryDark1Color, 0.1);
+  @include defaultShadows($gg-light-2, black, $primaryLight2Color, "true");
+  &:hover {
+    @include hoverShadows($primaryColor, black, $primaryLight2Color, "true");
+  }
+  &:focus:hover {
+    @include hoverFocusShadows(
+      $primaryColor,
+      black,
+      $primaryLight2Color,
+      "true"
+    );
+  }
+  &:active,
+  &:active:focus {
+    @include activeShadows($primaryColor, black, $primaryLight2Color, "true");
+  }
+  &:focus {
+    @include focusShadows($primaryColor, black, $primaryLight2Color, "true");
+  }
 }
 
 .gds-button--dark-primary,
 .gds-circular-button--dark-primary {
   color: $primaryLight3Color;
-  @extend .gds-button--dark;
   @include defaultShadows($primaryColor, black, $primaryLight2Color, "true");
   &:hover {
     @include hoverShadows(
@@ -617,10 +651,10 @@
 }
 
 .gds-button--dark-secondary,
-.gds-circular-button--dark-secondary {
+.gds-circular-button--dark-secondary,
+.gds-button-dropdown__button--dark-secondary {
   color: $secondaryLight3Color;
   background-color: rgba($secondaryDark1Color, 0.1);
-  @extend .gds-button--dark;
   @include defaultShadows(
     $secondaryColor,
     black,
@@ -663,9 +697,9 @@
 }
 
 .gds-button--dark-tertiary,
-.gds-circular-button--dark-tertiary {
+.gds-circular-button--dark-tertiary,
+.gds-button-dropdown__button--dark-tertiary {
   color: $tertiaryLight3Color;
-  @extend .gds-button--dark;
   background-color: rgba($tertiaryDark1Color, 0.1);
   @include defaultShadows($tertiaryColor, black, $tertiaryLight2Color, "true");
   &:hover {
@@ -701,7 +735,6 @@
 .gds-button--dark-success,
 .gds-circular-button--dark-success {
   color: $successLight3Color;
-  @extend .gds-button--dark;
   background-color: rgba($successDark1Color, 0.1);
   @include defaultShadows($successColor, black, $successLight2Color, "true");
   &:hover {
@@ -737,7 +770,6 @@
 .gds-button--dark-warning,
 .gds-circular-button--dark-warning {
   color: $warningLight3Color;
-  @extend .gds-button--dark;
   background-color: rgba($warningDark1Color, 0.1);
   @include defaultShadows($warningColor, black, $warningLight2Color, "true");
   &:hover {
@@ -773,7 +805,6 @@
 .gds-button--dark-danger,
 .gds-circular-button--dark-danger {
   color: $dangerLight3Color;
-  @extend .gds-button--dark;
   background-color: rgba($dangerDark1Color, 0.1);
   @include defaultShadows($dangerColor, black, $dangerLight2Color, "true");
   &:hover {
@@ -809,7 +840,6 @@
 .gds-button--dark-info,
 .gds-circular-button--dark-info {
   color: $infoLight3Color;
-  @extend .gds-button--dark;
   background-color: rgba($infoDark1Color, 0.1);
   @include defaultShadows($infoColor, black, $infoLight2Color, "true");
   &:hover {
@@ -833,7 +863,8 @@
 }
 
 // Transparent link buttons
-.gds-button--link {
+.gds-button--link,
+.gds-corner-content__button {
   color: $primaryDark2Color;
   border-color: $gg-light-2;
   text-shadow: none !important;
@@ -860,7 +891,11 @@
 }
 
 // Close button
-.gds-button--close-x {
+.gds-button--close-x,
+.gds-modal__close-button,
+.gds-modal__close-button--secondary,
+.gds-modal__close-button--tertiary,
+.gds-modal__close-button--quaternary {
   border: none;
   background-color: transparent !important;
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22100%25%22%20height%3D%22100%25%22%0A%09%20viewBox%3D%220%200%2020px%2020px%22%20preserveAspectRatio%3D%22none%22%20fill%3D%22none%22%20stroke%3D%22%23#{strip-hash($gg-light-4)}%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%0A%3C%2Fsvg%3E");
@@ -960,4 +995,74 @@
 .gds-button--small .gds-button__thinking,
 .gds-button__group--small .gds-button__thinking {
   font-size: $btn-font-size-small;
+}
+
+// Circular Button
+
+.gds-circular-button {
+  padding: 0;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  filter: grayscale(0%); // might be able to remove
+  opacity: 1; // might be able to remove
+  > .fa {
+    vertical-align: middle;
+  }
+}
+
+// Button Variables
+// // Inactive circular buttons
+.gds-circular-button--inactive {
+  filter: grayscale(80%);
+  opacity: 0.5;
+
+  &:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+}
+
+// Button Sizes
+// Large circular buttons
+.gds-circular-button--lg {
+  font-size: $c-btn-font-size-large;
+  width: 72px;
+  height: 72px;
+}
+
+// Small circular buttons
+.gds-circular-button--sm {
+  font-size: $c-btn-font-size-small;
+  width: 40px;
+  height: 40px;
+}
+
+// X-small circular buttons
+.gds-circular-button--xs {
+  font-size: $c-btn-font-size-xsmall;
+  width: 32px;
+  height: 32px;
+}
+
+// Image inside circular button
+.gds-circular-button__image {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 2px;
+  border-radius: 50%;
+}
+
+// Disabled buttons
+.gds-circular-button[disabled="disabled"],
+.gds-circular-button[disabled],
+.gds-circular-button--disabled {
+  opacity: 0.5;
+  filter: grayscale(75%);
+  pointer-events: none;
 }

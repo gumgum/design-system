@@ -1,395 +1,424 @@
 .gds-slab-nav {
-    top: -1px;
-    left: -1px;
-    width: calc(100% + 2px);
-    background-color: $slabNavBaseColor;
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    overflow: hidden;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  background-color: $slabNavBaseColor;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
 }
 
 .gds-slab-nav--vertical {
-    width: auto;
-    top:0;
-    left: -1px;
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: $border-radius;
-    border-bottom-right-radius: 0;
+  width: auto;
+  top: 0;
+  left: -1px;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: 0;
 }
 
 .gds-slab-nav--dark {
-    background-color: $gg-dark-4;
+  background-color: $gg-dark-4;
 }
 
 .gds-slab-nav__items {
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .gds-slab-nav__items--vertical {
-    flex-direction: column;
-    height: 100%;
-    width: auto;
+  flex-direction: column;
+  height: 100%;
+  width: auto;
 
-    .gds-slab-nav__item--vertical {
-        &.gds-slab-nav__item--active:after {
-            box-shadow: inset -3px 0px 0px 0px $slabNavPrimaryUnderlineColor, 0px 0px 0px rgba(black, 0);
-        }
+  .gds-slab-nav__item--vertical {
+    &.gds-slab-nav__item--active:after {
+      box-shadow: inset -3px 0px 0px 0px $slabNavPrimaryUnderlineColor,
+        0px 0px 0px rgba(black, 0);
     }
+  }
 }
 
 .gds-slab-nav__items--justify {
-    justify-content: stretch;
+  justify-content: stretch;
 }
 
 .gds-slab-nav__item {
-    display: flex;
-    flex-shrink: 1;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    padding: $unit * 2.5;
-    cursor: pointer;
-    @include transition-ease-out(all, 200ms);
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: $unit * 2.5;
+  cursor: pointer;
+  @include transition-ease-out(all, 200ms);
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: $slabNavPrimaryBackgroundColor;
+    transform: scale(1, 0);
+    transform-origin: 50% 100%;
+    z-index: 0;
+    box-shadow: inset 0px 0px 0px 0px $slabNavPrimaryUnderlineColor,
+      0px 0px 10px rgba(black, 0.5);
+    transition: all 150ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  &:hover {
+    z-index: $z-index-2;
     &:after {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        background-color: $slabNavPrimaryBackgroundColor;
-        transform: scale(1, 0);
-        transform-origin: 50% 100%;
-        z-index: 0;
-        box-shadow: inset 0px 0px 0px 0px $slabNavPrimaryUnderlineColor, 0px 0px 10px rgba(black, 0.5);
-        transition: all 150ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
+      background-color: $slabNavPrimaryBackgroundColor;
+      transform: scale(1, 1);
+      box-shadow: inset 0px -3px 0px 0px $slabNavPrimaryUnderlineColor,
+        0px 0px 5px rgba(black, 0.15);
+      transition: all 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
     }
-    &:hover {
-        z-index: $z-index-2;
-        &:after {
-            background-color: $slabNavPrimaryBackgroundColor;
-            transform: scale(1, 1);
-            box-shadow: inset 0px -3px 0px 0px $slabNavPrimaryUnderlineColor, 0px 0px 5px rgba(black, 0.15);
-            transition: all 150ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        }
-    }
+  }
 }
 
 // Dropdown menu
 .gds-slab-nav__dropdown {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    border-top: ($unit / 16) solid rgba(black, 0.12);
-    border-bottom: ($unit / 16) solid rgba(black, 0.12);
-    box-shadow: inset -3px 0px 0px 0px $slabNavPrimaryUnderlineColor, 0px 0px 5px rgba(black, 0.15);
-    text-align: left;
-    height: ($unit * 1.5);
-    color: white;
-    @extend .-z-3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  border-top: ($unit / 16) solid rgba(black, 0.12);
+  border-bottom: ($unit / 16) solid rgba(black, 0.12);
+  box-shadow: inset -3px 0px 0px 0px $slabNavPrimaryUnderlineColor,
+    0px 0px 5px rgba(black, 0.15);
+  text-align: left;
+  height: ($unit * 1.5);
+  color: white;
+  @extend .-z-3;
 
-    &:before {
-        @include transition-ease-out(all, 200ms);
-    }
+  &:before {
+    @include transition-ease-out(all, 200ms);
+  }
 
-    &:hover:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(white, 0.08);
-    }
+  &:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(white, 0.08);
+  }
 }
 
 .gds-slab-nav__dropdown--primary {
-    background-color: $slabNavPrimaryBackgroundColor;
+  background-color: $slabNavPrimaryBackgroundColor;
 }
 
 .gds-slab-nav__dropdown--secondary {
-    background-color: $slabNavSecondaryBackgroundColor;
+  background-color: $slabNavSecondaryBackgroundColor;
 }
 
 .gds-slab-nav__dropdown--tertiary {
-    background-color: $slabNavTertiaryBackgroundColor;
+  background-color: $slabNavTertiaryBackgroundColor;
 }
 
 .gds-slab-nav__dropdown--quaternary {
-    background-color: $slabNavQuaternaryBackgroundColor;
+  background-color: $slabNavQuaternaryBackgroundColor;
 }
 
 .gds-slab-nav__dropdown-label {
-    padding: 0 ($unit / 2);
-    @extend .-ellipsis;
-    @extend .gds-slab-nav__item-label;
-    @extend .-z-4;
-    cursor: pointer;
+  padding: 0 ($unit / 2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @extend .gds-slab-nav__item-label;
+  @extend .-z-4;
+  cursor: pointer;
 
-    &:after {
-        content: '';
-        float: right;
-        margin-top: ($unit * 0.4);
-        right: ($unit / 2);
-        width: 0;
-        height: 0;
-        border-left: ($unit * 0.26) solid transparent;
-        border-right: ($unit * 0.26) solid transparent;
-        border-top: ($unit * 0.26) solid white;
-    }
+  &:after {
+    content: "";
+    float: right;
+    margin-top: ($unit * 0.4);
+    right: ($unit / 2);
+    width: 0;
+    height: 0;
+    border-left: ($unit * 0.26) solid transparent;
+    border-right: ($unit * 0.26) solid transparent;
+    border-top: ($unit * 0.26) solid white;
+  }
 }
 
 .gds-slab-nav__dropdown-menu {
-    position: absolute;
-    top: calc(100% + #{$unit / 16});
-    left: 0;
-    right: 0;
-    background-color: $gg-dark-4;
-    box-shadow: 0 ($unit / 2) ($unit) 0 rgba(black, 0.2);
-    transition: 100ms transform ease-in-out;
-    transform-origin: top;
-    transform: scaleY(0);
+  position: absolute;
+  top: calc(100% + #{$unit / 16});
+  left: 0;
+  right: 0;
+  background-color: $gg-dark-4;
+  box-shadow: 0 ($unit / 2) ($unit) 0 rgba(black, 0.2);
+  transition: 100ms transform ease-in-out;
+  transform-origin: top;
+  transform: scaleY(0);
 }
 
 .gds-slab-nav__dropdown-menu--shown {
-    transform: scaleY(1);
+  transform: scaleY(1);
 }
 
 .gds-slab-nav__dropdown-menu-item {
-    @extend .-ellipsis;
-    box-shadow: inset (-$unit * 0.1875) 0 0 0 rgba(black, 0.12);
-    border-top: ($unit / 16) solid rgba(white, 0.05);
-    border-bottom: ($unit / 16) solid rgba(black, 0.12);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: inset (-$unit * 0.1875) 0 0 0 rgba(black, 0.12);
+  border-top: ($unit / 16) solid rgba(white, 0.05);
+  border-bottom: ($unit / 16) solid rgba(black, 0.12);
 }
 
 .gds-slab-nav__dropdown-menu-link {
-    @extend .gds-slab-nav__item-label;
-    display: block;
-    padding: ($unit / 8) ($unit / 2);
-    @include transition-ease-out(all, 200ms);
+  @extend .gds-slab-nav__item-label;
+  display: block;
+  padding: ($unit / 8) ($unit / 2);
+  @include transition-ease-out(all, 200ms);
 
-    &:hover {
-        background-color: rgba(white, 0.05);
-    }
+  &:hover {
+    background-color: rgba(white, 0.05);
+  }
 }
 
 .gds-slab-nav__item--justify {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .gds-slab-nav__item--xs {
-    padding: $unit;
+  padding: $unit;
 }
 
 .gds-slab-nav__item--sm {
-    padding: $unit * 1.5;
+  padding: $unit * 1.5;
 }
 
 .gds-slab-nav__item--lg {
-    padding: $unit * 3;
+  padding: $unit * 3;
 }
 
 .gds-slab-nav__item--xl {
-    padding: $unit * 3.5;
+  padding: $unit * 3.5;
 }
 
 .gds-slab-nav__item--vertical {
-    &:after {
-        box-shadow: inset 0px 0px 0px 0px $slabNavPrimaryUnderlineColor, 0px 0px 10px rgba(black, 0.5);
-        transform: scale(0, 1);
-        transform-origin: 100% 50%;
-    }
-    &:hover:after {
-        box-shadow: inset -3px 0px 0px 0px $slabNavPrimaryUnderlineColor, 0px 0px 5px rgba(black, 0.15);
-        transform: scale(1, 1);
-    }
-    &.gds-slab-nav__item--active:after {
-        box-shadow: inset -3px 0px 0px 0px $slabNavPrimaryUnderlineColor, 0px 0px 0px rgba(black, 0);
-    }
+  &:after {
+    box-shadow: inset 0px 0px 0px 0px $slabNavPrimaryUnderlineColor,
+      0px 0px 10px rgba(black, 0.5);
+    transform: scale(0, 1);
+    transform-origin: 100% 50%;
+  }
+  &:hover:after {
+    box-shadow: inset -3px 0px 0px 0px $slabNavPrimaryUnderlineColor,
+      0px 0px 5px rgba(black, 0.15);
+    transform: scale(1, 1);
+  }
+  &.gds-slab-nav__item--active:after {
+    box-shadow: inset -3px 0px 0px 0px $slabNavPrimaryUnderlineColor,
+      0px 0px 0px rgba(black, 0);
+  }
 }
 
 .gds-slab-nav__item--active {
-    &:after {
-        background-color: $slabNavPrimaryBackgroundColor;
-        transform: scale(1, 1);
-        box-shadow: inset 0px -3px 0px 0px $slabNavPrimaryUnderlineColor, 0px 0px 0px rgba(black, 0);
-    }
-    &:hover:after {
-        background-color: $slabNavPrimaryBackgroundHoverColor;
-        box-shadow: inset 0px -3px 0px 0px $slabNavPrimaryUnderlineColor, 0px 0px 0px rgba(black, 0);
-    }
+  &:after {
+    background-color: $slabNavPrimaryBackgroundColor;
+    transform: scale(1, 1);
+    box-shadow: inset 0px -3px 0px 0px $slabNavPrimaryUnderlineColor,
+      0px 0px 0px rgba(black, 0);
+  }
+  &:hover:after {
+    background-color: $slabNavPrimaryBackgroundHoverColor;
+    box-shadow: inset 0px -3px 0px 0px $slabNavPrimaryUnderlineColor,
+      0px 0px 0px rgba(black, 0);
+  }
 }
-
 
 .gds-slab-nav__item:active:after {
-    background-color: $slabNavPrimaryBackgroundActiveColor;
+  background-color: $slabNavPrimaryBackgroundActiveColor;
 }
 
-
 .gds-slab-nav__item--secondary {
-    &:after {
-        background-color: $slabNavSecondaryBackgroundColor;
-        box-shadow: inset 0px 0px 0px 0px $slabNavSecondaryUnderlineColor, 0px 0px 10px rgba(black, 0.5);
-    }
-    &:hover:after {
-        background-color: $slabNavSecondaryBackgroundHoverColor;
-        box-shadow: inset 0px -3px 0px 0px $slabNavSecondaryUnderlineColor, 0px 0px 5px rgba(black, 0.15);
-    }
-    &.gds-slab-nav__item--active:after {
-        background-color: $slabNavSecondaryBackgroundColor;
-        box-shadow: inset 0px -3px 0px 0px $slabNavSecondaryUnderlineColor, 0px 0px 0px rgba(black, 0);
-    }
-    &.gds-slab-nav__item--active:hover:after {
-        background-color: $slabNavSecondaryBackgroundHoverColor;
-    }
-    &.gds-slab-nav__item:active:after {
-        background-color: $slabNavSecondaryBackgroundActiveColor;
-    }
-    &.gds-slab-nav__item--vertical:after {
-        box-shadow: inset 0px 0px 0px 0px $slabNavSecondaryUnderlineColor, 0px 0px 10px rgba(black, 0.5);
-    }
-    &.gds-slab-nav__item--vertical:hover:after {
-        box-shadow: inset -3px 0px 0px 0px $slabNavSecondaryUnderlineColor, 0px 0px 5px rgba(black, 0.15);
-    }
-    &.gds-slab-nav__item--vertical.gds-slab-nav__item--active:after {
-        box-shadow: inset -3px 0px 0px 0px $slabNavSecondaryUnderlineColor, 0px 0px 0px rgba(black, 0);
-    }
+  &:after {
+    background-color: $slabNavSecondaryBackgroundColor;
+    box-shadow: inset 0px 0px 0px 0px $slabNavSecondaryUnderlineColor,
+      0px 0px 10px rgba(black, 0.5);
+  }
+  &:hover:after {
+    background-color: $slabNavSecondaryBackgroundHoverColor;
+    box-shadow: inset 0px -3px 0px 0px $slabNavSecondaryUnderlineColor,
+      0px 0px 5px rgba(black, 0.15);
+  }
+  &.gds-slab-nav__item--active:after {
+    background-color: $slabNavSecondaryBackgroundColor;
+    box-shadow: inset 0px -3px 0px 0px $slabNavSecondaryUnderlineColor,
+      0px 0px 0px rgba(black, 0);
+  }
+  &.gds-slab-nav__item--active:hover:after {
+    background-color: $slabNavSecondaryBackgroundHoverColor;
+  }
+  &.gds-slab-nav__item:active:after {
+    background-color: $slabNavSecondaryBackgroundActiveColor;
+  }
+  &.gds-slab-nav__item--vertical:after {
+    box-shadow: inset 0px 0px 0px 0px $slabNavSecondaryUnderlineColor,
+      0px 0px 10px rgba(black, 0.5);
+  }
+  &.gds-slab-nav__item--vertical:hover:after {
+    box-shadow: inset -3px 0px 0px 0px $slabNavSecondaryUnderlineColor,
+      0px 0px 5px rgba(black, 0.15);
+  }
+  &.gds-slab-nav__item--vertical.gds-slab-nav__item--active:after {
+    box-shadow: inset -3px 0px 0px 0px $slabNavSecondaryUnderlineColor,
+      0px 0px 0px rgba(black, 0);
+  }
 }
 
 .gds-slab-nav__item--tertiary {
-    &:after {
-        background-color: $slabNavTertiaryBackgroundColor;
-        box-shadow: inset 0px 0px 0px 0px $slabNavTertiaryUnderlineColor, 0px 0px 10px rgba(black, 0.5);
-    }
-    &:hover:after {
-        background-color: $slabNavTertiaryBackgroundHoverColor;
-        box-shadow: inset 0px -3px 0px 0px $slabNavTertiaryUnderlineColor, 0px 0px 5px rgba(black, 0.15);
-    }
-    &.gds-slab-nav__item--active:after {
-        background-color: $slabNavTertiaryBackgroundColor;
-        box-shadow: inset 0px -3px 0px 0px $slabNavTertiaryUnderlineColor, 0px 0px 0px rgba(black, 0);
-    }
-    &.gds-slab-nav__item--active:hover:after {
-        background-color: $slabNavTertiaryBackgroundHoverColor;
-    }
-    &.gds-slab-nav__item:active:after {
-        background-color: $slabNavTertiaryBackgroundActiveColor;
-    }
-    &.gds-slab-nav__item--vertical:after {
-        box-shadow: inset 0px 0px 0px 0px $slabNavTertiaryUnderlineColor, 0px 0px 10px rgba(black, 0.5);
-    }
-    &.gds-slab-nav__item--vertical:hover:after {
-        box-shadow: inset -3px 0px 0px 0px $slabNavTertiaryUnderlineColor, 0px 0px 5px rgba(black, 0.15);
-    }
-    &.gds-slab-nav__item--vertical.gds-slab-nav__item--active:after {
-        box-shadow: inset -3px 0px 0px 0px $slabNavTertiaryUnderlineColor, 0px 0px 0px rgba(black, 0);
-    }
+  &:after {
+    background-color: $slabNavTertiaryBackgroundColor;
+    box-shadow: inset 0px 0px 0px 0px $slabNavTertiaryUnderlineColor,
+      0px 0px 10px rgba(black, 0.5);
+  }
+  &:hover:after {
+    background-color: $slabNavTertiaryBackgroundHoverColor;
+    box-shadow: inset 0px -3px 0px 0px $slabNavTertiaryUnderlineColor,
+      0px 0px 5px rgba(black, 0.15);
+  }
+  &.gds-slab-nav__item--active:after {
+    background-color: $slabNavTertiaryBackgroundColor;
+    box-shadow: inset 0px -3px 0px 0px $slabNavTertiaryUnderlineColor,
+      0px 0px 0px rgba(black, 0);
+  }
+  &.gds-slab-nav__item--active:hover:after {
+    background-color: $slabNavTertiaryBackgroundHoverColor;
+  }
+  &.gds-slab-nav__item:active:after {
+    background-color: $slabNavTertiaryBackgroundActiveColor;
+  }
+  &.gds-slab-nav__item--vertical:after {
+    box-shadow: inset 0px 0px 0px 0px $slabNavTertiaryUnderlineColor,
+      0px 0px 10px rgba(black, 0.5);
+  }
+  &.gds-slab-nav__item--vertical:hover:after {
+    box-shadow: inset -3px 0px 0px 0px $slabNavTertiaryUnderlineColor,
+      0px 0px 5px rgba(black, 0.15);
+  }
+  &.gds-slab-nav__item--vertical.gds-slab-nav__item--active:after {
+    box-shadow: inset -3px 0px 0px 0px $slabNavTertiaryUnderlineColor,
+      0px 0px 0px rgba(black, 0);
+  }
 }
 
 .gds-slab-nav__item--quaternary {
-    &:after {
-        background-color: $slabNavQuaternaryBackgroundColor;
-        box-shadow: inset 0px 0px 0px 0px $slabNavQuaternaryUnderlineColor, 0px 0px 10px rgba(black, 0.5);
-    }
-    &:hover:after {
-        background-color: $slabNavQuaternaryBackgroundHoverColor;
-        box-shadow: inset 0px -3px 0px 0px $slabNavQuaternaryUnderlineColor, 0px 0px 5px rgba(black, 0.15);
-    }
-    &.gds-slab-nav__item--active:after {
-        background-color: $slabNavQuaternaryBackgroundColor;
-        box-shadow: inset 0px -3px 0px 0px $slabNavQuaternaryUnderlineColor, 0px 0px 0px rgba(black, 0);
-    }
-    &.gds-slab-nav__item--active:hover:after {
-        background-color: $slabNavQuaternaryBackgroundHoverColor;
-    }
-    &.gds-slab-nav__item:active:after {
-        background-color: $slabNavQuaternaryBackgroundActiveColor;
-    }
-    &.gds-slab-nav__item--vertical:after {
-        box-shadow: inset 0px 0px 0px 0px $slabNavQuaternaryUnderlineColor, 0px 0px 10px rgba(black, 0.5);
-    }
-    &.gds-slab-nav__item--vertical:hover:after {
-        box-shadow: inset -3px 0px 0px 0px $slabNavQuaternaryUnderlineColor, 0px 0px 5px rgba(black, 0.15);
-    }
-    &.gds-slab-nav__item--vertical.gds-slab-nav__item--active:after {
-        box-shadow: inset -3px 0px 0px 0px $slabNavQuaternaryUnderlineColor, 0px 0px 0px rgba(black, 0);
-    }
+  &:after {
+    background-color: $slabNavQuaternaryBackgroundColor;
+    box-shadow: inset 0px 0px 0px 0px $slabNavQuaternaryUnderlineColor,
+      0px 0px 10px rgba(black, 0.5);
+  }
+  &:hover:after {
+    background-color: $slabNavQuaternaryBackgroundHoverColor;
+    box-shadow: inset 0px -3px 0px 0px $slabNavQuaternaryUnderlineColor,
+      0px 0px 5px rgba(black, 0.15);
+  }
+  &.gds-slab-nav__item--active:after {
+    background-color: $slabNavQuaternaryBackgroundColor;
+    box-shadow: inset 0px -3px 0px 0px $slabNavQuaternaryUnderlineColor,
+      0px 0px 0px rgba(black, 0);
+  }
+  &.gds-slab-nav__item--active:hover:after {
+    background-color: $slabNavQuaternaryBackgroundHoverColor;
+  }
+  &.gds-slab-nav__item:active:after {
+    background-color: $slabNavQuaternaryBackgroundActiveColor;
+  }
+  &.gds-slab-nav__item--vertical:after {
+    box-shadow: inset 0px 0px 0px 0px $slabNavQuaternaryUnderlineColor,
+      0px 0px 10px rgba(black, 0.5);
+  }
+  &.gds-slab-nav__item--vertical:hover:after {
+    box-shadow: inset -3px 0px 0px 0px $slabNavQuaternaryUnderlineColor,
+      0px 0px 5px rgba(black, 0.15);
+  }
+  &.gds-slab-nav__item--vertical.gds-slab-nav__item--active:after {
+    box-shadow: inset -3px 0px 0px 0px $slabNavQuaternaryUnderlineColor,
+      0px 0px 0px rgba(black, 0);
+  }
 }
 
 .gds-slab-nav__item-icon {
-    font-size: $unit * 1.75;
-    margin-bottom: $unit / 1.75;
-    text-shadow: 0px 1px 2px rgba(black, 0.4);
-    z-index: $z-index-1;
+  font-size: $unit * 1.75;
+  margin-bottom: $unit / 1.75;
+  text-shadow: 0px 1px 2px rgba(black, 0.4);
+  z-index: $z-index-1;
 }
 
 .gds-slab-nav__item-icon--xs {
-    font-size: $unit;
+  font-size: $unit;
 }
 
 .gds-slab-nav__item-icon--sm {
-    font-size: $unit * 1.25;
+  font-size: $unit * 1.25;
 }
 
 .gds-slab-nav__item-icon--lg {
-    font-size: $unit * 2;
+  font-size: $unit * 2;
 }
 
 .gds-slab-nav__item-icon--xl {
-    font-size: $unit * 2.5;
+  font-size: $unit * 2.5;
 }
 
 .gds-slab-nav__item-label {
-    font-family: $pri-font-bold;
-    font-size: $font-size-minus-3;
-    text-transform: uppercase;
-    text-shadow: 0px 1px 2px rgba(black, 0.4);
-    z-index: $z-index-1;
+  font-family: $pri-font-bold;
+  font-size: $font-size-minus-3;
+  text-transform: uppercase;
+  text-shadow: 0px 1px 2px rgba(black, 0.4);
+  z-index: $z-index-1;
 }
 
 .gds-slab-nav__item-label--xs {
-    font-size: $unit / 3;
+  font-size: $unit / 3;
 }
 
 .gds-slab-nav__item-label--xs {
-    font-size: $unit / 2;
+  font-size: $unit / 2;
 }
 
 .gds-slab-nav__item-label--lg {
-    font-size: $font-size-minus-2;
+  font-size: $font-size-minus-2;
 }
 
 .gds-slab-nav__item-label--xl {
-    font-size: $font-size-minus-1;
+  font-size: $font-size-minus-1;
 }
 
 .gds-slab-nav__item-indicator {
-    position: absolute;
-    left: 50%;
-    z-index: $z-index-2;
+  position: absolute;
+  left: 50%;
+  z-index: $z-index-2;
 }
 
 .gds-slab-nav__item-badge {
-    @extend .gds-badge;
-    @extend .gds-badge--danger;
-    border-radius: 20px;
-    box-shadow: 0px 1px 2px rgba(black, 0.4) !important;
+  @extend .gds-badge;
+  @extend .gds-badge--danger;
+  border-radius: 20px;
+  box-shadow: 0px 1px 2px rgba(black, 0.4) !important;
 }
 
 .gds-slab-nav__item-warning {
-    text-shadow: 0px 1px 2px rgba(black, 0.4);
-    color: $warningLight2Color;
+  text-shadow: 0px 1px 2px rgba(black, 0.4);
+  color: $warningLight2Color;
 }
 
 .gds-slab-nav__item-danger {
-    text-shadow: 0px 1px 2px rgba(black, 0.4);
-    color: $dangerColor;
+  text-shadow: 0px 1px 2px rgba(black, 0.4);
+  color: $dangerColor;
 }

@@ -1,5 +1,3 @@
-$card-border-radius: $border-radius;
-
 .gds-card {
   display: block;
   position: relative;
@@ -81,7 +79,7 @@ $card-border-radius: $border-radius;
 
 // Tile cards
 .gds-card--tile {
-  @extend .gds-card--md;
+  height: ($unit * 18);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,7 +149,12 @@ $card-border-radius: $border-radius;
 }
 
 .gds-card__link {
-  @extend .gds-text--link;
+  color: $primaryColor;
+
+  &:hover {
+    text-decoration: underline;
+    color: $primaryLight2Color;
+  }
 }
 
 .gds-card__block--abs {
@@ -192,27 +195,35 @@ $card-border-radius: $border-radius;
 }
 
 .gds-card__control--t-r {
-  @extend .-abs-t-r;
-  @extend .-m-r-0;
-  @extend .-m-t-0;
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  margin-right: 0;
+  margin-top: 0;
 }
 
 .gds-card__control--t-l {
-  @extend .-abs-t-l;
-  @extend .-m-l-0;
-  @extend .-m-t-0;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  margin-top: 0;
 }
 
 .gds-card__control--b-r {
-  @extend .-abs-b-r;
-  @extend .-m-r-0;
-  @extend .-m-b-0;
+  position: absolute !important;
+  bottom: 0;
+  right: 0;
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
 .gds-card__control--b-l {
-  @extend .-abs-b-l;
-  @extend .-m-l-0;
-  @extend .-m-b-0;
+  position: absolute !important;
+  bottom: 0;
+  left: 0;
+  margin-left: 0;
+  margin-bottom: 0;
 }
 
 .gds-card__chart {
@@ -239,7 +250,7 @@ $card-border-radius: $border-radius;
   &:before {
     display: inline-block;
     vertical-align: middle;
-    font-family: "Font Awesome 5 Pro";
+    font-family: "Font Awesome 5 Free";
     margin-right: ($unit / 4);
     font-size: ($font-size * 0.75);
     position: relative;

@@ -173,7 +173,9 @@
   letter-spacing: $unit * 0.45;
   cursor: default;
   user-select: none;
-  @extend .-ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   @include transition-ease-out(all, 250ms);
 }
 
@@ -323,7 +325,9 @@
     pointer-events: none;
   }
   & .-ellipsis {
-    @extend .-ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     max-width: 125px;
     display: block;
   }
@@ -405,7 +409,9 @@
   }
   & .-ellipsis {
     @extend .gds-page-header__breadcrumbs-link;
-    @extend .-ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     max-width: 125px;
     display: block;
   }

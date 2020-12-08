@@ -1,74 +1,82 @@
 .gds-markdown {
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    img,
-    blockquote,
-    ul,
-    ol {
-        @extend .-m-b-3;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  img,
+  blockquote,
+  ul,
+  ol {
+    @extend .-m-b-3;
+  }
 
-    h1 {
-        @extend .gds-text--header-xl;
-    }
+  h1 {
+    font-size: ($unit * 3.5);
+    line-height: 1.1;
+  }
 
-    h2 {
-        @extend .gds-text--header-lg;
-    }
+  h2 {
+    font-size: ($unit * 2.5);
+    line-height: 1.2;
+  }
 
-    h3 {
-        @extend .gds-text--header-md;
-    }
+  h3 {
+    @extend .gds-text--header-md;
+  }
 
-    h4 {
-        @extend .gds-text--header-sm;
-    }
+  h4 {
+    font-size: ($unit * 1.5);
+    line-height: 1.4;
+  }
 
-    hr {
-        @extend .-m-v-4;
-    }
+  hr {
+    @extend .-m-v-4;
+  }
 
-    p {
-        @extend .gds-text--body-md;
-    }
+  p {
+    @extend .gds-text--body-md;
+  }
 
-    a {
-        @extend .gds-text--link;
-    }
+  a {
+    color: $primaryColor;
 
-    img {
-        @extend .gds-image;
-        @extend .gds-image--border;
+    &:hover {
+      text-decoration: underline;
+      color: $primaryLight2Color;
     }
+  }
 
-    blockquote {
-        @extend .gds-text--blockquote;
-    }
+  img {
+    @extend .gds-image;
+    @extend .gds-image--border;
+  }
 
-    ul li {
-        @extend .gds-text__list-item--disc;
-        @extend .-m-l-3;
-    }
+  blockquote {
+    @extend .gds-text--blockquote;
+  }
 
-    ol li {
-        @extend .gds-text__list-item--number;
-        @extend .-m-l-3;
-    }
+  ul li {
+    @extend .gds-text__list-item--disc;
+    @extend .-m-l-3;
+  }
 
-    code {
-        @extend .gds-text--code;
-    }
+  ol li {
+    @extend .gds-text__list-item--number;
+    @extend .-m-l-3;
+  }
 
-    // Bold
-    strong {
-        @extend .gds-text--bold;
-    }
+  code {
+    @extend .gds-text--code;
+  }
 
-    // Italic
-    em {
-        @extend .gds-text--italic;
-    }
+  // Bold
+  strong {
+    @extend .gds-text--bold;
+  }
+
+  // Italic
+  em {
+    @extend .gds-text--italic;
+  }
 }
