@@ -172,9 +172,11 @@
 }
 
 .gds-button,
+.gds-radio-block__button,
 .gds-corner-content__button,
 .gds-circular-button,
 .gds-button-dropdown__button,
+.gds-multi-select__button,
 .gds-button-group__button,
 .gds-button-dropdown--in-group > .gds-button-dropdown__button {
   display: inline-block;
@@ -389,7 +391,8 @@
 
 // Primary buttons
 .gds-button--primary,
-.gds-circular-button--primary {
+.gds-circular-button--primary,
+.gds-multi-select__button--primary {
   @include backgroundGradient(
     $primaryLight2Color,
     $primaryDark2Color,

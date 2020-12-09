@@ -81,14 +81,18 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  @extend .-m-a-0;
+  margin: 0;
 }
 
 .gds-anim-timeline__form-group {
   @extend .gds-form-group;
-  @extend .gds-flex;
-  @extend .-m-b-0;
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
+  align-content: flex-start;
+  margin-bottom: 0;
   border-bottom: 1px solid $gg-light-2;
   padding: ($unit / 2);
 

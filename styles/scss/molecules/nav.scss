@@ -1,4 +1,5 @@
 .gds-nav,
+.gds-nav-pills,
 .gds-nav-tabs {
   padding-left: 0;
   margin-bottom: 0;
@@ -19,6 +20,7 @@
 }
 
 .gds-nav__list-item,
+.gds-nav-pills__list-item,
 .gds-nav-tabs__list-item {
   float: left;
   display: block;
@@ -26,6 +28,7 @@
 }
 
 .gds-nav__link,
+.gds-nav-pills__link,
 .gds-nav-tabs__link {
   color: $tabPrimaryTextDefaultColor; ///this needs fixing
   cursor: pointer;
@@ -39,30 +42,36 @@
 }
 
 .gds-nav--lg,
+.gds-nav-pills--lg,
 .gds-nav-tabs--lg {
   font-size: $font-size-plus-1;
 
   .gds-nav__link,
+  .gds-nav-pills__link,
   .gds-nav-tabs__link {
     padding: $unit ($unit * 3);
   }
 }
 
 .gds-nav--md,
+.gds-nav-pills--md,
 .gds-nav-tabs--md {
   font-size: $font-size;
 
   .gds-nav__link,
+  .gds-nav-pills__link,
   .gds-nav-tabs__link {
     padding: ($unit * 0.5) ($unit * 2);
   }
 }
 
 .gds-nav--sm,
+.gds-nav-pills--sm,
 .gds-nav-tabs--sm {
   font-size: $font-size-minus-2;
 
   .gds-nav__link,
+  .gds-nav-pills__link,
   .gds-nav-tabs__link {
     padding: ($unit * 0.25) $unit;
   }
@@ -298,7 +307,8 @@
   }
 }
 
-.gds-nav-tabs__list-item--disabled {
+.gds-nav-tabs__list-item--disabled,
+.gds-nav-tabs--underline__list-item--disabled {
   color: $gg-light-2 !important;
   cursor: not-allowed !important;
   > * {
@@ -404,14 +414,16 @@
 .gds-nav-tabs--underline-primary,
 .gds-nav-tabs--underline-secondary {
   .gds-nav-tabs__list-item--active.gds-nav-tabs__list-item--underline
-    .gds-nav-tabs__link--underline {
+    .gds-nav-tabs__link--underline,
+  .gds-nav-tabs--underline__link {
     height: calc(100% + 2px);
     background-color: rgba(white, 0.1);
     color: white !important;
     box-shadow: 0px 0px 5px rgba(black, 0.1);
   }
 
-  .gds-nav-tabs__link--underline {
+  .gds-nav-tabs__link--underline,
+  .gds-nav-tabs--underline__link {
     color: rgba(white, 0.8) !important;
     &:hover {
       color: rgba(white, 1) !important;
@@ -431,7 +443,8 @@
   }
 }
 
-.gds-nav-tabs__link--underline {
+.gds-nav-tabs__link--underline,
+.gds-nav-tabs--underline__link {
   color: $gg-dark-4;
   cursor: pointer;
 
@@ -464,11 +477,8 @@
   }
 }
 
-.gds-nav-tabs--underline__link {
-  @extend .gds-nav-tabs__link--underline;
-}
-
-.gds-nav-tabs__list-item--underline {
+.gds-nav-tabs__list-item--underline,
+.gds-nav-tabs--underline__list-item {
   top: $cap-size;
   box-shadow: none;
   border-bottom: $cap-size solid transparent;
@@ -478,14 +488,6 @@
       border-bottom: 0;
     }
   }
-}
-
-.gds-nav-tabs--underline__list-item {
-  @extend .gds-nav-tabs__list-item--underline;
-}
-
-.gds-nav-tabs--underline__list-item--disabled {
-  @extend .gds-nav-tabs__list-item--disabled;
 }
 
 .gds-nav-tabs__list-item--active .gds-nav-tabs__link {
@@ -511,10 +513,13 @@
   }
 }
 
-.gds-nav-tabs__list-item--active.gds-nav-tabs__list-item--underline {
+.gds-nav-tabs__list-item--active.gds-nav-tabs__list-item--underline,
+.gds-nav-tabs--underline__list-item--active {
   border-bottom: $cap-size solid $tabPrimaryUnderlineHoverColor;
   top: $cap-size;
-  .gds-nav-tabs__link--underline {
+  .gds-nav-tabs__link--underline,
+  .gds-nav-tabs--underline__link,
+  .gds-nav-tabs--underline__link {
     color: $tabPrimaryTextDefaultColor;
     text-shadow: none;
     box-shadow: none;
@@ -528,28 +533,9 @@
   }
 }
 
-.gds-nav-tabs--underline__list-item--active {
-  @extend .gds-nav-tabs__list-item--active.gds-nav-tabs__list-item--underline;
-  .gds-nav-tabs--underline__link {
-    @extend .gds-nav-tabs__link--underline;
-  }
-}
-
 // Pill navs
-.gds-nav-pills {
-  @extend .gds-nav;
-}
-
-.gds-nav-pills--lg {
-  @extend .gds-nav--lg;
-}
-
-.gds-nav-pills--md {
-  @extend .gds-nav--md;
-}
 
 .gds-nav-pills--sm {
-  @extend .gds-nav--sm;
   .gds-nav-pills__link {
     padding-top: ($unit * 0.3);
     padding-bottom: ($unit * 0.2);
@@ -609,7 +595,6 @@
 }
 
 .gds-nav-pills__list-item {
-  @extend .gds-nav__list-item;
   margin: 0 ($unit * 0.25);
   &:last-child {
     margin-right: 0;
@@ -638,7 +623,6 @@
 }
 
 .gds-nav-pills__link {
-  @extend .gds-nav__link;
   z-index: $z-index-1;
   border-radius: $border-radius;
   border-left: 1px solid transparent;

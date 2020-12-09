@@ -84,14 +84,13 @@
 .gds-multi-select__button {
   display: block;
   width: 100%;
-  @extend .gds-button-dropdown__button;
-  @include defaultShadows($gg-light-3, black);
   color: $gg-dark-4;
   background-color: white;
   text-shadow: none;
   text-align: left;
   font-family: $pri-font-regular;
   z-index: $z-index-3;
+  @include defaultShadows($gg-light-3, black);
 
   &:hover {
     background-color: white;
@@ -111,12 +110,7 @@
   }
 }
 
-.gds-multi-select__button--primary {
-  @extend .gds-button--primary;
-}
-
 .gds-multi-select__menu {
-  @extend .gds-button-dropdown__menu;
   background-color: white;
   border: none !important;
   padding: 2px 1px 1px 1px;
@@ -125,12 +119,7 @@
   z-index: $z-index-2;
 }
 
-.gds-multi-select__menu-item {
-  @extend .gds-button-dropdown__menu-item;
-}
-
 .gds-multi-select__menu-link {
-  @extend .gds-button-dropdown__menu-link;
   @include no-select();
   padding: $unit/4 0;
   cursor: pointer;
@@ -142,10 +131,14 @@
     background-color: rgba($primaryLight4Color, 0.95);
     > .gds-multi-select__option {
       .gds-form-group__checkbox {
-        @extend .gds-form-group__checkbox--inverse;
+        .gds-form-group__checkbox-label:hover {
+          .gds-form-group__checkbox-indicator {
+            border-color: $primaryLight4Color;
+          }
+        }
       }
       .gds-form-group__checkbox-indicator {
-        @extend .gds-form-group__checkbox-indicator--inverse;
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23#{strip-hash(#ffffff)}%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
         border-color: white;
       }
       .gds-form-group__checkbox-label {
@@ -182,10 +175,14 @@
     background-color: rgba($primaryLight4Color, 0.95);
     > .gds-multi-select__option {
       .gds-form-group__checkbox {
-        @extend .gds-form-group__checkbox--inverse;
+        .gds-form-group__checkbox-label:hover {
+          .gds-form-group__checkbox-indicator {
+            border-color: $primaryLight4Color;
+          }
+        }
       }
       .gds-form-group__checkbox-indicator {
-        @extend .gds-form-group__checkbox-indicator--inverse;
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23#{strip-hash(#ffffff)}%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
         border-color: white;
       }
       .gds-form-group__checkbox-label {
@@ -213,7 +210,6 @@
 }
 
 .gds-multi-select__sub-menu {
-  @extend .gds-accordion__child-items;
   background-color: $gg-light-1;
   color: $gg-dark-4;
   &:after {
@@ -229,6 +225,10 @@
   max-height: 2000px;
   opacity: 1;
   @include transition-ease-in(all, 250ms);
+}
+
+.gds-multi-select__sub-menu > .gds-multi-select__menu-link {
+  padding-left: 1rem;
 }
 
 .gds-button-dropdown--active {

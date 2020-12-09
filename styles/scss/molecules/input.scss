@@ -121,7 +121,8 @@
 }
 
 // Help text
-.gds-form-group__text-help {
+.gds-form-group__text-help,
+.gds-search-select__text-help {
   background-color: $gg-light-3;
   border-bottom-left-radius: $input-border-radius;
   border-bottom-right-radius: $input-border-radius;
@@ -220,13 +221,17 @@
 // Common input styles
 .gds-form-group__input-common,
 .gds-form-group__select-input,
+.gds-search-select__input,
 .gds-form-group__select-multiple[multiple],
 .gds-form-group__range-input,
 .gds-form-group__text-input,
+.gds-search-select__input,
 .gds-form-group__text-area-input,
 .gds-form-group__date-group,
 .gds-form-group__text-input--xs,
+.gds-search-select__input--xs,
 .gds-form-group__text-input--sm,
+.gds-search-select__input--sm,
 .gds-form-group__text-input--lg {
   display: block;
   width: 100%;
@@ -245,10 +250,13 @@
 
 // Text inputs
 .gds-form-group__text-input,
+.gds-search-select__input,
 .gds-form-group__text-area-input,
 .gds-form-group__date-group,
 .gds-form-group__text-input--xs,
+.gds-search-select__input--xs,
 .gds-form-group__text-input--sm,
+.gds-search-select__input--sm,
 .gds-form-group__text-input--lg {
   background-size: auto 75%;
   color: inherit;
@@ -376,21 +384,24 @@
 }
 
 // Xtra small text inputs
-.gds-form-group__text-input--xs {
+.gds-form-group__text-input--xs,
+.gds-search-select__input--xs {
   height: $input-height-xs;
   font-size: $font-size-minus-3;
   padding: $input-padding-xs;
 }
 
 // Small text inputs
-.gds-form-group__text-input--sm {
+.gds-form-group__text-input--sm,
+.gds-search-select__input--sm {
   height: $input-height-sm;
   font-size: $font-size-minus-2;
   padding: $input-padding-sm;
 }
 
 // Large text inputs
-.gds-form-group__text-input--lg {
+.gds-form-group__text-input--lg,
+.gds-search-select__input--lg {
   height: $input-height-lg;
   font-size: $font-size-plus-2;
   padding: $input-padding-lg;
@@ -622,6 +633,7 @@
 
 // Select inputs
 .gds-form-group__select-input,
+.gds-search-select__input,
 .gds-form-group__select-multiple[multiple] {
   height: $input-height-md;
   top: 0;
@@ -655,7 +667,8 @@
   }
 }
 
-.gds-form-group__select-input--dark {
+.gds-form-group__select-input--dark,
+.gds-search-select__input--dark {
   background-color: mix($gg-dark-3, white, 90%);
   color: white;
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A#FFFFFF%3B%22/%3E%3C/svg%3E");
@@ -694,20 +707,23 @@
   display: flex;
 }
 
-.gds-form-group__select-input--lg {
+.gds-form-group__select-input--lg,
+.gds-search-select__input--lg {
   height: $input-height-lg;
   font-size: $font-size-plus-2;
   padding: $input-padding-lg;
 }
 
-.gds-form-group__select-input--sm {
+.gds-form-group__select-input--sm,
+.gds-search-select__input--sm {
   height: $input-height-sm;
   font-size: $font-size-minus-2;
   padding: $input-padding-sm;
   background-position: right ($unit * 0.75) center;
 }
 
-.gds-form-group__select-input--xs {
+.gds-form-group__select-input--xs,
+.gds-search-select__input--xs {
   height: $input-height-xs;
   font-size: $font-size-minus-3;
   padding: $input-padding-xs;
@@ -732,15 +748,6 @@
 .gds-form-group__color-input {
   display: block;
 }
-
-// Success, warning, danger select inputs
-// .gds-form-group--success .gds-form-group__select-input,
-// .gds-form-group--warning .gds-form-group__select-input,
-// .gds-form-group--danger .gds-form-group__select-input {
-//   color: white;
-//   text-shadow: 0 2px 2px rgba(0,0,0,0.4);
-//   background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3Awhite%3B%22/%3E%3C/svg%3E') !important;
-// }
 
 .gds-form-group__select-input--inline {
   display: inline-block;
@@ -1568,7 +1575,8 @@ $thumb-width: ($unit * 0.75);
     background-color: $successColor;
   }
 
-  .gds-form-group__select-input {
+  .gds-form-group__select-input,
+  .gds-search-select__input {
     @include defaultShadows($successColor, black);
     color: $successColor;
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($successColor)}%3B%22/%3E%3C/svg%3E");
@@ -1591,7 +1599,7 @@ $thumb-width: ($unit * 0.75);
   }
 
   .gds-form-group__text-input,
-  .gds-form-group__text-area-input {
+  .gds-search-select__input .gds-form-group__text-area-input {
     box-shadow: inset 0 -0.125rem 0 0 $successColor,
       inset 0 0 0 1px $successColor;
     &:hover {
@@ -1705,6 +1713,7 @@ $thumb-width: ($unit * 0.75);
   }
 
   .gds-form-group__text-input,
+  .gds-search-select__input,
   .gds-form-group__text-area-input {
     box-shadow: inset 0 -0.125rem 0 0 $warningColor,
       inset 0 0 0 1px $warningColor;
@@ -1718,7 +1727,8 @@ $thumb-width: ($unit * 0.75);
     }
   }
 
-  .gds-form-group__select-input {
+  .gds-form-group__select-input,
+  .gds-search-select__input {
     @include defaultShadows($warningColor, black);
     color: $warningColor;
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($warningColor)}%3B%22/%3E%3C/svg%3E");
@@ -1840,11 +1850,13 @@ $thumb-width: ($unit * 0.75);
     background-color: $dangerColor;
   }
 
-  .gds-form-group__text-input {
+  .gds-form-group__text-input,
+  .gds-search-select__input {
     box-shadow: inset 0 #{-$cap-size} 0 0 $dangerColor;
   }
 
-  .gds-form-group__select-input {
+  .gds-form-group__select-input,
+  .gds-search-select__input {
     @include defaultShadows($dangerColor, black);
     color: $dangerColor;
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($dangerColor)}%3B%22/%3E%3C/svg%3E");
@@ -1867,6 +1879,7 @@ $thumb-width: ($unit * 0.75);
   }
 
   .gds-form-group__text-input,
+  .gds-search-select__input,
   .gds-form-group__text-area-input {
     box-shadow: inset 0 -0.125rem 0 0 $dangerColor, inset 0 0 0 1px $dangerColor;
     &:hover {
@@ -1980,7 +1993,8 @@ $thumb-width: ($unit * 0.75);
     pointer-events: none;
   }
 
-  .gds-form-group__text-input {
+  .gds-form-group__text-input,
+  .gds-search-select__input {
     background-color: $gg-light-1;
     border: 1px solid $gg-light-2;
   }

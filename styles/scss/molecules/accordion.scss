@@ -232,7 +232,8 @@
 //// END ARROW ICONS ////
 
 //// CHILD ITEMS UL ELEMENT ////
-.gds-accordion__child-items {
+.gds-accordion__child-items,
+.gds-multi-select__sub-menu {
   max-height: 0px;
   width: 100%;
   vertical-align: bottom;

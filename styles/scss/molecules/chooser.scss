@@ -150,7 +150,8 @@
   .gds-chooser__menu {
     transform: scaleY(1);
   }
-  .gds-button-dropdown__menu-item {
+  .gds-button-dropdown__menu-item,
+  .gds-multi-select__menu-item {
     transform: translateX(0);
     opacity: 1;
   }
