@@ -72,7 +72,8 @@
 
   // Bold
   strong {
-    @extend .gds-text--bold;
+    font-family: $pri-font-semibold;
+    font-weight: $font-weight-bold;
   }
 
   // Italic

@@ -139,7 +139,7 @@
   @extend .gds-button--primary;
   font-size: $btn-font-size-small;
   padding: $btn-padding-small;
-  @extend .-m-b-0;
+  margin-bottom: 0 !important;
   border-radius: 0;
   width: 39px;
 }

@@ -138,8 +138,8 @@
   padding: $btn-padding-small;
   @extend .gds-button--default;
   @extend .-color-bg-white;
-  @extend .-m-b-0;
-  @extend .-m-l-2;
+  margin-bottom: 0 !important;
+  margin-left: 0.5rem !important;
 }
 
 .gds-anim-timeline__asset-avatar {

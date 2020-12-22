@@ -98,7 +98,7 @@
   text-align: left;
   height: ($unit * 1.5);
   color: white;
-  @extend .-z-3;
+  z-index: $z-index-3 !important;
 
   &:before {
     @include transition-ease-out(all, 200ms);
@@ -136,8 +136,11 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  @extend .gds-slab-nav__item-label;
-  @extend .-z-4;
+  font-family: $pri-font-bold;
+  font-size: $font-size-minus-3;
+  text-transform: uppercase;
+  text-shadow: 0px 1px 2px rgba(black, 0.4);
+  z-index: $z-index-4 !important;
   cursor: pointer;
 
   &:after {
@@ -179,7 +182,11 @@
 }
 
 .gds-slab-nav__dropdown-menu-link {
-  @extend .gds-slab-nav__item-label;
+  font-family: $pri-font-bold;
+  font-size: $font-size-minus-3;
+  text-transform: uppercase;
+  text-shadow: 0px 1px 2px rgba(black, 0.4);
+  z-index: $z-index-1;
   display: block;
   padding: ($unit / 8) ($unit / 2);
   @include transition-ease-out(all, 200ms);
@@ -407,8 +414,8 @@
 }
 
 .gds-slab-nav__item-badge {
-  @extend .gds-badge;
-  @extend .gds-badge--danger;
+  background: $dangerLight5Color;
+  color: $dangerDark5Color;
   border-radius: 20px;
   box-shadow: 0px 1px 2px rgba(black, 0.4) !important;
 }
