@@ -408,7 +408,6 @@
     color: $pageHeaderPrimaryBackgroundColor;
   }
   & .-ellipsis {
-    @extend .gds-page-header__breadcrumbs-link;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -587,10 +586,11 @@
 
 /*alias - need to phase this out*/
 .gds-page-header__secondary-nav__icon--link {
-  @extend .gds-page-header__secondary-nav__icon-link;
-}
-
-.gds-page-header__secondary-nav__icon--link-active {
+  color: $gg-light-4;
+  @include transition-ease-out(all, 250ms);
+  &:hover {
+    color: $pageHeaderSecondaryBackgroundColor;
+  }
 }
 
 .gds-page-header__page-name {

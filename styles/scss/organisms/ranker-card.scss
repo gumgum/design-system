@@ -61,8 +61,17 @@ $ranker-margin-sm: 0.25rem;
 }
 
 .gds-ranker-card__number {
-  @extend .gds-number-circle;
-  @extend .gds-number-circle--white;
+  border: 1px solid $numberCircleBorderColor;
+  border-radius: 50%;
+  padding: ($unit / 4) 0;
+  margin-right: $unit;
+  font-size: $font-size-minus-1;
+  float: left;
+  width: ($unit * 2.25);
+  height: ($unit * 2.25);
+  text-align: center;
+  color: #ffffff;
+  border-color: #ffffff;
   font-family: $pri-font-regular;
   position: absolute;
   top: 10px;
@@ -73,10 +82,13 @@ $ranker-margin-sm: 0.25rem;
 }
 
 .gds-ranker-card__number--sm {
-  @extend .gds-number-circle--lg;
+  width: ($unit * 3);
+  height: ($unit * 3);
+  line-height: ($unit * 2.9);
   top: -24px;
   left: -24px;
   font-size: 10px;
+  padding: 0;
   padding-top: 12px;
   padding-left: 19px;
   border: none;

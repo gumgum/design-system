@@ -86,8 +86,8 @@
   top: auto;
   right: 0px;
   bottom: -54px;
-  @extend .-bor-rad-tl-0;
-  @extend .-bor-rad-tr-0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 
   .gds-refinery__open-icon {
     display: none;
