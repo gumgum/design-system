@@ -45,7 +45,7 @@ body.-has-persist-nav {
     bottom: 0;
     left: -$persistant-menu-width;
     background-color: white;
-    z-index: $z-index-6; // Can't @extend inside @media
+    z-index: $z-index-6;
   }
 }
 

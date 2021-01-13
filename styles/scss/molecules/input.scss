@@ -232,7 +232,9 @@
 .gds-search-select__input--xs,
 .gds-form-group__text-input--sm,
 .gds-search-select__input--sm,
-.gds-form-group__text-input--lg {
+.gds-form-group__text-input--lg,
+.ReactTable .-pagination input,
+.ReactTable .-pagination select {
   display: block;
   width: 100%;
   padding: $input-padding-md;
@@ -257,7 +259,8 @@
 .gds-search-select__input--xs,
 .gds-form-group__text-input--sm,
 .gds-search-select__input--sm,
-.gds-form-group__text-input--lg {
+.gds-form-group__text-input--lg,
+.ReactTable .-pagination input {
   background-size: auto 75%;
   color: inherit;
   border: none;
@@ -633,6 +636,7 @@
 
 // Select inputs
 .gds-form-group__select-input,
+.ReactTable .-pagination select,
 .gds-search-select__input,
 .gds-form-group__select-multiple[multiple] {
   height: $input-height-md;

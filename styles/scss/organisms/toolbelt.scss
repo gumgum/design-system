@@ -299,7 +299,7 @@
   padding: $btn-padding-small;
   @extend .gds-button--dark;
   @extend .gds-button--button-cap;
-  @extend .-color-tx-white;
+  color: #ffffff;
   width: 37px;
   height: 37px;
 
@@ -312,13 +312,9 @@
 
 .gds-toolbelt__item-label {
   text-align: center;
-  color: rgba(white, 0.7);
-  font-family: aspiralight;
   padding: 0;
-  margin-bottom: 0;
   border-top: 1px solid rgba(black, 0.2);
   box-shadow: inset 0 -15px 30px -15px rgba(black, 0.5);
-  font-size: ($unit * 0.3);
   height: ($unit * 0.7);
   line-height: ($unit * 0.5);
   font-family: $pri-font-bold;
@@ -330,7 +326,7 @@
   text-transform: uppercase;
   @include transition-back(all, 250ms);
   user-select: none;
-  @extend .-pointer-events--none;
+  pointer-events: none;
 }
 
 .gds-toolbelt__pouch {

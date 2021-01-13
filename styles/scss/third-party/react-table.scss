@@ -244,7 +244,6 @@
 }
 
 .rt-resizable-header {
-  @extend .gds-table__header;
   padding: $table-padding-normal !important;
   background-color: $primaryColor;
 
@@ -312,22 +311,18 @@
 }
 
 .ReactTable .-pagination input {
-  @extend .gds-form-group__text-input;
   height: $input-height-sm;
   font-size: $font-size-minus-2;
   padding: $input-padding-sm;
 }
 
 .ReactTable .-pagination select {
-  @extend .gds-form-group__select-input;
   height: $input-height-sm;
   font-size: $font-size-minus-2;
   padding: $input-padding-sm;
 }
 
 .ReactTable .-pagination .-btn {
-  @extend .gds-button;
-  @extend .gds-button--primary;
   font-size: $btn-font-size-small;
   padding: $btn-padding-small;
   display: block;
@@ -337,7 +332,6 @@
 }
 
 .ReactTable .-pagination .-btn[disabled] {
-  opacity: 0.5;
   cursor: default;
   opacity: 0.5;
   filter: grayscale(75%);

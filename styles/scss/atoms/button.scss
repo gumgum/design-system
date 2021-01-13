@@ -172,6 +172,7 @@
 }
 
 .gds-button,
+.react-datepicker__today-button,
 .gds-radio-block__button,
 .gds-corner-content__button,
 .gds-circular-button,
@@ -179,7 +180,8 @@
 .gds-button-dropdown__button,
 .gds-multi-select__button,
 .gds-button-group__button,
-.gds-button-dropdown--in-group > .gds-button-dropdown__button {
+.gds-button-dropdown--in-group > .gds-button-dropdown__button,
+.ReactTable .-pagination .-btn {
   display: inline-block;
   font-family: $pri-font;
   font-weight: $font-weight-normal;
@@ -392,6 +394,8 @@
 
 // Primary buttons
 .gds-button--primary,
+.react-datepicker__today-button,
+.ReactTable .-pagination .-btn,
 .gds-circular-button--primary,
 .gds-multi-select__button--primary {
   @include backgroundGradient(

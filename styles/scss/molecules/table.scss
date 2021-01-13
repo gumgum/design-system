@@ -23,12 +23,14 @@
   overflow: auto;
 
   .gds-table__header,
+  .rt-resizable-header,
   .gds-table__row td {
     white-space: nowrap;
   }
 }
 
-.gds-table__header {
+.gds-table__header,
+.rt-resizable-header {
   position: relative;
   background-color: $tableHeaderPrimaryBackgroundDefaultColor;
   color: white;

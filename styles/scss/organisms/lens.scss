@@ -130,7 +130,7 @@
 .gds-lens--display.gds-lens--active ~ .gds-lens-base,
 .gds-lens--active.gds-lens--valid ~ .gds-lens-base,
 .gds-lens--active.gds-lens--invalid ~ .gds-lens-base {
-  @extend .gds-lens-base--desaturate;
+  filter: grayscale(100%);
 }
 
 .gds-lens--display:hover .gds-lens__viewport,
