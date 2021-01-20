@@ -128,12 +128,16 @@ body.-has-persist-nav {
 }
 
 .gds-persist-nav__sub-nav {
-  @extend .gds-tree__sub-nav;
   padding-left: ($unit * 2.75);
 
   &:before {
+    content: "";
+    position: absolute;
+    top: 0;
     left: ($unit * 1.75);
     bottom: calc(#{$unit} - 2px);
+    width: 1px;
+    background-color: $gg-light-2;
   }
 }
 
@@ -142,10 +146,16 @@ body.-has-persist-nav {
 }
 
 .gds-persist-nav__sub-item {
-  @extend .gds-tree__sub-item;
-
   &:before {
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: $unit;
+    right: 100%;
     width: calc(#{$unit} - 1px);
+    background-color: $gg-light-2;
+    z-index: $z-index-3;
+    @include transition-ease-out(all, 150ms);
   }
 
   .gds-persist-nav__link {

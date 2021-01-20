@@ -325,9 +325,9 @@
   border-color: $dangerColor !important;
 }
 
-.gds-search-select__checkbox-input {
-  @extend .gds-form-group__checkbox-input;
-}
+// .gds-search-select__checkbox-input {
+//   @extend .gds-form-group__checkbox-input;
+// }
 
 .gds-search-select__tag-holder {
   position: relative;
@@ -345,19 +345,31 @@
 }
 
 .gds-search-select__tag-holder--bubble {
-  position: absolute;
-  background-color: white;
   right: 180px;
   width: auto;
   top: -2px;
-  min-height: auto;
   pointer-events: none;
   transform: translateY(calc(-50% + 27px)) translateX(50px);
-  z-index: $z-index-9;
   @include transition-ease-out(all, 100ms);
   opacity: 0;
-  @extend .gds-balloon;
-  @extend .gds-balloon--left;
+  position: absolute;
+  z-index: $z-index-9;
+  max-width: 250px;
+  border-radius: $border-radius;
+  background-color: $balloon-bg-color;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $balloon-bd-color;
+  color: $balloon-tx-color;
+  min-height: 90px;
+  box-shadow: 0 0 $unit rgba(black, 0.1);
+
+  @include createNubbin(
+    "right",
+    $balloon-arrow-size,
+    $balloon-bg-color,
+    $balloon-bd-color
+  );
 }
 
 .gds-search-select__tag-holder--bubble-sm {

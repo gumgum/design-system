@@ -152,7 +152,8 @@
 }
 
 .gds-form-group__input-group-addon,
-.gds-form-group__date-group-addon {
+.gds-form-group__date-group-addon,
+.gds-anim-timeline__button--remove {
   flex-basis: auto;
   margin-bottom: 0;
   @include transition-ease-out(all, 100ms);
@@ -221,6 +222,7 @@
 // Common input styles
 .gds-form-group__input-common,
 .gds-form-group__select-input,
+.gds-anim-timeline__select-input,
 .gds-search-select__input,
 .gds-form-group__select-multiple[multiple],
 .gds-form-group__range-input,
@@ -233,8 +235,10 @@
 .gds-form-group__text-input--sm,
 .gds-search-select__input--sm,
 .gds-form-group__text-input--lg,
+.gds-toolbelt__item-input,
 .ReactTable .-pagination input,
-.ReactTable .-pagination select {
+.ReactTable .-pagination select,
+.DayPicker-Caption select {
   display: block;
   width: 100%;
   padding: $input-padding-md;
@@ -252,6 +256,7 @@
 
 // Text inputs
 .gds-form-group__text-input,
+.gds-toolbelt__item-input,
 .gds-search-select__input,
 .gds-form-group__text-area-input,
 .gds-form-group__date-group,
@@ -311,7 +316,8 @@
 }
 
 .gds-form-group__text-input--dark,
-.gds-form-group__text-area-input--dark {
+.gds-form-group__text-area-input--dark,
+.gds-toolbelt__item-input {
   background-color: mix($gg-dark-3, white, 90%);
   @include defaultShadows($gg-gray, black);
 
@@ -636,6 +642,8 @@
 
 // Select inputs
 .gds-form-group__select-input,
+.gds-anim-timeline__select-input,
+.DayPicker-Caption select,
 .ReactTable .-pagination select,
 .gds-search-select__input,
 .gds-form-group__select-multiple[multiple] {
@@ -845,7 +853,8 @@
   display: inline-block;
 }
 
-.gds-form-group__checkbox-input {
+.gds-form-group__checkbox-input,
+.gds-search-select__checkbox-input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -881,19 +890,24 @@
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23#{strip-hash(#ffffff)}%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
 }
 
-.gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator {
+.gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+.gds-search-select__checkbox-input:checked
+  + .gds-form-group__checkbox-indicator {
   border-color: $primaryColor;
   background-position: center center;
   background-size: 100% 100%;
 }
 
 .gds-form-group__checkbox-input:checked
+  + .gds-form-group__checkbox-indicator--inverse,
+.gds-search-select__checkbox-input:checked
   + .gds-form-group__checkbox-indicator--inverse {
   border-color: white;
 }
 
 // Checkbox focus effect
-.gds-form-group__checkbox-input:focus + .gds-form-group__checkbox-indicator {
+.gds-form-group__checkbox-input:focus + .gds-form-group__checkbox-indicator,
+.gds-search-select__checkbox-input:focus + .gds-form-group__checkbox-indicator {
   box-shadow: $input-focus-effect;
 }
 
@@ -1640,7 +1654,8 @@ $thumb-width: ($unit * 0.75);
     border-color: $successColor;
   }
 
-  .gds-form-group__checkbox-input:checked
+  .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+  .gds-search-select__checkbox-input:checked
     + .gds-form-group__checkbox-indicator {
     border-color: $successColor;
   }
@@ -1662,6 +1677,8 @@ $thumb-width: ($unit * 0.75);
   }
 
   .gds-form-group__toggleswitch-input:checked
+    ~ .gds-form-group__toggleswitch-indicator,
+  .gds-search-select__checkbox-input:checked
     ~ .gds-form-group__toggleswitch-indicator {
     &:after {
       background-color: $successColor;
@@ -1778,7 +1795,8 @@ $thumb-width: ($unit * 0.75);
     border-color: $warningColor;
   }
 
-  .gds-form-group__checkbox-input:checked
+  .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+  .gds-search-select__checkbox-input:checked
     + .gds-form-group__checkbox-indicator {
     border-color: $warningColor;
   }
@@ -1920,7 +1938,8 @@ $thumb-width: ($unit * 0.75);
     border-color: $dangerColor;
   }
 
-  .gds-form-group__checkbox-input:checked
+  .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+  .gds-search-select__checkbox-input:checked
     + .gds-form-group__checkbox-indicator {
     border-color: $dangerColor;
   }

@@ -80,12 +80,17 @@
 }
 
 .DayPicker-Caption select {
-  @extend .gds-form-group;
-  @extend .gds-form-group__select-input;
-  @extend .gds-form-group__select-input--xs;
+  color: $gg-dark-4;
+  border-color: $gg-light-3;
+  border-bottom-color: $gg-light-3;
+  height: $input-height-xs;
+  font-size: $font-size-minus-3;
+  padding: $input-padding-xs;
+  background-position: right ($unit * 0.4) center;
   outline: 0;
   width: 37%;
   display: inline;
+  @include transition-ease-out(all, 100ms);
 }
 
 .DayPicker-Weekdays {
@@ -138,10 +143,8 @@
 }
 
 .DayPicker-TodayButton {
-  @extend .gds-button;
   font-size: $btn-font-size-xsmall;
   padding: $btn-padding-xsmall;
-  @extend .gds-button--primary;
   cursor: pointer;
   outline: none;
 }
@@ -190,5 +193,7 @@
 }
 
 .DayPickerInput input {
-  @extend .gds-form-group__text-input--sm;
+  height: $input-height-sm;
+  font-size: $font-size-minus-2;
+  padding: $input-padding-sm;
 }

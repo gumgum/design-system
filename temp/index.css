@@ -11724,7 +11724,7 @@ select {
 .gds-text--body-md {
   font-size: 1rem; }
 
-.gds-text--body-sm, .gds-onboarder__body {
+.gds-text--body-sm {
   font-size: 0.8rem; }
 
 .gds-text--body-xs {
@@ -11839,8 +11839,8 @@ select {
     text-decoration: underline;
     color: #235a8f; }
 
-.gds-button, .gds-toolbelt__item-input-button, .gds-onboarder__button, .gds-anim-timeline__button--remove, .gds-anim-timeline__button--add, .DayPicker-TodayButton,
-.react-datepicker__today-button,
+.gds-button,
+.gds-toolbelt__item-input-button,
 .gds-radio-block__button,
 .gds-corner-content__button,
 .gds-circular-button,
@@ -11849,7 +11849,12 @@ select {
 .gds-multi-select__button,
 .gds-button-group__button,
 .gds-button-dropdown--in-group > .gds-button-dropdown__button,
-.ReactTable .-pagination .-btn {
+.gds-onboarder__button,
+.gds-anim-timeline__button--remove,
+.gds-anim-timeline__button--add,
+.react-datepicker__today-button,
+.ReactTable .-pagination .-btn,
+.DayPicker-TodayButton {
   display: inline-block;
   font-family: "Public Sans";
   font-weight: 300;
@@ -11886,8 +11891,8 @@ select {
   -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   /* easeOutQuart */ }
-  .gds-button > .fa, .gds-toolbelt__item-input-button > .fa, .gds-onboarder__button > .fa, .gds-anim-timeline__button--remove > .fa, .gds-anim-timeline__button--add > .fa, .DayPicker-TodayButton > .fa,
-  .react-datepicker__today-button > .fa,
+  .gds-button > .fa,
+  .gds-toolbelt__item-input-button > .fa,
   .gds-radio-block__button > .fa,
   .gds-corner-content__button > .fa,
   .gds-circular-button > .fa,
@@ -11896,7 +11901,12 @@ select {
   .gds-multi-select__button > .fa,
   .gds-button-group__button > .fa,
   .gds-button-dropdown--in-group > .gds-button-dropdown__button > .fa,
-  .ReactTable .-pagination .-btn > .fa {
+  .gds-onboarder__button > .fa,
+  .gds-anim-timeline__button--remove > .fa,
+  .gds-anim-timeline__button--add > .fa,
+  .react-datepicker__today-button > .fa,
+  .ReactTable .-pagination .-btn > .fa,
+  .DayPicker-TodayButton > .fa {
     vertical-align: middle; }
 
 .gds-button--inline-form-shift {
@@ -11909,24 +11919,14 @@ select {
   border-width: 1px;
   border-style: solid; }
 
-.gds-button[disabled="disabled"], .gds-toolbelt__item-input-button[disabled="disabled"], .gds-onboarder__button[disabled="disabled"], .gds-anim-timeline__button--remove[disabled="disabled"], .gds-anim-timeline__button--add[disabled="disabled"], .DayPicker-TodayButton[disabled="disabled"],
+.gds-button[disabled="disabled"],
 .gds-button[disabled],
-.gds-toolbelt__item-input-button[disabled],
-.gds-onboarder__button[disabled],
-.gds-anim-timeline__button--remove[disabled],
-.gds-anim-timeline__button--add[disabled],
-.DayPicker-TodayButton[disabled],
 .gds-button--disabled {
   opacity: 0.5;
   filter: grayscale(75%);
   pointer-events: none; }
-  .gds-button[disabled="disabled"]:hover, .gds-toolbelt__item-input-button[disabled="disabled"]:hover, .gds-onboarder__button[disabled="disabled"]:hover, .gds-anim-timeline__button--remove[disabled="disabled"]:hover, .gds-anim-timeline__button--add[disabled="disabled"]:hover, .DayPicker-TodayButton[disabled="disabled"]:hover,
+  .gds-button[disabled="disabled"]:hover,
   .gds-button[disabled]:hover,
-  .gds-toolbelt__item-input-button[disabled]:hover,
-  .gds-onboarder__button[disabled]:hover,
-  .gds-anim-timeline__button--remove[disabled]:hover,
-  .gds-anim-timeline__button--add[disabled]:hover,
-  .DayPicker-TodayButton[disabled]:hover,
   .gds-button--disabled:hover {
     box-shadow: none; }
 
@@ -11942,7 +11942,7 @@ select {
   font-size: 0.7rem;
   padding: 0.45rem 0.5rem 0.55rem 0.5rem; }
 
-.gds-button--default, .gds-anim-timeline__button--add,
+.gds-button--default,
 .gds-button--gray,
 .gds-circular-button--gray,
 .gds-circular-button--default,
@@ -11951,14 +11951,14 @@ select {
   color: white;
   text-shadow: none;
   background: linear-gradient(180deg, #acacac -10%, #949494 100%); }
-  .gds-button--default:hover, .gds-anim-timeline__button--add:hover,
+  .gds-button--default:hover,
   .gds-button--gray:hover,
   .gds-circular-button--gray:hover,
   .gds-circular-button--default:hover,
   .gds-button--toggle:hover,
   .gds-circular-button--toggle:hover {
     background: linear-gradient(180deg, #c4c4c4 -10%, #c4c4c4 100%); }
-  .gds-button--default:focus:hover, .gds-anim-timeline__button--add:focus:hover,
+  .gds-button--default:focus:hover,
   .gds-button--gray:focus:hover,
   .gds-circular-button--gray:focus:hover,
   .gds-circular-button--default:focus:hover,
@@ -11966,7 +11966,7 @@ select {
   .gds-circular-button--toggle:focus:hover {
     background: linear-gradient(180deg, #c4c4c4 -10%, #c4c4c4 100%);
     box-shadow: 0 0 0 2px #5fabd5; }
-  .gds-button--default:active, .gds-anim-timeline__button--add:active, .gds-button--default:active:focus, .gds-anim-timeline__button--add:active:focus,
+  .gds-button--default:active, .gds-button--default:active:focus,
   .gds-button--gray:active,
   .gds-button--gray:active:focus,
   .gds-circular-button--gray:active,
@@ -11979,14 +11979,14 @@ select {
   .gds-circular-button--toggle:active:focus {
     background: linear-gradient(180deg, #acacac -10%, #acacac 100%);
     box-shadow: 0 0 0 2px #5fabd5; }
-  .gds-button--default:focus, .gds-anim-timeline__button--add:focus,
+  .gds-button--default:focus,
   .gds-button--gray:focus,
   .gds-circular-button--gray:focus,
   .gds-circular-button--default:focus,
   .gds-button--toggle:focus,
   .gds-circular-button--toggle:focus {
     box-shadow: 0 0 0 2px #5fabd5; }
-  .gds-button--default.gds-button--active, .gds-button--active.gds-anim-timeline__button--add,
+  .gds-button--default.gds-button--active,
   .gds-button--gray.gds-button--active,
   .gds-circular-button--gray.gds-button--active,
   .gds-circular-button--default.gds-button--active,
@@ -12004,49 +12004,62 @@ select {
     background: linear-gradient(180deg, #1a80b9 -10%, #1a80b9 100%);
     color: white; }
 
-.gds-button--button-cap, .gds-toolbelt__item-input-button {
+.gds-button--button-cap,
+.gds-toolbelt__item-input-button {
   flex-basis: auto;
   margin-bottom: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
 .gds-button--outline,
-.gds-circular-button--outline {
+.gds-circular-button--outline,
+.gds-anim-timeline__button--add {
   color: #1b87c3;
   box-shadow: inset 0 0 0 0 #dbdbdb, inset 0 0 0 1px #dbdbdb, 0 0 0px 0px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0);
   background: linear-gradient(180deg, transparent -10%, transparent 100%); }
   .gds-button--outline else,
-  .gds-circular-button--outline else {
+  .gds-circular-button--outline else,
+  .gds-anim-timeline__button--add else {
     box-shadow: inset 0 0 0 0 #dbdbdb, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0); }
   .gds-button--outline:hover,
-  .gds-circular-button--outline:hover {
+  .gds-circular-button--outline:hover,
+  .gds-anim-timeline__button--add:hover {
     background: linear-gradient(180deg, transparent -10%, transparent 100%);
     box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0 0 rgba(0, 0, 0, 0.2); }
     .gds-button--outline:hover else,
-    .gds-circular-button--outline:hover else {
+    .gds-circular-button--outline:hover else,
+    .gds-anim-timeline__button--add:hover else {
       box-shadow: inset 0 0 0 0 #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 3px 0 rgba(0, 0, 0, 0.2); }
   .gds-button--outline:focus:hover,
-  .gds-circular-button--outline:focus:hover {
+  .gds-circular-button--outline:focus:hover,
+  .gds-anim-timeline__button--add:focus:hover {
     background: linear-gradient(180deg, transparent -10%, transparent 100%);
     box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 1px 1px #3293c9, 0 0 0 2 rgba(27, 135, 195, 0.6); }
     .gds-button--outline:focus:hover else,
-    .gds-circular-button--outline:focus:hover else {
+    .gds-circular-button--outline:focus:hover else,
+    .gds-anim-timeline__button--add:focus:hover else {
       box-shadow: inset 0 0 0 0 #1b87c3, 0 0 1px 1px #3293c9, 0 0 3px 0 rgba(0, 0, 0, 0.2); }
   .gds-button--outline:active, .gds-button--outline:active:focus,
   .gds-circular-button--outline:active,
-  .gds-circular-button--outline:active:focus {
+  .gds-circular-button--outline:active:focus,
+  .gds-anim-timeline__button--add:active,
+  .gds-anim-timeline__button--add:active:focus {
     background: linear-gradient(180deg, transparent -10%, transparent 100%);
     box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0 2px rgba(27, 135, 195, 0.4); }
     .gds-button--outline:active else, .gds-button--outline:active:focus else,
     .gds-circular-button--outline:active else,
-    .gds-circular-button--outline:active:focus else {
+    .gds-circular-button--outline:active:focus else,
+    .gds-anim-timeline__button--add:active else,
+    .gds-anim-timeline__button--add:active:focus else {
       box-shadow: inset 0 0 0 0 #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 1px 0 rgba(0, 0, 0, 0.4); }
   .gds-button--outline:focus,
-  .gds-circular-button--outline:focus {
+  .gds-circular-button--outline:focus,
+  .gds-anim-timeline__button--add:focus {
     background: linear-gradient(180deg, transparent -10%, transparent 100%);
     box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0 0 #3293c9, 0 0 0 2px rgba(27, 135, 195, 0.4); }
     .gds-button--outline:focus else,
-    .gds-circular-button--outline:focus else {
+    .gds-circular-button--outline:focus else,
+    .gds-anim-timeline__button--add:focus else {
       box-shadow: inset 0 0 0 0 #1b87c3, 0 0 1px 1px #3293c9, 0 0 0px 0 rgba(0, 0, 0, 0); }
 
 .gds-button--white,
@@ -12093,30 +12106,42 @@ select {
   .gds-button--text-toggle.gds-button--active-success {
     color: #32d996; }
 
-.gds-button--primary, .gds-onboarder__button, .gds-anim-timeline__button--remove, .DayPicker-TodayButton,
+.gds-button--primary,
 .react-datepicker__today-button,
 .ReactTable .-pagination .-btn,
 .gds-circular-button--primary,
-.gds-multi-select__button--primary {
+.gds-multi-select__button--primary,
+.gds-anim-timeline__button--remove,
+.gds-onboarder__button,
+.DayPicker-TodayButton {
   background: linear-gradient(180deg, #3293c9 -10%, #187ab0 100%); }
-  .gds-button--primary:hover, .gds-onboarder__button:hover, .gds-anim-timeline__button--remove:hover, .DayPicker-TodayButton:hover,
+  .gds-button--primary:hover,
   .react-datepicker__today-button:hover,
   .ReactTable .-pagination .-btn:hover,
   .gds-circular-button--primary:hover,
-  .gds-multi-select__button--primary:hover {
+  .gds-multi-select__button--primary:hover,
+  .gds-anim-timeline__button--remove:hover,
+  .gds-onboarder__button:hover,
+  .DayPicker-TodayButton:hover {
     background: linear-gradient(180deg, #3293c9 -10%, #3293c9 100%); }
-  .gds-button--primary:focus, .gds-onboarder__button:focus, .gds-anim-timeline__button--remove:focus, .DayPicker-TodayButton:focus,
+  .gds-button--primary:focus,
   .react-datepicker__today-button:focus,
   .ReactTable .-pagination .-btn:focus,
   .gds-circular-button--primary:focus,
-  .gds-multi-select__button--primary:focus {
+  .gds-multi-select__button--primary:focus,
+  .gds-anim-timeline__button--remove:focus,
+  .gds-onboarder__button:focus,
+  .DayPicker-TodayButton:focus {
     outline: none;
     box-shadow: 0 0 0 2px #5fabd5; }
-  .gds-button--primary:active, .gds-onboarder__button:active, .gds-anim-timeline__button--remove:active, .DayPicker-TodayButton:active,
+  .gds-button--primary:active,
   .react-datepicker__today-button:active,
   .ReactTable .-pagination .-btn:active,
   .gds-circular-button--primary:active,
-  .gds-multi-select__button--primary:active {
+  .gds-multi-select__button--primary:active,
+  .gds-anim-timeline__button--remove:active,
+  .gds-onboarder__button:active,
+  .DayPicker-TodayButton:active {
     background: linear-gradient(180deg, #187ab0 -10%, #187ab0 100%);
     box-shadow: 0 0 0 2px #5fabd5; }
 
@@ -12211,7 +12236,8 @@ select {
     background: linear-gradient(180deg, #6a66c1 -10%, #6a66c1 100%);
     box-shadow: 0 0 0 2px #9f9ce2; }
 
-.gds-button--dark, .gds-toolbelt__item-input-button,
+.gds-button--dark,
+.gds-toolbelt__item-input-button,
 .gds-circular-button--dark,
 .gds-button--dark-toggle,
 .gds-circular-button--dark-toggle,
@@ -12222,7 +12248,8 @@ select {
   color: #3d99cc;
   background-color: rgba(26, 128, 185, 0.1);
   box-shadow: inset 0 0 0 0 #dbdbdb, inset 0 0 0 1px #dbdbdb, 0 0 0px 0px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0); }
-  .gds-button--dark else, .gds-toolbelt__item-input-button else,
+  .gds-button--dark else,
+  .gds-toolbelt__item-input-button else,
   .gds-circular-button--dark else,
   .gds-button--dark-toggle else,
   .gds-circular-button--dark-toggle else,
@@ -12231,7 +12258,8 @@ select {
   .gds-button-dropdown__button--dark else,
   .gds-button-dropdown__button--dark-primary else {
     box-shadow: inset 0 0 0 0 #dbdbdb, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0); }
-  .gds-button--dark:hover, .gds-toolbelt__item-input-button:hover,
+  .gds-button--dark:hover,
+  .gds-toolbelt__item-input-button:hover,
   .gds-circular-button--dark:hover,
   .gds-button--dark-toggle:hover,
   .gds-circular-button--dark-toggle:hover,
@@ -12240,7 +12268,8 @@ select {
   .gds-button-dropdown__button--dark:hover,
   .gds-button-dropdown__button--dark-primary:hover {
     box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0 0 rgba(0, 0, 0, 0.2); }
-    .gds-button--dark:hover else, .gds-toolbelt__item-input-button:hover else,
+    .gds-button--dark:hover else,
+    .gds-toolbelt__item-input-button:hover else,
     .gds-circular-button--dark:hover else,
     .gds-button--dark-toggle:hover else,
     .gds-circular-button--dark-toggle:hover else,
@@ -12249,7 +12278,8 @@ select {
     .gds-button-dropdown__button--dark:hover else,
     .gds-button-dropdown__button--dark-primary:hover else {
       box-shadow: inset 0 0 0 0 #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 3px 0 rgba(0, 0, 0, 0.2); }
-  .gds-button--dark:focus:hover, .gds-toolbelt__item-input-button:focus:hover,
+  .gds-button--dark:focus:hover,
+  .gds-toolbelt__item-input-button:focus:hover,
   .gds-circular-button--dark:focus:hover,
   .gds-button--dark-toggle:focus:hover,
   .gds-circular-button--dark-toggle:focus:hover,
@@ -12258,7 +12288,8 @@ select {
   .gds-button-dropdown__button--dark:focus:hover,
   .gds-button-dropdown__button--dark-primary:focus:hover {
     box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 1px 1px #3293c9, 0 0 0 2 rgba(27, 135, 195, 0.6); }
-    .gds-button--dark:focus:hover else, .gds-toolbelt__item-input-button:focus:hover else,
+    .gds-button--dark:focus:hover else,
+    .gds-toolbelt__item-input-button:focus:hover else,
     .gds-circular-button--dark:focus:hover else,
     .gds-button--dark-toggle:focus:hover else,
     .gds-circular-button--dark-toggle:focus:hover else,
@@ -12267,7 +12298,9 @@ select {
     .gds-button-dropdown__button--dark:focus:hover else,
     .gds-button-dropdown__button--dark-primary:focus:hover else {
       box-shadow: inset 0 0 0 0 #1b87c3, 0 0 1px 1px #3293c9, 0 0 3px 0 rgba(0, 0, 0, 0.2); }
-  .gds-button--dark:active, .gds-toolbelt__item-input-button:active, .gds-button--dark:active:focus, .gds-toolbelt__item-input-button:active:focus,
+  .gds-button--dark:active, .gds-button--dark:active:focus,
+  .gds-toolbelt__item-input-button:active,
+  .gds-toolbelt__item-input-button:active:focus,
   .gds-circular-button--dark:active,
   .gds-circular-button--dark:active:focus,
   .gds-button--dark-toggle:active,
@@ -12283,7 +12316,9 @@ select {
   .gds-button-dropdown__button--dark-primary:active,
   .gds-button-dropdown__button--dark-primary:active:focus {
     box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0 2px rgba(27, 135, 195, 0.4); }
-    .gds-button--dark:active else, .gds-toolbelt__item-input-button:active else, .gds-button--dark:active:focus else, .gds-toolbelt__item-input-button:active:focus else,
+    .gds-button--dark:active else, .gds-button--dark:active:focus else,
+    .gds-toolbelt__item-input-button:active else,
+    .gds-toolbelt__item-input-button:active:focus else,
     .gds-circular-button--dark:active else,
     .gds-circular-button--dark:active:focus else,
     .gds-button--dark-toggle:active else,
@@ -12299,7 +12334,8 @@ select {
     .gds-button-dropdown__button--dark-primary:active else,
     .gds-button-dropdown__button--dark-primary:active:focus else {
       box-shadow: inset 0 0 0 0 #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 1px 0 rgba(0, 0, 0, 0.4); }
-  .gds-button--dark:focus, .gds-toolbelt__item-input-button:focus,
+  .gds-button--dark:focus,
+  .gds-toolbelt__item-input-button:focus,
   .gds-circular-button--dark:focus,
   .gds-button--dark-toggle:focus,
   .gds-circular-button--dark-toggle:focus,
@@ -12308,7 +12344,8 @@ select {
   .gds-button-dropdown__button--dark:focus,
   .gds-button-dropdown__button--dark-primary:focus {
     box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0 0 #3293c9, 0 0 0 2px rgba(27, 135, 195, 0.4); }
-    .gds-button--dark:focus else, .gds-toolbelt__item-input-button:focus else,
+    .gds-button--dark:focus else,
+    .gds-toolbelt__item-input-button:focus else,
     .gds-circular-button--dark:focus else,
     .gds-button--dark-toggle:focus else,
     .gds-circular-button--dark-toggle:focus else,
@@ -12613,7 +12650,6 @@ select {
 
 .gds-button--close-x,
 .gds-modal__close-button,
-.gds-onboarder__close,
 .gds-modal__close-button--secondary,
 .gds-modal__close-button--tertiary,
 .gds-modal__close-button--quaternary {
@@ -12630,7 +12666,6 @@ select {
   right: 0; }
   .gds-button--close-x:hover,
   .gds-modal__close-button:hover,
-  .gds-onboarder__close:hover,
   .gds-modal__close-button--secondary:hover,
   .gds-modal__close-button--tertiary:hover,
   .gds-modal__close-button--quaternary:hover {
@@ -12638,43 +12673,17 @@ select {
     cursor: pointer; }
   .gds-button--close-x:focus,
   .gds-modal__close-button:focus,
-  .gds-onboarder__close:focus,
   .gds-modal__close-button--secondary:focus,
   .gds-modal__close-button--tertiary:focus,
   .gds-modal__close-button--quaternary:focus {
     outline: none; }
 
-.gds-button:focus, .gds-toolbelt__item-input-button:focus, .gds-onboarder__button:focus, .gds-anim-timeline__button--remove:focus, .gds-anim-timeline__button--add:focus, .DayPicker-TodayButton:focus,
+.gds-button:focus,
 .gds-button.focus,
-.focus.gds-toolbelt__item-input-button,
-.focus.gds-onboarder__button,
-.focus.gds-anim-timeline__button--remove,
-.focus.gds-anim-timeline__button--add,
-.focus.DayPicker-TodayButton,
 .gds-button:active:focus,
-.gds-toolbelt__item-input-button:active:focus,
-.gds-onboarder__button:active:focus,
-.gds-anim-timeline__button--remove:active:focus,
-.gds-anim-timeline__button--add:active:focus,
-.DayPicker-TodayButton:active:focus,
 .gds-button:active.focus,
-.gds-toolbelt__item-input-button:active.focus,
-.gds-onboarder__button:active.focus,
-.gds-anim-timeline__button--remove:active.focus,
-.gds-anim-timeline__button--add:active.focus,
-.DayPicker-TodayButton:active.focus,
 .gds-button.active:focus,
-.active.gds-toolbelt__item-input-button:focus,
-.active.gds-onboarder__button:focus,
-.active.gds-anim-timeline__button--remove:focus,
-.active.gds-anim-timeline__button--add:focus,
-.active.DayPicker-TodayButton:focus,
-.gds-button.active.focus,
-.active.focus.gds-toolbelt__item-input-button,
-.active.focus.gds-onboarder__button,
-.active.focus.gds-anim-timeline__button--remove,
-.active.focus.gds-anim-timeline__button--add,
-.active.focus.DayPicker-TodayButton {
+.gds-button.active.focus {
   outline: none; }
 
 .gds-button--block {
@@ -12716,7 +12725,7 @@ select {
     display: block;
     width: 100%; } }
 
-.gds-button .gds-button__thinking, .gds-toolbelt__item-input-button .gds-button__thinking, .gds-onboarder__button .gds-button__thinking, .gds-anim-timeline__button--remove .gds-button__thinking, .gds-anim-timeline__button--add .gds-button__thinking, .DayPicker-TodayButton .gds-button__thinking {
+.gds-button .gds-button__thinking {
   font-size: 10px;
   white-space: pre;
   font-family: monospace; }
@@ -13073,7 +13082,7 @@ select {
 .gds-tooltip--top-right:before {
   border-top-color: #292929; }
 
-.gds-tooltip--top:before, .gds-ranker__item-icon:before, .gds-ribbon__button:before {
+.gds-tooltip--top:before {
   border-top-color: #292929; }
 
 .gds-tooltip--bottom-left:before {
@@ -13095,39 +13104,30 @@ select {
   display: block;
   width: 100%; }
 
-.gds-tooltip--top:before, .gds-ranker__item-icon:before, .gds-ribbon__button:before {
+.gds-tooltip--top:before {
   margin-bottom: -11px; }
 
-.gds-tooltip--top:before, .gds-ranker__item-icon:before, .gds-ribbon__button:before,
-.gds-tooltip--top:after,
-.gds-ranker__item-icon:after,
-.gds-ribbon__button:after {
+.gds-tooltip--top:before,
+.gds-tooltip--top:after {
   bottom: 100%;
   left: 50%; }
 
-.gds-tooltip--top:before, .gds-ranker__item-icon:before, .gds-ribbon__button:before {
+.gds-tooltip--top:before {
   left: calc(50% - 6px); }
 
-
-.gds-tooltip--top:after,
-.gds-ranker__item-icon:after,
-.gds-ribbon__button:after {
+.gds-tooltip--top:after {
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   transform: translateX(-50%); }
 
-.gds-tooltip--top:hover:before, .gds-ranker__item-icon:hover:before, .gds-ribbon__button:hover:before,
-.gds-tooltip--top:focus:before,
-.gds-ranker__item-icon:focus:before,
-.gds-ribbon__button:focus:before {
+.gds-tooltip--top:hover:before,
+.gds-tooltip--top:focus:before {
   -webkit-transform: translateY(-8px);
   -moz-transform: translateY(-8px);
   transform: translateY(-8px); }
 
-.gds-tooltip--top:hover:after, .gds-ranker__item-icon:hover:after, .gds-ribbon__button:hover:after,
-.gds-tooltip--top:focus:after,
-.gds-ranker__item-icon:focus:after,
-.gds-ribbon__button:focus:after {
+.gds-tooltip--top:hover:after,
+.gds-tooltip--top:focus:after {
   -webkit-transform: translateX(-50%) translateY(-8px);
   -moz-transform: translateX(-50%) translateY(-8px);
   transform: translateX(-50%) translateY(-8px); }
@@ -13354,7 +13354,7 @@ select {
 .gds-tooltip--dark.gds-tooltip--top-right:before {
   border-top-color: #888888; }
 
-.gds-tooltip--dark.gds-tooltip--top:before, .gds-tooltip--dark.gds-ranker__item-icon:before, .gds-tooltip--dark.gds-ribbon__button:before {
+.gds-tooltip--dark.gds-tooltip--top:before {
   border-top-color: #888888; }
 
 .gds-tooltip--dark.gds-tooltip--bottom-left:before {
@@ -13382,7 +13382,7 @@ select {
 .gds-tooltip--primary.gds-tooltip--top-right:before {
   border-top-color: #1b87c3; }
 
-.gds-tooltip--primary.gds-tooltip--top:before, .gds-tooltip--primary.gds-ranker__item-icon:before, .gds-tooltip--primary.gds-ribbon__button:before {
+.gds-tooltip--primary.gds-tooltip--top:before {
   border-top-color: #1b87c3; }
 
 .gds-tooltip--primary.gds-tooltip--bottom-left:before {
@@ -13407,7 +13407,7 @@ select {
 .gds-tooltip--secondary.gds-tooltip--top-right:before {
   border-top-color: #0a4882; }
 
-.gds-tooltip--secondary.gds-tooltip--top:before, .gds-tooltip--secondary.gds-ranker__item-icon:before, .gds-tooltip--secondary.gds-ribbon__button:before {
+.gds-tooltip--secondary.gds-tooltip--top:before {
   border-top-color: #0a4882; }
 
 .gds-tooltip--secondary.gds-tooltip--bottom-left:before {
@@ -13435,7 +13435,7 @@ select {
 .gds-tooltip--tertiary.gds-tooltip--top-right:before {
   border-top-color: #32d996; }
 
-.gds-tooltip--tertiary.gds-tooltip--top:before, .gds-tooltip--tertiary.gds-ranker__item-icon:before, .gds-tooltip--tertiary.gds-ribbon__button:before {
+.gds-tooltip--tertiary.gds-tooltip--top:before {
   border-top-color: #32d996; }
 
 .gds-tooltip--tertiary.gds-tooltip--bottom-left:before {
@@ -13466,7 +13466,7 @@ select {
 .gds-tooltip--quaternary.gds-tooltip--top-right:before {
   border-top-color: #e02b58; }
 
-.gds-tooltip--quaternary.gds-tooltip--top:before, .gds-tooltip--quaternary.gds-ranker__item-icon:before, .gds-tooltip--quaternary.gds-ribbon__button:before {
+.gds-tooltip--quaternary.gds-tooltip--top:before {
   border-top-color: #e02b58; }
 
 .gds-tooltip--quaternary.gds-tooltip--bottom-left:before {
@@ -13497,7 +13497,7 @@ select {
 .gds-tooltip--danger.gds-tooltip--top-right:before {
   border-top-color: #fb4323; }
 
-.gds-tooltip--danger.gds-tooltip--top:before, .gds-tooltip--danger.gds-ranker__item-icon:before, .gds-tooltip--danger.gds-ribbon__button:before {
+.gds-tooltip--danger.gds-tooltip--top:before {
   border-top-color: #fb4323; }
 
 .gds-tooltip--danger.gds-tooltip--bottom-left:before {
@@ -13525,7 +13525,7 @@ select {
 .gds-tooltip--warning.gds-tooltip--top-right:before {
   border-top-color: #f3d221; }
 
-.gds-tooltip--warning.gds-tooltip--top:before, .gds-tooltip--warning.gds-ranker__item-icon:before, .gds-tooltip--warning.gds-ribbon__button:before {
+.gds-tooltip--warning.gds-tooltip--top:before {
   border-top-color: #f3d221; }
 
 .gds-tooltip--warning.gds-tooltip--bottom-left:before {
@@ -13553,7 +13553,7 @@ select {
 .gds-tooltip--info.gds-tooltip--top-right:before {
   border-top-color: #7671d6; }
 
-.gds-tooltip--info.gds-tooltip--top:before, .gds-tooltip--info.gds-ranker__item-icon:before, .gds-tooltip--info.gds-ribbon__button:before {
+.gds-tooltip--info.gds-tooltip--top:before {
   border-top-color: #7671d6; }
 
 .gds-tooltip--info.gds-tooltip--bottom-left:before {
@@ -13581,7 +13581,7 @@ select {
 .gds-tooltip--success.gds-tooltip--top-right:before {
   border-top-color: #32d996; }
 
-.gds-tooltip--success.gds-tooltip--top:before, .gds-tooltip--success.gds-ranker__item-icon:before, .gds-tooltip--success.gds-ribbon__button:before {
+.gds-tooltip--success.gds-tooltip--top:before {
   border-top-color: #32d996; }
 
 .gds-tooltip--success.gds-tooltip--bottom-left:before {
@@ -13604,12 +13604,12 @@ select {
   opacity: 1;
   visibility: visible; }
 
-.gds-tooltip--always.gds-tooltip--top:before, .gds-tooltip--always.gds-ranker__item-icon:before, .gds-tooltip--always.gds-ribbon__button:before {
+.gds-tooltip--always.gds-tooltip--top:before {
   -webkit-transform: translateY(-8px);
   -moz-transform: translateY(-8px);
   transform: translateY(-8px); }
 
-.gds-tooltip--always.gds-tooltip--top:after, .gds-tooltip--always.gds-ranker__item-icon:after, .gds-tooltip--always.gds-ribbon__button:after {
+.gds-tooltip--always.gds-tooltip--top:after {
   -webkit-transform: translateX(-50%) translateY(-8px);
   -moz-transform: translateX(-50%) translateY(-8px);
   transform: translateX(-50%) translateY(-8px); }
@@ -15564,7 +15564,7 @@ select {
   color: rgba(0, 0, 0, 0.3);
   margin: 0.5rem 0 2rem; }
 
-.gds-number-circle, .gds-onboarder__step-num {
+.gds-number-circle {
   border: 1px solid #0a4882;
   color: #0a4882;
   border-radius: 50%;
@@ -15634,7 +15634,7 @@ select {
   color: #acacac;
   border-color: #acacac; }
 
-.gds-circular-thumbnail, .gds-ranker__image,
+.gds-circular-thumbnail,
 .gds-ranker-ensign__thumbnail {
   width: 4.5rem;
   height: 4.5rem;
@@ -15667,26 +15667,26 @@ select {
   height: 2rem;
   border: 1px solid white; }
 
-.gds-circular-thumbnail--sm, .gds-ranker__image,
+.gds-circular-thumbnail--sm,
 .gds-ranker-ensign__thumbnail--sm {
   width: 3rem;
   height: 3rem; }
 
-.gds-circular-thumbnail--lg, .gds-ranker__image--lg,
+.gds-circular-thumbnail--lg,
 .gds-ranker-ensign__thumbnail--lg {
   width: 6rem;
   height: 6rem; }
 
-.gds-circular-thumbnail--xl, .gds-ranker__image--xl,
+.gds-circular-thumbnail--xl,
 .gds-ranker-ensign__thumbnail--xl {
   width: 8rem;
   height: 8rem; }
 
-.gds-circular-thumbnail--secondary, .gds-ranker__image--secondary,
+.gds-circular-thumbnail--secondary,
 .gds-ranker-ensign__thumbnail--secondary {
   box-shadow: 0 0 0 1px #0a4882; }
 
-.gds-circular-thumbnail--tertiary, .gds-ranker__image--tertiary,
+.gds-circular-thumbnail--tertiary,
 .gds-ranker-ensign__thumbnail--tertiary {
   box-shadow: 0 0 0 1px #32d996; }
 
@@ -15710,7 +15710,7 @@ select {
   border: 1px solid #5f5f5f;
   box-shadow: 0 0 0 1px white; }
 
-.gds-tag, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice {
+.gds-tag {
   display: inline-block;
   background-color: white;
   color: #acacac;
@@ -15723,10 +15723,10 @@ select {
   font-family: "Public Sans";
   font-weight: 200; }
 
-.gds-tag--with-button, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice {
+.gds-tag--with-button {
   padding-right: 2.75rem; }
 
-.gds-tag__button, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice .search-choice-close {
+.gds-tag__button {
   border: none;
   background-color: transparent !important;
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22100%25%22%20height%3D%22100%25%22%0A%09%20viewBox%3D%220%200%2020px%2020px%22%20preserveAspectRatio%3D%22none%22%20fill%3D%22none%22%20stroke%3D%22%23acacac%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%0A%3C%2Fsvg%3E");
@@ -15741,12 +15741,12 @@ select {
   width: 40px;
   height: 40px;
   transform: scale(0.7); }
-  .gds-tag__button:hover, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice .search-choice-close:hover {
+  .gds-tag__button:hover {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%231b87c3%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E");
     cursor: pointer; }
-  .gds-tag__button:focus, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice .search-choice-close:focus {
+  .gds-tag__button:focus {
     outline: none; }
-  .gds-tag__button:before, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice .search-choice-close:before {
+  .gds-tag__button:before {
     content: "";
     position: absolute;
     top: 0;
@@ -15796,13 +15796,13 @@ select {
 .gds-tag--xs {
   font-size: 0.7rem; }
 
-.gds-tag--with-button-sm, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice {
+.gds-tag--with-button-sm {
   padding-right: 2.25rem; }
 
 .gds-tag--with-button-xs {
   padding-right: 2rem; }
 
-.gds-tag__button--sm, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice .search-choice-close {
+.gds-tag__button--sm {
   transform: scale(0.6);
   width: 40px;
   height: 40px;
@@ -16909,7 +16909,7 @@ select {
 .gds-bubble {
   display: inline-block; }
 
-.gds-bubble__menu, .gds-onboarder,
+.gds-bubble__menu,
 .gds-avatar__menu,
 .gds-filters__menu {
   position: absolute;
@@ -16934,7 +16934,7 @@ select {
   transform-origin: 50% -10px;
   text-align: left;
   line-height: 1.8; }
-  .gds-bubble__menu:before, .gds-onboarder:before,
+  .gds-bubble__menu:before,
   .gds-avatar__menu:before,
   .gds-filters__menu:before {
     content: "";
@@ -17823,15 +17823,10 @@ select {
   .gds-button-group__button + .gds-button-dropdown,
   .gds-button-dropdown--in-group > .gds-button-dropdown__button + .gds-button-dropdown {
     display: inline-block; }
-  .gds-button-group__button + .gds-button, .gds-button-group__button + .gds-toolbelt__item-input-button, .gds-button-group__button + .gds-onboarder__button, .gds-button-group__button + .gds-anim-timeline__button--remove, .gds-button-group__button + .gds-anim-timeline__button--add, .gds-button-group__button + .DayPicker-TodayButton,
+  .gds-button-group__button + .gds-button,
   .gds-button-group__button + small,
   .gds-button-group__button + p,
   .gds-button-dropdown--in-group > .gds-button-dropdown__button + .gds-button,
-  .gds-button-dropdown--in-group > .gds-button-dropdown__button + .gds-toolbelt__item-input-button,
-  .gds-button-dropdown--in-group > .gds-button-dropdown__button + .gds-onboarder__button,
-  .gds-button-dropdown--in-group > .gds-button-dropdown__button + .gds-anim-timeline__button--remove,
-  .gds-button-dropdown--in-group > .gds-button-dropdown__button + .gds-anim-timeline__button--add,
-  .gds-button-dropdown--in-group > .gds-button-dropdown__button + .DayPicker-TodayButton,
   .gds-button-dropdown--in-group > .gds-button-dropdown__button + small,
   .gds-button-dropdown--in-group > .gds-button-dropdown__button + p {
     margin-left: 0;
@@ -17855,20 +17850,20 @@ select {
   .gds-button-dropdown--in-group > .gds-button-dropdown__button:focus:hover {
     z-index: 100; }
 
-.gds-button-group--lg .gds-button, .gds-button-group--lg .gds-toolbelt__item-input-button, .gds-button-group--lg .gds-onboarder__button, .gds-button-group--lg .gds-anim-timeline__button--remove, .gds-button-group--lg .gds-anim-timeline__button--add, .gds-button-group--lg .DayPicker-TodayButton {
+.gds-button-group--lg .gds-button {
   font-size: 1.3rem;
   padding: 1.35rem 1.5rem; }
 
-.gds-button-group--sm .gds-button, .gds-button-group--sm .gds-toolbelt__item-input-button, .gds-button-group--sm .gds-onboarder__button, .gds-button-group--sm .gds-anim-timeline__button--remove, .gds-button-group--sm .gds-anim-timeline__button--add, .gds-button-group--sm .DayPicker-TodayButton {
+.gds-button-group--sm .gds-button {
   font-size: 0.8rem;
   padding: 0.6rem 0.7rem 0.75rem 0.7rem; }
-  .gds-button-group--sm .gds-button:active:before, .gds-button-group--sm .gds-toolbelt__item-input-button:active:before, .gds-button-group--sm .gds-onboarder__button:active:before, .gds-button-group--sm .gds-anim-timeline__button--remove:active:before, .gds-button-group--sm .gds-anim-timeline__button--add:active:before, .gds-button-group--sm .DayPicker-TodayButton:active:before {
+  .gds-button-group--sm .gds-button:active:before {
     bottom: 0 !important; }
 
-.gds-button-group--xs .gds-button, .gds-button-group--xs .gds-toolbelt__item-input-button, .gds-button-group--xs .gds-onboarder__button, .gds-button-group--xs .gds-anim-timeline__button--remove, .gds-button-group--xs .gds-anim-timeline__button--add, .gds-button-group--xs .DayPicker-TodayButton {
+.gds-button-group--xs .gds-button {
   font-size: 0.7rem;
   padding: 0.45rem 0.5rem 0.55rem 0.5rem; }
-  .gds-button-group--xs .gds-button:active:before, .gds-button-group--xs .gds-toolbelt__item-input-button:active:before, .gds-button-group--xs .gds-onboarder__button:active:before, .gds-button-group--xs .gds-anim-timeline__button--remove:active:before, .gds-button-group--xs .gds-anim-timeline__button--add:active:before, .gds-button-group--xs .DayPicker-TodayButton:active:before {
+  .gds-button-group--xs .gds-button:active:before {
     bottom: 0 !important; }
 
 @media (max-width: 543px), (max-width: 767px) {
@@ -17905,7 +17900,7 @@ select {
 .gds-button-toolbar .gds-input-group {
   float: left; }
 
-.gds-button-toolbar > .gds-button, .gds-button-toolbar > .gds-toolbelt__item-input-button, .gds-button-toolbar > .gds-onboarder__button, .gds-button-toolbar > .gds-anim-timeline__button--remove, .gds-button-toolbar > .gds-anim-timeline__button--add, .gds-button-toolbar > .DayPicker-TodayButton,
+.gds-button-toolbar > .gds-button,
 .gds-button-toolbar > .gds-button-group,
 .gds-button-toolbar > .gds-input-group {
   margin-left: 0.5rem; }
@@ -18329,7 +18324,8 @@ select {
 .gds-button-dropdown__button--dark-tertiary + .gds-button-dropdown__menu--dark {
   color: #5f5f5f; }
 
-.gds-html-preview, .gds-anim-timeline__asset-avatar {
+.gds-html-preview,
+.gds-anim-timeline__asset-avatar {
   display: block;
   overflow: hidden;
   width: auto;
@@ -18339,7 +18335,8 @@ select {
   border-bottom-width: 0.125rem;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
   background-image: url("data:image/svg+xml;base54,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xmlns%3Aa%3D%22http%3A%2F%2Fns.adobe.com%2FAdobeSVGViewerExtensions%2F3.0%2F%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2220px%22%20height%3D%2220px%22%20viewBox%3D%220%200%2020%2020%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23FFFFFF%3B%7D.st1%7Bfill%3A%23D5D5D5%3B%7D%3C%2Fstyle%3E%3Crect%20class%3D%22st0%22%20width%3D%2210%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%2210%22%20class%3D%22st1%22%20width%3D%2210%22%20height%3D%2210%22%2F%3E%3Crect%20y%3D%2210%22%20class%3D%22st1%22%20width%3D%2210%22%20height%3D%2210%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2210%22%20class%3D%22st0%22%20width%3D%2210%22%20height%3D%2210%22%2F%3E%3C%2Fsvg%3E"); }
-  .gds-html-preview:after, .gds-anim-timeline__asset-avatar:after {
+  .gds-html-preview:after,
+  .gds-anim-timeline__asset-avatar:after {
     content: "";
     position: absolute;
     height: 100%;
@@ -18347,7 +18344,8 @@ select {
     top: 0;
     left: 0;
     pointer-events: none; }
-  .gds-html-preview:hover, .gds-anim-timeline__asset-avatar:hover {
+  .gds-html-preview:hover,
+  .gds-anim-timeline__asset-avatar:hover {
     border-color: #3293c9; }
 
 .gds-html-preview__content {
@@ -18378,10 +18376,12 @@ select {
   .gds-html-preview--resize .gds-html-preview__content {
     resize: both; }
 
-.gds-html-preview--active, .gds-anim-timeline__asset-avatar {
+.gds-html-preview--active,
+.gds-anim-timeline__asset-avatar {
   border-color: #1b87c3;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
-  .gds-html-preview--active.gds-html-preview--resize::after, .gds-html-preview--resize.gds-anim-timeline__asset-avatar::after {
+  .gds-html-preview--active.gds-html-preview--resize::after,
+  .gds-anim-timeline__asset-avatar.gds-html-preview--resize::after {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%231b87c3%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E"); }
 
 .gds-html-preview--disabled {
@@ -18502,9 +18502,7 @@ select {
   overflow: hidden;
   text-overflow: ellipsis; }
 
-
 .gds-modal__close-button,
-.gds-onboarder__close,
 .gds-modal__close-button--secondary,
 .gds-modal__close-button--tertiary,
 .gds-modal__close-button--quaternary {
@@ -18512,9 +18510,7 @@ select {
   background-position: 22px 22px;
   width: 66px;
   height: 66px; }
-  
   .gds-modal__close-button:hover,
-  .gds-onboarder__close:hover,
   .gds-modal__close-button--secondary:hover,
   .gds-modal__close-button--tertiary:hover,
   .gds-modal__close-button--quaternary:hover {
@@ -18538,7 +18534,7 @@ select {
   font-size: 1.3rem;
   line-height: 1.4; }
 
-.gds-modal__header--sm .gds-modal__close-button, .gds-modal__header--sm .gds-onboarder__close,
+.gds-modal__header--sm .gds-modal__close-button,
 .gds-modal__header--sm .gds-modal__close-button--secondary,
 .gds-modal__header--sm .gds-modal__close-button--tertiary,
 .gds-modal__header--sm .gds-modal__close-button--quaternary {
@@ -18572,7 +18568,7 @@ select {
   outline: 0;
   padding: 0; }
 
-.gds-form-group, .gds-toolbelt__item-form-group, .gds-anim-timeline__form-group, .DayPicker-Caption select {
+.gds-form-group {
   color: #5f5f5f;
   border-color: #c4c4c4;
   border-bottom-color: #c4c4c4;
@@ -18674,7 +18670,7 @@ select {
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   /* easeOutQuart */ }
 
-.gds-form-group__input-group, .gds-anim-timeline__input-group {
+.gds-form-group__input-group {
   position: relative;
   display: flex;
   border-collapse: separate;
@@ -18686,8 +18682,9 @@ select {
 .gds-form-group__input-group--inline {
   width: auto; }
 
-.gds-form-group__input-group-addon, .gds-anim-timeline__button--remove,
-.gds-form-group__date-group-addon {
+.gds-form-group__input-group-addon,
+.gds-form-group__date-group-addon,
+.gds-anim-timeline__button--remove {
   flex-basis: auto;
   margin-bottom: 0;
   -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -18700,13 +18697,15 @@ select {
   -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   /* easeOutQuart */ }
-  .gds-form-group__input-group-addon:first-child, .gds-anim-timeline__button--remove:first-child,
-  .gds-form-group__date-group-addon:first-child {
+  .gds-form-group__input-group-addon:first-child,
+  .gds-form-group__date-group-addon:first-child,
+  .gds-anim-timeline__button--remove:first-child {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-right: none; }
-  .gds-form-group__input-group-addon:last-child, .gds-anim-timeline__button--remove:last-child,
-  .gds-form-group__date-group-addon:last-child {
+  .gds-form-group__input-group-addon:last-child,
+  .gds-form-group__date-group-addon:last-child,
+  .gds-anim-timeline__button--remove:last-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-left: none; }
@@ -18745,32 +18744,28 @@ select {
   height: 29px;
   font-size: 0.7rem; }
 
-.gds-form-group--active .gds-form-group__input-group-addon, .gds-form-group--active .gds-anim-timeline__button--remove {
+.gds-form-group--active .gds-form-group__input-group-addon {
   border-color: #1b87c3; }
 
 .gds-form-group__input-common,
 .gds-form-group__select-input,
 .gds-anim-timeline__select-input,
-.gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single,
-.DayPicker-Caption select,
 .gds-search-select__input,
 .gds-form-group__select-multiple[multiple],
 .gds-form-group__range-input,
 .gds-form-group__text-input,
-.gds-toolbelt__item-input,
-.gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices,
 .gds-search-select__input,
 .gds-form-group__text-area-input,
 .gds-form-group__date-group,
 .gds-form-group__text-input--xs,
 .gds-search-select__input--xs,
 .gds-form-group__text-input--sm,
-.gds-toolbelt__item-input,
-.DayPickerInput input,
 .gds-search-select__input--sm,
 .gds-form-group__text-input--lg,
+.gds-toolbelt__item-input,
 .ReactTable .-pagination input,
-.ReactTable .-pagination select {
+.ReactTable .-pagination select,
+.DayPicker-Caption select {
   display: block;
   width: 100%;
   padding: 1rem;
@@ -18783,18 +18778,14 @@ select {
 .gds-form-group__button-input {
   transform: translateY(0px); }
 
-
 .gds-form-group__text-input,
 .gds-toolbelt__item-input,
-.gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices,
 .gds-search-select__input,
 .gds-form-group__text-area-input,
 .gds-form-group__date-group,
 .gds-form-group__text-input--xs,
 .gds-search-select__input--xs,
 .gds-form-group__text-input--sm,
-.gds-toolbelt__item-input,
-.DayPickerInput input,
 .gds-search-select__input--sm,
 .gds-form-group__text-input--lg,
 .ReactTable .-pagination input {
@@ -18814,150 +18805,149 @@ select {
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   /* easeOutQuart */
   height: 51px; }
-  .gds-form-group__text-input::-webkit-input-placeholder, .gds-toolbelt__item-input::-webkit-input-placeholder, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices::-webkit-input-placeholder,
+  .gds-form-group__text-input::-webkit-input-placeholder,
+  .gds-toolbelt__item-input::-webkit-input-placeholder,
   .gds-search-select__input::-webkit-input-placeholder,
   .gds-form-group__text-area-input::-webkit-input-placeholder,
   .gds-form-group__date-group::-webkit-input-placeholder,
   .gds-form-group__text-input--xs::-webkit-input-placeholder,
   .gds-search-select__input--xs::-webkit-input-placeholder,
   .gds-form-group__text-input--sm::-webkit-input-placeholder,
-  .gds-toolbelt__item-input::-webkit-input-placeholder,
-  .DayPickerInput input::-webkit-input-placeholder,
   .gds-search-select__input--sm::-webkit-input-placeholder,
   .gds-form-group__text-input--lg::-webkit-input-placeholder,
   .ReactTable .-pagination input::-webkit-input-placeholder {
     color: #dbdbdb; }
-  .gds-form-group__text-input:-moz-placeholder, .gds-toolbelt__item-input:-moz-placeholder, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices:-moz-placeholder,
+  .gds-form-group__text-input:-moz-placeholder,
+  .gds-toolbelt__item-input:-moz-placeholder,
   .gds-search-select__input:-moz-placeholder,
   .gds-form-group__text-area-input:-moz-placeholder,
   .gds-form-group__date-group:-moz-placeholder,
   .gds-form-group__text-input--xs:-moz-placeholder,
   .gds-search-select__input--xs:-moz-placeholder,
   .gds-form-group__text-input--sm:-moz-placeholder,
-  .gds-toolbelt__item-input:-moz-placeholder,
-  .DayPickerInput input:-moz-placeholder,
   .gds-search-select__input--sm:-moz-placeholder,
   .gds-form-group__text-input--lg:-moz-placeholder,
   .ReactTable .-pagination input:-moz-placeholder {
     color: #dbdbdb; }
-  .gds-form-group__text-input::-moz-placeholder, .gds-toolbelt__item-input::-moz-placeholder, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices::-moz-placeholder,
+  .gds-form-group__text-input::-moz-placeholder,
+  .gds-toolbelt__item-input::-moz-placeholder,
   .gds-search-select__input::-moz-placeholder,
   .gds-form-group__text-area-input::-moz-placeholder,
   .gds-form-group__date-group::-moz-placeholder,
   .gds-form-group__text-input--xs::-moz-placeholder,
   .gds-search-select__input--xs::-moz-placeholder,
   .gds-form-group__text-input--sm::-moz-placeholder,
-  .gds-toolbelt__item-input::-moz-placeholder,
-  .DayPickerInput input::-moz-placeholder,
   .gds-search-select__input--sm::-moz-placeholder,
   .gds-form-group__text-input--lg::-moz-placeholder,
   .ReactTable .-pagination input::-moz-placeholder {
     color: #dbdbdb; }
-  .gds-form-group__text-input:-ms-input-placeholder, .gds-toolbelt__item-input:-ms-input-placeholder, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices:-ms-input-placeholder,
+  .gds-form-group__text-input:-ms-input-placeholder,
+  .gds-toolbelt__item-input:-ms-input-placeholder,
   .gds-search-select__input:-ms-input-placeholder,
   .gds-form-group__text-area-input:-ms-input-placeholder,
   .gds-form-group__date-group:-ms-input-placeholder,
   .gds-form-group__text-input--xs:-ms-input-placeholder,
   .gds-search-select__input--xs:-ms-input-placeholder,
   .gds-form-group__text-input--sm:-ms-input-placeholder,
-  .gds-toolbelt__item-input:-ms-input-placeholder,
-  .DayPickerInput input:-ms-input-placeholder,
   .gds-search-select__input--sm:-ms-input-placeholder,
   .gds-form-group__text-input--lg:-ms-input-placeholder,
   .ReactTable .-pagination input:-ms-input-placeholder {
     color: #dbdbdb; }
-  .gds-form-group__text-input:hover, .gds-toolbelt__item-input:hover, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices:hover,
+  .gds-form-group__text-input:hover,
+  .gds-toolbelt__item-input:hover,
   .gds-search-select__input:hover,
   .gds-form-group__text-area-input:hover,
   .gds-form-group__date-group:hover,
   .gds-form-group__text-input--xs:hover,
   .gds-search-select__input--xs:hover,
   .gds-form-group__text-input--sm:hover,
-  .gds-toolbelt__item-input:hover,
-  .DayPickerInput input:hover,
   .gds-search-select__input--sm:hover,
   .gds-form-group__text-input--lg:hover,
   .ReactTable .-pagination input:hover {
     border-color: #1b87c3;
     color: #5f5f5f;
     box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2); }
-    .gds-form-group__text-input:hover + .gds-form-group__text-help, .gds-toolbelt__item-input:hover + .gds-form-group__text-help, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices:hover + .gds-form-group__text-help,
+    .gds-form-group__text-input:hover + .gds-form-group__text-help,
+    .gds-toolbelt__item-input:hover + .gds-form-group__text-help,
     .gds-search-select__input:hover + .gds-form-group__text-help,
     .gds-form-group__text-area-input:hover + .gds-form-group__text-help,
     .gds-form-group__date-group:hover + .gds-form-group__text-help,
     .gds-form-group__text-input--xs:hover + .gds-form-group__text-help,
     .gds-search-select__input--xs:hover + .gds-form-group__text-help,
     .gds-form-group__text-input--sm:hover + .gds-form-group__text-help,
-    .gds-toolbelt__item-input:hover + .gds-form-group__text-help,
-    .DayPickerInput input:hover + .gds-form-group__text-help,
     .gds-search-select__input--sm:hover + .gds-form-group__text-help,
     .gds-form-group__text-input--lg:hover + .gds-form-group__text-help,
     .ReactTable .-pagination input:hover + .gds-form-group__text-help {
       background-color: #1b87c3; }
-  .gds-form-group__text-input:hover:focus, .gds-toolbelt__item-input:hover:focus, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices:hover:focus,
+  .gds-form-group__text-input:hover:focus,
+  .gds-toolbelt__item-input:hover:focus,
   .gds-search-select__input:hover:focus,
   .gds-form-group__text-area-input:hover:focus,
   .gds-form-group__date-group:hover:focus,
   .gds-form-group__text-input--xs:hover:focus,
   .gds-search-select__input--xs:hover:focus,
   .gds-form-group__text-input--sm:hover:focus,
-  .gds-toolbelt__item-input:hover:focus,
-  .DayPickerInput input:hover:focus,
   .gds-search-select__input--sm:hover:focus,
   .gds-form-group__text-input--lg:hover:focus,
   .ReactTable .-pagination input:hover:focus {
     box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2); }
-  .gds-form-group__text-input:focus, .gds-toolbelt__item-input:focus, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices:focus,
+  .gds-form-group__text-input:focus,
+  .gds-toolbelt__item-input:focus,
   .gds-search-select__input:focus,
   .gds-form-group__text-area-input:focus,
   .gds-form-group__date-group:focus,
   .gds-form-group__text-input--xs:focus,
   .gds-search-select__input--xs:focus,
   .gds-form-group__text-input--sm:focus,
-  .gds-toolbelt__item-input:focus,
-  .DayPickerInput input:focus,
   .gds-search-select__input--sm:focus,
   .gds-form-group__text-input--lg:focus,
   .ReactTable .-pagination input:focus {
     color: #5f5f5f;
     box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 0 rgba(0, 0, 0, 0);
     outline: none; }
-    .gds-form-group__text-input:focus + .gds-form-group__text-help, .gds-toolbelt__item-input:focus + .gds-form-group__text-help, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices:focus + .gds-form-group__text-help,
+    .gds-form-group__text-input:focus + .gds-form-group__text-help,
+    .gds-toolbelt__item-input:focus + .gds-form-group__text-help,
     .gds-search-select__input:focus + .gds-form-group__text-help,
     .gds-form-group__text-area-input:focus + .gds-form-group__text-help,
     .gds-form-group__date-group:focus + .gds-form-group__text-help,
     .gds-form-group__text-input--xs:focus + .gds-form-group__text-help,
     .gds-search-select__input--xs:focus + .gds-form-group__text-help,
     .gds-form-group__text-input--sm:focus + .gds-form-group__text-help,
-    .gds-toolbelt__item-input:focus + .gds-form-group__text-help,
-    .DayPickerInput input:focus + .gds-form-group__text-help,
     .gds-search-select__input--sm:focus + .gds-form-group__text-help,
     .gds-form-group__text-input--lg:focus + .gds-form-group__text-help,
     .ReactTable .-pagination input:focus + .gds-form-group__text-help {
       background-color: #1b87c3; }
 
-.gds-form-group__text-input--dark, .gds-toolbelt__item-input,
-.gds-form-group__text-area-input--dark {
+.gds-form-group__text-input--dark,
+.gds-form-group__text-area-input--dark,
+.gds-toolbelt__item-input {
   background-color: #575757;
   box-shadow: inset 0 -0.125rem 0 0 #888888, inset 0 0 0 1px #888888, 0 0 0px 0 rgba(0, 0, 0, 0); }
-  .gds-form-group__text-input--dark::-webkit-input-placeholder, .gds-toolbelt__item-input::-webkit-input-placeholder,
-  .gds-form-group__text-area-input--dark::-webkit-input-placeholder {
+  .gds-form-group__text-input--dark::-webkit-input-placeholder,
+  .gds-form-group__text-area-input--dark::-webkit-input-placeholder,
+  .gds-toolbelt__item-input::-webkit-input-placeholder {
     color: #888888; }
-  .gds-form-group__text-input--dark:-moz-placeholder, .gds-toolbelt__item-input:-moz-placeholder,
-  .gds-form-group__text-area-input--dark:-moz-placeholder {
+  .gds-form-group__text-input--dark:-moz-placeholder,
+  .gds-form-group__text-area-input--dark:-moz-placeholder,
+  .gds-toolbelt__item-input:-moz-placeholder {
     color: #888888; }
-  .gds-form-group__text-input--dark::-moz-placeholder, .gds-toolbelt__item-input::-moz-placeholder,
-  .gds-form-group__text-area-input--dark::-moz-placeholder {
+  .gds-form-group__text-input--dark::-moz-placeholder,
+  .gds-form-group__text-area-input--dark::-moz-placeholder,
+  .gds-toolbelt__item-input::-moz-placeholder {
     color: #888888; }
-  .gds-form-group__text-input--dark:-ms-input-placeholder, .gds-toolbelt__item-input:-ms-input-placeholder,
-  .gds-form-group__text-area-input--dark:-ms-input-placeholder {
+  .gds-form-group__text-input--dark:-ms-input-placeholder,
+  .gds-form-group__text-area-input--dark:-ms-input-placeholder,
+  .gds-toolbelt__item-input:-ms-input-placeholder {
     color: #888888; }
-  .gds-form-group__text-input--dark:hover, .gds-toolbelt__item-input:hover,
-  .gds-form-group__text-area-input--dark:hover {
+  .gds-form-group__text-input--dark:hover,
+  .gds-form-group__text-area-input--dark:hover,
+  .gds-toolbelt__item-input:hover {
     color: white; }
-  .gds-form-group__text-input--dark:hover:focus, .gds-toolbelt__item-input:hover:focus, .gds-form-group__text-input--dark:focus, .gds-toolbelt__item-input:focus,
+  .gds-form-group__text-input--dark:hover:focus, .gds-form-group__text-input--dark:focus,
   .gds-form-group__text-area-input--dark:hover:focus,
-  .gds-form-group__text-area-input--dark:focus {
+  .gds-form-group__text-area-input--dark:focus,
+  .gds-toolbelt__item-input:hover:focus,
+  .gds-toolbelt__item-input:focus {
     color: #5f5f5f;
     background-color: white; }
 
@@ -19003,7 +18993,7 @@ select {
   left: 1rem;
   right: auto; }
 
-.gds-form-group__text-input:placeholder-shown + .gds-form-group__text-input-icon, .gds-toolbelt__item-input:placeholder-shown + .gds-form-group__text-input-icon, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices:placeholder-shown + .gds-form-group__text-input-icon {
+.gds-form-group__text-input:placeholder-shown + .gds-form-group__text-input-icon {
   opacity: 0.5; }
 
 .gds-form-group__text-input--xs,
@@ -19012,10 +19002,7 @@ select {
   font-size: 0.7rem;
   padding: 0.25rem 0.5rem; }
 
-
 .gds-form-group__text-input--sm,
-.gds-toolbelt__item-input,
-.DayPickerInput input,
 .gds-search-select__input--sm {
   height: 37px;
   font-size: 0.8rem;
@@ -19031,7 +19018,7 @@ select {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
-.gds-form-group__text-input--right-edge, .gds-toolbelt__item-input {
+.gds-form-group__text-input--right-edge {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
@@ -19193,10 +19180,8 @@ select {
 .gds-form-group__text-area-input--no-resize {
   resize: none; }
 
-
 .gds-form-group__select-input,
 .gds-anim-timeline__select-input,
-.gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single,
 .DayPicker-Caption select,
 .ReactTable .-pagination select,
 .gds-search-select__input,
@@ -19227,19 +19212,25 @@ select {
   -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   /* easeOutQuart */ }
-  .gds-form-group__select-input:focus, .gds-anim-timeline__select-input:focus, .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single:focus, .DayPicker-Caption select:focus,
+  .gds-form-group__select-input:focus,
+  .gds-anim-timeline__select-input:focus,
+  .DayPicker-Caption select:focus,
   .ReactTable .-pagination select:focus,
   .gds-search-select__input:focus,
   .gds-form-group__select-multiple[multiple]:focus {
     box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 0 rgba(0, 0, 0, 0);
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
-  .gds-form-group__select-input:hover, .gds-anim-timeline__select-input:hover, .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single:hover, .DayPicker-Caption select:hover,
+  .gds-form-group__select-input:hover,
+  .gds-anim-timeline__select-input:hover,
+  .DayPicker-Caption select:hover,
   .ReactTable .-pagination select:hover,
   .gds-search-select__input:hover,
   .gds-form-group__select-multiple[multiple]:hover {
     box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2);
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
-  .gds-form-group__select-input:hover:focus, .gds-anim-timeline__select-input:hover:focus, .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single:hover:focus, .DayPicker-Caption select:hover:focus,
+  .gds-form-group__select-input:hover:focus,
+  .gds-anim-timeline__select-input:hover:focus,
+  .DayPicker-Caption select:hover:focus,
   .ReactTable .-pagination select:hover:focus,
   .gds-search-select__input:hover:focus,
   .gds-form-group__select-multiple[multiple]:hover:focus {
@@ -19285,14 +19276,14 @@ select {
   font-size: 1.2rem;
   padding: 1rem 1.25rem; }
 
-.gds-form-group__select-input--sm, .gds-anim-timeline__select-input,
+.gds-form-group__select-input--sm,
 .gds-search-select__input--sm {
   height: 37px;
   font-size: 0.8rem;
   padding: 0.5rem 0.75rem;
   background-position: right 0.75rem center; }
 
-.gds-form-group__select-input--xs, .DayPicker-Caption select,
+.gds-form-group__select-input--xs,
 .gds-search-select__input--xs {
   height: 29px;
   font-size: 0.7rem;
@@ -19302,7 +19293,7 @@ select {
 .gds-form-group__select-input--button-cap {
   display: flex; }
 
-.gds-form-group__select-input--right-edge, .gds-anim-timeline__select-input {
+.gds-form-group__select-input--right-edge {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
@@ -19375,7 +19366,8 @@ select {
 .gds-form-group__checkbox--inline {
   display: inline-block; }
 
-.gds-form-group__checkbox-input, .gds-search-select__checkbox-input {
+.gds-form-group__checkbox-input,
+.gds-search-select__checkbox-input {
   position: absolute;
   opacity: 0;
   cursor: pointer; }
@@ -19416,15 +19408,26 @@ select {
 .gds-form-group__checkbox-indicator--inverse {
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23ffffff%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
 
-.gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger, .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
+.gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger,
+.gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+.gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator,
+.gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--success,
+.gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning,
+.gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
   border-color: #1b87c3;
   background-position: center center;
   background-size: 100% 100%; }
 
-.gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator--inverse, .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator--inverse {
+.gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator--inverse,
+.gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator--inverse {
   border-color: white; }
 
-.gds-form-group__checkbox-input:focus + .gds-form-group__checkbox-indicator, .gds-search-select__checkbox-input:focus + .gds-form-group__checkbox-indicator, .gds-form-group__checkbox-input:focus + .gds-search-select__checkbox-indicator, .gds-search-select__checkbox-input:focus + .gds-search-select__checkbox-indicator, .gds-form-group__checkbox-input:focus + .gds-search-select__checkbox-indicator--success, .gds-search-select__checkbox-input:focus + .gds-search-select__checkbox-indicator--success, .gds-form-group__checkbox-input:focus + .gds-search-select__checkbox-indicator--warning, .gds-search-select__checkbox-input:focus + .gds-search-select__checkbox-indicator--warning, .gds-form-group__checkbox-input:focus + .gds-search-select__checkbox-indicator--danger, .gds-search-select__checkbox-input:focus + .gds-search-select__checkbox-indicator--danger {
+.gds-form-group__checkbox-input:focus + .gds-form-group__checkbox-indicator, .gds-form-group__checkbox-input:focus + .gds-search-select__checkbox-indicator, .gds-form-group__checkbox-input:focus + .gds-search-select__checkbox-indicator--success, .gds-form-group__checkbox-input:focus + .gds-search-select__checkbox-indicator--warning, .gds-form-group__checkbox-input:focus + .gds-search-select__checkbox-indicator--danger,
+.gds-search-select__checkbox-input:focus + .gds-form-group__checkbox-indicator,
+.gds-search-select__checkbox-input:focus + .gds-search-select__checkbox-indicator,
+.gds-search-select__checkbox-input:focus + .gds-search-select__checkbox-indicator--success,
+.gds-search-select__checkbox-input:focus + .gds-search-select__checkbox-indicator--warning,
+.gds-search-select__checkbox-input:focus + .gds-search-select__checkbox-indicator--danger {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .gds-form-group__radio--sm .gds-form-group__radio-label {
@@ -20101,33 +20104,33 @@ select {
   border-bottom-color: #32d996; }
   .gds-form-group--success .gds-form-group__text-help {
     background-color: #32d996; }
-  .gds-form-group--success .gds-form-group__select-input, .gds-form-group--success .gds-anim-timeline__select-input, .gds-form-group--success .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single, .gds-form-group__chosen--standard-select + .chosen-container-single .gds-form-group--success .chosen-single, .gds-form-group--success .DayPicker-Caption select, .DayPicker-Caption .gds-form-group--success select,
+  .gds-form-group--success .gds-form-group__select-input,
   .gds-form-group--success .gds-search-select__input {
     box-shadow: inset 0 -0.125rem 0 0 #32d996, inset 0 0 0 1px #32d996, 0 0 0px 0 rgba(0, 0, 0, 0);
     color: #32d996;
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%2332d996%3B%22/%3E%3C/svg%3E"); }
-    .gds-form-group--success .gds-form-group__select-input:focus, .gds-form-group--success .gds-anim-timeline__select-input:focus, .gds-form-group--success .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single:focus, .gds-form-group__chosen--standard-select + .chosen-container-single .gds-form-group--success .chosen-single:focus, .gds-form-group--success .DayPicker-Caption select:focus, .DayPicker-Caption .gds-form-group--success select:focus,
+    .gds-form-group--success .gds-form-group__select-input:focus,
     .gds-form-group--success .gds-search-select__input:focus {
       color: #5f5f5f;
       box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 0 rgba(0, 0, 0, 0);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
-    .gds-form-group--success .gds-form-group__select-input:hover, .gds-form-group--success .gds-anim-timeline__select-input:hover, .gds-form-group--success .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single:hover, .gds-form-group__chosen--standard-select + .chosen-container-single .gds-form-group--success .chosen-single:hover, .gds-form-group--success .DayPicker-Caption select:hover, .DayPicker-Caption .gds-form-group--success select:hover,
+    .gds-form-group--success .gds-form-group__select-input:hover,
     .gds-form-group--success .gds-search-select__input:hover {
       color: #5f5f5f;
       box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
-    .gds-form-group--success .gds-form-group__select-input:hover:focus, .gds-form-group--success .gds-anim-timeline__select-input:hover:focus, .gds-form-group--success .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single:hover:focus, .gds-form-group__chosen--standard-select + .chosen-container-single .gds-form-group--success .chosen-single:hover:focus, .gds-form-group--success .DayPicker-Caption select:hover:focus, .DayPicker-Caption .gds-form-group--success select:hover:focus,
+    .gds-form-group--success .gds-form-group__select-input:hover:focus,
     .gds-form-group--success .gds-search-select__input:hover:focus {
       color: #5f5f5f;
       box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
-  .gds-form-group--success .gds-form-group__text-input, .gds-form-group--success .gds-toolbelt__item-input, .gds-form-group--success .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-form-group--success .chosen-choices,
+  .gds-form-group--success .gds-form-group__text-input,
   .gds-form-group--success .gds-search-select__input .gds-form-group__text-area-input {
     box-shadow: inset 0 -0.125rem 0 0 #32d996, inset 0 0 0 1px #32d996; }
-    .gds-form-group--success .gds-form-group__text-input:hover, .gds-form-group--success .gds-toolbelt__item-input:hover, .gds-form-group--success .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices:hover, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-form-group--success .chosen-choices:hover,
+    .gds-form-group--success .gds-form-group__text-input:hover,
     .gds-form-group--success .gds-search-select__input .gds-form-group__text-area-input:hover {
       box-shadow: inset 0 -0.125rem 0 0 #3293c9, inset 0 0 0 1px #3293c9; }
-    .gds-form-group--success .gds-form-group__text-input:focus, .gds-form-group--success .gds-toolbelt__item-input:focus, .gds-form-group--success .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices:focus, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-form-group--success .chosen-choices:focus,
+    .gds-form-group--success .gds-form-group__text-input:focus,
     .gds-form-group--success .gds-search-select__input .gds-form-group__text-area-input:focus {
       box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3; }
   .gds-form-group--success .gds-form-group__text-area-input {
@@ -20144,7 +20147,12 @@ select {
   .gds-form-group--success .gds-form-group__checkbox-indicator, .gds-form-group--success .gds-search-select__checkbox-indicator, .gds-form-group--success .gds-search-select__checkbox-indicator--success, .gds-form-group--success .gds-search-select__checkbox-indicator--warning, .gds-form-group--success .gds-search-select__checkbox-indicator--danger {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%2332d996%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
     border-color: #32d996; }
-  .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-form-group--success .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-form-group--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-form-group--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-form-group--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger, .gds-form-group--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
+  .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger,
+  .gds-form-group--success .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+  .gds-form-group--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator,
+  .gds-form-group--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--success,
+  .gds-form-group--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning,
+  .gds-form-group--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
     border-color: #32d996; }
   .gds-form-group--success .gds-form-group__toggleswitch-indicator {
     background: white; }
@@ -20153,9 +20161,11 @@ select {
       background-color: #32d996; }
   .gds-form-group--success .gds-form-group__toggleswitch-indicator-labels:before, .gds-form-group--success .gds-form-group__toggleswitch-indicator-labels:after {
     color: #32d996; }
-  .gds-form-group--success .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator:after {
+  .gds-form-group--success .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator:after,
+  .gds-form-group--success .gds-search-select__checkbox-input:checked ~ .gds-form-group__toggleswitch-indicator:after {
     background-color: #32d996; }
-  .gds-form-group--success .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:after {
+  .gds-form-group--success .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:after,
+  .gds-form-group--success .gds-search-select__checkbox-input:checked ~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:after {
     color: #32d996; }
   .gds-form-group--success .gds-form-group__file-indicator:before {
     background-color: #32d996;
@@ -20177,34 +20187,34 @@ select {
   border-bottom-color: #f3d221; }
   .gds-form-group--warning .gds-form-group__text-help {
     background-color: #f3d221; }
-  .gds-form-group--warning .gds-form-group__text-input, .gds-form-group--warning .gds-toolbelt__item-input, .gds-form-group--warning .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-form-group--warning .chosen-choices,
+  .gds-form-group--warning .gds-form-group__text-input,
   .gds-form-group--warning .gds-search-select__input,
   .gds-form-group--warning .gds-form-group__text-area-input {
     box-shadow: inset 0 -0.125rem 0 0 #f3d221, inset 0 0 0 1px #f3d221; }
-    .gds-form-group--warning .gds-form-group__text-input:hover, .gds-form-group--warning .gds-toolbelt__item-input:hover, .gds-form-group--warning .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices:hover, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-form-group--warning .chosen-choices:hover,
+    .gds-form-group--warning .gds-form-group__text-input:hover,
     .gds-form-group--warning .gds-search-select__input:hover,
     .gds-form-group--warning .gds-form-group__text-area-input:hover {
       box-shadow: inset 0 -0.125rem 0 0 #3293c9, inset 0 0 0 1px #3293c9; }
-    .gds-form-group--warning .gds-form-group__text-input:focus, .gds-form-group--warning .gds-toolbelt__item-input:focus, .gds-form-group--warning .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices:focus, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-form-group--warning .chosen-choices:focus,
+    .gds-form-group--warning .gds-form-group__text-input:focus,
     .gds-form-group--warning .gds-search-select__input:focus,
     .gds-form-group--warning .gds-form-group__text-area-input:focus {
       box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3; }
-  .gds-form-group--warning .gds-form-group__select-input, .gds-form-group--warning .gds-anim-timeline__select-input, .gds-form-group--warning .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single, .gds-form-group__chosen--standard-select + .chosen-container-single .gds-form-group--warning .chosen-single, .gds-form-group--warning .DayPicker-Caption select, .DayPicker-Caption .gds-form-group--warning select,
+  .gds-form-group--warning .gds-form-group__select-input,
   .gds-form-group--warning .gds-search-select__input {
     box-shadow: inset 0 -0.125rem 0 0 #f3d221, inset 0 0 0 1px #f3d221, 0 0 0px 0 rgba(0, 0, 0, 0);
     color: #f3d221;
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23f3d221%3B%22/%3E%3C/svg%3E"); }
-    .gds-form-group--warning .gds-form-group__select-input:focus, .gds-form-group--warning .gds-anim-timeline__select-input:focus, .gds-form-group--warning .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single:focus, .gds-form-group__chosen--standard-select + .chosen-container-single .gds-form-group--warning .chosen-single:focus, .gds-form-group--warning .DayPicker-Caption select:focus, .DayPicker-Caption .gds-form-group--warning select:focus,
+    .gds-form-group--warning .gds-form-group__select-input:focus,
     .gds-form-group--warning .gds-search-select__input:focus {
       color: #5f5f5f;
       box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 0 rgba(0, 0, 0, 0);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
-    .gds-form-group--warning .gds-form-group__select-input:hover, .gds-form-group--warning .gds-anim-timeline__select-input:hover, .gds-form-group--warning .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single:hover, .gds-form-group__chosen--standard-select + .chosen-container-single .gds-form-group--warning .chosen-single:hover, .gds-form-group--warning .DayPicker-Caption select:hover, .DayPicker-Caption .gds-form-group--warning select:hover,
+    .gds-form-group--warning .gds-form-group__select-input:hover,
     .gds-form-group--warning .gds-search-select__input:hover {
       color: #5f5f5f;
       box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
-    .gds-form-group--warning .gds-form-group__select-input:hover:focus, .gds-form-group--warning .gds-anim-timeline__select-input:hover:focus, .gds-form-group--warning .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single:hover:focus, .gds-form-group__chosen--standard-select + .chosen-container-single .gds-form-group--warning .chosen-single:hover:focus, .gds-form-group--warning .DayPicker-Caption select:hover:focus, .DayPicker-Caption .gds-form-group--warning select:hover:focus,
+    .gds-form-group--warning .gds-form-group__select-input:hover:focus,
     .gds-form-group--warning .gds-search-select__input:hover:focus {
       color: #5f5f5f;
       box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2);
@@ -20223,7 +20233,12 @@ select {
   .gds-form-group--warning .gds-form-group__checkbox-indicator, .gds-form-group--warning .gds-search-select__checkbox-indicator, .gds-form-group--warning .gds-search-select__checkbox-indicator--success, .gds-form-group--warning .gds-search-select__checkbox-indicator--warning, .gds-form-group--warning .gds-search-select__checkbox-indicator--danger {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23f3d221%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
     border-color: #f3d221; }
-  .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-form-group--warning .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-form-group--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-form-group--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-form-group--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger, .gds-form-group--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
+  .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger,
+  .gds-form-group--warning .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+  .gds-form-group--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator,
+  .gds-form-group--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--success,
+  .gds-form-group--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning,
+  .gds-form-group--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
     border-color: #f3d221; }
   .gds-form-group--warning .gds-form-group__toggleswitch-indicator {
     background: white; }
@@ -20256,38 +20271,38 @@ select {
   border-bottom-color: #fb4323; }
   .gds-form-group--danger .gds-form-group__text-help {
     background-color: #fb4323; }
-  .gds-form-group--danger .gds-form-group__text-input, .gds-form-group--danger .gds-toolbelt__item-input, .gds-form-group--danger .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-form-group--danger .chosen-choices,
+  .gds-form-group--danger .gds-form-group__text-input,
   .gds-form-group--danger .gds-search-select__input {
     box-shadow: inset 0 -0.125rem 0 0 #fb4323; }
-  .gds-form-group--danger .gds-form-group__select-input, .gds-form-group--danger .gds-anim-timeline__select-input, .gds-form-group--danger .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single, .gds-form-group__chosen--standard-select + .chosen-container-single .gds-form-group--danger .chosen-single, .gds-form-group--danger .DayPicker-Caption select, .DayPicker-Caption .gds-form-group--danger select,
+  .gds-form-group--danger .gds-form-group__select-input,
   .gds-form-group--danger .gds-search-select__input {
     box-shadow: inset 0 -0.125rem 0 0 #fb4323, inset 0 0 0 1px #fb4323, 0 0 0px 0 rgba(0, 0, 0, 0);
     color: #fb4323;
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23fb4323%3B%22/%3E%3C/svg%3E"); }
-    .gds-form-group--danger .gds-form-group__select-input:focus, .gds-form-group--danger .gds-anim-timeline__select-input:focus, .gds-form-group--danger .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single:focus, .gds-form-group__chosen--standard-select + .chosen-container-single .gds-form-group--danger .chosen-single:focus, .gds-form-group--danger .DayPicker-Caption select:focus, .DayPicker-Caption .gds-form-group--danger select:focus,
+    .gds-form-group--danger .gds-form-group__select-input:focus,
     .gds-form-group--danger .gds-search-select__input:focus {
       color: #5f5f5f;
       box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 0 rgba(0, 0, 0, 0);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
-    .gds-form-group--danger .gds-form-group__select-input:hover, .gds-form-group--danger .gds-anim-timeline__select-input:hover, .gds-form-group--danger .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single:hover, .gds-form-group__chosen--standard-select + .chosen-container-single .gds-form-group--danger .chosen-single:hover, .gds-form-group--danger .DayPicker-Caption select:hover, .DayPicker-Caption .gds-form-group--danger select:hover,
+    .gds-form-group--danger .gds-form-group__select-input:hover,
     .gds-form-group--danger .gds-search-select__input:hover {
       color: #5f5f5f;
       box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
-    .gds-form-group--danger .gds-form-group__select-input:hover:focus, .gds-form-group--danger .gds-anim-timeline__select-input:hover:focus, .gds-form-group--danger .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single:hover:focus, .gds-form-group__chosen--standard-select + .chosen-container-single .gds-form-group--danger .chosen-single:hover:focus, .gds-form-group--danger .DayPicker-Caption select:hover:focus, .DayPicker-Caption .gds-form-group--danger select:hover:focus,
+    .gds-form-group--danger .gds-form-group__select-input:hover:focus,
     .gds-form-group--danger .gds-search-select__input:hover:focus {
       color: #5f5f5f;
       box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
-  .gds-form-group--danger .gds-form-group__text-input, .gds-form-group--danger .gds-toolbelt__item-input, .gds-form-group--danger .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-form-group--danger .chosen-choices,
+  .gds-form-group--danger .gds-form-group__text-input,
   .gds-form-group--danger .gds-search-select__input,
   .gds-form-group--danger .gds-form-group__text-area-input {
     box-shadow: inset 0 -0.125rem 0 0 #fb4323, inset 0 0 0 1px #fb4323; }
-    .gds-form-group--danger .gds-form-group__text-input:hover, .gds-form-group--danger .gds-toolbelt__item-input:hover, .gds-form-group--danger .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices:hover, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-form-group--danger .chosen-choices:hover,
+    .gds-form-group--danger .gds-form-group__text-input:hover,
     .gds-form-group--danger .gds-search-select__input:hover,
     .gds-form-group--danger .gds-form-group__text-area-input:hover {
       box-shadow: inset 0 -0.125rem 0 0 #3293c9, inset 0 0 0 1px #3293c9; }
-    .gds-form-group--danger .gds-form-group__text-input:focus, .gds-form-group--danger .gds-toolbelt__item-input:focus, .gds-form-group--danger .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices:focus, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-form-group--danger .chosen-choices:focus,
+    .gds-form-group--danger .gds-form-group__text-input:focus,
     .gds-form-group--danger .gds-search-select__input:focus,
     .gds-form-group--danger .gds-form-group__text-area-input:focus {
       box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3; }
@@ -20305,7 +20320,12 @@ select {
   .gds-form-group--danger .gds-form-group__checkbox-indicator, .gds-form-group--danger .gds-search-select__checkbox-indicator, .gds-form-group--danger .gds-search-select__checkbox-indicator--success, .gds-form-group--danger .gds-search-select__checkbox-indicator--warning, .gds-form-group--danger .gds-search-select__checkbox-indicator--danger {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23fb4323%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
     border-color: #fb4323; }
-  .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-form-group--danger .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-form-group--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-form-group--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-form-group--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger, .gds-form-group--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
+  .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger,
+  .gds-form-group--danger .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+  .gds-form-group--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator,
+  .gds-form-group--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--success,
+  .gds-form-group--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning,
+  .gds-form-group--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
     border-color: #fb4323; }
   .gds-form-group--danger .gds-form-group__toggleswitch-indicator {
     background: white; }
@@ -20333,105 +20353,42 @@ select {
     .gds-form-group--danger .gds-form-group__file-indicator:active:before {
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), inset 0 0 2px 1px rgba(255, 255, 255, 0.35), inset 0 -0.125rem 0 0 #e23c20; }
 
-.gds-form-group[disabled="disabled"], .gds-toolbelt__item-form-group[disabled="disabled"], .gds-anim-timeline__form-group[disabled="disabled"], .DayPicker-Caption select[disabled="disabled"],
+.gds-form-group[disabled="disabled"],
 .gds-form-group[disabled],
-.gds-toolbelt__item-form-group[disabled],
-.gds-anim-timeline__form-group[disabled],
-.DayPicker-Caption select[disabled],
 .gds-form-group--disabled {
   opacity: 0.5;
   filter: grayscale(75%);
   pointer-events: none; }
-  .gds-form-group[disabled="disabled"] *, .gds-toolbelt__item-form-group[disabled="disabled"] *, .gds-anim-timeline__form-group[disabled="disabled"] *, .DayPicker-Caption select[disabled="disabled"] *,
+  .gds-form-group[disabled="disabled"] *,
   .gds-form-group[disabled] *,
-  .gds-toolbelt__item-form-group[disabled] *,
-  .gds-anim-timeline__form-group[disabled] *,
-  .DayPicker-Caption select[disabled] *,
   .gds-form-group--disabled * {
     pointer-events: none; }
-  .gds-form-group[disabled="disabled"] .gds-form-group__text-input, .gds-toolbelt__item-form-group[disabled="disabled"] .gds-form-group__text-input, .gds-anim-timeline__form-group[disabled="disabled"] .gds-form-group__text-input, .DayPicker-Caption select[disabled="disabled"] .gds-form-group__text-input, .gds-form-group[disabled="disabled"] .gds-toolbelt__item-input, .gds-toolbelt__item-form-group[disabled="disabled"] .gds-toolbelt__item-input, .gds-anim-timeline__form-group[disabled="disabled"] .gds-toolbelt__item-input, .DayPicker-Caption select[disabled="disabled"] .gds-toolbelt__item-input, .gds-form-group[disabled="disabled"] .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-form-group[disabled="disabled"] .chosen-choices, .gds-toolbelt__item-form-group[disabled="disabled"] .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-toolbelt__item-form-group[disabled="disabled"] .chosen-choices, .gds-anim-timeline__form-group[disabled="disabled"] .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-anim-timeline__form-group[disabled="disabled"] .chosen-choices, .DayPicker-Caption select[disabled="disabled"] .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .DayPicker-Caption select[disabled="disabled"] .chosen-choices,
+  .gds-form-group[disabled="disabled"] .gds-form-group__text-input,
   .gds-form-group[disabled="disabled"] .gds-search-select__input,
-  .gds-toolbelt__item-form-group[disabled="disabled"] .gds-search-select__input,
-  .gds-anim-timeline__form-group[disabled="disabled"] .gds-search-select__input,
-  .DayPicker-Caption select[disabled="disabled"] .gds-search-select__input,
   .gds-form-group[disabled] .gds-form-group__text-input,
-  .gds-toolbelt__item-form-group[disabled] .gds-form-group__text-input,
-  .gds-anim-timeline__form-group[disabled] .gds-form-group__text-input,
-  .DayPicker-Caption select[disabled] .gds-form-group__text-input,
-  .gds-form-group[disabled] .gds-toolbelt__item-input,
-  .gds-toolbelt__item-form-group[disabled] .gds-toolbelt__item-input,
-  .gds-anim-timeline__form-group[disabled] .gds-toolbelt__item-input,
-  .DayPicker-Caption select[disabled] .gds-toolbelt__item-input,
-  .gds-form-group[disabled] .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices,
-  .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-form-group[disabled] .chosen-choices,
-  .gds-toolbelt__item-form-group[disabled] .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices,
-  .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-toolbelt__item-form-group[disabled] .chosen-choices,
-  .gds-anim-timeline__form-group[disabled] .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices,
-  .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-anim-timeline__form-group[disabled] .chosen-choices,
-  .DayPicker-Caption select[disabled] .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices,
-  .gds-form-group__chosen--input-with-tags + .chosen-container-multi .DayPicker-Caption select[disabled] .chosen-choices,
   .gds-form-group[disabled] .gds-search-select__input,
-  .gds-toolbelt__item-form-group[disabled] .gds-search-select__input,
-  .gds-anim-timeline__form-group[disabled] .gds-search-select__input,
-  .DayPicker-Caption select[disabled] .gds-search-select__input,
   .gds-form-group--disabled .gds-form-group__text-input,
-  .gds-form-group--disabled .gds-toolbelt__item-input,
-  .gds-form-group--disabled .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices,
-  .gds-form-group__chosen--input-with-tags + .chosen-container-multi .gds-form-group--disabled .chosen-choices,
   .gds-form-group--disabled .gds-search-select__input {
     background-color: #f3f3f3;
     border: 1px solid #dbdbdb; }
-  .gds-form-group[disabled="disabled"] .gds-form-group__text-help, .gds-toolbelt__item-form-group[disabled="disabled"] .gds-form-group__text-help, .gds-anim-timeline__form-group[disabled="disabled"] .gds-form-group__text-help, .DayPicker-Caption select[disabled="disabled"] .gds-form-group__text-help,
+  .gds-form-group[disabled="disabled"] .gds-form-group__text-help,
   .gds-form-group[disabled] .gds-form-group__text-help,
-  .gds-toolbelt__item-form-group[disabled] .gds-form-group__text-help,
-  .gds-anim-timeline__form-group[disabled] .gds-form-group__text-help,
-  .DayPicker-Caption select[disabled] .gds-form-group__text-help,
   .gds-form-group--disabled .gds-form-group__text-help {
     background-color: #dbdbdb; }
-  .gds-form-group[disabled="disabled"] .gds-form-group__text-area-input, .gds-toolbelt__item-form-group[disabled="disabled"] .gds-form-group__text-area-input, .gds-anim-timeline__form-group[disabled="disabled"] .gds-form-group__text-area-input, .DayPicker-Caption select[disabled="disabled"] .gds-form-group__text-area-input,
+  .gds-form-group[disabled="disabled"] .gds-form-group__text-area-input,
   .gds-form-group[disabled] .gds-form-group__text-area-input,
-  .gds-toolbelt__item-form-group[disabled] .gds-form-group__text-area-input,
-  .gds-anim-timeline__form-group[disabled] .gds-form-group__text-area-input,
-  .DayPicker-Caption select[disabled] .gds-form-group__text-area-input,
   .gds-form-group--disabled .gds-form-group__text-area-input {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23dbdbdb%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E"); }
-  .gds-form-group[disabled="disabled"] .gds-form-group__checkbox-indicator, .gds-toolbelt__item-form-group[disabled="disabled"] .gds-form-group__checkbox-indicator, .gds-anim-timeline__form-group[disabled="disabled"] .gds-form-group__checkbox-indicator, .DayPicker-Caption select[disabled="disabled"] .gds-form-group__checkbox-indicator, .gds-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator, .gds-toolbelt__item-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator, .gds-anim-timeline__form-group[disabled="disabled"] .gds-search-select__checkbox-indicator, .DayPicker-Caption select[disabled="disabled"] .gds-search-select__checkbox-indicator, .gds-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator--success, .gds-toolbelt__item-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator--success, .gds-anim-timeline__form-group[disabled="disabled"] .gds-search-select__checkbox-indicator--success, .DayPicker-Caption select[disabled="disabled"] .gds-search-select__checkbox-indicator--success, .gds-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator--warning, .gds-toolbelt__item-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator--warning, .gds-anim-timeline__form-group[disabled="disabled"] .gds-search-select__checkbox-indicator--warning, .DayPicker-Caption select[disabled="disabled"] .gds-search-select__checkbox-indicator--warning, .gds-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator--danger, .gds-toolbelt__item-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator--danger, .gds-anim-timeline__form-group[disabled="disabled"] .gds-search-select__checkbox-indicator--danger, .DayPicker-Caption select[disabled="disabled"] .gds-search-select__checkbox-indicator--danger,
+  .gds-form-group[disabled="disabled"] .gds-form-group__checkbox-indicator, .gds-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator, .gds-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator--success, .gds-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator--warning, .gds-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator--danger,
   .gds-form-group[disabled="disabled"] .gds-form-group__radio-indicator,
-  .gds-toolbelt__item-form-group[disabled="disabled"] .gds-form-group__radio-indicator,
-  .gds-anim-timeline__form-group[disabled="disabled"] .gds-form-group__radio-indicator,
-  .DayPicker-Caption select[disabled="disabled"] .gds-form-group__radio-indicator,
   .gds-form-group[disabled="disabled"] .gds-form-group__toggleswitch-indicator,
-  .gds-toolbelt__item-form-group[disabled="disabled"] .gds-form-group__toggleswitch-indicator,
-  .gds-anim-timeline__form-group[disabled="disabled"] .gds-form-group__toggleswitch-indicator,
-  .DayPicker-Caption select[disabled="disabled"] .gds-form-group__toggleswitch-indicator,
   .gds-form-group[disabled] .gds-form-group__checkbox-indicator,
-  .gds-toolbelt__item-form-group[disabled] .gds-form-group__checkbox-indicator,
-  .gds-anim-timeline__form-group[disabled] .gds-form-group__checkbox-indicator,
-  .DayPicker-Caption select[disabled] .gds-form-group__checkbox-indicator,
   .gds-form-group[disabled] .gds-search-select__checkbox-indicator,
-  .gds-toolbelt__item-form-group[disabled] .gds-search-select__checkbox-indicator,
-  .gds-anim-timeline__form-group[disabled] .gds-search-select__checkbox-indicator,
-  .DayPicker-Caption select[disabled] .gds-search-select__checkbox-indicator,
   .gds-form-group[disabled] .gds-search-select__checkbox-indicator--success,
-  .gds-toolbelt__item-form-group[disabled] .gds-search-select__checkbox-indicator--success,
-  .gds-anim-timeline__form-group[disabled] .gds-search-select__checkbox-indicator--success,
-  .DayPicker-Caption select[disabled] .gds-search-select__checkbox-indicator--success,
   .gds-form-group[disabled] .gds-search-select__checkbox-indicator--warning,
-  .gds-toolbelt__item-form-group[disabled] .gds-search-select__checkbox-indicator--warning,
-  .gds-anim-timeline__form-group[disabled] .gds-search-select__checkbox-indicator--warning,
-  .DayPicker-Caption select[disabled] .gds-search-select__checkbox-indicator--warning,
   .gds-form-group[disabled] .gds-search-select__checkbox-indicator--danger,
-  .gds-toolbelt__item-form-group[disabled] .gds-search-select__checkbox-indicator--danger,
-  .gds-anim-timeline__form-group[disabled] .gds-search-select__checkbox-indicator--danger,
-  .DayPicker-Caption select[disabled] .gds-search-select__checkbox-indicator--danger,
   .gds-form-group[disabled] .gds-form-group__radio-indicator,
-  .gds-toolbelt__item-form-group[disabled] .gds-form-group__radio-indicator,
-  .gds-anim-timeline__form-group[disabled] .gds-form-group__radio-indicator,
-  .DayPicker-Caption select[disabled] .gds-form-group__radio-indicator,
   .gds-form-group[disabled] .gds-form-group__toggleswitch-indicator,
-  .gds-toolbelt__item-form-group[disabled] .gds-form-group__toggleswitch-indicator,
-  .gds-anim-timeline__form-group[disabled] .gds-form-group__toggleswitch-indicator,
-  .DayPicker-Caption select[disabled] .gds-form-group__toggleswitch-indicator,
   .gds-form-group--disabled .gds-form-group__checkbox-indicator,
   .gds-form-group--disabled .gds-search-select__checkbox-indicator,
   .gds-form-group--disabled .gds-search-select__checkbox-indicator--success,
@@ -23182,7 +23139,7 @@ select {
   box-shadow: 0 0 0 2px #0a4882;
   background-color: #0a4882; }
 
-.gds-balloon, .gds-search-select__tag-holder--bubble {
+.gds-balloon {
   position: absolute;
   z-index: 900;
   max-width: 250px;
@@ -23217,7 +23174,7 @@ select {
   border-bottom: 13px solid transparent;
   border-right: 13px solid white; }
 
-.gds-balloon--left:before, .gds-search-select__tag-holder--bubble:before, .gds-balloon--left:after, .gds-search-select__tag-holder--bubble:after {
+.gds-balloon--left:before, .gds-balloon--left:after {
   content: '';
   width: 0;
   height: 0;
@@ -23225,14 +23182,14 @@ select {
   border-style: solid;
   border-color: transparent; }
 
-.gds-balloon--left:before, .gds-search-select__tag-holder--bubble:before {
+.gds-balloon--left:before {
   top: calc(50% - 13px);
   left: calc(100% + 1px);
   border-top: 13px solid transparent;
   border-bottom: 13px solid transparent;
   border-left: 14px solid #dbdbdb; }
 
-.gds-balloon--left:after, .gds-search-select__tag-holder--bubble:after {
+.gds-balloon--left:after {
   top: calc(50% - 13px);
   left: 100%;
   border-top: 13px solid transparent;
@@ -23309,20 +23266,20 @@ select {
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-right: 13px solid #1b87c3; }
-  .gds-balloon--primary.gds-balloon--left:before, .gds-balloon--primary.gds-search-select__tag-holder--bubble:before, .gds-balloon--primary.gds-balloon--left:after, .gds-balloon--primary.gds-search-select__tag-holder--bubble:after {
+  .gds-balloon--primary.gds-balloon--left:before, .gds-balloon--primary.gds-balloon--left:after {
     content: '';
     width: 0;
     height: 0;
     position: absolute;
     border-style: solid;
     border-color: transparent; }
-  .gds-balloon--primary.gds-balloon--left:before, .gds-balloon--primary.gds-search-select__tag-holder--bubble:before {
+  .gds-balloon--primary.gds-balloon--left:before {
     top: calc(50% - 13px);
     left: calc(100% + 1px);
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-left: 14px solid #1a80b8; }
-  .gds-balloon--primary.gds-balloon--left:after, .gds-balloon--primary.gds-search-select__tag-holder--bubble:after {
+  .gds-balloon--primary.gds-balloon--left:after {
     top: calc(50% - 13px);
     left: 100%;
     border-top: 13px solid transparent;
@@ -23392,20 +23349,20 @@ select {
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-right: 13px solid #0a4882; }
-  .gds-balloon--secondary.gds-balloon--left:before, .gds-balloon--secondary.gds-search-select__tag-holder--bubble:before, .gds-balloon--secondary.gds-balloon--left:after, .gds-balloon--secondary.gds-search-select__tag-holder--bubble:after {
+  .gds-balloon--secondary.gds-balloon--left:before, .gds-balloon--secondary.gds-balloon--left:after {
     content: '';
     width: 0;
     height: 0;
     position: absolute;
     border-style: solid;
     border-color: transparent; }
-  .gds-balloon--secondary.gds-balloon--left:before, .gds-balloon--secondary.gds-search-select__tag-holder--bubble:before {
+  .gds-balloon--secondary.gds-balloon--left:before {
     top: calc(50% - 13px);
     left: calc(100% + 1px);
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-left: 14px solid #093d6f; }
-  .gds-balloon--secondary.gds-balloon--left:after, .gds-balloon--secondary.gds-search-select__tag-holder--bubble:after {
+  .gds-balloon--secondary.gds-balloon--left:after {
     top: calc(50% - 13px);
     left: 100%;
     border-top: 13px solid transparent;
@@ -23475,20 +23432,20 @@ select {
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-right: 13px solid #32d996; }
-  .gds-balloon--tertiary.gds-balloon--left:before, .gds-balloon--tertiary.gds-search-select__tag-holder--bubble:before, .gds-balloon--tertiary.gds-balloon--left:after, .gds-balloon--tertiary.gds-search-select__tag-holder--bubble:after {
+  .gds-balloon--tertiary.gds-balloon--left:before, .gds-balloon--tertiary.gds-balloon--left:after {
     content: '';
     width: 0;
     height: 0;
     position: absolute;
     border-style: solid;
     border-color: transparent; }
-  .gds-balloon--tertiary.gds-balloon--left:before, .gds-balloon--tertiary.gds-search-select__tag-holder--bubble:before {
+  .gds-balloon--tertiary.gds-balloon--left:before {
     top: calc(50% - 13px);
     left: calc(100% + 1px);
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-left: 14px solid #2bb880; }
-  .gds-balloon--tertiary.gds-balloon--left:after, .gds-balloon--tertiary.gds-search-select__tag-holder--bubble:after {
+  .gds-balloon--tertiary.gds-balloon--left:after {
     top: calc(50% - 13px);
     left: 100%;
     border-top: 13px solid transparent;
@@ -23558,20 +23515,20 @@ select {
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-right: 13px solid #32d996; }
-  .gds-balloon--success.gds-balloon--left:before, .gds-balloon--success.gds-search-select__tag-holder--bubble:before, .gds-balloon--success.gds-balloon--left:after, .gds-balloon--success.gds-search-select__tag-holder--bubble:after {
+  .gds-balloon--success.gds-balloon--left:before, .gds-balloon--success.gds-balloon--left:after {
     content: '';
     width: 0;
     height: 0;
     position: absolute;
     border-style: solid;
     border-color: transparent; }
-  .gds-balloon--success.gds-balloon--left:before, .gds-balloon--success.gds-search-select__tag-holder--bubble:before {
+  .gds-balloon--success.gds-balloon--left:before {
     top: calc(50% - 13px);
     left: calc(100% + 1px);
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-left: 14px solid #32d996; }
-  .gds-balloon--success.gds-balloon--left:after, .gds-balloon--success.gds-search-select__tag-holder--bubble:after {
+  .gds-balloon--success.gds-balloon--left:after {
     top: calc(50% - 13px);
     left: 100%;
     border-top: 13px solid transparent;
@@ -23641,20 +23598,20 @@ select {
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-right: 13px solid #f3d221; }
-  .gds-balloon--warning.gds-balloon--left:before, .gds-balloon--warning.gds-search-select__tag-holder--bubble:before, .gds-balloon--warning.gds-balloon--left:after, .gds-balloon--warning.gds-search-select__tag-holder--bubble:after {
+  .gds-balloon--warning.gds-balloon--left:before, .gds-balloon--warning.gds-balloon--left:after {
     content: '';
     width: 0;
     height: 0;
     position: absolute;
     border-style: solid;
     border-color: transparent; }
-  .gds-balloon--warning.gds-balloon--left:before, .gds-balloon--warning.gds-search-select__tag-holder--bubble:before {
+  .gds-balloon--warning.gds-balloon--left:before {
     top: calc(50% - 13px);
     left: calc(100% + 1px);
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-left: 14px solid #f3d221; }
-  .gds-balloon--warning.gds-balloon--left:after, .gds-balloon--warning.gds-search-select__tag-holder--bubble:after {
+  .gds-balloon--warning.gds-balloon--left:after {
     top: calc(50% - 13px);
     left: 100%;
     border-top: 13px solid transparent;
@@ -23724,20 +23681,20 @@ select {
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-right: 13px solid #fb4323; }
-  .gds-balloon--danger.gds-balloon--left:before, .gds-balloon--danger.gds-search-select__tag-holder--bubble:before, .gds-balloon--danger.gds-balloon--left:after, .gds-balloon--danger.gds-search-select__tag-holder--bubble:after {
+  .gds-balloon--danger.gds-balloon--left:before, .gds-balloon--danger.gds-balloon--left:after {
     content: '';
     width: 0;
     height: 0;
     position: absolute;
     border-style: solid;
     border-color: transparent; }
-  .gds-balloon--danger.gds-balloon--left:before, .gds-balloon--danger.gds-search-select__tag-holder--bubble:before {
+  .gds-balloon--danger.gds-balloon--left:before {
     top: calc(50% - 13px);
     left: calc(100% + 1px);
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-left: 14px solid #fb4323; }
-  .gds-balloon--danger.gds-balloon--left:after, .gds-balloon--danger.gds-search-select__tag-holder--bubble:after {
+  .gds-balloon--danger.gds-balloon--left:after {
     top: calc(50% - 13px);
     left: 100%;
     border-top: 13px solid transparent;
@@ -23808,20 +23765,20 @@ select {
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-right: 13px solid #5f5f5f; }
-  .gds-balloon--dark.gds-balloon--left:before, .gds-balloon--dark.gds-search-select__tag-holder--bubble:before, .gds-balloon--dark.gds-balloon--left:after, .gds-balloon--dark.gds-search-select__tag-holder--bubble:after {
+  .gds-balloon--dark.gds-balloon--left:before, .gds-balloon--dark.gds-balloon--left:after {
     content: '';
     width: 0;
     height: 0;
     position: absolute;
     border-style: solid;
     border-color: transparent; }
-  .gds-balloon--dark.gds-balloon--left:before, .gds-balloon--dark.gds-search-select__tag-holder--bubble:before {
+  .gds-balloon--dark.gds-balloon--left:before {
     top: calc(50% - 13px);
     left: calc(100% + 1px);
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-left: 14px solid #888888; }
-  .gds-balloon--dark.gds-balloon--left:after, .gds-balloon--dark.gds-search-select__tag-holder--bubble:after {
+  .gds-balloon--dark.gds-balloon--left:after {
     top: calc(50% - 13px);
     left: 100%;
     border-top: 13px solid transparent;
@@ -24486,11 +24443,11 @@ select {
   .gds-search-select--success .gds-search-select__input:hover, .gds-search-select--success .gds-search-select__input:focus, .gds-search-select--success .gds-search-select__input:hover:focus {
     box-shadow: inset 0 -0.125rem 0 0 #32d996, inset 0 0 0 1px #32d996; }
 
-.gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-search-select--success .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-search-select--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-search-select--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-search-select--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger, .gds-search-select--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
+.gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
   border-color: #32d996;
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%2332d996%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
 
-.gds-search-select--success .gds-tag, .gds-search-select--success .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .gds-search-select--success .search-choice {
+.gds-search-select--success .gds-tag {
   background-color: #32d996;
   border-color: #30ce8f; }
 
@@ -24501,11 +24458,11 @@ select {
   .gds-search-select--warning .gds-search-select__input:hover, .gds-search-select--warning .gds-search-select__input:focus, .gds-search-select--warning .gds-search-select__input:hover:focus {
     box-shadow: inset 0 -0.125rem 0 0 #f3d221, inset 0 0 0 1px #f3d221; }
 
-.gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-search-select--warning .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-search-select--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-search-select--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-search-select--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger, .gds-search-select--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
+.gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
   border-color: #f3d221;
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23f3d221%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
 
-.gds-search-select--warning .gds-tag, .gds-search-select--warning .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .gds-search-select--warning .search-choice {
+.gds-search-select--warning .gds-tag {
   background-color: #f3d221;
   border-color: #e7c81f; }
 
@@ -24516,11 +24473,11 @@ select {
   .gds-search-select--danger .gds-search-select__input:hover, .gds-search-select--danger .gds-search-select__input:focus, .gds-search-select--danger .gds-search-select__input:hover:focus {
     box-shadow: inset 0 -0.125rem 0 0 #fb4323, inset 0 0 0 1px #fb4323; }
 
-.gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-search-select--danger .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-search-select--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-search-select--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-search-select--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger, .gds-search-select--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
+.gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
   border-color: #fb4323;
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23fb4323%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
 
-.gds-search-select--danger .gds-tag, .gds-search-select--danger .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .gds-search-select--danger .search-choice {
+.gds-search-select--danger .gds-tag {
   background-color: #fb4323;
   border-color: #ee4021; }
 
@@ -24779,15 +24736,11 @@ select {
   overflow-y: auto; }
 
 .gds-search-select__tag-holder--bubble {
-  position: absolute;
-  background-color: white;
   right: 180px;
   width: auto;
   top: -2px;
-  min-height: auto;
   pointer-events: none;
   transform: translateY(calc(-50% + 27px)) translateX(50px);
-  z-index: 900;
   -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
   -moz-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
   -o-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -24798,7 +24751,37 @@ select {
   -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   /* easeOutQuart */
-  opacity: 0; }
+  opacity: 0;
+  position: absolute;
+  z-index: 900;
+  max-width: 250px;
+  border-radius: 6px;
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dbdbdb;
+  color: #5f5f5f;
+  min-height: 90px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); }
+  .gds-search-select__tag-holder--bubble:before, .gds-search-select__tag-holder--bubble:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-style: solid;
+    border-color: transparent; }
+  .gds-search-select__tag-holder--bubble:before {
+    top: calc(50% - 13px);
+    left: calc(100% + 1px);
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-left: 14px solid #dbdbdb; }
+  .gds-search-select__tag-holder--bubble:after {
+    top: calc(50% - 13px);
+    left: 100%;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-left: 13px solid white; }
 
 .gds-search-select__tag-holder--bubble-sm {
   right: 160px;
@@ -25559,9 +25542,9 @@ select {
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
   color: #fb4323; }
 
-.gds-tree__sub-nav, .gds-persist-nav__sub-nav {
+.gds-tree__sub-nav {
   padding-left: 1.75rem; }
-  .gds-tree__sub-nav:before, .gds-persist-nav__sub-nav:before {
+  .gds-tree__sub-nav:before {
     content: "";
     position: absolute;
     top: 0;
@@ -25570,13 +25553,12 @@ select {
     width: 1px;
     background-color: #dbdbdb; }
 
-.gds-tree--dark .gds-tree__sub-nav:before, .gds-tree--dark .gds-persist-nav__sub-nav:before,
-.gds-tree--dark .gds-tree__sub-item:before,
-.gds-tree--dark .gds-persist-nav__sub-item:before {
+.gds-tree--dark .gds-tree__sub-nav:before,
+.gds-tree--dark .gds-tree__sub-item:before {
   background-color: #949494;
   opacity: 0.85; }
 
-.gds-tree__sub-item:before, .gds-persist-nav__sub-item:before {
+.gds-tree__sub-item:before {
   content: "";
   height: 1px;
   position: absolute;
@@ -25700,7 +25682,7 @@ select {
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   /* easeOutQuart */ }
 
-.gds-tree__sub-nav .gds-tree__link, .gds-persist-nav__sub-nav .gds-tree__link {
+.gds-tree__sub-nav .gds-tree__link {
   margin-left: 0.5rem; }
 
 .gds-tree__link-option {
@@ -25924,7 +25906,7 @@ select {
   height: 100%;
   overflow: hidden; }
 
-.gds-alert__overlay, .gds-onboarder__overlay {
+.gds-alert__overlay {
   position: fixed;
   top: 0;
   right: 0;
@@ -25945,7 +25927,7 @@ select {
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   /* easeOutQuart */ }
 
-.gds-alert--shown, .gds-onboarder--shown {
+.gds-alert--shown {
   opacity: 1;
   pointer-events: auto;
   -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -25958,7 +25940,7 @@ select {
   -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   /* easeOutQuart */ }
-  .gds-alert--shown .gds-alert, .gds-onboarder--shown .gds-alert {
+  .gds-alert--shown .gds-alert {
     transform: scale(1);
     -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
     -moz-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -26408,7 +26390,7 @@ select {
     top: -5px; }
   .gds-page-header__breadcrumbs-menu-dots:after {
     top: 5px; }
-  .gds-page-header__breadcrumbs-menu-dots ~ .gds-bubble__menu, .gds-page-header__breadcrumbs-menu-dots ~ .gds-onboarder {
+  .gds-page-header__breadcrumbs-menu-dots ~ .gds-bubble__menu {
     left: -5px; }
 
 .gds-page-header__breadcrumbs-link {
@@ -26649,7 +26631,10 @@ select {
   left: 4.5rem;
   right: 4.5rem; }
 
-.gds-ranker__connector--vertical, .gds-ranker__connector--vertical-lg, .gds-ranker__connector--vertical-xl, .gds-ranker__connector--vertical-inverted {
+.gds-ranker__connector--vertical,
+.gds-ranker__connector--vertical-lg,
+.gds-ranker__connector--vertical-xl,
+.gds-ranker__connector--vertical-inverted {
   right: 0.75rem;
   left: auto;
   height: auto;
@@ -26709,7 +26694,7 @@ select {
   align-items: center;
   flex-shrink: 0; }
   .gds-ranker__item:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -26717,7 +26702,7 @@ select {
     height: 50px;
     background-color: #dbdbdb; }
   .gds-ranker__item:only-child {
-    left: calc( 50% - 1.5rem); }
+    left: calc(50% - 1.5rem); }
   .gds-ranker__item:hover .gds-ranker__image {
     transform: scale(1.07); }
 
@@ -26733,9 +26718,15 @@ select {
     top: 0;
     bottom: auto; }
 
-.gds-ranker__item--vertical, .gds-ranker__item--vertical-inverted, .gds-ranker__item--vertical-lg, .gds-ranker__item--vertical-xl {
+.gds-ranker__item--vertical,
+.gds-ranker__item--vertical-inverted,
+.gds-ranker__item--vertical-lg,
+.gds-ranker__item--vertical-xl {
   flex-direction: row; }
-  .gds-ranker__item--vertical:after, .gds-ranker__item--vertical-inverted:after, .gds-ranker__item--vertical-lg:after, .gds-ranker__item--vertical-xl:after {
+  .gds-ranker__item--vertical:after,
+  .gds-ranker__item--vertical-inverted:after,
+  .gds-ranker__item--vertical-lg:after,
+  .gds-ranker__item--vertical-xl:after {
     height: 1px;
     top: 50%;
     left: auto;
@@ -26762,27 +26753,91 @@ select {
   z-index: 200;
   display: block;
   margin: 1rem 0 1rem 0; }
+  .gds-ranker__item-icon:before {
+    margin-bottom: -11px; }
+  .gds-ranker__item-icon:before, .gds-ranker__item-icon:after {
+    bottom: 100%;
+    left: 50%; }
+  .gds-ranker__item-icon:before {
+    left: calc(50% - 6px); }
+  .gds-ranker__item-icon:after {
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .gds-ranker__item-icon:hover:before, .gds-ranker__item-icon:focus:before {
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    transform: translateY(-8px); }
+  .gds-ranker__item-icon:hover:after, .gds-ranker__item-icon:focus:after {
+    -webkit-transform: translateX(-50%) translateY(-8px);
+    -moz-transform: translateX(-50%) translateY(-8px);
+    transform: translateX(-50%) translateY(-8px); }
 
-.gds-ranker__item-icon--lg, .gds-ranker__item-icon--vertical-lg {
+.gds-ranker__item-icon--lg {
   width: 6rem;
   height: 6rem;
   margin: 1.5rem 0 1.5rem 0; }
 
-.gds-ranker__item-icon--xl, .gds-ranker__item-icon--vertical-xl {
+.gds-ranker__item-icon--xl {
   width: 8.25rem;
   height: 8.25rem;
   margin: 2rem 0 2rem 0; }
 
-.gds-ranker__item-icon--vertical, .gds-ranker__item-icon--vertical-lg, .gds-ranker__item-icon--vertical-xl {
+.gds-ranker__item-icon--vertical {
   margin: 1rem;
   display: inline-block;
   vertical-align: middle; }
 
 .gds-ranker__item-icon--vertical-lg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 6rem;
+  height: 6rem;
   margin: 1.5rem; }
 
 .gds-ranker__item-icon--vertical-xl {
+  display: inline-block;
+  vertical-align: middle;
+  width: 8.25rem;
+  height: 8.25rem;
   margin: 2rem; }
+
+.gds-ranker__image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 1px solid white;
+  box-shadow: 0 0 0 1px #1b87c3;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* easeOutQuart */
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* easeOutQuart */ }
+
+.gds-ranker__image--secondary {
+  box-shadow: 0 0 0 1px #0a4882; }
+
+.gds-ranker__image--tertiary {
+  box-shadow: 0 0 0 1px #32d996; }
+
+.gds-ranker__image--lg {
+  width: 6rem;
+  height: 6rem; }
+
+.gds-ranker__image--xl {
+  width: 8rem;
+  height: 8rem; }
 
 .gds-ranker__item-number {
   color: white;
@@ -26798,21 +26853,37 @@ select {
   font-size: 0.8rem;
   flex-shrink: 0; }
 
-.gds-ranker__item-number--lg, .gds-ranker__item-number--vertical-lg {
+.gds-ranker__item-number--lg {
   width: 1.875rem;
   height: 1.875rem;
   line-height: 1.875rem;
   font-size: 0.9rem; }
 
-.gds-ranker__item-number--xl, .gds-ranker__item-number--vertical-xl {
+.gds-ranker__item-number--xl {
   width: 2.25rem;
   height: 2.25rem;
   line-height: 2.25rem;
   font-size: 1rem; }
 
-.gds-ranker__item-number--vertical, .gds-ranker__item-number--vertical-lg, .gds-ranker__item-number--vertical-xl {
+.gds-ranker__item-number--vertical {
   display: inline-block;
   vertical-align: middle; }
+
+.gds-ranker__item-number--vertical-lg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.875rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  font-size: 0.9rem; }
+
+.gds-ranker__item-number--vertical-xl {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.25rem;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  font-size: 1rem; }
 
 .gds-ranker__item-number-ordinal {
   font-size: 0.5rem;
@@ -26865,17 +26936,17 @@ select {
       width: 60px; }
     .gds-ranker__item--inverted.gds-ranker__item--xl:after {
       width: 75px; }
-  .gds-ranker__item--vertical, .gds-ranker__item--vertical-inverted, .gds-ranker__item--vertical-lg, .gds-ranker__item--vertical-xl {
+  .gds-ranker__item--vertical {
     flex-direction: row; }
-    .gds-ranker__item--vertical:after, .gds-ranker__item--vertical-inverted:after, .gds-ranker__item--vertical-lg:after, .gds-ranker__item--vertical-xl:after {
+    .gds-ranker__item--vertical:after {
       height: 1px;
       top: 50%;
       left: auto;
       right: 0;
       width: 50px; }
-    .gds-ranker__item--vertical.gds-ranker__item--lg:after, .gds-ranker__item--lg.gds-ranker__item--vertical-inverted:after, .gds-ranker__item--lg.gds-ranker__item--vertical-lg:after, .gds-ranker__item--lg.gds-ranker__item--vertical-xl:after, .gds-ranker__item--vertical.gds-ranker__item--vertical-lg:after, .gds-ranker__item--vertical-lg:after {
+    .gds-ranker__item--vertical.gds-ranker__item--lg:after, .gds-ranker__item--vertical.gds-ranker__item--vertical-lg:after {
       width: 60px; }
-    .gds-ranker__item--vertical.gds-ranker__item--xl:after, .gds-ranker__item--xl.gds-ranker__item--vertical-inverted:after, .gds-ranker__item--xl.gds-ranker__item--vertical-lg:after, .gds-ranker__item--xl.gds-ranker__item--vertical-xl:after, .gds-ranker__item--vertical.gds-ranker__item--vertical-xl:after, .gds-ranker__item--vertical-xl:after {
+    .gds-ranker__item--vertical.gds-ranker__item--xl:after, .gds-ranker__item--vertical.gds-ranker__item--vertical-xl:after {
       width: 75px; }
   .gds-ranker__item--vertical-inverted {
     flex-direction: row-reverse; }
@@ -26893,10 +26964,10 @@ select {
     margin: 1rem;
     display: inline-block;
     vertical-align: middle; }
-  .gds-ranker__item-icon--lg, .gds-ranker__item-icon--vertical-lg,
+  .gds-ranker__item-icon--lg,
   .gds-ranker__item-icon--vertical-lg {
     margin: 1.5rem; }
-  .gds-ranker__item-icon--xl, .gds-ranker__item-icon--vertical-xl,
+  .gds-ranker__item-icon--xl,
   .gds-ranker__item-icon--vertical-xl {
     margin: 2rem; }
   .gds-ranker__item-number {
@@ -26923,18 +26994,18 @@ select {
       top: 5.25rem;
       bottom: 5.25rem;
       right: 1rem; }
-  .gds-ranker__connector--vertical, .gds-ranker__connector--vertical-lg, .gds-ranker__connector--vertical-xl, .gds-ranker__connector--vertical-inverted {
+  .gds-ranker__connector--vertical {
     right: 0.75rem;
     left: auto;
     height: auto;
     top: 2rem;
     bottom: 2rem;
     width: 1px; }
-    .gds-ranker__connector--vertical.gds-ranker__connector--lg, .gds-ranker__connector--lg.gds-ranker__connector--vertical-lg, .gds-ranker__connector--lg.gds-ranker__connector--vertical-xl, .gds-ranker__connector--lg.gds-ranker__connector--vertical-inverted, .gds-ranker__connector--vertical.gds-ranker__connector--vertical-lg, .gds-ranker__connector--vertical-lg {
+    .gds-ranker__connector--vertical.gds-ranker__connector--lg, .gds-ranker__connector--vertical.gds-ranker__connector--vertical-lg {
       top: 3.75rem;
       bottom: 3.75rem;
       right: 1rem; }
-    .gds-ranker__connector--vertical.gds-ranker__connector--xl, .gds-ranker__connector--xl.gds-ranker__connector--vertical-lg, .gds-ranker__connector--xl.gds-ranker__connector--vertical-xl, .gds-ranker__connector--xl.gds-ranker__connector--vertical-inverted, .gds-ranker__connector--vertical.gds-ranker__connector--vertical-xl, .gds-ranker__connector--vertical-xl {
+    .gds-ranker__connector--vertical.gds-ranker__connector--xl, .gds-ranker__connector--vertical.gds-ranker__connector--vertical-xl {
       top: 5.25rem;
       bottom: 5.25rem;
       right: 1rem; }
@@ -28379,14 +28450,15 @@ select {
       color: rgba(0, 0, 0, 0.75); }
     .gds-ribbon--white .gds-ribbon__button:focus {
       outline: none; }
-  .gds-ribbon--white .gds-ribbon__button--active, .gds-ribbon--white .gds-ribbon__button:active, .gds-ribbon--white .gds-ribbon__button--active:hover, .gds-ribbon--white .gds-ribbon__button:hover:active {
+  .gds-ribbon--white .gds-ribbon__button--active,
+  .gds-ribbon--white .gds-ribbon__button--active:hover {
     background-color: #0f4b6d;
     color: white; }
   .gds-ribbon--white .gds-ribbon__bubble-menu-list {
     background-color: white; }
   .gds-ribbon--white .gds-ribbon__bubble-menu:before {
     border-top-color: white; }
-  .gds-ribbon--white .gds-ribbon__common-input, .gds-ribbon--white .gds-ribbon__text-input, .gds-ribbon--white .gds-ribbon__select-input {
+  .gds-ribbon--white .gds-ribbon__common-input {
     background-color: #dbdbdb;
     color: #444; }
   .gds-ribbon--white .gds-ribbon__select-input {
@@ -28394,44 +28466,53 @@ select {
   .gds-ribbon--white .gds-ribbon__icon-wrapper {
     color: rgba(0, 0, 0, 0.15); }
 
-.gds-ribbon--vertical-left, .gds-ribbon--vertical-right {
+.gds-ribbon--vertical-left,
+.gds-ribbon--vertical-right {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 6px;
   border-top-left-radius: 0;
   border-top-right-radius: 6px;
   height: auto;
   width: 2.3rem; }
-  .gds-ribbon--vertical-left .gds-ribbon__item, .gds-ribbon--vertical-right .gds-ribbon__item {
+  .gds-ribbon--vertical-left .gds-ribbon__item,
+  .gds-ribbon--vertical-right .gds-ribbon__item {
     float: none;
     width: 100%;
     height: 2.2rem; }
-    .gds-ribbon--vertical-left .gds-ribbon__item:first-child .gds-ribbon__button, .gds-ribbon--vertical-right .gds-ribbon__item:first-child .gds-ribbon__button {
+    .gds-ribbon--vertical-left .gds-ribbon__item:first-child .gds-ribbon__button,
+    .gds-ribbon--vertical-right .gds-ribbon__item:first-child .gds-ribbon__button {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
       border-top-left-radius: 0;
       border-top-right-radius: 6px; }
-    .gds-ribbon--vertical-left .gds-ribbon__item:last-child .gds-ribbon__button, .gds-ribbon--vertical-right .gds-ribbon__item:last-child .gds-ribbon__button {
+    .gds-ribbon--vertical-left .gds-ribbon__item:last-child .gds-ribbon__button,
+    .gds-ribbon--vertical-right .gds-ribbon__item:last-child .gds-ribbon__button {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 6px;
       border-top-left-radius: 0;
       border-top-right-radius: 0; }
-  .gds-ribbon--vertical-left .gds-ribbon__bubble-menu, .gds-ribbon--vertical-right .gds-ribbon__bubble-menu {
+  .gds-ribbon--vertical-left .gds-ribbon__bubble-menu,
+  .gds-ribbon--vertical-right .gds-ribbon__bubble-menu {
     top: calc(50% - 1.1rem);
     left: 100%;
     transform: translate(0, 0) scale(0, 1);
     transform-origin: 0% 50%; }
-    .gds-ribbon--vertical-left .gds-ribbon__bubble-menu:before, .gds-ribbon--vertical-right .gds-ribbon__bubble-menu:before {
+    .gds-ribbon--vertical-left .gds-ribbon__bubble-menu:before,
+    .gds-ribbon--vertical-right .gds-ribbon__bubble-menu:before {
       right: 100%;
       top: calc(50% - 8px);
       border-top: 8px solid transparent;
       border-bottom: 8px solid transparent;
       border-right: 8px solid #444;
       border-left: none; }
-  .gds-ribbon--vertical-left .gds-ribbon__bubble-menu--open, .gds-ribbon--vertical-right .gds-ribbon__bubble-menu--open {
+  .gds-ribbon--vertical-left .gds-ribbon__bubble-menu--open,
+  .gds-ribbon--vertical-right .gds-ribbon__bubble-menu--open {
     transform: translate(1rem, 0) scale(1, 1); }
-  .gds-ribbon--vertical-left .gds-ribbon__bubble-menu-list, .gds-ribbon--vertical-right .gds-ribbon__bubble-menu-list {
+  .gds-ribbon--vertical-left .gds-ribbon__bubble-menu-list,
+  .gds-ribbon--vertical-right .gds-ribbon__bubble-menu-list {
     transform-origin: 0% 50%; }
-  .gds-ribbon--vertical-left .gds-ribbon__button, .gds-ribbon--vertical-right .gds-ribbon__button {
+  .gds-ribbon--vertical-left .gds-ribbon__button,
+  .gds-ribbon--vertical-right .gds-ribbon__button {
     border-radius: 0; }
 
 .gds-ribbon--vertical-right {
@@ -28492,6 +28573,25 @@ select {
   -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   /* easeOutQuart */ }
+  .gds-ribbon__button:before {
+    margin-bottom: -11px; }
+  .gds-ribbon__button:before, .gds-ribbon__button:after {
+    bottom: 100%;
+    left: 50%; }
+  .gds-ribbon__button:before {
+    left: calc(50% - 6px); }
+  .gds-ribbon__button:after {
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .gds-ribbon__button:hover:before, .gds-ribbon__button:focus:before {
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    transform: translateY(-8px); }
+  .gds-ribbon__button:hover:after, .gds-ribbon__button:focus:after {
+    -webkit-transform: translateX(-50%) translateY(-8px);
+    -moz-transform: translateX(-50%) translateY(-8px);
+    transform: translateX(-50%) translateY(-8px); }
   .gds-ribbon__button > * {
     -webkit-transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
     -moz-transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -28511,13 +28611,24 @@ select {
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35); }
   .gds-ribbon__button:focus {
     outline: none; }
+  .gds-ribbon__button:active {
+    background-color: #0f4b6d;
+    color: white; }
+    .gds-ribbon__button:active > * {
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35); }
+    .gds-ribbon__button:active:before, .gds-ribbon__button:active:after {
+      opacity: 0; }
 
-.gds-ribbon__button--active, .gds-ribbon__button:active, .gds-ribbon__button--active:hover, .gds-ribbon__button:hover:active {
+.gds-ribbon__button--active,
+.gds-ribbon__button--active:hover {
   background-color: #0f4b6d;
   color: white; }
-  .gds-ribbon__button--active > *, .gds-ribbon__button:active > *, .gds-ribbon__button--active:hover > *, .gds-ribbon__button:hover:active > * {
+  .gds-ribbon__button--active > *,
+  .gds-ribbon__button--active:hover > * {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35); }
-  .gds-ribbon__button--active:before, .gds-ribbon__button:active:before, .gds-ribbon__button--active:after, .gds-ribbon__button:active:after, .gds-ribbon__button--active:hover:before, .gds-ribbon__button:active:hover:before, .gds-ribbon__button--active:hover:after, .gds-ribbon__button:active:hover:after {
+  .gds-ribbon__button--active:before, .gds-ribbon__button--active:after,
+  .gds-ribbon__button--active:hover:before,
+  .gds-ribbon__button--active:hover:after {
     opacity: 0; }
 
 .gds-ribbon__button--bubble {
@@ -28550,7 +28661,7 @@ select {
     content: "";
     position: absolute;
     top: 100%;
-    right: calc( 50% - 8px);
+    right: calc(50% - 8px);
     width: 0;
     height: 0;
     border-left: 8px solid transparent;
@@ -28602,7 +28713,9 @@ select {
   height: 100%;
   overflow: hidden; }
 
-.gds-ribbon__common-input, .gds-ribbon__text-input, .gds-ribbon__select-input {
+.gds-ribbon__common-input,
+.gds-ribbon__text-input,
+.gds-ribbon__select-input {
   appearance: none;
   height: 100%;
   border: none;
@@ -28611,7 +28724,9 @@ select {
   box-sizing: border-box;
   padding: 0.5rem;
   font-size: 1rem; }
-  .gds-ribbon__common-input:focus, .gds-ribbon__text-input:focus, .gds-ribbon__select-input:focus {
+  .gds-ribbon__common-input:focus,
+  .gds-ribbon__text-input:focus,
+  .gds-ribbon__select-input:focus {
     color: white;
     outline: none;
     background-color: #acacac; }
@@ -28887,11 +29002,28 @@ select {
     padding-right: 0.33333rem; }
 
 .gds-toolbelt__item-form-group {
-  align-self: center; }
+  align-self: center;
+  color: #5f5f5f;
+  border-color: #c4c4c4;
+  border-bottom-color: #c4c4c4;
+  -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* easeOutQuart */
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* easeOutQuart */ }
 
 .gds-toolbelt__item-input {
+  height: 37px;
+  font-size: 0.8rem;
   color: white;
   width: 44px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   margin-left: 0.33333rem;
   padding: 0 0.5rem;
   -moz-appearance: textfield; }
@@ -29312,7 +29444,7 @@ select {
 .gds-refinery--menu-open .gds-refinery__button .gds-refinery__close-icon {
   display: none; }
 
-.gds-refinery--menu-disabled .gds-tag, .gds-refinery--menu-disabled .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice, .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .gds-refinery--menu-disabled .search-choice {
+.gds-refinery--menu-disabled .gds-tag {
   opacity: 0.5;
   filter: grayscale(75%);
   pointer-events: none;
@@ -29372,14 +29504,48 @@ select {
     padding: 0.2rem 0.3rem; }
 
 .gds-onboarder__overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 100ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -moz-transition: all 100ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -o-transition: all 100ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: all 100ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  /* easeOutQuart */
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -moz-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -o-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  /* easeOutQuart */
   z-index: 900;
   background-color: transparent;
   position: absolute; }
 
-.gds-onboarder--shown .gds-onboarder {
-  opacity: 1; }
+.gds-onboarder--shown {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* easeOutQuart */
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* easeOutQuart */ }
+  .gds-onboarder--shown .gds-onboarder {
+    opacity: 1; }
 
 .gds-onboarder {
+  position: absolute;
+  min-width: 12rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+  text-align: left;
+  line-height: 1.8;
   width: 25rem;
   border-radius: 6px;
   top: 0;
@@ -29390,7 +29556,26 @@ select {
   z-index: 900;
   transition-property: opacity;
   transform: scaleY(1);
-  pointer-events: auto; }
+  pointer-events: auto;
+  -webkit-transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* easeOutQuart */
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* easeOutQuart */ }
+  .gds-onboarder:before {
+    content: "";
+    position: absolute;
+    bottom: 99%;
+    right: 7px;
+    width: 16px;
+    height: 12.5px;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xmlns%3Aa%3D%22http%3A%2F%2Fns.adobe.com%2FAdobeSVGViewerExtensions%2F3.0%2F%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2216px%22%20height%3D%2212.5px%22%20viewBox%3D%220%200%2016%2012.5%22%20style%3D%22enable-background%3Anew%200%200%2016%2012.5%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23FFFFFF%3B%7D%3C%2Fstyle%3E%3Cpolygon%20class%3D%22st0%22%20points%3D%220%2C12.5%2016%2C12.5%208%2C0%20%22%2F%3E%3C%2Fsvg%3E");
+    z-index: 900; }
 
 .gds-onboarder--t-l:before {
   bottom: 99%;
@@ -29440,9 +29625,22 @@ select {
 .gds-onboarder--no-arrow:before {
   content: none; }
 
+.gds-onboarder__step-num {
+  border: 1px solid #0a4882;
+  color: #0a4882;
+  border-radius: 50%;
+  padding: 0.25rem 0;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+  float: left;
+  width: 2.25rem;
+  height: 2.25rem;
+  text-align: center; }
+
 .gds-onboarder__body {
   padding: 1rem 1rem 1.25rem 1rem;
-  background-color: white; }
+  background-color: white;
+  font-size: 0.8rem; }
 
 .gds-onboarder__header {
   padding: 1rem 1rem 0 1rem;
@@ -29450,13 +29648,23 @@ select {
   background-color: white; }
 
 .gds-onboarder__close {
+  border: none;
+  background-color: transparent !important;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22100%25%22%20height%3D%22100%25%22%0A%09%20viewBox%3D%220%200%2020px%2020px%22%20preserveAspectRatio%3D%22none%22%20fill%3D%22none%22%20stroke%3D%22%23acacac%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%0A%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  padding: 0;
   position: absolute !important;
   top: 0;
   right: 0;
   z-index: 100;
   background-position: 20px 20px;
   width: 60px;
-  height: 60px; }
+  height: 60px;
+  cursor: pointer; }
+  .gds-onboarder__close:hover {
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%231b87c3%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E"); }
+  .gds-onboarder__close:focus {
+    outline: none; }
 
 .gds-onboarder__footer {
   border-bottom-right-radius: 6px;
@@ -29485,13 +29693,12 @@ select {
 
 .gds-onboarder__timeline-wrapper {
   width: calc(100% - 78px);
-  float: left;
   height: 100%;
   padding-top: 3px;
   padding-left: 1rem;
   padding-right: 1rem;
   display: inline-block;
-  background-color: #444; }
+  background-color: #c4c4c4; }
 
 .gds-onboarder__highlight {
   position: absolute;
@@ -30090,6 +30297,9 @@ select {
   margin: 0; }
 
 .gds-anim-timeline__form-group {
+  color: #5f5f5f;
+  border-color: #c4c4c4;
+  border-bottom-color: #c4c4c4;
   display: flex !important;
   flex-direction: row;
   flex-wrap: wrap;
@@ -30098,7 +30308,17 @@ select {
   align-content: flex-start;
   margin-bottom: 0;
   border-bottom: 1px solid #dbdbdb;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* easeOutQuart */
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* easeOutQuart */ }
   .gds-anim-timeline__form-group:only-child, .gds-anim-timeline__form-group:last-child {
     border-bottom: none; }
   .gds-anim-timeline__form-group:first-child:nth-last-of-type(2) > .gds-anim-timeline__input-group {
@@ -30107,7 +30327,21 @@ select {
     top: 12px; }
 
 .gds-anim-timeline__input-group {
-  width: 11rem; }
+  width: 11rem;
+  position: relative;
+  display: flex;
+  border-collapse: separate;
+  color: inherit;
+  border-color: inherit;
+  border-bottom-color: inherit; }
+
+.gds-anim-timeline__select-input {
+  height: 37px;
+  font-size: 0.8rem;
+  padding: 0.5rem 0.75rem;
+  background-position: right 0.75rem center;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
 
 .gds-anim-timeline__button {
   height: 37px; }
@@ -30609,14 +30843,36 @@ body.-has-persist-nav {
 .gds-persist-nav__sub-nav {
   padding-left: 2.75rem; }
   .gds-persist-nav__sub-nav:before {
+    content: "";
+    position: absolute;
+    top: 0;
     left: 1.75rem;
-    bottom: calc(1rem - 2px); }
+    bottom: calc(1rem - 2px);
+    width: 1px;
+    background-color: #dbdbdb; }
 
 .gds-persist-nav__sub-nav--dark:before {
   background-color: #888888; }
 
 .gds-persist-nav__sub-item:before {
-  width: calc(1rem - 1px); }
+  content: "";
+  height: 1px;
+  position: absolute;
+  top: 1rem;
+  right: 100%;
+  width: calc(1rem - 1px);
+  background-color: #dbdbdb;
+  z-index: 300;
+  -webkit-transition: all 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* easeOutQuart */
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* easeOutQuart */ }
 
 .gds-persist-nav__sub-item .gds-persist-nav__link {
   border-top-left-radius: 6px;
@@ -30723,6 +30979,13 @@ body.-has-persist-nav {
         padding-right: 0.5rem; } }
 
 .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  color: #5f5f5f;
   border-radius: 6px;
   height: auto;
   background-color: white;
@@ -30738,11 +31001,27 @@ body.-has-persist-nav {
   display: none; }
 
 .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  color: #5f5f5f;
   background-image: none; }
   .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice {
+    display: inline-block;
+    border: 1px solid #dbdbdb;
+    border-radius: 6px;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0 0.5rem;
+    overflow: hidden;
+    vertical-align: top;
+    font-family: "Public Sans";
+    font-weight: 200;
     background-color: transparent;
     background-image: none;
-    line-height: inherit;
     box-shadow: none;
     height: 26px;
     font-size: 0.8rem;
@@ -30750,9 +31029,36 @@ body.-has-persist-nav {
     padding-right: 2.25rem;
     color: #0e0e0e; }
     .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice .search-choice-close {
+      border: none;
+      background-color: transparent !important;
+      padding: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      top: -6px;
+      right: -3px;
+      transform: scale(0.6);
+      width: 40px;
+      height: 40px;
+      top: -9px;
+      right: -7px;
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22100%25%22%20height%3D%22100%25%22%0A%09%20viewBox%3D%220%200%2020px%2020px%22%20preserveAspectRatio%3D%22none%22%20fill%3D%22none%22%20stroke%3D%22%23acacac%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%0A%3C%2Fsvg%3E") !important;
       background-repeat: no-repeat !important;
       background-position: 10px 10px !important; }
+      .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice .search-choice-close:hover {
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%231b87c3%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E");
+        cursor: pointer; }
+      .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice .search-choice-close:focus {
+        outline: none; }
+      .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice .search-choice-close:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -0.25rem;
+        width: 1px;
+        height: 100%;
+        background-color: #dbdbdb;
+        pointer-events: none; }
   .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices input {
     font-family: "Public Sans" !important;
     letter-spacing: 0.5px; }
@@ -31833,9 +32139,26 @@ body.-has-persist-nav {
   color: #1b87c3; }
 
 .DayPicker-Caption select {
+  color: #5f5f5f;
+  border-color: #c4c4c4;
+  border-bottom-color: #c4c4c4;
+  height: 29px;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  background-position: right 0.4rem center;
   outline: 0;
   width: 37%;
-  display: inline; }
+  display: inline;
+  -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* easeOutQuart */
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* easeOutQuart */ }
 
 .DayPicker-Weekdays {
   display: table-header-group;
@@ -31918,6 +32241,11 @@ body.-has-persist-nav {
   background: white; }
   .DayPickerInput-Overlay else {
     box-shadow: inset 0 -0.1875rem 0 0 #1773a6, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 3px 0 rgba(0, 0, 0, 0.2); }
+
+.DayPickerInput input {
+  height: 37px;
+  font-size: 0.8rem;
+  padding: 0.5rem 0.75rem; }
 
 .-m-r-0 {
   margin-right: 0 !important; }
@@ -36660,7 +36988,7 @@ body.-has-persist-nav {
 .-color-tx-dk-5 {
   color: #7a7a7a !important; }
 
-.-color-bg-white, .gds-anim-timeline__button--add {
+.-color-bg-white {
   background-color: white !important; }
 
 .-color-bd-white {

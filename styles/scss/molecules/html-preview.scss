@@ -1,4 +1,5 @@
-.gds-html-preview {
+.gds-html-preview,
+.gds-anim-timeline__asset-avatar {
   display: block;
   overflow: hidden;
   width: auto;
@@ -66,7 +67,8 @@
   }
 }
 
-.gds-html-preview--active {
+.gds-html-preview--active,
+.gds-anim-timeline__asset-avatar {
   border-color: $primaryColor;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 

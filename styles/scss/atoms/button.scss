@@ -172,7 +172,7 @@
 }
 
 .gds-button,
-.react-datepicker__today-button,
+.gds-toolbelt__item-input-button,
 .gds-radio-block__button,
 .gds-corner-content__button,
 .gds-circular-button,
@@ -181,7 +181,12 @@
 .gds-multi-select__button,
 .gds-button-group__button,
 .gds-button-dropdown--in-group > .gds-button-dropdown__button,
-.ReactTable .-pagination .-btn {
+.gds-onboarder__button,
+.gds-anim-timeline__button--remove,
+.gds-anim-timeline__button--add,
+.react-datepicker__today-button,
+.ReactTable .-pagination .-btn,
+.DayPicker-TodayButton {
   display: inline-block;
   font-family: $pri-font;
   font-weight: $font-weight-normal;
@@ -312,7 +317,8 @@
 }
 
 // Button-capped inputs
-.gds-button--button-cap {
+.gds-button--button-cap,
+.gds-toolbelt__item-input-button {
   flex-basis: auto;
   margin-bottom: 0;
   border-top-left-radius: 0;
@@ -321,7 +327,8 @@
 }
 
 .gds-button--outline,
-.gds-circular-button--outline {
+.gds-circular-button--outline,
+.gds-anim-timeline__button--add {
   color: $primaryColor;
   @include defaultShadows($gg-light-2, black, $primaryLight2Color, "true");
   @include backgroundGradient(transparent, transparent, "default");
@@ -397,7 +404,10 @@
 .react-datepicker__today-button,
 .ReactTable .-pagination .-btn,
 .gds-circular-button--primary,
-.gds-multi-select__button--primary {
+.gds-multi-select__button--primary,
+.gds-anim-timeline__button--remove,
+.gds-onboarder__button,
+.DayPicker-TodayButton {
   @include backgroundGradient(
     $primaryLight2Color,
     $primaryDark2Color,
@@ -594,6 +604,7 @@
 }
 
 .gds-button--dark,
+.gds-toolbelt__item-input-button,
 .gds-circular-button--dark,
 .gds-button--dark-toggle,
 .gds-circular-button--dark-toggle,

@@ -265,16 +265,19 @@
 
 .gds-toolbelt__item-form-group {
   align-self: center;
-  @extend .gds-form-group;
+  color: $gg-dark-4;
+  border-color: $gg-light-3;
+  border-bottom-color: $gg-light-3;
+  @include transition-ease-out(all, 100ms);
 }
 
 .gds-toolbelt__item-input {
-  @extend .gds-form-group__text-input;
-  @extend .gds-form-group__text-input--sm;
-  @extend .gds-form-group__text-input--dark;
-  @extend .gds-form-group__text-input--right-edge;
+  height: $input-height-sm;
+  font-size: $font-size-minus-2;
   color: white;
   width: 44px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   margin-left: ($unit / 3);
   padding: 0 ($unit / 2);
   -moz-appearance: textfield;
@@ -294,11 +297,8 @@
 }
 
 .gds-toolbelt__item-input-button {
-  @extend .gds-button;
   font-size: $btn-font-size-small;
   padding: $btn-padding-small;
-  @extend .gds-button--dark;
-  @extend .gds-button--button-cap;
   color: #ffffff;
   width: 37px;
   height: 37px;
