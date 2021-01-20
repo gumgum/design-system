@@ -16858,7 +16858,9 @@ select {
   border-bottom: 1px solid #444; }
 
 .gds-accordion__item--active > .gds-accordion__item-icon,
-.gds-accordion__item--active > .gds-accordion__child-item-expand-wrapper > .gds-accordion__item-icon {
+.gds-accordion__item--active
+> .gds-accordion__child-item-expand-wrapper
+> .gds-accordion__item-icon {
   transform: rotate(90deg); }
 
 .gds-accordion__item--active > .gds-accordion__child-items {
@@ -16887,7 +16889,9 @@ select {
     transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     /* easeOutQuart */ }
 
-.gds-accordion__item--active > .gds-accordion__child-items > .gds-accordion__child-item {
+.gds-accordion__item--active
+> .gds-accordion__child-items
+> .gds-accordion__child-item {
   overflow: visible; }
 
 .gds-accordion__item--active > .gds-accordion__item-title--primary {
@@ -17882,10 +17886,18 @@ select {
     border: none; }
   .gds-button-group--responsive {
     margin-left: 0 !important; }
-  .gds-button-group--responsive .gds-button--responsive + .gds-button--responsive,
-  .gds-button-group--responsive .gds-button--responsive + .gds-button-group--responsive,
-  .gds-button-group--responsive .gds-button-group--responsive + .gds-button--responsive,
-  .gds-button-group--responsive .gds-button-group--responsive + .gds-button-group--responsive {
+  .gds-button-group--responsive
+.gds-button--responsive
++ .gds-button--responsive,
+  .gds-button-group--responsive
+.gds-button--responsive
++ .gds-button-group--responsive,
+  .gds-button-group--responsive
+.gds-button-group--responsive
++ .gds-button--responsive,
+  .gds-button-group--responsive
+.gds-button-group--responsive
++ .gds-button-group--responsive {
     margin-left: 0; } }
 
 .gds-button-toolbar {
@@ -18318,7 +18330,8 @@ select {
 .gds-button-dropdown__button--dark-primary + .gds-button-dropdown__menu--dark {
   color: #5f5f5f; }
 
-.gds-button-dropdown__button--dark-secondary + .gds-button-dropdown__menu--dark {
+.gds-button-dropdown__button--dark-secondary
++ .gds-button-dropdown__menu--dark {
   color: #5f5f5f; }
 
 .gds-button-dropdown__button--dark-tertiary + .gds-button-dropdown__menu--dark {
@@ -18993,7 +19006,8 @@ select {
   left: 1rem;
   right: auto; }
 
-.gds-form-group__text-input:placeholder-shown + .gds-form-group__text-input-icon {
+.gds-form-group__text-input:placeholder-shown
++ .gds-form-group__text-input-icon {
   opacity: 0.5; }
 
 .gds-form-group__text-input--xs,
@@ -19334,30 +19348,41 @@ select {
     box-shadow: inset 0 -0.125rem 0 0 #acacac, inset 0 0 0 1px #acacac;
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23ffffff%3B%22/%3E%3C/svg%3E"); }
 
-.gds-form-group__checkbox--inverse .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator, .gds-form-group__checkbox--inverse .gds-search-select__checkbox:hover .gds-form-group__checkbox-indicator, .gds-form-group__checkbox--inverse .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator, .gds-form-group__checkbox--inverse .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator, .gds-form-group__checkbox--inverse .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--success, .gds-form-group__checkbox--inverse .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--success, .gds-form-group__checkbox--inverse .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--warning, .gds-form-group__checkbox--inverse .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--warning, .gds-form-group__checkbox--inverse .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--danger, .gds-form-group__checkbox--inverse .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--danger {
+.gds-form-group__checkbox--inverse .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator,
+.gds-form-group__checkbox--inverse .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator,
+.gds-form-group__checkbox--inverse .gds-search-select__checkbox:hover .gds-form-group__checkbox-indicator,
+.gds-form-group__checkbox--inverse .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator {
   border-color: #5fabd5; }
 
-.gds-form-group__checkbox--sm .gds-form-group__checkbox-label, .gds-form-group__checkbox--sm .gds-search-select__checkbox {
+.gds-form-group__checkbox--sm .gds-form-group__checkbox-label,
+.gds-form-group__checkbox--sm .gds-search-select__checkbox {
   font-size: 0.8rem; }
 
-.gds-form-group__checkbox--sm .gds-form-group__checkbox-indicator, .gds-form-group__checkbox--sm .gds-search-select__checkbox-indicator, .gds-form-group__checkbox--sm .gds-search-select__checkbox-indicator--success, .gds-form-group__checkbox--sm .gds-search-select__checkbox-indicator--warning, .gds-form-group__checkbox--sm .gds-search-select__checkbox-indicator--danger {
+.gds-form-group__checkbox--sm .gds-form-group__checkbox-indicator,
+.gds-form-group__checkbox--sm .gds-search-select__checkbox-indicator {
   width: 1rem;
   height: 1rem;
   margin-right: 7px; }
 
-.gds-form-group__checkbox--xs .gds-form-group__checkbox-label, .gds-form-group__checkbox--xs .gds-search-select__checkbox {
+.gds-form-group__checkbox--xs .gds-form-group__checkbox-label,
+.gds-form-group__checkbox--xs .gds-search-select__checkbox {
   font-size: 0.7rem; }
 
-.gds-form-group__checkbox--xs .gds-form-group__checkbox-indicator, .gds-form-group__checkbox--xs .gds-search-select__checkbox-indicator, .gds-form-group__checkbox--xs .gds-search-select__checkbox-indicator--success, .gds-form-group__checkbox--xs .gds-search-select__checkbox-indicator--warning, .gds-form-group__checkbox--xs .gds-search-select__checkbox-indicator--danger {
+.gds-form-group__checkbox--xs .gds-form-group__checkbox-indicator,
+.gds-form-group__checkbox--xs .gds-search-select__checkbox-indicator {
   width: 0.9rem;
   height: 0.9rem;
   margin-right: 6px; }
 
-.gds-form-group__checkbox-label, .gds-search-select__checkbox {
+.gds-form-group__checkbox-label,
+.gds-search-select__checkbox {
   display: inline-block;
   cursor: pointer;
   padding-right: 0.5rem; }
-  .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator, .gds-search-select__checkbox:hover .gds-form-group__checkbox-indicator, .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator, .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator, .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--success, .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--success, .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--warning, .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--warning, .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--danger, .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--danger {
+  .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator,
+  .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator,
+  .gds-search-select__checkbox:hover .gds-form-group__checkbox-indicator,
+  .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator {
     border-color: #3293c9; }
 
 .gds-form-group__checkbox-label--dark {
@@ -19372,7 +19397,8 @@ select {
   opacity: 0;
   cursor: pointer; }
 
-.gds-form-group__checkbox-indicator, .gds-search-select__checkbox-indicator, .gds-search-select__checkbox-indicator--success, .gds-search-select__checkbox-indicator--warning, .gds-search-select__checkbox-indicator--danger {
+.gds-form-group__checkbox-indicator,
+.gds-search-select__checkbox-indicator {
   display: inline-block;
   width: 1.2rem;
   height: 1.2rem;
@@ -19402,32 +19428,39 @@ select {
   -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 
-.gds-form-group__checkbox-indicator--dark {
+.gds-form-group__checkbox-indicator--dark,
+.gds-search-select__checkbox-indicator--dark {
   border-color: #acacac; }
 
-.gds-form-group__checkbox-indicator--inverse {
+.gds-form-group__checkbox-indicator--inverse,
+.gds-search-select__checkbox-indicator--inverse {
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23ffffff%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
 
-.gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger,
-.gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator,
-.gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator,
-.gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--success,
-.gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning,
-.gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
+.gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+.gds-search-select__checkbox-input:checked
++ .gds-form-group__checkbox-indicator,
+.gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+.gds-search-select__checkbox-input:checked
++ .gds-search-select__checkbox-indicator {
   border-color: #1b87c3;
   background-position: center center;
   background-size: 100% 100%; }
 
-.gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator--inverse,
-.gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator--inverse {
+.gds-form-group__checkbox-input:checked
++ .gds-form-group__checkbox-indicator--inverse,
+.gds-search-select__checkbox-input:checked
++ .gds-form-group__checkbox-indicator--inverse,
+.gds-form-group__checkbox-input:checked
++ .gds-search-select__checkbox-indicator--inverse,
+.gds-search-select__checkbox-input:checked
++ .gds-search-select__checkbox-indicator--inverse {
   border-color: white; }
 
-.gds-form-group__checkbox-input:focus + .gds-form-group__checkbox-indicator, .gds-form-group__checkbox-input:focus + .gds-search-select__checkbox-indicator, .gds-form-group__checkbox-input:focus + .gds-search-select__checkbox-indicator--success, .gds-form-group__checkbox-input:focus + .gds-search-select__checkbox-indicator--warning, .gds-form-group__checkbox-input:focus + .gds-search-select__checkbox-indicator--danger,
+.gds-form-group__checkbox-input:focus + .gds-form-group__checkbox-indicator,
 .gds-search-select__checkbox-input:focus + .gds-form-group__checkbox-indicator,
-.gds-search-select__checkbox-input:focus + .gds-search-select__checkbox-indicator,
-.gds-search-select__checkbox-input:focus + .gds-search-select__checkbox-indicator--success,
-.gds-search-select__checkbox-input:focus + .gds-search-select__checkbox-indicator--warning,
-.gds-search-select__checkbox-input:focus + .gds-search-select__checkbox-indicator--danger {
+.gds-form-group__checkbox-input:focus + .gds-search-select__checkbox-indicator,
+.gds-search-select__checkbox-input:focus
++ .gds-search-select__checkbox-indicator {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .gds-form-group__radio--sm .gds-form-group__radio-label {
@@ -19630,19 +19663,24 @@ select {
     -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 
-.gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator {
+.gds-form-group__toggleswitch-input:checked
+~ .gds-form-group__toggleswitch-indicator {
   background: transparent;
   background-image: none; }
-  .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator:after {
+  .gds-form-group__toggleswitch-input:checked
+~ .gds-form-group__toggleswitch-indicator:after {
     left: 50%;
     background-color: #1b87c3; }
-  .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:after {
+  .gds-form-group__toggleswitch-input:checked
+~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:after {
     left: 0;
     color: #1b87c3; }
-  .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:before {
+  .gds-form-group__toggleswitch-input:checked
+~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:before {
     left: 100%; }
 
-.gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator--dark {
+.gds-form-group__toggleswitch-input:checked
+~ .gds-form-group__toggleswitch-indicator--dark {
   background-image: none; }
 
 .gds-form-group__file {
@@ -20144,15 +20182,17 @@ select {
     border: 1px solid #32d996; }
   .gds-form-group--success .gds-form-group__radio-input:checked + .gds-form-group__radio-indicator {
     border-color: #32d996; }
-  .gds-form-group--success .gds-form-group__checkbox-indicator, .gds-form-group--success .gds-search-select__checkbox-indicator, .gds-form-group--success .gds-search-select__checkbox-indicator--success, .gds-form-group--success .gds-search-select__checkbox-indicator--warning, .gds-form-group--success .gds-search-select__checkbox-indicator--danger {
+  .gds-form-group--success .gds-form-group__checkbox-indicator,
+  .gds-form-group--success .gds-search-select__checkbox-indicator {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%2332d996%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
     border-color: #32d996; }
-  .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger,
-  .gds-form-group--success .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator,
-  .gds-form-group--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator,
-  .gds-form-group--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--success,
-  .gds-form-group--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning,
-  .gds-form-group--success .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
+  .gds-form-group--success .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+  .gds-form-group--success .gds-search-select__checkbox-input:checked
++ .gds-form-group__checkbox-indicator,
+  .gds-form-group--success .gds-form-group__checkbox-input:checked
++ .gds-search-select__checkbox-indicator,
+  .gds-form-group--success .gds-search-select__checkbox-input:checked
++ .gds-search-select__checkbox-indicator {
     border-color: #32d996; }
   .gds-form-group--success .gds-form-group__toggleswitch-indicator {
     background: white; }
@@ -20161,11 +20201,15 @@ select {
       background-color: #32d996; }
   .gds-form-group--success .gds-form-group__toggleswitch-indicator-labels:before, .gds-form-group--success .gds-form-group__toggleswitch-indicator-labels:after {
     color: #32d996; }
-  .gds-form-group--success .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator:after,
-  .gds-form-group--success .gds-search-select__checkbox-input:checked ~ .gds-form-group__toggleswitch-indicator:after {
+  .gds-form-group--success .gds-form-group__toggleswitch-input:checked
+~ .gds-form-group__toggleswitch-indicator:after,
+  .gds-form-group--success .gds-search-select__checkbox-input:checked
+~ .gds-form-group__toggleswitch-indicator:after {
     background-color: #32d996; }
-  .gds-form-group--success .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:after,
-  .gds-form-group--success .gds-search-select__checkbox-input:checked ~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:after {
+  .gds-form-group--success .gds-form-group__toggleswitch-input:checked
+~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:after,
+  .gds-form-group--success .gds-search-select__checkbox-input:checked
+~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:after {
     color: #32d996; }
   .gds-form-group--success .gds-form-group__file-indicator:before {
     background-color: #32d996;
@@ -20230,15 +20274,17 @@ select {
     border: 1px solid #f3d221; }
   .gds-form-group--warning .gds-form-group__radio-input:checked + .gds-form-group__radio-indicator {
     border-color: #f3d221; }
-  .gds-form-group--warning .gds-form-group__checkbox-indicator, .gds-form-group--warning .gds-search-select__checkbox-indicator, .gds-form-group--warning .gds-search-select__checkbox-indicator--success, .gds-form-group--warning .gds-search-select__checkbox-indicator--warning, .gds-form-group--warning .gds-search-select__checkbox-indicator--danger {
+  .gds-form-group--warning .gds-form-group__checkbox-indicator,
+  .gds-form-group--warning .gds-search-select__checkbox-indicator {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23f3d221%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
     border-color: #f3d221; }
-  .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger,
-  .gds-form-group--warning .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator,
-  .gds-form-group--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator,
-  .gds-form-group--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--success,
-  .gds-form-group--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning,
-  .gds-form-group--warning .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
+  .gds-form-group--warning .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+  .gds-form-group--warning .gds-search-select__checkbox-input:checked
++ .gds-form-group__checkbox-indicator,
+  .gds-form-group--warning .gds-form-group__checkbox-input:checked
++ .gds-search-select__checkbox-indicator,
+  .gds-form-group--warning .gds-search-select__checkbox-input:checked
++ .gds-search-select__checkbox-indicator {
     border-color: #f3d221; }
   .gds-form-group--warning .gds-form-group__toggleswitch-indicator {
     background: white; }
@@ -20247,9 +20293,11 @@ select {
       background-color: #f3d221; }
   .gds-form-group--warning .gds-form-group__toggleswitch-indicator-labels:before, .gds-form-group--warning .gds-form-group__toggleswitch-indicator-labels:after {
     color: #f3d221; }
-  .gds-form-group--warning .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator:after {
+  .gds-form-group--warning .gds-form-group__toggleswitch-input:checked
+~ .gds-form-group__toggleswitch-indicator:after {
     background-color: #f3d221; }
-  .gds-form-group--warning .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:after {
+  .gds-form-group--warning .gds-form-group__toggleswitch-input:checked
+~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:after {
     color: #f3d221; }
   .gds-form-group--warning .gds-form-group__file-indicator:before {
     background-color: #f3d221;
@@ -20317,15 +20365,17 @@ select {
     border: 1px solid #fb4323; }
   .gds-form-group--danger .gds-form-group__radio-input:checked + .gds-form-group__radio-indicator {
     border-color: #fb4323; }
-  .gds-form-group--danger .gds-form-group__checkbox-indicator, .gds-form-group--danger .gds-search-select__checkbox-indicator, .gds-form-group--danger .gds-search-select__checkbox-indicator--success, .gds-form-group--danger .gds-search-select__checkbox-indicator--warning, .gds-form-group--danger .gds-search-select__checkbox-indicator--danger {
+  .gds-form-group--danger .gds-form-group__checkbox-indicator,
+  .gds-form-group--danger .gds-search-select__checkbox-indicator {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23fb4323%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
     border-color: #fb4323; }
-  .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger,
-  .gds-form-group--danger .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator,
-  .gds-form-group--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator,
-  .gds-form-group--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--success,
-  .gds-form-group--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning,
-  .gds-form-group--danger .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
+  .gds-form-group--danger .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+  .gds-form-group--danger .gds-search-select__checkbox-input:checked
++ .gds-form-group__checkbox-indicator,
+  .gds-form-group--danger .gds-form-group__checkbox-input:checked
++ .gds-search-select__checkbox-indicator,
+  .gds-form-group--danger .gds-search-select__checkbox-input:checked
++ .gds-search-select__checkbox-indicator {
     border-color: #fb4323; }
   .gds-form-group--danger .gds-form-group__toggleswitch-indicator {
     background: white; }
@@ -20335,9 +20385,11 @@ select {
   .gds-form-group--danger .gds-form-group__toggleswitch-indicator-labels:before,
   .gds-form-group--danger .gds-form-group__toggleswitch-indicator-labels:after {
     color: #fb4323; }
-  .gds-form-group--danger .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator:after {
+  .gds-form-group--danger .gds-form-group__toggleswitch-input:checked
+~ .gds-form-group__toggleswitch-indicator:after {
     background-color: #fb4323; }
-  .gds-form-group--danger .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:after {
+  .gds-form-group--danger .gds-form-group__toggleswitch-input:checked
+~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:after {
     color: #fb4323; }
   .gds-form-group--danger .gds-form-group__file-indicator:before {
     background-color: #fb4323;
@@ -20379,21 +20431,16 @@ select {
   .gds-form-group[disabled] .gds-form-group__text-area-input,
   .gds-form-group--disabled .gds-form-group__text-area-input {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23dbdbdb%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E"); }
-  .gds-form-group[disabled="disabled"] .gds-form-group__checkbox-indicator, .gds-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator, .gds-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator--success, .gds-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator--warning, .gds-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator--danger,
+  .gds-form-group[disabled="disabled"] .gds-form-group__checkbox-indicator,
+  .gds-form-group[disabled="disabled"] .gds-search-select__checkbox-indicator,
   .gds-form-group[disabled="disabled"] .gds-form-group__radio-indicator,
   .gds-form-group[disabled="disabled"] .gds-form-group__toggleswitch-indicator,
   .gds-form-group[disabled] .gds-form-group__checkbox-indicator,
   .gds-form-group[disabled] .gds-search-select__checkbox-indicator,
-  .gds-form-group[disabled] .gds-search-select__checkbox-indicator--success,
-  .gds-form-group[disabled] .gds-search-select__checkbox-indicator--warning,
-  .gds-form-group[disabled] .gds-search-select__checkbox-indicator--danger,
   .gds-form-group[disabled] .gds-form-group__radio-indicator,
   .gds-form-group[disabled] .gds-form-group__toggleswitch-indicator,
   .gds-form-group--disabled .gds-form-group__checkbox-indicator,
   .gds-form-group--disabled .gds-search-select__checkbox-indicator,
-  .gds-form-group--disabled .gds-search-select__checkbox-indicator--success,
-  .gds-form-group--disabled .gds-search-select__checkbox-indicator--warning,
-  .gds-form-group--disabled .gds-search-select__checkbox-indicator--danger,
   .gds-form-group--disabled .gds-form-group__radio-indicator,
   .gds-form-group--disabled .gds-form-group__toggleswitch-indicator {
     opacity: 0.5; }
@@ -20654,8 +20701,10 @@ select {
   .gds-nav-tabs__list-item--active .gds-nav-tabs__link:before,
   .gds-nav-tabs__link:before {
     border-radius: 0; }
-  .gds-nav-tabs__list-item.gds-nav-tabs__list-item--active .gds-nav-tabs__link:before,
-  .gds-nav-tabs--justified.gds-nav-tabs__list-item.gds-nav-tabs__list-item--active .gds-nav-tabs__link:before {
+  .gds-nav-tabs__list-item.gds-nav-tabs__list-item--active
+.gds-nav-tabs__link:before,
+  .gds-nav-tabs--justified.gds-nav-tabs__list-item.gds-nav-tabs__list-item--active
+.gds-nav-tabs__link:before {
     border-bottom: 1px solid #0a4882; } }
 
 .gds-nav-tabs__list-item--disabled,
@@ -20748,9 +20797,11 @@ select {
     overflow-x: auto;
     overflow-y: hidden; } }
 
-.gds-nav-tabs--underline-primary .gds-nav-tabs__list-item--active.gds-nav-tabs__list-item--underline .gds-nav-tabs__link--underline,
+.gds-nav-tabs--underline-primary .gds-nav-tabs__list-item--active.gds-nav-tabs__list-item--underline
+.gds-nav-tabs__link--underline,
 .gds-nav-tabs--underline-primary .gds-nav-tabs--underline__link,
-.gds-nav-tabs--underline-secondary .gds-nav-tabs__list-item--active.gds-nav-tabs__list-item--underline .gds-nav-tabs__link--underline,
+.gds-nav-tabs--underline-secondary .gds-nav-tabs__list-item--active.gds-nav-tabs__list-item--underline
+.gds-nav-tabs__link--underline,
 .gds-nav-tabs--underline-secondary .gds-nav-tabs--underline__link {
   height: calc(100% + 2px);
   background-color: rgba(255, 255, 255, 0.1);
@@ -21105,17 +21156,25 @@ select {
     content: ""; }
   .gds-multi-select__menu-link:hover {
     background-color: rgba(95, 171, 213, 0.95); }
-    .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator, .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox .gds-search-select__checkbox:hover .gds-form-group__checkbox-indicator, .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator, .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator, .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--success, .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--success, .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--warning, .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--warning, .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--danger, .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--danger {
+    .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator,
+    .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox .gds-search-select__checkbox:hover .gds-form-group__checkbox-indicator {
       border-color: #5fabd5; }
-    .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox-indicator, .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-search-select__checkbox-indicator, .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-search-select__checkbox-indicator--success, .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-search-select__checkbox-indicator--warning, .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-search-select__checkbox-indicator--danger {
+    .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox-indicator,
+    .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-search-select__checkbox-indicator {
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23ffffff%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
       border-color: white; }
-    .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox-label, .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-search-select__checkbox {
+    .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-form-group__checkbox-label,
+    .gds-multi-select__menu-link:hover > .gds-multi-select__option .gds-search-select__checkbox {
       color: white; }
-  .gds-multi-select__menu-link > .gds-multi-select__option .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator, .gds-multi-select__menu-link > .gds-multi-select__option .gds-search-select__checkbox:hover .gds-form-group__checkbox-indicator, .gds-multi-select__menu-link > .gds-multi-select__option .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator, .gds-multi-select__menu-link > .gds-multi-select__option .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator, .gds-multi-select__menu-link > .gds-multi-select__option .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--success, .gds-multi-select__menu-link > .gds-multi-select__option .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--success, .gds-multi-select__menu-link > .gds-multi-select__option .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--warning, .gds-multi-select__menu-link > .gds-multi-select__option .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--warning, .gds-multi-select__menu-link > .gds-multi-select__option .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--danger, .gds-multi-select__menu-link > .gds-multi-select__option .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--danger {
+  .gds-multi-select__menu-link > .gds-multi-select__option .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator,
+  .gds-multi-select__menu-link > .gds-multi-select__option .gds-search-select__checkbox:hover .gds-form-group__checkbox-indicator,
+  .gds-multi-select__menu-link > .gds-multi-select__option .gds-form-group__checkbox-label:hover
+.gds-search-select__checkbox-indicator,
+  .gds-multi-select__menu-link > .gds-multi-select__option .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator {
     border-color: white !important;
     color: white !important; }
-  .gds-multi-select__menu-link .gds-form-group__checkbox-label, .gds-multi-select__menu-link .gds-search-select__checkbox {
+  .gds-multi-select__menu-link .gds-form-group__checkbox-label,
+  .gds-multi-select__menu-link .gds-search-select__checkbox {
     display: block; }
 
 .gds-multi-select__menu-link--collapsable:after {
@@ -21141,14 +21200,24 @@ select {
 
 .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active {
   background-color: rgba(95, 171, 213, 0.95); }
-  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox .gds-search-select__checkbox:hover .gds-form-group__checkbox-indicator, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--success, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--success, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--warning, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--warning, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--danger, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--danger {
+  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator,
+  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator,
+  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox .gds-search-select__checkbox:hover .gds-form-group__checkbox-indicator,
+  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator {
     border-color: #5fabd5; }
-  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox-indicator, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-search-select__checkbox-indicator, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-search-select__checkbox-indicator--success, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-search-select__checkbox-indicator--warning, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-search-select__checkbox-indicator--danger {
+  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox-indicator,
+  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-search-select__checkbox-indicator {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23ffffff%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
     border-color: white; }
-  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox-label, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-search-select__checkbox {
+  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox-label,
+  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-search-select__checkbox {
     color: white; }
-  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-search-select__checkbox:hover .gds-form-group__checkbox-indicator, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--success, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--success, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--warning, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--warning, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox-label:hover .gds-search-select__checkbox-indicator--danger, .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator--danger {
+  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator,
+  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-search-select__checkbox:hover .gds-form-group__checkbox-indicator,
+  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-form-group__checkbox-label:hover
+.gds-search-select__checkbox-indicator,
+  .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active > .gds-multi-select__option .gds-search-select__checkbox:hover
+.gds-search-select__checkbox-indicator {
     border-color: white !important;
     color: white !important; }
   .gds-multi-select__menu-link--collapsable.gds-multi-select__menu-link--active:after {
@@ -21158,7 +21227,8 @@ select {
 .gds-multi-select__menu-link--collapsable:hover:after {
   border-left-color: white; }
 
-.gds-multi-select__menu-link--collapsable > .gds-multi-select__option .gds-form-group__checkbox-label, .gds-multi-select__menu-link--collapsable > .gds-multi-select__option .gds-search-select__checkbox {
+.gds-multi-select__menu-link--collapsable > .gds-multi-select__option .gds-form-group__checkbox-label,
+.gds-multi-select__menu-link--collapsable .gds-multi-select__option .gds-search-select__checkbox {
   margin-right: 2rem; }
 
 .gds-multi-select__sub-menu {
@@ -24443,7 +24513,9 @@ select {
   .gds-search-select--success .gds-search-select__input:hover, .gds-search-select--success .gds-search-select__input:focus, .gds-search-select--success .gds-search-select__input:hover:focus {
     box-shadow: inset 0 -0.125rem 0 0 #32d996, inset 0 0 0 1px #32d996; }
 
-.gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
+.gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+.gds-search-select--success .gds-form-group__checkbox-input:checked
++ .gds-search-select__checkbox-indicator {
   border-color: #32d996;
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%2332d996%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
 
@@ -24458,7 +24530,9 @@ select {
   .gds-search-select--warning .gds-search-select__input:hover, .gds-search-select--warning .gds-search-select__input:focus, .gds-search-select--warning .gds-search-select__input:hover:focus {
     box-shadow: inset 0 -0.125rem 0 0 #f3d221, inset 0 0 0 1px #f3d221; }
 
-.gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
+.gds-search-select--warning .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+.gds-search-select--warning .gds-form-group__checkbox-input:checked
++ .gds-search-select__checkbox-indicator {
   border-color: #f3d221;
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23f3d221%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
 
@@ -24473,7 +24547,9 @@ select {
   .gds-search-select--danger .gds-search-select__input:hover, .gds-search-select--danger .gds-search-select__input:focus, .gds-search-select--danger .gds-search-select__input:hover:focus {
     box-shadow: inset 0 -0.125rem 0 0 #fb4323, inset 0 0 0 1px #fb4323; }
 
-.gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator, .gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator, .gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--success, .gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--warning, .gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--danger {
+.gds-search-select--danger .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+.gds-search-select--danger .gds-form-group__checkbox-input:checked
++ .gds-search-select__checkbox-indicator {
   border-color: #fb4323;
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23fb4323%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
 
@@ -26546,7 +26622,8 @@ select {
 .gds-page-header__secondary-nav__icon-link--dark {
   color: #dbdbdb; }
 
-.gds-page-header__secondary-nav__icon--active .gds-page-header__secondary-nav__icon-link {
+.gds-page-header__secondary-nav__icon--active
+.gds-page-header__secondary-nav__icon-link {
   color: #1b87c3; }
 
 /*alias - need to phase this out*/
@@ -30814,7 +30891,9 @@ body.-has-persist-nav {
   .gds-persist-nav__sidebar--toggle + .gds-persist-nav__mobile-close {
     pointer-events: auto;
     background-color: rgba(255, 255, 255, 0.65); }
-  .-dark-mode .gds-persist-nav__sidebar--toggle + .gds-persist-nav__mobile-close {
+  .-dark-mode
+.gds-persist-nav__sidebar--toggle
++ .gds-persist-nav__mobile-close {
     background-color: rgba(0, 0, 0, 0.65); } }
 
 @media (max-width: 767px) {
@@ -30978,7 +31057,9 @@ body.-has-persist-nav {
         padding-left: 0.5rem;
         padding-right: 0.5rem; } }
 
-.gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single {
+.gds-form-group__chosen--standard-select
++ .chosen-container-single
+.chosen-single {
   display: block;
   width: 100%;
   padding: 1rem;
@@ -30990,17 +31071,27 @@ body.-has-persist-nav {
   height: auto;
   background-color: white;
   box-shadow: inset 0 -0.125rem 0 0 #c4c4c4, inset 0 0 0 1px rgba(0, 0, 0, 0.1); }
-  .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single:hover {
+  .gds-form-group__chosen--standard-select
++ .chosen-container-single
+.chosen-single:hover {
     box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px rgba(27, 135, 195, 0.25);
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
-  .gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single:focus {
+  .gds-form-group__chosen--standard-select
++ .chosen-container-single
+.chosen-single:focus {
     box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px rgba(27, 135, 195, 0.5);
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
 
-.gds-form-group__chosen--standard-select + .chosen-container-single .chosen-single div b {
+.gds-form-group__chosen--standard-select
++ .chosen-container-single
+.chosen-single
+div
+b {
   display: none; }
 
-.gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices {
+.gds-form-group__chosen--input-with-tags
++ .chosen-container-multi
+.chosen-choices {
   display: block;
   width: 100%;
   padding: 1rem;
@@ -31010,7 +31101,9 @@ body.-has-persist-nav {
   letter-spacing: 0.5px;
   color: #5f5f5f;
   background-image: none; }
-  .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice {
+  .gds-form-group__chosen--input-with-tags
++ .chosen-container-multi
+.chosen-choices .search-choice {
     display: inline-block;
     border: 1px solid #dbdbdb;
     border-radius: 6px;
@@ -31028,7 +31121,9 @@ body.-has-persist-nav {
     line-height: 23px;
     padding-right: 2.25rem;
     color: #0e0e0e; }
-    .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice .search-choice-close {
+    .gds-form-group__chosen--input-with-tags
++ .chosen-container-multi
+.chosen-choices .search-choice .search-choice-close {
       border: none;
       background-color: transparent !important;
       padding: 0;
@@ -31045,12 +31140,18 @@ body.-has-persist-nav {
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22100%25%22%20height%3D%22100%25%22%0A%09%20viewBox%3D%220%200%2020px%2020px%22%20preserveAspectRatio%3D%22none%22%20fill%3D%22none%22%20stroke%3D%22%23acacac%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%0A%3C%2Fsvg%3E") !important;
       background-repeat: no-repeat !important;
       background-position: 10px 10px !important; }
-      .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice .search-choice-close:hover {
+      .gds-form-group__chosen--input-with-tags
++ .chosen-container-multi
+.chosen-choices .search-choice .search-choice-close:hover {
         background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%231b87c3%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E");
         cursor: pointer; }
-      .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice .search-choice-close:focus {
+      .gds-form-group__chosen--input-with-tags
++ .chosen-container-multi
+.chosen-choices .search-choice .search-choice-close:focus {
         outline: none; }
-      .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices .search-choice .search-choice-close:before {
+      .gds-form-group__chosen--input-with-tags
++ .chosen-container-multi
+.chosen-choices .search-choice .search-choice-close:before {
         content: "";
         position: absolute;
         top: 0;
@@ -31059,7 +31160,9 @@ body.-has-persist-nav {
         height: 100%;
         background-color: #dbdbdb;
         pointer-events: none; }
-  .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices input {
+  .gds-form-group__chosen--input-with-tags
++ .chosen-container-multi
+.chosen-choices input {
     font-family: "Public Sans" !important;
     letter-spacing: 0.5px; }
 
@@ -31240,7 +31343,8 @@ body.-has-persist-nav {
 .react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range) {
   background-color: rgba(33, 107, 165, 0.5); }
 
-.react-datepicker__month--selecting-range .react-datepicker__day--in-range:not(.react-datepicker__day--in-selecting-range) {
+.react-datepicker__month--selecting-range
+.react-datepicker__day--in-range:not(.react-datepicker__day--in-selecting-range) {
   background-color: #1b87c3;
   color: #7a7a7a; }
 
@@ -31365,10 +31469,12 @@ body.-has-persist-nav {
 .react-datepicker__year-option:hover {
   background-color: #5fabd5; }
 
-.react-datepicker__year-option:hover .react-datepicker__navigation--years-upcoming {
+.react-datepicker__year-option:hover
+.react-datepicker__navigation--years-upcoming {
   border-bottom-color: #fff; }
 
-.react-datepicker__year-option:hover .react-datepicker__navigation--years-previous {
+.react-datepicker__year-option:hover
+.react-datepicker__navigation--years-previous {
   border-top-color: #fff; }
 
 .react-datepicker__year-option--selected {
@@ -31440,7 +31546,8 @@ body.-has-persist-nav {
 .react-datepicker__year-read-view:hover {
   cursor: pointer; }
 
-.react-datepicker__year-read-view:hover .react-datepicker__year-read-view--down-arrow {
+.react-datepicker__year-read-view:hover
+.react-datepicker__year-read-view--down-arrow {
   border-top-color: white; }
 
 .react-datepicker__year-read-view--down-arrow {
@@ -31489,16 +31596,20 @@ body.-has-persist-nav {
 
 .react-datepicker__tether-element-attached-top .react-datepicker__triangle,
 .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle,
-.react-datepicker__tether-element-attached-top .react-datepicker__triangle::before,
-.react-datepicker__tether-element-attached-bottom .react-datepicker__triangle::before {
+.react-datepicker__tether-element-attached-top
+.react-datepicker__triangle::before,
+.react-datepicker__tether-element-attached-bottom
+.react-datepicker__triangle::before {
   box-sizing: content-box;
   position: absolute;
   border: 8px solid transparent;
   height: 0;
   width: 1px; }
 
-.react-datepicker__tether-element-attached-top .react-datepicker__triangle::before,
-.react-datepicker__tether-element-attached-bottom .react-datepicker__triangle::before,
+.react-datepicker__tether-element-attached-top
+.react-datepicker__triangle::before,
+.react-datepicker__tether-element-attached-bottom
+.react-datepicker__triangle::before,
 .react-datepicker__year-read-view--down-arrow::before {
   content: "";
   z-index: -1;
@@ -31511,11 +31622,13 @@ body.-has-persist-nav {
   margin-top: -8px; }
 
 .react-datepicker__tether-element-attached-top .react-datepicker__triangle,
-.react-datepicker__tether-element-attached-top .react-datepicker__triangle::before {
+.react-datepicker__tether-element-attached-top
+.react-datepicker__triangle::before {
   border-top: none;
   border-bottom-color: #1b87c3; }
 
-.react-datepicker__tether-element-attached-top .react-datepicker__triangle::before {
+.react-datepicker__tether-element-attached-top
+.react-datepicker__triangle::before {
   top: -1px;
   border-bottom-color: #187ab0; }
 
@@ -31525,11 +31638,13 @@ body.-has-persist-nav {
   margin-bottom: -8px; }
 
 .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle,
-.react-datepicker__tether-element-attached-bottom .react-datepicker__triangle::before {
+.react-datepicker__tether-element-attached-bottom
+.react-datepicker__triangle::before {
   border-bottom: none;
   border-top-color: #fff; }
 
-.react-datepicker__tether-element-attached-bottom .react-datepicker__triangle::before,
+.react-datepicker__tether-element-attached-bottom
+.react-datepicker__triangle::before,
 .react-datepicker__year-read-view--down-arrow::before {
   bottom: -1px;
   border-top-color: #187ab0; }
@@ -31545,8 +31660,10 @@ body.-has-persist-nav {
 .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle,
 .react-datepicker__year-read-view--down-arrow,
 .react-datepicker__month-read-view--down-arrow,
-.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before,
-.react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle::before,
+.react-datepicker-popper[data-placement^="bottom"]
+.react-datepicker__triangle::before,
+.react-datepicker-popper[data-placement^="top"]
+.react-datepicker__triangle::before,
 .react-datepicker__year-read-view--down-arrow::before,
 .react-datepicker__month-read-view--down-arrow::before {
   box-sizing: content-box;
@@ -31555,8 +31672,10 @@ body.-has-persist-nav {
   height: 0;
   width: 1px; }
 
-.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before,
-.react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle::before,
+.react-datepicker-popper[data-placement^="bottom"]
+.react-datepicker__triangle::before,
+.react-datepicker-popper[data-placement^="top"]
+.react-datepicker__triangle::before,
 .react-datepicker__year-read-view--down-arrow::before,
 .react-datepicker__month-read-view--down-arrow::before {
   content: "";
@@ -31570,11 +31689,13 @@ body.-has-persist-nav {
   margin-top: -8px; }
 
 .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle,
-.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before {
+.react-datepicker-popper[data-placement^="bottom"]
+.react-datepicker__triangle::before {
   border-top: none;
   border-bottom-color: #1b87c3; }
 
-.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before {
+.react-datepicker-popper[data-placement^="bottom"]
+.react-datepicker__triangle::before {
   top: -1px;
   border-bottom-color: #1b87c3; }
 
@@ -31587,13 +31708,15 @@ body.-has-persist-nav {
 .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle,
 .react-datepicker__year-read-view--down-arrow,
 .react-datepicker__month-read-view--down-arrow,
-.react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle::before,
+.react-datepicker-popper[data-placement^="top"]
+.react-datepicker__triangle::before,
 .react-datepicker__year-read-view--down-arrow::before,
 .react-datepicker__month-read-view--down-arrow::before {
   border-bottom: none;
   border-top-color: #187ab0; }
 
-.react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle::before,
+.react-datepicker-popper[data-placement^="top"]
+.react-datepicker__triangle::before,
 .react-datepicker__year-read-view--down-arrow::before,
 .react-datepicker__month-read-view--down-arrow::before {
   bottom: -1px;
@@ -32223,7 +32346,8 @@ body.-has-persist-nav {
 .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
   background-color: #235a8f; }
 
-.DayPicker:not(.DayPicker--interactionDisabled) .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
+.DayPicker:not(.DayPicker--interactionDisabled)
+.DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
   background-color: #e9eff4; }
 
 .DayPickerInput {
