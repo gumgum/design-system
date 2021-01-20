@@ -19362,7 +19362,8 @@ select {
 .gds-form-group__checkbox--sm .gds-search-select__checkbox-indicator {
   width: 1rem;
   height: 1rem;
-  margin-right: 7px; }
+  margin-right: 7px;
+  border-radius: 5px; }
 
 .gds-form-group__checkbox--xs .gds-form-group__checkbox-label,
 .gds-form-group__checkbox--xs .gds-search-select__checkbox {
@@ -19372,7 +19373,8 @@ select {
 .gds-form-group__checkbox--xs .gds-search-select__checkbox-indicator {
   width: 0.9rem;
   height: 0.9rem;
-  margin-right: 6px; }
+  margin-right: 6px;
+  border-radius: 4px; }
 
 .gds-form-group__checkbox-label,
 .gds-search-select__checkbox {
@@ -19503,7 +19505,6 @@ select {
   vertical-align: middle;
   background-image: url("data:image/svg+xml;uft8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20500%20500%22%20style%3D%22enable-background%3Anew%200%200%20500%20500%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Ccircle%20cx%3D%22247.3%22%20cy%3D%22250.1%22%20r%3D%22199.6%22%20style%3D%22fill%3A%231b87c3%3B%22%2F%3E%0A%3C%2Fsvg%3E");
   border-radius: 50%;
-  background-size: auto 100%;
   pointer-events: none;
   background-color: transparent;
   background-repeat: no-repeat;
