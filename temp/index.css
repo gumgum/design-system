@@ -11668,7 +11668,7 @@ body {
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.8;
-  color: #292929; }
+  color: #444; }
 
 h1,
 h2,
@@ -13333,7 +13333,6 @@ select {
   transform: translateY(8px); }
 
 .gds-tooltip--lg:after {
-  white-space: normal;
   line-height: 1.4em;
   font-size: 1.5rem;
   width: auto;
@@ -18806,7 +18805,7 @@ select {
   color: inherit;
   border: none;
   border-bottom-color: inherit;
-  box-shadow: inset 0 -0.125rem 0 0 #c4c4c4, inset 0 0 0 1px #c4c4c4, 0 0 0px 0 rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0 0 0 #c4c4c4, inset 0 0 0 1px #c4c4c4, 0 0 0px 0px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0);
   -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
   -moz-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
   -o-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -18879,7 +18878,7 @@ select {
   .ReactTable .-pagination input:hover {
     border-color: #1b87c3;
     color: #5f5f5f;
-    box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0 0 rgba(0, 0, 0, 0.2); }
     .gds-form-group__text-input:hover + .gds-form-group__text-help,
     .gds-toolbelt__item-input:hover + .gds-form-group__text-help,
     .gds-search-select__input:hover + .gds-form-group__text-help,
@@ -18903,7 +18902,7 @@ select {
   .gds-search-select__input--sm:hover:focus,
   .gds-form-group__text-input--lg:hover:focus,
   .ReactTable .-pagination input:hover:focus {
-    box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 1px 1px #3293c9, 0 0 0 2 rgba(27, 135, 195, 0.6); }
   .gds-form-group__text-input:focus,
   .gds-toolbelt__item-input:focus,
   .gds-search-select__input:focus,
@@ -18916,7 +18915,7 @@ select {
   .gds-form-group__text-input--lg:focus,
   .ReactTable .-pagination input:focus {
     color: #5f5f5f;
-    box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 0 rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0 0 #3293c9, 0 0 0 2px rgba(27, 135, 195, 0.4);
     outline: none; }
     .gds-form-group__text-input:focus + .gds-form-group__text-help,
     .gds-toolbelt__item-input:focus + .gds-form-group__text-help,
@@ -18935,7 +18934,7 @@ select {
 .gds-form-group__text-area-input--dark,
 .gds-toolbelt__item-input {
   background-color: #575757;
-  box-shadow: inset 0 -0.125rem 0 0 #888888, inset 0 0 0 1px #888888, 0 0 0px 0 rgba(0, 0, 0, 0); }
+  box-shadow: inset 0 0 0 0 #888888, inset 0 0 0 1px #888888, 0 0 0px 0px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0); }
   .gds-form-group__text-input--dark::-webkit-input-placeholder,
   .gds-form-group__text-area-input--dark::-webkit-input-placeholder,
   .gds-toolbelt__item-input::-webkit-input-placeholder {
@@ -19065,7 +19064,18 @@ select {
   padding: 0;
   background-color: white;
   border-top-right-radius: 0;
-  border-bottom-right-radius: 0; }
+  border-bottom-right-radius: 0;
+  box-shadow: inset 0 0 0 0 #c4c4c4, inset 0 0 0 1px #c4c4c4, 0 0 0px 0px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0); }
+  .gds-form-group__date-group:hover {
+    border-color: #1b87c3;
+    color: #5f5f5f;
+    box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0 0 rgba(0, 0, 0, 0.2); }
+  .gds-form-group__date-group:hover:focus {
+    box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 1px 1px #3293c9, 0 0 0 2 rgba(27, 135, 195, 0.6); }
+  .gds-form-group__date-group:focus {
+    color: #5f5f5f;
+    box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0 0 #3293c9, 0 0 0 2px rgba(27, 135, 195, 0.4);
+    outline: none; }
 
 .gds-form-group__date-group--lg {
   height: 65px; }
@@ -19215,7 +19225,7 @@ select {
   padding-right: 2.5rem;
   outline: none;
   border: none;
-  box-shadow: inset 0 -0.125rem 0 0 #c4c4c4, inset 0 0 0 1px #c4c4c4, 0 0 0px 0 rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0 0 0 #c4c4c4, inset 0 0 0 1px #c4c4c4, 0 0 0px 0px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0);
   -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
   -moz-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
   -o-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -19232,7 +19242,7 @@ select {
   .ReactTable .-pagination select:focus,
   .gds-search-select__input:focus,
   .gds-form-group__select-multiple[multiple]:focus {
-    box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 0 rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0 0 #3293c9, 0 0 0 2px rgba(27, 135, 195, 0.4);
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
   .gds-form-group__select-input:hover,
   .gds-anim-timeline__select-input:hover,
@@ -19240,7 +19250,7 @@ select {
   .ReactTable .-pagination select:hover,
   .gds-search-select__input:hover,
   .gds-form-group__select-multiple[multiple]:hover {
-    box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0 0 rgba(0, 0, 0, 0.2);
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
   .gds-form-group__select-input:hover:focus,
   .gds-anim-timeline__select-input:hover:focus,
@@ -19248,7 +19258,7 @@ select {
   .ReactTable .-pagination select:hover:focus,
   .gds-search-select__input:hover:focus,
   .gds-form-group__select-multiple[multiple]:hover:focus {
-    box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 1px 1px #3293c9, 0 0 0 2 rgba(27, 135, 195, 0.6);
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
 
 .gds-form-group__select-input--dark,
@@ -19256,7 +19266,7 @@ select {
   background-color: #575757;
   color: white;
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A#FFFFFF%3B%22/%3E%3C/svg%3E");
-  box-shadow: inset 0 -0.125rem 0 0 #888888, inset 0 0 0 1px #888888, 0 0 0px 0 rgba(0, 0, 0, 0); }
+  box-shadow: inset 0 0 0 0 #888888, inset 0 0 0 1px #888888, 0 0 0px 0px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0); }
   .gds-form-group__select-input--dark:hover,
   .gds-search-select__input--dark:hover {
     color: white; }
@@ -19329,12 +19339,12 @@ select {
   border: none; }
 
 .gds-form-group__select-input--primary {
-  box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 0 rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 0px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0);
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
   .gds-form-group__select-input--primary:hover {
-    box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0 0 rgba(0, 0, 0, 0.2); }
   .gds-form-group__select-input--primary:focus {
-    box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 0 rgba(0, 0, 0, 0); }
+    box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0 0 #3293c9, 0 0 0 2px rgba(27, 135, 195, 0.4); }
 
 .gds-form-group__select-input--secondary {
   background-color: #dbdbdb;
@@ -20107,7 +20117,6 @@ select {
   width: 100%;
   height: 100%;
   transform-origin: 50% 50%;
-  cursor: pointer;
   cursor: -webkit-grab !important;
   cursor: -moz-grab !important;
   cursor: grab !important; }
@@ -20143,35 +20152,38 @@ select {
   border-bottom-color: #32d996; }
   .gds-form-group--success .gds-form-group__text-help {
     background-color: #32d996; }
+  .gds-form-group--success .gds-form-group__text-input,
+  .gds-form-group--success .gds-search-select__input,
+  .gds-form-group--success .gds-form-group__text-area-input {
+    box-shadow: inset 0 0 0 0 #32d996, inset 0 0 0 1px #32d996, 0 0 0px 0px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0); }
+    .gds-form-group--success .gds-form-group__text-input:hover,
+    .gds-form-group--success .gds-search-select__input:hover,
+    .gds-form-group--success .gds-form-group__text-area-input:hover {
+      box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0 0 rgba(0, 0, 0, 0.2); }
+    .gds-form-group--success .gds-form-group__text-input:focus,
+    .gds-form-group--success .gds-search-select__input:focus,
+    .gds-form-group--success .gds-form-group__text-area-input:focus {
+      box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0 0 #3293c9, 0 0 0 2px rgba(27, 135, 195, 0.4); }
   .gds-form-group--success .gds-form-group__select-input,
   .gds-form-group--success .gds-search-select__input {
-    box-shadow: inset 0 -0.125rem 0 0 #32d996, inset 0 0 0 1px #32d996, 0 0 0px 0 rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 0 #32d996, inset 0 0 0 1px #32d996, 0 0 0px 0px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0);
     color: #32d996;
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%2332d996%3B%22/%3E%3C/svg%3E"); }
     .gds-form-group--success .gds-form-group__select-input:focus,
     .gds-form-group--success .gds-search-select__input:focus {
       color: #5f5f5f;
-      box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 0 rgba(0, 0, 0, 0);
+      box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0 0 #3293c9, 0 0 0 2px rgba(27, 135, 195, 0.4);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
     .gds-form-group--success .gds-form-group__select-input:hover,
     .gds-form-group--success .gds-search-select__input:hover {
       color: #5f5f5f;
-      box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0 0 rgba(0, 0, 0, 0.2);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
     .gds-form-group--success .gds-form-group__select-input:hover:focus,
     .gds-form-group--success .gds-search-select__input:hover:focus {
       color: #5f5f5f;
-      box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 1px 1px #3293c9, 0 0 0 2 rgba(27, 135, 195, 0.6);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
-  .gds-form-group--success .gds-form-group__text-input,
-  .gds-form-group--success .gds-search-select__input .gds-form-group__text-area-input {
-    box-shadow: inset 0 -0.125rem 0 0 #32d996, inset 0 0 0 1px #32d996; }
-    .gds-form-group--success .gds-form-group__text-input:hover,
-    .gds-form-group--success .gds-search-select__input .gds-form-group__text-area-input:hover {
-      box-shadow: inset 0 -0.125rem 0 0 #3293c9, inset 0 0 0 1px #3293c9; }
-    .gds-form-group--success .gds-form-group__text-input:focus,
-    .gds-form-group--success .gds-search-select__input .gds-form-group__text-area-input:focus {
-      box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3; }
   .gds-form-group--success .gds-form-group__text-area-input {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%2332d996%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E"); }
     .gds-form-group--success .gds-form-group__text-area-input:hover {
@@ -20203,13 +20215,9 @@ select {
   .gds-form-group--success .gds-form-group__toggleswitch-indicator-labels:before, .gds-form-group--success .gds-form-group__toggleswitch-indicator-labels:after {
     color: #32d996; }
   .gds-form-group--success .gds-form-group__toggleswitch-input:checked
-~ .gds-form-group__toggleswitch-indicator:after,
-  .gds-form-group--success .gds-search-select__checkbox-input:checked
 ~ .gds-form-group__toggleswitch-indicator:after {
     background-color: #32d996; }
   .gds-form-group--success .gds-form-group__toggleswitch-input:checked
-~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:after,
-  .gds-form-group--success .gds-search-select__checkbox-input:checked
 ~ .gds-form-group__toggleswitch-indicator .gds-form-group__toggleswitch-indicator-labels:after {
     color: #32d996; }
   .gds-form-group--success .gds-form-group__file-indicator:before {
@@ -20235,34 +20243,34 @@ select {
   .gds-form-group--warning .gds-form-group__text-input,
   .gds-form-group--warning .gds-search-select__input,
   .gds-form-group--warning .gds-form-group__text-area-input {
-    box-shadow: inset 0 -0.125rem 0 0 #f3d221, inset 0 0 0 1px #f3d221; }
+    box-shadow: inset 0 0 0 0 #f3d221, inset 0 0 0 1px #f3d221, 0 0 0px 0px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0); }
     .gds-form-group--warning .gds-form-group__text-input:hover,
     .gds-form-group--warning .gds-search-select__input:hover,
     .gds-form-group--warning .gds-form-group__text-area-input:hover {
-      box-shadow: inset 0 -0.125rem 0 0 #3293c9, inset 0 0 0 1px #3293c9; }
+      box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0 0 rgba(0, 0, 0, 0.2); }
     .gds-form-group--warning .gds-form-group__text-input:focus,
     .gds-form-group--warning .gds-search-select__input:focus,
     .gds-form-group--warning .gds-form-group__text-area-input:focus {
-      box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3; }
+      box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0 0 #3293c9, 0 0 0 2px rgba(27, 135, 195, 0.4); }
   .gds-form-group--warning .gds-form-group__select-input,
   .gds-form-group--warning .gds-search-select__input {
-    box-shadow: inset 0 -0.125rem 0 0 #f3d221, inset 0 0 0 1px #f3d221, 0 0 0px 0 rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 0 #f3d221, inset 0 0 0 1px #f3d221, 0 0 0px 0px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0);
     color: #f3d221;
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23f3d221%3B%22/%3E%3C/svg%3E"); }
     .gds-form-group--warning .gds-form-group__select-input:focus,
     .gds-form-group--warning .gds-search-select__input:focus {
       color: #5f5f5f;
-      box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 0 rgba(0, 0, 0, 0);
+      box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0 0 #3293c9, 0 0 0 2px rgba(27, 135, 195, 0.4);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
     .gds-form-group--warning .gds-form-group__select-input:hover,
     .gds-form-group--warning .gds-search-select__input:hover {
       color: #5f5f5f;
-      box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0 0 rgba(0, 0, 0, 0.2);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
     .gds-form-group--warning .gds-form-group__select-input:hover:focus,
     .gds-form-group--warning .gds-search-select__input:hover:focus {
       color: #5f5f5f;
-      box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 1px 1px #3293c9, 0 0 0 2 rgba(27, 135, 195, 0.6);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
   .gds-form-group--warning .gds-form-group__text-area-input {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23f3d221%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E"); }
@@ -20321,40 +20329,37 @@ select {
   .gds-form-group--danger .gds-form-group__text-help {
     background-color: #fb4323; }
   .gds-form-group--danger .gds-form-group__text-input,
-  .gds-form-group--danger .gds-search-select__input {
-    box-shadow: inset 0 -0.125rem 0 0 #fb4323; }
+  .gds-form-group--danger .gds-search-select__input,
+  .gds-form-group--danger .gds-form-group__text-area-input {
+    box-shadow: inset 0 0 0 0 #fb4323, inset 0 0 0 1px #fb4323, 0 0 0px 0px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0); }
+    .gds-form-group--danger .gds-form-group__text-input:hover,
+    .gds-form-group--danger .gds-search-select__input:hover,
+    .gds-form-group--danger .gds-form-group__text-area-input:hover {
+      box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0 0 rgba(0, 0, 0, 0.2); }
+    .gds-form-group--danger .gds-form-group__text-input:focus,
+    .gds-form-group--danger .gds-search-select__input:focus,
+    .gds-form-group--danger .gds-form-group__text-area-input:focus {
+      box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0 0 #3293c9, 0 0 0 2px rgba(27, 135, 195, 0.4); }
   .gds-form-group--danger .gds-form-group__select-input,
   .gds-form-group--danger .gds-search-select__input {
-    box-shadow: inset 0 -0.125rem 0 0 #fb4323, inset 0 0 0 1px #fb4323, 0 0 0px 0 rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 0 #fb4323, inset 0 0 0 1px #fb4323, 0 0 0px 0px rgba(50, 147, 201, 0), 0 0 0px 0 rgba(0, 0, 0, 0);
     color: #fb4323;
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23fb4323%3B%22/%3E%3C/svg%3E"); }
     .gds-form-group--danger .gds-form-group__select-input:focus,
     .gds-form-group--danger .gds-search-select__input:focus {
       color: #5f5f5f;
-      box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 0 rgba(0, 0, 0, 0);
+      box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0 0 #3293c9, 0 0 0 2px rgba(27, 135, 195, 0.4);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
     .gds-form-group--danger .gds-form-group__select-input:hover,
     .gds-form-group--danger .gds-search-select__input:hover {
       color: #5f5f5f;
-      box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 0px 1px rgba(50, 147, 201, 0), 0 0 0 0 rgba(0, 0, 0, 0.2);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
     .gds-form-group--danger .gds-form-group__select-input:hover:focus,
     .gds-form-group--danger .gds-search-select__input:hover:focus {
       color: #5f5f5f;
-      box-shadow: inset 0 -0.1875rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 3px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 0 0 0 #1b87c3, inset 0 0 0 1px #1b87c3, 0 0 1px 1px #3293c9, 0 0 0 2 rgba(27, 135, 195, 0.6);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%231b87c3%3B%22/%3E%3C/svg%3E"); }
-  .gds-form-group--danger .gds-form-group__text-input,
-  .gds-form-group--danger .gds-search-select__input,
-  .gds-form-group--danger .gds-form-group__text-area-input {
-    box-shadow: inset 0 -0.125rem 0 0 #fb4323, inset 0 0 0 1px #fb4323; }
-    .gds-form-group--danger .gds-form-group__text-input:hover,
-    .gds-form-group--danger .gds-search-select__input:hover,
-    .gds-form-group--danger .gds-form-group__text-area-input:hover {
-      box-shadow: inset 0 -0.125rem 0 0 #3293c9, inset 0 0 0 1px #3293c9; }
-    .gds-form-group--danger .gds-form-group__text-input:focus,
-    .gds-form-group--danger .gds-search-select__input:focus,
-    .gds-form-group--danger .gds-form-group__text-area-input:focus {
-      box-shadow: inset 0 -0.125rem 0 0 #1b87c3, inset 0 0 0 1px #1b87c3; }
   .gds-form-group--danger .gds-form-group__text-area-input {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23fb4323%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E"); }
     .gds-form-group--danger .gds-form-group__text-area-input:hover {
@@ -20383,8 +20388,7 @@ select {
     .gds-form-group--danger .gds-form-group__toggleswitch-indicator:after {
       color: white;
       background-color: #fb4323; }
-  .gds-form-group--danger .gds-form-group__toggleswitch-indicator-labels:before,
-  .gds-form-group--danger .gds-form-group__toggleswitch-indicator-labels:after {
+  .gds-form-group--danger .gds-form-group__toggleswitch-indicator-labels:before, .gds-form-group--danger .gds-form-group__toggleswitch-indicator-labels:after {
     color: #fb4323; }
   .gds-form-group--danger .gds-form-group__toggleswitch-input:checked
 ~ .gds-form-group__toggleswitch-indicator:after {

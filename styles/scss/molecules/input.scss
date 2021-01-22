@@ -1,37 +1,47 @@
-@mixin defaultShadows($borderColor, $dropShadow) {
-  box-shadow: inset 0 #{-$cap-size} 0 0 $borderColor,
+@mixin defaultShadows($borderColor, $dropShadow, $focusGlow) {
+  box-shadow: inset 0 0 0 0 $borderColor,
     // Bottom Cap
     inset 0 0 0 1px $borderColor,
     // Other Caps
+    0 0 0px 0px rgba($focusGlow, 0),
+    // Focus Ring
     0 0 0px 0 rgba($dropShadow, 0); // Drop Shadow
 }
-@mixin hoverShadows($borderColor, $dropShadow) {
-  box-shadow: inset 0 #{-$cap-size * 1.5} 0 0 $borderColor,
+@mixin hoverShadows($borderColor, $dropShadow, $focusGlow) {
+  box-shadow: inset 0 0 0 0 $borderColor,
     // Bottom Cap
     inset 0 0 0 1px $borderColor,
     // Other Caps
-    0 0 3px 0 rgba($dropShadow, 0.2); // Drop Shadow
+    0 0 0px 1px rgba($focusGlow, 0),
+    // Focus Ring
+    0 0 0 0 rgba($dropShadow, 0.2); // Drop Shadow
 }
-@mixin hoverFocusShadows($borderColor, $dropShadow) {
-  box-shadow: inset 0 #{-$cap-size * 1.5} 0 0 $borderColor,
+@mixin hoverFocusShadows($borderColor, $dropShadow, $focusGlow) {
+  box-shadow: inset 0 0 0 0 $borderColor,
     // Bottom Cap
     inset 0 0 0 1px $borderColor,
     // Other Caps
-    0 0 3px 0 rgba($dropShadow, 0.2); // Drop Shadow
+    0 0 1px 1px rgba($focusGlow, 1),
+    // Focus Ring
+    0 0 0 2 rgba($borderColor, 0.6); // Drop Shadow
 }
-@mixin activeShadows($borderColor, $dropShadow) {
-  box-shadow: inset 0 #{-$cap-size * 0.5} 0 0 $borderColor,
+@mixin activeShadows($borderColor, $dropShadow, $focusGlow) {
+  box-shadow: inset 0 0 0 0 $borderColor,
     // Bottom Cap
     inset 0 0 0 1px $borderColor,
     // Other Caps
-    0 0 1px 0 rgba($dropShadow, 0.4); // Drop Shadow
+    0 0 0px 1px rgba($focusGlow, 0),
+    // Focus Ring
+    0 0 0 2px rgba($borderColor, 0.4); // Drop Shadow
 }
-@mixin focusShadows($borderColor, $dropShadow) {
-  box-shadow: inset 0 #{-$cap-size} 0 0 $borderColor,
+@mixin focusShadows($borderColor, $dropShadow, $focusGlow) {
+  box-shadow: inset 0 0 0 0 $borderColor,
     // Bottom Cap
     inset 0 0 0 1px $borderColor,
     // Other Caps
-    0 0 0px 0 rgba($dropShadow, 0); // Drop Shadow
+    0 0 0 0 rgba($focusGlow, 1),
+    // Focus Ring
+    0 0 0 2px rgba($borderColor, 0.4); // Drop Shadow
 }
 
 .gds-form-fieldset {
@@ -270,8 +280,7 @@
   color: inherit;
   border: none;
   border-bottom-color: inherit;
-  // box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-3, inset 0 0 0 1px rgba(0,0,0,0.1);
-  @include defaultShadows($gg-light-3, black);
+  @include defaultShadows($gg-light-3, black, $primaryLight2Color);
   @include transition-ease-out(all, 100ms);
   height: $input-height-md;
 
@@ -294,19 +303,17 @@
   &:hover {
     border-color: $primaryColor;
     color: $gg-dark-4;
-    // box-shadow: inset 0 #{-$cap-size} 0 0 $primaryColor, inset 0 0 0 1px $primaryColor;
-    @include hoverShadows($primaryColor, black);
+    @include hoverShadows($primaryColor, black, $primaryLight2Color);
     & + .gds-form-group__text-help {
       background-color: $primaryColor;
     }
   }
   &:hover:focus {
-    @include hoverFocusShadows($primaryColor, black);
+    @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
   }
   &:focus {
     color: $gg-dark-4;
-    @include focusShadows($primaryColor, black);
-    // box-shadow: inset 0 #{-$cap-size} 0 0 $primaryColor, inset 0 0 0 1px rgba($primaryColor,0.5);
+    @include focusShadows($primaryColor, black, $primaryLight2Color);
     outline: none;
 
     & + .gds-form-group__text-help {
@@ -319,7 +326,7 @@
 .gds-form-group__text-area-input--dark,
 .gds-toolbelt__item-input {
   background-color: mix($gg-dark-3, white, 90%);
-  @include defaultShadows($gg-gray, black);
+  @include defaultShadows($gg-gray, black, $primaryLight2Color);
 
   &::-webkit-input-placeholder {
     color: $gg-gray;
@@ -469,6 +476,24 @@
   background-color: white;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+
+  // FIX DATE
+
+  @include defaultShadows($gg-light-3, black, $primaryLight2Color);
+
+  &:hover {
+    border-color: $primaryColor;
+    color: $gg-dark-4;
+    @include hoverShadows($primaryColor, black, $primaryLight2Color);
+  }
+  &:hover:focus {
+    @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
+  }
+  &:focus {
+    color: $gg-dark-4;
+    @include focusShadows($primaryColor, black, $primaryLight2Color);
+    outline: none;
+  }
 }
 
 .gds-form-group__date-group--lg {
@@ -662,19 +687,19 @@
   padding-right: ($unit * 2.5);
   outline: none;
   border: none;
-  @include defaultShadows($gg-light-3, black);
+  @include defaultShadows($gg-light-3, black, $primaryLight2Color);
   @include transition-ease-out(all, 100ms);
 
   &:focus {
-    @include focusShadows($primaryColor, black);
+    @include focusShadows($primaryColor, black, $primaryLight2Color);
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
   }
   &:hover {
-    @include hoverShadows($primaryColor, black);
+    @include hoverShadows($primaryColor, black, $primaryLight2Color);
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
   }
   &:hover:focus {
-    @include hoverFocusShadows($primaryColor, black);
+    @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
   }
 }
@@ -684,7 +709,7 @@
   background-color: mix($gg-dark-3, white, 90%);
   color: white;
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A#FFFFFF%3B%22/%3E%3C/svg%3E");
-  @include defaultShadows($gg-gray, black);
+  @include defaultShadows($gg-gray, black, $primaryLight2Color);
   &:hover {
     color: white;
   }
@@ -774,14 +799,14 @@
 }
 
 .gds-form-group__select-input--primary {
-  @include defaultShadows($primaryColor, black);
+  @include defaultShadows($primaryColor, black, $primaryLight2Color);
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
   &:hover {
-    @include hoverShadows($primaryColor, black);
+    @include hoverShadows($primaryColor, black, $primaryLight2Color);
   }
 
   &:focus {
-    @include focusShadows($primaryColor, black);
+    @include focusShadows($primaryColor, black, $primaryLight2Color);
   }
 }
 
@@ -1604,7 +1629,7 @@ $thumb-width: ($unit * 0.75);
   }
 }
 
-// Success form groups
+// success form groups
 .gds-form-group--success {
   color: $successColor;
   border-color: $successColor;
@@ -1614,40 +1639,38 @@ $thumb-width: ($unit * 0.75);
     background-color: $successColor;
   }
 
+  .gds-form-group__text-input,
+  .gds-search-select__input,
+  .gds-form-group__text-area-input {
+    @include defaultShadows($successColor, black, $primaryLight2Color);
+    &:hover {
+      @include hoverShadows($primaryColor, black, $primaryLight2Color);
+    }
+    &:focus {
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
+    }
+  }
+
   .gds-form-group__select-input,
   .gds-search-select__input {
-    @include defaultShadows($successColor, black);
+    @include defaultShadows($successColor, black, $primaryLight2Color);
     color: $successColor;
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($successColor)}%3B%22/%3E%3C/svg%3E");
 
     &:focus {
       color: $gg-dark-4;
-      @include focusShadows($primaryColor, black);
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
     }
     &:hover {
       color: $gg-dark-4;
-      @include hoverShadows($primaryColor, black);
+      @include hoverShadows($primaryColor, black, $primaryLight2Color);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
     }
     &:hover:focus {
       color: $gg-dark-4;
-      @include hoverFocusShadows($primaryColor, black);
+      @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
-    }
-  }
-
-  .gds-form-group__text-input,
-  .gds-search-select__input .gds-form-group__text-area-input {
-    box-shadow: inset 0 -0.125rem 0 0 $successColor,
-      inset 0 0 0 1px $successColor;
-    &:hover {
-      box-shadow: inset 0 -0.125rem 0 0 $primaryLight2Color,
-        inset 0 0 0 1px $primaryLight2Color;
-    }
-    &:focus {
-      box-shadow: inset 0 -0.125rem 0 0 $primaryColor,
-        inset 0 0 0 1px $primaryColor;
     }
   }
 
@@ -1703,8 +1726,6 @@ $thumb-width: ($unit * 0.75);
   }
 
   .gds-form-group__toggleswitch-input:checked
-    ~ .gds-form-group__toggleswitch-indicator,
-  .gds-search-select__checkbox-input:checked
     ~ .gds-form-group__toggleswitch-indicator {
     &:after {
       background-color: $successColor;
@@ -1762,37 +1783,34 @@ $thumb-width: ($unit * 0.75);
   .gds-form-group__text-input,
   .gds-search-select__input,
   .gds-form-group__text-area-input {
-    box-shadow: inset 0 -0.125rem 0 0 $warningColor,
-      inset 0 0 0 1px $warningColor;
+    @include defaultShadows($warningColor, black, $primaryLight2Color);
     &:hover {
-      box-shadow: inset 0 -0.125rem 0 0 $primaryLight2Color,
-        inset 0 0 0 1px $primaryLight2Color;
+      @include hoverShadows($primaryColor, black, $primaryLight2Color);
     }
     &:focus {
-      box-shadow: inset 0 -0.125rem 0 0 $primaryColor,
-        inset 0 0 0 1px $primaryColor;
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
     }
   }
 
   .gds-form-group__select-input,
   .gds-search-select__input {
-    @include defaultShadows($warningColor, black);
+    @include defaultShadows($warningColor, black, $primaryLight2Color);
     color: $warningColor;
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($warningColor)}%3B%22/%3E%3C/svg%3E");
 
     &:focus {
       color: $gg-dark-4;
-      @include focusShadows($primaryColor, black);
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
     }
     &:hover {
       color: $gg-dark-4;
-      @include hoverShadows($primaryColor, black);
+      @include hoverShadows($primaryColor, black, $primaryLight2Color);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
     }
     &:hover:focus {
       color: $gg-dark-4;
-      @include hoverFocusShadows($primaryColor, black);
+      @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
     }
   }
@@ -1904,44 +1922,37 @@ $thumb-width: ($unit * 0.75);
   }
 
   .gds-form-group__text-input,
-  .gds-search-select__input {
-    box-shadow: inset 0 #{-$cap-size} 0 0 $dangerColor;
+  .gds-search-select__input,
+  .gds-form-group__text-area-input {
+    @include defaultShadows($dangerColor, black, $primaryLight2Color);
+    &:hover {
+      @include hoverShadows($primaryColor, black, $primaryLight2Color);
+    }
+    &:focus {
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
+    }
   }
 
   .gds-form-group__select-input,
   .gds-search-select__input {
-    @include defaultShadows($dangerColor, black);
+    @include defaultShadows($dangerColor, black, $primaryLight2Color);
     color: $dangerColor;
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($dangerColor)}%3B%22/%3E%3C/svg%3E");
 
     &:focus {
       color: $gg-dark-4;
-      @include focusShadows($primaryColor, black);
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
     }
     &:hover {
       color: $gg-dark-4;
-      @include hoverShadows($primaryColor, black);
+      @include hoverShadows($primaryColor, black, $primaryLight2Color);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
     }
     &:hover:focus {
       color: $gg-dark-4;
-      @include hoverFocusShadows($primaryColor, black);
+      @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
       background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
-    }
-  }
-
-  .gds-form-group__text-input,
-  .gds-search-select__input,
-  .gds-form-group__text-area-input {
-    box-shadow: inset 0 -0.125rem 0 0 $dangerColor, inset 0 0 0 1px $dangerColor;
-    &:hover {
-      box-shadow: inset 0 -0.125rem 0 0 $primaryLight2Color,
-        inset 0 0 0 1px $primaryLight2Color;
-    }
-    &:focus {
-      box-shadow: inset 0 -0.125rem 0 0 $primaryColor,
-        inset 0 0 0 1px $primaryColor;
     }
   }
 
@@ -1989,9 +2000,11 @@ $thumb-width: ($unit * 0.75);
     }
   }
 
-  .gds-form-group__toggleswitch-indicator-labels:before,
-  .gds-form-group__toggleswitch-indicator-labels:after {
-    color: $dangerColor;
+  .gds-form-group__toggleswitch-indicator-labels {
+    &:before,
+    &:after {
+      color: $dangerColor;
+    }
   }
 
   .gds-form-group__toggleswitch-input:checked
