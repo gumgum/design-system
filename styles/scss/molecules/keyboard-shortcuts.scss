@@ -1,31 +1,50 @@
 .gds-keyboard-shortcuts {
-    @extend .gds-card;
-    opacity: 0;
-    pointer-events: none;
-    position: fixed;
-    bottom: $unit;
-    left: $unit;
-    padding: ($unit * 0.5) $unit ($unit * 0.75);
-    border-radius: $border-radius;
-    margin-bottom: 0;
-    @include transition-ease-out(all, 1000ms);
+  display: block;
+  background-color: white;
+  border: 1px solid $gg-light-2;
+  color: $gg-dark-4;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  bottom: $unit;
+  left: $unit;
+  padding: ($unit * 0.5) $unit ($unit * 0.75);
+  border-radius: $border-radius;
+  margin-bottom: 0;
+  @include transition-ease-out(all, 1000ms);
+
+  &.active {
+    box-shadow: $ds-nd-3, inset 0 0 ($unit * 2.5) rgba(0, 0, 0, 0.05),
+      inset 0 0 1px rgba($primaryColor, 1);
+    border-color: $primaryDark2Color;
+
+    .gds-card-footer,
+    .gds-card-header {
+      background: $primaryColor;
+      color: white;
+    }
+  }
 }
 
 .gds-keyboard-shortcuts--shown {
-    opacity: 1;
-    pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .gds-keyboard-shortcuts__label {
-    @extend .gds-form-group__label;
-    color: $gg-dark-4;
-    margin-bottom: ($unit / 2);
+  font-family: $pri-font-bold;
+  font-size: $font-size-minus-3;
+  display: inline-block;
+  max-width: 100%;
+  text-transform: uppercase;
+  @include transition-back(all, 250ms);
+  color: $gg-dark-4;
+  margin-bottom: ($unit / 2);
 }
 
 .gds-keyboard-shortcuts__trigger {
-    display: inline-block;
-    text-align: center;
-    width: ($unit * 1.5);
-    margin: 0 ($unit / 2) ($unit / 2) 0;
-    @extend .gds-text--keyboard;
+  display: inline-block;
+  text-align: center;
+  width: ($unit * 1.5);
+  margin: 0 ($unit / 2) ($unit / 2) 0;
 }

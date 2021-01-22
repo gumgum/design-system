@@ -135,7 +135,8 @@ select {
 }
 
 .gds-text--code,
-.gds-text--keyboard {
+.gds-text--keyboard,
+.gds-keyboard-shortcuts__trigger {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
     monospace;
   border-radius: $border-radius;
@@ -150,7 +151,8 @@ select {
   word-wrap: break-word;
 }
 
-.gds-text--keyboard {
+.gds-text--keyboard,
+.gds-keyboard-shortcuts__trigger {
   color: #fff;
   background-color: $gg-dark-2;
 }

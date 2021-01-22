@@ -1,166 +1,169 @@
 .gds-landing-pad {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: ($unit * 10);
-    height: ($unit * 10);
-    border: 1px dashed $gg-light-3;
-    @include transition-ease-out(all, 250ms);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: ($unit * 10);
+  height: ($unit * 10);
+  border: 1px dashed $gg-light-3;
+  @include transition-ease-out(all, 250ms);
 
-    &:hover {
-        @extend .-cursor--grab;
-    }
+  &:hover {
+    cursor: -webkit-grab !important;
+    cursor: -moz-grab !important;
+    cursor: grab !important;
+  }
 
-    &:active:hover {
-        @extend .-cursor--grabbing;
-    }
+  &:active:hover {
+    cursor: -webkit-grabbing !important;
+    cursor: -moz-grabbing !important;
+    cursor: grabbing !important;
+  }
 }
 
 .gds-landing-pad--active {
-    background-color: $greenColor;
-    box-shadow: 0 0 0 2px $greenColor;
-    border-color: white;
+  background-color: $greenColor;
+  box-shadow: 0 0 0 2px $greenColor;
+  border-color: white;
 
-    .gds-landing-pad__icon,
-    .gds-landing-pad__text {
-        color: white;
-    }
-    .gds-landing-pad__icon-piece {
-        background-color: white;
-    }
-    .gds-landing-pad__icon-piece--1 {
-        height:25px;
-    }
+  .gds-landing-pad__icon,
+  .gds-landing-pad__text {
+    color: white;
+  }
+  .gds-landing-pad__icon-piece {
+    background-color: white;
+  }
+  .gds-landing-pad__icon-piece--1 {
+    height: 25px;
+  }
 
-    .gds-landing-pad__icon-piece--2 {
-        transform: rotate(45deg) translate(6.5px, 6.5px);
-    }
+  .gds-landing-pad__icon-piece--2 {
+    transform: rotate(45deg) translate(6.5px, 6.5px);
+  }
 
-    .gds-landing-pad__icon-piece--3 {
-        transform: rotate(-45deg) translate(-5.75px, 6.5px);
-    }
+  .gds-landing-pad__icon-piece--3 {
+    transform: rotate(-45deg) translate(-5.75px, 6.5px);
+  }
 
-    .gds-landing-pad__icon-piece--4 {
-        transform: translateX(-15px);
-    }
+  .gds-landing-pad__icon-piece--4 {
+    transform: translateX(-15px);
+  }
 
-    .gds-landing-pad__icon-piece--5 {
-        transform: translateX(15px);
-    }
+  .gds-landing-pad__icon-piece--5 {
+    transform: translateX(15px);
+  }
 
-    .gds-landing-pad__icon-piece--6 {
-        transform: scale(30,1);
-    }
+  .gds-landing-pad__icon-piece--6 {
+    transform: scale(30, 1);
+  }
 }
 
 .gds-landing-pad__icon,
 .gds-landing-pad__text {
-    color: $gg-light-3;
-    @extend .-user-select--none;
+  color: $gg-light-3;
+  user-select: none;
 }
 
 .gds-landing-pad__icon {
-    height: 30px;
-    width: 30px;
-    margin-bottom: ($unit / 2);
+  height: 30px;
+  width: 30px;
+  margin-bottom: ($unit / 2);
 }
 
 .gds-landing-pad__icon-piece {
-    background-color: $gg-light-3;
-    position: absolute;
-    transform-origin: 0 0;
-    @include transition-ease-out(all, 250ms);
+  background-color: $gg-light-3;
+  position: absolute;
+  transform-origin: 0 0;
+  @include transition-ease-out(all, 250ms);
 }
 
 .gds-landing-pad__icon-piece--1 {
-    left: 15px;
-    top: 0px;
-    height: 15px;
-    width: 1px;
+  left: 15px;
+  top: 0px;
+  height: 15px;
+  width: 1px;
 }
 
 .gds-landing-pad__icon-piece--2 {
-    left: 0;
-    top: 15px;
-    height: 1px;
-    width: 15px;
-    transform-origin: 100% 50%;
+  left: 0;
+  top: 15px;
+  height: 1px;
+  width: 15px;
+  transform-origin: 100% 50%;
 }
 
 .gds-landing-pad__icon-piece--3 {
-    left: 15px;
-    top: 15px;
-    height: 1px;
-    width: 15px;
-    transform-origin: 0% 50%;
+  left: 15px;
+  top: 15px;
+  height: 1px;
+  width: 15px;
+  transform-origin: 0% 50%;
 }
 
 .gds-landing-pad__icon-piece--4,
 .gds-landing-pad__icon-piece--5 {
-    left: 15px;
-    top: 15px;
-    height: 15px;
-    width: 1px;
-    transform-origin: 50% 100%;
+  left: 15px;
+  top: 15px;
+  height: 15px;
+  width: 1px;
+  transform-origin: 50% 100%;
 }
 
 .gds-landing-pad__icon-piece--6 {
-    height: 1px;
-    width: 1px;
-    left: 15px;
-    top: 30px;
-    transform-origin: 50% 50%;
+  height: 1px;
+  width: 1px;
+  left: 15px;
+  top: 30px;
+  transform-origin: 50% 50%;
 }
 
-
 .gds-landing-pad__text {
-    padding: 0 $unit;
-    line-height: 1.4;
-    margin-bottom: ($unit / 2);
+  padding: 0 $unit;
+  line-height: 1.4;
+  margin-bottom: ($unit / 2);
 }
 
 .gds-landing-pad__progress-bar {
-    width: calc(100% - #{$unit * 2});
-    margin: ($unit * 1.75) 0 ($unit * 0.5);
+  width: calc(100% - #{$unit * 2});
+  margin: ($unit * 1.75) 0 ($unit * 0.5);
 }
 
 // input type="file"
 .gds-landing-pad__input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-    z-index: $z-index-5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: $z-index-5;
 }
 
 .gds-landing-pad__status {
-    height: 30px;
-    width: 30px;
-    text-align: center;
-    position: absolute;
-    top: calc(50% - 15px);
-    left: calc(50% - 15px);
-    border-radius: 50%;
-    border: 1px solid white;
-    z-index: $z-index-4;
-    font: normal normal normal 18px/1 'Font Awesome 5 Pro';
-    color: white;
-    font-size: 17px;
-    line-height: 30px;
-    @include transition-ease-out(all, 150ms);
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  border-radius: 50%;
+  border: 1px solid white;
+  z-index: $z-index-4;
+  font: normal normal normal 18px/1 "Font Awesome 5 Free";
+  color: white;
+  font-size: 17px;
+  line-height: 30px;
+  @include transition-ease-out(all, 150ms);
 }
 
 .gds-landing-pad__status--success {
-    box-shadow: 0 0 0 2px $primaryColor;
-    background-color: $primaryColor;
+  box-shadow: 0 0 0 2px $primaryColor;
+  background-color: $primaryColor;
 }
 
 .gds-landing-pad__status--danger {
-    box-shadow: 0 0 0 2px $secondaryColor;
-    background-color: $secondaryColor;
+  box-shadow: 0 0 0 2px $secondaryColor;
+  background-color: $secondaryColor;
 }

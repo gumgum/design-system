@@ -1,233 +1,258 @@
 @mixin defaultShadows($borderColor, $dropShadow) {
-    box-shadow: inset 0 #{-$cap-size} 0 0 $borderColor,  // Bottom Cap
-                inset 0 0 0 1px $borderColor, // Other Caps
-                0 0 0px 0 rgba($dropShadow, 0)  // Drop Shadow
+  box-shadow: inset 0 #{-$cap-size} 0 0 $borderColor,
+    // Bottom Cap
+    inset 0 0 0 1px $borderColor,
+    // Other Caps
+    0 0 0px 0 rgba($dropShadow, 0); // Drop Shadow
 }
 @mixin hoverShadows($borderColor, $dropShadow) {
-    box-shadow: inset 0 #{-$cap-size * 1.5} 0 0 $borderColor,  // Bottom Cap
-                inset 0 0 0 1px $borderColor, // Other Caps
-                0 0 3px 0 rgba($dropShadow, 0.2)  // Drop Shadow
+  box-shadow: inset 0 #{-$cap-size * 1.5} 0 0 $borderColor,
+    // Bottom Cap
+    inset 0 0 0 1px $borderColor,
+    // Other Caps
+    0 0 3px 0 rgba($dropShadow, 0.2); // Drop Shadow
 }
 @mixin hoverFocusShadows($borderColor, $dropShadow) {
-    box-shadow: inset 0 #{-$cap-size * 1.5} 0 0 $borderColor,  // Bottom Cap
-                inset 0 0 0 1px $borderColor, // Other Caps
-                0 0 3px 0 rgba($dropShadow, 0.2)  // Drop Shadow
+  box-shadow: inset 0 #{-$cap-size * 1.5} 0 0 $borderColor,
+    // Bottom Cap
+    inset 0 0 0 1px $borderColor,
+    // Other Caps
+    0 0 3px 0 rgba($dropShadow, 0.2); // Drop Shadow
 }
 @mixin activeShadows($borderColor, $dropShadow) {
-    box-shadow: inset 0 #{-$cap-size * 0.5} 0 0 $borderColor,  // Bottom Cap
-                inset 0 0 0 1px $borderColor, // Other Caps
-                0 0 1px 0 rgba($dropShadow, 0.4)  // Drop Shadow
+  box-shadow: inset 0 #{-$cap-size * 0.5} 0 0 $borderColor,
+    // Bottom Cap
+    inset 0 0 0 1px $borderColor,
+    // Other Caps
+    0 0 1px 0 rgba($dropShadow, 0.4); // Drop Shadow
 }
 @mixin focusShadows($borderColor, $dropShadow) {
-    box-shadow: inset 0 #{-$cap-size} 0 0 $borderColor,  // Bottom Cap
-                inset 0 0 0 1px $borderColor, // Other Caps
-                0 0 0px 0 rgba($dropShadow, 0)  // Drop Shadow
+  box-shadow: inset 0 #{-$cap-size} 0 0 $borderColor,
+    // Bottom Cap
+    inset 0 0 0 1px $borderColor,
+    // Other Caps
+    0 0 0px 0 rgba($dropShadow, 0); // Drop Shadow
 }
 
 .gds-multi-select--sm {
-    @extend .gds-button-dropdown--sm;
-    .gds-multi-select__menu-link--collapsable:after {
-        transform-origin: 50% 50%;
-        top: 0.75 * $unit;
-        right: 0.75 * $unit;
-        margin-left: 0.5 * $unit;
-        border-top: 0.25 * $unit solid transparent;
-        border-bottom: 0.25 * $unit solid transparent;
-        border-left: 0.4 * $unit solid $primaryColor;
-    }
+  .gds-multi-select--sm .gds-multi-select__menu-link--collapsable:after {
+    transform-origin: 50% 50%;
+    top: 0.75 * $unit;
+    right: 0.75 * $unit;
+    margin-left: 0.5 * $unit;
+    border-top: 0.25 * $unit solid transparent;
+    border-bottom: 0.25 * $unit solid transparent;
+    border-left: 0.4 * $unit solid $primaryColor;
+  }
 }
 
 .gds-multi-select--xs {
-    @extend .gds-button-dropdown--xs;
-    .gds-multi-select__button:after {
-        top: 0.7 * $unit;
-    }
-    .gds-multi-select__menu-link--collapsable:after {
-        top: 0.75 * $unit;
-        right: 0.4 * $unit;
-        margin-left: 0.5 * $unit;
-        border-top: 0.2 * $unit solid transparent;
-        border-bottom: 0.2 * $unit solid transparent;
-        border-left: 0.333 * $unit solid $primaryColor;
-    }
+  .gds-multi-select__button:after {
+    top: 0.7 * $unit;
+  }
+  .gds-multi-select__menu-link--collapsable:after {
+    top: 0.75 * $unit;
+    right: 0.4 * $unit;
+    margin-left: 0.5 * $unit;
+    border-top: 0.2 * $unit solid transparent;
+    border-bottom: 0.2 * $unit solid transparent;
+    border-left: 0.333 * $unit solid $primaryColor;
+  }
 }
 
 .gds-multi-select--success {
-    .gds-multi-select__button {
-        color: $successColor;
-        @include defaultShadows($successColor, black);
-    }
+  .gds-multi-select__button {
+    color: $successColor;
+    @include defaultShadows($successColor, black);
+  }
 }
 
 .gds-multi-select--warning {
-    .gds-multi-select__button {
-        color: $warningColor;
-        @include defaultShadows($warningColor, black);
-    }
+  .gds-multi-select__button {
+    color: $warningColor;
+    @include defaultShadows($warningColor, black);
+  }
 }
 
 .gds-multi-select--danger {
-    .gds-multi-select__button {
-        color: $dangerColor;
-        @include defaultShadows($dangerColor, black);
-    }
+  .gds-multi-select__button {
+    color: $dangerColor;
+    @include defaultShadows($dangerColor, black);
+  }
 }
 
 .gds-multi-select__button {
-    @extend .gds-button--block;
-    @extend .gds-button-dropdown__button;
-    @include defaultShadows($gg-light-3, black);
-    color: $gg-dark-4;
+  display: block;
+  width: 100%;
+  color: $gg-dark-4;
+  background-color: white;
+  text-shadow: none;
+  text-align: left;
+  font-family: $pri-font-regular;
+  z-index: $z-index-3;
+  @include defaultShadows($gg-light-3, black);
+
+  &:hover {
     background-color: white;
     text-shadow: none;
-    text-align: left;
-    font-family: $pri-font-regular;
-    z-index: $z-index-3;
-
-    &:hover {
-        background-color: white;
-        text-shadow: none;
-        color: $gg-dark-4 !important;
-        @include hoverShadows($primaryColor, black);
-
-        &:after {
-            border-left-color: $primaryColor;
-        }
-    }
+    color: $gg-dark-4 !important;
+    @include hoverShadows($primaryColor, black);
 
     &:after {
-        border-left-color: $gg-light-4 !important;
-        right: ($unit * 1.1);
-        margin-left: 0;
+      border-left-color: $primaryColor;
     }
-}
+  }
 
-.gds-multi-select__button--primary {
-    @extend .gds-button--primary;
+  &:after {
+    border-left-color: $gg-light-4 !important;
+    right: ($unit * 1.1);
+    margin-left: 0;
+  }
 }
 
 .gds-multi-select__menu {
-    @extend .gds-button-dropdown__menu;
-    background-color: white;
-    border: none !important;
-    padding: 2px 1px 1px 1px;
-    margin-top: -4px;
-    @include defaultShadows($primaryColor, black);
-    z-index: $z-index-2;
-}
-
-.gds-multi-select__menu-item {
-    @extend .gds-button-dropdown__menu-item;
+  background-color: white;
+  border: none !important;
+  padding: 2px 1px 1px 1px;
+  margin-top: -4px;
+  @include defaultShadows($primaryColor, black);
+  z-index: $z-index-2;
 }
 
 .gds-multi-select__menu-link {
-    @extend .gds-button-dropdown__menu-link;
-    @include no-select();
-    padding: $unit/4 0;
-    cursor: pointer;
+  @include no-select();
+  padding: $unit/4 0;
+  cursor: pointer;
 
-    &:before {
-        content: '';
-    }
-    &:hover {
-        background-color: rgba($primaryLight4Color, 0.95);
-        > .gds-multi-select__option {
-            .gds-form-group__checkbox {
-                @extend .gds-form-group__checkbox--inverse;
-            }
-            .gds-form-group__checkbox-indicator {
-                @extend .gds-form-group__checkbox-indicator--inverse;
-                border-color: white;
-            }
-            .gds-form-group__checkbox-label {
-                color: white;
-            }
-        }
-    }
+  &:before {
+    content: "";
+  }
+  &:hover {
+    background-color: rgba($primaryLight4Color, 0.95);
     > .gds-multi-select__option {
-        .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator {
-            border-color: white !important;
-            color: white !important;
+      .gds-form-group__checkbox {
+        .gds-form-group__checkbox-label:hover,
+        .gds-search-select__checkbox:hover {
+          .gds-form-group__checkbox-indicator {
+            border-color: $primaryLight4Color;
+          }
         }
+      }
+      .gds-form-group__checkbox-indicator,
+      .gds-search-select__checkbox-indicator {
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23#{strip-hash(#ffffff)}%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+        border-color: white;
+      }
+      .gds-form-group__checkbox-label,
+      .gds-search-select__checkbox {
+        color: white;
+      }
     }
-    .gds-form-group__checkbox-label {
-        display: block;
+  }
+  > .gds-multi-select__option {
+    .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator,
+    .gds-search-select__checkbox:hover .gds-form-group__checkbox-indicator,
+    .gds-form-group__checkbox-label:hover
+      .gds-search-select__checkbox-indicator,
+    .gds-search-select__checkbox:hover .gds-search-select__checkbox-indicator {
+      border-color: white !important;
+      color: white !important;
     }
+  }
+  .gds-form-group__checkbox-label,
+  .gds-search-select__checkbox {
+    display: block;
+  }
 }
 
-
 .gds-multi-select__menu-link--collapsable {
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: ($unit / 3) solid transparent;
+    border-bottom: ($unit / 3) solid transparent;
+    border-left: ($unit / 2) solid $gg-light-4;
+    right: ($unit / 1.5);
+    top: ($unit * 0.75);
+    @include transition-back(all, 250ms);
+  }
+
+  &.gds-multi-select__menu-link--active {
+    background-color: rgba($primaryLight4Color, 0.95);
+    > .gds-multi-select__option {
+      .gds-form-group__checkbox {
+        .gds-form-group__checkbox-label:hover,
+        .gds-search-select__checkbox:hover {
+          .gds-form-group__checkbox-indicator,
+          .gds-search-select__checkbox-indicator {
+            border-color: $primaryLight4Color;
+          }
+        }
+      }
+      .gds-form-group__checkbox-indicator,
+      .gds-search-select__checkbox-indicator {
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23#{strip-hash(#ffffff)}%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+        border-color: white;
+      }
+      .gds-form-group__checkbox-label,
+      .gds-search-select__checkbox {
+        color: white;
+      }
+      .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator,
+      .gds-search-select__checkbox:hover .gds-form-group__checkbox-indicator,
+      .gds-form-group__checkbox-label:hover
+        .gds-search-select__checkbox-indicator,
+      .gds-search-select__checkbox:hover
+        .gds-search-select__checkbox-indicator {
+        border-color: white !important;
+        color: white !important;
+      }
+    }
     &:after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-top: ($unit / 3) solid transparent;
-        border-bottom: ($unit / 3) solid transparent;
-        border-left: ($unit / 2) solid $gg-light-4;
-        right: ($unit / 1.5);
-        top: ($unit * 0.75);
-        @include transition-back(all, 250ms);
+      transform: rotate(90deg);
+      border-left-color: white;
     }
+  }
 
-    &.gds-multi-select__menu-link--active {
-        background-color: rgba($primaryLight4Color, 0.95);
-        > .gds-multi-select__option {
-            .gds-form-group__checkbox {
-                @extend .gds-form-group__checkbox--inverse;
-            }
-            .gds-form-group__checkbox-indicator {
-                @extend .gds-form-group__checkbox-indicator--inverse;
-                border-color: white;
-            }
-            .gds-form-group__checkbox-label {
-                color: white;
-            }
-            .gds-form-group__checkbox-label:hover .gds-form-group__checkbox-indicator {
-                border-color: white !important;
-                color: white !important;
-            }
-        }
-        &:after {
-            transform: rotate(90deg);
-            border-left-color: white;
-        }
-    }
+  &:hover:after {
+    border-left-color: white;
+  }
 
-    &:hover:after {
-        border-left-color: white;
-    }
-
-    >.gds-multi-select__option .gds-form-group__checkbox-label {
-        margin-right: $unit * 2;
-    }
+  > .gds-multi-select__option .gds-form-group__checkbox-label,
+  .gds-multi-select__option .gds-search-select__checkbox {
+    margin-right: $unit * 2;
+  }
 }
 
 .gds-multi-select__sub-menu {
-    @extend .gds-accordion__child-items;
-    background-color: $gg-light-1;
-    color: $gg-dark-4;
-    &:after {
-        background-color: transparent;
-    }
+  background-color: $gg-light-1;
+  color: $gg-dark-4;
+  &:after {
+    background-color: transparent;
+  }
 }
 
 .gds-multi-select__option {
-    padding-left:$unit/4;
+  padding-left: $unit/4;
 }
 
-
 .gds-multi-select__menu-link--active > .gds-multi-select__sub-menu {
-    max-height: 2000px;
-    opacity: 1;
-    @include transition-ease-in(all, 250ms);
+  max-height: 2000px;
+  opacity: 1;
+  @include transition-ease-in(all, 250ms);
+}
+
+.gds-multi-select__sub-menu > .gds-multi-select__menu-link {
+  padding-left: 1rem;
 }
 
 .gds-button-dropdown--active {
-    .gds-multi-select__button {
-        color: $gg-dark-4;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        @include activeShadows($primaryColor, black);
-    }
+  .gds-multi-select__button {
+    color: $gg-dark-4;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    @include activeShadows($primaryColor, black);
+  }
 }

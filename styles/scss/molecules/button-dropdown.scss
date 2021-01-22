@@ -1,9 +1,10 @@
 .gds-button-dropdown {
-  @extend .gds-button-group;
+  border-radius: $btn-border-radius;
+  display: inline-block;
 }
 
-.gds-button-dropdown__button {
-  @extend .gds-button;
+.gds-button-dropdown__button,
+.gds-multi-select__button {
   padding-right: ($unit * 2);
 
   &:after {
@@ -25,7 +26,6 @@
 }
 
 .gds-button-dropdown__button--dark {
-  @extend .gds-button--dark;
   color: white !important;
   &:after {
     border-left: ($unit / 2) solid white !important;
@@ -33,7 +33,6 @@
 }
 
 .gds-button-dropdown__button--dark-primary {
-  @extend .gds-button--dark-primary;
   color: $primaryColor !important;
 
   &:after {
@@ -42,7 +41,6 @@
 }
 
 .gds-button-dropdown__button--dark-secondary {
-  @extend .gds-button--dark-secondary;
   color: $secondaryColor !important;
 
   &:after {
@@ -51,7 +49,6 @@
 }
 
 .gds-button-dropdown__button--dark-tertiary {
-  @extend .gds-button--dark-tertiary;
   color: $tertiaryColor !important;
 
   &:after {
@@ -65,7 +62,6 @@
   padding: 0;
 
   .gds-button-dropdown__button {
-    @extend .gds-button-group__button;
     margin-left: 0;
     border-radius: 0 !important;
     padding-right: ($unit * 2);
@@ -89,9 +85,12 @@
   }
 }
 
-.gds-button-dropdown--lg {
-  .gds-button-dropdown__button {
-    @extend .gds-button--lg;
+.gds-button-dropdown--lg,
+.gds-button-group--lg > .gds-button-dropdown {
+  .gds-button-dropdown__button,
+  .gds-multi-select__button {
+    font-size: $btn-font-size-large;
+    padding: $btn-padding-large;
     padding-right: ($unit * 3);
 
     &:after {
@@ -103,14 +102,19 @@
     }
   }
 
-  .gds-button-dropdown__menu-link {
+  .gds-button-dropdown__menu-link,
+  .gds-multi-select__menu-link {
     font-size: $font-size-plus-2;
   }
 }
 
-.gds-button-dropdown--sm {
-  .gds-button-dropdown__button {
-    @extend .gds-button--sm;
+.gds-button-dropdown--sm,
+.gds-button-group--sm > .gds-button-dropdown,
+.gds-multi-select--sm {
+  .gds-button-dropdown__button,
+  .gds-multi-select__button {
+    font-size: $btn-font-size-small;
+    padding: $btn-padding-small;
     padding-right: ($unit * 1.5);
 
     &:after {
@@ -126,18 +130,24 @@
     }
   }
 
-  .gds-button-dropdown__menu {
+  .gds-button-dropdown__menu,
+  .gds-multi-select__menu {
     margin-top: -5px;
   }
 
-  .gds-button-dropdown__menu-link {
+  .gds-button-dropdown__menu-link,
+  .gds-multi-select__menu-link {
     font-size: $font-size-minus-2;
   }
 }
 
-.gds-button-dropdown--xs {
-  .gds-button-dropdown__button {
-    @extend .gds-button--xs;
+.gds-button-dropdown--xs,
+.gds-button-group--xs > .gds-button-dropdown,
+.gds-multi-select--xs {
+  .gds-button-dropdown__button,
+  .gds-multi-select__button {
+    font-size: $btn-font-size-xsmall;
+    padding: $btn-padding-xsmall;
     padding-right: $unit;
 
     &:after {
@@ -153,34 +163,20 @@
     }
   }
 
-  .gds-button-dropdown__menu {
+  .gds-button-dropdown__menu,
+  .gds-multi-select__menu {
     margin-top: -5px;
   }
 
-  .gds-button-dropdown__menu-link {
+  .gds-button-dropdown__menu-link,
+  .gds-multi-select__menu-link {
     font-size: $font-size-minus-2;
   }
 }
 
-.gds-button-group--lg {
-  .gds-button-dropdown {
-    @extend .gds-button-dropdown--lg;
-  }
-}
-
-.gds-button-group--sm {
-  .gds-button-dropdown {
-    @extend .gds-button-dropdown--sm;
-  }
-}
-
-.gds-button-group--xs {
-  .gds-button-dropdown {
-    @extend .gds-button-dropdown--xs;
-  }
-}
-
-.gds-button-dropdown__menu {
+.gds-button-dropdown__menu,
+.gds-chooser__menu,
+.gds-multi-select__menu {
   position: absolute;
   width: 100%;
   min-width: 0 !important;
@@ -209,7 +205,8 @@
   border-color: $gg-gray;
 }
 
-.gds-button-dropdown__menu-item {
+.gds-button-dropdown__menu-item,
+.gds-multi-select__menu-item {
   opacity: 0;
   transform: translateX(-100px);
   @include transition-ease-out(all, 250ms);
@@ -221,7 +218,9 @@
   }
 }
 
-.gds-button-dropdown__menu-link {
+.gds-button-dropdown__menu-link,
+.gds-chooser__menu-link,
+.gds-multi-select__menu-link {
   padding: ($unit / 4) $unit;
   display: block;
   cursor: pointer;
@@ -257,19 +256,23 @@
 .gds-button-dropdown--active {
   z-index: $z-index-10;
 
-  .gds-button-dropdown__button {
+  .gds-button-dropdown__button,
+  .gds-multi-select__button {
     z-index: $z-index-10;
     &:after {
       transform: rotate(90deg);
     }
   }
 
-  .gds-button-dropdown__menu {
+  .gds-button-dropdown__menu,
+  .gds-multi-select__menu {
     transform: scaleY(1);
     // box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
   }
 
-  .gds-button-dropdown__menu-item {
+  .gds-button-dropdown__menu-item,
+  .gds-chooser__menu-item,
+  .gds-multi-select__menu-item {
     opacity: 1;
     transform: translateX(0px);
   }

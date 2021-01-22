@@ -1,126 +1,127 @@
 .gds-lens-wrapper {
-    overflow: hidden;
-    display: inline-block;
+  overflow: hidden;
+  display: inline-block;
 }
 
 .gds-lens-base {
-    display: block;
-    @include transition-ease-out(filter, 250ms);
+  display: block;
+  @include transition-ease-out(filter, 250ms);
 }
 
 .gds-lens-base--desaturate {
-    filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .gds-lens {
-    cursor: pointer;
-    z-index: $z-index-5;
+  cursor: pointer;
+  z-index: $z-index-5;
 }
 
 .gds-lens,
 .gds-lens__image,
 .gds-lens__bracket {
-    position: absolute;
+  position: absolute;
 }
 
 .gds-lens--active {
-    cursor: move;
+  cursor: move;
 }
 
 .gds-lens--active .gds-lens__guide-grid {
-    opacity: 1;
+  opacity: 1;
 }
 
 .gds-lens--active .gds-lens__handle {
-    opacity: 1;
-    pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .gds-lens--display {
-    &:before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: calc(50% - 1500px);
-        width: 3000px;
-        height: 1px;
-        background-color: white;
-        z-index: $z-index-1;
-        transform: scale(0,1);
-        @include transition-ease-out(all, 250ms);
-    }
-    &:after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: calc(50% - 1500px);
-        height: 3000px;
-        width: 1px;
-        background-color: white;
-        z-index: $z-index-1;
-        transform: scale(1,0);
-        @include transition-ease-out(all, 250ms);
-    }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 1500px);
+    width: 3000px;
+    height: 1px;
+    background-color: white;
+    z-index: $z-index-1;
+    transform: scale(0, 1);
+    @include transition-ease-out(all, 250ms);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 1500px);
+    height: 3000px;
+    width: 1px;
+    background-color: white;
+    z-index: $z-index-1;
+    transform: scale(1, 0);
+    @include transition-ease-out(all, 250ms);
+  }
 }
 .gds-lens--display:hover,
 .gds-lens--display.gds-lens--active {
-    &:before, &:after {
-        transform: scale(1,1);
-        @include transition-ease-in(all, 250ms);
-    }
-    .gds-lens__bracket {
-        opacity: 1;
-        transform: translate(0, 0);
-    }
+  &:before,
+  &:after {
+    transform: scale(1, 1);
+    @include transition-ease-in(all, 250ms);
+  }
+  .gds-lens__bracket {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 .gds-lens--active.gds-lens--valid {
-    animation: validBounce ease-in-out .25s;
-    animation-iteration-count: 1;
-    transform-origin: 50% 50%;
-    animation-fill-mode: forwards;
-    background-color: rgba(white, 0.0);
+  animation: validBounce ease-in-out 0.25s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  animation-fill-mode: forwards;
+  background-color: rgba(white, 0);
+  box-shadow: inset 0 0 0 1px $primaryColor;
+  .gds-lens__viewport:before {
+    opacity: 0;
+  }
+  .gds-lens__viewport:after {
     box-shadow: inset 0 0 0 1px $primaryColor;
-    .gds-lens__viewport:before {
-        opacity: 0;
-    }
-    .gds-lens__viewport:after {
-        box-shadow: inset 0 0 0 1px $primaryColor;
-        background-color: rgba($primaryColor, 0);
-    }
+    background-color: rgba($primaryColor, 0);
+  }
 }
 
 .gds-lens--active.gds-lens--invalid {
-    .gds-lens__viewport:after {
-        box-shadow: inset 0 0 0 1px white;
-        background-color: rgba(white, 0);
-    }
-    .gds-lens__viewport:before {
-        opacity: 0;
-    }
+  .gds-lens__viewport:after {
+    box-shadow: inset 0 0 0 1px white;
+    background-color: rgba(white, 0);
+  }
+  .gds-lens__viewport:before {
+    opacity: 0;
+  }
 }
 
 .gds-lens__viewport {
-    overflow: hidden;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: $z-index-2;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+  @include transition-ease-out(box-shadow, 250ms);
+  &:after {
+    content: "";
+    box-shadow: inset 0 0 0 1px white;
+    display: block;
+    position: relative;
     height: 100%;
     width: 100%;
-    z-index: $z-index-2;
-    box-shadow: 0 0 0px rgba(0,0,0,0.0);
-    @include transition-ease-out(box-shadow, 250ms);
-    &:after {
-        content: '';
-        box-shadow: inset 0 0 0 1px white;
-        display: block;
-        position: relative;
-        height: 100%;
-        width: 100%;
-        z-index: $z-index-3;
-        @include transition-ease-out(all, 150ms);
-    }
+    z-index: $z-index-3;
+    @include transition-ease-out(all, 150ms);
+  }
 }
 
 .gds-lens__viewport--no-icon:before {
-    display: none;
+  display: none;
 }
 
 .gds-lens--valid:hover ~ .gds-lens-base,
@@ -129,275 +130,275 @@
 .gds-lens--display.gds-lens--active ~ .gds-lens-base,
 .gds-lens--active.gds-lens--valid ~ .gds-lens-base,
 .gds-lens--active.gds-lens--invalid ~ .gds-lens-base {
-    @extend .gds-lens-base--desaturate;
+  filter: grayscale(100%);
 }
 
 .gds-lens--display:hover .gds-lens__viewport,
 .gds-lens--active .gds-lens__viewport,
 .gds-lens--valid:hover .gds-lens__viewport,
 .gds-lens--invalid:hover .gds-lens__viewport {
-    box-shadow: 0 0 30px rgba(0,0,0,0.85);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.85);
 }
 .gds-lens--invalid .gds-lens__viewport,
 .gds-lens--valid .gds-lens__viewport {
-    &:before {
-        height: 30px;
-        width: 30px;
-        text-align: center;
-        position: absolute;
-        top: calc( 50% - 15px );
-        left: calc( 50% - 15px );
-        border-radius: 50%;
-        border: 1px solid white;
-        z-index: $z-index-4;
-        font: normal normal normal 18px/1 Font Awesome\ 5 Pro;
-        color: white;
-        line-height: 30px;
-        @include transition-ease-out(all, 150ms);
-    }
+  &:before {
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    border-radius: 50%;
+    border: 1px solid white;
+    z-index: $z-index-4;
+    font: normal normal normal 18px/1 Font awesome\5 Pro;
+    color: white;
+    line-height: 30px;
+    @include transition-ease-out(all, 150ms);
+  }
 }
 
 .gds-lens--valid:hover .gds-lens__viewport,
 .gds-lens--invalid:hover .gds-lens__viewport {
-    &:before {
-        opacity: 0;
-    }
-    &:after {
-        background-color: rgba($secondaryColor, 0);
-    }
+  &:before {
+    opacity: 0;
+  }
+  &:after {
+    background-color: rgba($secondaryColor, 0);
+  }
 }
 
 .gds-lens--invalid .gds-lens__viewport {
-    &:after {
-        box-shadow: inset 0 0 0 1px $secondaryColor;
-        background-color: rgba($secondaryColor, 0.25);
-    }
-    &:before {
-        content: fa-content($fa-var-exclamation);
-        font-family: Font Awesome\ 5 Pro;
-        font-weight: 900;
-        box-shadow: 0px 0px 0px 2px $secondaryColor;
-        background-color: $secondaryColor;
-    }
+  &:after {
+    box-shadow: inset 0 0 0 1px $secondaryColor;
+    background-color: rgba($secondaryColor, 0.25);
+  }
+  &:before {
+    content: fa-content($fa-var-exclamation);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    box-shadow: 0px 0px 0px 2px $secondaryColor;
+    background-color: $secondaryColor;
+  }
 }
 
 .gds-lens--valid .gds-lens__viewport {
-    &:after {
-        box-shadow: inset 0 0 0 1px $primaryColor;
-        background-color: rgba($primaryColor, 0.25);
-    }
-    &:before {
-        content: fa-content($fa-var-check);
-        font-family: Font Awesome\ 5 Pro;
-        font-weight: 900;
-        box-shadow: 0px 0px 0px 2px $primaryColor;
-        background-color: $primaryColor;
-    }
+  &:after {
+    box-shadow: inset 0 0 0 1px $primaryColor;
+    background-color: rgba($primaryColor, 0.25);
+  }
+  &:before {
+    content: fa-content($fa-var-check);
+    font-family: " 5 Free";
+    font-weight: 900;
+    box-shadow: 0px 0px 0px 2px $primaryColor;
+    background-color: $primaryColor;
+  }
 }
-
 
 $bracketOffset: $unit / 2;
 
 .gds-lens__bracket {
-    height: 10%;
-    width: 10%;
-    z-index: $z-index-3;
-    opacity:0;
-    @include transition-ease-out(all, 150ms);
+  height: 10%;
+  width: 10%;
+  z-index: $z-index-3;
+  opacity: 0;
+  @include transition-ease-out(all, 150ms);
 }
 .gds-lens__bracket--t-l {
-    border-top: 1px solid white;
-    border-left: 1px solid white;
-    top: -$bracketOffset;
-    left: -$bracketOffset;
-    transform: translate($bracketOffset, $bracketOffset);
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  top: -$bracketOffset;
+  left: -$bracketOffset;
+  transform: translate($bracketOffset, $bracketOffset);
 }
 .gds-lens__bracket--t-r {
-    border-top: 1px solid white;
-    border-right: 1px solid white;
-    top: -$bracketOffset;
-    right: -$bracketOffset;
-    transform: translate(-$bracketOffset, $bracketOffset);
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  top: -$bracketOffset;
+  right: -$bracketOffset;
+  transform: translate(-$bracketOffset, $bracketOffset);
 }
 .gds-lens__bracket--b-l {
-    border-bottom: 1px solid white;
-    border-left: 1px solid white;
-    bottom: -$bracketOffset;
-    left: -$bracketOffset;
-    transform: translate($bracketOffset, -$bracketOffset);
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  bottom: -$bracketOffset;
+  left: -$bracketOffset;
+  transform: translate($bracketOffset, -$bracketOffset);
 }
 .gds-lens__bracket--b-r {
-    border-bottom: 1px solid white;
-    border-right: 1px solid white;
-    bottom: -$bracketOffset;
-    right: -$bracketOffset;
-    transform: translate(-$bracketOffset, -$bracketOffset);
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  bottom: -$bracketOffset;
+  right: -$bracketOffset;
+  transform: translate(-$bracketOffset, -$bracketOffset);
 }
 
 $handleSize: $unit / 3;
 $handleFootprint: $unit / 1.5;
 
 .gds-lens__handle {
+  position: absolute;
+  height: $handleFootprint;
+  width: $handleFootprint;
+  opacity: 0;
+  z-index: $z-index-5;
+  pointer-events: none;
+  @include transition-ease-out(opacity, 250ms);
+  &:before {
+    content: "";
+    background-color: white;
     position: absolute;
+    height: $handleSize;
+    width: $handleSize;
+    @include transition-ease-out(all, 250ms);
+  }
+  &:hover:before {
     height: $handleFootprint;
     width: $handleFootprint;
-    opacity: 0;
-    z-index: $z-index-5;
-    pointer-events: none;
-    @include transition-ease-out(opacity, 250ms);
-    &:before {
-        content: '';
-        background-color: white;
-        position: absolute;
-        height: $handleSize;
-        width: $handleSize;
-        @include transition-ease-out(all, 250ms);
-    }
-    &:hover:before {
-        height: $handleFootprint;
-        width: $handleFootprint;
-        background-color: $primaryColor;
-    }
+    background-color: $primaryColor;
+  }
 }
 
 .gds-lens__handle--t-l {
-    top: -$handleFootprint;
-    left: -$handleFootprint;
-    cursor: nwse-resize;
-    &:before {
-        bottom: 0;
-        right: 0;
-    }
+  top: -$handleFootprint;
+  left: -$handleFootprint;
+  cursor: nwse-resize;
+  &:before {
+    bottom: 0;
+    right: 0;
+  }
 }
 
 .gds-lens__handle--t-c {
-    top: -$handleFootprint;
-    left: calc( 50% - #{$handleFootprint / 2} );
-    cursor: ns-resize;
-    &:before {
-        bottom: 0;
-        left: $handleSize / 2;
-    }
+  top: -$handleFootprint;
+  left: calc(50% - #{$handleFootprint / 2});
+  cursor: ns-resize;
+  &:before {
+    bottom: 0;
+    left: $handleSize / 2;
+  }
 }
 
 .gds-lens__handle--t-r {
-    top: -$handleFootprint;
-    right: -$handleFootprint;
-    cursor: nesw-resize;
-    &:before {
-        bottom: 0;
-        left: 0;
-    }
+  top: -$handleFootprint;
+  right: -$handleFootprint;
+  cursor: nesw-resize;
+  &:before {
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .gds-lens__handle--c-l {
-    top: calc( 50% - #{$handleFootprint / 2} );
-    left: -$handleFootprint;
-    cursor: ew-resize;
-    &:before {
-        top: $handleSize / 2;
-        right: 0;
-    }
+  top: calc(50% - #{$handleFootprint / 2});
+  left: -$handleFootprint;
+  cursor: ew-resize;
+  &:before {
+    top: $handleSize / 2;
+    right: 0;
+  }
 }
 
 .gds-lens__handle--c-r {
-    top: calc( 50% - #{$handleFootprint / 2} );
-    right: -$handleFootprint;
-    cursor: ew-resize;
-    &:before {
-        top: $handleSize / 2;
-        left: 0;
-    }
+  top: calc(50% - #{$handleFootprint / 2});
+  right: -$handleFootprint;
+  cursor: ew-resize;
+  &:before {
+    top: $handleSize / 2;
+    left: 0;
+  }
 }
 
 .gds-lens__handle--b-l {
-    bottom: -$handleFootprint;
-    left: -$handleFootprint;
-    cursor: nesw-resize;
-    &:before {
-        top: 0;
-        right: 0;
-    }
+  bottom: -$handleFootprint;
+  left: -$handleFootprint;
+  cursor: nesw-resize;
+  &:before {
+    top: 0;
+    right: 0;
+  }
 }
 
 .gds-lens__handle--b-c {
-    bottom: -$handleFootprint;
-    left: calc( 50% - #{$handleFootprint / 2} );
-    cursor: ns-resize;
-    &:before {
-        top: 0;
-        right: $handleSize / 2;
-    }
+  bottom: -$handleFootprint;
+  left: calc(50% - #{$handleFootprint / 2});
+  cursor: ns-resize;
+  &:before {
+    top: 0;
+    right: $handleSize / 2;
+  }
 }
 
 .gds-lens__handle--b-r {
-    bottom: -$handleFootprint;
-    right: -$handleFootprint;
-    cursor: nwse-resize;
-    &:before {
-        top: 0;
-        left: 0;
-    }
+  bottom: -$handleFootprint;
+  right: -$handleFootprint;
+  cursor: nwse-resize;
+  &:before {
+    top: 0;
+    left: 0;
+  }
 }
 
 .gds-lens__guide-grid {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: $z-index-3;
+  @include transition-ease-out(opacity, 250ms);
+  &:before,
+  &:after {
+    content: "";
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    pointer-events: none;
-    z-index: $z-index-3;
-    @include transition-ease-out(opacity, 250ms);
-    &:before, &:after {
-        content: '';
-        position: absolute;
-        background-color: white;
-        opacity: 0.33;
-    }
+    background-color: white;
+    opacity: 0.33;
+  }
 }
 
 .gds-lens__guide-grid--h {
-    &:before {
-        left: 0;
-        width: 100%;
-        height: 1px;
-        top: 66%;
-    }
-    &:after {
-        left: 0;
-        width: 100%;
-        height: 1px;
-        top: 33%;
-    }
+  &:before {
+    left: 0;
+    width: 100%;
+    height: 1px;
+    top: 66%;
+  }
+  &:after {
+    left: 0;
+    width: 100%;
+    height: 1px;
+    top: 33%;
+  }
 }
 
 .gds-lens__guide-grid--v {
-    &:before {
-        top: 0;
-        height: 100%;
-        width: 1px;
-        left: 66%;
-    }
-    &:after {
-        top: 0;
-        height: 100%;
-        width: 1px;
-        left: 33%;
-    }
+  &:before {
+    top: 0;
+    height: 100%;
+    width: 1px;
+    left: 66%;
+  }
+  &:after {
+    top: 0;
+    height: 100%;
+    width: 1px;
+    left: 33%;
+  }
 }
 
-@keyframes validBounce{
+@keyframes validBounce {
   0% {
-    transform:  scaleX(1.00) scaleY(1.00) ;
+    transform: scaleX(1) scaleY(1);
     border-color: white;
   }
   50% {
-    transform:  scaleX(1.20) scaleY(1.20) ;
+    transform: scaleX(1.2) scaleY(1.2);
   }
   100% {
-    transform:  scaleX(1.00) scaleY(1.00) ;
-    border-color:#00c4b4;
+    transform: scaleX(1) scaleY(1);
+    border-color: #00c4b4;
   }
 }

@@ -155,9 +155,6 @@
 }
 
 .gds-tree__link-option {
-  @extend .gds-circular-button;
-  @extend .gds-circular-button--xs;
-  @extend .gds-circular-button--danger;
   @include transition-ease-out(all, 150ms);
   top: -2px;
   left: 0;
@@ -166,4 +163,23 @@
   padding: $unit / 4.5 $unit / 5 $unit / 3 $unit / 5;
   font-size: $unit / 1.5;
   opacity: 0;
+
+  @include backgroundGradient($dangerLight2Color, $dangerDark2Color, "default");
+  &:hover {
+    @include backgroundGradient($dangerLight2Color, $dangerDark2Color, "hover");
+  }
+
+  &:focus {
+    outline: none;
+    @include activeShadow($dangerLight4Color);
+  }
+
+  &:active {
+    @include backgroundGradient(
+      $dangerLight2Color,
+      $dangerDark2Color,
+      "active"
+    );
+    @include activeShadow($dangerLight4Color);
+  }
 }

@@ -1,12 +1,12 @@
 .gds-chooser {
-    font-family: $pri-font-regular;
-    background-color: $chooserPrimaryBackgroundColor;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: inset 0 0 0 1px rgba(black, 0.1);
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
-    z-index: $z-index-1;
+  font-family: $pri-font-regular;
+  background-color: $chooserPrimaryBackgroundColor;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: inset 0 0 0 1px rgba(black, 0.1);
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  z-index: $z-index-1;
 }
 
 .gds-chooser--secondary {
@@ -14,21 +14,24 @@
 
   .gds-chooser__currentItem {
     box-shadow: inset 0 -#{$cap-size} 0 0 $chooserSecondaryAccentColor;
-      &:hover {
-        box-shadow: inset 0 -#{$cap-size*1.5} 0 0 $chooserSecondaryAccentColor, inset 0 0 3px rgba(white, 0);
-      }
-      &:active {
-        box-shadow: inset 0 -2px 0 0 $chooserSecondaryAccentColor;
-      }
-  } 
+    &:hover {
+      box-shadow: inset 0 -#{$cap-size * 1.5} 0 0 $chooserSecondaryAccentColor,
+        inset 0 0 3px rgba(white, 0);
+    }
+    &:active {
+      box-shadow: inset 0 -2px 0 0 $chooserSecondaryAccentColor;
+    }
+  }
   .gds-chooser__button {
-      box-shadow: inset 0 -#{$cap-size} 0 0 $chooserSecondaryAccentColor, 0 0 0 rgba(black, 0);
-      &:hover {
-        box-shadow: inset 0 -#{$cap-size*1.5} 0 0 $chooserSecondaryAccentColor, inset 0 0 3px rgba(white, 0);
-      }
-      &:active {
-        box-shadow: inset 0 -2px 0 0 $chooserSecondaryAccentColor;
-      }
+    box-shadow: inset 0 -#{$cap-size} 0 0 $chooserSecondaryAccentColor,
+      0 0 0 rgba(black, 0);
+    &:hover {
+      box-shadow: inset 0 -#{$cap-size * 1.5} 0 0 $chooserSecondaryAccentColor,
+        inset 0 0 3px rgba(white, 0);
+    }
+    &:active {
+      box-shadow: inset 0 -2px 0 0 $chooserSecondaryAccentColor;
+    }
   }
   .gds-chooser__button--left {
     border-right: 2px solid $chooserSecondaryAccentColor;
@@ -36,52 +39,58 @@
 
   .gds-chooser__button--right {
     border-left: 2px solid $chooserSecondaryAccentColor;
-  }   
+  }
 }
 
 .gds-chooser--tertiary {
-  background-color: $chooserTertiaryBackgroundColor; 
+  background-color: $chooserTertiaryBackgroundColor;
   .gds-chooser__currentItem {
     box-shadow: inset 0 -#{$cap-size} 0 0 $chooserTertiaryAccentColor;
     &:hover {
-      box-shadow: inset 0 -#{$cap-size*1.5} 0 0 $chooserTertiaryAccentColor, inset 0 0 3px rgba(white, 0);
+      box-shadow: inset 0 -#{$cap-size * 1.5} 0 0 $chooserTertiaryAccentColor,
+        inset 0 0 3px rgba(white, 0);
     }
     &:active {
       box-shadow: inset 0 -2px 0 0 $chooserTertiaryAccentColor;
     }
   }
- .gds-chooser__button {
-    box-shadow: inset 0 -#{$cap-size} 0 0 $chooserTertiaryAccentColor, 0 0 0 rgba(black, 0);
+  .gds-chooser__button {
+    box-shadow: inset 0 -#{$cap-size} 0 0 $chooserTertiaryAccentColor,
+      0 0 0 rgba(black, 0);
     &:hover {
-      box-shadow: inset 0 -#{$cap-size*1.5} 0 0 $chooserTertiaryAccentColor, inset 0 0 3px rgba(white, 0);
+      box-shadow: inset 0 -#{$cap-size * 1.5} 0 0 $chooserTertiaryAccentColor,
+        inset 0 0 3px rgba(white, 0);
     }
     &:active {
       box-shadow: inset 0 -2px 0 0 $chooserTertiaryAccentColor;
     }
   }
   .gds-chooser__button--left {
-  border-right: 2px solid $chooserTertiaryAccentColor;
+    border-right: 2px solid $chooserTertiaryAccentColor;
   }
   .gds-chooser__button--right {
     border-left: 2px solid $chooserTertiaryAccentColor;
   }
-} 
+}
 
 .gds-chooser--quaternary {
-  background-color: $chooserQuaternaryBackgroundColor; 
+  background-color: $chooserQuaternaryBackgroundColor;
   .gds-chooser__currentItem {
     box-shadow: inset 0 -#{$cap-size} 0 0 $chooserQuaternaryAccentColor;
     &:hover {
-      box-shadow: inset 0 -#{$cap-size*1.5} 0 0 $chooserQuaternaryAccentColor, inset 0 0 3px rgba(white, 0);
+      box-shadow: inset 0 -#{$cap-size * 1.5} 0 0 $chooserQuaternaryAccentColor,
+        inset 0 0 3px rgba(white, 0);
     }
     &:active {
       box-shadow: inset 0 -2px 0 0 $chooserQuaternaryAccentColor;
     }
   }
   .gds-chooser__button {
-    box-shadow: inset 0 -#{$cap-size} 0 0 $chooserQuaternaryAccentColor, 0 0 0 rgba(black, 0);
+    box-shadow: inset 0 -#{$cap-size} 0 0 $chooserQuaternaryAccentColor,
+      0 0 0 rgba(black, 0);
     &:hover {
-      box-shadow: inset 0 -#{$cap-size*1.5} 0 0 $chooserQuaternaryAccentColor, inset 0 0 3px rgba(white, 0);
+      box-shadow: inset 0 -#{$cap-size * 1.5} 0 0 $chooserQuaternaryAccentColor,
+        inset 0 0 3px rgba(white, 0);
     }
     &:active {
       box-shadow: inset 0 -2px 0 0 $chooserQuaternaryAccentColor;
@@ -97,126 +106,116 @@
 }
 
 .gds-chooser__button {
-    padding: $unit * 0.7;
-    color: white;
-    font-size: $unit * 2;
-    background-color: rgba(255, 255, 255, 0);
-    box-shadow: inset 0 -#{$cap-size} 0 0 $chooserPrimaryAccentColor, 0 0 0 rgba(black, 0);
-    text-shadow: 0 1px 3px rgba(black, 0.35);
-    border: none;
-    @include transition-ease-out(all, 100ms);
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0 -#{$cap-size*1.5} 0 0 $chooserPrimaryAccentColor, inset 0 0 3px rgba(white, 0);
+  padding: $unit * 0.7;
+  color: white;
+  font-size: $unit * 2;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: inset 0 -#{$cap-size} 0 0 $chooserPrimaryAccentColor,
+    0 0 0 rgba(black, 0);
+  text-shadow: 0 1px 3px rgba(black, 0.35);
+  border: none;
+  @include transition-ease-out(all, 100ms);
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 -#{$cap-size * 1.5} 0 0 $chooserPrimaryAccentColor,
+      inset 0 0 3px rgba(white, 0);
+  }
+  &:active {
+    box-shadow: inset 0 -2px 0 0 $chooserPrimaryAccentColor;
+    > * {
+      transform: scale(0.97) translateY(1px);
     }
-    &:active {
-        box-shadow: inset 0 -2px 0 0 $chooserPrimaryAccentColor;
-        > * {
-            transform: scale(0.97) translateY(1px);
-        }
-    }
-    &:focus {
-        outline: none;
-    }
+  }
+  &:focus {
+    outline: none;
+  }
 }
 
 .gds-chooser__button--left {
-    border-right: 2px solid $chooserPrimaryAccentColor;
+  border-right: 2px solid $chooserPrimaryAccentColor;
 }
 
 .gds-chooser__button--right {
-    border-left: 2px solid $chooserPrimaryAccentColor;
+  border-left: 2px solid $chooserPrimaryAccentColor;
 }
 
 .gds-chooser__console {
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .gds-chooser__console--active {
-    .gds-chooser__menu {
-        transform: scaleY(1);
-    }
-    .gds-button-dropdown__menu-item {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    .gds-chooser__item-icon {
-        transform: rotate(90deg);
-    }
+  .gds-chooser__menu {
+    transform: scaleY(1);
+  }
+  .gds-button-dropdown__menu-item,
+  .gds-multi-select__menu-item {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .gds-chooser__item-icon {
+    transform: rotate(90deg);
+  }
 }
 
 .gds-chooser__currentItem {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    font-size: $unit;
-    color: white;
-    text-shadow: 0 1px 3px rgba(black, 0.35);
-    box-shadow: inset 0 -#{$cap-size} 0 0 $chooserPrimaryAccentColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: $unit;
+  color: white;
+  text-shadow: 0 1px 3px rgba(black, 0.35);
+  box-shadow: inset 0 -#{$cap-size} 0 0 $chooserPrimaryAccentColor;
 
-    @include transition-ease-out(all, 100ms);
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0 -#{$cap-size*1.5} 0 0 $chooserPrimaryAccentColor, inset 0 0 3px rgba(white, 0);
+  @include transition-ease-out(all, 100ms);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 -#{$cap-size * 1.5} 0 0 $chooserPrimaryAccentColor,
+      inset 0 0 3px rgba(white, 0);
+  }
+  &:active {
+    box-shadow: inset 0 -2px 0 0 $chooserPrimaryAccentColor;
+    > * {
+      transform: scale(0.99) translateY(1px);
     }
-    &:active {
-        box-shadow: inset 0 -2px 0 0 $chooserPrimaryAccentColor;
-        > * {
-            transform: scale(0.99) translateY(1px);
-        }
-    }
-    &:focus {
-        outline: none;
-    }
+  }
+  &:focus {
+    outline: none;
+  }
 }
 
 .gds-chooser__item-icon {
-    margin-left: $unit / 2;
-    font-size: $unit;
-    top: 1px;
-    @include transition-ease-out(all, 100ms);
+  margin-left: $unit / 2;
+  font-size: $unit;
+  top: 1px;
+  @include transition-ease-out(all, 100ms);
 }
 
 .gds-chooser__menu {
-    @extend .gds-button-dropdown__menu;
-    top: 100%;
-    margin-top: -1px;
-    max-width: 500px;
-    box-shadow: 0 2px 5px rgba(black, 0.2);
-    text-align: left;
-}
-
-.gds-chooser__menu--secondary {
-    background-color: $secondaryDark3Color;
-}
-
-.gds-chooser__menu--tertiary {
-  background-color: $tertiaryDark3Color;
-} 
-
-.gds-chooser__menu--quaternary {
-  background-color: $quaternaryDark3Color;
+  top: 100%;
+  margin-top: -1px;
+  max-width: 500px;
+  box-shadow: 0 2px 5px rgba(black, 0.2);
+  text-align: left;
 }
 
 .gds-chooser__menu-item {
-    @extend .gds-button-dropdown__menu-item;
+  opacity: 1;
 }
 
 .gds-chooser__menu-link {
-    @extend .gds-button-dropdown__menu-link;
-    padding: $unit / 4  $unit*2;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-    &:active {
-        background-color: rgba(white, 0.35);
-    }
+  padding: $unit / 4 $unit * 2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  &:active {
+    background-color: rgba(white, 0.35);
+  }
 }

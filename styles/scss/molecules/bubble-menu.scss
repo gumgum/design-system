@@ -1,125 +1,135 @@
 .gds-bubble {
-    display:inline-block;
+  display: inline-block;
 }
 
-.gds-bubble__menu {
-    position: absolute;
-    top: ($unit * 3);
-    right: 0;
-    min-width: ($unit * 12);
-    z-index: $z-index-9;
-    opacity: 0;
-    pointer-events: none;
-    box-shadow: 0 0 ($unit) rgba(0,0,0,0.25);
-    @include transition-ease-out(all, 250ms);
-    transform: scaleY(0);
-    transform-origin: 50% -10px;
-    text-align:left;
-    line-height:1.8;
+.gds-bubble__menu,
+.gds-avatar__menu,
+.gds-filters__menu {
+  position: absolute;
+  top: ($unit * 3);
+  right: 0;
+  min-width: ($unit * 12);
+  z-index: $z-index-9;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 0 ($unit) rgba(0, 0, 0, 0.25);
+  @include transition-ease-out(all, 250ms);
+  transform: scaleY(0);
+  transform-origin: 50% -10px;
+  text-align: left;
+  line-height: 1.8;
 
-    &:before {
-        content: "";
-        position: absolute;
-        bottom: 99%;
-        right: 7px;
-        width: 16px;
-        height: 12.5px;
-        background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xmlns%3Aa%3D%22http%3A%2F%2Fns.adobe.com%2FAdobeSVGViewerExtensions%2F3.0%2F%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2216px%22%20height%3D%2212.5px%22%20viewBox%3D%220%200%2016%2012.5%22%20style%3D%22enable-background%3Anew%200%200%2016%2012.5%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23FFFFFF%3B%7D%3C%2Fstyle%3E%3Cpolygon%20class%3D%22st0%22%20points%3D%220%2C12.5%2016%2C12.5%208%2C0%20%22%2F%3E%3C%2Fsvg%3E");
-        z-index: $z-index-9;
-    }
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 99%;
+    right: 7px;
+    width: 16px;
+    height: 12.5px;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xmlns%3Aa%3D%22http%3A%2F%2Fns.adobe.com%2FAdobeSVGViewerExtensions%2F3.0%2F%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2216px%22%20height%3D%2212.5px%22%20viewBox%3D%220%200%2016%2012.5%22%20style%3D%22enable-background%3Anew%200%200%2016%2012.5%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23FFFFFF%3B%7D%3C%2Fstyle%3E%3Cpolygon%20class%3D%22st0%22%20points%3D%220%2C12.5%2016%2C12.5%208%2C0%20%22%2F%3E%3C%2Fsvg%3E");
+    z-index: $z-index-9;
+  }
 }
 
 .gds-bubble__menu--left {
-    left: 0;
-    right: auto;
+  left: 0;
+  right: auto;
 
-    &:before {
-        left: 7px;
-        right: auto;
-    }
+  &:before {
+    left: 7px;
+    right: auto;
+  }
 }
 
 .gds-bubble__menu--sm {
-    min-width: ($unit * 8);
+  min-width: ($unit * 8);
 
-    .gds-bubble__menu-list-link {
-        padding: ($unit / 4) ($unit / 2);
-        font-size: 0.75rem;
-    }
+  .gds-bubble__menu-list-link {
+    padding: ($unit / 4) ($unit / 2);
+    font-size: 0.75rem;
+  }
 }
 
-.gds-bubble__menu--dark {
-    box-shadow: 0 0 ($unit) rgba(white,0.15);
-    &:before {
-        background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xmlns%3Aa%3D%22http%3A%2F%2Fns.adobe.com%2FAdobeSVGViewerExtensions%2F3.0%2F%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2216px%22%20height%3D%2212.5px%22%20viewBox%3D%220%200%2016%2012.5%22%20style%3D%22enable-background%3Anew%200%200%2016%2012.5%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23#{strip-hash($gg-dark-4)}%3B%7D%3C%2Fstyle%3E%3Cpolygon%20class%3D%22st0%22%20points%3D%220%2C12.5%2016%2C12.5%208%2C0%20%22%2F%3E%3C%2Fsvg%3E");
-    }
+.gds-bubble__menu--dark,
+.gds-avatar__menu--dark {
+  box-shadow: 0 0 ($unit) rgba(white, 0.15);
+  &:before {
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xmlns%3Aa%3D%22http%3A%2F%2Fns.adobe.com%2FAdobeSVGViewerExtensions%2F3.0%2F%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2216px%22%20height%3D%2212.5px%22%20viewBox%3D%220%200%2016%2012.5%22%20style%3D%22enable-background%3Anew%200%200%2016%2012.5%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23#{strip-hash($gg-dark-4)}%3B%7D%3C%2Fstyle%3E%3Cpolygon%20class%3D%22st0%22%20points%3D%220%2C12.5%2016%2C12.5%208%2C0%20%22%2F%3E%3C%2Fsvg%3E");
+  }
 }
 
 .gds-bubble__menu--offset-xs {
-    top:($unit)
+  top: ($unit);
 }
 
 .gds-bubble__menu--offset-sm {
-    top:($unit*2)
+  top: ($unit * 2);
 }
 
 .gds-bubble__menu--offset-lg {
-    top:($unit*3)
+  top: ($unit * 3);
 }
 
 .gds-bubble__menu--offset-lg {
-    top:($unit*4)
+  top: ($unit * 4);
 }
 
 .gds-bubble__menu--offset-xl {
-    top:($unit*5)
+  top: ($unit * 5);
 }
 
 .gds-bubble__menu--menu-open {
-    opacity:1;
-    transform: scaleY(1);
-    pointer-events: auto;
+  opacity: 1;
+  transform: scaleY(1);
+  pointer-events: auto;
 }
 
-.gds-bubble__menu-list-link {
-    display: block;
-    color: $primaryColor;
-    padding: ($unit / 2) $unit;
-    @extend .-transition-in-100;
+.gds-bubble__menu-list-link,
+.gds-avatar__menu-list-link {
+  display: block;
+  color: $primaryColor;
+  padding: ($unit / 2) $unit;
+  @include transition-ease-in(all, 100ms);
 
-    &:hover {
-        text-decoration: none;
-        background-color:$bubbleMenuHoverColor;
-        color:white;
-    }
+  &:hover {
+    text-decoration: none;
+    background-color: $bubbleMenuHoverColor;
+    color: white;
+  }
 }
 
-.gds-bubble__menu-list-link--dark {
-    color: $primaryLight4Color;
+.gds-bubble__menu-list-link--dark,
+.gds-avatar__menu-list-link--dark {
+  color: $primaryLight4Color;
 }
 
-.gds-bubble__menu-list-item--dark {
-    color: $gg-light-2;
+.gds-bubble__menu-list-item--dark,
+.gds-avatar__menu-list-item--dark {
+  color: $gg-light-2;
 }
 
-.gds-bubble__menu-list {
-    border-radius: $border-radius;
-    background-color: white;
-    box-shadow: 0 0 ($unit / 2) 0 rgba(black,0.25);
-    overflow: hidden;
+.gds-bubble__menu-list,
+.gds-avatar__menu-list {
+  border-radius: $border-radius;
+  background-color: white;
+  box-shadow: 0 0 ($unit / 2) 0 rgba(black, 0.25);
+  overflow: hidden;
 }
 
-.gds-bubble__menu-list--dark {
-    background-color: $gg-dark-4;
-    box-shadow: 0 0 ($unit / 2) 0 rgba(black,0.75);
+.gds-bubble__menu-list--dark,
+.gds-avatar__menu-list--dark {
+  background-color: $gg-dark-4;
+  box-shadow: 0 0 ($unit / 2) 0 rgba(black, 0.75);
 }
 
-.gds-bubble__menu-list-divider {
-    width: 100%;
-    height: 1px;
-    background-color: $gg-light-1;
+.gds-bubble__menu-list-divider,
+.gds-avatar__menu-list-divider {
+  width: 100%;
+  height: 1px;
+  background-color: $gg-light-1;
 }
 
-.gds-bubble__menu-list-divider--dark {
-    background-color: $gg-gray;
+.gds-bubble__menu-list-divider--dark,
+.gds-avatar__menu-list-divider--dark {
+  background-color: $gg-gray;
 }

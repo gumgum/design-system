@@ -1,284 +1,284 @@
 .gds-conversation {
-    width: 100%;
-    clear: both;
-    background-color: $gg-light-1;
-    border-radius: $border-radius;
+  width: 100%;
+  clear: both;
+  background-color: $gg-light-1;
+  border-radius: $border-radius;
 }
 
 .gds-conversation__header,
 .gds-conversation__footer {
-    background-color: white;
-    box-shadow: 0 0 3px 1px rgba(0,0,0,0.1);
-    color: $gg-light-4;
+  background-color: white;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+  color: $gg-light-4;
 }
 
 .gds-conversation__header {
-    padding: ($unit / 2);
+  padding: ($unit / 2);
 }
 
 .gds-conversation__footer {
-    border: 1px solid white;
+  border: 1px solid white;
 }
 
 .gds-conversation__title {
-    display: inline-block;
+  display: inline-block;
 }
 
 .gds-conversation__thumbnail {
-    width: ($unit * 3);
-    vertical-align: top;
-    border-radius: $border-radius;
-    margin-right: ($unit / 2);
+  width: ($unit * 3);
+  vertical-align: top;
+  border-radius: $border-radius;
+  margin-right: ($unit / 2);
 }
 
 .gds-conversation__options {
-    float: right;
+  float: right;
 }
 
 .gds-conversation__body {
-    padding: ($unit * 2) ($unit / 2) ($unit / 2) ($unit / 2);
-    max-height: 600px;
-    overflow: scroll;
+  padding: ($unit * 2) ($unit / 2) ($unit / 2) ($unit / 2);
+  max-height: 600px;
+  overflow: scroll;
 }
 
 .gds-conversation__message {
-    padding: ($unit / 2);
-    margin-bottom: ($unit * 2);
+  padding: ($unit / 2);
+  margin-bottom: ($unit * 2);
 }
 
 .gds-conversation__message--received {
-    text-align: right;
+  text-align: right;
 }
 
 .gds-conversation__message--sent {
-    text-align: left;
+  text-align: left;
 }
 
 .gds-conversation__bubble {
-    text-align: left;
-    background-color: $gg-light-2;
-    border-radius: $border-radius;
-    max-width: 75%;
-    min-width: 200px;
-    color: white;
-    display: inline-block;
-    padding: ($unit / 2) $unit;
-    z-index: $z-index-1;
+  text-align: left;
+  background-color: $gg-light-2;
+  border-radius: $border-radius;
+  max-width: 75%;
+  min-width: 200px;
+  color: white;
+  display: inline-block;
+  padding: ($unit / 2) $unit;
+  z-index: $z-index-1;
 
-    &:after {
-        content: '';
-        width: 0;
-        position: absolute;
-        top: ($unit / 2);
-        height: 0;
-        border-top: ($unit / 2) solid transparent;
-        border-bottom: ($unit / 2) solid transparent;
-    }
+  &:after {
+    content: "";
+    width: 0;
+    position: absolute;
+    top: ($unit / 2);
+    height: 0;
+    border-top: ($unit / 2) solid transparent;
+    border-bottom: ($unit / 2) solid transparent;
+  }
 
-    @media #{$phone-width}, #{$phablet-width} {
-        max-width: 100%;
-    }
+  @media #{$phone-width}, #{$phablet-width} {
+    max-width: 100%;
+  }
 }
 
 .gds-conversation__bubble--received {
-    background-color: $primaryColor;
-    border-bottom: $cap-size solid $primaryDark2Color;
+  background-color: $primaryColor;
+  border-bottom: $cap-size solid $primaryDark2Color;
 
-    &:after {
-        border-left: ($unit / 3) solid $primaryColor;
-        right: -($unit / 3.5);
-    }
+  &:after {
+    border-left: ($unit / 3) solid $primaryColor;
+    right: -($unit / 3.5);
+  }
 }
 
 .gds-conversation__bubble--sent {
-    background-color: $secondaryColor;
-    border-bottom: $cap-size solid $secondaryDark2Color;
+  background-color: $secondaryColor;
+  border-bottom: $cap-size solid $secondaryDark2Color;
 
-    &:after {
-        border-right: ($unit / 3) solid $secondaryColor;
-        left: -($unit / 3.5);
-    }
+  &:after {
+    border-right: ($unit / 3) solid $secondaryColor;
+    left: -($unit / 3.5);
+  }
 }
 
 .gds-conversation__bubble--blocked {
-    background-color: $dangerColor;
-    border-bottom: $cap-size solid $dangerDark2Color;
+  background-color: $dangerColor;
+  border-bottom: $cap-size solid $dangerDark2Color;
 }
 
 .gds-conversation__bubble--received.gds-conversation__bubble--blocked:after {
-    border-left: ($unit / 3) solid $dangerColor;
-    right: -($unit / 3.5);
+  border-left: ($unit / 3) solid $dangerColor;
+  right: -($unit / 3.5);
 }
 
 .gds-conversation__bubble--sent.gds-conversation__bubble--blocked:after {
-    border-right: ($unit / 3) solid $dangerColor;
-    left: -($unit / 3.5);
+  border-right: ($unit / 3) solid $dangerColor;
+  left: -($unit / 3.5);
 }
 
 .gds-conversation__bubble--typing {
-    max-width: auto;
-    min-width: auto;
-    padding: ($unit * 0.25) ($unit * 0.5);
+  max-width: auto;
+  min-width: auto;
+  padding: ($unit * 0.25) ($unit * 0.5);
 }
 
 .gds-conversation__name {
-    @extend .gds-text--bold;
-    color: $gg-dark-4;
-    width: 100%;
-    text-transform: uppercase;
-    font-size: ($unit * 0.8);
-    position: absolute;
-    left: 0;
-    top: -($unit * 1.5);
+  font-family: $pri-font-semibold;
+  font-weight: $font-weight-bold;
+  color: $gg-dark-4;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: ($unit * 0.8);
+  position: absolute;
+  left: 0;
+  top: -($unit * 1.5);
 }
 
 .gds-conversation__date-divider {
-    text-align: center;
-    margin-bottom: ($unit * 2);
-    color: $gg-light-4;
+  text-align: center;
+  margin-bottom: ($unit * 2);
+  color: $gg-light-4;
 
-    &:after {
-        content: '';
-        top: ($unit * 0.75);
-        left: $unit;
-        right: $unit;
-        position: absolute;
-        background-color: $gg-light-3;
-        height: 1px;
-    }
+  &:after {
+    content: "";
+    top: ($unit * 0.75);
+    left: $unit;
+    right: $unit;
+    position: absolute;
+    background-color: $gg-light-3;
+    height: 1px;
+  }
 }
 
 .gds-conversation__datestamp {
-    display: inline-block;
-    background-color: $gg-light-1;
-    z-index: $z-index-1;
-    padding: 0 $unit;
+  display: inline-block;
+  background-color: $gg-light-1;
+  z-index: $z-index-1;
+  padding: 0 $unit;
 }
 
 .gds-conversation__date {
-    @extend .gds-text--body-sm;
-    float: left;
-    color: rgba(white,0.5);
+  font-size: $font-size-minus-2;
+  float: left;
+  color: rgba(white, 0.5);
 }
 
 .gds-conversation__message-options {
-    float: right;
+  float: right;
 }
 
 .gds-conversation__message-option {
-    opacity: 0.5;
-    color: white;
-    @include transition-ease-out(all,100ms);
+  opacity: 0.5;
+  color: white;
+  @include transition-ease-out(all, 100ms);
 
-    &:hover {
-        opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .gds-conversation__message-option--active {
-    opacity: 1;
+  opacity: 1;
 }
 
 .gds-conversation__content {
-    margin-bottom: ($unit / 4);
+  margin-bottom: ($unit / 4);
 }
 
 .gds-conversation__content--typing {
-    padding: ($unit / 2);
-    margin-bottom: 0;
+  padding: ($unit / 2);
+  margin-bottom: 0;
 }
 
 .gds-conversation__content--blocked {
-    filter: blur(3px);
+  filter: blur(3px);
 }
 
 .gds-conversation__img {
-    @extend .gds-card__img;
-    border: ($unit / 4) solid white;
-    border-radius: $border-radius;
-    margin: ($unit / 2) 0;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  border: ($unit / 4) solid white;
+  border-radius: $border-radius;
+  margin: ($unit / 2) 0;
 }
 
 .gds-conversation__dots {
-    @extend .gds-loading__dot;
-    @extend .gds-loading__dot--white;
-    @extend .gds-loading__dot--sm;
-    background-color: white;
-    margin-left: ($unit * 2);
+  background-color: white;
+  margin-left: ($unit * 2);
 }
 
 .gds-conversation__avatar {
-    height: ($unit * 2);
-    width: ($unit * 2);
-    display: inline-block;
-    vertical-align: top;
-    border-radius: 50%;
-    border: 2px solid white;
-    margin-top: 2px;
+  height: ($unit * 2);
+  width: ($unit * 2);
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-top: 2px;
 
-    @media #{$phone-width}, #{$phablet-width} {
-        display: none;
-    }
+  @media #{$phone-width}, #{$phablet-width} {
+    display: none;
+  }
 }
 
 .gds-conversation__avatar--sent {
-    margin-right: ($unit / 4);
-    box-shadow: 0 0 0 2px $secondaryDark2Color;
+  margin-right: ($unit / 4);
+  box-shadow: 0 0 0 2px $secondaryDark2Color;
 }
 
 .gds-conversation__avatar--received {
-    margin-left: ($unit / 4);
-    box-shadow: 0 0 0 2px $primaryDark2Color;
+  margin-left: ($unit / 4);
+  box-shadow: 0 0 0 2px $primaryDark2Color;
 }
 
 .gds-conversation__avatar--blocked {
-    box-shadow: 0 0 0 2px $dangerDark2Color;
+  box-shadow: 0 0 0 2px $dangerDark2Color;
 
-    &:before {
-        content: '';
-        position: absolute;
-        left: calc(50% - 2px);
-        top: -3px;
-        height: calc(#{2*$unit} + 2px);
-        width: 2px;
-        background-color: $dangerDark2Color;
-        transform-origin: 50% 50%;
-        transform: rotate(45deg);
-        z-index: $z-index-1;
-    }
+  &:before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 2px);
+    top: -3px;
+    height: calc(#{2 * $unit} + 2px);
+    width: 2px;
+    background-color: $dangerDark2Color;
+    transform-origin: 50% 50%;
+    transform: rotate(45deg);
+    z-index: $z-index-1;
+  }
 
-    > img {
-        filter: grayscale(100%);
-        opacity: 0.5;
-    }
+  > img {
+    filter: grayscale(100%);
+    opacity: 0.5;
+  }
 }
 
 .gds-conversation__char-count {
-    border-radius: $border-radius;
-    text-align: center;
-    flex-basis: auto;
-    margin-bottom: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-right: none;
-    padding: ($unit / 1.3);
-    box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-3;
-    height: $input-height-md;
-    color: white;
-    background-color: $gg-light-2;
-    font-size: $font-size-minus-2;
+  border-radius: $border-radius;
+  text-align: center;
+  flex-basis: auto;
+  margin-bottom: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+  padding: ($unit / 1.3);
+  box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-3;
+  height: $input-height-md;
+  color: white;
+  background-color: $gg-light-2;
+  font-size: $font-size-minus-2;
 }
 
 .gds-conversation__char-count--success {
-    background-color: $successColor;
-    box-shadow: inset 0 #{-$cap-size} 0 0 $successDark2Color;
+  background-color: $successColor;
+  box-shadow: inset 0 #{-$cap-size} 0 0 $successDark2Color;
 }
 
 .gds-conversation__char-count--warning {
-    background-color: $warningColor;
-    box-shadow: inset 0 #{-$cap-size} 0 0 $warningDark2Color;
+  background-color: $warningColor;
+  box-shadow: inset 0 #{-$cap-size} 0 0 $warningDark2Color;
 }
 .gds-conversation__char-count--danger {
-    background-color: $dangerColor;
-    box-shadow: inset 0 #{-$cap-size} 0 0 $dangerDark2Color;
+  background-color: $dangerColor;
+  box-shadow: inset 0 #{-$cap-size} 0 0 $dangerDark2Color;
 }
