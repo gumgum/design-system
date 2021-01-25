@@ -5,68 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Testing Environment</title>
     <!-- Automated stylesheet to test -->
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./index.css" />
     <!-- the build stylesheet to test -->
     <!-- <link rel="stylesheet" href="./compressed-css/index.css" /> -->
   </head>
   <body>
-    <div class="gds-card gds-card--no-height -p-a-2">
-      <h5 class="gds-text--body-md -block -m-b-1">Medium Buttons</h5>
+    <div class="gds-card gds-card--dark gds-card--no-height -p-a-2">
+      <h5 class="gds-text--body-md -block -m-b-1">Dark Buttons</h5>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--default"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark"
         data-feedback="Default clicked"
       >
         Default
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--primary"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-primary"
         data-feedback="Primary clicked"
       >
         Primary
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--secondary"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-secondary"
         data-feedback="Primary clicked"
       >
         Secondary
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--tertiary"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-tertiary"
         data-feedback="Primary clicked"
       >
         Tertiary
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--success"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-success"
         data-feedback="Success clicked"
       >
         Success
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--info"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-info"
         data-feedback="Info clicked"
       >
         Info
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--warning"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-warning"
         data-feedback="Warning clicked"
       >
         Warning
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--danger"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-danger"
         data-feedback="Danger clicked"
       >
         Danger
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--md gds-button--white"
+        data-feedback="Danger clicked"
+      >
+        White
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-toggle"
+        data-feedback="Link clicked"
+      >
+        Toggle Inactive
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-toggle gds-button--active"
+        data-feedback="Link clicked"
+      >
+        Toggle Active
       </button>
       <button
         type="button"
@@ -78,56 +99,56 @@
       <h6 class="gds-text--body-md -block -m-b-1">With Vector Icons</h6>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--default"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark"
         data-feedback="Calculating"
       >
         <i class="fa fa-fw fa-calendar -m-r-1"></i>Default
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--primary"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-primary"
         data-feedback="Thinking"
       >
         <i class="fa fa-fw fa-folder-open -m-r-1"></i>Primary
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--secondary"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-secondary"
         data-feedback="Thinking"
       >
         <i class="fa fa-fw fa-folder-open -m-r-1"></i>Secondary
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--tertiary"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-tertiary"
         data-feedback="Thinking"
       >
         <i class="fa fa-fw fa-folder-open -m-r-1"></i>Tertiary
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--success"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-success"
         data-feedback="Processing"
       >
         <i class="fa fa-fw fa-check -m-r-1"></i>Success
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--info"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-info"
         data-feedback="Stand by"
       >
         <i class="fa fa-fw fa-question -m-r-1"></i>Info
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--warning"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-warning"
         data-feedback="Almost done"
       >
         <i class="fa fa-fw fa-warning -m-r-1"></i>Warning
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--danger"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-danger"
         data-feedback="Be patient"
       >
         <i class="fa fa-fw fa-warning -m-r-1"></i>Danger
@@ -142,56 +163,56 @@
       <h6 class="gds-text--body-md -block -m-b-1">Icons-Only Buttons</h6>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--default"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark"
         data-feedback="Calculating"
       >
         <i class="fa fa-fw fa-calendar"></i>
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--primary"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-primary"
         data-feedback="Thinking"
       >
         <i class="fa fa-fw fa-folder-open"></i>
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--secondary"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-secondary"
         data-feedback="Thinking"
       >
         <i class="fa fa-fw fa-folder-open"></i>
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--tertiary"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-tertiary"
         data-feedback="Thinking"
       >
         <i class="fa fa-fw fa-folder-open"></i>
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--success"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-success"
         data-feedback="Processing"
       >
         <i class="fa fa-fw fa-check"></i>
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--info"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-info"
         data-feedback="Stand by"
       >
         <i class="fa fa-fw fa-question"></i>
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--warning"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-warning"
         data-feedback="Almost done"
       >
         <i class="fa fa-fw fa-warning"></i>
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--danger"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-danger"
         data-feedback="Be patient"
       >
         <i class="fa fa-fw fa-warning"></i>
@@ -206,7 +227,7 @@
       <h6 class="gds-text--body-md -block -m-b-1">With Disabled State</h6>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--default"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark"
         disabled="disabled"
         data-feedback="Calculating"
       >
@@ -214,7 +235,7 @@
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--primary"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-primary"
         disabled="disabled"
         data-feedback="Calculating"
       >
@@ -222,7 +243,7 @@
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--secondary"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-secondary"
         disabled="disabled"
         data-feedback="Calculating"
       >
@@ -230,7 +251,7 @@
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--tertiary"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-tertiary"
         disabled="disabled"
         data-feedback="Calculating"
       >
@@ -238,7 +259,7 @@
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--success"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-success"
         disabled="disabled"
         data-feedback="Calculating"
       >
@@ -246,7 +267,7 @@
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--info"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-info"
         disabled="disabled"
         data-feedback="Calculating"
       >
@@ -254,7 +275,7 @@
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--warning"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-warning"
         disabled="disabled"
         data-feedback="Calculating"
       >
@@ -262,7 +283,7 @@
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--danger"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-danger"
         disabled="disabled"
         data-feedback="Calculating"
       >
@@ -279,42 +300,406 @@
       <h6 class="gds-text--body-md -block -m-b-1">Block Level</h6>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--primary gds-button--block -m-r-1 -m-b-1"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-primary gds-button--block -m-r-1 -m-b-1"
         data-feedback="Calculating"
       >
         Block Level At All Widths
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--primary gds-button--block-xl -m-r-1 -m-b-1"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-primary gds-button--block-xl -m-r-1 -m-b-1"
         data-feedback="Calculating"
       >
         Block Level At X-Large Width
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--primary gds-button--block-lg -m-r-1 -m-b-1"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-primary gds-button--block-lg -m-r-1 -m-b-1"
         data-feedback="Calculating"
       >
         Block Level At Large Width
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--primary gds-button--block-md -m-r-1 -m-b-1"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-primary gds-button--block-md -m-r-1 -m-b-1"
         data-feedback="Calculating"
       >
         Block Level At Medium Width
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--primary gds-button--block-sm -m-r-1 -m-b-1"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-primary gds-button--block-sm -m-r-1 -m-b-1"
         data-feedback="Calculating"
       >
         Block Level At Small Width
       </button>
       <button
         type="button"
-        class="gds-button -m-r-1 gds-button--md gds-button--primary gds-button--block-xs -m-r-1 -m-b-1"
+        class="gds-button -m-r-1 gds-button--md gds-button--dark-primary gds-button--block-xs -m-r-1 -m-b-1"
+        data-feedback="Calculating"
+      >
+        Block Level At X-Small Width
+      </button>
+    </div>
+
+    <div class="gds-card gds-card--no-height -p-a-2">
+      <h5 class="gds-text--body-md -block -m-b-1">Large Buttons</h5>
+      <button
+        type="button"
+        id="testButton"
+        class="gds-button -m-r-1 gds-button--lg gds-button--default"
+        data-feedback="Default clicked"
+      >
+        Default
+      </button>
+      <button
+        type="button"
+        id="testButton"
+        class="gds-button -m-r-1 gds-button--lg gds-button--gray"
+        data-feedback="Default clicked"
+      >
+        Gray
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--primary"
+        data-feedback="Primary clicked"
+      >
+        Primary
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--secondary"
+        data-feedback="Primary clicked"
+      >
+        Secondary
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--tertiary"
+        data-feedback="Primary clicked"
+      >
+        Tertiary
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--success"
+        data-feedback="Success clicked"
+      >
+        Success
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--info"
+        data-feedback="Info clicked"
+      >
+        Info
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--warning"
+        data-feedback="Warning clicked"
+      >
+        Warning
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--danger"
+        data-feedback="Danger clicked"
+      >
+        Danger
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--outline"
+        data-feedback="Danger clicked"
+      >
+        Outlined
+      </button>
+      <div class="-color-bg-pri -p-a-3 -inline-block">
+        <button
+          type="button"
+          class="gds-button -m-r-1 gds-button--lg gds-button--white"
+          data-feedback="Danger clicked"
+        >
+          White
+        </button>
+      </div>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--toggle"
+        data-feedback="Link clicked"
+      >
+        Toggle Inactive
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--toggle gds-button--active"
+        data-feedback="Link clicked"
+      >
+        Toggle Active
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--link"
+        data-feedback="Link clicked"
+      >
+        Link
+      </button>
+      <h6 class="gds-text--body-md -block -m-b-1">With Vector Icons</h6>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--default"
+        data-feedback="Calculating"
+      >
+        <i class="fa fa-fw fa-calendar -m-r-1"></i>Default
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--primary"
+        data-feedback="Thinking"
+      >
+        <i class="fa fa-fw fa-folder-open -m-r-1"></i>Primary
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--secondary"
+        data-feedback="Thinking"
+      >
+        <i class="fa fa-fw fa-folder-open -m-r-1"></i>Secondary
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--tertiary"
+        data-feedback="Primary clicked"
+      >
+        <i class="fa fa-fw fa-folder-open -m-r-1"></i>Tertiary
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--success"
+        data-feedback="Processing"
+      >
+        <i class="fa fa-fw fa-check -m-r-1"></i>Success
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--info"
+        data-feedback="Stand by"
+      >
+        <i class="fa fa-fw fa-question -m-r-1"></i>Info
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--warning"
+        data-feedback="Almost done"
+      >
+        <i class="fa fa-fw fa-warning -m-r-1"></i>Warning
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--danger"
+        data-feedback="Be patient"
+      >
+        <i class="fa fa-fw fa-warning -m-r-1"></i>Danger
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--outline"
+        data-feedback="Be patient"
+      >
+        <i class="fa fa-fw fa-warning -m-r-1"></i>Danger
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--link"
+        data-feedback="Modulating"
+      >
+        <i class="fa fa-fw fa-link -m-r-1"></i>Link
+      </button>
+      <h6 class="gds-text--body-md -block -m-b-1">Icons-Only Buttons</h6>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--default"
+        data-feedback="Calculating"
+      >
+        <i class="fa fa-fw fa-calendar"></i>
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--primary"
+        data-feedback="Thinking"
+      >
+        <i class="fa fa-fw fa-folder-open"></i>
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--secondary"
+        data-feedback="Thinking"
+      >
+        <i class="fa fa-fw fa-folder-open"></i>
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--tertiary"
+        data-feedback="Thinking"
+      >
+        <i class="fa fa-fw fa-folder-open"></i>
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--success"
+        data-feedback="Processing"
+      >
+        <i class="fa fa-fw fa-check"></i>
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--info"
+        data-feedback="Stand by"
+      >
+        <i class="fa fa-fw fa-question"></i>
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--warning"
+        data-feedback="Almost done"
+      >
+        <i class="fa fa-fw fa-warning"></i>
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--danger"
+        data-feedback="Be patient"
+      >
+        <i class="fa fa-fw fa-warning"></i>
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--outline"
+        data-feedback="Be patient"
+      >
+        <i class="fa fa-fw fa-warning"></i>
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--link"
+        data-feedback="Modulating"
+      >
+        <i class="fa fa-fw fa-link"></i>
+      </button>
+      <h6 class="gds-text--body-md -block -m-b-1">With Disabled State</h6>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--default"
+        disabled="disabled"
+        data-feedback="Calculating"
+      >
+        Default
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--primary"
+        disabled="disabled"
+        data-feedback="Calculating"
+      >
+        Primary
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--secondary"
+        disabled="disabled"
+        data-feedback="Calculating"
+      >
+        Secondary
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--tertiary"
+        disabled="disabled"
+        data-feedback="Calculating"
+      >
+        Tertiary
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--success"
+        disabled="disabled"
+        data-feedback="Calculating"
+      >
+        Success
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--info"
+        disabled="disabled"
+        data-feedback="Calculating"
+      >
+        Info
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--warning"
+        disabled="disabled"
+        data-feedback="Calculating"
+      >
+        Warning
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--danger"
+        disabled="disabled"
+        data-feedback="Calculating"
+      >
+        Danger
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--link"
+        disabled="disabled"
+        data-feedback="Calculating"
+      >
+        Link
+      </button>
+      <h6 class="gds-text--body-md -block -m-b-1">Block Level</h6>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--primary gds-button--block -m-r-1 -m-b-1"
+        data-feedback="Calculating"
+      >
+        Block Level At All Widths
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--primary gds-button--block-xl -m-r-1 -m-b-1"
+        data-feedback="Calculating"
+      >
+        Block Level At X-Large Width
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--primary gds-button--block-lg -m-r-1 -m-b-1"
+        data-feedback="Calculating"
+      >
+        Block Level At Large Width
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--primary gds-button--block-md -m-r-1 -m-b-1"
+        data-feedback="Calculating"
+      >
+        Block Level At Medium Width
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--primary gds-button--block-sm -m-r-1 -m-b-1"
+        data-feedback="Calculating"
+      >
+        Block Level At Small Width
+      </button>
+      <button
+        type="button"
+        class="gds-button -m-r-1 gds-button--lg gds-button--primary gds-button--block-xs -m-r-1 -m-b-1"
         data-feedback="Calculating"
       >
         Block Level At X-Small Width

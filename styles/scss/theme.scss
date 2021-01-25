@@ -1,20 +1,19 @@
-// admanager theme:
-
 //[-------PALETTE-------]//
 /* This is Design System's complete color palette - all built-in themes are constructed from these colors */
 //[---------------------]//
-$blueColor: #00a7cf !default;
-$goldColor: #ffb819 !default;
-$greenColor: #00c4b4 !default;
-$orangeColor: #ff6c0c !default;
-$purpleColor: #555387 !default;
-$redColor: #ff5a34 !default;
+$blueColor: #1e96d9 !default;
+$goldColor: #f3d221 !default;
+$greenColor: #32d996 !default;
+$orangeColor: #fd871a !default;
+$purpleColor: #7671d6 !default;
+$redColor: #fb4323 !default;
 $grayColor: #888888 !default;
-$darkBlueColor: #0085a5 !default;
-$darkGoldColor: #e5a516 !default;
-$darkGreenColor: #3fae2a !default;
-$darkRedColor: #e5512e !default;
-$magentaColor: #ca2e55 !default;
+$darkBlueColor: #0a4882 !default;
+$darkGoldColor: #f1c014 !default;
+$darkGreenColor: #1ebf7e !default;
+$darkRedColor: #d82a0c !default;
+$magentaColor: #e02b58 !default;
+
 $grayDark1Color: #0e0e0e !default;
 $grayDark2Color: #292929 !default;
 $grayDark3Color: #444 !default;
@@ -25,6 +24,7 @@ $grayLight2Color: #dbdbdb !default;
 $grayLight3Color: #c4c4c4 !default;
 $grayLight4Color: #acacac !default;
 $grayLight5Color: #949494 !default;
+
 $blueDark1Color: mix(black, $blueColor, 5%) !default;
 $blueDark2Color: mix(black, $blueColor, 10%) !default;
 $blueDark3Color: mix(black, $blueColor, 15%) !default;
@@ -139,8 +139,8 @@ $magentaLight5Color: mix(white, $magentaColor, 50%) !default;
 //[-------PRIME SLOTS-------]//
 /* These are the main color assignments for this theme. All component color assignments within this theme are based on this subset of the overall palette. Editing these will have far-reaching effects. */
 //[---------------------]//
-$primaryColor: $blueDark4Color !default;
-$secondaryColor: $goldColor !default;
+$primaryColor: $blueDark2Color !default;
+$secondaryColor: $darkBlueColor !default;
 $tertiaryColor: $greenColor !default;
 $quaternaryColor: $magentaColor !default;
 $successColor: $greenColor !default;

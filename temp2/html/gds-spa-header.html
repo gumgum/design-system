@@ -1,0 +1,48 @@
+<div class="gds-layout__column--md-12">
+    <h3 class="gds-text--header-md -m-b-2">SPA Header</h3>
+    <hr class="-m-b-3" />
+</div>
+
+<!-- ******************** -->
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+<section class="-overflow-hidden" data-component-example>
+<h5 class="gds-text--body-md -block -m-b-3">Standard SPA Header <a class="gds-text--link -float-right" target="_blank" data-iframe-link data-src-html-file="gds-spa-header--standard.html">View source</a></h5>
+<iframe class="desktop" data-iframe data-src-html-file="gds-spa-header--standard.html"></iframe>
+</section>
+</div>
+
+<!-- ******************** -->
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+<section class="-overflow-hidden" data-component-example>
+<h5 class="gds-text--body-md -block -m-b-3">Legacy SPA Header <a class="gds-text--link -float-right" target="_blank" data-iframe-link data-src-html-file="gds-spa-header--legacy.html">View source</a></h5>
+<iframe class="desktop" data-iframe data-src-html-file="gds-spa-header--legacy.html"></iframe>
+</section>
+</div>
+
+<style>
+    /* Style iframes for displaying full screen content */
+    iframe.desktop {
+        width: 100%;
+        height: 220px;
+        border: 1px solid #dbdbdb;
+    }
+</style>
+
+<script>
+    // Update links & iframe src URLs to match current environment
+    const isLocal = (window.location.hostname === 'localhost') ? true : false;
+    const iframeLinks = document.querySelectorAll('[data-iframe-link]');
+    const iframes = document.querySelectorAll('[data-iframe]');
+
+    iframeLinks.forEach((link) => {
+        const htmlFilename = link.getAttribute('data-src-html-file');
+        (isLocal) ? link.href = `http://localhost:9000/html/${htmlFilename}` : link.href = `https://assets.ggops.com/stable/html/${htmlFilename}`;
+    });
+
+    iframes.forEach((iframe) => {
+        const htmlFilename = iframe.getAttribute('data-src-html-file');
+        (isLocal) ? iframe.src = `http://localhost:9000/html/${htmlFilename}` : iframe.src = `https://assets.ggops.com/stable/html/${htmlFilename}`;
+    });
+</script>

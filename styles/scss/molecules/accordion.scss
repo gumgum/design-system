@@ -1,0 +1,392 @@
+.gds-accordion {
+  background-color: $gg-light-1;
+  color: $primaryDark2Color;
+  border-color: $gg-light-2;
+  border-radius: $border-radius;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.gds-accordion--white {
+  background-color: white;
+}
+
+.gds-accordion--white-secondary {
+  background-color: white;
+  color: $secondaryColor;
+}
+
+.gds-accordion--white-tertiary {
+  background-color: white;
+  color: $tertiaryColor;
+}
+
+.gds-accordion--dark {
+  background-color: $gg-dark-3;
+  border: 1px solid $gg-gray;
+  color: $primaryLight3Color;
+}
+
+.gds-accordion--dark-secondary {
+  background-color: $gg-dark-3;
+  border: 1px solid $gg-gray;
+  color: $secondaryColor;
+}
+
+.gds-accordion--dark-tertiary {
+  background-color: $gg-dark-3;
+  border: 1px solid $gg-gray;
+  color: $tertiaryColor;
+}
+
+.gds-accordion-list {
+  display: block;
+  border-bottom-width: $cap-size;
+  border-bottom: none;
+}
+
+//// ITEMS ////
+.gds-accordion__item {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  @include transition-ease-out(all, 250ms);
+
+  border-bottom: 1px solid $gg-light-2;
+  border-top: 1px solid white;
+
+  &:first-child {
+    border-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &:first-child > .gds-accordion__item-title {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+  &:last-child > .gds-accordion__item-title {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+}
+
+.gds-accordion__item--dark {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  @include transition-ease-out(all, 250ms);
+  border-bottom: 1px solid $gg-dark-2;
+  border-top: 1px solid $gg-gray;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.gds-accordion__item--primary {
+  border-bottom: 1px solid $primaryDark3Color;
+  border-top: 1px solid $primaryLight3Color;
+}
+
+.gds-accordion__item--secondary {
+  border-bottom: 1px solid $secondaryDark3Color;
+  border-top: 1px solid $secondaryLight3Color;
+}
+
+.gds-accordion__item--tertiary {
+  border-bottom: 1px solid $tertiaryDark3Color;
+  border-top: 1px solid $tertiaryLight3Color;
+}
+
+.gds-accordion__item--quaternary {
+  border-bottom: 1px solid $quaternaryDark3Color;
+  border-top: 1px solid $quaternaryLight3Color;
+}
+
+.gds-accordion__item--inverse,
+.gds-accordion__child-item--inverse {
+  border-color: rgba($gg-dark-2, 0.2);
+
+  &:hover {
+    color: $gg-dark-4;
+    background-color: rgba(white, 0.25);
+    box-shadow: inset 0px #{-$cap-size / 2} 0 rgba($gg-light-4, 0.75);
+    border-color: rgba($gg-light-4, 0.75);
+  }
+
+  &:active {
+    box-shadow: inset 0 #{-$cap-size} 0 rgba($gg-dark-4, 0.75);
+  }
+}
+//// END ITEM TITLES ////
+
+//// ITEM TITLES ////
+.gds-accordion__item-title {
+  padding: $unit ($unit * 1.5);
+  cursor: pointer;
+  background-color: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include no-select();
+  @include transition-ease-out(all, 250ms);
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.gds-accordion__item-title--dark,
+.gds-accordion__item-title--primary,
+.gds-accordion__item-title--secondary,
+.gds-accordion__item-title--tertiary,
+.gds-accordion__item-title--quaternary {
+  color: white;
+  text-shadow: 0px 1px 2px rgba(black, 0.8);
+}
+
+.gds-accordion__item-title--dark {
+  &:hover {
+    background-color: mix($gg-gray, $gg-dark-4, 50%);
+  }
+}
+
+.gds-accordion__item-title--primary {
+  background-color: $primaryColor;
+  &:hover {
+    background-color: $primaryLight2Color;
+  }
+}
+
+.gds-accordion__item-title--secondary {
+  background-color: $secondaryColor;
+  &:hover {
+    background-color: $secondaryLight2Color;
+  }
+}
+
+.gds-accordion__item-title--tertiary {
+  background-color: $tertiaryColor;
+  &:hover {
+    background-color: $tertiaryLight2Color;
+  }
+}
+
+.gds-accordion__item-title--quaternary {
+  background-color: $quaternaryColor;
+  &:hover {
+    background-color: $quaternaryLight2Color;
+  }
+}
+
+.gds-accordion__item-title--inverse {
+  color: white;
+  text-shadow: 0 1px 2px $gg-dark-2;
+}
+
+.gds-accordion__item-title--sm,
+.gds-accordion__child-item-title--sm {
+  padding: ($unit / 2) ($unit);
+  font-size: $font-size-minus-2;
+}
+/// END ITEM TITLES ////
+
+/// ARROW ICONS ////
+.gds-accordion__item-icon {
+  width: 0;
+  height: 0;
+  border-top: ($unit / 2) solid transparent;
+  border-bottom: ($unit / 2) solid transparent;
+  border-left: ($unit / 2) solid;
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  margin: ($unit * 1.35);
+  @include transition-back(all, 250ms);
+
+  &.gds-accordion__child-item-icon {
+    border-left: ($unit / 2) solid $gg-dark-4;
+  }
+}
+
+.gds-accordion__item-icon--white {
+  border-left: ($unit / 2) solid white;
+}
+
+.gds-accordion__child-item--dark {
+  .gds-accordion__item-icon,
+  .gds-accordion__item-icon.gds-accordion__child-item-icon,
+  .gds-accordion__child-item-icon {
+    border-left: ($unit / 2) solid white;
+  }
+}
+
+.gds-accordion__item-icon--sm {
+  border-top: ($unit / 3) solid transparent;
+  border-bottom: ($unit / 3) solid transparent;
+  border-left: ($unit / 3) solid inherit;
+  margin: ($unit * 0.95);
+}
+//// END ARROW ICONS ////
+
+//// CHILD ITEMS UL ELEMENT ////
+.gds-accordion__child-items,
+.gds-multi-select__sub-menu {
+  max-height: 0px;
+  width: 100%;
+  vertical-align: bottom;
+  background-color: rgba($gg-light-4, 0.2);
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  will-change: max-height;
+  @include transition-ease-out(all, 250ms);
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 99;
+    will-change: background-color;
+    background-color: rgba($gg-gray, 0.5);
+    box-shadow: inset 0px 11px 8px -10px rgba(black, 0.2),
+      inset 0px -11px 8px -10px rgba(black, 0.15);
+    @include transition-ease-in(all, 150ms);
+  }
+}
+
+.gds-accordion__child-items--dark {
+  background-color: rgba($gg-dark-1, 0.5);
+  color: white;
+  &:after {
+    box-shadow: inset 0px 11px 8px -10px rgba(black, 0.75),
+      inset 0px -11px 8px -10px rgba(black, 0.75);
+  }
+}
+
+.gds-accordion__child-items--inverse {
+  background-color: $gg-light-4;
+}
+//// END CHILD ITEMS UL ELEMENT ////
+
+/// CHILD ITEM ////
+.gds-accordion__child-item {
+  @include transition-ease-out(all, 250ms);
+  color: $gg-dark-4;
+  border-bottom: 1px solid $gg-light-3;
+  border-top: 1px solid rgba(white, 0.6);
+
+  &:first-child {
+    border-top: none;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.gds-accordion__child-item--dark {
+  color: white;
+  border-bottom: 1px solid $gg-dark-1;
+  border-top: 1px solid $gg-dark-4;
+}
+
+.gds-accordion__child-item-expand-wrapper {
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+  background-color: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include no-select();
+  @include transition-ease-out(all, 250ms);
+}
+
+.gds-accordion__child-item-title {
+  padding: $unit ($unit * 1.5);
+  width: 100%;
+  cursor: pointer;
+  background-color: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include no-select();
+  @include transition-ease-out(all, 250ms);
+  color: inherit;
+}
+
+.gds-accordion__child-item-title--primary,
+.gds-accordion__child-item-title--secondary,
+.gds-accordion__child-item-title--tertiary,
+.gds-accordion__child-item-title--quaternary {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/// END CHILD ITEM ////
+
+/// ACTIVE STATE CHANGES ////
+.gds-accordion__item--active > .gds-accordion__item-title--dark {
+  background-color: $gg-dark-4;
+}
+
+.gds-accordion__item--active {
+  padding-bottom: 0 !important;
+}
+
+.gds-accordion__item--active > .gds-accordion__item-title {
+  background-color: white;
+  border-bottom: 1px solid $gg-light-4;
+}
+
+.gds-accordion__item--active > .gds-accordion__item-title--dark {
+  background-color: $gg-dark-4;
+  border-bottom: 1px solid $gg-dark-3;
+}
+
+.gds-accordion__item--active > .gds-accordion__item-icon,
+.gds-accordion__item--active
+  > .gds-accordion__child-item-expand-wrapper
+  > .gds-accordion__item-icon {
+  transform: rotate(90deg);
+}
+
+.gds-accordion__item--active > .gds-accordion__child-items {
+  max-height: 2000px;
+  overflow: auto;
+  @include transition-ease-in(all, 250ms);
+  &:after {
+    background-color: rgba($gg-gray, 0.01);
+    @include transition-ease-out(all, 150ms);
+  }
+}
+
+.gds-accordion__item--active
+  > .gds-accordion__child-items
+  > .gds-accordion__child-item {
+  overflow: visible;
+}
+
+.gds-accordion__item--active > .gds-accordion__item-title--primary {
+  background-color: $primaryLight3Color;
+  border-bottom: 1px solid $primaryDark3Color;
+}
+
+.gds-accordion__item--active > .gds-accordion__item-title--secondary {
+  background-color: $secondaryLight3Color;
+  border-bottom: 1px solid $secondaryDark3Color;
+}
+
+.gds-accordion__item--active > .gds-accordion__item-title--tertiary {
+  background-color: $tertiaryLight3Color;
+  border-bottom: 1px solid $tertiaryDark3Color;
+}
+
+.gds-accordion__item--active > .gds-accordion__item-title--quaternary {
+  background-color: $quaternaryLight3Color;
+  border-bottom: 1px solid $quaternaryDark3Color;
+}
+//// END ACTIVE STATE CHANGES

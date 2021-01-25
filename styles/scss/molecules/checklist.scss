@@ -1,0 +1,49 @@
+.gds-checklist {
+  list-style: none;
+}
+
+.gds-checklist__item {
+  display: block;
+}
+
+.gds-checklist__item--inverse {
+  color: $grayDark5Color;
+
+  &.gds-checklist__item--active {
+    color: #ffffff;
+  }
+}
+
+.gds-checklist__item--sm {
+  font-size: $font-size-minus-2;
+}
+
+.gds-checklist__item--lg {
+  font-size: $font-size-plus-2;
+}
+
+.gds-checklist__item-text {
+  display: inline-block;
+}
+
+.gds-checklist__item--active:before {
+  font-family: "Font Awesome 5 Free";
+  color: $checklistItemActiveColor;
+  content: "\f00c";
+}
+
+.gds-checklist__item--completed {
+  color: $grayLight3Color;
+
+  .gds-checklist__item-text:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - #{$cap-size / 2});
+    left: -3px;
+    right: -3px;
+    height: $cap-size;
+    border-radius: $border-radius;
+    background-color: $checklistItemCompletedColor;
+  }
+}

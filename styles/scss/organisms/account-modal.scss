@@ -1,0 +1,116 @@
+.gds-account-modal {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: $z-index-9;
+
+  @media #{$phone-width},
+    #{$phablet-width} {
+    align-items: flex-start;
+    bottom: auto;
+    margin-top: ($unit * 2);
+  }
+}
+
+// Show logo before
+.gds-account-modal--logo:before {
+  content: "";
+  display: block;
+  width: 284px;
+  height: 74px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto ($unit * 1.5);
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDQxLjQgMTE0LjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ0MS40IDExNC42OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGQ0UwMDt9LnN0MXtmaWxsOiM5MDlDOUM7fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTI1LjQsMTE0LjZjLTguNSwwLTE2LjItMi0yMi45LTYuMWw0LjQtOC44YzIuNywxLjcsNS42LDMsOC41LDRjMywxLDYuMiwxLjUsOS43LDEuNWM1LjIsMCw5LjMtMS4zLDEyLTRjMi44LTIuNyw0LjItNi42LDQuMi0xMS44di00Yy0yLjEsMi44LTQuNiw1LTcuNSw2LjhjLTIuOCwxLjctNi40LDIuNi0xMC42LDIuNmMtMywwLTYtMC41LTguNy0xLjdjLTIuOC0xLjEtNS4zLTIuNy03LjQtNC43Yy0yLjItMi0zLjktNC41LTUuMi03LjVTMCw3NC41LDAsNzAuOHYtMC4yYzAtMy44LDAuNi03LjEsMS45LTEwLjFzMy01LjUsNS4yLTcuNmMyLjItMiw0LjctMy42LDcuNS00LjdzNS43LTEuNyw4LjctMS43YzQuMywwLDcuOSwwLjksMTAuNywyLjZjMi44LDEuNyw1LjIsMy44LDcuMiw2LjJ2LTcuN0g1M3Y0MC44YzAsOC41LTIuMiwxNS02LjUsMTkuM2MtMi4zLDIuMy01LjMsNC4xLTguOCw1LjJDMzQuMiwxMTQsMzAuMSwxMTQuNiwyNS40LDExNC42eiBNMjYuNCw4NC44YzIsMCwzLjktMC4zLDUuOC0xYzEuOC0wLjcsMy40LTEuNyw0LjgtMi45YzEuNC0xLjMsMi40LTIuOCwzLjMtNC41YzAuOC0xLjcsMS4yLTMuNiwxLjItNS43di0wLjJjMC0yLjEtMC40LTQuMS0xLjItNS44Yy0wLjgtMS43LTEuOS0zLjItMy4zLTQuNWMtMS40LTEuMy0zLTIuMi00LjgtMi45cy0zLjgtMS01LjgtMWMtMi4xLDAtNCwwLjMtNS43LDFzLTMuMywxLjYtNC42LDIuOWMtMS4zLDEuMi0yLjQsMi43LTMuMSw0LjRjLTAuNywxLjctMS4xLDMuNi0xLjEsNS44djAuMmMwLDIuMSwwLjQsNC4xLDEuMiw1LjhjMC44LDEuNywxLjgsMy4yLDMuMSw0LjVzMi44LDIuMiw0LjYsMi45QzIyLjUsODQuNSwyNC40LDg0LjgsMjYuNCw4NC44eiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik03OS41LDk5LjljLTUuOCwwLTEwLjMtMS44LTEzLjUtNS4zYy0zLjItMy42LTQuNy04LjMtNC43LTE0LjRWNDcuNmgxMS44djI5LjFjMCw0LDAuOSw3LjEsMi44LDkuM2MxLjksMi4yLDQuNiwzLjIsOCwzLjJzNi4yLTEuMSw4LjMtMy4zYzIuMS0yLjIsMy4yLTUuMywzLjItOS4zdi0yOWgxMS44djUxLjNIOTUuNHYtOGMtMS43LDIuNS0zLjgsNC42LTYuMyw2LjRDODYuNiw5OSw4My40LDk5LjksNzkuNSw5OS45eiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMTYuMiw0Ny42SDEyOHY3LjhjMC44LTEuMiwxLjctMi4zLDIuNy0zLjNzMi4xLTIsMy4zLTIuOGMxLjMtMC45LDIuNy0xLjUsNC4zLTJzMy4zLTAuNyw1LjMtMC43YzMuNywwLDYuOCwwLjgsOS4zLDIuNXM0LjUsMy45LDUuOSw2LjZjMi4xLTIuNyw0LjUtNC45LDcuMy02LjZjMi44LTEuNyw2LjItMi41LDEwLjEtMi41YzUuNiwwLDEwLjEsMS43LDEzLjIsNS4xYzMuMiwzLjQsNC44LDguMiw0LjgsMTQuNXYzMi43aC0xMS44VjY5LjhjMC00LjEtMC45LTcuMi0yLjctOS4zcy00LjMtMy4yLTcuNi0zLjJjLTMuMiwwLTUuOCwxLjEtNy45LDMuMmMtMiwyLjItMyw1LjMtMyw5LjR2MjguOWgtMTEuOFY2OS43YzAtNC0wLjktNy4xLTIuNy05LjJjLTEuOC0yLjEtNC4zLTMuMi03LjYtMy4ycy01LjksMS4xLTcuOSwzLjRjLTIsMi4zLTMsNS40LTMsOS40djI4LjhoLTExLjhWNDcuNkgxMTYuMnoiLz48cGF0aCBjbGFzcz0ic3QxIiBkPSJNMjc5LjUsOTkuOWMtNS44LDAtMTAuMy0xLjgtMTMuNS01LjNjLTMuMi0zLjYtNC43LTguMy00LjctMTQuNFY0Ny42aDExLjh2MjkuMWMwLDQsMC45LDcuMSwyLjgsOS4zYzEuOSwyLjIsNC42LDMuMiw4LDMuMnM2LjItMS4xLDguMy0zLjNjMi4xLTIuMiwzLjItNS4zLDMuMi05LjN2LTI5aDExLjh2NTEuM2gtMTEuOHYtOGMtMS43LDIuNS0zLjgsNC42LTYuMyw2LjRDMjg2LjYsOTksMjgzLjQsOTkuOSwyNzkuNSw5OS45eiIvPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0zODMuNiw1Ny43di0xMGMtMi4yLTAuOC00LjYtMS4yLTcuMy0xLjJjLTMuOSwwLTcuMywwLjgtMTAuMSwyLjVjLTIuOCwxLjctNS4zLDMuOS03LjMsNi42Yy0xLjQtMi43LTMuMy00LjktNS45LTYuNmMtMi41LTEuNy01LjctMi41LTkuMy0yLjVjLTEuOSwwLTMuNywwLjItNS4zLDAuN2MtMS42LDAuNS0zLDEuMi00LjMsMnMtMi40LDEuOC0zLjMsMi44Yy0xLDEtMS45LDIuMi0yLjcsMy4zdi03LjhoLTExLjh2NTEuM2gxMS44VjcwLjFjMC00LDEtNy4xLDMtOS40YzItMi4zLDQuNi0zLjQsNy45LTMuNHM1LjgsMS4xLDcuNiwzLjJjMS44LDIuMSwyLjcsNS4yLDIuNyw5LjJ2MjkuMmgxMS44VjcwYzAtNC4xLDEtNy4zLDMtOS40czQuNy0zLjIsNy45LTMuMmMzLjMsMCw1LjgsMS4xLDcuNiwzLjJjMS44LDIuMSwyLjcsNS4yLDIuNyw5LjNWOTloMTEuOFY2Ni4xYzAtMy4yLTAuNC02LTEuMi04LjRDMzkyLjksNTcuNywzODMuNiw1Ny43LDM4My42LDU3Ljd6Ii8+PHBhdGggY2xhc3M9InN0MSIgZD0iTTQzMS42LDkuOFYyN2gtMTcuMlY5LjhINDMxLjYgTTQ0MS40LDBoLTM2Ljh2MzYuOGgzNi44VjBMNDQxLjQsMHoiLz48cmVjdCB4PSIzODcuNSIgeT0iMzYuNyIgY2xhc3M9InN0MCIgd2lkdGg9IjE3LjIiIGhlaWdodD0iMTcuMiIvPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0yMjUuNSwxMTQuNmMtOC41LDAtMTYuMi0yLTIyLjktNi4xbDQuNC04LjhjMi43LDEuNyw1LjYsMyw4LjUsNGMzLDEsNi4yLDEuNSw5LjcsMS41YzUuMiwwLDkuMy0xLjMsMTItNGMyLjgtMi43LDQuMi02LjYsNC4yLTExLjh2LTRjLTIuMSwyLjgtNC42LDUtNy41LDYuOGMtMi44LDEuNy02LjQsMi42LTEwLjYsMi42Yy0zLDAtNi0wLjUtOC43LTEuN2MtMi44LTEuMS01LjMtMi43LTcuNC00LjdjLTIuMi0yLTMuOS00LjUtNS4yLTcuNXMtMS45LTYuMy0xLjktMTAuMXYtMC4yYzAtMy44LDAuNi03LjEsMS45LTEwLjFjMS4zLTMsMy01LjUsNS4yLTcuNmMyLjItMiw0LjctMy42LDcuNS00LjdjMi44LTEuMSw1LjctMS43LDguNy0xLjdjNC4zLDAsNy45LDAuOSwxMC43LDIuNmMyLjgsMS43LDUuMiwzLjgsNy4yLDYuMnYtNy43SDI1M3Y0MC44YzAsOC41LTIuMiwxNS02LjUsMTkuM2MtMi4zLDIuMy01LjMsNC4xLTguOCw1LjJDMjM0LjIsMTE0LDIzMC4xLDExNC42LDIyNS41LDExNC42eiBNMjI1LjUsMTE0LjZjLTguNSwwLTE2LjItMi0yMi45LTYuMWw0LjQtOC44YzIuNywxLjcsNS42LDMsOC41LDRjMywxLDYuMiwxLjUsOS43LDEuNWM1LjIsMCw5LjMtMS4zLDEyLTRjMi44LTIuNyw0LjItNi42LDQuMi0xMS44di00Yy0yLjEsMi44LTQuNiw1LTcuNSw2LjhjLTIuOCwxLjctNi40LDIuNi0xMC42LDIuNmMtMywwLTYtMC41LTguNy0xLjdjLTIuOC0xLjEtNS4zLTIuNy03LjQtNC43Yy0yLjItMi0zLjktNC41LTUuMi03LjVzLTEuOS02LjMtMS45LTEwLjF2LTAuMmMwLTMuOCwwLjYtNy4xLDEuOS0xMC4xYzEuMy0zLDMtNS41LDUuMi03LjZjMi4yLTIsNC43LTMuNiw3LjUtNC43YzIuOC0xLjEsNS43LTEuNyw4LjctMS43YzQuMywwLDcuOSwwLjksMTAuNywyLjZjMi44LDEuNyw1LjIsMy44LDcuMiw2LjJ2LTcuN0gyNTN2NDAuOGMwLDguNS0yLjIsMTUtNi41LDE5LjNjLTIuMywyLjMtNS4zLDQuMS04LjgsNS4yQzIzNC4yLDExNCwyMzAuMSwxMTQuNiwyMjUuNSwxMTQuNnogTTIyNi40LDg0LjhjMiwwLDMuOS0wLjMsNS44LTFjMS44LTAuNywzLjQtMS43LDQuOC0yLjljMS40LTEuMywyLjQtMi44LDMuMy00LjVjMC44LTEuNywxLjItMy42LDEuMi01Ljd2LTAuMmMwLTIuMS0wLjQtNC4xLTEuMi01LjhjLTAuOC0xLjctMS45LTMuMi0zLjMtNC41Yy0xLjQtMS4zLTMtMi4yLTQuOC0yLjlzLTMuOC0xLTUuOC0xYy0yLjEsMC00LDAuMy01LjcsMXMtMy4zLDEuNi00LjYsMi45Yy0xLjMsMS4yLTIuNCwyLjctMy4xLDQuNGMtMC43LDEuNy0xLjEsMy42LTEuMSw1Ljh2MC4yYzAsMi4xLDAuNCw0LjEsMS4yLDUuOGMwLjgsMS43LDEuOCwzLjIsMy4xLDQuNXMyLjgsMi4yLDQuNiwyLjlDMjIyLjUsODQuNSwyMjQuNCw4NC44LDIyNi40LDg0Ljh6IE0yMjYuNCw4NC44YzIsMCwzLjktMC4zLDUuOC0xYzEuOC0wLjcsMy40LTEuNyw0LjgtMi45YzEuNC0xLjMsMi40LTIuOCwzLjMtNC41YzAuOC0xLjcsMS4yLTMuNiwxLjItNS43di0wLjJjMC0yLjEtMC40LTQuMS0xLjItNS44Yy0wLjgtMS43LTEuOS0zLjItMy4zLTQuNWMtMS40LTEuMy0zLTIuMi00LjgtMi45cy0zLjgtMS01LjgtMWMtMi4xLDAtNCwwLjMtNS43LDFzLTMuMywxLjYtNC42LDIuOWMtMS4zLDEuMi0yLjQsMi43LTMuMSw0LjRjLTAuNywxLjctMS4xLDMuNi0xLjEsNS44djAuMmMwLDIuMSwwLjQsNC4xLDEuMiw1LjhjMC44LDEuNywxLjgsMy4yLDMuMSw0LjVzMi44LDIuMiw0LjYsMi45QzIyMi41LDg0LjUsMjI0LjQsODQuOCwyMjYuNCw4NC44eiIvPjwvc3ZnPg==");
+
+  @media #{$phone-width},
+    #{$phablet-width} {
+    margin-bottom: 0;
+    width: 234px;
+    height: 61px;
+  }
+}
+
+// Logo General Product
+.gds-account-modal__logo-product {
+  height: 7px;
+  width: auto;
+  top: -26px;
+  position: absolute;
+  right: 50%;
+  transform: translateX(119px);
+  font-family: $sec-font-bold;
+  font-weight: $font-weight-bolder;
+  letter-spacing: 6.3px;
+  font-size: 9px;
+  text-rendering: auto;
+  text-align: right;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: uppercase;
+  color: #909c9c;
+
+  @media #{$phone-width},
+    #{$phablet-width} {
+    top: 0;
+    transform: translateX(99px);
+    letter-spacing: 5px;
+    font-size: 8px;
+  }
+}
+
+// Specific product form cap
+.gds-account-modal__form-cap {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  background-color: $primaryColor;
+  color: white;
+  font-family: $sec-font-bold;
+  font-weight: $font-weight-bolder;
+  letter-spacing: 0.6rem;
+  text-indent: 0.6rem;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: uppercase;
+
+  @media #{$phone-width},
+    #{$phablet-width} {
+    margin-left: 1rem;
+    width: calc(100% - 2rem);
+    padding: 7px 0;
+    letter-spacing: 0.4rem;
+    text-indent: 0.4rem;
+    font-size: 0.9rem;
+  }
+}
+
+.gds-account-modal__form {
+  width: 400px;
+
+  @media #{$phone-width},
+    #{$phablet-width} {
+    width: 100%;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.gds-account-modal__extra-links {
+  display: block;
+  width: 100%;
+  text-align: center;
+}

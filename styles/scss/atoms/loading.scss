@@ -1,0 +1,127 @@
+.gds-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.gds-loading--bg {
+  width: 100%;
+  height: 100%;
+  background: $trans-white-light;
+}
+
+.gds-loading__dot,
+.gds-loading__dot:before,
+.gds-loading__dot:after,
+.gds-conversation__dots,
+.gds-conversation__dots:before,
+.gds-conversation__dots:after {
+  width: ($unit / 2);
+  height: ($unit / 2);
+  border-radius: ($unit / 4);
+  transition: all 0.25s ease-in-out;
+}
+
+.gds-loading__dot--white,
+.gds-loading__dot--white:before,
+.gds-loading__dot--white:after,
+.gds-conversation__dots,
+.gds-conversation__dots:before,
+.gds-conversation__dots:after {
+  animation: white-pulse 3s infinite !important;
+}
+
+@keyframes white-pulse {
+  0% {
+    background: rgba(white, 0.15);
+  }
+  70% {
+    background: rgba(white, 1);
+  }
+  100% {
+    background: rgba(white, 0.15);
+  }
+}
+
+.gds-loading__dot,
+.gds-conversation__dots {
+  position: relative;
+  top: -50%;
+  left: -50%;
+  -webkit-animation-delay: 0.25s !important;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+  }
+
+  &:before {
+    left: -13px;
+    -webkit-animation-delay: 0s !important;
+  }
+
+  &:after {
+    left: 13px;
+    -webkit-animation-delay: 0.5s !important;
+  }
+}
+
+.gds-loading__dot--lg,
+.gds-loading__dot--lg:before,
+.gds-loading__dot--lg:after {
+  width: $unit;
+  height: $unit;
+  border-radius: ($unit / 2);
+}
+
+.gds-loading__dot--lg:before {
+  left: -26px;
+}
+
+.gds-loading__dot--lg:after {
+  left: 26px;
+}
+
+.gds-loading__dot--sm,
+.gds-loading__dot--sm:before,
+.gds-loading__dot--sm:after,
+.gds-conversation__dots,
+.gds-conversation__dots:before,
+.gds-conversation__dots:after {
+  width: ($unit / 4);
+  height: ($unit / 4);
+  border-radius: ($unit / 8);
+}
+
+.gds-loading__dot--sm:before,
+.gds-conversation__dots:before {
+  left: -8px;
+}
+
+.gds-loading__dot--sm:after,
+.gds-conversation__dots:after {
+  left: 8px;
+}
+
+.gds-loading__dot,
+.gds-loading__dot:before,
+.gds-loading__dot:after,
+.gds-conversation__dots,
+.gds-conversation__dots:before,
+.gds-conversation__dots:after {
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background: rgba($primaryColor, 0.15);
+  }
+  70% {
+    background: rgba($primaryColor, 1);
+  }
+  100% {
+    background: rgba($primaryColor, 0.15);
+  }
+}

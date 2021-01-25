@@ -1,8 +1,8 @@
 {
   "name": "gumgum-design",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "GumGum's design system, Concrete.",
-  "main": "index.js",
+  "main": "styles/scss/index.scss",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gumgum/design-system.git"
@@ -23,14 +23,17 @@
     "url": "https://github.com/gumgum/design-system/issues"
   },
   "homepage": "https://github.com/gumgum/design-system#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "fontsource-public-sans": "^3.0.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.3",
-    "@storybook/addon-actions": "^6.0.26",
-    "@storybook/addon-controls": "^6.0.26",
-    "@storybook/addon-essentials": "^6.0.26",
-    "@storybook/addon-links": "^6.0.26",
-    "@storybook/html": "^6.0.26",
+    "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-controls": "^6.0.28",
+    "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/addon-links": "^6.0.28",
+    "@storybook/html": "^6.0.28",
     "@storybook/preset-scss": "^1.0.3",
     "@whitespace/storybook-addon-html": "^2.0.1",
     "babel-loader": "^8.1.0",
@@ -42,6 +45,7 @@
     "prettier": "2.1.2",
     "react-is": "^16.13.1",
     "resolve-url-loader": "^3.1.2",
+    "sass": "^1.29.0",
     "sass-loader": "^10.0.4",
     "style-loader": "^2.0.0"
   },
@@ -51,9 +55,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "styles:build": "node-sass --include-path scss styles/scss/main.scss  styles/compressed-css/index.css --output-style compressed",
+    "styles:build": "node-sass --include-path scss styles/scss/index.scss  styles/compressed-css/index.css --output-style compressed",
     "styles:watch": "node-sass -w styles/scss -o temp/",
     "browsersync": "browser-sync start --server --files temp/",
-    "browsersync:config": "browser-sync start --config bs-config.js"
+    "browsersync:config": "browser-sync start --config bs-config.js",
+    "sass-test": "sass styles/scss/index.scss build/stylesheets/index.css"
   }
 }

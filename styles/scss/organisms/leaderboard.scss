@@ -1,0 +1,47 @@
+.gds-leaderboard__topfive {
+  display: block;
+  position: relative;
+  border-radius: $border-radius;
+  border: 1px solid $gg-light-2;
+  color: $gg-dark-4;
+  @include transition-back(all, 250ms);
+  margin-bottom: 0;
+  padding: $unit * 4 $unit * 2.5;
+  background-color: white;
+  border-bottom: none;
+  z-index: $z-index-1;
+}
+
+.gds-leaderboard__grid {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  border-radius: $border-radius * 2;
+  overflow: hidden;
+  border: 1px solid $gg-light-2;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: inset 0 $unit / 2 $unit -#{$unit / 2} rgba(black, 0.4);
+    pointer-events: none;
+    overflow: hidden;
+    z-index: $z-index-1;
+  }
+}
+
+@media #{$phone-width} {
+  .gds-leaderboard__topfive {
+    display: flex;
+    justify-content: center;
+  }
+}

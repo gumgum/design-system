@@ -1,0 +1,31 @@
+@import "fontsource-public-sans/200.css";
+@import "fontsource-public-sans/300.css";
+@import "fontsource-public-sans/500.css";
+@import "fontsource-public-sans/700.css";
+
+// -------------------------------------------------- //
+// Text variables
+// -------------------------------------------------- //
+// Public Sans Fonts provided by fontsource. This helps provide font files to projects using CRA, Gatsby, Next, etc.
+
+$pri-font: "Public Sans";
+$pri-font-regular: "Public Sans";
+$pri-font-semibold: "Public Sans";
+$pri-font-bold: "Public Sans";
+
+$sec-font-bold: "Public Sans";
+
+$font-weight-lighter: 200;
+$font-weight-light: 200;
+$font-weight-normal: 300;
+$font-weight-bold: 500;
+$font-weight-bolder: 700;
+
+$font-size: $unit;
+$font-size-minus-1: ($font-size * 0.9);
+$font-size-minus-2: ($font-size * 0.8);
+$font-size-minus-3: ($font-size * 0.7);
+$font-size-minus-4: ($font-size * 0.5);
+$font-size-plus-1: ($font-size * 1.1);
+$font-size-plus-2: ($font-size * 1.2);
+$font-size-plus-3: ($font-size * 1.3);

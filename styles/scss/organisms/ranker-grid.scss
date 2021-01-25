@@ -1,0 +1,47 @@
+.gds-ranker-grid {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  border-radius: $border-radius;
+  border: 1px solid $gg-light-2;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.gds-ranker-grid__ensign {
+  width: 20%;
+  background-color: #f7f7f7;
+  border: 0;
+  box-shadow: 0;
+
+  &:nth-child(even) {
+    background-color: white;
+  }
+
+  @media #{$tablet-width} {
+    width: calc(100% / 3);
+  }
+  @media #{$phablet-width} {
+    width: 50%;
+    background-color: white;
+
+    &:nth-child(4n - 1) {
+      background-color: #f7f7f7;
+    }
+    &:nth-child(4n - 2) {
+      background-color: #f7f7f7;
+    }
+  }
+  @media #{$phone-width} {
+    width: 100%;
+
+    &:nth-child(odd) {
+      background-color: white;
+    }
+    &:nth-child(even) {
+      background-color: #f7f7f7;
+    }
+  }
+}

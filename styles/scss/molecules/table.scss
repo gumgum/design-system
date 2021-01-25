@@ -1,0 +1,411 @@
+.gds-table {
+  font-family: $pri-font-regular;
+  width: 100%;
+  max-width: 100%;
+  font-size: $table-font-size-normal;
+  border-spacing: 0;
+  border: none;
+  color: $gg-dark-4;
+  background-color: rgba(white, 0.25);
+}
+
+.gds-table th,
+.gds-table td,
+.gds-table thead,
+.gds-table tbody {
+  border: none;
+}
+
+// Wrap around table for horizontal scrolling on mobile
+.gds-table--responsive {
+  width: 100%;
+  min-height: 0.01%;
+  overflow: auto;
+
+  .gds-table__header,
+  .rt-resizable-header,
+  .gds-table__row td {
+    white-space: nowrap;
+  }
+}
+
+.gds-table__header,
+.rt-resizable-header {
+  position: relative;
+  background-color: $tableHeaderPrimaryBackgroundDefaultColor;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: $table-padding-normal;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: $cap-size;
+    width: 100%;
+    background-color: $tableHeaderPrimaryUnderlineDefaultColor;
+    @include transition-back(all, 250ms);
+  }
+  &:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: $unit/3 solid transparent;
+    border-right: $unit/3 solid transparent;
+    border-top: $unit/3 solid white;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: $unit;
+    @include transition-ease-out(all, 150ms);
+  }
+  &:hover,
+  &.gds-table__header--selected {
+    background-color: $tableHeaderPrimaryBackgroundSelectedColor;
+    &:after {
+      height: ($cap-size * 1.5);
+      background-color: $tableHeaderPrimaryUnderlineSelectedColor;
+    }
+  }
+}
+
+.gds-table__header--sort-desc:before {
+  right: $unit;
+  opacity: 1;
+}
+
+.gds-table__header--sort-asc:before {
+  right: $unit;
+  opacity: 1;
+  transform: rotate(180deg);
+}
+
+.gds-table__header--white {
+  color: $gg-dark-4;
+  background-color: white;
+  &:after {
+    background-color: $gg-light-2;
+    height: 1px;
+    box-shadow: none;
+  }
+  &:hover,
+  &.gds-table__header--selected {
+    color: $primaryColor;
+    background-color: white;
+    &:after {
+      background-color: $primaryColor;
+      height: 2px;
+    }
+    &:before {
+      border-top-color: $primaryColor;
+    }
+  }
+}
+
+.gds-table__row {
+  background-color: rgba($gg-light-4, 0);
+  @include transition-ease-out(all, 250ms);
+
+  &:hover {
+    background-color: rgba($gg-light-4, 0.2);
+  }
+  td,
+  th {
+    padding: $table-padding-normal;
+  }
+  // For proper flow on mobile, to trigger overflow-x scroll
+  th:last-child,
+  td:last-child {
+    word-break: break-all;
+    word-break: break-word;
+  }
+}
+
+.gds-table__row--selected {
+  background-color: rgba($tableRowPrimaryColor, 0.65);
+  color: white;
+  &:hover {
+    background-color: rgba($tableRowPrimaryColor, 0.5);
+  }
+}
+
+.gds-table__row--secondary-selected {
+  background-color: rgba($tableRowSecondaryColor, 0.65);
+  color: white;
+  &:hover {
+    background-color: rgba($tableRowSecondaryColor, 0.5);
+  }
+}
+
+.gds-table__row--disabled {
+  background-color: rgba($gg-light-2, 0.75);
+  color: $gg-light-3;
+  cursor: not-allowed;
+}
+
+// Tightly spaced table
+.gds-table--sm {
+  font-size: $font-size-minus-3;
+  .gds-table__row td,
+  .gds-table__row th {
+    padding: $table-padding-tight;
+  }
+  .gds-table__header--sort-desc:before,
+  .gds-table__header--sort-asc:before {
+    top: $unit;
+    border-left: $unit/4 solid transparent;
+    border-right: $unit/4 solid transparent;
+    border-top: $unit/4 solid white;
+  }
+}
+
+// Tightly spaced table
+.gds-table--xs {
+  font-size: $font-size-minus-4;
+  .gds-table__row td,
+  .gds-table__row th {
+    padding: $table-padding-extratight;
+  }
+  .gds-table__header--sort-desc:before,
+  .gds-table__header--sort-asc:before {
+    top: $unit * 0.6;
+    border-left: $unit/5 solid transparent;
+    border-right: $unit/5 solid transparent;
+    border-top: $unit/5 solid white;
+  }
+}
+
+// Loosely spaced table
+.gds-table--lg {
+  font-size: $font-size-plus-1;
+  .gds-table__row td,
+  .gds-table__row th {
+    padding: $table-padding-loose;
+  }
+  .gds-table__header--sort-desc:before,
+  .gds-table__header--sort-asc:before {
+    top: $unit * 1.6;
+    border-left: $unit/2 solid transparent;
+    border-right: $unit/2 solid transparent;
+    border-top: $unit/2 solid white;
+  }
+}
+
+// Loosely spaced table
+.gds-table--xl {
+  font-size: $font-size-plus-3;
+  .gds-table__row td,
+  .gds-table__row th {
+    padding: $table-padding-extraloose;
+  }
+  .gds-table__header--sort-desc:before,
+  .gds-table__header--sort-asc:before {
+    top: $unit * 2.75;
+    border-left: $unit/1.5 solid transparent;
+    border-right: $unit/1.5 solid transparent;
+    border-top: $unit/1.5 solid white;
+  }
+}
+
+// Color-coded table cells
+.gds-table__cell--positive {
+  background-color: rgba($successColor, 0.2);
+}
+
+.gds-table__cell--neutral {
+  background-color: rgba($warningColor, 0.2);
+}
+
+.gds-table__cell--negative {
+  background-color: rgba($dangerColor, 0.2);
+}
+
+.gds-table__header--secondary {
+  background-color: $tableHeaderSecondaryBackgroundDefaultColor;
+  &:after {
+    background-color: $tableHeaderSecondaryUnderlineDefaultColor;
+  }
+  &:hover,
+  &.gds-table__header--selected {
+    background-color: $tableHeaderSecondaryBackgroundSelectedColor;
+    &:after {
+      background-color: $tableHeaderSecondaryUnderlineSelectedColor;
+    }
+  }
+}
+
+// Inverse table (light on dark)
+.gds-table__row--inverse {
+  color: $gg-light-3;
+  background-color: $gg-dark-2;
+
+  &:hover {
+    background-color: $gg-dark-3;
+  }
+  &.gds-table__row--inverse-selected {
+    background-color: rgba($gg-dark-4, 1);
+    color: white;
+  }
+
+  &.gds-table__row--inverse-disabled {
+    background-color: rgba($gg-dark-4, 0.75);
+    color: $gg-light-3;
+    cursor: not-allowed;
+  }
+}
+
+// Striped table
+.gds-table--striped {
+  tr:nth-of-type(odd) {
+    background-color: rgba($gg-light-4, 0.1);
+    &:hover {
+      background-color: rgba($gg-light-4, 0.2);
+    }
+  }
+  .gds-table__row--selected,
+  .gds-table__row--selected:nth-of-type(odd) {
+    background-color: rgba($tableRowPrimaryColor, 0.65);
+    color: white;
+    &:hover {
+      background-color: rgba($tableRowPrimaryColor, 0.5);
+    }
+  }
+}
+
+.gds-table--inverse,
+.gds-table--inverse-striped {
+  background-color: $gg-dark-2;
+}
+
+// Inverse striped table
+.gds-table--inverse-striped {
+  tr:hover,
+  tr:nth-of-type(odd):hover {
+    background-color: $gg-dark-3;
+  }
+
+  tr:nth-of-type(odd) {
+    background-color: mix($gg-dark-2, white, 96%);
+  }
+  .gds-table__row--inverse-selected,
+  .gds-table__row--inverse-selected:nth-of-type(odd) {
+    background-color: rgba($gg-dark-4, 1);
+    color: white;
+    &:hover {
+      background-color: rgba($gg-dark-4, 0.95);
+    }
+  }
+}
+
+.gds-table__row--inverse-selected {
+  background-color: rgba($gg-dark-4, 1);
+  color: white;
+  &:hover {
+    background-color: rgba($gg-dark-4, 0.95);
+  }
+}
+
+.gds-table__row--inverse-disabled {
+  color: rgba(white, 0.25) !important;
+  cursor: not-allowed !important;
+}
+
+.gds-table__sub-header-contents {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.gds-table__sub-section {
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.5),
+    inset 0px 1px 0px rgba(0, 0, 0, 0.25);
+  font-family: $pri-font-bold;
+  text-transform: uppercase;
+  color: $gg-dark-4;
+  font-size: $unit * 0.75;
+  background-color: white;
+  font-weight: bold;
+  @include transition-ease-out(all, 150ms);
+}
+
+.gds-table__sub-section--collapsed {
+  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+.gds-table__sub-section--inverse {
+  background-color: mix($gg-dark-2, $gg-dark-1, 50%);
+  color: white;
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 1),
+    inset 0px 1px 0px rgba(0, 0, 0, 0.75);
+  &.gds-table__sub-section--primary {
+    background-color: $primaryDark4Color;
+    color: white;
+  }
+
+  &.gds-table__sub-section--secondary {
+    background-color: $secondaryDark4Color;
+    color: white;
+  }
+  &.gds-table__sub-section--tertiary {
+    background-color: $tertiaryDark4Color;
+    color: white;
+  }
+}
+
+.gds-table__sub-section--primary {
+  background-color: $primaryLight4Color;
+  color: white;
+}
+
+.gds-table__sub-section--secondary {
+  background-color: $secondaryLight4Color;
+  color: white;
+}
+
+.gds-table__sub-section--tertiary {
+  background-color: $tertiaryLight4Color;
+  color: white;
+}
+
+.gds-table--collapse-indicator {
+  @include transition-ease-out(all, 250ms);
+}
+
+.gds-table__sub-section--collapsed {
+  &.gds-table__sub-section--inverse {
+    box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.75);
+  }
+  .gds-table--collapse-indicator {
+    transform: rotate(180deg);
+  }
+}
+
+.gds-table__sub-section > .gds-table__row {
+  @include transition-ease-out(all, 150ms);
+  background-color: transparent !important;
+}
+
+.gds-table__sub-header {
+  background-color: transparent;
+}
+
+.gds-table__sub-section-content {
+  @include transition-ease-out(all, 250ms);
+  transform-origin: 50% 0;
+}
+
+.gds-table__sub-section-content--inverse > .gds-table__row:first-of-type {
+  box-shadow: inset 0 2px 3px -1px black;
+}
+
+.gds-table__sub-section--collapsed + .gds-table__sub-section-content {
+  opacity: 0;
+  > .gds-table__row {
+    display: none;
+  }
+}
