@@ -1095,7 +1095,7 @@
 .gds-form-group__toggleswitch-indicator {
   background: white;
   box-shadow: inset 0 0 0 1px $gg-light-3;
-  border-radius: $input-border-radius;
+  border-radius: ($input-border-radius/2);
   display: block;
   height: ($unit * 1.5);
   left: 0;
@@ -1115,7 +1115,7 @@
     bottom: 2px;
     width: calc(50% - 2px);
     background-color: $gg-light-3;
-    border-radius: ($input-border-radius / 2);
+    border-radius: ($input-border-radius / 1.8);
     box-sizing: border-box;
     @include transition-back(all, 250ms);
     border: none !important;

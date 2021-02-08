@@ -2,12 +2,12 @@
 /* This is Design System's complete color palette - all built-in themes are constructed from these colors */
 /* These are the main color assignments for this theme. All component color assignments within this theme are based on this subset of the overall palette. Editing these will have far-reaching effects. */
 /* These color assignments affect specific components and allow for fine grain control over the look of your theme. Edit these to change colors of individual components within the design system. */
-@import "fontsource-public-sans/200.css";
-@import "fontsource-public-sans/300.css";
-@import "fontsource-public-sans/500.css";
-@import "fontsource-public-sans/700.css";
+@import "~fontsource-public-sans/200.css";
+@import "~fontsource-public-sans/300.css";
+@import "~fontsource-public-sans/500.css";
+@import "~fontsource-public-sans/700.css";
 /*!
- * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 .fa,
@@ -6073,7 +6073,7 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
@@ -6081,8 +6081,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../webfonts/fa-regular-400.eot");
-  src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"), url("../webfonts/fa-regular-400.ttf") format("truetype"), url("../webfonts/fa-regular-400.svg#fontawesome") format("svg");
+  src: url("../webfonts//fa-regular-400.eot");
+  src: url("../webfonts//fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts//fa-regular-400.woff2") format("woff2"), url("../webfonts//fa-regular-400.woff") format("woff"), url("../webfonts//fa-regular-400.ttf") format("truetype"), url("../webfonts//fa-regular-400.svg#fontawesome") format("svg");
 }
 .far {
   font-family: "Font Awesome 5 Free";
@@ -6090,7 +6090,7 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
@@ -6098,8 +6098,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("../webfonts/fa-solid-900.eot");
-  src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg");
+  src: url("../webfonts//fa-solid-900.eot");
+  src: url("../webfonts//fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts//fa-solid-900.woff2") format("woff2"), url("../webfonts//fa-solid-900.woff") format("woff"), url("../webfonts//fa-solid-900.ttf") format("truetype"), url("../webfonts//fa-solid-900.svg#fontawesome") format("svg");
 }
 .fa,
 .fas {
@@ -6108,7 +6108,7 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
@@ -6116,8 +6116,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../webfonts/fa-brands-400.eot");
-  src: url("../webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.woff") format("woff"), url("../webfonts/fa-brands-400.ttf") format("truetype"), url("../webfonts/fa-brands-400.svg#fontawesome") format("svg");
+  src: url("../webfonts//fa-brands-400.eot");
+  src: url("../webfonts//fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../webfonts//fa-brands-400.woff2") format("woff2"), url("../webfonts//fa-brands-400.woff") format("woff"), url("../webfonts//fa-brands-400.ttf") format("truetype"), url("../webfonts//fa-brands-400.svg#fontawesome") format("svg");
 }
 .fab {
   font-family: "Font Awesome 5 Brands";
@@ -6125,7 +6125,7 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 .fa.fa-glass:before {
@@ -16425,7 +16425,7 @@ button {
 }
 
 body {
-  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.8;
@@ -16451,7 +16451,7 @@ small {
 input,
 textarea,
 select {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 300;
 }
 
@@ -16573,16 +16573,16 @@ select {
 }
 
 .gds-text--regular {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .gds-text--bold {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 500;
 }
 
 .gds-text--hero {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
 }
 
@@ -16656,7 +16656,7 @@ select {
 .ReactTable .-pagination .-btn,
 .DayPicker-TodayButton {
   display: inline-block;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 300;
   font-size: 1rem;
   padding: 1rem 1.1rem;
@@ -17770,9 +17770,9 @@ select {
   background: #8dc3e1;
   color: #0e4462;
   padding: 1px 0.25rem 0;
-  border-radius: 6px;
+  border-radius: 3px;
   vertical-align: text-top;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   letter-spacing: 0.5px;
   pointer-events: none;
   text-shadow: none !important;
@@ -18048,7 +18048,7 @@ select {
 [data-tooltip] {
   position: relative;
   display: inline-block;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 200;
 }
 
@@ -21421,7 +21421,7 @@ select {
   padding: 0 0.5rem;
   overflow: hidden;
   vertical-align: top;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 200;
 }
 
@@ -22128,7 +22128,7 @@ select {
 }
 
 .gds-snackbar__notification-text {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   padding-right: 2.5rem;
   float: left !important;
 }
@@ -22226,7 +22226,7 @@ select {
 }
 
 .gds-well__text {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   padding-right: 2.5rem;
   float: left !important;
 }
@@ -22962,7 +22962,7 @@ select {
   z-index: 200;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 -0.125rem 0 rgba(0, 0, 0, 0.1);
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #1b87c3;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -23438,7 +23438,7 @@ select {
 }
 
 .gds-table {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   width: 100%;
   max-width: 100%;
   font-size: 0.8rem;
@@ -23774,7 +23774,7 @@ select {
 
 .gds-table__sub-section {
   box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.5), inset 0px 1px 0px rgba(0, 0, 0, 0.25);
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-transform: uppercase;
   color: #5f5f5f;
   font-size: 0.75rem;
@@ -24847,7 +24847,7 @@ select {
 }
 
 .gds-form-group__label {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.7rem;
   color: #7a7a7a;
   display: inline-block;
@@ -24899,7 +24899,7 @@ select {
   border-bottom-right-radius: 6px;
   color: white;
   display: block;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.7rem;
   padding: 0.125rem 0.5rem;
   position: relative;
@@ -25951,7 +25951,7 @@ select {
 .gds-form-group__toggleswitch-indicator {
   background: white;
   box-shadow: inset 0 0 0 1px #c4c4c4;
-  border-radius: 6px;
+  border-radius: 3px;
   display: block;
   height: 1.5rem;
   left: 0;
@@ -25971,7 +25971,7 @@ select {
   bottom: 2px;
   width: calc(50% - 2px);
   background-color: #c4c4c4;
-  border-radius: 3px;
+  border-radius: 3.3333333333px;
   box-sizing: border-box;
   -webkit-transition: all 250ms cubic-bezier(0.175, 0.885, 0.32, 1);
   -webkit-transition: all 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -27756,7 +27756,7 @@ select {
   background-color: white;
   text-shadow: none;
   text-align: left;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   z-index: 300;
   box-shadow: inset 0 -0.125rem 0 0 #c4c4c4, inset 0 0 0 1px #c4c4c4, 0 0 0px 0 rgba(0, 0, 0, 0);
 }
@@ -28030,7 +28030,7 @@ select {
 .gds-card__footer,
 .gds-card__header {
   padding: 0.5rem;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   background-color: #0f4b6d;
   color: white;
@@ -28586,7 +28586,7 @@ select {
 }
 
 .gds-keyboard-shortcuts__label {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.7rem;
   display: inline-block;
   max-width: 100%;
@@ -31097,13 +31097,13 @@ select {
 }
 
 .gds-balloon__description {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: inherit;
   font-size: 0.8rem;
 }
 
 .gds-balloon__label {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: inherit;
   font-size: 0.7rem;
   display: inline-block;
@@ -31208,7 +31208,7 @@ select {
 }
 
 .gds-legend__label {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.7rem;
   color: #7a7a7a;
   display: inline-block;
@@ -31231,7 +31231,7 @@ select {
 .gds-legend__value,
 .gds-legend__value--md {
   display: inline-block;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1.8rem;
   line-height: 1.3;
   -webkit-transition: all 250ms cubic-bezier(0.175, 0.885, 0.32, 1);
@@ -32307,7 +32307,7 @@ select {
   background-color: white;
   padding: 1rem;
   border: 1px solid #dbdbdb;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   cursor: pointer;
 }
 .gds-ranker-ensign:before,
@@ -32509,7 +32509,7 @@ select {
 }
 
 .gds-chooser {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background-color: #0f4b6d;
   display: flex;
   justify-content: space-between;
@@ -32885,7 +32885,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.7rem;
   text-transform: uppercase;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
@@ -32930,7 +32930,7 @@ select {
 }
 
 .gds-slab-nav__dropdown-menu-link {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.7rem;
   text-transform: uppercase;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
@@ -33107,7 +33107,7 @@ select {
 }
 
 .gds-slab-nav__item-label {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.7rem;
   text-transform: uppercase;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
@@ -33380,7 +33380,7 @@ select {
   background-color: transparent !important;
   border: none;
   border-right: 1px solid white;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   cursor: pointer;
   border-radius: 0;
   font-size: 0.8rem;
@@ -33847,7 +33847,7 @@ select {
 
 .gds-page-header__product-name {
   font-size: 0.8rem;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
   line-height: 1rem;
   color: #0e4462;
@@ -34664,7 +34664,7 @@ select {
   border-radius: 50%;
   margin: auto;
   background-color: #1b87c3;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.8rem;
   flex-shrink: 0;
 }
@@ -34978,7 +34978,7 @@ select {
   text-align: center;
   color: #ffffff;
   border-color: #ffffff;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   position: absolute;
   top: 10px;
   left: 10px;
@@ -35057,7 +35057,7 @@ select {
 }
 
 .gds-ranker-card__label {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.7rem;
   color: #7a7a7a;
   display: inline-block;
@@ -36242,7 +36242,7 @@ select {
   position: absolute;
   right: 50%;
   transform: translateX(119px);
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
   letter-spacing: 6.3px;
   font-size: 9px;
@@ -36271,7 +36271,7 @@ select {
   padding: 15px 0;
   background-color: #1b87c3;
   color: white;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
   letter-spacing: 0.6rem;
   text-indent: 0.6rem;
@@ -36433,7 +36433,7 @@ select {
 }
 
 .gds-conversation__name {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 500;
   color: #5f5f5f;
   width: 100%;
@@ -37344,7 +37344,7 @@ select {
   box-shadow: inset 0 -15px 30px -15px rgba(0, 0, 0, 0.5);
   height: 0.7rem;
   line-height: 0.5rem;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.7rem;
   color: #7a7a7a;
   display: inline-block;
@@ -38771,7 +38771,7 @@ select {
 
 .gds-anim-timeline__label {
   width: 7rem;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.7rem;
   color: #7a7a7a;
   display: inline-block;
@@ -39668,7 +39668,7 @@ body.-has-persist-nav {
   padding: 0 0.5rem;
   overflow: hidden;
   vertical-align: top;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 200;
   background-color: transparent;
   background-image: none;
@@ -39715,7 +39715,7 @@ body.-has-persist-nav {
   pointer-events: none;
 }
 .gds-form-group__chosen--input-with-tags + .chosen-container-multi .chosen-choices input {
-  font-family: "Public Sans" !important;
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
   letter-spacing: 0.5px;
 }
 
@@ -39888,7 +39888,7 @@ body.-has-persist-nav {
 
 .react-datepicker__day-name {
   color: #fff;
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-transform: uppercase;
   font-size: 0.7rem;
   margin-bottom: 0;
@@ -40452,7 +40452,7 @@ body.-has-persist-nav {
   word-wrap: break-word;
 }
 .gds-markdown strong {
-  font-family: "Public Sans";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 500;
 }
 .gds-markdown em {

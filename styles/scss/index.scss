@@ -1,6 +1,6 @@
 $icon-font-path: "../fonts/";
 $image-path: "../images/";
-$fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
+$fa-font-path: "../webfonts/";
 
 // Design Tokens
 @import "./theme.scss";
@@ -23,11 +23,18 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 @import "variables/_percentages";
 
 // Icons
-@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "~@fortawesome/fontawesome-free/scss/regular.scss";
-@import "~@fortawesome/fontawesome-free/scss/solid.scss";
-@import "~@fortawesome/fontawesome-free/scss/brands.scss";
-@import "~@fortawesome/fontawesome-free/scss/v4-shims.scss";
+
+@import "icons/fontawesome.scss";
+@import "icons/regular.scss";
+@import "icons/solid.scss";
+@import "icons/brands.scss";
+@import "icons/v4-shims.scss";
+
+// @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+// @import "~@fortawesome/fontawesome-free/scss/regular.scss";
+// @import "~@fortawesome/fontawesome-free/scss/solid.scss";
+// @import "~@fortawesome/fontawesome-free/scss/brands.scss";
+// @import "~@fortawesome/fontawesome-free/scss/v4-shims.scss";
 
 // Subatomic
 @import "subatomic/reset";
