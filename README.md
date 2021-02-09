@@ -2,6 +2,8 @@
 
 ## 🚧 Under Construction 🚧
 
+DOCS NOT TO DATE CURRENTLY!
+
 Future home of GumGum Design System 2.0 [aka Concrete] 🚧
 
 [https://img.shields.io/github/package-json/v/gumgum/design-system/master](https://img.shields.io/github/package-json/v/gumgum/design-system/master)
