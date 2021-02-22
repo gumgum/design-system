@@ -1,6 +1,6 @@
 {
   "name": "gumgum-design",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "GumGum's design system, Concrete.",
   "main": "styles/scss/index.scss",
   "repository": {
@@ -24,25 +24,38 @@
   },
   "homepage": "https://github.com/gumgum/design-system#readme",
   "dependencies": {
-    "@fontsource/public-sans": "^4.2.0",
     "@fortawesome/fontawesome-free": "^5.15.1",
-    "cssnano": "^4.1.10",
-    "gulp": "^4.0.2",
-    "gulp-postcss": "^9.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-terser": "^2.0.1"
+    "fontsource-public-sans": "^3.0.3"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.14",
+    "@babel/core": "^7.12.3",
+    "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-controls": "^6.0.28",
+    "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/addon-links": "^6.0.28",
+    "@storybook/html": "^6.0.28",
+    "@storybook/preset-scss": "^1.0.3",
+    "@whitespace/storybook-addon-html": "^2.0.1",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.13",
+    "css-loader": "^5.0.0",
     "file-loader": "^6.2.0",
+    "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
     "prettier": "2.1.2",
-    "sass": "^1.29.0"
+    "react-is": "^16.13.1",
+    "resolve-url-loader": "^3.1.2",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.0.4",
+    "style-loader": "^2.0.0"
   },
   "scripts": {
-    "start": "npm-run-all --parallel styles:watch browsersync:config",
+    "start": "start-storybook -p 6006 -c .storybook watch-css -s ./styles",
+    "start:temp": "npm-run-all --parallel styles:watch browsersync:config",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "styles:build": "node-sass --include-path scss styles/scss/index.scss  styles/css/index.css --output-style compressed",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "styles:build": "node-sass --include-path scss styles/scss/index.scss  styles/compressed-css/index.css --output-style compressed",
     "styles:watch": "node-sass -w styles/scss -o temp/",
     "browsersync": "browser-sync start --server --files temp/",
     "browsersync:config": "browser-sync start --config bs-config.js",
