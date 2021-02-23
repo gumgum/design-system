@@ -238,7 +238,7 @@
 
 html,
 body {
-  color: $gg-dark-4;
+  color: $gg-dark-2;
   min-height: 100%;
 }
 
@@ -253,7 +253,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: $gg-light-1;
+  background: #fff;
   z-index: $z-index-1;
   -webkit-overflow-scrolling: touch;
   text-rendering: optimizeLegibility;

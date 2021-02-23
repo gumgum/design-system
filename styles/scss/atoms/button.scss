@@ -614,7 +614,12 @@
 .gds-button-dropdown__button--dark-primary {
   color: $primaryLight3Color;
   background-color: rgba($primaryDark1Color, 0.1);
-  @include defaultShadows($gg-light-2, black, $primaryLight2Color, "true");
+  @include defaultShadows(
+    $primaryLight2Color,
+    black,
+    $primaryLight2Color,
+    "true"
+  );
   &:hover {
     @include hoverShadows($primaryColor, black, $primaryLight2Color, "true");
   }

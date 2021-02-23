@@ -123,9 +123,9 @@ body.-has-persist-nav {
   }
 }
 
-.gds-persist-nav__icon {
-  color: $persistNavDefaultIconColor;
-}
+// .gds-persist-nav__icon {
+//removed color for icon on left nav -gw
+// }
 
 .gds-persist-nav__sub-nav {
   padding-left: ($unit * 2.75);
