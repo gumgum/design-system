@@ -1,6 +1,6 @@
 {
   "name": "gumgum-design",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "GumGum's design system, Concrete.",
   "main": "styles/scss/index.scss",
   "repository": {

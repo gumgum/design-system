@@ -33608,7 +33608,7 @@ select {
   /* easeOutQuart */
 }
 .gds-alert--shown .gds-alert {
-  transform: scale(1);
+  /* transform: scale(1); was causing an off center issue */
   -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
   -moz-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
   -o-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -48053,5 +48053,3 @@ body.-has-persist-nav {
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   /* easeOutQuart */
 }
-
-/*# sourceMappingURL=index.css.map */
