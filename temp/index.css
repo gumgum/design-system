@@ -4581,8 +4581,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../webfonts/fa-regular-400.eot");
-  src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"), url("../webfonts/fa-regular-400.ttf") format("truetype"), url("../webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
+  src: url("~@fortawesome/fontawesome-free/webfonts//fa-regular-400.eot");
+  src: url("~@fortawesome/fontawesome-free/webfonts//fa-regular-400.eot?#iefix") format("embedded-opentype"), url("~@fortawesome/fontawesome-free/webfonts//fa-regular-400.woff2") format("woff2"), url("~@fortawesome/fontawesome-free/webfonts//fa-regular-400.woff") format("woff"), url("~@fortawesome/fontawesome-free/webfonts//fa-regular-400.ttf") format("truetype"), url("~@fortawesome/fontawesome-free/webfonts//fa-regular-400.svg#fontawesome") format("svg"); }
 
 .far {
   font-family: 'Font Awesome 5 Free';
@@ -4597,8 +4597,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("../webfonts/fa-solid-900.eot");
-  src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
+  src: url("~@fortawesome/fontawesome-free/webfonts//fa-solid-900.eot");
+  src: url("~@fortawesome/fontawesome-free/webfonts//fa-solid-900.eot?#iefix") format("embedded-opentype"), url("~@fortawesome/fontawesome-free/webfonts//fa-solid-900.woff2") format("woff2"), url("~@fortawesome/fontawesome-free/webfonts//fa-solid-900.woff") format("woff"), url("~@fortawesome/fontawesome-free/webfonts//fa-solid-900.ttf") format("truetype"), url("~@fortawesome/fontawesome-free/webfonts//fa-solid-900.svg#fontawesome") format("svg"); }
 
 .fa,
 .fas {
@@ -4614,8 +4614,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../webfonts/fa-brands-400.eot");
-  src: url("../webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.woff") format("woff"), url("../webfonts/fa-brands-400.ttf") format("truetype"), url("../webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
+  src: url("~@fortawesome/fontawesome-free/webfonts//fa-brands-400.eot");
+  src: url("~@fortawesome/fontawesome-free/webfonts//fa-brands-400.eot?#iefix") format("embedded-opentype"), url("~@fortawesome/fontawesome-free/webfonts//fa-brands-400.woff2") format("woff2"), url("~@fortawesome/fontawesome-free/webfonts//fa-brands-400.woff") format("woff"), url("~@fortawesome/fontawesome-free/webfonts//fa-brands-400.ttf") format("truetype"), url("~@fortawesome/fontawesome-free/webfonts//fa-brands-400.svg#fontawesome") format("svg"); }
 
 .fab {
   font-family: 'Font Awesome 5 Brands';
@@ -20588,7 +20588,7 @@ select {
     padding: 0.25rem 1rem; }
 
 .gds-nav-tabs {
-  border-bottom: 0.125rem solid #0a4882; }
+  border-bottom: 0.125rem solid #dbdbdb; }
   @media (max-width: 543px), (max-width: 767px) {
     .gds-nav-tabs {
       white-space: nowrap; } }
@@ -20597,7 +20597,7 @@ select {
       border-bottom: none; } }
 
 .gds-nav-tabs--dark {
-  border-bottom: 0.125rem solid #0a4882; }
+  border-bottom: 0.125rem solid #dbdbdb; }
   @media (max-width: 543px), (max-width: 767px) {
     .gds-nav-tabs--dark {
       white-space: nowrap; } }
@@ -20673,9 +20673,9 @@ select {
   .gds-nav-tabs--stacked .gds-nav-tabs__link:before {
     border-radius: 0; }
   .gds-nav-tabs--stacked .gds-nav-tabs__list-item--active .gds-nav-tabs__link:before {
-    border-bottom: 1px solid #0a4882 !important; }
+    border-bottom: 1px solid #dbdbdb !important; }
   .gds-nav-tabs--stacked:hover .gds-nav-tabs__list-item--active .gds-nav-tabs__link:before {
-    border-bottom: 1px solid #0a4882 !important; }
+    border-bottom: 1px solid #dbdbdb !important; }
 
 .gds-nav-tabs--no-resp {
   min-width: 100%;
@@ -20684,10 +20684,10 @@ select {
 @media (max-width: 543px), (max-width: 767px) {
   .gds-nav-tabs--no-resp {
     white-space: nowrap !important;
-    border-bottom: 0.125rem solid #0a4882; } }
+    border-bottom: 0.125rem solid #dbdbdb; } }
   @media (max-width: 543px) and (max-width: 543px), (max-width: 767px) and (max-width: 543px) {
     .gds-nav-tabs--no-resp {
-      border-bottom: 0.125rem solid #0a4882; } }
+      border-bottom: 0.125rem solid #dbdbdb; } }
 
 @media (max-width: 543px), (max-width: 767px) {
   .gds-nav-tabs--no-resp .gds-nav-tabs__list-item {
@@ -20755,7 +20755,7 @@ select {
         border-top-right-radius: 6px; }
     .gds-nav-tabs__list-item:hover .gds-nav-tabs__link:before,
     .gds-nav-tabs--justified .gds-nav-tabs__list-item:hover .gds-nav-tabs__link:before {
-      border-bottom: 1px solid #0a4882; }
+      border-bottom: 1px solid #dbdbdb; }
   .gds-nav-tabs__list-item--active .gds-nav-tabs__link:before,
   .gds-nav-tabs__link:before {
     border-radius: 0; }
@@ -20763,7 +20763,7 @@ select {
 .gds-nav-tabs__link:before,
   .gds-nav-tabs--justified.gds-nav-tabs__list-item.gds-nav-tabs__list-item--active
 .gds-nav-tabs__link:before {
-    border-bottom: 1px solid #0a4882; } }
+    border-bottom: 1px solid #dbdbdb; } }
 
 .gds-nav-tabs__list-item--disabled,
 .gds-nav-tabs--underline__list-item--disabled {
@@ -20833,7 +20833,7 @@ select {
 
 .gds-nav-tabs--underline-primary {
   background-color: #1b87c3;
-  border-bottom: 0.125rem solid #0a4882; }
+  border-bottom: 0.125rem solid #dbdbdb; }
   @media (max-width: 543px), (max-width: 767px) {
     .gds-nav-tabs--underline-primary.gds-nav-tabs--no-resp {
       border: none !important;
@@ -20949,7 +20949,7 @@ select {
 
 .gds-nav-tabs__list-item--active.gds-nav-tabs__list-item--underline,
 .gds-nav-tabs--underline__list-item--active {
-  border-bottom: 0.125rem solid #0a4882;
+  border-bottom: 0.125rem solid #dbdbdb;
   top: 0.125rem; }
   .gds-nav-tabs__list-item--active.gds-nav-tabs__list-item--underline .gds-nav-tabs__link--underline,
   .gds-nav-tabs__list-item--active.gds-nav-tabs__list-item--underline .gds-nav-tabs--underline__link,
@@ -26075,7 +26075,6 @@ select {
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   /* easeOutQuart */ }
   .gds-alert--shown .gds-alert {
-    transform: scale(1);
     -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
     -moz-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
     -o-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
