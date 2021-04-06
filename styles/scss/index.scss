@@ -1,5 +1,6 @@
-$icon-font-path: "../fonts/";
-$image-path: "../images/";
+// $icon-font-path: "../fonts/";
+// $image-path: "../images/";
+// $fa-font-path: "../webfonts";
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 
 // Design Tokens
@@ -23,6 +24,11 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 @import "variables/_percentages";
 
 // Icons
+// @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+// @import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+// @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+// @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+// @import "../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims.scss";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/regular.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";

@@ -40,7 +40,7 @@
   pointer-events: auto;
   @include transition-ease-out(all, 100ms);
   .gds-alert {
-    transform: scale(1);
+    // transform: scale(1); causing alert position issue
     @include transition-ease-out(all, 100ms);
   }
 }

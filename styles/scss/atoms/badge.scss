@@ -6,7 +6,7 @@
   background: $primaryLight5Color;
   color: $primaryDark5Color;
   padding: 1px ($unit / 4) 0;
-  border-radius: $border-radius;
+  border-radius: ($border-radius/2);
   vertical-align: text-top;
   font-family: $pri-font-regular;
   letter-spacing: 0.5px;

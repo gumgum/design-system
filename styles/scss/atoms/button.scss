@@ -264,12 +264,8 @@
 // Plain buttons
 
 // Plans to deprecate in 2.0
-.gds-button--default,
 .gds-button--gray,
-.gds-circular-button--gray,
-.gds-circular-button--default,
-.gds-button--toggle,
-.gds-circular-button--toggle {
+.gds-circular-button--gray {
   color: white;
   text-shadow: none;
   @include backgroundGradient($grayLight4Color, $grayLight5Color, "default");
@@ -288,15 +284,6 @@
   }
   &:focus {
     @include activeShadow($primaryLight4Color);
-  }
-
-  // For the toggle button
-  &.gds-button--active {
-    @include backgroundGradient(
-      $primaryLight2Color,
-      $primaryDark2Color,
-      "active"
-    );
   }
 }
 
@@ -328,7 +315,11 @@
 
 .gds-button--outline,
 .gds-circular-button--outline,
-.gds-anim-timeline__button--add {
+.gds-anim-timeline__button--add,
+.gds-button--default,
+.gds-circular-button--default,
+.gds-button--toggle,
+.gds-circular-button--toggle {
   color: $primaryColor;
   @include defaultShadows($gg-light-2, black, $primaryLight2Color, "true");
   @include backgroundGradient(transparent, transparent, "default");
@@ -353,6 +344,17 @@
   &:focus {
     @include backgroundGradient(transparent, transparent, "hover");
     @include focusShadows($primaryColor, black, $primaryLight2Color, "true");
+  }
+
+  // For the toggle button
+  &.gds-button--active,
+  &.gds-button--active:hover {
+    @include backgroundGradient(
+      $primaryLight2Color,
+      $primaryDark2Color,
+      "active"
+    );
+    color: #fff;
   }
 }
 
@@ -614,7 +616,12 @@
 .gds-button-dropdown__button--dark-primary {
   color: $primaryLight3Color;
   background-color: rgba($primaryDark1Color, 0.1);
-  @include defaultShadows($gg-light-2, black, $primaryLight2Color, "true");
+  @include defaultShadows(
+    $primaryLight2Color,
+    black,
+    $primaryLight2Color,
+    "true"
+  );
   &:hover {
     @include hoverShadows($primaryColor, black, $primaryLight2Color, "true");
   }

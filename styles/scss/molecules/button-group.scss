@@ -43,7 +43,8 @@
 
 // Button-group - large
 .gds-button-group--lg {
-  .gds-button {
+  .gds-button,
+  .gds-button-group__button {
     font-size: $btn-font-size-large;
     padding: $btn-padding-large;
   }
@@ -51,10 +52,10 @@
 
 // Button-group - small
 .gds-button-group--sm {
-  .gds-button {
+  .gds-button,
+  .gds-button-group__button {
     font-size: $btn-font-size-small;
     padding: $btn-padding-small;
-
     &:active {
       &:before {
         bottom: 0 !important;
@@ -65,7 +66,8 @@
 
 // Button-group - xsmall
 .gds-button-group--xs {
-  .gds-button {
+  .gds-button,
+  .gds-button-group__button {
     font-size: $btn-font-size-xsmall;
     padding: $btn-padding-xsmall;
 
