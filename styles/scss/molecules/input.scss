@@ -95,7 +95,9 @@
 // Input labels
 .gds-form-group__label {
   font-family: $pri-font-bold;
+  font-weight: $font-weight-bold;
   font-size: $font-size-minus-3;
+  letter-spacing: 0.5px;
   color: $gg-dark-5;
   display: inline-block;
   max-width: 100%;

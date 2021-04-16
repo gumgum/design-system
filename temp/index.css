@@ -1,10 +1,10 @@
 /* This is Design System's complete color palette - all built-in themes are constructed from these colors */
 /* These are the main color assignments for this theme. All component color assignments within this theme are based on this subset of the overall palette. Editing these will have far-reaching effects. */
 /* These color assignments affect specific components and allow for fine grain control over the look of your theme. Edit these to change colors of individual components within the design system. */
-@import url(~fontsource-public-sans/200.css);
-@import url(~fontsource-public-sans/300.css);
-@import url(~fontsource-public-sans/500.css);
-@import url(~fontsource-public-sans/700.css);
+@import url(fontsource-public-sans/200.css);
+@import url(fontsource-public-sans/300.css);
+@import url(fontsource-public-sans/500.css);
+@import url(fontsource-public-sans/700.css);
 /*!
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -4581,8 +4581,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("~@fortawesome/fontawesome-free/webfonts//fa-regular-400.eot");
-  src: url("~@fortawesome/fontawesome-free/webfonts//fa-regular-400.eot?#iefix") format("embedded-opentype"), url("~@fortawesome/fontawesome-free/webfonts//fa-regular-400.woff2") format("woff2"), url("~@fortawesome/fontawesome-free/webfonts//fa-regular-400.woff") format("woff"), url("~@fortawesome/fontawesome-free/webfonts//fa-regular-400.ttf") format("truetype"), url("~@fortawesome/fontawesome-free/webfonts//fa-regular-400.svg#fontawesome") format("svg"); }
+  src: url("../webfonts/fa-regular-400.eot");
+  src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"), url("../webfonts/fa-regular-400.ttf") format("truetype"), url("../webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
 
 .far {
   font-family: 'Font Awesome 5 Free';
@@ -4597,8 +4597,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("~@fortawesome/fontawesome-free/webfonts//fa-solid-900.eot");
-  src: url("~@fortawesome/fontawesome-free/webfonts//fa-solid-900.eot?#iefix") format("embedded-opentype"), url("~@fortawesome/fontawesome-free/webfonts//fa-solid-900.woff2") format("woff2"), url("~@fortawesome/fontawesome-free/webfonts//fa-solid-900.woff") format("woff"), url("~@fortawesome/fontawesome-free/webfonts//fa-solid-900.ttf") format("truetype"), url("~@fortawesome/fontawesome-free/webfonts//fa-solid-900.svg#fontawesome") format("svg"); }
+  src: url("../webfonts/fa-solid-900.eot");
+  src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
 
 .fa,
 .fas {
@@ -4614,8 +4614,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("~@fortawesome/fontawesome-free/webfonts//fa-brands-400.eot");
-  src: url("~@fortawesome/fontawesome-free/webfonts//fa-brands-400.eot?#iefix") format("embedded-opentype"), url("~@fortawesome/fontawesome-free/webfonts//fa-brands-400.woff2") format("woff2"), url("~@fortawesome/fontawesome-free/webfonts//fa-brands-400.woff") format("woff"), url("~@fortawesome/fontawesome-free/webfonts//fa-brands-400.ttf") format("truetype"), url("~@fortawesome/fontawesome-free/webfonts//fa-brands-400.svg#fontawesome") format("svg"); }
+  src: url("../webfonts/fa-brands-400.eot");
+  src: url("../webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.woff") format("woff"), url("../webfonts/fa-brands-400.ttf") format("truetype"), url("../webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
 
 .fab {
   font-family: 'Font Awesome 5 Brands';
@@ -17512,29 +17512,10 @@ select {
 .rt-resizable-header {
   position: relative;
   background-color: #f3f3f3;
-  color: #5f5f5f;
+  color: #444;
   border: none;
   cursor: pointer;
   padding: 0.5rem 1rem; }
-  .gds-table__header:after,
-  .rt-resizable-header:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 0.125rem;
-    width: 100%;
-    background-color: #dbdbdb;
-    -webkit-transition: all 250ms cubic-bezier(0.175, 0.885, 0.32, 1);
-    -webkit-transition: all 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    -moz-transition: all 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    -o-transition: all 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition: all 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
   .gds-table__header:before,
   .rt-resizable-header:before {
     content: "";
@@ -17608,7 +17589,8 @@ select {
     background-color: rgba(172, 172, 172, 0.2); }
   .gds-table__row td,
   .gds-table__row th {
-    padding: 0.5rem 1rem; }
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #dbdbdb; }
   .gds-table__row th:last-child,
   .gds-table__row td:last-child {
     word-break: break-all;
@@ -17710,17 +17692,17 @@ select {
     color: #c4c4c4;
     cursor: not-allowed; }
 
-.gds-table--striped tr:nth-of-type(odd) {
+.gds-table--striped tr:nth-of-type(even) {
   background-color: rgba(172, 172, 172, 0.1); }
-  .gds-table--striped tr:nth-of-type(odd):hover {
+  .gds-table--striped tr:nth-of-type(even):hover {
     background-color: rgba(172, 172, 172, 0.2); }
 
 .gds-table--striped .gds-table__row--selected,
-.gds-table--striped .gds-table__row--selected:nth-of-type(odd) {
+.gds-table--striped .gds-table__row--selected:nth-of-type(even) {
   background-color: rgba(30, 150, 217, 0.65);
   color: white; }
   .gds-table--striped .gds-table__row--selected:hover,
-  .gds-table--striped .gds-table__row--selected:nth-of-type(odd):hover {
+  .gds-table--striped .gds-table__row--selected:nth-of-type(even):hover {
     background-color: rgba(30, 150, 217, 0.5); }
 
 .gds-table--inverse,
@@ -17728,18 +17710,18 @@ select {
   background-color: #292929; }
 
 .gds-table--inverse-striped tr:hover,
-.gds-table--inverse-striped tr:nth-of-type(odd):hover {
+.gds-table--inverse-striped tr:nth-of-type(even):hover {
   background-color: #444; }
 
-.gds-table--inverse-striped tr:nth-of-type(odd) {
+.gds-table--inverse-striped tr:nth-of-type(even) {
   background-color: #323232; }
 
 .gds-table--inverse-striped .gds-table__row--inverse-selected,
-.gds-table--inverse-striped .gds-table__row--inverse-selected:nth-of-type(odd) {
+.gds-table--inverse-striped .gds-table__row--inverse-selected:nth-of-type(even) {
   background-color: #5f5f5f;
   color: white; }
   .gds-table--inverse-striped .gds-table__row--inverse-selected:hover,
-  .gds-table--inverse-striped .gds-table__row--inverse-selected:nth-of-type(odd):hover {
+  .gds-table--inverse-striped .gds-table__row--inverse-selected:nth-of-type(even):hover {
     background-color: rgba(95, 95, 95, 0.95); }
 
 .gds-table__row--inverse-selected {
@@ -18674,7 +18656,9 @@ select {
 
 .gds-form-group__label {
   font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
   font-size: 0.7rem;
+  letter-spacing: 0.5px;
   color: #7a7a7a;
   display: inline-block;
   max-width: 100%;
