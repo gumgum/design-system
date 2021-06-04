@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* This is Design System's complete color palette - all built-in themes are constructed from these colors */
 /* These are the main color assignments for this theme. All component color assignments within this theme are based on this subset of the overall palette. Editing these will have far-reaching effects. */
 /* These color assignments affect specific components and allow for fine grain control over the look of your theme. Edit these to change colors of individual components within the design system. */
@@ -8322,6 +8323,69 @@ button {
 
 .gds-layout__hidden-xl-down {
   display: none !important; }
+
+.gds-app-layout__top {
+  z-index: 200;
+  grid-area: top; }
+
+.gds-app-layout__main {
+  padding: 0.75rem;
+  z-index: 100;
+  grid-area: main;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #f6f6f6; }
+
+.gds-app-layout__left {
+  z-index: 100;
+  grid-area: left;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.gds-app-layout__right {
+  z-index: 100;
+  grid-area: right;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.gds-app-layout__bottom {
+  z-index: 200;
+  grid-area: bottom; }
+
+.gds-app-layout__container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  gap: 0;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-rows: max-content 1fr max-content;
+  grid-template-areas: "top top top" "left main right" "bottom bottom bottom"; }
+
+@media (max-width: 1100px) {
+  .gds-app-layout__container {
+    grid-template-columns: 100%;
+    grid-template-rows: max-content auto max-content;
+    grid-template-areas: "top" "main" "bottom"; }
+  .gds-app-layout__main {
+    padding: 0.5rem; }
+  .gds-app-layout__left,
+  .gds-app-layout__right {
+    display: none; }
+  .gds-app-layout__left--open {
+    display: inline-block;
+    z-index: 300;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0; }
+  .gds-app-layout__right--open {
+    display: inline-block;
+    z-index: 300;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0; } }
 
 @font-face {
   font-family: 'Black Tie';
@@ -30871,6 +30935,80 @@ select {
   .gds-leaderboard__topfive {
     display: flex;
     justify-content: center; } }
+
+.menu-btn {
+  display: none; }
+
+@media (max-width: 1100px) {
+  .menu-btn {
+    display: inline-block; } }
+
+.gds-nav-top,
+.gds-nav-bottom {
+  position: relative;
+  background: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; }
+  .gds-nav-top > *,
+  .gds-nav-bottom > * {
+    flex-grow: 1; }
+
+.gds-nav-top {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.16); }
+  .gds-nav-top .gds-nav-logo {
+    flex-grow: 0;
+    width: fit-content;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    line-height: 0; }
+    .gds-nav-top .gds-nav-logo__icon, .gds-nav-top .gds-nav-logo__logo,
+    .gds-nav-top .gds-nav-logo img {
+      width: auto;
+      height: 2rem; }
+  .gds-nav-top__links {
+    display: flex;
+    flex-flow: row;
+    background: green;
+    position: relative; }
+  .gds-nav-top__sub-links {
+    position: absolute;
+    background: red;
+    top: 3rem;
+    left: 0;
+    z-index: 400;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    width: 100%;
+    max-height: 100px;
+    border-radius: 6px; }
+  .gds-nav-top__link {
+    display: inline-block;
+    background: pink;
+    padding: 0.5rem; }
+    .gds-nav-top__link--sub::after {
+      cursor: pointer;
+      content: "👇";
+      padding-left: 0.25rem; }
+    .gds-nav-top__link:hover {
+      background: gold; }
+
+.gds-nav-bottom {
+  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1); }
+
+.gds-side-nav {
+  width: 12rem;
+  background: #fff; }
+  @media (min-width: 1099px) {
+    .gds-side-nav--collapsed {
+      width: 4rem; } }
+
+@media (max-width: 1100px) {
+  .gds-app-layout__left .gds-side-nav {
+    box-shadow: 0.25rem 0px 0.75rem rgba(0, 0, 0, 0.16); }
+  .gds-app-layout__right .gds-side-nav {
+    box-shadow: -0.25rem 0px 0.75rem rgba(0, 0, 0, 0.16); } }
 
 body.-has-persist-nav {
   position: absolute;

@@ -1,0 +1,88 @@
+// App layout is designed to be the framework of a commonly used dashboard page
+// Each container is fixed position (CSS Grid)
+// Main is only item with padding 12px for desktop 8px for mobile
+// Main, Left, & Right all have an overflow scroll
+// Left & Right become hidden for tablet and below and require JS to toggle open class
+// Bottom should rarely be used - Footer should fall within main
+
+// Grid Layout Items
+.gds-app-layout__top {
+  z-index: $z-index-2;
+  grid-area: top;
+}
+.gds-app-layout__main {
+  padding: 0.75rem;
+  z-index: $z-index-1;
+  grid-area: main;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #f6f6f6;
+}
+.gds-app-layout__left {
+  z-index: $z-index-1;
+  grid-area: left;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.gds-app-layout__right {
+  z-index: $z-index-1;
+  grid-area: right;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.gds-app-layout__bottom {
+  z-index: $z-index-2;
+  grid-area: bottom;
+}
+
+// Desktop
+.gds-app-layout__container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  gap: 0;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-rows: max-content 1fr max-content;
+  grid-template-areas:
+    "top top top"
+    "left main right"
+    "bottom bottom bottom";
+}
+
+// Tablet - Mobile
+@media (max-width: 1100px) {
+  .gds-app-layout__container {
+    grid-template-columns: 100%;
+    grid-template-rows: max-content auto max-content;
+    grid-template-areas:
+      "top"
+      "main"
+      "bottom";
+  }
+
+  .gds-app-layout__main {
+    padding: 0.5rem;
+  }
+
+  .gds-app-layout__left,
+  .gds-app-layout__right {
+    display: none;
+  }
+  .gds-app-layout__left--open {
+    display: inline-block;
+    z-index: $z-index-3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .gds-app-layout__right--open {
+    display: inline-block;
+    z-index: $z-index-3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
