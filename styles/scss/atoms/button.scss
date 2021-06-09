@@ -157,11 +157,11 @@
 
 @mixin backgroundGradient($lightColor, $darkColor, $buttonState) {
   @if $buttonState == "default" {
-    background: linear-gradient(180deg, $lightColor -10%, $darkColor 100%);
+    background: linear-gradient(180deg, $lightColor -50%, $darkColor 100%);
   } @else if $buttonState == "hover" {
-    background: linear-gradient(180deg, $lightColor -10%, $lightColor 100%);
+    background: linear-gradient(180deg, $lightColor -50%, $lightColor 100%);
   } @else if $buttonState == "active" {
-    background: linear-gradient(180deg, $darkColor -10%, $darkColor 100%);
+    background: linear-gradient(180deg, $darkColor -50%, $darkColor 100%);
   } @else {
     @error "Unknown button state #{$buttonState}.";
   }
@@ -266,20 +266,20 @@
 // Plans to deprecate in 2.0
 .gds-button--gray,
 .gds-circular-button--gray {
-  color: white;
+  color: $grayDark3Color;
   text-shadow: none;
-  @include backgroundGradient($grayLight4Color, $grayLight5Color, "default");
+  @include backgroundGradient($grayLight2Color, $grayLight5Color, "default");
 
   &:hover {
-    @include backgroundGradient($grayLight3Color, $grayLight3Color, "hover");
+    @include backgroundGradient($grayLight2Color, $grayLight2Color, "hover");
   }
   &:focus:hover {
-    @include backgroundGradient($grayLight3Color, $grayLight3Color, "hover");
+    @include backgroundGradient($grayLight2Color, $grayLight2Color, "hover");
     box-shadow: 0 0 0 2px $primaryLight4Color;
   }
   &:active,
   &:active:focus {
-    @include backgroundGradient($grayLight4Color, $grayLight4Color, "active");
+    @include backgroundGradient($grayLight3Color, $grayLight3Color, "active");
     @include activeShadow($primaryLight4Color);
   }
   &:focus {
@@ -411,13 +411,13 @@
 .gds-onboarder__button,
 .DayPicker-TodayButton {
   @include backgroundGradient(
-    $primaryLight2Color,
+    $primaryLight1Color,
     $primaryDark2Color,
     "default"
   );
   &:hover {
     @include backgroundGradient(
-      $primaryLight2Color,
+      $primaryLight1Color,
       $primaryDark2Color,
       "hover"
     );
@@ -430,7 +430,7 @@
 
   &:active {
     @include backgroundGradient(
-      $primaryLight2Color,
+      $primaryLight1Color,
       $primaryDark2Color,
       "active"
     );
@@ -442,13 +442,13 @@
 .gds-button--secondary,
 .gds-circular-button--secondary {
   @include backgroundGradient(
-    $secondaryLight2Color,
+    $secondaryLight1Color,
     $secondaryDark2Color,
     "default"
   );
   &:hover {
     @include backgroundGradient(
-      $secondaryLight2Color,
+      $secondaryLight1Color,
       $secondaryDark2Color,
       "hover"
     );
@@ -461,7 +461,7 @@
 
   &:active {
     @include backgroundGradient(
-      $secondaryLight2Color,
+      $secondaryLight1Color,
       $secondaryDark2Color,
       "active"
     );
@@ -473,13 +473,13 @@
 .gds-button--tertiary,
 .gds-circular-button--tertiary {
   @include backgroundGradient(
-    $tertiaryLight2Color,
+    $tertiaryLight1Color,
     $tertiaryDark2Color,
     "default"
   );
   &:hover {
     @include backgroundGradient(
-      $tertiaryLight2Color,
+      $tertiaryLight1Color,
       $tertiaryDark2Color,
       "hover"
     );
@@ -492,7 +492,7 @@
 
   &:active {
     @include backgroundGradient(
-      $tertiaryLight2Color,
+      $tertiaryLight1Color,
       $tertiaryDark2Color,
       "active"
     );
@@ -504,13 +504,13 @@
 .gds-button--success,
 .gds-circular-button--success {
   @include backgroundGradient(
-    $successLight2Color,
+    $successLight1Color,
     $successDark2Color,
     "default"
   );
   &:hover {
     @include backgroundGradient(
-      $successLight2Color,
+      $successLight1Color,
       $successDark2Color,
       "hover"
     );
@@ -523,7 +523,7 @@
 
   &:active {
     @include backgroundGradient(
-      $successLight2Color,
+      $successLight1Color,
       $successDark2Color,
       "active"
     );
@@ -534,9 +534,9 @@
 // Danger buttons
 .gds-button--danger,
 .gds-circular-button--danger {
-  @include backgroundGradient($dangerLight2Color, $dangerDark2Color, "default");
+  @include backgroundGradient($dangerLight1Color, $dangerDark2Color, "default");
   &:hover {
-    @include backgroundGradient($dangerLight2Color, $dangerDark2Color, "hover");
+    @include backgroundGradient($dangerLight1Color, $dangerDark2Color, "hover");
   }
 
   &:focus {
@@ -546,7 +546,7 @@
 
   &:active {
     @include backgroundGradient(
-      $dangerLight2Color,
+      $dangerLight1Color,
       $dangerDark2Color,
       "active"
     );
@@ -559,13 +559,13 @@
 .gds-circular-button--warning {
   color: $grayDark3Color;
   @include backgroundGradient(
-    $warningLight2Color,
+    $warningLight1Color,
     $warningDark2Color,
     "default"
   );
   &:hover {
     @include backgroundGradient(
-      $warningLight2Color,
+      $warningLight1Color,
       $warningDark2Color,
       "hover"
     );
@@ -578,7 +578,7 @@
 
   &:active {
     @include backgroundGradient(
-      $warningLight2Color,
+      $warningLight1Color,
       $warningDark2Color,
       "active"
     );
@@ -589,9 +589,9 @@
 // Info buttons
 .gds-button--info,
 .gds-circular-button--info {
-  @include backgroundGradient($infoLight2Color, $infoDark2Color, "default");
+  @include backgroundGradient($infoLight1Color, $infoDark2Color, "default");
   &:hover {
-    @include backgroundGradient($infoLight2Color, $infoDark2Color, "hover");
+    @include backgroundGradient($infoLight1Color, $infoDark2Color, "hover");
   }
 
   &:focus {
@@ -600,7 +600,7 @@
   }
 
   &:active {
-    @include backgroundGradient($infoLight2Color, $infoDark2Color, "active");
+    @include backgroundGradient($infoLight1Color, $infoDark2Color, "active");
     @include activeShadow($infoLight4Color);
   }
 }

@@ -40,7 +40,7 @@
     align-items: center;
 
     &__logo {
-      padding: 0 0.2rem 0.2rem 0.2rem;
+      padding: 0.2rem;
     }
     &__icon,
     &__logo,
@@ -48,49 +48,105 @@
       width: auto;
       height: 1.8rem;
     }
+
+    &:empty {
+      flex-grow: 0;
+      background-image: url(https://gumgum-design-system.s3.amazonaws.com/logo.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-origin: content-box;
+      padding: 0.8rem 1rem;
+      width: 10rem;
+      height: 100%;
+    }
+
+    @media (max-width: 1100px) {
+      &:empty {
+        flex-grow: 0;
+        background-image: url(https://gumgum-design-system.s3.amazonaws.com/mark.svg);
+        width: 5rem;
+      }
+    }
   }
 
   &__links {
     display: flex;
+    align-items: center;
     flex-flow: row;
     position: relative;
-    font-size: 14px;
-    font-weight: $font-weight-normal;
   }
 
   &__link {
-    display: block;
-    // background: pink;
-    padding: 0.5rem 1rem;
+    display: inline-block;
+    background: none;
+    border: none;
+    height: auto;
+    padding: 1rem 1rem;
     cursor: pointer;
     font: inherit;
-    background-clip: border-box;
-
-    &--sub::after {
-      content: "👇";
-      padding-left: 0.25rem;
-    }
+    font-size: 14px;
+    font-weight: $font-weight-bold;
+    color: $gg-dark-5;
 
     &:hover {
-      background: gold;
+      color: $primaryDark5Color;
+      background-color: none;
+      box-shadow: inset 0px -2px 0px $primaryDark1Color;
+    }
+
+    &:active,
+    &:focus {
+      background-color: $gg-light-1;
     }
   }
 
-  &__sub-links {
+  &__links--sub-wrapper > &__link::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f078";
+    padding-left: 0.5rem;
+  }
+
+  &__links-sub {
+    display: none;
+  }
+
+  &__links--sub-wrapper:active {
+    background: red;
+  }
+
+  &__links--sub-wrapper--active > &__links-sub,
+  &__links--sub-wrapper:hover > &__links-sub {
+    display: inline-block;
     position: absolute;
-    display: block;
     background: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
     border-radius: $border-radius;
-    top: 2.8rem;
+    top: 3rem;
     left: 0;
     z-index: $z-index-4;
     height: auto;
     width: max-content;
-    padding: 0.5rem 0;
+    // padding: 0.5rem 0;
+    padding: 0.75rem;
     font: inherit;
-    > .gds-nav-top__link {
-      padding: 0.25rem 1rem;
+
+    .gds-nav-top__link {
+      display: block;
+      // padding: 0.25rem 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: $border-radius;
+
+      &:hover {
+        color: $primaryDark5Color;
+        background-color: $gg-light-1;
+        box-shadow: none;
+      }
+
+      &:active,
+      &:focus {
+        background-color: $gg-light-1;
+      }
     }
   }
 }
