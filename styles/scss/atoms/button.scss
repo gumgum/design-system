@@ -157,11 +157,14 @@
 
 @mixin backgroundGradient($lightColor, $darkColor, $buttonState) {
   @if $buttonState == "default" {
-    background: linear-gradient(180deg, $lightColor -50%, $darkColor 100%);
+    background-color: inherit;
+    background-size: 100% 300%;
+    background-position: center;
+    background-image: linear-gradient($lightColor 10%, $darkColor 140%);
   } @else if $buttonState == "hover" {
-    background: linear-gradient(180deg, $lightColor -50%, $lightColor 100%);
+    background-position: top;
   } @else if $buttonState == "active" {
-    background: linear-gradient(180deg, $darkColor -50%, $darkColor 100%);
+    background-position: bottom;
   } @else {
     @error "Unknown button state #{$buttonState}.";
   }

@@ -8327,7 +8327,7 @@ button {
   grid-area: top; }
 
 .gds-app-layout__main {
-  padding: 0.75rem;
+  padding: 1rem 2rem;
   z-index: 100;
   grid-area: main;
   overflow-x: hidden;
@@ -12008,18 +12008,21 @@ select {
 .gds-circular-button--gray {
   color: #444;
   text-shadow: none;
-  background: linear-gradient(180deg, #dbdbdb -50%, #949494 100%); }
+  background-color: inherit;
+  background-size: 100% 300%;
+  background-position: center;
+  background-image: linear-gradient(#dbdbdb 10%, #949494 140%); }
   .gds-button--gray:hover,
   .gds-circular-button--gray:hover {
-    background: linear-gradient(180deg, #dbdbdb -50%, #dbdbdb 100%); }
+    background-position: top; }
   .gds-button--gray:focus:hover,
   .gds-circular-button--gray:focus:hover {
-    background: linear-gradient(180deg, #dbdbdb -50%, #dbdbdb 100%);
+    background-position: top;
     box-shadow: 0 0 0 2px #b2ddf4; }
   .gds-button--gray:active, .gds-button--gray:active:focus,
   .gds-circular-button--gray:active,
   .gds-circular-button--gray:active:focus {
-    background: linear-gradient(180deg, #c4c4c4 -50%, #c4c4c4 100%);
+    background-position: bottom;
     box-shadow: 0 0 0 2px #b2ddf4; }
   .gds-button--gray:focus,
   .gds-circular-button--gray:focus {
@@ -12032,7 +12035,7 @@ select {
   .gds-circular-button--dark-toggle:hover,
   .gds-circular-button--dark-toggle.gds-button--active,
   .gds-circular-button--dark-toggle.gds-circular-button--active {
-    background: linear-gradient(180deg, #1a83be -50%, #1a83be 100%);
+    background-position: bottom;
     color: white; }
 
 .gds-button--button-cap,
@@ -12051,7 +12054,10 @@ select {
 .gds-circular-button--toggle {
   color: #1e96d9;
   box-shadow: inset 0 0 0 0 #dbdbdb, inset 0 0 0 1px #dbdbdb, 0 0 0px 0px rgba(101, 186, 234, 0), 0 0 0px 0 rgba(0, 0, 0, 0);
-  background: linear-gradient(180deg, transparent -50%, transparent 100%); }
+  background-color: inherit;
+  background-size: 100% 300%;
+  background-position: center;
+  background-image: linear-gradient(transparent 10%, transparent 140%); }
   .gds-button--outline else,
   .gds-circular-button--outline else,
   .gds-anim-timeline__button--add else,
@@ -12067,7 +12073,7 @@ select {
   .gds-circular-button--default:hover,
   .gds-button--toggle:hover,
   .gds-circular-button--toggle:hover {
-    background: linear-gradient(180deg, transparent -50%, transparent 100%);
+    background-position: top;
     box-shadow: inset 0 0 0 0 #1e96d9, inset 0 0 0 1px #1e96d9, 0 0 0px 1px rgba(101, 186, 234, 0), 0 0 0 0 rgba(0, 0, 0, 0.2); }
     .gds-button--outline:hover else,
     .gds-circular-button--outline:hover else,
@@ -12084,7 +12090,7 @@ select {
   .gds-circular-button--default:focus:hover,
   .gds-button--toggle:focus:hover,
   .gds-circular-button--toggle:focus:hover {
-    background: linear-gradient(180deg, transparent -50%, transparent 100%);
+    background-position: top;
     box-shadow: inset 0 0 0 0 #1e96d9, inset 0 0 0 1px #1e96d9, 0 0 1px 1px #65baea, 0 0 0 2 rgba(30, 150, 217, 0.6); }
     .gds-button--outline:focus:hover else,
     .gds-circular-button--outline:focus:hover else,
@@ -12107,7 +12113,7 @@ select {
   .gds-button--toggle:active:focus,
   .gds-circular-button--toggle:active,
   .gds-circular-button--toggle:active:focus {
-    background: linear-gradient(180deg, transparent -50%, transparent 100%);
+    background-position: top;
     box-shadow: inset 0 0 0 0 #1e96d9, inset 0 0 0 1px #1e96d9, 0 0 0px 1px rgba(101, 186, 234, 0), 0 0 0 2px rgba(30, 150, 217, 0.4); }
     .gds-button--outline:active else, .gds-button--outline:active:focus else,
     .gds-circular-button--outline:active else,
@@ -12130,7 +12136,7 @@ select {
   .gds-circular-button--default:focus,
   .gds-button--toggle:focus,
   .gds-circular-button--toggle:focus {
-    background: linear-gradient(180deg, transparent -50%, transparent 100%);
+    background-position: top;
     box-shadow: inset 0 0 0 0 #1e96d9, inset 0 0 0 1px #1e96d9, 0 0 0 0 #65baea, 0 0 0 2px rgba(30, 150, 217, 0.4); }
     .gds-button--outline:focus else,
     .gds-circular-button--outline:focus else,
@@ -12153,27 +12159,30 @@ select {
   .gds-button--toggle.gds-button--active:hover,
   .gds-circular-button--toggle.gds-button--active,
   .gds-circular-button--toggle.gds-button--active:hover {
-    background: linear-gradient(180deg, #1770a3 -50%, #1770a3 100%);
+    background-position: bottom;
     color: #fff; }
 
 .gds-button--white,
 .gds-circular-button--white {
   color: #ffffff;
   box-shadow: inset 0 0 0 0 #ffffff, inset 0 0 0 1px #ffffff, 0 0 0px 0px rgba(101, 186, 234, 0), 0 0 0px 0 rgba(0, 0, 0, 0);
-  background: linear-gradient(180deg, transparent -50%, transparent 100%); }
+  background-color: inherit;
+  background-size: 100% 300%;
+  background-position: center;
+  background-image: linear-gradient(transparent 10%, transparent 140%); }
   .gds-button--white else,
   .gds-circular-button--white else {
     box-shadow: inset 0 0 0 0 #ffffff, 0 0 0px 1px rgba(101, 186, 234, 0), 0 0 0px 0 rgba(0, 0, 0, 0); }
   .gds-button--white:hover,
   .gds-circular-button--white:hover {
-    background: linear-gradient(180deg, transparent -50%, transparent 100%);
+    background-position: top;
     box-shadow: inset 0 0 0 0 #dbdbdb, inset 0 0 0 1px #dbdbdb, 0 0 0px 1px rgba(101, 186, 234, 0), 0 0 0 0 rgba(0, 0, 0, 0.2); }
     .gds-button--white:hover else,
     .gds-circular-button--white:hover else {
       box-shadow: inset 0 0 0 0 #dbdbdb, 0 0 0px 1px rgba(101, 186, 234, 0), 0 0 3px 0 rgba(0, 0, 0, 0.2); }
   .gds-button--white:focus:hover,
   .gds-circular-button--white:focus:hover {
-    background: linear-gradient(180deg, transparent -50%, transparent 100%);
+    background-position: top;
     box-shadow: inset 0 0 0 0 #dbdbdb, inset 0 0 0 1px #dbdbdb, 0 0 1px 1px #65baea, 0 0 0 2 rgba(219, 219, 219, 0.6); }
     .gds-button--white:focus:hover else,
     .gds-circular-button--white:focus:hover else {
@@ -12181,7 +12190,7 @@ select {
   .gds-button--white:active, .gds-button--white:active:focus,
   .gds-circular-button--white:active,
   .gds-circular-button--white:active:focus {
-    background: linear-gradient(180deg, transparent -50%, transparent 100%);
+    background-position: top;
     box-shadow: inset 0 0 0 0 #f3f3f3, inset 0 0 0 1px #f3f3f3, 0 0 0px 1px rgba(101, 186, 234, 0), 0 0 0 2px rgba(243, 243, 243, 0.4); }
     .gds-button--white:active else, .gds-button--white:active:focus else,
     .gds-circular-button--white:active else,
@@ -12189,7 +12198,7 @@ select {
       box-shadow: inset 0 0 0 0 #f3f3f3, 0 0 0px 1px rgba(101, 186, 234, 0), 0 0 1px 0 rgba(0, 0, 0, 0.4); }
   .gds-button--white:focus,
   .gds-circular-button--white:focus {
-    background: linear-gradient(180deg, transparent -50%, transparent 100%);
+    background-position: top;
     box-shadow: inset 0 0 0 0 #dbdbdb, inset 0 0 0 1px #dbdbdb, 0 0 0 0 #65baea, 0 0 0 2px rgba(219, 219, 219, 0.4); }
     .gds-button--white:focus else,
     .gds-circular-button--white:focus else {
@@ -12208,7 +12217,10 @@ select {
 .gds-anim-timeline__button--remove,
 .gds-onboarder__button,
 .DayPicker-TodayButton {
-  background: linear-gradient(180deg, #3ea9e4 -50%, #1770a3 100%); }
+  background-color: inherit;
+  background-size: 100% 300%;
+  background-position: center;
+  background-image: linear-gradient(#3ea9e4 10%, #1770a3 140%); }
   .gds-button--primary:hover,
   .react-datepicker__today-button:hover,
   .ReactTable .-pagination .-btn:hover,
@@ -12217,7 +12229,7 @@ select {
   .gds-anim-timeline__button--remove:hover,
   .gds-onboarder__button:hover,
   .DayPicker-TodayButton:hover {
-    background: linear-gradient(180deg, #3ea9e4 -50%, #3ea9e4 100%); }
+    background-position: top; }
   .gds-button--primary:focus,
   .react-datepicker__today-button:focus,
   .ReactTable .-pagination .-btn:focus,
@@ -12236,98 +12248,116 @@ select {
   .gds-anim-timeline__button--remove:active,
   .gds-onboarder__button:active,
   .DayPicker-TodayButton:active {
-    background: linear-gradient(180deg, #1770a3 -50%, #1770a3 100%);
+    background-position: bottom;
     box-shadow: 0 0 0 2px #b2ddf4; }
 
 .gds-button--secondary,
 .gds-circular-button--secondary {
-  background: linear-gradient(180deg, #0e68bb -50%, #083662 100%); }
+  background-color: inherit;
+  background-size: 100% 300%;
+  background-position: center;
+  background-image: linear-gradient(#0e68bb 10%, #083662 140%); }
   .gds-button--secondary:hover,
   .gds-circular-button--secondary:hover {
-    background: linear-gradient(180deg, #0e68bb -50%, #0e68bb 100%); }
+    background-position: top; }
   .gds-button--secondary:focus,
   .gds-circular-button--secondary:focus {
     outline: none;
     box-shadow: 0 0 0 2px #8cc3f6; }
   .gds-button--secondary:active,
   .gds-circular-button--secondary:active {
-    background: linear-gradient(180deg, #083662 -50%, #083662 100%);
+    background-position: bottom;
     box-shadow: 0 0 0 2px #8cc3f6; }
 
 .gds-button--tertiary,
 .gds-circular-button--tertiary {
-  background: linear-gradient(180deg, #54dfa8 -50%, #1fa972 100%); }
+  background-color: inherit;
+  background-size: 100% 300%;
+  background-position: center;
+  background-image: linear-gradient(#54dfa8 10%, #1fa972 140%); }
   .gds-button--tertiary:hover,
   .gds-circular-button--tertiary:hover {
-    background: linear-gradient(180deg, #54dfa8 -50%, #54dfa8 100%); }
+    background-position: top; }
   .gds-button--tertiary:focus,
   .gds-circular-button--tertiary:focus {
     outline: none;
     box-shadow: 0 0 0 2px #bbf2dc; }
   .gds-button--tertiary:active,
   .gds-circular-button--tertiary:active {
-    background: linear-gradient(180deg, #1fa972 -50%, #1fa972 100%);
+    background-position: bottom;
     box-shadow: 0 0 0 2px #bbf2dc; }
 
 .gds-button--success,
 .gds-circular-button--success {
-  background: linear-gradient(180deg, #54dfa8 -50%, #1fa972 100%); }
+  background-color: inherit;
+  background-size: 100% 300%;
+  background-position: center;
+  background-image: linear-gradient(#54dfa8 10%, #1fa972 140%); }
   .gds-button--success:hover,
   .gds-circular-button--success:hover {
-    background: linear-gradient(180deg, #54dfa8 -50%, #54dfa8 100%); }
+    background-position: top; }
   .gds-button--success:focus,
   .gds-circular-button--success:focus {
     outline: none;
     box-shadow: 0 0 0 2px #bbf2dc; }
   .gds-button--success:active,
   .gds-circular-button--success:active {
-    background: linear-gradient(180deg, #1fa972 -50%, #1fa972 100%);
+    background-position: bottom;
     box-shadow: 0 0 0 2px #bbf2dc; }
 
 .gds-button--danger,
 .gds-circular-button--danger {
-  background: linear-gradient(180deg, #fc6248 -50%, #d32204 100%); }
+  background-color: inherit;
+  background-size: 100% 300%;
+  background-position: center;
+  background-image: linear-gradient(#fc6248 10%, #d32204 140%); }
   .gds-button--danger:hover,
   .gds-circular-button--danger:hover {
-    background: linear-gradient(180deg, #fc6248 -50%, #fc6248 100%); }
+    background-position: top; }
   .gds-button--danger:focus,
   .gds-circular-button--danger:focus {
     outline: none;
     box-shadow: 0 0 0 2px #fec0b6; }
   .gds-button--danger:active,
   .gds-circular-button--danger:active {
-    background: linear-gradient(180deg, #d32204 -50%, #d32204 100%);
+    background-position: bottom;
     box-shadow: 0 0 0 2px #fec0b6; }
 
 .gds-button--warning,
 .gds-circular-button--warning {
   color: #444;
-  background: linear-gradient(180deg, #f5da46 -50%, #c4a70b 100%); }
+  background-color: inherit;
+  background-size: 100% 300%;
+  background-position: center;
+  background-image: linear-gradient(#f5da46 10%, #c4a70b 140%); }
   .gds-button--warning:hover,
   .gds-circular-button--warning:hover {
-    background: linear-gradient(180deg, #f5da46 -50%, #f5da46 100%); }
+    background-position: top; }
   .gds-button--warning:focus,
   .gds-circular-button--warning:focus {
     outline: none;
     box-shadow: 0 0 0 2px #fbf0b5; }
   .gds-button--warning:active,
   .gds-circular-button--warning:active {
-    background: linear-gradient(180deg, #c4a70b -50%, #c4a70b 100%);
+    background-position: bottom;
     box-shadow: 0 0 0 2px #fbf0b5; }
 
 .gds-button--info,
 .gds-circular-button--info {
-  background: linear-gradient(180deg, #8d89dd -50%, #3e37be 100%); }
+  background-color: inherit;
+  background-size: 100% 300%;
+  background-position: center;
+  background-image: linear-gradient(#8d89dd 10%, #3e37be 140%); }
   .gds-button--info:hover,
   .gds-circular-button--info:hover {
-    background: linear-gradient(180deg, #8d89dd -50%, #8d89dd 100%); }
+    background-position: top; }
   .gds-button--info:focus,
   .gds-circular-button--info:focus {
     outline: none;
     box-shadow: 0 0 0 2px #d1d0f1; }
   .gds-button--info:active,
   .gds-circular-button--info:active {
-    background: linear-gradient(180deg, #3e37be -50%, #3e37be 100%);
+    background-position: bottom;
     box-shadow: 0 0 0 2px #d1d0f1; }
 
 .gds-button--dark,
@@ -12724,7 +12754,10 @@ select {
   text-shadow: none !important;
   box-shadow: none !important;
   border-width: 0;
-  background: linear-gradient(180deg, transparent -50%, transparent 100%); }
+  background-color: inherit;
+  background-size: 100% 300%;
+  background-position: center;
+  background-image: linear-gradient(transparent 10%, transparent 140%); }
   .gds-button--link:hover, .gds-button--link:active, .gds-button--link:focus, .gds-button--link:active:focus,
   .gds-corner-content__button:hover,
   .gds-corner-content__button:active,
@@ -18865,7 +18898,6 @@ select {
 .gds-form-group__select-multiple[multiple],
 .gds-form-group__range-input,
 .gds-form-group__text-input,
-.gds-search-select__input,
 .gds-form-group__text-area-input,
 .gds-form-group__date-group,
 .gds-form-group__text-input--xs,
@@ -24607,21 +24639,21 @@ select {
 .gds-legend__value[data-gds-color="orange-lt-4"] {
   color: #feb776; }
 
-.gds-search-select__input:hover ~ .gds-search-select__text-help {
-  background-color: #1e96d9; }
+.gds-search-select__input {
+  background-image: none !important; }
+  .gds-search-select__input:hover ~ .gds-search-select__text-help {
+    background-color: #1e96d9; }
 
 .gds-search-select--success .gds-search-select__input {
   box-shadow: inset 0 -0.125rem 0 0 #32d996, inset 0 0 0 1px #32d996;
-  color: #32d996;
-  background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%2332d996%3B%22/%3E%3C/svg%3E") !important; }
+  color: #1a8d5f; }
   .gds-search-select--success .gds-search-select__input:hover, .gds-search-select--success .gds-search-select__input:focus, .gds-search-select--success .gds-search-select__input:hover:focus {
     box-shadow: inset 0 -0.125rem 0 0 #32d996, inset 0 0 0 1px #32d996; }
 
 .gds-search-select--success .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
 .gds-search-select--success .gds-form-group__checkbox-input:checked
 + .gds-search-select__checkbox-indicator {
-  border-color: #32d996;
-  background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%2332d996%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
+  border-color: #32d996; }
 
 .gds-search-select--success .gds-tag {
   background-color: #32d996;
@@ -24699,10 +24731,10 @@ select {
   border: 1px solid #1e96d9;
   border-top-color: #1e96d9 !important;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
-  -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  -moz-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
   /* easeOutQuart */
   -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -24772,10 +24804,10 @@ select {
   text-align: left;
   border: 1px solid #c4c4c4;
   cursor: pointer;
-  -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  -moz-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
   /* easeOutQuart */
   -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -24826,10 +24858,10 @@ select {
   right: 0;
   box-shadow: 0 0 0px 0 rgba(0, 0, 0, 0);
   z-index: 500;
-  -webkit-transition: all 100ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -moz-transition: all 100ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -o-transition: all 100ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: all 100ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -webkit-transition: all 0ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -moz-transition: all 0ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -o-transition: all 0ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: all 0ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
   /* easeOutQuart */
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   -moz-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -24841,17 +24873,17 @@ select {
   padding: 0.25rem 0.5rem;
   cursor: pointer;
   z-index: 600;
-  color: #5f5f5f;
+  color: #0b3851;
   font-size: 0.9rem;
   background-color: rgba(30, 150, 217, 0);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  -moz-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
   /* easeOutQuart */
   -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -24860,24 +24892,21 @@ select {
   /* easeOutQuart */ }
 
 .gds-search-select__menu-item:hover {
-  color: white;
-  background-color: rgba(30, 150, 217, 0.55); }
+  background-color: #d8eefa; }
   .gds-search-select__menu-item:hover .gds-search-select__checkbox-indicator {
     border-color: white;
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23ffffff%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
 
 .gds-search-select__menu-item--selected,
 .gds-search-select__menu-item--selected:hover {
-  color: white;
-  background-color: rgba(30, 150, 217, 0.75); }
+  background-color: #b2ddf4; }
   .gds-search-select__menu-item--selected .gds-search-select__checkbox-indicator,
   .gds-search-select__menu-item--selected:hover .gds-search-select__checkbox-indicator {
     border-color: white;
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23ffffff%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
 
 .gds-search-select__menu-item:active {
-  color: white;
-  background-color: #1e96d9; }
+  background-color: #8bcbef; }
   .gds-search-select__menu-item:active .gds-search-select__checkbox-indicator {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23ffffff%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
 
@@ -24900,10 +24929,10 @@ select {
   border-left: 1px solid #c4c4c4;
   border-bottom: 1px solid #c4c4c4;
   padding: 0.25rem;
-  -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  -moz-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
   /* easeOutQuart */
   -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -24921,10 +24950,10 @@ select {
   top: -2px;
   pointer-events: none;
   transform: translateY(calc(-50% + 27px)) translateX(50px);
-  -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  -moz-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
   /* easeOutQuart */
   -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -24984,11 +25013,17 @@ select {
   right: 0;
   top: 0;
   height: 100%;
-  width: 3rem;
-  background-color: transparent;
+  width: 2rem;
+  background: transparent;
   border: none;
   z-index: 800;
-  outline: none; }
+  outline: none;
+  cursor: pointer;
+  color: #acacac; }
+  .gds-search-select__toggle-button:hover {
+    color: #1770a3; }
+  .gds-search-select__toggle-button:active {
+    color: #0f4b6d; }
 
 .gds-ranker-grid {
   display: flex !important;
@@ -25883,14 +25918,17 @@ select {
   padding: 0.22222rem 0.2rem 0.33333rem 0.2rem;
   font-size: 0.66667rem;
   opacity: 0;
-  background: linear-gradient(180deg, #fc826c -50%, #d32204 100%); }
+  background-color: inherit;
+  background-size: 100% 300%;
+  background-position: center;
+  background-image: linear-gradient(#fc826c 10%, #d32204 140%); }
   .gds-tree__link-option:hover {
-    background: linear-gradient(180deg, #fc826c -50%, #fc826c 100%); }
+    background-position: top; }
   .gds-tree__link-option:focus {
     outline: none;
     box-shadow: 0 0 0 2px #fec0b6; }
   .gds-tree__link-option:active {
-    background: linear-gradient(180deg, #d32204 -50%, #d32204 100%);
+    background-position: bottom;
     box-shadow: 0 0 0 2px #fec0b6; }
 
 .gds-radio-block {
@@ -30934,12 +30972,72 @@ select {
     display: flex;
     justify-content: center; } }
 
-.menu-btn {
-  display: none; }
+.gds-nav__link,
+.gds-nav__link-sub {
+  position: relative;
+  display: inline-block;
+  background: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 1.2rem 1rem;
+  cursor: pointer;
+  color: #5f5f5f;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  text-align: left;
+  outline-style: none; }
+  .gds-nav__link:hover,
+  .gds-nav__link-sub:hover {
+    color: #135e88;
+    background-color: none;
+    box-shadow: inset 0px -2px 0px #1a83be; }
+  .gds-nav__link:active, .gds-nav__link:focus,
+  .gds-nav__link-sub:active,
+  .gds-nav__link-sub:focus {
+    background-color: #f3f3f3; }
+  .gds-nav__link:active,
+  .gds-nav__link-sub:active {
+    color: #0b3851; }
+  .gds-nav__link-icon,
+  .gds-nav__link-sub-icon {
+    margin-right: 0.6rem; }
 
-@media (max-width: 1100px) {
-  .menu-btn {
-    display: inline-block; } }
+.gds-nav__link-sub {
+  border-radius: 6px; }
+  .gds-nav__link-sub:hover {
+    color: #0b3851;
+    background-color: #d8eefa;
+    box-shadow: none; }
+  .gds-nav__link-sub-icon {
+    margin-right: 0.6rem; }
+
+.gds-app-layout__left.gds-side-nav .gds-nav__link {
+  padding: 0.75rem 1rem; }
+  .gds-app-layout__left.gds-side-nav .gds-nav__link:hover {
+    box-shadow: inset -2px 0 0px #1a83be; }
+
+.gds-app-layout__right.gds-side-nav .gds-nav__link {
+  padding: 0.75rem 1rem; }
+  .gds-app-layout__right.gds-side-nav .gds-nav__link:hover {
+    box-shadow: inset 2px 0 0px #1a83be; }
+
+.gds-side-nav {
+  width: 12rem;
+  background: white; }
+  @media (min-width: 1099px) {
+    .gds-side-nav--collapsed {
+      width: fit-content; }
+      .gds-side-nav--collapsed .gds-nav__link > .gds-nav__link-text {
+        display: none; }
+      .gds-side-nav--collapsed .gds-nav__link > .gds-nav__link-icon {
+        font-size: 1rem;
+        margin-right: 0; } }
+
+.gds-nav__icon-group {
+  display: flex; }
 
 .gds-nav-top,
 .gds-nav-bottom {
@@ -30953,12 +31051,13 @@ select {
     flex-grow: 1; }
 
 .gds-nav-top {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.16); }
+  box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.16);
+  padding: 0 0.5rem; }
+  .gds-nav-top--grow-0 {
+    flex-grow: 0; }
   .gds-nav-top .gds-nav-logo {
     flex-grow: 0;
     width: fit-content;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
     line-height: 0;
     display: flex;
     align-items: center; }
@@ -30974,8 +31073,8 @@ select {
       background-repeat: no-repeat;
       background-position: center;
       background-origin: content-box;
-      padding: 0.8rem 1rem;
-      width: 10rem;
+      padding: 0.8rem 0.5rem;
+      width: 8rem;
       height: 100%; }
     @media (max-width: 1100px) {
       .gds-nav-top .gds-nav-logo:empty {
@@ -30987,32 +31086,10 @@ select {
     align-items: center;
     flex-flow: row;
     position: relative; }
-  .gds-nav-top__link {
-    display: inline-block;
-    background: none;
-    border: none;
-    height: auto;
-    padding: 1rem 1rem;
-    cursor: pointer;
-    font: inherit;
-    font-size: 14px;
-    font-weight: 500;
-    color: #7a7a7a; }
-    .gds-nav-top__link:hover {
-      color: #0b3851;
-      background-color: none;
-      box-shadow: inset 0px -2px 0px #1a83be; }
-    .gds-nav-top__link:active, .gds-nav-top__link:focus {
-      background-color: #f3f3f3; }
-  .gds-nav-top__links--sub-wrapper > .gds-nav-top__link::after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f078";
-    padding-left: 0.5rem; }
+  .gds-nav-top__icons > .gds-nav-top__link {
+    padding: 1rem 0.5rem; }
   .gds-nav-top__links-sub {
     display: none; }
-  .gds-nav-top__links--sub-wrapper:active {
-    background: red; }
   .gds-nav-top__links--sub-wrapper--active > .gds-nav-top__links-sub,
   .gds-nav-top__links--sub-wrapper:hover > .gds-nav-top__links-sub {
     display: inline-block;
@@ -31029,13 +31106,14 @@ select {
     font: inherit; }
     .gds-nav-top__links--sub-wrapper--active > .gds-nav-top__links-sub .gds-nav-top__link,
     .gds-nav-top__links--sub-wrapper:hover > .gds-nav-top__links-sub .gds-nav-top__link {
-      display: block;
+      display: inline-block;
       padding: 0.5rem 1rem;
-      border-radius: 6px; }
+      border-radius: 6px;
+      background: red; }
       .gds-nav-top__links--sub-wrapper--active > .gds-nav-top__links-sub .gds-nav-top__link:hover,
       .gds-nav-top__links--sub-wrapper:hover > .gds-nav-top__links-sub .gds-nav-top__link:hover {
         color: #0b3851;
-        background-color: #f3f3f3;
+        background-color: #d8eefa;
         box-shadow: none; }
       .gds-nav-top__links--sub-wrapper--active > .gds-nav-top__links-sub .gds-nav-top__link:active, .gds-nav-top__links--sub-wrapper--active > .gds-nav-top__links-sub .gds-nav-top__link:focus,
       .gds-nav-top__links--sub-wrapper:hover > .gds-nav-top__links-sub .gds-nav-top__link:active,
@@ -31044,13 +31122,6 @@ select {
 
 .gds-nav-bottom {
   box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1); }
-
-.gds-side-nav {
-  width: 12rem;
-  background: #fff; }
-  @media (min-width: 1099px) {
-    .gds-side-nav--collapsed {
-      width: 4rem; } }
 
 @media (max-width: 1100px) {
   .gds-app-layout__left .gds-side-nav {

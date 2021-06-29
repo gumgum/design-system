@@ -3,17 +3,99 @@
 // Right Nav - used sparingly
 // Bottom Nav - used sparingly
 
-//temp start
-.menu-btn {
-  display: none;
-}
+// gds-nav__link - the wrapper
+// gds-nav__link-icon - optional
+// gds-nav__link-text - hides on collapsed
+.gds-nav__link,
+.gds-nav__link-sub {
+  position: relative;
+  display: inline-block;
+  background: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 1.2rem 1rem;
+  cursor: pointer;
+  color: $gg-dark-4;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  text-align: left;
+  outline-style: none;
 
-@media (max-width: 1100px) {
-  .menu-btn {
-    display: inline-block;
+  &:hover {
+    color: $primaryDark3Color;
+    background-color: none;
+    box-shadow: inset 0px -2px 0px $primaryDark1Color;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $gg-light-1;
+  }
+
+  &:active {
+    color: $primaryDark5Color;
+  }
+
+  &-icon {
+    margin-right: 0.6rem;
   }
 }
-//temp end
+
+.gds-nav__link-sub {
+  border-radius: $border-radius;
+
+  &:hover {
+    color: $primaryDark5Color;
+    background-color: $primaryLight5Color;
+    box-shadow: none;
+  }
+
+  // icon
+  &-icon {
+    margin-right: 0.6rem;
+  }
+}
+
+.gds-app-layout__left.gds-side-nav .gds-nav__link {
+  padding: 0.75rem 1rem;
+  &:hover {
+    box-shadow: inset -2px 0 0px $primaryDark1Color;
+  }
+}
+
+.gds-app-layout__right.gds-side-nav .gds-nav__link {
+  padding: 0.75rem 1rem;
+  &:hover {
+    box-shadow: inset 2px 0 0px $primaryDark1Color;
+  }
+}
+
+.gds-side-nav {
+  width: 12rem;
+  background: white;
+  @media (min-width: 1099px) {
+    &--collapsed {
+      width: fit-content;
+
+      .gds-nav__link {
+        > .gds-nav__link-text {
+          display: none;
+        }
+        > .gds-nav__link-icon {
+          font-size: 1rem;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.gds-nav__icon-group {
+  display: flex;
+}
 
 .gds-nav-top,
 .gds-nav-bottom {
@@ -29,12 +111,14 @@
 }
 
 .gds-nav-top {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.16);
+  padding: 0 0.5rem;
+  &--grow-0 {
+    flex-grow: 0;
+  }
   .gds-nav-logo {
     flex-grow: 0;
     width: fit-content;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
     line-height: 0;
     display: flex;
     align-items: center;
@@ -55,8 +139,8 @@
       background-repeat: no-repeat;
       background-position: center;
       background-origin: content-box;
-      padding: 0.8rem 1rem;
-      width: 10rem;
+      padding: 0.8rem 0.5rem;
+      width: 8rem;
       height: 100%;
     }
 
@@ -76,45 +160,15 @@
     position: relative;
   }
 
-  &__link {
-    display: inline-block;
-    background: none;
-    border: none;
-    height: auto;
-    padding: 1rem 1rem;
-    cursor: pointer;
-    font: inherit;
-    font-size: 14px;
-    font-weight: $font-weight-bold;
-    color: $gg-dark-5;
-
-    &:hover {
-      color: $primaryDark5Color;
-      background-color: none;
-      box-shadow: inset 0px -2px 0px $primaryDark1Color;
-    }
-
-    &:active,
-    &:focus {
-      background-color: $gg-light-1;
-    }
-  }
-
-  &__links--sub-wrapper > &__link::after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f078";
-    padding-left: 0.5rem;
+  &__icons > &__link {
+    padding: 1rem 0.5rem;
   }
 
   &__links-sub {
     display: none;
   }
 
-  &__links--sub-wrapper:active {
-    background: red;
-  }
-
+  // Works on hover and with active class (requires JS to toggle)
   &__links--sub-wrapper--active > &__links-sub,
   &__links--sub-wrapper:hover > &__links-sub {
     display: inline-block;
@@ -127,19 +181,18 @@
     z-index: $z-index-4;
     height: auto;
     width: max-content;
-    // padding: 0.5rem 0;
     padding: 0.75rem;
     font: inherit;
 
     .gds-nav-top__link {
-      display: block;
-      // padding: 0.25rem 1rem;
+      display: inline-block;
       padding: 0.5rem 1rem;
       border-radius: $border-radius;
+      background: red;
 
       &:hover {
         color: $primaryDark5Color;
-        background-color: $gg-light-1;
+        background-color: $primaryLight5Color;
         box-shadow: none;
       }
 
@@ -153,17 +206,6 @@
 
 .gds-nav-bottom {
   box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
-}
-
-.gds-side-nav {
-  width: 12rem;
-  background: #fff;
-  // Collapse disabled for mobile size
-  @media (min-width: 1099px) {
-    &--collapsed {
-      width: 4rem;
-    }
-  }
 }
 
 @media (max-width: 1100px) {
