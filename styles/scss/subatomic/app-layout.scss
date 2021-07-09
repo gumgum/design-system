@@ -50,8 +50,8 @@
     "bottom bottom bottom";
 }
 
-// Tablet - Mobile
-@media (max-width: 1100px) {
+// Tablet - Mobile & Tablet
+@media (max-width: $tablet) {
   .gds-app-layout__main {
     padding: 0.5rem;
   }

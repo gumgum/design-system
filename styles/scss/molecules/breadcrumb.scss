@@ -1,33 +1,8 @@
-// <nav class="gds-breadcrumb" aria-label="Breadcrumb">
-// <ol class="gds-breadcrumb__list">
-//   <li class="gds-breadcrumb__item">
-//     <a class="gds-breadcrumb__link" href="#">
-//       Home
-//     </a>
-//   </li>
-//   <li class="gds-breadcrumb__item">
-//     <a class="gds-breadcrumb__link" href="#">
-//       About
-//     </a>
-//   </li>
-//   <li class="gds-breadcrumb__item">
-//     <a
-//       class="gds-breadcrumb__link"
-//       href="#"
-//       aria-current="location"
-//     >
-//       Vision
-//     </a>
-//   </li>
-// </ol>
-// </nav>
-
 // Wrapper
 // List
 //Item
 
 .gds-breadcrumb {
-  //   background: gold;
   width: 100%;
 
   &__list {
@@ -36,7 +11,6 @@
     font-size: 0.8rem;
     line-height: 1.2;
     padding: 0.5rem;
-    // background: greenyellow;
   }
   &__item {
     display: inline-block;
