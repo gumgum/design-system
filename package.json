@@ -2,63 +2,23 @@
   "name": "gumgum-design",
   "version": "1.8.2",
   "description": "GumGum's design system, Concrete.",
-  "main": "styles/scss/index.scss",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gumgum/design-system.git"
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [
-    "design",
-    "system",
-    "ds",
-    "gumgum",
-    "node-sass",
-    "scss",
-    "css",
-    "prettier"
-  ],
-  "author": "Garrett Whisten",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gumgum/design-system/issues"
-  },
-  "homepage": "https://github.com/gumgum/design-system#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
-    "fontsource-public-sans": "^3.0.3"
+    "@fontsource/public-sans": "^4.5.0",
+    "@fortawesome/fontawesome-free": "^5.15.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@storybook/addon-actions": "^6.3.4",
-    "@storybook/addon-controls": "^6.3.4",
-    "@storybook/addon-essentials": "^6.1.21",
-    "@storybook/addon-links": "^6.3.4",
-    "@storybook/html": "^6.1.21",
-    "@storybook/preset-scss": "^1.0.3",
-    "@whitespace/storybook-addon-html": "^5.0.0",
-    "babel-loader": "^8.1.0",
-    "browser-sync": "^2.26.13",
-    "css-loader": "^5.0.0",
-    "file-loader": "^6.2.0",
-    "node-sass": "^6.0.1",
-    "npm-run-all": "^4.1.5",
-    "prettier": "2.1.2",
-    "react-is": "^16.13.1",
-    "resolve-url-loader": "^3.1.2",
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "sass": "^1.29.0",
-    "sass-loader": "^10.0.4",
-    "style-loader": "^2.0.0"
+    "eslint": "7.30.0",
+    "eslint-config-next": "11.0.1"
   },
-  "scripts": {
-    "start": "start-storybook -p 6006 -c .storybook watch-css -s ./styles",
-    "start:temp": "npm-run-all --parallel styles:watch browsersync:config",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "styles:build": "node-sass --include-path scss styles/scss/index.scss  styles/compressed-css/index.css --output-style compressed",
-    "styles:watch": "node-sass -w styles/scss -o temp/",
-    "browsersync": "browser-sync start --server --files temp/",
-    "browsersync:config": "browser-sync start --config bs-config.js",
-    "sass-test": "sass styles/scss/index.scss build/stylesheets/index.css"
-  }
+  "files": ["styles"]
 }
