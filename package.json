@@ -1,6 +1,6 @@
 {
   "name": "gumgum-design",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "GumGum's design system, Concrete.",
   "main": "styles/scss/index.scss",
   "repository": {
@@ -29,13 +29,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
-    "@storybook/addon-actions": "^6.0.28",
-    "@storybook/addon-controls": "^6.0.28",
-    "@storybook/addon-essentials": "^6.0.28",
-    "@storybook/addon-links": "^6.0.28",
-    "@storybook/html": "^6.0.28",
+    "@storybook/addon-actions": "^6.3.4",
+    "@storybook/addon-controls": "^6.3.4",
+    "@storybook/addon-essentials": "^6.3.4",
+    "@storybook/addon-links": "^6.3.4",
+    "@storybook/html": "^6.3.4",
     "@storybook/preset-scss": "^1.0.3",
-    "@whitespace/storybook-addon-html": "^2.0.1",
+    "@whitespace/storybook-addon-html": "^5.0.0",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.13",
     "css-loader": "^5.0.0",

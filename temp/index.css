@@ -31286,6 +31286,8 @@ select {
   margin: 0.5rem auto; }
 
 @media (min-width: 991px) {
+  .gds-nav__top.gds-nav__auto-hide {
+    display: none; }
   .gds-nav__side > .gds-nav__close-wrapper {
     display: none; }
   .gds-nav__top > .gds-nav__menu.gds-nav__auto-hide {

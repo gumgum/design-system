@@ -367,6 +367,9 @@
 
 // Hide for greater than tablet
 @media (min-width: $tablet) {
+  .gds-nav__top.gds-nav__auto-hide {
+    display: none;
+  }
   .gds-nav__side {
     > .gds-nav__close-wrapper {
       display: none;

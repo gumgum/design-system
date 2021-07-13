@@ -1,7 +1,7 @@
 // $icon-font-path: "../fonts/";
 // $image-path: "../images/";
-$fa-font-path: "../webfonts";
-// $fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
+// $fa-font-path: "../webfonts";
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 
 // Design Tokens
 @import "./theme.scss";
@@ -24,16 +24,16 @@ $fa-font-path: "../webfonts";
 @import "variables/_percentages";
 
 // Icons
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims.scss";
-// @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-// @import "~@fortawesome/fontawesome-free/scss/regular.scss";
-// @import "~@fortawesome/fontawesome-free/scss/solid.scss";
-// @import "~@fortawesome/fontawesome-free/scss/brands.scss";
-// @import "~@fortawesome/fontawesome-free/scss/v4-shims.scss";
+// @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+// @import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+// @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+// @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+// @import "../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims.scss";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/v4-shims.scss";
 
 // Subatomic
 @import "subatomic/reset";
@@ -69,7 +69,7 @@ $fa-font-path: "../webfonts";
 // Molecules
 @import "molecules/accordion";
 @import "molecules/bubble-menu";
-@import "molecules/breadcrumb";
+@import "molecules/breadcrumbs";
 @import "molecules/pagination";
 @import "molecules/table";
 @import "molecules/button-group";
