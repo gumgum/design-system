@@ -1,6 +1,6 @@
 {
   "name": "gumgum-design",
-  "version": "1.8.2",
+  "version": "1.9.1",
   "description": "GumGum's design system, Concrete.",
   "main": "styles/scss/index.scss",
   "repository": {
@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/gumgum/design-system#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
-    "fontsource-public-sans": "^3.0.3"
+    "@fontsource/public-sans": "^4.5.0",
+    "@fortawesome/fontawesome-free": "^5.15.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
