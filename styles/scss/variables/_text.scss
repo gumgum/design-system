@@ -1,12 +1,11 @@
-// @import "fontsource-public-sans/200.css";
-// @import "fontsource-public-sans/300.css";
-// @import "fontsource-public-sans/500.css";
-// @import "fontsource-public-sans/700.css";
+// @import "@fontsource/public-sans/200.css";
+// @import "@fontsource/public-sans/300.css";
+// @import "@fontsource/public-sans/500.css";
 
-@import "~fontsource-public-sans/200.css";
-@import "~fontsource-public-sans/300.css";
-@import "~fontsource-public-sans/500.css";
-@import "~fontsource-public-sans/700.css";
+@import "~@fontsource/public-sans/200.css";
+@import "~@fontsource/public-sans/300.css";
+@import "~@fontsource/public-sans/500.css";
+@import "~@fontsource/public-sans/700.css";
 
 // -------------------------------------------------- //
 // Text variables
@@ -30,11 +29,12 @@ $sec-font-bold: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
 
+// Reduced to force only 3 different font weights
 $font-weight-lighter: 200;
 $font-weight-light: 200;
-$font-weight-normal: 200;
+$font-weight-normal: 300;
 $font-weight-bold: 500;
-$font-weight-bolder: 700;
+$font-weight-bolder: 500;
 
 $font-size: $unit;
 $font-size-minus-1: ($font-size * 0.9);

@@ -33,21 +33,21 @@
 .rt-resizable-header {
   position: relative;
   background-color: $tableHeaderPrimaryBackgroundDefaultColor;
-  color: $grayDark4Color;
+  color: $grayDark3Color;
   border: none;
   cursor: pointer;
   padding: $table-padding-normal;
 
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: $cap-size;
-    width: 100%;
-    background-color: $tableHeaderPrimaryUnderlineDefaultColor;
-    @include transition-back(all, 250ms);
-  }
+  // &:after {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: 0;
+  //   height: $cap-size;
+  //   width: 100%;
+  //   background-color: $tableHeaderPrimaryUnderlineDefaultColor;
+  //   @include transition-back(all, 250ms);
+  // }
   &:before {
     content: "";
     width: 0;
@@ -114,6 +114,7 @@
   td,
   th {
     padding: $table-padding-normal;
+    border-bottom: 1px solid $grayLight2Color;
   }
   // For proper flow on mobile, to trigger overflow-x scroll
   th:last-child,
@@ -258,14 +259,14 @@
 
 // Striped table
 .gds-table--striped {
-  tr:nth-of-type(odd) {
+  tr:nth-of-type(even) {
     background-color: rgba($gg-light-4, 0.1);
     &:hover {
       background-color: rgba($gg-light-4, 0.2);
     }
   }
   .gds-table__row--selected,
-  .gds-table__row--selected:nth-of-type(odd) {
+  .gds-table__row--selected:nth-of-type(even) {
     background-color: rgba($tableRowPrimaryColor, 0.65);
     color: white;
     &:hover {
@@ -282,15 +283,15 @@
 // Inverse striped table
 .gds-table--inverse-striped {
   tr:hover,
-  tr:nth-of-type(odd):hover {
+  tr:nth-of-type(even):hover {
     background-color: $gg-dark-3;
   }
 
-  tr:nth-of-type(odd) {
+  tr:nth-of-type(even) {
     background-color: mix($gg-dark-2, white, 96%);
   }
   .gds-table__row--inverse-selected,
-  .gds-table__row--inverse-selected:nth-of-type(odd) {
+  .gds-table__row--inverse-selected:nth-of-type(even) {
     background-color: rgba($gg-dark-4, 1);
     color: white;
     &:hover {

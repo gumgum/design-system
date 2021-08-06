@@ -1,5 +1,3 @@
-// $icon-font-path: "../fonts/";
-// $image-path: "../images/";
 // $fa-font-path: "../webfonts";
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 
@@ -38,6 +36,7 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 // Subatomic
 @import "subatomic/reset";
 @import "subatomic/layout";
+@import "subatomic/app-layout";
 @import "subatomic/transitions";
 @import "subatomic/black-tie";
 @import "subatomic/flex";
@@ -68,6 +67,7 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 // Molecules
 @import "molecules/accordion";
 @import "molecules/bubble-menu";
+@import "molecules/breadcrumbs";
 @import "molecules/pagination";
 @import "molecules/table";
 @import "molecules/button-group";
@@ -118,6 +118,7 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 @import "organisms/leaderboard";
 
 // Pages
+@import "pages/nav";
 @import "pages/persist-nav";
 
 // Third-party library support

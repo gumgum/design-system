@@ -1,6 +1,6 @@
 {
   "name": "gumgum-design",
-  "version": "1.7.3",
+  "version": "1.9.4",
   "description": "GumGum's design system, Concrete.",
   "main": "styles/scss/index.scss",
   "repository": {
@@ -24,23 +24,23 @@
   },
   "homepage": "https://github.com/gumgum/design-system#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
-    "fontsource-public-sans": "^3.0.3"
+    "@fontsource/public-sans": "^4.5.0",
+    "@fortawesome/fontawesome-free": "^5.15.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
-    "@storybook/addon-actions": "^6.0.28",
-    "@storybook/addon-controls": "^6.0.28",
-    "@storybook/addon-essentials": "^6.0.28",
-    "@storybook/addon-links": "^6.0.28",
-    "@storybook/html": "^6.0.28",
+    "@storybook/addon-actions": "^6.3.4",
+    "@storybook/addon-controls": "^6.3.4",
+    "@storybook/addon-essentials": "^6.1.21",
+    "@storybook/addon-links": "^6.3.4",
+    "@storybook/html": "^6.1.21",
     "@storybook/preset-scss": "^1.0.3",
-    "@whitespace/storybook-addon-html": "^2.0.1",
+    "@whitespace/storybook-addon-html": "^5.0.0",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.13",
     "css-loader": "^5.0.0",
     "file-loader": "^6.2.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5",
     "prettier": "2.1.2",
     "react-is": "^16.13.1",
