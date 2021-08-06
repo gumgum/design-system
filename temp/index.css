@@ -1,9 +1,10 @@
 /* This is Design System's complete color palette - all built-in themes are constructed from these colors */
 /* These are the main color assignments for this theme. All component color assignments within this theme are based on this subset of the overall palette. Editing these will have far-reaching effects. */
 /* These color assignments affect specific components and allow for fine grain control over the look of your theme. Edit these to change colors of individual components within the design system. */
-@import url(@fontsource/public-sans/200.css);
-@import url(@fontsource/public-sans/300.css);
-@import url(@fontsource/public-sans/500.css);
+@import url(~@fontsource/public-sans/200.css);
+@import url(~@fontsource/public-sans/300.css);
+@import url(~@fontsource/public-sans/500.css);
+@import url(~@fontsource/public-sans/700.css);
 /*!
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -12916,6 +12917,56 @@ select {
   filter: grayscale(75%);
   pointer-events: none; }
 
+.gds-text-button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #1770a3;
+  line-height: 1;
+  padding: 0;
+  font-size: inherit;
+  font-weight: 300;
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+  .gds-text-button:hover, .gds-text-button:focus {
+    color: #1e96d9; }
+  .gds-text-button:active {
+    color: #135e88; }
+
+.gds-text-button--success {
+  color: #1fa972; }
+  .gds-text-button--success:hover, .gds-text-button--success:focus {
+    color: #32d996; }
+  .gds-text-button--success:active {
+    color: #1a8d5f; }
+
+.gds-text-button--danger {
+  color: #d32204; }
+  .gds-text-button--danger:hover, .gds-text-button--danger:focus {
+    color: #fb4323; }
+  .gds-text-button--danger:active {
+    color: #b01d03; }
+
+.gds-text-button--warning {
+  color: #c4a70b; }
+  .gds-text-button--warning:hover, .gds-text-button--warning:focus {
+    color: #f3d221; }
+  .gds-text-button--warning:active {
+    color: #a48b09; }
+
+.gds-text-button--info {
+  color: #3e37be; }
+  .gds-text-button--info:hover, .gds-text-button--info:focus {
+    color: #7671d6; }
+  .gds-text-button--info:active {
+    color: #332e9f; }
+
+.gds-text-button--secondary {
+  color: #083662; }
+  .gds-text-button--secondary:hover, .gds-text-button--secondary:focus {
+    color: #0a4882; }
+  .gds-text-button--secondary:active {
+    color: #062d51; }
+
 .gds-badge,
 .gds-slab-nav__item-badge {
   display: inline-block;
@@ -16540,14 +16591,8 @@ select {
   display: block;
   overflow: hidden;
   border: 1px solid #dbdbdb;
-  border-bottom-width: 0.125rem;
   border-radius: 6px;
-  padding: 1rem; }
-  .gds-well:before, .gds-well:after {
-    content: " ";
-    display: table; }
-  .gds-well:after {
-    clear: both; }
+  padding: 0.66667rem; }
 
 .gds-well--dark {
   border: 1px solid #888888;
@@ -16561,34 +16606,57 @@ select {
   color: rgba(255, 255, 255, 0.85); }
 
 .gds-well--success {
-  background-color: #32d996;
-  border-color: #25c585; }
+  color: #15714c;
+  background-color: #ddf9ee;
+  border-color: #98eccb; }
+  .gds-well--success .gds-well__button {
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%2376e6b9%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E"); }
+    .gds-well--success .gds-well__button:hover {
+      background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%2325c585%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E") !important;
+      opacity: 0.7; }
 
 .gds-well--info {
-  background-color: #7671d6;
-  border-color: #5751cd; }
+  color: #29257f;
+  background-color: #e8e7f8;
+  border-color: #bab8eb; }
+  .gds-well--info .gds-well__button {
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23a4a0e4%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E"); }
+    .gds-well--info .gds-well__button:hover {
+      background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%235751cd%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E") !important;
+      opacity: 0.7; }
 
 .gds-well--warning {
-  background-color: #f3d221;
-  border-color: #e5c30c; }
+  color: #836f07;
+  background-color: #fdf8da;
+  border-color: #f9e990; }
+  .gds-well--warning .gds-well__button {
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23f7e16b%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E"); }
+    .gds-well--warning .gds-well__button:hover {
+      background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23e5c30c%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E") !important;
+      opacity: 0.7; }
 
 .gds-well--danger {
-  background-color: #fb4323;
-  border-color: #f62804; }
+  color: #8c1703;
+  background-color: #fee0da;
+  border-color: #fda191; }
+  .gds-well--danger .gds-well__button {
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23fc826c%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E"); }
+    .gds-well--danger .gds-well__button:hover {
+      background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23f62804%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E") !important;
+      opacity: 0.7; }
 
 .gds-well__text {
   font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  padding-right: 2.5rem;
-  float: left !important; }
+  padding-right: 2.5rem; }
 
 .gds-well__button {
   border: none;
   background-color: transparent !important;
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22100%25%22%20height%3D%22100%25%22%0A%09%20viewBox%3D%220%200%2020px%2020px%22%20preserveAspectRatio%3D%22none%22%20fill%3D%22none%22%20stroke%3D%22%23acacac%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%0A%20%20%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%0A%3C%2Fsvg%3E");
   background-repeat: no-repeat;
-  background-position: 20px 20px;
-  width: 60px;
-  height: 60px;
+  background-position: 15px 15px;
+  width: 50px;
+  height: 50px;
   padding: 0;
   position: absolute;
   top: 0;
@@ -16598,20 +16666,6 @@ select {
     cursor: pointer; }
   .gds-well__button:focus {
     outline: none; }
-
-.gds-well__button--dark,
-.gds-well__button--success,
-.gds-well__button--info,
-.gds-well__button--warning,
-.gds-well__button--danger {
-  background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E"); }
-  .gds-well__button--dark:hover,
-  .gds-well__button--success:hover,
-  .gds-well__button--info:hover,
-  .gds-well__button--warning:hover,
-  .gds-well__button--danger:hover {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%25%20100%25%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%3E%3Cline%20class%3D%22st0%22%20x1%3D%220.9%22%20y1%3D%221%22%20x2%3D%2219.1%22%20y2%3D%2219.2%22%2F%3E%3Cline%20class%3D%22st0%22%20x1%3D%2219.1%22%20y1%3D%221%22%20x2%3D%220.9%22%20y2%3D%2219.2%22%2F%3E%3C%2Fsvg%3E") !important;
-    opacity: 0.7; }
 
 .gds-skeleton {
   width: 90%;
@@ -17226,7 +17280,8 @@ select {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    outline: none; }
+    outline: none;
+    text-transform: capitalize; }
   .gds-breadcrumb__link:hover, .gds-breadcrumb__link:focus {
     color: #1770a3; }
   .gds-breadcrumb__link:active {
@@ -31062,7 +31117,7 @@ select {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   background: none;
   border: none;
   width: 100%;
@@ -31336,6 +31391,48 @@ select {
     .gds-nav__top .gds-nav__links.gds-nav__auto-hide--active .gds-nav__links-sub {
       top: 2rem;
       left: 0.5rem; } }
+
+.gds-nav__side--collapse-wrapper {
+  position: absolute;
+  background: transparent;
+  top: 0;
+  right: -2rem;
+  height: 5rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.gds-nav__side--collapse-button {
+  visibility: hidden;
+  position: relative;
+  width: 1.25rem;
+  height: 2rem;
+  z-index: 10000;
+  border: none;
+  cursor: pointer;
+  background: white;
+  outline: none;
+  border-radius: 0 4px 4px 0;
+  text-align: center;
+  color: #949494; }
+  .gds-nav__side--collapse-button:before {
+    content: "\f053";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .gds-nav__side--collapse-button:hover, .gds-nav__side--collapse-button:focus {
+    color: #292929; }
+
+.gds-nav__side--collapsed .gds-nav__side--collapse-button:before {
+  content: "\f054"; }
+
+.gds-nav__side--collapse-wrapper:hover .gds-nav__side--collapse-button {
+  visibility: visible; }
 
 body.-has-persist-nav {
   position: absolute;
