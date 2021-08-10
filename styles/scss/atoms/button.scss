@@ -1173,3 +1173,15 @@
     color: $secondaryDark3Color;
   }
 }
+
+.gds-text-button--grey,
+.gds-text-button--gray {
+  color: $grayDark2Color;
+  &:hover,
+  &:focus {
+    color: $grayColor;
+  }
+  &:active {
+    color: $grayDark3Color;
+  }
+}
