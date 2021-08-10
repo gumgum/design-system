@@ -1179,9 +1179,21 @@
   color: $grayDark2Color;
   &:hover,
   &:focus {
-    color: $grayColor;
+    color: $primaryColor;
   }
   &:active {
-    color: $grayDark3Color;
+    color: $primaryDark3Color;
+  }
+}
+
+.gds-text-button--light-grey,
+.gds-text-button--light-gray {
+  color: $grayLight3Color;
+  &:hover,
+  &:focus {
+    color: $primaryColor;
+  }
+  &:active {
+    color: $primaryDark3Color;
   }
 }
