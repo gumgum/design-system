@@ -352,12 +352,95 @@
   // For the toggle button
   &.gds-button--active,
   &.gds-button--active:hover {
+    box-shadow: none;
+    color: #ffffff;
     @include backgroundGradient(
-      $primaryLight2Color,
+      $primaryLight1Color,
       $primaryDark2Color,
-      "active"
+      "default"
     );
-    color: #fff;
+    &:hover {
+      @include backgroundGradient(
+        $primaryLight1Color,
+        $primaryDark2Color,
+        "hover"
+      );
+    }
+
+    &:focus {
+      outline: none;
+      @include activeShadow($primaryLight4Color);
+    }
+
+    &:active {
+      @include backgroundGradient(
+        $primaryLight1Color,
+        $primaryDark2Color,
+        "active"
+      );
+      @include activeShadow($primaryLight4Color);
+    }
+  }
+}
+
+.gds-button--outline-danger {
+  color: $dangerColor;
+  @include defaultShadows(
+    $dangerLight5Color,
+    black,
+    $dangerLight2Color,
+    "true"
+  );
+  @include backgroundGradient(transparent, transparent, "default");
+  &:hover {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include hoverShadows($dangerColor, black, $dangerLight2Color, "true");
+  }
+  &:focus:hover {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include hoverFocusShadows($dangerColor, black, $dangerLight2Color, "true");
+  }
+  &:active,
+  &:active:focus {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include activeShadows($dangerColor, black, $dangerLight2Color, "true");
+  }
+  &:focus {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include focusShadows($dangerColor, black, $dangerLight2Color, "true");
+  }
+}
+
+.gds-button--outline-success {
+  color: $successColor;
+  @include defaultShadows(
+    $successLight5Color,
+    black,
+    $successLight2Color,
+    "true"
+  );
+  @include backgroundGradient(transparent, transparent, "default");
+  &:hover {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include hoverShadows($successColor, black, $successLight2Color, "true");
+  }
+  &:focus:hover {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include hoverFocusShadows(
+      $successColor,
+      black,
+      $successLight2Color,
+      "true"
+    );
+  }
+  &:active,
+  &:active:focus {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include activeShadows($successColor, black, $successLight2Color, "true");
+  }
+  &:focus {
+    @include backgroundGradient(transparent, transparent, "hover");
+    @include focusShadows($successColor, black, $successLight2Color, "true");
   }
 }
 
