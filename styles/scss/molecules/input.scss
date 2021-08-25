@@ -2087,3 +2087,127 @@ $thumb-width: ($unit * 0.75);
     opacity: 0.5;
   }
 }
+
+// React Select Override - WORK IN PROGRESS
+
+.gds-react-select {
+  //parent wrapper
+  // this is where we could set the size
+  // font-size: 16px;
+  // &--sm {
+  //   font-size: 13px;
+  // }
+  // &--xs {
+  //   font-size: 11px;
+  // }
+}
+
+.gds-react-select__control {
+  // input area
+  color: inherit;
+  border: none !important;
+  border-radius: $input-border-radius;
+  height: $input-height-md;
+  @include defaultShadows($gg-light-3, black, $primaryLight2Color);
+  @include transition-ease-out(all, 100ms);
+
+  &:hover {
+    color: $gg-dark-4;
+    @include hoverShadows($primaryColor, black, $primaryLight2Color);
+  }
+  &:hover &--is-focused {
+    color: $redColor !important;
+    @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
+  }
+  // &:focus {
+  //   color: $gg-dark-4;
+  //   @include focusShadows($primaryColor, black, $primaryLight2Color);
+  //   outline: none;
+  // }
+
+  &:focus,
+  &--is-focused {
+    //focused input
+    color: $gg-dark-4;
+    border-radius: $input-border-radius !important;
+    @include focusShadows($primaryColor, black, $primaryLight2Color);
+    outline: none;
+    &:hover:focus {
+      @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
+    }
+  }
+
+  &--menu-is-open {
+    // drop down open
+  }
+}
+
+.gds-react-select__value-container {
+  //part of input
+  &--is-multi {
+    // does something
+  }
+
+  &--has-value {
+    //
+  }
+}
+
+.gds-react-select__multi-value {
+  //
+  &__label {
+    //
+  }
+
+  &__remove {
+    // X
+  }
+}
+
+.gds-react-select__indicators {
+  //
+}
+
+.gds-react-select__indicator {
+  //
+}
+
+.gds-react-select__clear-indicator {
+  //
+}
+
+.gds-react-select__dropdown-indicator {
+  // arrow down
+}
+
+.gds-react-select__indicator-separator {
+  // |
+}
+
+.gds-react-select__input {
+  //might be able to ignore this one
+}
+
+.gds-react-select__menu {
+  //
+  font-size: 14px !important;
+}
+
+.gds-react-select__menu-list {
+  font-size: 14px !important;
+}
+
+.gds-react-select__option {
+  font-size: 14px !important;
+}
+
+.gds-react-select {
+  &--sm > .gds-react-select__control {
+    font-size: 13px;
+    height: $input-height-sm;
+  }
+  &--xs > .gds-react-select__control {
+    font-size: 11px;
+    height: $input-height-xs;
+  }
+}
