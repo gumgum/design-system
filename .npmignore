@@ -96,6 +96,9 @@ typings/
 
 # Next.js build output
 .next
+next.config.js
+pages
+public
 
 # Nuxt.js build / generate output
 .nuxt
@@ -121,3 +124,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+
+.eslintrc.json  
