@@ -2,6 +2,7 @@
 id: account-modal-component
 title: Account Modal
 sidebar_label: Account Modal
+section: organisms
 ---
 
 The account-modal component, prefixed by `gds-account-modal`, is a standard login window. This component is meant to be used on a page by itself.

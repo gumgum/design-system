@@ -2,6 +2,7 @@
 id: ellipsis-utilities
 title: Ellipsis Utilities
 sidebar_label: Ellipsis
+section: utilities
 ---
 
 Truncate text with the `-ellipsis` utility class. To apply the effect at specific breakpoints only, use the breakpoint-specific modifier classes.

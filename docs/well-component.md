@@ -2,6 +2,7 @@
 id: well-component
 title: Well
 sidebar_label: Well
+section: atoms
 ---
 
 The well component, prefixed by `gds-well`, can be used for alert messages or other user notifications.

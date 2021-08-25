@@ -2,6 +2,7 @@
 id: cursor-utilities
 title: Cursor Utilities
 sidebar_label: Cursor
+section: utilities
 ---
 
 <p style="margin-bottom: 0.8em">Adjust the `cursor` property.</p>

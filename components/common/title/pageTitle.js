@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { Button, FormGroup, TextInput, Tooltip } from "gumdrops";
-export default function PageTitle({ title, isEditable }) {
+export default function PageTitle({ title, isEditable, className }) {
   const [editing, setEditing] = useState(false);
   return (
-    <div className="gds-flex gds-flex--align-end -m-b-3">
+    <div
+      className={`gds-flex gds-flex--align-end ${
+        className ? className : "-m-b-3"
+      }`}
+    >
       {!editing ? (
         <h2 className="gds-text--header-md" style={{ height: 39.59 }}>
           {title}

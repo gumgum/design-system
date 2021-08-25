@@ -2,6 +2,7 @@
 id: refinery-component
 title: Refinery
 sidebar_label: Refinery
+section: organisms
 ---
 
 The refinery component is intended to house controls to filter content. The contents of this component can be customized based on the developer's requirements. Breakpoints for the housing are predefined, but internal inputs should be wrapped by columns to ensure they fill the space properly across all sizes. It can persist between sections of a single page app or be exclusive to a single page of a multi-page app.

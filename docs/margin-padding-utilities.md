@@ -2,6 +2,7 @@
 id: margin-padding-utilities
 title: Margin & Padding Utilities
 sidebar_label: Margin & Padding
+section: utilities
 ---
 
 Assign margin or padding to any element with shorthand utility classes. Includes support for individual properties, all properties, and vertical and horizontal properties. The classes are named using the format: `{property}-{sides}-{size}`. `{property}` can be `-m` (margin), or `-p` (padding). `{sides}` can be `-t` (top), `-r` (right), `-b` (bottom), `-l` (left), `-v` (vertical, top & bottom sides), `-h` (horizontal, left & right sides), or `-a` (all sides). `{size}` can be `0`, `1`, `2`, `3`, `4`, `5` or `6` indicating multiples of the global default value, the `$unit` variable.

@@ -2,6 +2,7 @@
 id: lens-component
 title: Lens
 sidebar_label: Lens
+section: organisms
 ---
 
 The lens component, prefixed by `gds-lens`, is used for the creation and displaying of areas of interest with an image or other space.

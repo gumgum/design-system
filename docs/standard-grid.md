@@ -2,6 +2,7 @@
 id: standard-grid
 title: Standard Grid
 sidebar_label: Standard Grid
+section: subatomic
 ---
 
 The layout component, prefixed with `gds-layout`, is used for centering containers and for responsive grid columns. The grid system works exactly like Twitter Bootstrap's, with columns automatically stacking at mobile widths.

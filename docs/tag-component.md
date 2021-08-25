@@ -2,6 +2,7 @@
 id: tag-component
 title: Tag
 sidebar_label: Tag
+section: atoms
 ---
 
 The tag component, prefixed by `gds-tag`, is used to indicate selected items or options.

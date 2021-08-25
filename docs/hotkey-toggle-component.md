@@ -2,6 +2,7 @@
 id: hotkey-toggle-component
 title: Hotkey Toggle
 sidebar_label: Hotkey Toggle
+section: molecules
 ---
 
 The hotkey toggle component, prefixed by `gds-hotkey-toggle`, is used in conjunction with hotkey atoms to create toggle-able, keyboard-enabled buttons.

@@ -2,6 +2,7 @@
 id: leaderboard-component
 title: Leaderboard
 sidebar_label: Leaderboard
+section: organisms
 ---
 
 The `gds-leaderboard` component is a combination of a large ranker component and a ranker grid component. It's used for displaying rankings of items with a hierarchical focus on the top 5 followed by any remaining items in a grid below. All variations of ranker, ranker-ensign, and ranker-grid are applicable to this component - simply use the existing respective modifiers as needed.

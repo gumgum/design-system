@@ -2,6 +2,7 @@
 id: spa-header
 title: Single Page Header
 sidebar_label: Single Page Header
+section: organisms
 ---
 
 The spa-header component, prefixed by `gds-spa-header`, is an alternative, simplified header component for single-page applications.

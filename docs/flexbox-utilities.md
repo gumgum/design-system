@@ -2,6 +2,7 @@
 id: flexbox-utilities
 title: Flexbox Utilities
 sidebar_label: Flexbox
+section: utilities
 ---
 
 The flex component, prefixed by `gds-flex` is used to create extremely flexible 2-dimensional layouts.

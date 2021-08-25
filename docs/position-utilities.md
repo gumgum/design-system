@@ -2,6 +2,7 @@
 id: position-utilities
 title: Position Utilities
 sidebar_label: Position
+section: utilities
 ---
 
 Change an element's position property:

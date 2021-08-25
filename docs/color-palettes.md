@@ -2,6 +2,7 @@
 id: color-palettes
 title: JS Color Palettes
 sidebar_label: JS Color Palettes
+section: subatomic
 ---
 
 All colors used in the Design System are provided below, for use in JavaScript:

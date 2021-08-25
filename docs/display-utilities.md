@@ -2,6 +2,7 @@
 id: display-utilities
 title: Display Utilities
 sidebar_label: Display
+section: utilities
 ---
 
 Adjust the `display` property on any element. To adjust the property at specific breakpoints only, use the breakpoint-specific modifier classes.

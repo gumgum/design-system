@@ -2,6 +2,7 @@
 id: vertical-align-utilities
 title: Vertical Align Utilities
 sidebar_label: Vertical Align
+section: utilities
 ---
 
 Adjust vertical alignment. Vertical alignment defaults to `baseline`.

@@ -2,6 +2,7 @@
 id: persistent-nav
 title: Persistent Nav
 sidebar_label: Persistent Nav
+section: subatomic
 ---
 
 The persistent nav remains visible by default at desktop width, and is hidden by default at mobile width. To toggle the nav, add `gds-persist-nav__sidebar--toggle` to `gds-persist-nav__sidebar`.

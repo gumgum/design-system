@@ -2,6 +2,7 @@
 id: ranker-component
 title: Ranker
 sidebar_label: Ranker
+section: organisms
 ---
 
 The ranker component is used to display a set of objects in a ranker order. The value of the rank, the type object, and the number of rankings, are all customizable. At smaller sizes, the module switches from a horizontal orientation to a vertical one.

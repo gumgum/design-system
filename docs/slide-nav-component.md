@@ -2,6 +2,7 @@
 id: slide-nav-component
 title: Slide Nav
 sidebar_label: Slide Nav
+section: organisms
 ---
 
 The slide-nav component, prefixed by `gds-slide-nav`, is the standard off-canvas navigation component. The slide-nav component works in combination with the `gds-page-header` component to provide accessible navigation on mobile, tablet and desktop devices.

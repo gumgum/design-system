@@ -2,6 +2,7 @@
 id: flexbox-grid
 title: Flexbox Grid
 sidebar_label: Flexbox Grid
+section: subatomic
 ---
 
 The Flexbox Grid component, prefixed by `gds-flex-grid`, allows you to create a flexible grid of items that remain the same height as their siblings.

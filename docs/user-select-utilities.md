@@ -2,6 +2,7 @@
 id: user-select-utilities
 title: User Select Utilities
 sidebar_label: User Select
+section: utilities
 ---
 
 Disable the user's ability to select text within any element.

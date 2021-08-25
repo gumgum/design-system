@@ -1,5 +1,4 @@
 // if login page then do not load this component
-import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { hideForLogin } from "../../utils/helper";
@@ -7,29 +6,34 @@ import { useAppContext } from "../../context/state";
 
 const navItems = [
   {
-    title: "Reporting",
-    url: "/home/dashboard",
-    icon: "chart-bar",
+    title: "Subatomic",
+    url: "/subatomic",
+    icon: "atom",
   },
   {
-    title: "Zones",
-    url: "/zones",
-    icon: "layer-group",
+    title: "Atoms",
+    url: "/atoms",
+    icon: "bacterium",
   },
   {
-    title: "Global Blocks",
-    url: "/global-blocks",
-    icon: "ban",
+    title: "Molecules",
+    url: "/molecules",
+    icon: "bacteria",
   },
   {
-    title: "Payments",
-    url: "/payments",
-    icon: "credit-card",
+    title: "Organisms",
+    url: "/organisms",
+    icon: "dna",
   },
   {
-    title: "Account Settings",
-    url: "/settings/user",
-    icon: "user-cog",
+    title: "Pages",
+    url: "/pages",
+    icon: "desktop",
+  },
+  {
+    title: "Utilities",
+    url: "/utilities",
+    icon: "wrench",
   },
 ];
 
@@ -78,6 +82,17 @@ export default function Left() {
           );
         })}
       </ul>
+      <ul className="gds-nav__icons gds-nav__item--grow-0">
+        <li>
+          <a
+            href="https://github.com/gumgum/design-system"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
       <div className="gds-nav__item--grow-0 -m-b-3">
         <Link href="/login">
           <a className="gds-nav__link">
@@ -86,28 +101,6 @@ export default function Left() {
           </a>
         </Link>
       </div>
-
-      {/* <ul className="gds-nav__icons gds-nav__item--grow-0">
-        <li>
-          <button className="gds-nav__icon">
-            <i className="fas fa-search"></i>
-          </button>
-        </li>
-        <li>
-          <Link href="/settings">
-            <a className=" gds-nav__icon">
-              <i className="fas fa-user"></i>
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/login">
-            <a className=" gds-nav__icon">
-              <i className="fas fa-sign-out-alt"></i>
-            </a>
-          </Link>
-        </li>
-      </ul> */}
     </nav>
   );
 }

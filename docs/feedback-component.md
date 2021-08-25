@@ -2,6 +2,7 @@
 id: feedback-component
 title: Feedback
 sidebar_label: Feedback
+section: organisms
 ---
 
 The `gds-feedback` component is used for displaying and choosing from a set of user-feedback options.

@@ -2,6 +2,7 @@
 id: timeline-component
 title: Timeline
 sidebar_label: Timeline
+section: organisms
 ---
 
 The timeline component, prefixed by `gds-timeline`, is used to indicate the number of completed steps in a given procedure. Add the modifier class `gds-timeline__item--active` to `gds-timeline__item` to show the current step the user is on.

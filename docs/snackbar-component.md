@@ -2,6 +2,7 @@
 id: snackbar-component
 title: Snackbar
 sidebar_label: Snackbar
+section: atoms
 ---
 
 The snackbar component, prefixed by `gds-snackbar`, is used to quickly display user feedback, warnings and errors.

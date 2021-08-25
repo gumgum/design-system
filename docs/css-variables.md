@@ -2,6 +2,7 @@
 id: css-variables
 title: CSS Color Variables
 sidebar_label: CSS Color Variables
+section: subatomic
 ---
 
 All colors used in each Design System theme are provided as CSS variables on the `:root` pseudo-element.

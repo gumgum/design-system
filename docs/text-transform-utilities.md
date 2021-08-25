@@ -2,6 +2,7 @@
 id: text-transform-utilities
 title: Text Transform Utilities
 sidebar_label: Text Transform
+section: utilities
 ---
 
 <p style="margin-bottom: 0.8em">Adjust text capitalization with CSS.</p>

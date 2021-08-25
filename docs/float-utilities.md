@@ -2,6 +2,7 @@
 id: float-utilities
 title: Float Utilities
 sidebar_label: Float
+section: utilities
 ---
 
 Adjust the float property on any element, and clear the floats wherever needed.

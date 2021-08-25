@@ -2,6 +2,7 @@
 id: conversation-component
 title: Conversation
 sidebar_label: Conversation
+section: organisms
 ---
 
 The conversation component, prefixed by `gds-conversation`, is used to display chat interactions.

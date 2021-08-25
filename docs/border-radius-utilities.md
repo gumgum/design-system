@@ -2,6 +2,7 @@
 id: border-radius-utilities
 title: Border Radius Utilities
 sidebar_label: Border Radius
+section: utilities
 ---
 
 Adjust any element's border-radius to the default value or set it to zero. Includes support for all corners, individual corners, and individual sides.

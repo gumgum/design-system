@@ -2,6 +2,7 @@
 id: animation-timeline-component
 title: Animation Timeline
 sidebar_label: Animation Timeline
+section: organisms
 ---
 
 The animation timeline component, prefixed by `gds-anim-timeline`, provides a clear visualization of interactive animation keyframes on a stage.

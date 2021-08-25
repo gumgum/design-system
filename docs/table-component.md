@@ -2,6 +2,7 @@
 id: table-component
 title: Tables
 sidebar_label: Tables
+section: molecules
 ---
 
 The table component is prefixed by `gds-table`. It is used to style standard `<table>` elements.

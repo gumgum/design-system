@@ -2,6 +2,7 @@
 id: overflow-utilities
 title: Overflow Utilities
 sidebar_label: Overflow
+section: utilities
 ---
 
 Adjust the `overflow` property.

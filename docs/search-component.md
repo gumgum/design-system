@@ -2,6 +2,7 @@
 id: search-component
 title: Search
 sidebar_label: Search
+section: organisms
 ---
 
 The search component, prefixed by `gds-search`, is a centered global search input. The search component is hidden by default. Add the modifier class `gds-search--shown` to `gds-search` to show the search input.

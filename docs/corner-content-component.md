@@ -2,6 +2,7 @@
 id: corner-content-component
 title: Corner Content
 sidebar_label: Corner Content
+section: organisms
 ---
 
 The corner-content component, prefixed by `gds-corner-content`, is meant for secondary navigation that does not work in the context of a standard `gds-modal` component. To show the component, add the `gds-corner-content--shown` class to `gds-corner-content`. This component can be aligned to the right or left side of the user's window by toggling the `gds-corner-content--right` and `gds-corner-content--left` classes.

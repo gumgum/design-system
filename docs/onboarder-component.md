@@ -2,6 +2,7 @@
 id: onboarder-component
 title: Onboarder
 sidebar_label: Onboarder
+section: organisms
 ---
 
 The onboarder component is used to give new users of a product a quick breakdown of all functionality on a given page. It should ideally be invoked via the `gds.onboarder.construct(data)` method where data is a JS object containing a property "steps" which is an array of objects containers a title, description, and a target. The target property should be a selector for an element on the page that the onboarder component will highlight and position itself around. Based on the position of the target element, the component will attempt to choose the appropriate arrow position modifier class. Ideally, this component will only be used one time per new user so a cookie or localStorage property should be set to prevent it from loading on subsequent visits.

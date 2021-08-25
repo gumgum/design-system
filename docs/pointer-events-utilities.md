@@ -2,6 +2,7 @@
 id: pointer-events-utilities
 title: Pointer Events Utilities
 sidebar_label: Pointer Events
+section: utilities
 ---
 
 <p style="margin-bottom: 0.8em">Enable or disable the default user interaction with any element.</p>

@@ -2,6 +2,7 @@
 id: color-utilities
 title: Color Utilities
 sidebar_label: Color
+section: utilities
 ---
 
 Manually override the color, border-color, or background-color of any element.

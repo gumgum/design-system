@@ -2,6 +2,7 @@
 id: disabled-utilities
 title: Disabled Utilities
 sidebar_label: Disabled
+section: utilities
 ---
 
 <p style="margin-bottom: 0.8em">Disable the user's interaction with any element.</p>

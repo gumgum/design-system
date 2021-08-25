@@ -2,6 +2,7 @@
 id: filters-component
 title: Filters
 sidebar_label: Filters
+section: organisms
 ---
 
 The filter component is an extension of the bubble menu component intended to house controls to filter content. The contents of this component can be customized based on the developer's requirements. Breakpoints for the housing are predefined, but internal inputs should be wrapped by columns to ensure they fill the space properly across all sizes. It can persist between sections of a single page app or be exclusive to a single page of a multi-page app. It uses the same data attributes as a standard bubble menu.

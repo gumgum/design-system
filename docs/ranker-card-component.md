@@ -2,6 +2,7 @@
 id: ranker-card-component
 title: Ranker Card
 sidebar_label: Ranker Card
+section: organisms
 ---
 
 The ranker-card component is used to display a set of image cards in a ranker order. The value of the rank, the type object, and the number of rankings, are all customizable.

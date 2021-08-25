@@ -2,6 +2,7 @@
 id: alert-component
 title: Alert
 sidebar_label: Alert
+section: organisms
 ---
 
 The alert component, prefixed by `gds-alert`, is a standard pop-up element for displaying user feedback.

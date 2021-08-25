@@ -2,6 +2,7 @@
 id: ribbon-component
 title: Ribbon
 sidebar_label: Ribbon
+section: organisms
 ---
 
 The `gds-ribbon` component is used for displaying and choosing from a set of icon-based tools. Its most common use case is for web based visual IDEs where a user would be expected to manipulate elements in a workspace using a common set of tools. Tools on the ribbon can be nested within expandable menus or simply toggled on/off directly.

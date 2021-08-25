@@ -2,6 +2,7 @@
 id: transition-utilities
 title: Transition Utilities
 sidebar_label: Transition
+section: utilities
 ---
 
 Adds transitions of varying lengths and easing values to any element.

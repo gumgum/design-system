@@ -2,6 +2,7 @@
 id: page-header
 title: Page Header
 sidebar_label: Page Header
+section: organisms
 ---
 
 The page-header component, prefixed by `gds-page-header`, is the standard fixed-position header component.

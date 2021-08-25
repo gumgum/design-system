@@ -2,6 +2,7 @@
 id: text-align-utilities
 title: Text Align Utilities
 sidebar_label: Text Align
+section: utilities
 ---
 
 Adjust text alignment with the following utility classes. Text is aligned left by default.

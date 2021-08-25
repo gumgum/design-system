@@ -2,6 +2,7 @@
 id: index
 title: Installation
 sidebar_label: Installation
+section: subatomic
 ---
 
 To get started with the GumGum Design System, include one of the available CSS theme files in the `<head>` of your HTML document:

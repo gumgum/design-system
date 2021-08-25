@@ -2,6 +2,7 @@
 id: toolbelt-component
 title: Toolbelt
 sidebar_label: Toolbelt
+section: organisms
 ---
 
 The `gds-toolbelt` component is used to display a tool palette, similar in appearance to the menus from Photoshop or Illustrator.

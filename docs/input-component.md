@@ -2,6 +2,7 @@
 id: input-component
 title: Input
 sidebar_label: Input
+section: molecules
 ---
 
 All inputs should be wrapped in a standard `gds-form-group` element. The inside of the form group generally contains an input, a label, and if necessary, a hint or error text element.

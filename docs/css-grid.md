@@ -2,6 +2,7 @@
 id: css-grid
 title: CSS Grid
 sidebar_label: CSS Grid
+section: subatomic
 ---
 
 The CSS grid component, prefixed with `gds-grid`, is used to assemble CSS grid-based layouts.
