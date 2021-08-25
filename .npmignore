@@ -7,6 +7,9 @@
 # Temp folder used for local testing
 temp
 
+# Docs
+docs
+
 #BrowserStack Config
 bs-config.js
 
