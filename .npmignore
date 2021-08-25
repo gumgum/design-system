@@ -99,7 +99,10 @@ typings/
 next.config.js
 pages
 public
-
+components
+context
+_redirects
+utils
 # Nuxt.js build / generate output
 .nuxt
 dist
