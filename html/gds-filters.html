@@ -1,0 +1,95 @@
+<div class="gds-layout__column--md-12">
+    <h3 class="gds-text--header-md -m-b-2">Filters</h3>
+    <hr class="-m-b-3" />
+</div>
+
+<!-- ******************** -->
+<!-- Component example -->
+<div class="gds-layout__column--md-12 -m-b-3">
+<section data-component-example>
+<div class="gds-filters" gds-bubble>
+    <span class="gds-tooltip--bottom" data-tooltip="Filters">
+        <div class="gds-filters__button" data-gds-bubble-button="#filters_menu" data-gds-active-class="gds-filters__button--active">
+            <a class="gds-filters__button-link" href="#"><i class="btl bt-wrench -m-r-2"></i>Filters<span class="-m-l-2 gds-text--danger">5</span></a>
+        </div>
+    </span>
+    <div class="gds-filters__menu" id="filters_menu" data-gds-bubble-menu="filters">
+        <div class='gds-layout__row'>
+            <div class="gds-layout__column--xl-4 gds-layout__column--lg-4 gds-layout__column--md-6 -m-b-1">
+                <div class="gds-form-group">
+                    <label class="gds-form-group__label -color-tx-lt-4">Sentiment</label>
+                    <select class="gds-form-group__select-input gds-form-group__select-input--sm">
+                        <option>Positive</option>
+                        <option>Neutral</option>
+                        <option>Negative</option>
+                    </select>
+                </div>
+            </div>
+            <div class="gds-layout__column--xl-4 gds-layout__column--lg-4 gds-layout__column--md-6 -m-b-1">
+                <div class="gds-form-group">
+                    <label class="gds-form-group__label -color-tx-lt-4">Keywords</label>
+                    <div class="gds-form-group__input-group">
+                        <input class="gds-form-group__text-input gds-form-group__text-input--sm gds-form-group__text-input--right-edge" type="text" placeholder="Enter a keyword" />
+                        <button class="gds-button gds-button--primary gds-button--button-cap gds-button--button-cap-sm"><i class="fa fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="gds-layout__column--xl-4 gds-layout__column--lg-4 gds-layout__column--md-12 -m-b-1">
+                <div class="gds-form-group">
+                    <label class="gds-form-group__label -color-tx-lt-4">Location</label>
+                    <div class="gds-form-group__input-group">
+                        <input class="gds-form-group__text-input gds-form-group__text-input--sm gds-form-group__text-input--right-edge" type="text" placeholder="Enter a location" />
+                        <button class="gds-button gds-button--primary gds-button--button-cap gds-button--button-cap-sm"><i class="fa fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="gds-layout__column--xl-4 gds-layout__column--lg-4 gds-layout__column--md-6 -m-b-2">
+                <div class="gds-form-group">
+                    <label class="gds-form-group__label -color-tx-lt-4">Start Date</label>
+                    <div class="gds-form-group__input-group">
+                        <input class="gds-form-group__text-input gds-form-group__text-input--sm gds-form-group__text-input--right-edge" type="text" placeholder="12/01/15" />
+                        <button class="gds-button gds-button--primary gds-button--button-cap gds-button--button-cap-sm"><i class="fa fa-calendar" ></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="gds-layout__column--xl-4 gds-layout__column--lg-4 gds-layout__column--md-6 -m-b-2">
+                <div class="gds-form-group">
+                    <label class="gds-form-group__label -color-tx-lt-4">End Date</label>
+                    <div class="gds-form-group__input-group">
+                        <input class="gds-form-group__text-input gds-form-group__text-input--sm gds-form-group__text-input--right-edge" type="text" placeholder="12/01/16" />
+                        <button class="gds-button gds-button--primary gds-button--button-cap gds-button--button-cap-sm"><i class="fa fa-calendar" ></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="gds-layout__column--xl-4 gds-layout__column--lg-4 gds-layout__column--md-12 -m-b-2">
+                <div class="gds-form-group">
+                    <label class="gds-form-group__label -color-tx-lt-4 -none--md"></label>
+                    <button class="gds-button gds-button--sm gds-button--secondary gds-button--block">Clear Filters</button>
+                </div>
+            </div>
+            <div class="gds-divider gds-divider--collapsible -p-h-2 -m-b-2" data-gds-divider="0">
+                <span class="gds-divider__label gds-form-group__label -color-tx-lt-4">Active Filters</span>
+                <span class="gds-divider__line"></span>
+                <span class="gds-divider__arrow" data-gds-arrow></span>
+            </div>
+            <div class="gds-segment -p-h-2" data-gds-segment="0">
+                <div class="gds-tag gds-tag--green gds-tag--with-button-sm gds-tag--sm gds-button--block-sm -color-tx-white gds-bubble__menu--vi__tag">
+                    <span class="gds-form-group__label -color-tx-white -m-b-0">Location:</span> Los Angeles<button class="gds-tag__button gds-tag__button--sm gds-tag__button--primary"></button>
+                </div>
+                <div class="gds-tag gds-tag--red gds-tag--with-button-sm gds-tag--sm gds-button--block-sm -color-tx-white gds-bubble__menu--vi__tag">
+                    <span class="gds-form-group__label -color-tx-white -m-b-0">Start Date:</span> 12/01/15<button class="gds-tag__button gds-tag__button--sm gds-tag__button--primary" ></button>
+                    </div>
+                <div class="gds-tag gds-tag--red gds-tag--with-button-sm gds-tag--sm gds-button--block-sm -color-tx-white gds-bubble__menu--vi__tag">
+                    <span class="gds-form-group__label -color-tx-white -m-b-0">End Date:</span> 12/01/16<button class="gds-tag__button gds-tag__button--sm gds-tag__button--primary" ></button>
+                </div>
+                <div class="gds-tag gds-tag--blue gds-tag--with-button-sm gds-tag--sm gds-button--block-sm -color-tx-white gds-bubble__menu--vi__tag">
+                    <span class="gds-form-group__label -color-tx-white -m-b-0">Keyword:</span> #cocacola<button class="gds-tag__button gds-tag__button--sm gds-tag__button--primary" ></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<div class="gds-divider gds-divider--collapsible -m-t-2" data-toggle-sample><span class="gds-divider__label">Toggle Code Sample</span><span class="gds-divider__line"></span><span class="gds-divider__arrow gds-divider__arrow--collapse" data-gds-arrow></span></div>
+<div class="gds-segment gds-segment--collapse" data-sample><div class="gds-container -color-bd-dk-1 -color-bg-dk-2 -color-tx-white"><pre class="-m-t-0 -m-h-4 -m-b-4"><code data-component-code></code></pre></div></div>
+</div>

@@ -1,0 +1,92 @@
+<div class="gds-layout__column--md-12">
+    <h3 class="gds-text--header-md -m-b-2">Transitions</h3>
+    <hr class="-m-b-3" />
+</div>
+
+<style>
+	.transition-block {
+		width:100%;
+	}
+	.color-block {
+		left:0;
+		height: 25px;
+    width: 25px;
+    display: inline-block;
+    border-radius: 2px;
+		background-color:#00a7cf;
+    box-shadow: 0px 0px 1.5rem 0px rgba(0, 0, 0, 0.1);
+		overflow:hidden;
+	}
+	.color-block.shifted {
+		left:calc(100% - 25px);
+	}
+</style>
+<div class="gds-layout__column--md-6  gds-layout__column--md-offset-3">
+  <h3 class="gds-text__header--md -m-b-1">Fast Transitions</h3>
+</div>
+<div class="gds-layout__column--md-6  gds-layout__column--md-offset-3">
+  <div class="gds-card gds-card--no-height -p-a-3">
+  	 <h4 class="gds-text__header--sm -m-b-1">Ease Out 100ms</h4>
+     <div class="transition-block">
+     		<div class="color-block -transition-out-100" gg-transitioner>
+        </div>
+  	 </div>
+  	 <h4 class="gds-text__header--sm -m-b-1">Ease In 100ms</h4>
+     <div class="transition-block">
+     		<div class="color-block -transition-in-100" gg-transitioner>
+        </div>
+  	 </div>
+  	 <h4 class="gds-text__header--sm -m-b-1">Ease Back 100ms</h4>
+     <div class="transition-block">
+     		<div class="color-block -transition-back-100" gg-transitioner>
+        </div>
+  	 </div>
+  </div>
+</div>
+
+<div class="gds-layout__column--md-6  gds-layout__column--md-offset-3">
+  <h3 class="gds-text__header--md -m-b-1">Medium Transitions</h3>
+</div>
+<div class="gds-layout__column--md-6  gds-layout__column--md-offset-3">
+  <div class="gds-card gds-card--no-height -p-a-3">
+
+     <h4 class="gds-text__header--sm -m-b-1">Ease Out 250ms</h4>
+     <div class="transition-block">
+     		<div class="color-block -transition-out-250" gg-transitioner>
+        </div>
+  	 </div>
+     <h4 class="gds-text__header--sm -m-b-1">Ease In 250ms</h4>
+     <div class="transition-block">
+     		<div class="color-block -transition-in-250" gg-transitioner>
+        </div>
+  	 </div>
+     <h4 class="gds-text__header--sm -m-b-1">Ease Back 250ms</h4>
+     <div class="transition-block">
+     		<div class="color-block -transition-back-250" gg-transitioner>
+        </div>
+  	 </div>
+  </div>
+</div>
+
+<div class="gds-layout__column--md-6  gds-layout__column--md-offset-3">
+  <h3 class="gds-text__header--md -m-b-1">Slow Transitions</h3>
+</div>
+<div class="gds-layout__column--md-6  gds-layout__column--md-offset-3">
+  <div class="gds-card gds-card--no-height -p-a-3">
+     <h4 class="gds-text__header--sm -m-b-1">Ease Out 500ms</h4>
+     <div class="transition-block">
+     		<div class="color-block -transition-out-500" gg-transitioner>
+        </div>
+  	 </div>
+     <h4 class="gds-text__header--sm -m-b-1">Ease In 500ms</h4>
+     <div class="transition-block">
+     		<div class="color-block -transition-in-500" gg-transitioner>
+        </div>
+  	 </div>
+     <h4 class="gds-text__header--sm -m-b-1">Ease Back 500ms</h4>
+     <div class="transition-block">
+     		<div class="color-block -transition-back-500" gg-transitioner>
+        </div>
+  	 </div>
+  </div>
+</div>
