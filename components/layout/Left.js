@@ -65,7 +65,7 @@ export default function Left() {
         ></button>
       </div>
       <Link href="/">
-        <a className="gds-nav__logo"></a>
+        <a className="gds-nav__logo" data-site-title="Publisher Manager"></a>
       </Link>
 
       <ul className="gds-nav__links">
