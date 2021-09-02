@@ -356,7 +356,6 @@
     max-width: 12rem;
     min-width: 3rem;
     height: 3.25rem;
-    margin-bottom: 2rem;
   }
 
   &:empty::after {
@@ -381,6 +380,10 @@
   &:hover {
     box-shadow: none;
   }
+}
+
+.gds-nav__side .gds-nav__logo:empty {
+  margin-bottom: 2rem;
 }
 
 .gds-nav__menu ~ .gds-nav__logo {

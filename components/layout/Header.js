@@ -14,7 +14,6 @@ export default function Header() {
         className="gds-nav__menu gds-nav__auto-hide"
         onClick={() => setLeftNav(!leftNav)}
       ></button>
-      <p>{leftNav ? "True" : "False"}</p>
       <Link href="/">
         <a className="gds-nav__logo"></a>
       </Link>
