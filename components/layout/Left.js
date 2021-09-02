@@ -67,7 +67,9 @@ export default function Left() {
       <Link href="/">
         <a className="gds-nav__logo" data-site-title="Publisher Manager"></a>
       </Link>
-
+      <Link href="/">
+        <a className="gds-nav__title gds-nav__item--grow-0">Publisher Center</a>
+      </Link>
       <ul className="gds-nav__links">
         {navItems.map((item, i) => {
           return (
