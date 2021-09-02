@@ -118,8 +118,8 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 @import "organisms/leaderboard";
 
 // Pages
-@import "pages/nav";
-@import "pages/persist-nav";
+@import "layouts/nav";
+@import "layouts/persist-nav";
 
 // Third-party library support
 @import "third-party/chosen"; // Chosen.js multiselect plugin (https://harvesthq.github.io/chosen/)
