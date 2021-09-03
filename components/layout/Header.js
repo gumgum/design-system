@@ -9,7 +9,8 @@ export default function Header() {
   const [subNav, setSubNav] = useState(false);
   const [links, setLinks] = useState(false);
   const router = useRouter();
-  const { leftNav, setLeftNav } = useAppContext();
+  const { leftNav, setLeftNav, globalSearch, setGlobalSearch } =
+    useAppContext();
   if (hideForLogin(router)) return <></>;
   return (
     <header className="gds-app-layout__top gds-nav__top">
@@ -104,7 +105,10 @@ export default function Header() {
       </ul>
 
       <div className="gds-nav__icons gds-nav__item--grow-0">
-        <button className="gds-nav__icon">
+        <button
+          className="gds-nav__icon"
+          onClick={() => setGlobalSearch(!globalSearch)}
+        >
           <i className="fas fa-search"></i>
         </button>
         <a href="#" className="gds-nav__icon">
