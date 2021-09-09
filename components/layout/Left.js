@@ -65,7 +65,10 @@ export default function Left() {
         ></button>
       </div>
       <Link href="/">
-        <a className="gds-nav__logo" data-site-title="Publisher Manager"></a>
+        <a
+          className="gds-nav__logo gds-nav__logo--verity"
+          data-site-title="Publisher Manager"
+        ></a>
       </Link>
       <Link href="/">
         <a className="gds-nav__title gds-nav__item--grow-0">Publisher Center</a>
@@ -85,6 +88,15 @@ export default function Left() {
         })}
       </ul>
       <ul className="gds-nav__icons gds-nav__item--grow-0">
+        <li>
+          <a
+            href="https://github.com/gumgum/design-system"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fab fa-github"></i>
+          </a>
+        </li>
         <li>
           <a
             href="https://github.com/gumgum/design-system"
