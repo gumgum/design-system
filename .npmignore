@@ -9,6 +9,7 @@ temp
 
 # Docs
 docs
+html
 
 #BrowserStack Config
 bs-config.js
