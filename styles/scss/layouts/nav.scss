@@ -474,6 +474,7 @@
 
 // Collapse Button
 .gds-nav__side--collapse-wrapper {
+  z-index: $z-index-1;
   position: absolute;
   background: transparent;
   top: 0;
