@@ -184,7 +184,7 @@
     ~ .gds-pagination__page-item,
   .gds-pagination__page-item:first-child:nth-last-of-type(#{$i})
     ~ .gds-pagination__page-indicator {
-    width: #{$w}$percentage;
+    width: #{$w}+ "%";
   }
 
   @for $g from 1 through $i {
@@ -193,7 +193,7 @@
     .gds-pagination__page-item:first-child:nth-last-of-type(#{$i})
       ~ .gds-pagination__page-item--active:nth-of-type(#{$g})
       ~ .gds-pagination__page-indicator {
-      left: #{$w * $s}$percentage;
+      left: #{$w * $s}+ "%";
     }
   }
 }
