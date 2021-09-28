@@ -47,11 +47,21 @@
 // For Mobile Side Nav Views
 @media (max-width: $tablet) {
   .gds-app-layout__left.gds-nav__side {
+    min-width: 12rem;
+    width: 50%;
     box-shadow: 0.25rem 0px 0.75rem rgba(0, 0, 0, 0.16);
+    .gds-nav__logo {
+      margin: 0 auto;
+    }
   }
 
   .gds-app-layout__right.gds-nav__side {
+    min-width: 12rem;
+    width: 50%;
     box-shadow: -0.25rem 0px 0.75rem rgba(0, 0, 0, 0.16);
+    .gds-nav__logo {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -477,18 +487,24 @@
   z-index: $z-index-1;
   position: absolute;
   background: transparent;
+  border-left: 2px solid transparent;
   top: 0;
-  right: -2rem;
-  height: 5rem;
-  width: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  right: -0.75rem;
+  height: 100%;
+  width: 0.75rem;
+  transition: border;
+  transition-delay: 500ms;
+}
+
+.gds-nav__side--collapse-wrapper:hover {
+  border-left-color: #d8eefa;
 }
 
 .gds-nav__side--collapse-button {
   visibility: hidden;
-  position: relative;
+  position: absolute;
+  top: 2rem;
+  left: -2px;
   width: 1.25rem;
   height: 2rem;
   z-index: 10000;
@@ -514,6 +530,12 @@
   &:hover,
   &:focus {
     color: $gg-dark-2;
+  }
+}
+
+@media (max-width: $tablet) {
+  .gds-nav__side--collapse-wrapper {
+    display: none;
   }
 }
 
