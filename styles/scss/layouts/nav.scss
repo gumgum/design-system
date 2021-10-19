@@ -501,7 +501,7 @@
 }
 
 .gds-nav__side--collapse-button {
-  visibility: hidden;
+  opacity: 0;
   position: absolute;
   top: 2rem;
   left: -2px;
@@ -515,6 +515,8 @@
   border-radius: 0 4px 4px 0;
   text-align: center;
   color: $gg-light-5;
+  transition: opacity;
+  transition-delay: 500ms;
 
   &:before {
     content: "\f053";
@@ -546,5 +548,5 @@
 }
 
 .gds-nav__side--collapse-wrapper:hover .gds-nav__side--collapse-button {
-  visibility: visible;
+  opacity: 1;
 }

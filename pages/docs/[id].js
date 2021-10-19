@@ -1,8 +1,14 @@
 import Head from "next/head";
+import { useState } from "react";
 import PageTitle from "../../components/common/title/pageTitle";
 import { getAllDocIds, getDocData } from "../../utils/docs";
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 
 export default function DocsPage({ docData }) {
+  console.log("doc", { docData });
+  const [code, setCode] = useState({
+    content: `<button className="gds-button gds-button--default">Default Test button</button>`,
+  });
   return (
     <div>
       <Head>
@@ -13,6 +19,12 @@ export default function DocsPage({ docData }) {
       <br />
       {docData.date}
       <br />
+      <LiveProvider code={code.content}>
+        <LivePreview />
+        <LiveEditor />
+        <LiveError />
+      </LiveProvider>
+      {/* <div dangerouslySetInnerHTML={{ __html: code.content }} /> */}
       <div dangerouslySetInnerHTML={{ __html: docData.contentHtml }} />
     </div>
   );

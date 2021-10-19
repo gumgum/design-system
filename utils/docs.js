@@ -52,7 +52,7 @@ export function getSectionDocsData(section) {
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
-
+    console.log("MAtterData", matterResult);
     // Combine the data with the id
     return {
       id,
