@@ -5,12 +5,13 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import { Card, CardBlock, Column, Divider, Row } from "gumdrops";
 import PageTitle from "../../components/common/title/pageTitle";
 import CopyText from "../../components/common/copy/CopyText";
-import { getDocData } from "../../utils/docs";
 import { getAtomData } from "../../utils/atoms";
 
-export default function DocsPage({ docData }) {
+// DELETE THIS PAGE
+
+export default function DocsPage() {
   const [viewError, setViewErrow] = useState(false);
-  const data = getAtomData(docData.data);
+  const data = getAtomData("example-component");
 
   return (
     <div>
@@ -18,7 +19,7 @@ export default function DocsPage({ docData }) {
         <title>Example Item</title>
       </Head>
       <div className="gds-flex gds-flex--justify-between">
-        <PageTitle title={docData.title} />
+        <PageTitle title={data.title} />
         <a
           href="https://gumdrops.gumgum.com/"
           target="_blank"
@@ -31,7 +32,7 @@ export default function DocsPage({ docData }) {
       <Row>
         <Column md="8">
           {/* description */}
-          <div dangerouslySetInnerHTML={{ __html: docData.contentHtml }} />
+          {/* <div dangerouslySetInnerHTML={{ __html: data.contentHtml }} /> */}
           <div className="gds-text--header-xs -m-b-2">Demo</div>
           <LiveProvider theme={dracula} code={data.component}>
             <Card>
@@ -79,15 +80,4 @@ export default function DocsPage({ docData }) {
       </Row>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  // Fetch necessary data for the doc using params.id
-  const docData = await getDocData("example-component");
-
-  return {
-    props: {
-      docData,
-    },
-  };
 }

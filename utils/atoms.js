@@ -48,6 +48,7 @@ export const Atoms = [
   },
   {
     title: "ButtonDemo",
+    id: "example-component",
     variants: [
       {
         title: "Context (Color)",
