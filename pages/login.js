@@ -16,7 +16,7 @@ export default function Login() {
       <Row className="-m-t-4">
         <LoginForm
           auth="username"
-          capText="Publisher Center"
+          capText="Design System"
           //   logoText="Publisher Center"
           //   onSubmit={this._login}
           //   recoveryFn={this._goToRecovery}

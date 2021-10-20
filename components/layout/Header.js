@@ -128,7 +128,7 @@ export default function Header() {
         <a className="gds-nav__logo"></a>
       </Link>
       <Link href="/">
-        <a className="gds-nav__title gds-nav__item--grow-0">Publisher Center</a>
+        <a className="gds-nav__title gds-nav__item--grow-0">Design System</a>
       </Link>
     </header>
   );

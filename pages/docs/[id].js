@@ -7,7 +7,7 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 export default function DocsPage({ docData }) {
   console.log("doc", { docData });
   const [code, setCode] = useState({
-    content: `<button className="gds-button gds-button--default">Default Test button</button>`,
+    content: `<button onClick={()=> alert("hello")} className="gds-button gds-button--default">Default Test button</button>`,
   });
   return (
     <div>
