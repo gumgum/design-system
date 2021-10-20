@@ -25,6 +25,10 @@ small {
   font-weight: $font-weight-light;
 }
 
+pre {
+  white-space: pre-wrap;
+}
+
 input,
 textarea,
 select {
