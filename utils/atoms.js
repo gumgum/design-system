@@ -344,6 +344,10 @@ const Atoms = [
     ],
     related: [
       {
+        title: "Segment",
+        url: "/atoms/segment-component",
+      },
+      {
         title: "Accordion",
         url: "/molecules/accordion-component",
       },
@@ -581,10 +585,188 @@ const Atoms = [
       },
     ],
 
-    code: `<div className="-p-a-3">
+    code: `<div
+    style={{
+      minHeight: 100
+    }}>
       <span className="gds-number-circle">1</span>
       <span className="-clear-both" />
     </div>`,
+  },
+  {
+    id: "progress-bar-component",
+    gumdrops:
+      "https://gumdrops.gumgum.com/?path=/story/atoms-progressbar--default",
+    variants: [
+      {
+        title: "Size",
+        values: [
+          "gds-progress-bar--lg",
+          "gds-progress-bar--sm",
+          "gds-progress-bar--xs",
+        ],
+      },
+      {
+        title: "Context (Color)",
+        values: [
+          "gds-progress-bar--striped-primary",
+          "gds-progress-bar--secondary",
+          "gds-progress-bar--striped-secondary",
+          "gds-progress-bar--animated",
+          "gds-progress-bar--value-colors",
+        ],
+      },
+    ],
+    related: [
+      {
+        title: "Timeline",
+        url: "/organisms/timeline-component",
+      },
+      {
+        title: "Legend",
+        url: "/molecules/legend-component",
+      },
+      {
+        title: "Input",
+        url: "/molecules/input-component",
+      },
+      {
+        title: "Skeleton",
+        url: "/atoms/skeleton-component",
+      },
+    ],
+
+    code: `<div className="-p-a-3">
+    <div className="gds-progress-bar -m-b-3" data-value="35"></div>
+    <div className="gds-progress-bar gds-progress-bar--sm -m-b-3" data-value="42"></div>
+    <div className="gds-progress-bar gds-progress-bar--lg -m-b-3" data-value="53"></div>
+    <div className="gds-progress-bar gds-progress-bar--striped-primary gds-progress-bar--animated" data-value="55"></div>
+</div>`,
+  },
+  {
+    id: "segment-component",
+    gumdrops: "",
+    variants: [
+      {
+        title: "Required",
+        values: ["gds-segment"],
+      },
+      {
+        title: "Display",
+        values: ["gds-segment--collapse"],
+      },
+    ],
+    related: [
+      {
+        title: "Divider",
+        url: "/atoms/divider-component",
+      },
+    ],
+
+    code: `() => {
+      const [isOpen, setIsOpen] = React.useState(true);
+      let dividerToggle = isOpen ? "gds-divider__arrow" : "gds-divider__arrow gds-divider__arrow--collapse";
+      let segmentToggle = isOpen ? "gds-segment" : "gds-segment gds-segment--collapse";
+
+      return (
+        <div className="-p-a-3">
+
+          {/* Demo with divider */}
+          <div onClick={()=> setIsOpen(!isOpen)} className="gds-divider gds-divider--collapsible">
+            <span className="gds-divider__label">
+              Working Example Collapse Divider *Click Me*
+            </span>
+            <span className="gds-divider__line"></span>
+            <span className={dividerToggle}></span>
+          </div>
+          <div className={segmentToggle} data-gds-segment="1">Content Goes Here</div>
+        </div>
+      );
+    }`,
+  },
+  {
+    id: "skeleton-component",
+    gumdrops: "",
+    variants: [
+      {
+        title: "Required",
+        values: ["gds-skeleton"],
+      },
+      {
+        title: "Size",
+        values: ["gds-skeleton--header"],
+      },
+    ],
+    related: [
+      {
+        title: "Inputs",
+        url: "/molecules/input-component",
+      },
+      {
+        title: "Text",
+        url: "/atoms/text-component",
+      },
+    ],
+
+    code: `<div className="-p-a-3">
+    <div class="gds-skeleton gds-skeleton--header" style={{width: "30%"}}></div>
+    <div class="gds-skeleton" style={{width: "90%"}}></div>
+    <div class="gds-skeleton" style={{width: "70%"}}></div>
+    <div class="gds-skeleton" style={{width: "80%"}}></div>
+    </div>`,
+  },
+  {
+    id: "snackbar-component",
+    gumdrops:
+      "https://gumdrops.gumgum.com/?path=/story/molecules-snackbar--default",
+    variants: [
+      {
+        title: "Required",
+        values: [
+          "gds-snackbar",
+          "gds-snackbar__notification",
+          "gds-snackbar__notification-text",
+        ],
+      },
+      {
+        title: "Display",
+        values: ["gds-snackbar__notification--hidden"],
+      },
+      {
+        title: "Add On",
+        values: [
+          "gds-snackbar__notification-text",
+          "gds-snackbar__notification-button",
+        ],
+      },
+      {
+        title: "Context (Color)",
+        values: [
+          "gds-snackbar__notification--success",
+          "gds-snackbar__notification--info",
+          "gds-snackbar__notification--warning",
+          "gds-snackbar__notification--danger",
+          "gds-snackbar__notification--hidden",
+          "gds-snackbar__notification-button--dark",
+          "gds-snackbar__notification-button--success",
+          "gds-snackbar__notification-button--info",
+          "gds-snackbar__notification-button--warning",
+          "gds-snackbar__notification-button--danger",
+        ],
+      },
+    ],
+    related: [
+      {
+        title: "Well",
+        url: "/atoms/well-component",
+      },
+      {
+        title: "Alert",
+        url: "/organisms/alert-component",
+      },
+    ],
+
+    code: ``,
   },
 ];
 

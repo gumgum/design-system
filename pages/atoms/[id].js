@@ -58,9 +58,7 @@ export default function DocsPage({ docData }) {
                 <CardBlock>
                   <LivePreview />
                 </CardBlock>
-                <div className="-block">
-                  <LiveEditor className="-bor-rad-b-1" />
-                </div>
+                <LiveEditor className="-bor-rad-b-1" />
               </Card>
               <Divider
                 callback={() => setViewErrow(!viewError)}
