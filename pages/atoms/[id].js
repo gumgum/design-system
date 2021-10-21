@@ -33,7 +33,7 @@ export default function DocsPage({ docData }) {
       </Head>
       <div className="gds-flex gds-flex--justify-between">
         <PageTitle title={docData.title} />
-        {data && (
+        {data && data.gumdrops && (
           <a
             href={data.gumdrops}
             target="_blank"
@@ -58,7 +58,9 @@ export default function DocsPage({ docData }) {
                 <CardBlock>
                   <LivePreview />
                 </CardBlock>
-                <LiveEditor className="-bor-rad-b-1" />
+                <div className="-block">
+                  <LiveEditor className="-bor-rad-b-1" />
+                </div>
               </Card>
               <Divider
                 callback={() => setViewErrow(!viewError)}
@@ -75,7 +77,7 @@ export default function DocsPage({ docData }) {
             </LiveProvider>
           )}
         </Column>
-        <Column lg="4">
+        <Column lg="4" style={{ position: "sticky", top: 0 }}>
           {data && (
             <>
               <Card style={{ maxHeight: "50vh", overflowY: "scroll" }}>
