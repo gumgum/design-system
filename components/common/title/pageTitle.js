@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, FormGroup, TextInput, Tooltip } from "gumdrops";
+
 export default function PageTitle({ title, isEditable, className }) {
   const [editing, setEditing] = useState(false);
   return (
@@ -9,7 +10,10 @@ export default function PageTitle({ title, isEditable, className }) {
       }`}
     >
       {!editing ? (
-        <h2 className="gds-text--header-md" style={{ height: 39.59 }}>
+        <h2
+          className="gds-text--header-md -text-tr-cap"
+          style={{ height: 39.59 }}
+        >
           {title}
         </h2>
       ) : (

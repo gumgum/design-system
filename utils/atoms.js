@@ -709,10 +709,10 @@ const Atoms = [
     ],
 
     code: `<div className="-p-a-3">
-    <div class="gds-skeleton gds-skeleton--header" style={{width: "30%"}}></div>
-    <div class="gds-skeleton" style={{width: "90%"}}></div>
-    <div class="gds-skeleton" style={{width: "70%"}}></div>
-    <div class="gds-skeleton" style={{width: "80%"}}></div>
+    <div className="gds-skeleton gds-skeleton--header" style={{width: "30%"}}></div>
+    <div className="gds-skeleton" style={{width: "90%"}}></div>
+    <div className="gds-skeleton" style={{width: "70%"}}></div>
+    <div className="gds-skeleton" style={{width: "80%"}}></div>
     </div>`,
   },
   {
@@ -766,27 +766,447 @@ const Atoms = [
       },
     ],
 
-    code: ``,
+    code: `
+    <div style={{position: "relative", height: 200, width: "100%"}}>
+    {/* The snackbar is fixed position by default. */}
+    {/* Ignore the inline styles, these were added for demo purposes */}
+    <ul className="gds-snackbar" style={{position: "absolute", top: "1rem"}}>
+    <li className="gds-snackbar__notification">
+        <p className="gds-snackbar__notification-text">Some text goes here.</p>
+        <button className="gds-snackbar__notification-button"></button>
+    </li>
+    <li className="gds-snackbar__notification">
+        <p className="gds-snackbar__notification-text">Some text goes here.</p>
+        <button className="gds-snackbar__notification-button"></button>
+    </li>
+</ul>
+</div>`,
+  },
+  {
+    id: "tag-component",
+    gumdrops: "https://gumdrops.gumgum.com/?path=/story/atoms-tag--default",
+    variants: [
+      {
+        title: "Required",
+        values: ["gds-tag"],
+      },
+      {
+        title: "Add Ons",
+        values: ["gds-tag--with-button", "gds-tag__button", "gds-tag__option"],
+      },
+      {
+        title: "Size",
+        values: [
+          "gds-tag--xs",
+          "gds-tag--sm",
+          "gds-tag--with-button-xs",
+          "gds-tag--with-button-sm",
+          "gds-tag__button--xs",
+          "gds-tag__button--sm",
+        ],
+      },
+      {
+        title: "Context (Color)",
+        values: [
+          "gds-tag--primary",
+          "gds-tag--success",
+          "gds-tag--warning",
+          "gds-tag--danger",
+          "gds-tag--blue",
+          "gds-tag--gold",
+          "gds-tag--green",
+          "gds-tag--orange",
+          "gds-tag--purple",
+          "gds-tag--red",
+          "gds-tag--darkblue",
+          "gds-tag--darkgreen",
+          "gds-tag--darkred",
+          "gds-tag--dark",
+          "gds-tag--primary-dark",
+          "gds-tag--secondary-dark",
+          "gds-tag--success-dark",
+          "gds-tag--warning-dark",
+          "gds-tag--danger-dark",
+          "gds-tag--blue-dark",
+          "gds-tag--gold-dark",
+          "gds-tag--green-dark",
+          "gds-tag--orange-dark",
+          "gds-tag--purple-dark",
+          "gds-tag--red-dark",
+          "gds-tag--darkblue-dark",
+          "gds-tag--darkgold-dark",
+          "gds-tag--darkgreen-dark",
+          "gds-tag--darkred-dark",
+        ],
+      },
+      {
+        title: "Context (Color) for button",
+        values: [
+          "gds-tag__button--blue",
+          "gds-tag__button--blue-dark",
+          "gds-tag__button--gold-dark",
+          "gds-tag__button--green-dark",
+          "gds-tag__button--orange-dark",
+          "gds-tag__button--purple-dark",
+          "gds-tag__button--red-dark",
+          "gds-tag__button--darkblue-dark",
+          "gds-tag__button--darkgold-dark",
+          "gds-tag__button--darkgreen-dark",
+          "gds-tag__button--darkred-dark",
+          "gds-tag__option--primary",
+          "gds-tag__option--primary-dark",
+          "gds-tag__option--secondary",
+          "gds-tag__option--secondary-dark",
+          "gds-tag__option--success",
+          "gds-tag__option--success-dark",
+          "gds-tag__option--warning",
+          "gds-tag__option--warning-dark",
+          "gds-tag__option--danger",
+          "gds-tag__option--danger-dark",
+          "gds-tag__option--blue",
+          "gds-tag__option--blue-dark",
+          "gds-tag__option--gold",
+          "gds-tag__option--gold-dark",
+          "gds-tag__option--green",
+          "gds-tag__option--green-dark",
+          "gds-tag__option--orange",
+          "gds-tag__option--orange-dark",
+          "gds-tag__option--purple",
+          "gds-tag__option--purple-dark",
+          "gds-tag__option--red",
+          "gds-tag__option--red-dark",
+          "gds-tag__option--darkblue",
+          "gds-tag__option--darkblue-dark",
+          "gds-tag__option--darkgold",
+          "gds-tag__option--darkgold-dark",
+          "gds-tag__option--darkgreen",
+          "gds-tag__option--darkgreen-dark",
+          "gds-tag__option--darkred",
+          "gds-tag__option--darkred-dark",
+        ],
+      },
+    ],
+    related: [
+      {
+        title: "Badge",
+        url: "/atoms/badge-component",
+      },
+      {
+        title: "Button",
+        url: "/atoms/button-component",
+      },
+      {
+        title: "Link",
+        url: "/atoms/link-component",
+      },
+    ],
+
+    code: `
+    <div className="-p-a-3">
+      {/* default tag */}
+      <div className="gds-tag">This is a tag</div>
+      {/* default color with close */}
+      <div className="gds-tag gds-tag--with-button">Gillette<button className="gds-tag__button"></button></div>
+      {/* primary color with close */}
+      <div className="gds-tag gds-tag--with-button gds-tag--primary">Primary Tag<button className="gds-tag__button gds-tag__button--primary"></button></div>
+      {/* success color with close */}
+      <div className="gds-tag gds-tag--with-button gds-tag--success">Success Tag<button className="gds-tag__button gds-tag__button--success"></button></div>
+      {/* warning color with close */}
+      <div className="gds-tag gds-tag--with-button gds-tag--warning">Warning Tag<button className="gds-tag__button gds-tag__button--warning"></button></div>
+      {/* Option tag feature has color bugs and needs to be improved */}
+      <div className="gds-tag gds-tag--with-button gds-tag--danger">Option Danger Tag (to use a different icon)<button className="gds-tag__option gds-tag__option--danger"><i className="fas fa-sm fa-plus"></i></button></div>
+      {/* small with close */}
+      <div className="gds-tag gds-tag--with-button-sm gds-tag--sm">
+          Small Tag<button className="gds-tag__button gds-tag__button--sm"></button>
+      </div>
+      {/* x-small with close */}
+      <div className="gds-tag gds-tag--primary gds-tag--with-button-xs gds-tag--xs">
+          X-Small Primary Tag<button className="gds-tag__button gds-tag__button--primary gds-tag__button--xs"></button>
+      </div>
+</div>`,
+  },
+  {
+    id: "text-component",
+    gumdrops: "",
+    variants: [
+      {
+        title: "Size - Header",
+        values: [
+          "gds-text--header-xs",
+          "gds-text--header-sm",
+          "gds-text--header-md",
+          "gds-text--header-lg",
+          "gds-text--header-xl",
+          "gds-text--header-xxl",
+        ],
+      },
+      {
+        title: "Size - Body",
+        values: ["gds-text--body-xs", "gds-text--body-sm", "gds-text--body-md"],
+      },
+      {
+        title: "Weight",
+        values: ["gds-text--regular", "gds-text--bold"],
+      },
+      {
+        title: "Context (Color)",
+        values: [
+          "gds-text--primary",
+          "gds-text--secondary",
+          "gds-text--success",
+          "gds-text--info",
+          "gds-text--warning",
+          "gds-text--danger",
+        ],
+      },
+      {
+        title: "Additional Context (Color) w/ Utilities (* = 1-5)",
+        values: [
+          "-color-tx-lt-1",
+          "-color-tx-lt-2",
+          "-color-tx-lt-3",
+          "-color-tx-lt-4",
+          "-color-tx-lt-5",
+          "-color-tx-dk-1",
+          "-color-tx-dk-2",
+          "-color-tx-dk-3",
+          "-color-tx-dk-4",
+          "-color-tx-dk-5",
+          "-color-tx-white",
+          "-color-tx-pri",
+          "-color-tx-pri-lt-*",
+          "-color-tx-pri-dk-*",
+          "-color-tx-sec",
+          "-color-tx-sec-lt-*",
+          "-color-tx-sec-dk-*",
+          "-color-tx-ter",
+          "-color-tx-ter-lt-*",
+          "-color-tx-ter-dk-*",
+          "-color-tx-suc",
+          "-color-tx-suc-lt-*",
+          "-color-tx-suc-dk-*",
+          "-color-tx-war",
+          "-color-tx-war-lt-*",
+          "-color-tx-war-dk-*",
+          "-color-tx-dan",
+          "-color-tx-dan-lt-*",
+          "-color-tx-dan-dk-*",
+          "-color-tx-inf",
+          "-color-tx-inf-lt-*",
+          "-color-tx-inf-dk-*",
+          "-color-tx-gold",
+          "-color-tx-gold-lt-*",
+          "-color-tx-gold-dk-*",
+          "-color-tx-blue",
+          "-color-tx-blue-lt-*",
+          "-color-tx-blue-dk-*",
+          "-color-tx-red",
+          "-color-tx-red-lt-*",
+          "-color-tx-red-dk-*",
+          "-color-tx-green",
+          "-color-tx-green-lt-*",
+          "-color-tx-green-dk-*",
+          "-color-tx-purple",
+          "-color-tx-purple-lt-*",
+          "-color-tx-purple-dk-*",
+          "-color-tx-orange",
+          "-color-tx-orange-lt-*",
+          "-color-tx-orange-dk-*",
+          "-color-tx-dkblue",
+          "-color-tx-dkblue-lt-*",
+          "-color-tx-dkblue-dk-*",
+          "-color-tx-dkred",
+          "-color-tx-dkred-lt-*",
+          "-color-tx-dkred-dk-*",
+          "-color-tx-dkgreen",
+          "-color-tx-dkgreen-lt-*",
+          "-color-tx-dkgreen-dk-*",
+          "-color-tx-dkgold",
+          "-color-tx-dkgold-lt-*",
+          "-color-tx-dkgold-dk-*",
+          "-color-tx-magenta",
+          "-color-tx-magenta-lt-*",
+          "-color-tx-magenta-dk-*",
+        ],
+      },
+      {
+        title: "Style",
+        values: [
+          "gds-text--italic",
+          "gds-text--blockquote",
+          "gds-text--blockquote--footer",
+          "gds-text--highlight",
+          "gds-text--code",
+          "gds-text--keyboard",
+        ],
+      },
+      {
+        title: "List",
+        values: ["gds-text__list-item--disc", "gds-text__list-item--number"],
+      },
+    ],
+    related: [
+      {
+        title: "Link",
+        url: "/atoms/link-component",
+      },
+      {
+        title: "Button Text Only",
+        url: "/atoms/button-text-component",
+      },
+    ],
+
+    code: `<div className="-p-a-3">
+  <h1 className="gds-text--header-xxl -m-b-3"> XXL Header Text</h1>
+  <h2 className="gds-text--header-xl -m-b-3"> XL Header Text</h2>
+  <h3 className="gds-text--header-lg -m-b-3"> LG Header Text</h3>
+  <h4 className="gds-text--header-md -m-b-3"> MD Header Text</h4>
+  <h5 className="gds-text--header-sm -m-b-3"> SM Header Text</h5>
+  <h6 className="gds-text--header-xs -m-b-3"> XS Header Text</h6>
+  <br />
+  <p className="gds-text--body-md">MD Body Text (Default)</p>
+  <p className="gds-text--body-sm">SM Body Text</p>
+  <p className="gds-text--body-xs">XS Body Text</p> 
+  <br />
+  <p className="gds-text--body-md">
+  For 10 years, <span className="gds-text--hero">GumGum</span> has <span className="gds-text--italic">perfected</span> its content analysis capabilities, using the latest in <span className="gds-text--info">deep learning technology</span>.
+  </p>
+  <br />
+  <ul>
+    <li className="gds-text__list-item--disc">Cats</li>
+    <li className="gds-text__list-item--disc">Dogs</li>
+  </ul>
+  <br />
+  <ol>
+    <li className="gds-text__list-item--number">Cats</li>
+    <li className="gds-text__list-item--number">Dogs</li>
+  </ol>
+</div>`,
+  },
+  {
+    id: "tooltip-component",
+    gumdrops: "https://gumdrops.gumgum.com/?path=/story/atoms-tooltip--default",
+    variants: [
+      {
+        title: "Position",
+        values: [
+          "gds-tooltip--top",
+          "gds-tooltip--right",
+          "gds-tooltip--bottom",
+          "gds-tooltip--left",
+        ],
+      },
+      {
+        title: "Context (Color)",
+        values: [
+          "gds-tooltip--primary",
+          "gds-tooltip--success",
+          "gds-tooltip--info",
+          "gds-tooltip--warning",
+          "gds-tooltip--danger",
+          "gds-tooltip--dark",
+        ],
+      },
+      {
+        title: "Size",
+        values: ["gds-tooltip--lg"],
+      },
+      {
+        title: "State",
+        values: [
+          "gds-tooltip--always",
+          "gds-tooltip--no-animate",
+          "gds-tooltip--bounce",
+        ],
+      },
+    ],
+    related: [
+      {
+        title: "Text",
+        url: "/text-component",
+      },
+      {
+        title: "Button",
+        url: "/button-component",
+      },
+    ],
+
+    code: `<span className="gds-tooltip--right" data-tooltip="I am a tooltip!">
+    <button type="button" className="gds-button gds-button--primary">Button with tooltip</button>
+</span>`,
+  },
+  {
+    id: "well-component",
+    gumdrops:
+      "https://gumdrops.gumgum.com/?path=/story/molecules-well--default",
+    variants: [
+      {
+        title: "Required",
+        values: ["gds-well"],
+      },
+      {
+        title: "Add Ons",
+        values: ["gds-well__text", "gds-well__button"],
+      },
+      {
+        title: "Context (Color)",
+        values: [
+          "gds-well--success",
+          "gds-well__button--success",
+          "gds-well--info",
+          "gds-well__button--info",
+          "gds-well--warning",
+          "gds-well__button--warning",
+          "gds-well--danger",
+          "gds-well__button--danger",
+          "gds-well--dark",
+        ],
+      },
+    ],
+    related: [
+      {
+        title: "Snackbar",
+        url: "/atoms/snackbar-component",
+      },
+      {
+        title: "Container",
+        url: "/atoms/container-component",
+      },
+      {
+        title: "Card",
+        url: "/molecules/card-component",
+      },
+    ],
+
+    code: `<div className="-p-a-3">
+    <div className="gds-well -m-b-2">
+      <p className="gds-well__text">Default well</p>
+      <button className="gds-well__button"></button>
+    </div>
+    <div className="gds-well gds-well--success">
+      <p className="gds-well__text">Success well</p>
+      <button className="gds-well__button gds-well__button--success"></button>
+    </div>
+</div>`,
   },
 ];
 
 // to copy and paste for above array
+// {
+//   id: "",
+//   gumdrops: "",
+//   variants: [
+//     {
+//       title: "",
+//       values: [],
+//     },
+//   ],
+//   related: [
+//     {
+//       title: "",
+//       url: "",
+//     },
+//   ],
 
-const blankStructure = {
-  id: "",
-  gumdrops: "",
-  variants: [
-    {
-      title: "",
-      values: [],
-    },
-  ],
-  related: [
-    {
-      title: "",
-      url: "",
-    },
-  ],
-
-  code: ``,
-};
+//   code: ``,
+// }
