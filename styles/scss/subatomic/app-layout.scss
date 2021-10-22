@@ -7,30 +7,25 @@
 
 // Grid Layout Items
 .gds-app-layout__top {
-  z-index: $z-index-3;
   grid-area: top;
+  overflow: visible;
 }
 .gds-app-layout__main {
-  z-index: $z-index-1;
   padding: 1rem 2rem;
   grid-area: main;
   overflow-x: hidden;
   overflow-y: auto;
-  background: #f6f6f6;
+  background: #fafafa;
 }
 .gds-app-layout__left {
-  z-index: $z-index-2;
   grid-area: left;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: visible;
 }
 .gds-app-layout__right {
-  z-index: $z-index-2;
   grid-area: right;
-  overflow: auto;
+  overflow: visible;
 }
 .gds-app-layout__bottom {
-  z-index: $z-index-3;
   grid-area: bottom;
 }
 
@@ -73,17 +68,17 @@
   .gds-app-layout__left.gds-app-layout__left--open {
     display: flex;
     position: absolute;
-    z-index: $z-index-5;
     top: 0;
     bottom: 0;
     left: 0;
+    z-index: $z-index-5;
   }
   .gds-app-layout__right.gds-app-layout__right--open {
     display: flex;
     position: absolute;
-    z-index: $z-index-5;
     top: 0;
     bottom: 0;
     right: 0;
+    z-index: $z-index-5;
   }
 }

@@ -52,7 +52,6 @@ export function getSectionDocsData(section) {
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
-
     // Combine the data with the id
     return {
       id,
@@ -100,7 +99,6 @@ export async function getDocData(id) {
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
-
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
     .use(html)

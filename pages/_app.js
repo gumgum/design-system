@@ -5,6 +5,7 @@ import Header from "../components/layout/Header";
 import Main from "../components/layout/Main";
 import Left from "../components/layout/Left";
 import ModalWrapper from "../components/common/modal/modalWrapper";
+import GlobalSearch from "../components/common/search/GlobalSearch";
 // import Right from "../components/layout/Right";
 
 function MyApp({ Component, pageProps }) {
@@ -30,6 +31,7 @@ function MyApp({ Component, pageProps }) {
           global={router.query.global}
         />
       )}
+      <GlobalSearch />
     </AppWrapper>
   );
 }

@@ -1,6 +1,6 @@
 {
   "name": "gumgum-design",
-  "version": "1.9.18",
+  "version": "1.9.29",
   "description": "GumGum's design system, Concrete.",
   "main": "styles/scss/index.scss",
   "repository": {
@@ -31,13 +31,15 @@
   },
   "dependencies": {
     "@fontsource/public-sans": "^4.5.0",
-    "@fortawesome/fontawesome-free": "^5.15.4"
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "prettier": "^2.4.1",
+    "react-live": "^2.3.0"
   },
   "devDependencies": {
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
     "gray-matter": "^4.0.3",
-    "gumdrops": "^1.14.0",
+    "gumdrops": "^1.15.1",
     "next": "11.1.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",

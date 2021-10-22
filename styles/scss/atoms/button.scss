@@ -1271,7 +1271,10 @@
 
 .gds-text-button--light-grey,
 .gds-text-button--light-gray {
+  border: none;
+  background-color: transparent;
   color: $grayLight3Color;
+  cursor: pointer;
   &:hover,
   &:focus {
     color: $primaryColor;

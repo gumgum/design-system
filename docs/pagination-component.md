@@ -7,9 +7,18 @@ section: molecules
 
 The pagination component is prefixed by `gds-pagination`. It should be placed semantically within a `<nav>` element. Use `gds-pagination__page-item--active` on the currently selected page number.
 
-<p style="margin-bottom: 0.8em">
-    <a href="https://ds.gumgum.com/stable/index.html#gds-pagination" target="_blank">Prototypes Page</a>
-</p>
+<nav>
+    <ul class="gds-pagination" data-paganimate="">
+        <li class="gds-pagination__page-item"> <a class="gds-pagination__page-link" aria-label="Previous" data-page-change="prev"> <span class="-vis-hidden" aria-hidden="true">«</span> <span class="-sr-only">Previous</span> </a> </li><!--
+        --><li class="gds-pagination__page-item gds-pagination__page-item--active" data-paginate-active="true"><a data-paginate-link="" class="gds-pagination__page-link">1</a></li><!--
+        --><li class="gds-pagination__page-item" data-paginate-active="false"><a data-paginate-link="" class="gds-pagination__page-link">2</a></li><!--
+        --><li class="gds-pagination__page-item" data-paginate-active="false"><a data-paginate-link="" class="gds-pagination__page-link">3</a></li><!--
+        --><li class="gds-pagination__page-item" data-paginate-active="false"><a data-paginate-link="" class="gds-pagination__page-link">4</a></li><!--
+        --><li class="gds-pagination__page-item" data-paginate-active="false"><a data-paginate-link="" class="gds-pagination__page-link">5</a></li><!--
+        --><li class="gds-pagination__page-item"><a class="gds-pagination__page-link" aria-label="Next" data-page-change="next"><span class="-vis-hidden" aria-hidden="true">»</span> <span class="-sr-only">Next</span></a></li>
+        <span class="gds-pagination__page-indicator"></span>
+    </ul>
+</nav>
 
 ```html
 <nav>
