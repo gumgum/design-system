@@ -23,7 +23,7 @@ export default function AllDocsPage({ allPostsData }) {
             work in progress.
           </p>
           <p>Documentation checklist:</p>
-          <ul className="gds-checklist">
+          <ul className="gds-checklist -m-b-2">
             <li className="gds-checklist__item gds-checklist__item--sm gds-checklist__item--inverse">
               <span className="gds-checklist__item-text">Subatomic</span>
             </li>
@@ -41,6 +41,22 @@ export default function AllDocsPage({ allPostsData }) {
             </li>
             <li className="gds-checklist__item gds-checklist__item--sm gds-checklist__item--inverse">
               <span className="gds-checklist__item-text">Utilities</span>
+            </li>
+          </ul>
+          <p>Design System checklist:</p>
+          <ul className="gds-checklist">
+            <li className="gds-checklist__item gds-checklist__item--sm gds-checklist__item--inverse">
+              <span className="gds-checklist__item-text">
+                Automatic NPM Publish
+              </span>
+            </li>
+            <li className="gds-checklist__item gds-checklist__item--sm gds-checklist__item--inverse">
+              <span className="gds-checklist__item-text">Version History</span>
+            </li>
+            <li className="gds-checklist__item gds-checklist__item--sm gds-checklist__item--inverse">
+              <span className="gds-checklist__item-text">
+                Deprecate Unused Components
+              </span>
             </li>
           </ul>
           <Divider />
