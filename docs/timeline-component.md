@@ -12,27 +12,33 @@ The timeline component, prefixed by `gds-timeline`, is used to indicate the numb
 </p>
 
 ```html
-<div class="gds-timeline" data-gds-timeline>
-    <ul class="gds-timeline__items">
-        <li class="gds-timeline__item gds-timeline__item--completed" data-gds-timeline-item="completed">
-            <div class="gds-timeline__item-label">Step 1</div>
-            <div class="gds-timeline__item-icon"></div>
-        </li>
-        <li class="gds-timeline__item gds-timeline__item--active" data-gds-timeline-item="active">
-            <div class="gds-timeline__item-label">Step 2</div>
-            <div class="gds-timeline__item-icon"></div>
-        </li>
-        <li class="gds-timeline__item" data-gds-timeline-item="inactive">
-            <div class="gds-timeline__item-label">Step 3</div>
-            <div class="gds-timeline__item-icon"></div>
-        </li>
-        <li class="gds-timeline__item" data-gds-timeline-item="inactive">
-            <div class="gds-timeline__item-label">Step 4</div>
-            <div class="gds-timeline__item-icon"></div>
-        </li>
-        <div class="gds-timeline__progress-wrapper">
-            <div class="gds-timeline__progress-indicator"></div>
-        </div>
-    </ul>
+<div className="gds-timeline" data-gds-timeline>
+  <ul className="gds-timeline__items">
+    <li
+      className="gds-timeline__item gds-timeline__item--completed"
+      data-gds-timeline-item="completed"
+    >
+      <div className="gds-timeline__item-label">Step 1</div>
+      <div className="gds-timeline__item-icon"></div>
+    </li>
+    <li
+      className="gds-timeline__item gds-timeline__item--active"
+      data-gds-timeline-item="active"
+    >
+      <div className="gds-timeline__item-label">Step 2</div>
+      <div className="gds-timeline__item-icon"></div>
+    </li>
+    <li className="gds-timeline__item" data-gds-timeline-item="inactive">
+      <div className="gds-timeline__item-label">Step 3</div>
+      <div className="gds-timeline__item-icon"></div>
+    </li>
+    <li className="gds-timeline__item" data-gds-timeline-item="inactive">
+      <div className="gds-timeline__item-label">Step 4</div>
+      <div className="gds-timeline__item-icon"></div>
+    </li>
+    <div className="gds-timeline__progress-wrapper">
+      <div className="gds-timeline__progress-indicator"></div>
+    </div>
+  </ul>
 </div>
 ```

@@ -8,12 +8,12 @@ section: utilities
 Adjust the float property on any element, and clear the floats wherever needed.
 
 ```html
-<div class="-float-left">Float left</div>
-<div class="-float-right">Float right</div>
-<div class="-clear-both">Clear floats</div>
+<div className="-float-left">Float left</div>
+<div className="-float-right">Float right</div>
+<div className="-clear-both">Clear floats</div>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `-float-left`
 - `-float-right`

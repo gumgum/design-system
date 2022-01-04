@@ -17,8 +17,8 @@ Change an element's position property:
 Absolutely position elements in a corner of their parent element:
 
 ```html
-<div class="-abs-t-r">Absolute positioned, top right</div>
-<div class="-abs-t-l">Absolute positioned, top left</div>
-<div class="-abs-b-r">Absolute positioned, bottom right</div>
-<div class="-abs-b-l">Absolute positioned, bottom left</div>
+<div className="-abs-t-r">Absolute positioned, top right</div>
+<div className="-abs-t-l">Absolute positioned, top left</div>
+<div className="-abs-b-r">Absolute positioned, bottom right</div>
+<div className="-abs-b-l">Absolute positioned, bottom left</div>
 ```

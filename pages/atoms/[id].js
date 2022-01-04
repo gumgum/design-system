@@ -4,8 +4,6 @@ import { useState, useEffect } from "react";
 import { Card, CardBlock, Column, Divider, Row } from "gumdrops";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import dracula from "prism-react-renderer/themes/dracula";
-import prettier from "prettier/standalone";
-import babelParser from "prettier/parser-babel";
 import PageTitle from "../../components/common/title/pageTitle";
 import CopyText from "../../components/common/copy/CopyText";
 import { getDocData, getAllDocIds } from "../../utils/docs";

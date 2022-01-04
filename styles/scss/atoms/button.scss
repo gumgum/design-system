@@ -175,10 +175,12 @@
 }
 
 .gds-button,
+a.gds-button,
 .gds-toolbelt__item-input-button,
 .gds-radio-block__button,
 .gds-corner-content__button,
 .gds-circular-button,
+a.gds-circular-button,
 .gds-tree__link-option,
 .gds-button-dropdown__button,
 .gds-multi-select__button,
@@ -317,10 +319,14 @@
 }
 
 .gds-button--outline,
+a.gds-button--outline,
 .gds-circular-button--outline,
+a.gds-circular-button--outline,
 .gds-anim-timeline__button--add,
 .gds-button--default,
+a.gds-button--default,
 .gds-circular-button--default,
+a.gds-circular-button--default,
 .gds-button--toggle,
 .gds-circular-button--toggle {
   color: $primaryColor;
@@ -1111,7 +1117,8 @@
 
 // Circular Button
 
-.gds-circular-button {
+.gds-circular-button,
+a.gds-circular-button {
   padding: 0;
   border-radius: 50%;
   width: 58px;

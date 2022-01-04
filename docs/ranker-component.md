@@ -12,44 +12,82 @@ The ranker component is used to display a set of objects in a ranker order. The 
 </p>
 
 ```html
-<div class="gds-ranker">
-    <ul class="gds-ranker__list">
-        <li class="gds-ranker__item">
-            <div class="gds-ranker__item-icon" data-tooltip="Brand Name goes here">
-                <img class="gds-ranker__image" src="https://c.gumgum.com/ads/com/gumgum/vi/images/no_image.png" />
-            </div>
-            <div class="gds-ranker__item-number">1</div>
-        </li><!--
-        --><li class="gds-ranker__item">
-            <div class="gds-ranker__item-icon" data-tooltip="Brand Name goes here">
-                <img class="gds-ranker__image" src="https://c.gumgum.com/ads/com/gumgum/vi/images/no_image.png" />
-            </div>
-            <div class="gds-ranker__item-number">2</div>
-        </li><!--
-        --><li class="gds-ranker__item">
-            <div class="gds-ranker__item-icon" data-tooltip="Brand Name goes here">
-                <img class="gds-ranker__image" src="https://c.gumgum.com/ads/com/gumgum/vi/images/no_image.png" />
-            </div>
-            <div class="gds-ranker__item-number">3</div>
-        </li><!--
-        --><li class="gds-ranker__item">
-            <div class="gds-ranker__item-icon" data-tooltip="Brand Name goes here">
-                <img class="gds-ranker__image" src="https://c.gumgum.com/ads/com/gumgum/vi/images/no_image.png" />
-            </div>
-            <div class="gds-ranker__item-number">4</div>
-        </li><!--
-        --><li class="gds-ranker__item">
-            <div class="gds-ranker__item-icon" data-tooltip="Brand Name goes here">
-                <img class="gds-ranker__image" src="https://c.gumgum.com/ads/com/gumgum/vi/images/no_image.png" />
-            </div>
-            <div class="gds-ranker__item-number">5</div>
-        </li>
-    </ul>
-    <div class="gds-ranker__connector"></div>
+<div className="gds-ranker">
+  <ul className="gds-ranker__list">
+    <li className="gds-ranker__item">
+      <div
+        className="gds-ranker__item-icon"
+        data-tooltip="Brand Name goes here"
+      >
+        <img
+          className="gds-ranker__image"
+          src="https://c.gumgum.com/ads/com/gumgum/vi/images/no_image.png"
+        />
+      </div>
+      <div className="gds-ranker__item-number">1</div>
+    </li>
+    <!--
+        -->
+    <li className="gds-ranker__item">
+      <div
+        className="gds-ranker__item-icon"
+        data-tooltip="Brand Name goes here"
+      >
+        <img
+          className="gds-ranker__image"
+          src="https://c.gumgum.com/ads/com/gumgum/vi/images/no_image.png"
+        />
+      </div>
+      <div className="gds-ranker__item-number">2</div>
+    </li>
+    <!--
+        -->
+    <li className="gds-ranker__item">
+      <div
+        className="gds-ranker__item-icon"
+        data-tooltip="Brand Name goes here"
+      >
+        <img
+          className="gds-ranker__image"
+          src="https://c.gumgum.com/ads/com/gumgum/vi/images/no_image.png"
+        />
+      </div>
+      <div className="gds-ranker__item-number">3</div>
+    </li>
+    <!--
+        -->
+    <li className="gds-ranker__item">
+      <div
+        className="gds-ranker__item-icon"
+        data-tooltip="Brand Name goes here"
+      >
+        <img
+          className="gds-ranker__image"
+          src="https://c.gumgum.com/ads/com/gumgum/vi/images/no_image.png"
+        />
+      </div>
+      <div className="gds-ranker__item-number">4</div>
+    </li>
+    <!--
+        -->
+    <li className="gds-ranker__item">
+      <div
+        className="gds-ranker__item-icon"
+        data-tooltip="Brand Name goes here"
+      >
+        <img
+          className="gds-ranker__image"
+          src="https://c.gumgum.com/ads/com/gumgum/vi/images/no_image.png"
+        />
+      </div>
+      <div className="gds-ranker__item-number">5</div>
+    </li>
+  </ul>
+  <div className="gds-ranker__connector"></div>
 </div>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `gds-ranker--no-line`
 - `gds-ranker--vertical`

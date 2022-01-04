@@ -8,10 +8,10 @@ section: utilities
 Adjust the `overflow` property.
 
 ```html
-<div class="-overflow-hidden">Overflow hidden</div>
+<div className="-overflow-hidden">Overflow hidden</div>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `-overflow-hidden`
 - `-overflow-visible`

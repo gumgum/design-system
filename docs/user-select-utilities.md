@@ -7,12 +7,12 @@ section: utilities
 
 Disable the user's ability to select text within any element.
 
-<p class="-user-select--none">Some text that can't be selected.</p>
+<p className="-user-select--none">Some text that can't be selected.</p>
 
 ```html
-<p class="-user-select--none">Some text that can't be selected.</p>
+<p className="-user-select--none">Some text that can't be selected.</p>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `-user-select--none`

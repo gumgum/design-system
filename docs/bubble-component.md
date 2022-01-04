@@ -14,20 +14,34 @@ As with avatar menu and filter components, the button that invokes the bubble me
 </p>
 
 ```html
-<div class="gds-bubble -m-b-6" data-gds-bubble>
-    <div class="gds-button gds-button--outline gds-button--xs" data-gds-bubble-button="[data-gds-bubble-menu='example']"><i class="fa fa-fw fa-ellipsis-h" aria-hidden="true"></i></div>
-    <div class="gds-bubble__menu gds-bubble__menu gds-bubble__menu--menu-open  gds-bubble__menu--offset-sm" data-gds-bubble-menu>
-        <ul class="gds-bubble__menu-list" data-gds-bubble-menu="example">
-            <li class="gds-bubble__menu-list-item -ellipsis"><a class="gds-bubble__menu-list-link" href="#">Alert 1</a></li>
-            <li class="gds-bubble__menu-list-item -ellipsis"><a class="gds-bubble__menu-list-link" href="#">Alert 2</a></li>
-            <li class="gds-bubble__menu-list-divider"></li>
-            <li class="gds-bubble__menu-list-item -ellipsis"><a class="gds-bubble__menu-list-link" href="#">Clear Alerts</a></li>
-        </ul>
-    </div>
+<div className="gds-bubble -m-b-6" data-gds-bubble>
+  <div
+    className="gds-button gds-button--outline gds-button--xs"
+    data-gds-bubble-button="[data-gds-bubble-menu='example']"
+  >
+    <i className="fa fa-fw fa-ellipsis-h" aria-hidden="true"></i>
+  </div>
+  <div
+    className="gds-bubble__menu gds-bubble__menu gds-bubble__menu--menu-open  gds-bubble__menu--offset-sm"
+    data-gds-bubble-menu
+  >
+    <ul className="gds-bubble__menu-list" data-gds-bubble-menu="example">
+      <li className="gds-bubble__menu-list-item -ellipsis">
+        <a className="gds-bubble__menu-list-link" href="#">Alert 1</a>
+      </li>
+      <li className="gds-bubble__menu-list-item -ellipsis">
+        <a className="gds-bubble__menu-list-link" href="#">Alert 2</a>
+      </li>
+      <li className="gds-bubble__menu-list-divider"></li>
+      <li className="gds-bubble__menu-list-item -ellipsis">
+        <a className="gds-bubble__menu-list-link" href="#">Clear Alerts</a>
+      </li>
+    </ul>
+  </div>
 </div>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `gds-bubble__menu--offset-xs`
 - `gds-bubble__menu--offset-sm`

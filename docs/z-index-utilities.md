@@ -8,10 +8,10 @@ section: utilities
 Adjust any element's z-index. Higher values render in front of lower values, `-z-neg` will render z-index: -1.
 
 ```html
-<div class="-z-1">Z-Index 100</div>
+<div className="-z-1">Z-Index 100</div>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `-z-1`
 - `-z-2`

@@ -8,12 +8,12 @@ section: utilities
 Adjust the `display` property on any element. To adjust the property at specific breakpoints only, use the breakpoint-specific modifier classes.
 
 ```html
-<div class="-block">Display block</div>
-<div class="-inline-block">Display inline-block</div>
-<div class="-none">Display none</div>
+<div className="-block">Display block</div>
+<div className="-inline-block">Display inline-block</div>
+<div className="-none">Display none</div>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `-block`
 - `-block--xs`

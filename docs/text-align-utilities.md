@@ -9,17 +9,17 @@ Adjust text alignment with the following utility classes. Text is aligned left b
 
 To adjust text alignment at a specified breakpoint, use the format `-text-{direction}-{breakpoint}`, where `{direction}` can be `left`, `center`, or `right`, and `{breakpoint}` can be `xs`, `sm`, `md`, `lg` or `xl`. Breakpoint-specific classes cascade downwards.
 
-<p class="-text-left" style="margin-bottom: 0.8em">Left-aligned text</p>
-<p class="-text-center">Centered text</p>
-<p class="-text-right">Right-aligned text</p>
+<p className="-text-left" style="margin-bottom: 0.8em">Left-aligned text</p>
+<p className="-text-center">Centered text</p>
+<p className="-text-right">Right-aligned text</p>
 
 ```html
-<p class="-text-left">Left-aligned text</p>
-<p class="-text-center">Centered text</p>
-<p class="-text-right">Right-aligned text</p>
+<p className="-text-left">Left-aligned text</p>
+<p className="-text-center">Centered text</p>
+<p className="-text-right">Right-aligned text</p>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `-text-left`
 - `-text-center`

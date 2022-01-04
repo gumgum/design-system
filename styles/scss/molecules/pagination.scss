@@ -178,13 +178,14 @@
 // Loop for sizing pagination blocks
 @for $i from 1 through 10 {
   $w: (100 / $i);
+  $p: "%";
 
   .gds-pagination__page-item:first-child:nth-last-of-type(#{$i}),
   .gds-pagination__page-item:first-child:nth-last-of-type(#{$i})
     ~ .gds-pagination__page-item,
   .gds-pagination__page-item:first-child:nth-last-of-type(#{$i})
     ~ .gds-pagination__page-indicator {
-    width: #{$w}+ "%";
+    width: #{$w}#{$p};
   }
 
   @for $g from 1 through $i {
@@ -193,7 +194,7 @@
     .gds-pagination__page-item:first-child:nth-last-of-type(#{$i})
       ~ .gds-pagination__page-item--active:nth-of-type(#{$g})
       ~ .gds-pagination__page-indicator {
-      left: #{$w * $s}+ "%";
+      left: #{$w * $s}#{$p};
     }
   }
 }

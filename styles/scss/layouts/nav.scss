@@ -50,6 +50,7 @@
     min-width: 12rem;
     width: 50%;
     box-shadow: 0.25rem 0px 0.75rem rgba(0, 0, 0, 0.16);
+    z-index: $z-index-9;
     .gds-nav__logo {
       margin: 0 auto;
     }
@@ -59,6 +60,7 @@
     min-width: 12rem;
     width: 50%;
     box-shadow: -0.25rem 0px 0.75rem rgba(0, 0, 0, 0.16);
+    z-index: $z-index-9;
     .gds-nav__logo {
       margin: 0 auto;
     }
