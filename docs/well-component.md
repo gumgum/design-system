@@ -12,17 +12,17 @@ The well component, prefixed by `gds-well`, can be used for alert messages or ot
 </p>
 
 ```html
-<div class="gds-well -m-b-2">
-    <p class="gds-well__text">Default well</p>
-    <button class="gds-well__button"></button>
+<div className="gds-well -m-b-2">
+  <p className="gds-well__text">Default well</p>
+  <button className="gds-well__button"></button>
 </div>
-<div class="gds-well gds-well--success">
-    <p class="gds-well__text">Success well</p>
-    <button class="gds-well__button gds-well__button--success"></button>
+<div className="gds-well gds-well--success">
+  <p className="gds-well__text">Success well</p>
+  <button className="gds-well__button gds-well__button--success"></button>
 </div>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `gds-well--success`
 - `gds-well__button--success`

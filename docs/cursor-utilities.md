@@ -7,39 +7,57 @@ section: utilities
 
 <p style="margin-bottom: 0.8em">Adjust the `cursor` property.</p>
 
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--default">Default cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--pointer">Pointer cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--context-menu">Context-menu cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--help">Help cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--progress">Progress cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--crosshair">Crosshair cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--text">Text cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--copy">Copy cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--move">Move cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--not-allowed">Not-allowed cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--zoom-in">Zoom-in cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--zoom-out">Zoom-out cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--grab">Grab cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--grabbing">Grabbing cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--default">Default cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--pointer">Pointer cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--context-menu">Context-menu cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--help">Help cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--progress">Progress cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--crosshair">Crosshair cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--text">Text cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--copy">Copy cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--move">Move cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--not-allowed">Not-allowed cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--zoom-in">Zoom-in cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--zoom-out">Zoom-out cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--grab">Grab cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--grabbing">Grabbing cursor</div>
 
 ```html
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--default">Default cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--pointer">Pointer cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--context-menu">Context-menu cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--help">Help cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--progress">Progress cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--crosshair">Crosshair cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--text">Text cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--copy">Copy cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--move">Move cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--not-allowed">Not-allowed cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--zoom-in">Zoom-in cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--zoom-out">Zoom-out cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--grab">Grab cursor</div>
-<div class="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--grabbing">Grabbing cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--default">
+  Default cursor
+</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--pointer">
+  Pointer cursor
+</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--context-menu">
+  Context-menu cursor
+</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--help">Help cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--progress">
+  Progress cursor
+</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--crosshair">
+  Crosshair cursor
+</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--text">Text cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--copy">Copy cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--move">Move cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--not-allowed">
+  Not-allowed cursor
+</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--zoom-in">
+  Zoom-in cursor
+</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--zoom-out">
+  Zoom-out cursor
+</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--grab">Grab cursor</div>
+<div className="gds-card -p-v-2 -p-h-3 -m-b-2 -cursor--grabbing">
+  Grabbing cursor
+</div>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `-cursor--default`
 - `-cursor--pointer`

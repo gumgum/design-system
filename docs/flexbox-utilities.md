@@ -16,15 +16,15 @@ It is strongly encouraged that you refer to the prototypes page for this compone
 </p>
 
 ```html
-<div class="gds-flex">
-    <div class="gds-flex__item">Flex Item</div>
-    <div class="gds-flex__item">Flex Item</div>
-    <div class="gds-flex__item">Flex Item</div>
-    <div class="gds-flex__item">Flex Item</div>
+<div className="gds-flex">
+  <div className="gds-flex__item">Flex Item</div>
+  <div className="gds-flex__item">Flex Item</div>
+  <div className="gds-flex__item">Flex Item</div>
+  <div className="gds-flex__item">Flex Item</div>
 </div>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `gds-flex--direction-row`
 - `gds-flex--direction-row-*`

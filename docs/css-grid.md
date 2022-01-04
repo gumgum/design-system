@@ -11,40 +11,40 @@ The CSS grid component, prefixed with `gds-grid`, is used to assemble CSS grid-b
     <a href="https://ds.gumgum.com/stable/index.html#gds-grid" target="_blank">Prototypes Page</a>
 </p>
 
-<div class="gds-grid__container--3">
-    <div class="gds-card -m-a-0">
-        <p class="gds-card__block">Some content</p>
+<div className="gds-grid__container--3">
+    <div className="gds-card -m-a-0">
+        <p className="gds-card__block">Some content</p>
     </div>
-    <div class="gds-card -m-a-0">
-        <p class="gds-card__block">Some content</p>
+    <div className="gds-card -m-a-0">
+        <p className="gds-card__block">Some content</p>
     </div>
-    <div class="gds-card -m-a-0">
-        <p class="gds-card__block">Some content</p>
+    <div className="gds-card -m-a-0">
+        <p className="gds-card__block">Some content</p>
     </div>
-    <div class="gds-card -m-a-0">
-        <p class="gds-card__block">Some content</p>
+    <div className="gds-card -m-a-0">
+        <p className="gds-card__block">Some content</p>
     </div>
-    <div class="gds-card -m-a-0">
-        <p class="gds-card__block">Some content</p>
+    <div className="gds-card -m-a-0">
+        <p className="gds-card__block">Some content</p>
     </div>
 </div>
 
 ```html
-<div class="gds-grid__container--3">
-    <div class="gds-card -m-a-0">
-        <p class="gds-card__block">Some content</p>
-    </div>
-    <div class="gds-card -m-a-0">
-        <p class="gds-card__block">Some content</p>
-    </div>
-    <div class="gds-card -m-a-0">
-        <p class="gds-card__block">Some content</p>
-    </div>
-    <div class="gds-card -m-a-0">
-        <p class="gds-card__block">Some content</p>
-    </div>
-    <div class="gds-card -m-a-0">
-        <p class="gds-card__block">Some content</p>
-    </div>
+<div className="gds-grid__container--3">
+  <div className="gds-card -m-a-0">
+    <p className="gds-card__block">Some content</p>
+  </div>
+  <div className="gds-card -m-a-0">
+    <p className="gds-card__block">Some content</p>
+  </div>
+  <div className="gds-card -m-a-0">
+    <p className="gds-card__block">Some content</p>
+  </div>
+  <div className="gds-card -m-a-0">
+    <p className="gds-card__block">Some content</p>
+  </div>
+  <div className="gds-card -m-a-0">
+    <p className="gds-card__block">Some content</p>
+  </div>
 </div>
 ```

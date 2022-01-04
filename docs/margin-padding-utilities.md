@@ -12,21 +12,21 @@ For the spacing to take effect at a certain breakpoint only, use the format `{pr
 Finally, you can use `-m-h-c` to horizontally center a block element with an assigned width. Margin-centering can also leverage the breakpoint syntax to work exclusively at certain browser sizes.
 
 ```html
-<div class="-color-bg-pri-lt-4 -overflow-hidden -m-b-2">
-    <div class="-m-a-1 -color-bg-pri">Margin all 1</div>
+<div className="-color-bg-pri-lt-4 -overflow-hidden -m-b-2">
+  <div className="-m-a-1 -color-bg-pri">Margin all 1</div>
 </div>
-<div class="-color-bg-pri-lt-4 -overflow-hidden -m-b-2">
-    <div class="-m-l-6 -color-bg-pri">Margin left 6</div>
+<div className="-color-bg-pri-lt-4 -overflow-hidden -m-b-2">
+  <div className="-m-l-6 -color-bg-pri">Margin left 6</div>
 </div>
-<div class="-color-bg-pri-lt-4 -overflow-hidden -m-b-2">
-    <div class="-p-v-3 -color-bg-pri">Padding vertical 3</div>
+<div className="-color-bg-pri-lt-4 -overflow-hidden -m-b-2">
+  <div className="-p-v-3 -color-bg-pri">Padding vertical 3</div>
 </div>
-<div class="-color-bg-pri-lt-4 -overflow-hidden -m-b-2">
-    <div class="-p-h-2 -color-bg-pri">Padding horizontal 2</div>
+<div className="-color-bg-pri-lt-4 -overflow-hidden -m-b-2">
+  <div className="-p-h-2 -color-bg-pri">Padding horizontal 2</div>
 </div>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `-m-t-*`
 - `-m-r-*`

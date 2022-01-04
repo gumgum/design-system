@@ -11,32 +11,32 @@ The layout component, prefixed with `gds-layout`, is used for centering containe
     <a href="https://ds.gumgum.com/stable/index.html#gds-layout" target="_blank">Prototypes Page</a>
 </p>
 
-<div class="gds-layout__container">
-    <div class="gds-layout__row">
-        <div class="gds-layout__column--md-4">
+<div className="gds-layout__container">
+    <div className="gds-layout__row">
+        <div className="gds-layout__column--md-4">
             <p>Left column</p>
         </div>
-        <div class="gds-layout__column--md-4">
+        <div className="gds-layout__column--md-4">
             <p>Center column</p>
         </div>
-        <div class="gds-layout__column--md-4">
+        <div className="gds-layout__column--md-4">
             <p>Right column</p>
         </div>
     </div>
 </div>
 
 ```html
-<div class="gds-layout__container">
-    <div class="gds-layout__row">
-        <div class="gds-layout__column--md-4">
-            <p>Left column</p>
-        </div>
-        <div class="gds-layout__column--md-4">
-            <p>Center column</p>
-        </div>
-        <div class="gds-layout__column--md-4">
-            <p>Right column</p>
-        </div>
+<div className="gds-layout__container">
+  <div className="gds-layout__row">
+    <div className="gds-layout__column--md-4">
+      <p>Left column</p>
     </div>
+    <div className="gds-layout__column--md-4">
+      <p>Center column</p>
+    </div>
+    <div className="gds-layout__column--md-4">
+      <p>Right column</p>
+    </div>
+  </div>
 </div>
 ```

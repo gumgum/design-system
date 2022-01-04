@@ -12,53 +12,114 @@ The onboarder component is used to give new users of a product a quick breakdown
 </p>
 
 ```html
-<div class="gds-onboarder__overlay gds-onboarder--shown" data-gds-onboarder-container="">
-    <div class="gds-onboarder gds-onboarder--t-l" data-gds-onboarder="">
-        <div class="gds-onboarder__header">
-            <span class="gds-onboarder__step-num" data-gds-onboarder-step-num="">1</span>
-            <h4 class="gds-text--header-sm -m-b-3" data-gds-onboarder-step-name="">Main navigation</h4>
-        </div>
-        <div class="gds-onboarder__body">
-            <p class="gds-text--body-sm" data-gds-onboarder-body="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="gds-onboarder__footer">
-            <button data-gds-onboarder-arrow="prev" class="gds-onboarder__button gds-onboarder__button--left -disabled -pointer-events--none"><i class="fa fa-fw fa-caret-left"></i></button>
-            <div class="gds-onboarder__timeline-wrapper">
-                <div class="gds-timeline" data-gds-timeline="">
-                    <ul class="gds-timeline__items">
-                        <li class="gds-timeline__item gds-timeline__item--active" data-gds-timeline-item="active">
-                            <div class="gds-timeline__item-icon gds-timeline__item-icon--white gds-timeline__item-icon--sm"></div>
-                        </li>
-                        <li class="gds-timeline__item" data-gds-timeline-item="inactive">
-                            <div class="gds-timeline__item-icon gds-timeline__item-icon--white gds-timeline__item-icon--sm"></div>
-                        </li>
-                        <li class="gds-timeline__item" data-gds-timeline-item="inactive">
-                            <div class="gds-timeline__item-icon gds-timeline__item-icon--white gds-timeline__item-icon--sm"></div>
-                        </li>
-                        <li class="gds-timeline__item" data-gds-timeline-item="inactive">
-                            <div class="gds-timeline__item-icon gds-timeline__item-icon--white gds-timeline__item-icon--sm"></div>
-                        </li>
-                        <li class="gds-timeline__item" data-gds-timeline-item="inactive">
-                            <div class="gds-timeline__item-icon gds-timeline__item-icon--white gds-timeline__item-icon--sm"></div>
-                        </li>
-                        <li class="gds-timeline__item" data-gds-timeline-item="inactive">
-                            <div class="gds-timeline__item-icon gds-timeline__item-icon--white gds-timeline__item-icon--sm"></div>
-                        </li>
-                        <div class="gds-timeline__progress-wrapper gds-timeline__progress-wrapper--no-label gds-timeline__progress-wrapper--white gds-timeline__progress-wrapper--sm">
-                            <div class="gds-timeline__progress-indicator"></div>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-            <button data-gds-onboarder-arrow="next" class="gds-onboarder__button gds-onboarder__button--right"><i class="fa fa-fw fa-caret-right"></i></button>
-        </div>
-        <button class="gds-onboarder__close" data-gds-onboarder-close-button=""></button>
+<div
+  className="gds-onboarder__overlay gds-onboarder--shown"
+  data-gds-onboarder-container=""
+>
+  <div className="gds-onboarder gds-onboarder--t-l" data-gds-onboarder="">
+    <div className="gds-onboarder__header">
+      <span className="gds-onboarder__step-num" data-gds-onboarder-step-num=""
+        >1</span
+      >
+      <h4
+        className="gds-text--header-sm -m-b-3"
+        data-gds-onboarder-step-name=""
+      >
+        Main navigation
+      </h4>
     </div>
-    <div class="gds-onboarder__highlight" data-gds-onboarder-highlight=""></div>
+    <div className="gds-onboarder__body">
+      <p className="gds-text--body-sm" data-gds-onboarder-body="">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+    <div className="gds-onboarder__footer">
+      <button
+        data-gds-onboarder-arrow="prev"
+        className="gds-onboarder__button gds-onboarder__button--left -disabled -pointer-events--none"
+      >
+        <i className="fa fa-fw fa-caret-left"></i>
+      </button>
+      <div className="gds-onboarder__timeline-wrapper">
+        <div className="gds-timeline" data-gds-timeline="">
+          <ul className="gds-timeline__items">
+            <li
+              className="gds-timeline__item gds-timeline__item--active"
+              data-gds-timeline-item="active"
+            >
+              <div
+                className="gds-timeline__item-icon gds-timeline__item-icon--white gds-timeline__item-icon--sm"
+              ></div>
+            </li>
+            <li
+              className="gds-timeline__item"
+              data-gds-timeline-item="inactive"
+            >
+              <div
+                className="gds-timeline__item-icon gds-timeline__item-icon--white gds-timeline__item-icon--sm"
+              ></div>
+            </li>
+            <li
+              className="gds-timeline__item"
+              data-gds-timeline-item="inactive"
+            >
+              <div
+                className="gds-timeline__item-icon gds-timeline__item-icon--white gds-timeline__item-icon--sm"
+              ></div>
+            </li>
+            <li
+              className="gds-timeline__item"
+              data-gds-timeline-item="inactive"
+            >
+              <div
+                className="gds-timeline__item-icon gds-timeline__item-icon--white gds-timeline__item-icon--sm"
+              ></div>
+            </li>
+            <li
+              className="gds-timeline__item"
+              data-gds-timeline-item="inactive"
+            >
+              <div
+                className="gds-timeline__item-icon gds-timeline__item-icon--white gds-timeline__item-icon--sm"
+              ></div>
+            </li>
+            <li
+              className="gds-timeline__item"
+              data-gds-timeline-item="inactive"
+            >
+              <div
+                className="gds-timeline__item-icon gds-timeline__item-icon--white gds-timeline__item-icon--sm"
+              ></div>
+            </li>
+            <div
+              className="gds-timeline__progress-wrapper gds-timeline__progress-wrapper--no-label gds-timeline__progress-wrapper--white gds-timeline__progress-wrapper--sm"
+            >
+              <div className="gds-timeline__progress-indicator"></div>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <button
+        data-gds-onboarder-arrow="next"
+        className="gds-onboarder__button gds-onboarder__button--right"
+      >
+        <i className="fa fa-fw fa-caret-right"></i>
+      </button>
+    </div>
+    <button
+      className="gds-onboarder__close"
+      data-gds-onboarder-close-button=""
+    ></button>
+  </div>
+  <div
+    className="gds-onboarder__highlight"
+    data-gds-onboarder-highlight=""
+  ></div>
 </div>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `gds-onboarder--t-l`
 - `gds-onboarder--t-r`

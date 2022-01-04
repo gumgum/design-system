@@ -8,10 +8,10 @@ section: utilities
 Adjust vertical alignment. Vertical alignment defaults to `baseline`.
 
 ```html
-<div class="-va-middle"></div>
+<div className="-va-middle"></div>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `-va-sub`
 - `-va-super`

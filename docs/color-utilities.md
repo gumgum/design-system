@@ -14,12 +14,12 @@ For each color, there are 4 light variations and 4 dark variations, which can be
 ## Theme Colors
 
 ```html
-<div class="-color-bg-pri">Primary background color</div>
-<div class="-color-bd-suc">Success color border</div>
-<div class="-color-tx-dan">Danger color text</div>
+<div className="-color-bg-pri">Primary background color</div>
+<div className="-color-bd-suc">Success color border</div>
+<div className="-color-tx-dan">Danger color text</div>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `-dark-mode`
 - `-color-bg-pri`
@@ -192,11 +192,11 @@ Manually override the color, border-color, or background-color of any element. T
 There are 5 variations of light gray, and 5 variations of dark gray.
 
 ```html
-<div class="-color-bg-lt-1">Lightest gray background color</div>
-<div class="-color-bd-dk-1">Darkest gray border color</div>
+<div className="-color-bg-lt-1">Lightest gray background color</div>
+<div className="-color-bd-dk-1">Darkest gray border color</div>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `-color-bg-lt-1`
 - `-color-bg-lt-2`

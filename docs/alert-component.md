@@ -12,23 +12,25 @@ The alert component, prefixed by `gds-alert`, is a standard pop-up element for d
 </p>
 
 ```html
-<div class="gds-alert__overlay gds-alert--shown" data-gds-alert-overlay>
-    <div class="gds-alert">
-        <div class="gds-alert__header gds-alert__header--danger">
-            <i class="gds-alert__icon fa fa-times-circle"></i>
-            <h2 class="gds-alert__title">This is an alert</h2>
-        </div>
-        <div class="gds-alert__body">
-            <p>Something has gone horribly wrong</p>
-        </div>
-        <div class="gds-alert__footer">
-            <button class="gds-button gds-button--danger -p-h-4 -m-b-0">OK</button>
-        </div>
+<div className="gds-alert__overlay gds-alert--shown" data-gds-alert-overlay>
+  <div className="gds-alert">
+    <div className="gds-alert__header gds-alert__header--danger">
+      <i className="gds-alert__icon fa fa-times-circle"></i>
+      <h2 className="gds-alert__title">This is an alert</h2>
     </div>
+    <div className="gds-alert__body">
+      <p>Something has gone horribly wrong</p>
+    </div>
+    <div className="gds-alert__footer">
+      <button className="gds-button gds-button--danger -p-h-4 -m-b-0">
+        OK
+      </button>
+    </div>
+  </div>
 </div>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `gds-alert--shown`
 - `gds-alert__header--primary`

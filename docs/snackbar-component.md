@@ -14,19 +14,19 @@ To hide a notification, add `gds-snackbar__notification--hidden` to it.
 </p>
 
 ```html
-<ul class="gds-snackbar">
-    <li class="gds-snackbar__notification">
-        <p class="gds-snackbar__notification-text">Some text goes here.</p>
-        <button class="gds-snackbar__notification-button"></button>
-    </li>
-    <li class="gds-snackbar__notification">
-        <p class="gds-snackbar__notification-text">Some text goes here.</p>
-        <button class="gds-snackbar__notification-button"></button>
-    </li>
+<ul className="gds-snackbar">
+  <li className="gds-snackbar__notification">
+    <p className="gds-snackbar__notification-text">Some text goes here.</p>
+    <button className="gds-snackbar__notification-button"></button>
+  </li>
+  <li className="gds-snackbar__notification">
+    <p className="gds-snackbar__notification-text">Some text goes here.</p>
+    <button className="gds-snackbar__notification-button"></button>
+  </li>
 </ul>
 ```
 
-__Optional classes:__
+**Optional classes:**
 
 - `gds-snackbar__notification--success`
 - `gds-snackbar__notification--info`
