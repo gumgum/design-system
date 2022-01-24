@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .-has-slide-nav {
     position: absolute !important;
     width: 100%;
@@ -98,7 +100,7 @@
 .gds-slide-nav__label {
     width: 100%;
     background-color: $primaryColor;
-    padding: ($unit / 3.5) 0 ($unit / 3.5) $list-padding;
+    padding: math.div($unit, 3.5) 0 math.div($unit, 3.5) $list-padding;
     position: relative;
     box-shadow: inset 0 #{-$cap-size} 0 0 $primaryDark2Color;
     font-weight: $font-weight-lighter;
@@ -142,7 +144,7 @@
     display: block;
     height: 100%;
     width: 100%;
-    padding: ($unit / 3.5) 0 ($unit / 3.5) ($list-padding);
+    padding: math.div($unit, 3.5) 0 math.div($unit, 3.5) ($list-padding);
     @include transition-back(all,250ms);
 
     &:hover {
@@ -170,9 +172,9 @@
         position: absolute;
         width: 0;
         height: 0;
-        border-top: ($unit / 3) solid transparent;
-        border-bottom: ($unit / 3) solid transparent;
-        border-left: ($unit / 2) solid $primaryColor;
+        border-top: math.div($unit, 3) solid transparent;
+        border-bottom: math.div($unit, 3) solid transparent;
+        border-left: ($unit * 0.5) solid $primaryColor;
         margin-left: ($unit * 1.5);
         top: ($unit * 0.75);
         @include transition-back(all,250ms);
@@ -180,7 +182,7 @@
 
     &:hover {
         &:after {
-            border-left: ($unit / 2) solid $secondaryColor;
+            border-left: ($unit * 0.5) solid $secondaryColor;
         }
     }
 }
@@ -192,7 +194,7 @@
 }
 
 .gds-slide-nav__link-recent {
-    padding: ($unit / 3.5) 0 ($unit / 3.5) ($list-padding + ($unit * 1.75));
+    padding: math.div($unit, 3.5) 0 math.div($unit, 3.5) ($list-padding + ($unit * 1.75));
 
     &:before {
         content: '';
@@ -213,7 +215,7 @@
         background-color: $trans-white-light;
 
         &:before {
-            top: ($unit * 0.75) - ($hover-shift / 4);
+            top: ($unit * 0.75) - ($hover-shift * 0.25);
             height: ($unit * 0.65) + $hover-shift;
             width: ($unit * 0.65) + $hover-shift;
             background-color: $secondaryColor;

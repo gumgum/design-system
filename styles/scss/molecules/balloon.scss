@@ -331,7 +331,7 @@ $balloon-tx-dk-color: white;
   background-color: $balloon-bg-dk-color;
   border: 1px solid $balloon-bd-dk-color;
   color: $balloon-tx-dk-color;
-  box-shadow: 0 0 $unit/2 rgba(black, 0.65);
+  box-shadow: 0 0 $unit*0.5 rgba(black, 0.65);
   &.gds-balloon--right {
     @include createNubbin(
       "left",
@@ -383,7 +383,7 @@ $balloon-tx-dk-color: white;
   font-size: $font-size-minus-3;
   display: inline-block;
   max-width: 100%;
-  margin-bottom: ($unit / 4);
+  margin-bottom: ($unit * 0.25);
   text-transform: uppercase;
   @include transition-back(all, 250ms);
 }

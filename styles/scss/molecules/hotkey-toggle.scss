@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .gds-hotkey-toggle {
   color: $gg-light-4;
   border-left: 1px solid $gg-light-3;
@@ -6,7 +8,7 @@
   border-bottom: 1px solid $gg-light-3;
   border-radius: $border-radius;
   font-size: $font-size;
-  padding: $unit / 4;
+  padding: $unit * 0.25;
   cursor: pointer;
   display: inline-block;
   @include transition-ease-out(all, 250ms);
@@ -208,17 +210,17 @@
 }
 
 .gds-hotkey-toggle--xs {
-  padding: $unit / 5;
+  padding: $unit * 0.2;
   line-height: 0;
 }
 
 .gds-hotkey-toggle--sm {
-  padding: $unit / 4;
+  padding: $unit * 0.25;
   line-height: 0.5;
 }
 
 .gds-hotkey-toggle--lg {
-  padding: $unit / 2;
+  padding: $unit * 0.5;
 }
 
 .gds-hotkey-toggle--xl {
@@ -252,8 +254,8 @@
 
 .gds-hotkey-toggle__icon {
   position: absolute;
-  right: $unit/2;
-  top: calc(50% - #{$unit / 2.5});
+  right: $unit*0.5;
+  top: calc(50% - #{math.div($unit, 2.5)});
   font-size: $unit;
   color: white;
   opacity: 0;

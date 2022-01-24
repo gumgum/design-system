@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .-dark-mode {
   background-color: $gg-dark-2;
 }
@@ -111,7 +113,7 @@
 .gds-page-header--dark {
   border-bottom: 1px solid $gg-dark-2;
   &:hover {
-    box-shadow: 0 ($unit / 2) $unit rgba(0, 0, 0, 0.5);
+    box-shadow: 0 ($unit * 0.5) $unit rgba(0, 0, 0, 0.5);
 
     .gds-page-header__product-bar {
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
@@ -123,7 +125,7 @@
   position: relative;
   background-color: #ffffff;
   width: 100%;
-  padding: ($unit / 2);
+  padding: ($unit * 0.5);
   z-index: $z-index-2;
   overflow: hidden;
   border-bottom: 1px solid $grayLight2Color;
@@ -135,7 +137,7 @@
 }
 
 .gds-page-header__product-bar--collapsed {
-  height: ($unit / 3);
+  height: math.div($unit, 3);
   padding: 0 ($unit * 0.5);
 
   .gds-page-header__product-name {
@@ -149,7 +151,7 @@
 
   &:hover {
     height: 41px;
-    padding: ($unit / 2);
+    padding: ($unit * 0.5);
 
     .gds-page-header__product-name {
       opacity: 1;
@@ -211,7 +213,7 @@
 
 .gds-page-header__logo {
   height: ($unit * 1.5);
-  padding-right: $unit / 2;
+  padding-right: $unit * 0.5;
   @include transition-ease-out(all, 250ms);
 }
 
@@ -262,7 +264,7 @@
 
 .gds-page-header__breadcrumb-nav {
   float: left;
-  padding: ($unit / 1.75);
+  padding: math.div($unit, 1.75);
   margin-left: ($unit * 0.75);
   padding-left: ($unit * 1.25);
   white-space: nowrap;
@@ -333,7 +335,7 @@
   }
   > .gds-page-header__breadcrumbs-list-item {
     margin-right: 0;
-    padding-right: ($unit / 2);
+    padding-right: ($unit * 0.5);
   }
 }
 
@@ -402,7 +404,7 @@
 .gds-page-header__breadcrumbs-link {
   color: $pageHeaderSecondaryBackgroundColor;
   text-decoration: none;
-  padding-right: ($unit / 2);
+  padding-right: ($unit * 0.5);
 
   &:hover {
     color: $pageHeaderPrimaryBackgroundColor;
@@ -422,8 +424,8 @@
   width: 32px;
   height: 25px;
   position: relative;
-  margin-top: ($unit / 3);
-  margin-right: ($unit / 2);
+  margin-top: math.div($unit, 3);
+  margin-right: ($unit * 0.5);
   transform: rotate(0deg);
   @include transition-ease-out(all, 250ms);
   transition-delay: 200ms;

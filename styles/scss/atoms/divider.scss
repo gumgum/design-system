@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .gds-divider {
     width:100%;
     height:$unit;
@@ -10,18 +12,18 @@
 .gds-divider--reversed {
     flex-direction: row-reverse;
     .gds-divider__label {
-        margin-left:$unit/4;
+        margin-left:$unit*0.25;
         margin-right:0;
     }
     .gds-divider__arrow {
-        margin-right:$unit/4;
+        margin-right:$unit*0.25;
         margin-left:0;
     }
 }
 
 .gds-divider--centered {
     .gds-divider__label {
-        margin-left:$unit/4;
+        margin-left:$unit*0.25;
     }
 }
 
@@ -33,7 +35,7 @@
             background-color:$dividerLineColor;
         }
         .gds-divider__arrow {
-            border-top: $unit/3 solid $dividerArrowColor;
+            border-top: math.div($unit, 3) solid $dividerArrowColor;
         }
     }
 }
@@ -42,7 +44,7 @@
     display:block;
     font-size:$unit*0.75;
     flex-basis:auto;
-    margin-right:$unit/4;
+    margin-right:$unit*0.25;
     @include transition-ease-out(all,250ms);
 }
 
@@ -59,10 +61,10 @@
     width: 0;
     height: 0;
     top:0.5*$unit;
-    border-left: $unit/3 solid transparent;
-    border-right: $unit/3 solid transparent;
-    border-top: $unit/3 solid $gg-light-2;
-    margin-left:$unit/4;
+    border-left: math.div($unit, 3) solid transparent;
+    border-right: math.div($unit, 3) solid transparent;
+    border-top: math.div($unit, 3) solid $gg-light-2;
+    margin-left:$unit*0.25;
     transform:rotate(0deg);
     @include transition-ease-out(all,250ms);
 }

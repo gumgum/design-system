@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .gds-accordion {
   background-color: $gg-light-1;
   color: $primaryDark2Color;
@@ -113,7 +115,7 @@
   &:hover {
     color: $gg-dark-4;
     background-color: rgba(white, 0.25);
-    box-shadow: inset 0px #{-$cap-size / 2} 0 rgba($gg-light-4, 0.75);
+    box-shadow: inset 0px #{-$cap-size * 0.5} 0 rgba($gg-light-4, 0.75);
     border-color: rgba($gg-light-4, 0.75);
   }
 
@@ -188,7 +190,7 @@
 
 .gds-accordion__item-title--sm,
 .gds-accordion__child-item-title--sm {
-  padding: ($unit / 2) ($unit);
+  padding: ($unit * 0.5) ($unit);
   font-size: $font-size-minus-2;
 }
 /// END ITEM TITLES ////
@@ -197,9 +199,9 @@
 .gds-accordion__item-icon {
   width: 0;
   height: 0;
-  border-top: ($unit / 2) solid transparent;
-  border-bottom: ($unit / 2) solid transparent;
-  border-left: ($unit / 2) solid;
+  border-top: ($unit * 0.5) solid transparent;
+  border-bottom: ($unit * 0.5) solid transparent;
+  border-left: ($unit * 0.5) solid;
   position: absolute !important;
   top: 0;
   right: 0;
@@ -207,26 +209,26 @@
   @include transition-back(all, 250ms);
 
   &.gds-accordion__child-item-icon {
-    border-left: ($unit / 2) solid $gg-dark-4;
+    border-left: ($unit * 0.5) solid $gg-dark-4;
   }
 }
 
 .gds-accordion__item-icon--white {
-  border-left: ($unit / 2) solid white;
+  border-left: ($unit * 0.5) solid white;
 }
 
 .gds-accordion__child-item--dark {
   .gds-accordion__item-icon,
   .gds-accordion__item-icon.gds-accordion__child-item-icon,
   .gds-accordion__child-item-icon {
-    border-left: ($unit / 2) solid white;
+    border-left: ($unit * 0.5) solid white;
   }
 }
 
 .gds-accordion__item-icon--sm {
-  border-top: ($unit / 3) solid transparent;
-  border-bottom: ($unit / 3) solid transparent;
-  border-left: ($unit / 3) solid inherit;
+  border-top: math.div($unit, 3) solid transparent;
+  border-bottom: math.div($unit, 3) solid transparent;
+  border-left: math.div($unit, 3) solid inherit;
   margin: ($unit * 0.95);
 }
 //// END ARROW ICONS ////

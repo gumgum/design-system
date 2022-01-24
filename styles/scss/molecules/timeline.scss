@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .gds-timeline__items {
     list-style: none;
     text-align: justify;
@@ -126,7 +128,7 @@
 
 .gds-timeine__item-indicator {
     color: white;
-    font-size: $unit / 1.5;
+    font-size: math.div($unit, 1.5);
     bottom: 6px;
     opacity: 0;
     transform: scale(0.75);
@@ -288,7 +290,7 @@
 
 // Loop for sizing progress indicator
 @for $i from 2 through 20 {
-    $w: (100 / (-1 + $i));
+    $w: math.div(100, -1 + $i);
 
     @for $g from 1 through $i {
         $s: $w*(-1 + $g);

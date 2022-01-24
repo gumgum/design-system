@@ -1,6 +1,8 @@
 // -------------------------------------------------- //
 // Smart columns
 // -------------------------------------------------- //
+@use "sass:math";
+
 .gds-smart-fill {
     display:block;
 }
@@ -20,7 +22,7 @@
 }
 
 @for $i from 1 through 12 {
-    $w: #{(100 / $i)}$percentage;
+    $w: #{math.div(100, $i)}$percentage;
 
     .gds-smart-fill__col:first-child:nth-last-child(#{$i}),
     .gds-smart-fill__col:first-child:nth-last-child(#{$i}) ~ .gds-smart-fill__col {

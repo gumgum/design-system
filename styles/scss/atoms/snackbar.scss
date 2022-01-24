@@ -2,7 +2,7 @@
   position: fixed;
   width: ($unit * 24);
   top: ($unit * 6);
-  right: ($unit / 2);
+  right: ($unit * 0.5);
   z-index: $z-index-9;
 
   @media #{$phablet-width} {
@@ -25,7 +25,7 @@
   background-color: $primaryLight5Color;
   opacity: 1;
   max-height: 500px;
-  margin-bottom: ($unit / 2);
+  margin-bottom: ($unit * 0.5);
   box-shadow: 0 0 $unit rgba(black, 0.05);
   font-weight: $font-weight-normal;
   @include transition-ease-in(all, 250ms);

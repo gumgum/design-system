@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .gds-button-dropdown {
   border-radius: $btn-border-radius;
   display: inline-block;
@@ -14,9 +16,9 @@
     right: $unit;
     width: 0;
     height: 0;
-    border-top: ($unit / 3) solid transparent;
-    border-bottom: ($unit / 3) solid transparent;
-    border-left: ($unit / 2) solid white;
+    border-top: math.div($unit, 3) solid transparent;
+    border-bottom: math.div($unit, 3) solid transparent;
+    border-left: ($unit * 0.5) solid white;
     @include transition-ease-out(all, 250ms);
   }
 }
@@ -28,7 +30,7 @@
 .gds-button-dropdown__button--dark {
   color: white !important;
   &:after {
-    border-left: ($unit / 2) solid white !important;
+    border-left: ($unit * 0.5) solid white !important;
   }
 }
 
@@ -36,7 +38,7 @@
   color: $primaryColor !important;
 
   &:after {
-    border-left: ($unit / 2) solid $primaryColor !important;
+    border-left: ($unit * 0.5) solid $primaryColor !important;
   }
 }
 
@@ -44,7 +46,7 @@
   color: $secondaryColor !important;
 
   &:after {
-    border-left: ($unit / 2) solid $secondaryColor !important;
+    border-left: ($unit * 0.5) solid $secondaryColor !important;
   }
 }
 
@@ -52,7 +54,7 @@
   color: $tertiaryColor !important;
 
   &:after {
-    border-left: ($unit / 2) solid $tertiaryColor !important;
+    border-left: ($unit * 0.5) solid $tertiaryColor !important;
   }
 }
 
@@ -98,7 +100,7 @@
       margin-left: ($unit * 1.5);
     }
     &.gds-button-dropdown__button--dark:after {
-      border-left: ($unit / 3) solid $primaryColor;
+      border-left: math.div($unit, 3) solid $primaryColor;
     }
   }
 
@@ -121,12 +123,12 @@
       top: ($unit * 0.9);
       right: $unit * 0.75;
       margin-left: ($unit * 0.5);
-      border-top: ($unit / 4) solid transparent;
-      border-bottom: ($unit / 4) solid transparent;
-      border-left: ($unit / 2.5) solid white;
+      border-top: ($unit * 0.25) solid transparent;
+      border-bottom: ($unit * 0.25) solid transparent;
+      border-left: math.div($unit, 2.5) solid white;
     }
     &.gds-button-dropdown__button--dark:after {
-      border-left: ($unit / 2.5) solid $primaryColor;
+      border-left: math.div($unit, 2.5) solid $primaryColor;
     }
   }
 
@@ -154,12 +156,12 @@
       top: ($unit * 0.65);
       right: $unit * 0.4;
       margin-left: ($unit * 0.7);
-      border-top: ($unit / 5) solid transparent;
-      border-bottom: ($unit / 5) solid transparent;
-      border-left: ($unit / 3) solid white;
+      border-top: ($unit * 0.2) solid transparent;
+      border-bottom: ($unit * 0.2) solid transparent;
+      border-left: math.div($unit, 3) solid white;
     }
     &.gds-button-dropdown__button--dark:after {
-      border-left: ($unit / 3) solid $primaryColor;
+      border-left: math.div($unit, 3) solid $primaryColor;
     }
   }
 
@@ -221,7 +223,7 @@
 .gds-button-dropdown__menu-link,
 .gds-chooser__menu-link,
 .gds-multi-select__menu-link {
-  padding: ($unit / 4) $unit;
+  padding: ($unit * 0.25) $unit;
   display: block;
   cursor: pointer;
   @include transition-ease-out(all, 250ms);

@@ -2,11 +2,11 @@
 .gds-slab-nav__item-badge {
   display: inline-block;
   font-size: 60%;
-  margin: 0 ($unit / 4);
+  margin: 0 ($unit * 0.25);
   background: $primaryLight5Color;
   color: $primaryDark5Color;
-  padding: 1px ($unit / 4) 0;
-  border-radius: ($border-radius/2);
+  padding: 1px ($unit * 0.25) 0;
+  border-radius: ($border-radius*0.5);
   vertical-align: text-top;
   font-family: $pri-font-regular;
   letter-spacing: 0.5px;
@@ -85,8 +85,8 @@
 }
 
 .gds-badge--empty {
-  width: ($unit / 2);
-  height: ($unit / 2);
-  border-radius: ($unit / 4);
+  width: ($unit * 0.5);
+  height: ($unit * 0.5);
+  border-radius: ($unit * 0.25);
   vertical-align: super;
 }

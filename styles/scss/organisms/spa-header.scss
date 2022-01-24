@@ -35,7 +35,7 @@
 .gds-spa-header__logo-image {
     display: block;
     max-width: 120px;
-    margin-left: ($unit / 2);
+    margin-left: ($unit * 0.5);
 }
 
 .gds-spa-header__logo-mark {
@@ -57,7 +57,7 @@
 
 .gds-spa-header__section {
     align-items: center;
-    padding: ($unit / 2);
+    padding: ($unit * 0.5);
     border-left: 1px solid $spaHeaderBackgroundColor;
 }
 

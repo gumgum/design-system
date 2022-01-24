@@ -39,7 +39,7 @@
     content: "";
     display: inline-block;
     position: absolute;
-    top: calc(50% - #{$cap-size / 2});
+    top: calc(50% - #{$cap-size * 0.5});
     left: -3px;
     right: -3px;
     height: $cap-size;

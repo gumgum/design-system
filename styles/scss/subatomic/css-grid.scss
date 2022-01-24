@@ -1,5 +1,7 @@
+@use "sass:math";
+
 $columnCounts: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16;
-$columnGap: ($unit / 2);
+$columnGap: ($unit * 0.5);
 
 .gds-grid__container {
     display: grid;
@@ -16,8 +18,8 @@ $columnGap: ($unit / 2);
 // Containers
 @mixin make-standard-pct-container($columnCount) {
     .gds-grid__container--pct-#{$columnCount} {
-        $pct: percentage((1/$columnCount));
-        $reduce: (($columnCount - 1) * $columnGap / $columnCount);
+        $pct: percentage(math.div(1, $columnCount));
+        $reduce: math.div(($columnCount - 1) * $columnGap, $columnCount);
         grid-template-columns: repeat(#{$columnCount}, calc(#{$pct} - #{$reduce}));
         &.gds-grid__container--no-gap {
             grid-template-columns: repeat($columnCount, $pct);
@@ -27,8 +29,8 @@ $columnGap: ($unit / 2);
 
 @mixin make-breakpoint-pct-container($breakpoint, $columnCount) {
     .gds-grid__container--pct-#{$breakpoint}-#{$columnCount} {
-        $pct: percentage((1/$columnCount));
-        $reduce: (($columnCount - 1) * $columnGap / $columnCount);
+        $pct: percentage(math.div(1, $columnCount));
+        $reduce: math.div(($columnCount - 1) * $columnGap, $columnCount);
         grid-template-columns: repeat(#{$columnCount}, calc(#{$pct} - #{$reduce}));
         &.gds-grid__container--no-gap {
             grid-template-columns: repeat($columnCount, $pct);

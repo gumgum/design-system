@@ -1,9 +1,11 @@
+@use "sass:math";
+
 .gds-well {
   display: block;
   overflow: hidden;
   border: 1px solid $gg-light-2;
   border-radius: $border-radius;
-  padding: ($unit/ 1.5);
+  padding: math.div($unit, 1.5);
 }
 
 .gds-well--dark {

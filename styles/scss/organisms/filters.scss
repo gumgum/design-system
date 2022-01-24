@@ -21,7 +21,7 @@
   border-radius: $unit;
   border: 1px solid $gg-light-2;
   color: $gg-light-3;
-  padding: $unit/4 $unit;
+  padding: $unit*0.25 $unit;
   font-size: $font-size-minus-2;
   width: 140px;
   @include transition-ease-out(all, 250ms);

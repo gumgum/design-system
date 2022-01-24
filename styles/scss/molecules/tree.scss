@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .gds-tree__sub-nav {
   padding-left: ($unit * 1.75);
 
@@ -40,7 +42,7 @@
 .gds-tree__link {
   display: block;
   white-space: nowrap;
-  padding: ($unit / 8) 0;
+  padding: ($unit * 0.125) 0;
   font-size: 90%;
   padding-left: 0;
   cursor: pointer;
@@ -151,7 +153,7 @@
 }
 
 .gds-tree__sub-nav .gds-tree__link {
-  margin-left: ($unit / 2);
+  margin-left: ($unit * 0.5);
 }
 
 .gds-tree__link-option {
@@ -160,8 +162,8 @@
   left: 0;
   height: 22px;
   width: 22px;
-  padding: $unit / 4.5 $unit / 5 $unit / 3 $unit / 5;
-  font-size: $unit / 1.5;
+  padding: math.div($unit, 4.5) $unit * 0.2 math.div($unit, 3) $unit * 0.2;
+  font-size: math.div($unit, 1.5);
   opacity: 0;
 
   @include backgroundGradient($dangerLight2Color, $dangerDark2Color, "default");

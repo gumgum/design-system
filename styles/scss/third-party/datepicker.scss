@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $border-color: $primaryDark2Color;
 $border-style: 1px solid $primaryDark2Color;
 $font-color: $gg-dark-5;
@@ -23,7 +25,7 @@ $background-color-dark: $primaryColor;
   text-align: center;
   background-color: $background-color-dark;
   border-bottom: $cap-size solid $primaryDark2Color;
-  padding-top: $unit/2;
+  padding-top: $unit*0.5;
   position: relative;
   color: #fff;
 
@@ -106,7 +108,7 @@ $background-color-dark: $primaryColor;
   cursor: pointer;
   text-align: center;
   font-weight: bold;
-  padding: $unit/4 0;
+  padding: $unit*0.25 0;
   z-index: 0;
   display: block;
   margin-bottom: 0;
@@ -395,7 +397,7 @@ $background-color-dark: $primaryColor;
   overflow: hidden;
 
   &--previous {
-    left: $unit/1.5;
+    left: math.div($unit, 1.5);
     border-right-color: $primaryLight4Color;
 
     &:hover {
@@ -410,7 +412,7 @@ $background-color-dark: $primaryColor;
   }
 
   &--next {
-    right: $unit/1.5;
+    right: math.div($unit, 1.5);
     border-left-color: $primaryLight4Color;
     &--with-time:not(&--with-today-button) {
       right: 80px;
@@ -456,7 +458,7 @@ $background-color-dark: $primaryColor;
   width: 50%;
   left: 25%;
   position: absolute;
-  bottom: -$unit/3;
+  bottom: math.div(-$unit, 3);
   border: 1px solid transparent;
   border-radius: $border-radius;
   text-align: center;

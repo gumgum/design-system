@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .gds-pagination {
   position: relative;
   display: block;
@@ -60,7 +62,7 @@
   width: 100%;
   display: block;
   text-align: center;
-  padding: ($unit / 2) 0;
+  padding: ($unit * 0.5) 0;
   font-size: $font-size-minus-1;
   color: inherit;
   cursor: pointer;
@@ -131,7 +133,7 @@
 }
 
 .gds-pagination--sm .gds-pagination__page-link {
-  padding: ($unit / 4) 0;
+  padding: ($unit * 0.25) 0;
   font-size: $font-size-minus-3;
   height: 100%;
 }
@@ -160,7 +162,7 @@
 }
 
 .gds-pagination--xs .gds-pagination__page-link {
-  padding: ($unit / 6) 0;
+  padding: math.div($unit, 6) 0;
   font-size: 10px;
 }
 
@@ -177,7 +179,7 @@
 
 // Loop for sizing pagination blocks
 @for $i from 1 through 10 {
-  $w: (100 / $i);
+  $w: math.div(100, $i);
   $p: "%";
 
   .gds-pagination__page-item:first-child:nth-last-of-type(#{$i}),

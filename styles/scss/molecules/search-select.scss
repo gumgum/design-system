@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .gds-search-select__input {
   background-image: none !important;
   &:hover ~ .gds-search-select__text-help {
@@ -200,7 +202,7 @@
   border-radius: 50%;
   background-color: white;
   position: absolute;
-  top: $unit / 1.25;
+  top: math.div($unit, 1.25);
   right: $unit * 2.5;
   z-index: $z-index-6;
   height: $unit * 1.6;
@@ -224,7 +226,7 @@
 }
 
 .gds-search-select__clear--sm {
-  top: $unit / 2;
+  top: $unit * 0.5;
   height: $unit * 1.2;
   width: $unit * 1.2;
   font-size: 9px;
@@ -233,19 +235,19 @@
 
 .gds-search-select__tag-indicator {
   position: absolute;
-  top: $unit / 1.25;
+  top: math.div($unit, 1.25);
   right: $unit * 2.5;
   z-index: $z-index-4;
   cursor: pointer;
 }
 
 .gds-search-select__tag-indicator--sm {
-  top: $unit / 2.5;
+  top: math.div($unit, 2.5);
   right: $unit * 2;
 }
 
 .gds-search-select__tag-indicator--xs {
-  top: $unit / 6.4;
+  top: math.div($unit, 6.4);
   right: $unit * 2;
 }
 
@@ -267,7 +269,7 @@
 }
 
 .gds-search-select__menu-item {
-  padding: $unit/4 $unit/2;
+  padding: $unit*0.25 $unit*0.5;
   cursor: pointer;
   z-index: $z-index-6;
   color: $primaryDark5Color;
@@ -323,7 +325,7 @@
   border-right: 1px solid $gg-light-3;
   border-left: 1px solid $gg-light-3;
   border-bottom: 1px solid $gg-light-3;
-  padding: $unit / 4;
+  padding: $unit * 0.25;
   @include transition-ease-out(all, 00ms);
 }
 
