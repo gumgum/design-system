@@ -95,7 +95,8 @@
 }
 
 // Input labels
-.gds-form-group__label {
+.gds-form-group__label,
+.gds-form-group__range-input-label {
   font-family: $pri-font-bold;
   font-weight: $font-weight-bold;
   font-size: $font-size-minus-3;
@@ -108,7 +109,15 @@
   @include transition-back(all, 250ms);
 }
 
-.gds-form-group__label--dark {
+.gds-form-group__range-input-label {
+  opacity: 0.5;
+}
+.gds-form-group__range-input-label--active {
+  opacity: 1;
+}
+
+.gds-form-group__label--dark,
+.gds-form-group__range-input-label--dark {
   color: $gg-light-4;
 }
 
@@ -1098,7 +1107,7 @@
 .gds-form-group__toggleswitch-indicator {
   background: white;
   box-shadow: inset 0 0 0 1px $gg-light-3;
-  border-radius: ($input-border-radius*0.5);
+  border-radius: ($input-border-radius * 0.5);
   display: block;
   height: ($unit * 1.5);
   left: 0;
@@ -1379,36 +1388,38 @@ $thumb-width: ($unit * 0.75);
 .gds-form-group__range-input {
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    border-color: $gg-light-2;
-    border-bottom-color: $gg-light-2;
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-top-width: 1px;
-    border-bottom-width: $cap-size;
-    border-style: solid;
-    height: ($unit * 1.5);
-    width: $thumb-width;
-    border-radius: $border-radius;
+    // border-color: $gg-light-2;
+    // border-bottom-color: $gg-light-2;
+    // border-left-width: 1px;
+    // border-right-width: 1px;
+    // border-top-width: 1px;
+    // border-bottom-width: $cap-size;
+    // border-style: solid;
+    height: ($unit * 1.25);
+    width: ($unit * 1.25);
+    border-radius: 100%;
     background: white;
     cursor: pointer;
-    margin-top: -($unit * 0.5);
+    margin-top: -($unit * 0.33);
+    @include defaultShadows($gg-light-3, black, $primaryLight2Color);
     @include transition-ease-out(all, 150ms);
   }
 
   &::-moz-range-thumb {
-    border-color: $gg-light-2;
-    border-bottom-color: $gg-light-2;
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-top-width: 1px;
-    border-bottom-width: $cap-size;
-    border-style: solid;
-    height: $unit * 1.5;
-    width: $thumb-width;
-    border-radius: $border-radius;
+    // border-color: $gg-light-2;
+    // border-bottom-color: $gg-light-2;
+    // border-left-width: 1px;
+    // border-right-width: 1px;
+    // border-top-width: 1px;
+    // border-bottom-width: $cap-size;
+    border-style: none;
+    height: ($unit * 1.25);
+    width: ($unit * 1.25);
+    border-radius: 100%;
     background: white;
     cursor: pointer;
-    margin-top: -$unit * 0.5;
+    margin-top: -($unit * 0.33);
+    @include defaultShadows($gg-light-3, black, $primaryLight2Color);
     @include transition-ease-out(all, 150ms);
   }
 
@@ -1426,12 +1437,13 @@ $thumb-width: ($unit * 0.75);
     background: white;
     cursor: pointer;
     margin-top: -$unit * 0.5;
+    @include defaultShadows($gg-light-3, black, $primaryLight2Color);
     @include transition-ease-out(all, 150ms);
   }
 
   &::-webkit-slider-runnable-track {
     width: 100%;
-    height: $unit*0.5;
+    height: $unit * 0.5;
     cursor: pointer;
     background-color: $gg-light-1;
     border-radius: $cap-size;
@@ -1439,7 +1451,7 @@ $thumb-width: ($unit * 0.75);
   }
   &::-moz-range-track {
     width: 100%;
-    height: $unit*0.5;
+    height: $unit * 0.5;
     cursor: pointer;
     background-color: $gg-light-1;
     border-radius: $cap-size;
@@ -1447,7 +1459,7 @@ $thumb-width: ($unit * 0.75);
   }
   &:-ms-track {
     width: 100%;
-    height: $unit*0.5;
+    height: $unit * 0.5;
     cursor: pointer;
     background-color: $gg-light-1;
     border-radius: $cap-size;
@@ -1455,22 +1467,29 @@ $thumb-width: ($unit * 0.75);
   }
 
   &::-ms-fill-upper {
-    background-color: $primaryDark2Color;
+    background-color: none;
+  }
+
+  &::-webkit-progress-bar {
+    background-color: none;
   }
 
   &::-moz-range-progress {
-    background-color: $primaryDark2Color;
+    background-color: none;
   }
 
   &:hover {
     &::-webkit-slider-thumb {
-      border-color: $gg-light-4;
+      background: $primaryColor;
+      @include hoverShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-moz-range-thumb {
-      border-color: $gg-light-4;
+      background: $primaryColor;
+      @include hoverShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-ms-thumb {
-      border-color: $gg-light-4;
+      background: $primaryColor;
+      @include hoverShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-webkit-slider-runnable-track {
       background-color: $gg-light-2;
@@ -1485,42 +1504,30 @@ $thumb-width: ($unit * 0.75);
   &:active,
   &:focus:active {
     &::-webkit-slider-thumb {
-      border-color: $primaryDark2Color;
-      background-color: $primaryColor;
-      box-shadow: $input-focus-effect;
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-moz-range-thumb {
-      border-color: $primaryDark2Color;
-      background-color: $primaryColor;
-      box-shadow: $input-focus-effect;
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-ms-thumb {
-      border-color: $primaryDark2Color;
-      background-color: $primaryColor;
-      box-shadow: $input-focus-effect;
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-ms-fill-upper {
-      background-color: $primaryColor;
+      background-color: none;
     }
     &::-moz-range-progress {
-      background-color: $primaryColor;
+      background-color: none;
     }
   }
   &:focus {
     &::-webkit-slider-thumb {
-      border-color: $primaryColor;
-      background-color: white;
-      box-shadow: $input-focus-effect;
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-moz-range-thumb {
-      border-color: $primaryColor;
-      background-color: white;
-      box-shadow: $input-focus-effect;
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-ms-thumb {
-      border-color: $primaryColor;
-      background-color: white;
-      box-shadow: $input-focus-effect;
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
     }
   }
 }
@@ -1582,7 +1589,7 @@ $thumb-width: ($unit * 0.75);
 
 .gds-form-group__range-track {
   width: 100%;
-  height: $unit*0.5;
+  height: $unit * 0.5;
   background-color: $gg-light-1;
   border-radius: $cap-size;
   @include transition-ease-out(all, 150ms);
