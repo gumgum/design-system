@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .gds-table {
   font-family: $pri-font-regular;
   width: 100%;
@@ -52,9 +54,9 @@
     content: "";
     width: 0;
     height: 0;
-    border-left: $unit/3 solid transparent;
-    border-right: $unit/3 solid transparent;
-    border-top: $unit/3 solid white;
+    border-left: math.div($unit, 3) solid transparent;
+    border-right: math.div($unit, 3) solid transparent;
+    border-top: math.div($unit, 3) solid white;
     opacity: 0;
     position: absolute;
     right: 0;
@@ -156,9 +158,9 @@
   .gds-table__header--sort-desc:before,
   .gds-table__header--sort-asc:before {
     top: $unit;
-    border-left: $unit/4 solid transparent;
-    border-right: $unit/4 solid transparent;
-    border-top: $unit/4 solid white;
+    border-left: $unit*0.25 solid transparent;
+    border-right: $unit*0.25 solid transparent;
+    border-top: $unit*0.25 solid white;
   }
 }
 
@@ -172,9 +174,9 @@
   .gds-table__header--sort-desc:before,
   .gds-table__header--sort-asc:before {
     top: $unit * 0.6;
-    border-left: $unit/5 solid transparent;
-    border-right: $unit/5 solid transparent;
-    border-top: $unit/5 solid white;
+    border-left: $unit*0.2 solid transparent;
+    border-right: $unit*0.2 solid transparent;
+    border-top: $unit*0.2 solid white;
   }
 }
 
@@ -188,9 +190,9 @@
   .gds-table__header--sort-desc:before,
   .gds-table__header--sort-asc:before {
     top: $unit * 1.6;
-    border-left: $unit/2 solid transparent;
-    border-right: $unit/2 solid transparent;
-    border-top: $unit/2 solid white;
+    border-left: $unit*0.5 solid transparent;
+    border-right: $unit*0.5 solid transparent;
+    border-top: $unit*0.5 solid white;
   }
 }
 
@@ -204,9 +206,9 @@
   .gds-table__header--sort-desc:before,
   .gds-table__header--sort-asc:before {
     top: $unit * 2.75;
-    border-left: $unit/1.5 solid transparent;
-    border-right: $unit/1.5 solid transparent;
-    border-top: $unit/1.5 solid white;
+    border-left: math.div($unit, 1.5) solid transparent;
+    border-right: math.div($unit, 1.5) solid transparent;
+    border-top: math.div($unit, 1.5) solid white;
   }
 }
 

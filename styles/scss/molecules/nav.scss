@@ -145,7 +145,7 @@
 }
 
 .gds-nav-tabs__list-item {
-  margin-right: ($unit / 4);
+  margin-right: ($unit * 0.25);
   @include transition-ease-out(all, 250ms);
 
   &:last-child {
@@ -219,7 +219,7 @@
     display: inline-block;
     font-size: inherit;
     white-space: nowrap;
-    margin-right: ($unit / 4);
+    margin-right: ($unit * 0.25);
     width: auto;
     padding: 0;
     .gds-nav-tabs__link {

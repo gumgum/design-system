@@ -63,7 +63,7 @@ $ranker-margin-sm: 0.25rem;
 .gds-ranker-card__number {
   border: 1px solid $numberCircleBorderColor;
   border-radius: 50%;
-  padding: ($unit / 4) 0;
+  padding: ($unit * 0.25) 0;
   margin-right: $unit;
   font-size: $font-size-minus-1;
   float: left;
@@ -162,7 +162,7 @@ $ranker-margin-sm: 0.25rem;
   color: $gg-dark-5;
   display: inline-block;
   max-width: 100%;
-  margin-bottom: ($unit / 4);
+  margin-bottom: ($unit * 0.25);
   text-transform: uppercase;
   @include transition-back(all, 250ms);
   border-top: 1px solid white;

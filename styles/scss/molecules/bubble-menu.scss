@@ -45,7 +45,7 @@
   min-width: ($unit * 8);
 
   .gds-bubble__menu-list-link {
-    padding: ($unit / 4) ($unit / 2);
+    padding: ($unit * 0.25) ($unit * 0.5);
     font-size: 0.75rem;
   }
 }
@@ -88,7 +88,7 @@
 .gds-avatar__menu-list-link {
   display: block;
   color: $primaryColor;
-  padding: ($unit / 2) $unit;
+  padding: ($unit * 0.5) $unit;
   @include transition-ease-in(all, 100ms);
 
   &:hover {
@@ -112,14 +112,14 @@
 .gds-avatar__menu-list {
   border-radius: $border-radius;
   background-color: white;
-  box-shadow: 0 0 ($unit / 2) 0 rgba(black, 0.25);
+  box-shadow: 0 0 ($unit * 0.5) 0 rgba(black, 0.25);
   overflow: hidden;
 }
 
 .gds-bubble__menu-list--dark,
 .gds-avatar__menu-list--dark {
   background-color: $gg-dark-4;
-  box-shadow: 0 0 ($unit / 2) 0 rgba(black, 0.75);
+  box-shadow: 0 0 ($unit * 0.5) 0 rgba(black, 0.75);
 }
 
 .gds-bubble__menu-list-divider,

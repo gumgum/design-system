@@ -2,9 +2,9 @@
 // Mixins
 // -------------------------------------------------- //
 @mixin retina($width, $height) {
-    width: ($width / 2);
-    height: ($height / 2);
-    background-size: ($width / 2) ($height / 2);
+    width: ($width * 0.5);
+    height: ($height * 0.5);
+    background-size: ($width * 0.5) ($height * 0.5);
 }
 
 @mixin clearfix() {

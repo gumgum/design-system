@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin defaultShadows($borderColor, $dropShadow, $focusGlow) {
   box-shadow: inset 0 0 0 0 $borderColor,
     // Bottom Cap
@@ -72,8 +74,8 @@
 }
 
 .gds-form-group--horizontal {
-  margin-right: -($grid-gutter-width / 2);
-  margin-left: -($grid-gutter-width / 2);
+  margin-right: -($grid-gutter-width * 0.5);
+  margin-left: -($grid-gutter-width * 0.5);
 
   &:after {
     content: " ";
@@ -93,7 +95,8 @@
 }
 
 // Input labels
-.gds-form-group__label {
+.gds-form-group__label,
+.gds-form-group__range-input-label {
   font-family: $pri-font-bold;
   font-weight: $font-weight-bold;
   font-size: $font-size-minus-3;
@@ -101,12 +104,20 @@
   color: $gg-dark-5;
   display: inline-block;
   max-width: 100%;
-  margin-bottom: ($unit / 4);
+  margin-bottom: ($unit * 0.25);
   text-transform: uppercase;
   @include transition-back(all, 250ms);
 }
 
-.gds-form-group__label--dark {
+.gds-form-group__range-input-label {
+  opacity: 0.5;
+}
+.gds-form-group__range-input-label--active {
+  opacity: 1;
+}
+
+.gds-form-group__label--dark,
+.gds-form-group__range-input-label--dark {
   color: $gg-light-4;
 }
 
@@ -116,7 +127,7 @@
 
 .gds-form-group__label--horizontal {
   text-align: right;
-  padding-top: ($unit / 2);
+  padding-top: ($unit * 0.5);
 }
 
 .gds-form-group__label--floated {
@@ -142,7 +153,7 @@
   display: block;
   font-family: $pri-font-regular;
   font-size: $font-size-minus-3;
-  padding: ($unit / 8) ($unit / 2);
+  padding: ($unit * 0.125) ($unit * 0.5);
   position: relative;
   top: -($cap-size * 1.5);
   @include transition-ease-out(all, 250ms);
@@ -371,12 +382,12 @@
 }
 
 .gds-form-group__text-input-icon--xs {
-  top: $unit/1.7;
+  top: math.div($unit, 1.7);
   font-size: $font-size-minus-2;
 }
 
 .gds-form-group__text-input-icon--sm {
-  top: $unit/1.5;
+  top: math.div($unit, 1.5);
   font-size: $font-size;
 }
 
@@ -511,10 +522,10 @@
 
 .gds-form-group__date-input {
   height: $input-height-md;
-  width: calc((100% / 3) - #{($unit * (2 / 3))});
+  width: calc((100% / 3) - #{($unit * math.div(2, 3))});
   border: none;
   background: transparent;
-  padding: $unit ($unit / 2);
+  padding: $unit ($unit * 0.5);
   text-align: center;
   color: inherit;
   font-size: $font-size;
@@ -791,8 +802,8 @@
   display: inline-block;
   width: auto;
   min-width: ($unit * 5);
-  margin-top: -($unit / 8);
-  margin-left: ($unit / 4);
+  margin-top: -($unit * 0.125);
+  margin-left: ($unit * 0.25);
 }
 
 .gds-form-group__select-input--no-border {
@@ -1049,7 +1060,7 @@
     width: ($unit * 2.5);
     height: ($unit * 1.25);
     margin-right: 7px;
-    top: -($unit / 6);
+    top: -(math.div($unit, 6));
   }
 }
 
@@ -1064,7 +1075,7 @@
     width: ($unit * 2);
     height: ($unit * 1);
     margin-right: 6px;
-    top: -($unit / 20);
+    top: -($unit * 0.05);
   }
 }
 
@@ -1096,13 +1107,13 @@
 .gds-form-group__toggleswitch-indicator {
   background: white;
   box-shadow: inset 0 0 0 1px $gg-light-3;
-  border-radius: ($input-border-radius/2);
+  border-radius: ($input-border-radius * 0.5);
   display: block;
   height: ($unit * 1.5);
   left: 0;
   overflow: hidden;
   position: absolute;
-  top: -($unit / 4);
+  top: -($unit * 0.25);
   width: ($unit * 3);
   z-index: 0;
   border: none !important;
@@ -1116,7 +1127,7 @@
     bottom: 2px;
     width: calc(50% - 2px);
     background-color: $gg-light-3;
-    border-radius: ($input-border-radius / 1.8);
+    border-radius: math.div($input-border-radius, 1.8);
     box-sizing: border-box;
     @include transition-back(all, 250ms);
     border: none !important;
@@ -1377,36 +1388,38 @@ $thumb-width: ($unit * 0.75);
 .gds-form-group__range-input {
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    border-color: $gg-light-2;
-    border-bottom-color: $gg-light-2;
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-top-width: 1px;
-    border-bottom-width: $cap-size;
-    border-style: solid;
-    height: ($unit * 1.5);
-    width: $thumb-width;
-    border-radius: $border-radius;
+    // border-color: $gg-light-2;
+    // border-bottom-color: $gg-light-2;
+    // border-left-width: 1px;
+    // border-right-width: 1px;
+    // border-top-width: 1px;
+    // border-bottom-width: $cap-size;
+    // border-style: solid;
+    height: ($unit * 1.25);
+    width: ($unit * 1.25);
+    border-radius: 100%;
     background: white;
     cursor: pointer;
-    margin-top: -($unit * 0.5);
+    margin-top: -($unit * 0.33);
+    @include defaultShadows($gg-light-3, black, $primaryLight2Color);
     @include transition-ease-out(all, 150ms);
   }
 
   &::-moz-range-thumb {
-    border-color: $gg-light-2;
-    border-bottom-color: $gg-light-2;
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-top-width: 1px;
-    border-bottom-width: $cap-size;
-    border-style: solid;
-    height: $unit * 1.5;
-    width: $thumb-width;
-    border-radius: $border-radius;
+    // border-color: $gg-light-2;
+    // border-bottom-color: $gg-light-2;
+    // border-left-width: 1px;
+    // border-right-width: 1px;
+    // border-top-width: 1px;
+    // border-bottom-width: $cap-size;
+    border-style: none;
+    height: ($unit * 1.25);
+    width: ($unit * 1.25);
+    border-radius: 100%;
     background: white;
     cursor: pointer;
-    margin-top: -$unit * 0.5;
+    margin-top: -($unit * 0.33);
+    @include defaultShadows($gg-light-3, black, $primaryLight2Color);
     @include transition-ease-out(all, 150ms);
   }
 
@@ -1424,20 +1437,27 @@ $thumb-width: ($unit * 0.75);
     background: white;
     cursor: pointer;
     margin-top: -$unit * 0.5;
+    @include defaultShadows($gg-light-3, black, $primaryLight2Color);
     @include transition-ease-out(all, 150ms);
   }
 
   &::-webkit-slider-runnable-track {
     width: 100%;
-    height: $unit/2;
+    height: $unit * 0.5;
     cursor: pointer;
-    background-color: $gg-light-1;
+    // background-color: $gg-light-1;
+    background: linear-gradient(
+      to left,
+      $dangerLight1Color,
+      $warningLight2Color,
+      $successLight1Color
+    );
     border-radius: $cap-size;
     @include transition-ease-out(all, 150ms);
   }
   &::-moz-range-track {
     width: 100%;
-    height: $unit/2;
+    height: $unit * 0.5;
     cursor: pointer;
     background-color: $gg-light-1;
     border-radius: $cap-size;
@@ -1445,7 +1465,7 @@ $thumb-width: ($unit * 0.75);
   }
   &:-ms-track {
     width: 100%;
-    height: $unit/2;
+    height: $unit * 0.5;
     cursor: pointer;
     background-color: $gg-light-1;
     border-radius: $cap-size;
@@ -1453,22 +1473,29 @@ $thumb-width: ($unit * 0.75);
   }
 
   &::-ms-fill-upper {
-    background-color: $primaryDark2Color;
+    background-color: none;
+  }
+
+  &::-webkit-progress-bar {
+    background-color: none;
   }
 
   &::-moz-range-progress {
-    background-color: $primaryDark2Color;
+    background-color: none;
   }
 
   &:hover {
     &::-webkit-slider-thumb {
-      border-color: $gg-light-4;
+      background: $primaryColor;
+      @include hoverShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-moz-range-thumb {
-      border-color: $gg-light-4;
+      background: $primaryColor;
+      @include hoverShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-ms-thumb {
-      border-color: $gg-light-4;
+      background: $primaryColor;
+      @include hoverShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-webkit-slider-runnable-track {
       background-color: $gg-light-2;
@@ -1483,43 +1510,62 @@ $thumb-width: ($unit * 0.75);
   &:active,
   &:focus:active {
     &::-webkit-slider-thumb {
-      border-color: $primaryDark2Color;
-      background-color: $primaryColor;
-      box-shadow: $input-focus-effect;
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-moz-range-thumb {
-      border-color: $primaryDark2Color;
-      background-color: $primaryColor;
-      box-shadow: $input-focus-effect;
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-ms-thumb {
-      border-color: $primaryDark2Color;
-      background-color: $primaryColor;
-      box-shadow: $input-focus-effect;
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-ms-fill-upper {
-      background-color: $primaryColor;
+      background-color: none;
     }
     &::-moz-range-progress {
-      background-color: $primaryColor;
+      background-color: none;
     }
   }
   &:focus {
     &::-webkit-slider-thumb {
-      border-color: $primaryColor;
-      background-color: white;
-      box-shadow: $input-focus-effect;
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-moz-range-thumb {
-      border-color: $primaryColor;
-      background-color: white;
-      box-shadow: $input-focus-effect;
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
     }
     &::-ms-thumb {
-      border-color: $primaryColor;
-      background-color: white;
-      box-shadow: $input-focus-effect;
+      @include focusShadows($primaryColor, black, $primaryLight2Color);
     }
+  }
+}
+
+.gds-form-group__range-input--gradient {
+  // background color none and then set background to be gradient
+  &::-webkit-slider-runnable-track {
+    background-color: none;
+    background: linear-gradient(
+      to left,
+      $dangerLight1Color,
+      $warningLight2Color,
+      $successLight1Color
+    );
+  }
+  &::-moz-range-track {
+    background-color: none;
+    background: linear-gradient(
+      to left,
+      $dangerLight1Color,
+      $warningLight2Color,
+      $successLight1Color
+    );
+  }
+  &:-ms-track {
+    background-color: none;
+    background: linear-gradient(
+      to left,
+      $dangerLight1Color,
+      $warningLight2Color,
+      $successLight1Color
+    );
   }
 }
 
@@ -1580,7 +1626,7 @@ $thumb-width: ($unit * 0.75);
 
 .gds-form-group__range-track {
   width: 100%;
-  height: $unit/2;
+  height: $unit * 0.5;
   background-color: $gg-light-1;
   border-radius: $cap-size;
   @include transition-ease-out(all, 150ms);

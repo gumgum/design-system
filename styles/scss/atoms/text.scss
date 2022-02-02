@@ -94,8 +94,8 @@ select {
     content: "";
     display: inline-block;
     margin-right: $unit;
-    height: $unit / 4;
-    width: $unit / 4;
+    height: $unit * 0.25;
+    width: $unit * 0.25;
     border-radius: 50%;
     background-color: transparent;
     border: 1px solid $primaryColor;
@@ -105,7 +105,7 @@ select {
 
 .gds-text__list-item--number {
   counter-increment: step-counter;
-  margin-bottom: $unit / 2;
+  margin-bottom: $unit * 0.5;
   &:before {
     content: counter(step-counter);
     margin-right: $unit;
@@ -130,7 +130,7 @@ select {
 
 .gds-text--blockquote--footer {
   display: block;
-  padding-top: ($unit / 2);
+  padding-top: ($unit * 0.5);
   font-style: normal;
 
   &:before {

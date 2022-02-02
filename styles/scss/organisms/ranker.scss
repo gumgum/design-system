@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $rating-size: $unit * 1.5;
 $icon-size: $unit * 3;
 
@@ -39,16 +41,16 @@ $icon-size: $unit * 3;
 
 .gds-ranker__connector {
   position: absolute;
-  bottom: #{$rating-size/2};
-  left: $icon-size/2;
-  right: $icon-size/2;
+  bottom: #{$rating-size*0.5};
+  left: $icon-size*0.5;
+  right: $icon-size*0.5;
   height: 1px;
   background-color: $gg-light-2;
 }
 
 .gds-ranker__connector--inverted {
   bottom: 0;
-  top: #{$rating-size/2};
+  top: #{$rating-size*0.5};
 }
 
 .gds-ranker__connector--lg {
@@ -64,40 +66,40 @@ $icon-size: $unit * 3;
 .gds-ranker__connector--vertical-lg,
 .gds-ranker__connector--vertical-xl,
 .gds-ranker__connector--vertical-inverted {
-  right: #{$rating-size/2};
+  right: #{$rating-size*0.5};
   left: auto;
   height: auto;
-  top: $icon-size/1.5;
-  bottom: $icon-size/1.5;
+  top: math.div($icon-size, 1.5);
+  bottom: math.div($icon-size, 1.5);
   width: 1px;
 }
 
 .gds-ranker__connector--vertical-lg {
   top: $icon-size * 1.25;
   bottom: $icon-size * 1.25;
-  right: #{$rating-size/1.5};
+  right: #{math.div($rating-size, 1.5)};
   left: auto;
 }
 
 .gds-ranker__connector--vertical-xl {
   top: $icon-size * 1.75;
   bottom: $icon-size * 1.75;
-  right: #{$rating-size/1.25};
+  right: #{math.div($rating-size, 1.25)};
   left: auto;
 }
 
 .gds-ranker__connector--vertical-inverted {
-  left: #{$rating-size/2};
+  left: #{$rating-size*0.5};
   right: auto;
   &.gds-ranker__connector--vertical-lg,
   &.gds-ranker__connector--vertical-xl {
-    left: #{$rating-size/1.5};
+    left: #{math.div($rating-size, 1.5)};
     right: auto;
   }
 }
 
 .gds-ranker__item-label {
-  margin-bottom: $unit / 2;
+  margin-bottom: $unit * 0.5;
   color: $primaryColor;
   text-align: center;
 }
@@ -147,7 +149,7 @@ $icon-size: $unit * 3;
     background-color: $gg-light-2;
   }
   &:only-child {
-    left: calc(50% - #{$icon-size/2});
+    left: calc(50% - #{$icon-size*0.5});
   }
   &:hover .gds-ranker__image {
     transform: scale(1.07);
@@ -372,7 +374,7 @@ $icon-size: $unit * 3;
 .gds-ranker__item-number-ordinal {
   font-size: $font-size-minus-4;
   vertical-align: top;
-  bottom: $unit / 10;
+  bottom: $unit * 0.1;
 }
 
 .gds-ranker__item-number--secondary {
@@ -529,65 +531,65 @@ $icon-size: $unit * 3;
   }
 
   .gds-ranker__connector {
-    right: #{$rating-size/2};
+    right: #{$rating-size*0.5};
     left: auto;
     height: auto;
-    top: $icon-size/1.5;
-    bottom: $icon-size/1.5;
+    top: math.div($icon-size, 1.5);
+    bottom: math.div($icon-size, 1.5);
     width: 1px;
     &.gds-ranker__connector--lg {
       top: $icon-size * 1.25;
       bottom: $icon-size * 1.25;
-      right: #{$rating-size/1.5};
+      right: #{math.div($rating-size, 1.5)};
     }
     &.gds-ranker__connector--xl {
       top: $icon-size * 1.75;
       bottom: $icon-size * 1.75;
-      right: #{$rating-size/1.5};
+      right: #{math.div($rating-size, 1.5)};
     }
   }
 
   .gds-ranker__connector--vertical {
-    right: #{$rating-size/2};
+    right: #{$rating-size*0.5};
     left: auto;
     height: auto;
-    top: $icon-size/1.5;
-    bottom: $icon-size/1.5;
+    top: math.div($icon-size, 1.5);
+    bottom: math.div($icon-size, 1.5);
     width: 1px;
     &.gds-ranker__connector--lg,
     &.gds-ranker__connector--vertical-lg {
       top: $icon-size * 1.25;
       bottom: $icon-size * 1.25;
-      right: #{$rating-size/1.5};
+      right: #{math.div($rating-size, 1.5)};
     }
     &.gds-ranker__connector--xl,
     &.gds-ranker__connector--vertical-xl {
       top: $icon-size * 1.75;
       bottom: $icon-size * 1.75;
-      right: #{$rating-size/1.5};
+      right: #{math.div($rating-size, 1.5)};
     }
   }
 
   .gds-ranker__connector--inverted,
   .gds-ranker__connector--vertical-inverted {
-    left: #{$rating-size/2};
+    left: #{$rating-size*0.5};
     right: auto;
     height: auto;
     width: 1px;
-    top: $icon-size/1.5;
-    bottom: $icon-size/1.5;
+    top: math.div($icon-size, 1.5);
+    bottom: math.div($icon-size, 1.5);
     &.gds-ranker__connector--lg,
     &.gds-ranker__connector--vertical-lg {
       top: $icon-size * 1.25;
       bottom: $icon-size * 1.25;
-      left: #{$rating-size/1.5};
+      left: #{math.div($rating-size, 1.5)};
       right: auto;
     }
     &.gds-ranker__connector--xl,
     &.gds-ranker__connector--vertical-xl {
       top: $icon-size * 1.75;
       bottom: $icon-size * 1.75;
-      left: #{$rating-size/1.5};
+      left: #{math.div($rating-size, 1.5)};
       right: auto;
     }
   }

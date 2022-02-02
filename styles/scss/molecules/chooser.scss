@@ -192,7 +192,7 @@
 }
 
 .gds-chooser__item-icon {
-  margin-left: $unit / 2;
+  margin-left: $unit * 0.5;
   font-size: $unit;
   top: 1px;
   @include transition-ease-out(all, 100ms);
@@ -211,7 +211,7 @@
 }
 
 .gds-chooser__menu-link {
-  padding: $unit / 4 $unit * 2;
+  padding: $unit * 0.25 $unit * 2;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

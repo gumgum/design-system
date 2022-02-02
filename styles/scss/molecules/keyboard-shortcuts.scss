@@ -39,12 +39,12 @@
   text-transform: uppercase;
   @include transition-back(all, 250ms);
   color: $gg-dark-4;
-  margin-bottom: ($unit / 2);
+  margin-bottom: ($unit * 0.5);
 }
 
 .gds-keyboard-shortcuts__trigger {
   display: inline-block;
   text-align: center;
   width: ($unit * 1.5);
-  margin: 0 ($unit / 2) ($unit / 2) 0;
+  margin: 0 ($unit * 0.5) ($unit * 0.5) 0;
 }

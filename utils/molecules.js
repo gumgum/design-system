@@ -148,6 +148,65 @@ const Molecules = [
 </div>`,
   },
   {
+    id: "bubble-component",
+    gumdrops: "",
+    variants: [
+      {
+        title: "Display",
+        values: [
+          "gds-bubble__menu--offset-xs",
+          "gds-bubble__menu--offset-sm",
+          "gds-bubble__menu--offset-md",
+          "gds-bubble__menu--offset-lg",
+          "gds-bubble__menu--offset-xl",
+          "gds-bubble__menu--menu-open",
+        ],
+      },
+      {
+        title: "Context (Color)",
+        values: [
+          "gds-bubble__menu--dark",
+          "gds-bubble__menu-list-item--dark",
+          "gds-bubble__menu-list-link--dark",
+          "gds-bubble__menu-list--dark",
+          "gds-bubble__menu-list-divider--dark",
+        ],
+      },
+    ],
+    related: [
+      {
+        title: "Balloon",
+        url: "/molecules/balloon-component",
+      },
+    ],
+
+    code: `
+  <div className="gds-flex gds-flex--justify-end">  
+    <div className="gds-bubble -m-b-6">
+      <div
+        className="gds-button gds-button--outline gds-button--xs"
+      >
+        <i className="fa fa-fw fa-ellipsis-h" aria-hidden="true"></i>
+      </div>
+      <div
+        className="gds-bubble__menu gds-bubble__menu gds-bubble__menu--menu-open  gds-bubble__menu--offset-sm">
+        <ul className="gds-bubble__menu-list" data-gds-bubble-menu="example">
+          <li className="gds-bubble__menu-list-item -ellipsis">
+            <a className="gds-bubble__menu-list-link" href="#">Alert 1</a>
+          </li>
+          <li className="gds-bubble__menu-list-item -ellipsis">
+            <a className="gds-bubble__menu-list-link" href="#">Alert 2</a>
+          </li>
+          <li className="gds-bubble__menu-list-divider"></li>
+          <li className="gds-bubble__menu-list-item -ellipsis">
+            <a className="gds-bubble__menu-list-link" href="#">Clear Alerts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>`,
+  },
+  {
     id: "balloon-component",
     gumdrops: "",
     variants: [

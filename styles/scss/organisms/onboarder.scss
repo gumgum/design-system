@@ -126,7 +126,7 @@
   border: 1px solid $numberCircleBorderColor;
   color: $numberCircleTextColor;
   border-radius: 50%;
-  padding: ($unit / 4) 0;
+  padding: ($unit * 0.25) 0;
   margin-right: $unit;
   font-size: $font-size-minus-1;
   float: left;

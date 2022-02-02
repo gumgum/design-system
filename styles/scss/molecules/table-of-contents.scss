@@ -1,6 +1,8 @@
+@use "sass:math";
+
 .gds-table-of-contents .nav > li > a {
-    border-left: ($unit / 6) solid transparent;
-    padding: ($unit / 4) ($unit * 1.25);
+    border-left: math.div($unit, 6) solid transparent;
+    padding: ($unit * 0.25) ($unit * 1.25);
     font-weight: 400;
 }
 

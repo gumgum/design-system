@@ -68,7 +68,7 @@
 .gds-landing-pad__icon {
   height: 30px;
   width: 30px;
-  margin-bottom: ($unit / 2);
+  margin-bottom: ($unit * 0.5);
 }
 
 .gds-landing-pad__icon-piece {
@@ -121,7 +121,7 @@
 .gds-landing-pad__text {
   padding: 0 $unit;
   line-height: 1.4;
-  margin-bottom: ($unit / 2);
+  margin-bottom: ($unit * 0.5);
 }
 
 .gds-landing-pad__progress-bar {

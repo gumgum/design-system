@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .gds-lens-wrapper {
   overflow: hidden;
   display: inline-block;
@@ -196,7 +198,7 @@
   }
 }
 
-$bracketOffset: $unit / 2;
+$bracketOffset: $unit * 0.5;
 
 .gds-lens__bracket {
   height: 10%;
@@ -234,8 +236,8 @@ $bracketOffset: $unit / 2;
   transform: translate(-$bracketOffset, -$bracketOffset);
 }
 
-$handleSize: $unit / 3;
-$handleFootprint: $unit / 1.5;
+$handleSize: math.div($unit, 3);
+$handleFootprint: math.div($unit, 1.5);
 
 .gds-lens__handle {
   position: absolute;
@@ -272,11 +274,11 @@ $handleFootprint: $unit / 1.5;
 
 .gds-lens__handle--t-c {
   top: -$handleFootprint;
-  left: calc(50% - #{$handleFootprint / 2});
+  left: calc(50% - #{$handleFootprint * 0.5});
   cursor: ns-resize;
   &:before {
     bottom: 0;
-    left: $handleSize / 2;
+    left: $handleSize * 0.5;
   }
 }
 
@@ -291,21 +293,21 @@ $handleFootprint: $unit / 1.5;
 }
 
 .gds-lens__handle--c-l {
-  top: calc(50% - #{$handleFootprint / 2});
+  top: calc(50% - #{$handleFootprint * 0.5});
   left: -$handleFootprint;
   cursor: ew-resize;
   &:before {
-    top: $handleSize / 2;
+    top: $handleSize * 0.5;
     right: 0;
   }
 }
 
 .gds-lens__handle--c-r {
-  top: calc(50% - #{$handleFootprint / 2});
+  top: calc(50% - #{$handleFootprint * 0.5});
   right: -$handleFootprint;
   cursor: ew-resize;
   &:before {
-    top: $handleSize / 2;
+    top: $handleSize * 0.5;
     left: 0;
   }
 }
@@ -322,11 +324,11 @@ $handleFootprint: $unit / 1.5;
 
 .gds-lens__handle--b-c {
   bottom: -$handleFootprint;
-  left: calc(50% - #{$handleFootprint / 2});
+  left: calc(50% - #{$handleFootprint * 0.5});
   cursor: ns-resize;
   &:before {
     top: 0;
-    right: $handleSize / 2;
+    right: $handleSize * 0.5;
   }
 }
 

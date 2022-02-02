@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .gds-conversation {
   width: 100%;
   clear: both;
@@ -13,7 +15,7 @@
 }
 
 .gds-conversation__header {
-  padding: ($unit / 2);
+  padding: ($unit * 0.5);
 }
 
 .gds-conversation__footer {
@@ -28,7 +30,7 @@
   width: ($unit * 3);
   vertical-align: top;
   border-radius: $border-radius;
-  margin-right: ($unit / 2);
+  margin-right: ($unit * 0.5);
 }
 
 .gds-conversation__options {
@@ -36,13 +38,13 @@
 }
 
 .gds-conversation__body {
-  padding: ($unit * 2) ($unit / 2) ($unit / 2) ($unit / 2);
+  padding: ($unit * 2) ($unit * 0.5) ($unit * 0.5) ($unit * 0.5);
   max-height: 600px;
   overflow: scroll;
 }
 
 .gds-conversation__message {
-  padding: ($unit / 2);
+  padding: ($unit * 0.5);
   margin-bottom: ($unit * 2);
 }
 
@@ -62,17 +64,17 @@
   min-width: 200px;
   color: white;
   display: inline-block;
-  padding: ($unit / 2) $unit;
+  padding: ($unit * 0.5) $unit;
   z-index: $z-index-1;
 
   &:after {
     content: "";
     width: 0;
     position: absolute;
-    top: ($unit / 2);
+    top: ($unit * 0.5);
     height: 0;
-    border-top: ($unit / 2) solid transparent;
-    border-bottom: ($unit / 2) solid transparent;
+    border-top: ($unit * 0.5) solid transparent;
+    border-bottom: ($unit * 0.5) solid transparent;
   }
 
   @media #{$phone-width}, #{$phablet-width} {
@@ -85,8 +87,8 @@
   border-bottom: $cap-size solid $primaryDark2Color;
 
   &:after {
-    border-left: ($unit / 3) solid $primaryColor;
-    right: -($unit / 3.5);
+    border-left: math.div($unit, 3) solid $primaryColor;
+    right: -(math.div($unit, 3.5));
   }
 }
 
@@ -95,8 +97,8 @@
   border-bottom: $cap-size solid $secondaryDark2Color;
 
   &:after {
-    border-right: ($unit / 3) solid $secondaryColor;
-    left: -($unit / 3.5);
+    border-right: math.div($unit, 3) solid $secondaryColor;
+    left: -(math.div($unit, 3.5));
   }
 }
 
@@ -106,13 +108,13 @@
 }
 
 .gds-conversation__bubble--received.gds-conversation__bubble--blocked:after {
-  border-left: ($unit / 3) solid $dangerColor;
-  right: -($unit / 3.5);
+  border-left: math.div($unit, 3) solid $dangerColor;
+  right: -(math.div($unit, 3.5));
 }
 
 .gds-conversation__bubble--sent.gds-conversation__bubble--blocked:after {
-  border-right: ($unit / 3) solid $dangerColor;
-  left: -($unit / 3.5);
+  border-right: math.div($unit, 3) solid $dangerColor;
+  left: -(math.div($unit, 3.5));
 }
 
 .gds-conversation__bubble--typing {
@@ -181,11 +183,11 @@
 }
 
 .gds-conversation__content {
-  margin-bottom: ($unit / 4);
+  margin-bottom: ($unit * 0.25);
 }
 
 .gds-conversation__content--typing {
-  padding: ($unit / 2);
+  padding: ($unit * 0.5);
   margin-bottom: 0;
 }
 
@@ -197,9 +199,9 @@
   vertical-align: middle;
   width: 100%;
   height: auto;
-  border: ($unit / 4) solid white;
+  border: ($unit * 0.25) solid white;
   border-radius: $border-radius;
-  margin: ($unit / 2) 0;
+  margin: ($unit * 0.5) 0;
 }
 
 .gds-conversation__dots {
@@ -222,12 +224,12 @@
 }
 
 .gds-conversation__avatar--sent {
-  margin-right: ($unit / 4);
+  margin-right: ($unit * 0.25);
   box-shadow: 0 0 0 2px $secondaryDark2Color;
 }
 
 .gds-conversation__avatar--received {
-  margin-left: ($unit / 4);
+  margin-left: ($unit * 0.25);
   box-shadow: 0 0 0 2px $primaryDark2Color;
 }
 
@@ -261,7 +263,7 @@
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-right: none;
-  padding: ($unit / 1.3);
+  padding: math.div($unit, 1.3);
   box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-3;
   height: $input-height-md;
   color: white;

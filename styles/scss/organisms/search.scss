@@ -60,7 +60,7 @@
 .gds-search__typeahead-item {
   // color: white;
   background-color: $searchShownBackgroundDefaultColor;
-  padding: ($unit / 4) $unit;
+  padding: ($unit * 0.25) $unit;
   background: none;
   color: inherit;
   width: 100%;

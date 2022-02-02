@@ -248,7 +248,7 @@ $rbs: $unit * 2.2;
   min-width: auto;
   width: auto;
   white-space: nowrap;
-  transform: translate(calc(-50% + #{$rbs/2}), 3rem) scale(0, 1);
+  transform: translate(calc(-50% + #{$rbs*0.5}), 3rem) scale(0, 1);
   opacity: 0;
   top: -3rem;
   pointer-events: none;
@@ -268,7 +268,7 @@ $rbs: $unit * 2.2;
 }
 
 .gds-ribbon__bubble-menu--open {
-  transform: translate(calc(-50% + #{$rbs/2}), 0) scale(1, 1);
+  transform: translate(calc(-50% + #{$rbs*0.5}), 0) scale(1, 1);
   pointer-events: auto;
   opacity: 1;
   .gds-ribbon__bubble-menu-list {
@@ -353,7 +353,7 @@ $rbs: $unit * 2.2;
   text-align: left;
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23dbdbdb%3B%22/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right $unit/2 center;
+  background-position: right $unit*0.5 center;
   background-size: auto 15%;
   &:focus {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23ffffff%3B%22/%3E%3C/svg%3E");

@@ -197,7 +197,7 @@ body.-has-persist-nav {
   text-overflow: ellipsis;
   display: block;
   color: $persistNavDefaultTextColor;
-  padding: ($unit/4) ($unit) ($unit/4) ($unit * 1.25);
+  padding: ($unit*0.25) ($unit) ($unit*0.25) ($unit * 1.25);
   box-shadow: inset -1px 0 0 0 $gg-light-2, 0px 0px 0px 0px rgba(black, 0);
 }
 
@@ -258,8 +258,8 @@ body.-has-persist-nav {
     padding-right: ($unit * 2);
 
     @media #{$phablet-width} {
-      padding-left: ($unit / 2);
-      padding-right: ($unit / 2);
+      padding-left: ($unit * 0.5);
+      padding-right: ($unit * 0.5);
     }
   }
 }

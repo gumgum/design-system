@@ -68,8 +68,8 @@
 
 .DayPicker-Caption {
   display: table-caption;
-  margin-bottom: ($unit / 2);
-  padding: 0 ($unit / 2);
+  margin-bottom: ($unit * 0.5);
+  padding: 0 ($unit * 0.5);
   text-align: left;
 }
 
@@ -104,7 +104,7 @@
 
 .DayPicker-Weekday {
   display: table-cell;
-  padding: ($unit / 2);
+  padding: ($unit * 0.5);
   color: $gg-light-4;
   text-align: center;
   font-size: ($unit * 0.8);

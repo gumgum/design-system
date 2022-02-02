@@ -16,9 +16,9 @@
 .gds-conversation__dots,
 .gds-conversation__dots:before,
 .gds-conversation__dots:after {
-  width: ($unit / 2);
-  height: ($unit / 2);
-  border-radius: ($unit / 4);
+  width: ($unit * 0.5);
+  height: ($unit * 0.5);
+  border-radius: ($unit * 0.25);
   transition: all 0.25s ease-in-out;
 }
 
@@ -73,7 +73,7 @@
 .gds-loading__dot--lg:after {
   width: $unit;
   height: $unit;
-  border-radius: ($unit / 2);
+  border-radius: ($unit * 0.5);
 }
 
 .gds-loading__dot--lg:before {
@@ -90,9 +90,9 @@
 .gds-conversation__dots,
 .gds-conversation__dots:before,
 .gds-conversation__dots:after {
-  width: ($unit / 4);
-  height: ($unit / 4);
-  border-radius: ($unit / 8);
+  width: ($unit * 0.25);
+  height: ($unit * 0.25);
+  border-radius: ($unit * 0.125);
 }
 
 .gds-loading__dot--sm:before,
