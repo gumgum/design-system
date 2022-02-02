@@ -1445,7 +1445,13 @@ $thumb-width: ($unit * 0.75);
     width: 100%;
     height: $unit * 0.5;
     cursor: pointer;
-    background-color: $gg-light-1;
+    // background-color: $gg-light-1;
+    background: linear-gradient(
+      to left,
+      $dangerLight1Color,
+      $warningLight2Color,
+      $successLight1Color
+    );
     border-radius: $cap-size;
     @include transition-ease-out(all, 150ms);
   }
@@ -1529,6 +1535,37 @@ $thumb-width: ($unit * 0.75);
     &::-ms-thumb {
       @include focusShadows($primaryColor, black, $primaryLight2Color);
     }
+  }
+}
+
+.gds-form-group__range-input--gradient {
+  // background color none and then set background to be gradient
+  &::-webkit-slider-runnable-track {
+    background-color: none;
+    background: linear-gradient(
+      to left,
+      $dangerLight1Color,
+      $warningLight2Color,
+      $successLight1Color
+    );
+  }
+  &::-moz-range-track {
+    background-color: none;
+    background: linear-gradient(
+      to left,
+      $dangerLight1Color,
+      $warningLight2Color,
+      $successLight1Color
+    );
+  }
+  &:-ms-track {
+    background-color: none;
+    background: linear-gradient(
+      to left,
+      $dangerLight1Color,
+      $warningLight2Color,
+      $successLight1Color
+    );
   }
 }
 
