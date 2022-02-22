@@ -85,10 +85,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/public-sans/-/public-sans-4.5.0.tgz#ba15c59ae0602e0dc7da4063ee83a061b3be5a32"
   integrity sha512-fSVbcSGKDIZKRuu1Vd1Ky8RFZdMDsIWXqTAKJT2qgXTuNhb+4EjlQQWTfjB5QlFN+fMpMzvXWOQJrIYb0DtCsA==
 
-"@fortawesome/fontawesome-free@^6.0.0-beta3":
-  version "6.0.0-beta3"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-6.0.0-beta3.tgz#120e4a158a0de983924ce151bc35f27de46398b7"
-  integrity sha512-4SqOuhC8tSLeQvbW1nDmq6T7+8vdSgHy/w7PRwCFzMQCbKuYFIir/3UuWsV1QblX1lt7SGlSgwbaCv9XhRt8HA==
+"@fortawesome/fontawesome-free@5.15.4":
+  version "5.15.4"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.4.tgz#ecda5712b61ac852c760d8b3c79c96adca5554e5"
+  integrity sha512-eYm8vijH/hpzr/6/1CJ/V/Eb1xQFW2nnUKArb3z+yUWv7HTwj6M7SP957oMjfZjAHU6qpoNc2wQvIxBLWYa/Jg==
 
 "@hapi/accept@5.0.2":
   version "5.0.2"
