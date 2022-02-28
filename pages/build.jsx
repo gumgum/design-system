@@ -1,9 +1,39 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "gumdrops";
 import PageTitle from "../components/common/title/pageTitle";
 
+const RangeItems = [
+  {
+    title: "Stage 1",
+    description: "This is info about stage 1.",
+  },
+  {
+    title: "Stage 2",
+    description: "This is info about stage 2.",
+  },
+  {
+    title: "Stage 3",
+    description: "This is info about stage 3.",
+  },
+  {
+    title: "Stage 4",
+    description: "This is info about stage 4.",
+  },
+  {
+    title: "Stage 5",
+    description: "This is info about stage 5.",
+  },
+];
+
 export default function BuildPage() {
   const [range, setRange] = useState(0);
+
+  const getRangeDescription = (range) => {
+    if (RangeItems[range].description) {
+      return RangeItems[range].description;
+    }
+  };
+
   return (
     <div>
       <PageTitle title="Build" />
@@ -11,16 +41,11 @@ export default function BuildPage() {
         <div className="gds-card -p-a-5">
           <div className="gds-form-group">
             <input
-              className="gds-form-group__text-input -m-b-4"
-              type="text"
-              placeholder="Enter Text"
-            />
-            <input
               className="gds-form-group__range-input"
               type="range"
-              step="25"
+              step="1"
               min="0"
-              max="100"
+              max="4"
               value={range}
               onChange={({ target: { value: radius } }) => {
                 setRange(radius);
@@ -48,7 +73,7 @@ export default function BuildPage() {
               </label>
               <label
                 className={`gds-form-group__range-input-label ${
-                  range == 25 && "gds-form-group__range-input-label--active"
+                  range == 1 && "gds-form-group__range-input-label--active"
                 }`}
                 style={{
                   position: "absolute",
@@ -61,7 +86,7 @@ export default function BuildPage() {
               </label>
               <label
                 className={`gds-form-group__range-input-label ${
-                  range == 50 && "gds-form-group__range-input-label--active"
+                  range == 2 && "gds-form-group__range-input-label--active"
                 }`}
                 style={{
                   position: "absolute",
@@ -74,7 +99,7 @@ export default function BuildPage() {
               </label>
               <label
                 className={`gds-form-group__range-input-label ${
-                  range == 75 && "gds-form-group__range-input-label--active"
+                  range == 3 && "gds-form-group__range-input-label--active"
                 }`}
                 style={{
                   position: "absolute",
@@ -87,7 +112,7 @@ export default function BuildPage() {
               </label>
               <label
                 className={`gds-form-group__range-input-label ${
-                  range == 100 && "gds-form-group__range-input-label--active"
+                  range == 4 && "gds-form-group__range-input-label--active"
                 }`}
                 style={{
                   position: "absolute",
@@ -100,6 +125,7 @@ export default function BuildPage() {
               </label>
             </div>
           </div>
+          <p className="-m-t-4">{getRangeDescription(range)}</p>
         </div>
       </Card>
     </div>

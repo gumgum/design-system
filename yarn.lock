@@ -85,7 +85,7 @@
   resolved "https://registry.yarnpkg.com/@fontsource/public-sans/-/public-sans-4.5.0.tgz#ba15c59ae0602e0dc7da4063ee83a061b3be5a32"
   integrity sha512-fSVbcSGKDIZKRuu1Vd1Ky8RFZdMDsIWXqTAKJT2qgXTuNhb+4EjlQQWTfjB5QlFN+fMpMzvXWOQJrIYb0DtCsA==
 
-"@fortawesome/fontawesome-free@5.15.4":
+"@fortawesome/fontawesome-free@^5.15.4":
   version "5.15.4"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.4.tgz#ecda5712b61ac852c760d8b3c79c96adca5554e5"
   integrity sha512-eYm8vijH/hpzr/6/1CJ/V/Eb1xQFW2nnUKArb3z+yUWv7HTwj6M7SP957oMjfZjAHU6qpoNc2wQvIxBLWYa/Jg==
@@ -2797,6 +2797,11 @@ react-dom@^17.0.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     scheduler "^0.20.2"
+
+react-hook-form@^7.27.1:
+  version "7.27.1"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.27.1.tgz#fe5fbcb6bf58751f66d9569e998d671480cc57f6"
+  integrity sha512-N3a7A6zIQ8DJeThisVZGtOUabTbJw+7DHJidmB9w8m3chckv2ZWKb5MHps9d2pPJqmCDoWe53Bos56bYmJms5w==
 
 react-is@17.0.2:
   version "17.0.2"
