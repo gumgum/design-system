@@ -25,6 +25,45 @@ const RangeItems = [
   },
 ];
 
+const rangeItems = [
+  {
+    value: 0.1,
+    label: "Stage 1",
+  },
+  {
+    value: 0.2,
+    label: "Stage 2",
+  },
+  {
+    value: 0.3,
+    label: "Stage 3",
+  },
+  {
+    value: 0.4,
+    label: "Stage 4",
+  },
+  {
+    value: 0.5,
+    label: "Stage 5",
+  },
+  {
+    value: 0.6,
+    label: "Stage 6",
+  },
+  {
+    value: 0.7,
+    label: "Stage 7",
+  },
+  {
+    value: 0.8,
+    label: "Stage 8",
+  },
+  {
+    value: 0.9,
+    label: "Stage 9",
+  },
+];
+
 export default function BuildPage() {
   const [range, setRange] = useState(0);
 
@@ -43,9 +82,9 @@ export default function BuildPage() {
             <input
               className="gds-form-group__range-input"
               type="range"
-              step="1"
-              min="0"
-              max="4"
+              step=".1"
+              min=".1"
+              max=".9"
               value={range}
               onChange={({ target: { value: radius } }) => {
                 setRange(radius);
@@ -58,74 +97,31 @@ export default function BuildPage() {
                 height: 20,
               }}
             >
-              <label
-                className={`gds-form-group__range-input-label ${
-                  range == 0 && "gds-form-group__range-input-label--active"
-                }`}
-                style={{
-                  position: "absolute",
-                  transform: "translateX(-50%)",
-                  whiteSpace: "nowrap",
-                  left: "0%",
-                }}
-              >
-                Stage 1
-              </label>
-              <label
-                className={`gds-form-group__range-input-label ${
-                  range == 1 && "gds-form-group__range-input-label--active"
-                }`}
-                style={{
-                  position: "absolute",
-                  transform: "translateX(-50%)",
-                  whiteSpace: "nowrap",
-                  left: "25%",
-                }}
-              >
-                Stage 2
-              </label>
-              <label
-                className={`gds-form-group__range-input-label ${
-                  range == 2 && "gds-form-group__range-input-label--active"
-                }`}
-                style={{
-                  position: "absolute",
-                  transform: "translateX(-50%)",
-                  whiteSpace: "nowrap",
-                  left: "50%",
-                }}
-              >
-                Stage 3
-              </label>
-              <label
-                className={`gds-form-group__range-input-label ${
-                  range == 3 && "gds-form-group__range-input-label--active"
-                }`}
-                style={{
-                  position: "absolute",
-                  transform: "translateX(-50%)",
-                  whiteSpace: "nowrap",
-                  left: "75%",
-                }}
-              >
-                Stage 4
-              </label>
-              <label
-                className={`gds-form-group__range-input-label ${
-                  range == 4 && "gds-form-group__range-input-label--active"
-                }`}
-                style={{
-                  position: "absolute",
-                  transform: "translateX(-50%)",
-                  whiteSpace: "nowrap",
-                  left: "100%",
-                }}
-              >
-                Stage 5
-              </label>
+              {rangeItems.map((item, index) => {
+                const numRangeItems = rangeItems.length - 1;
+                const rangeItemPercentage = 100 / numRangeItems;
+                const leftPosition = rangeItemPercentage * index;
+                return (
+                  <label
+                    key={index}
+                    className={`gds-form-group__range-input-label ${
+                      range == item.value &&
+                      "gds-form-group__range-input-label--active"
+                    }`}
+                    style={{
+                      position: "absolute",
+                      transform: "translateX(-50%)",
+                      whiteSpace: "nowrap",
+                      left: `${leftPosition}%`,
+                    }}
+                  >
+                    {item.value}
+                  </label>
+                );
+              })}
             </div>
           </div>
-          <p className="-m-t-4">{getRangeDescription(range)}</p>
+          {/* <p className="-m-t-4">{getRangeDescription(range)}</p> */}
         </div>
       </Card>
     </div>
