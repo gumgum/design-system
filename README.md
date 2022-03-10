@@ -2,13 +2,31 @@
 
 Concrete is inspired by the modern design of GumGum’s Santa Monica office featuring white walls and exposed concrete. 
 
----
 
 `Breaking Change: 2.0 has recently been released due to an upcoming deprecation of how scss calculates math. This breaking change requires using sass package and no longer supports node-sass.`
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## Table of Contents
+
+- [Usage](#usage)
+- [Local Setup](#running-design-system-locally)
+- [Roadmap](#roadmap)
+- [About Concrete](#about-concrete-design-system)
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
 # Usage
 
-At [GumGum](https://gumgum.com/) we build our web applications with React and built this design system to support most React applications. It works with create-react-app out of the box, but some applications may require additional webpack configurations. 
+At [GumGum](https://gumgum.com/) we build our web applications with React and built this design system to support most React applications. It works with create-react-app out of the box, but some applications may require additional webpack configurations.
 
 ### Install Design & Sass Packages
 
@@ -46,6 +64,11 @@ There are two simple ways to override design styles such as color variables. Ove
 $primaryColor: #bada55;
 @import '~gumgum-design/styles/scss/index';
 ```
+<br>
+<br>
+<br>
+<br>
+<br>
 
 # Running Design System Locally
 
@@ -58,9 +81,45 @@ $ yarn install
 // Run locally 
 $ yarn dev
 ```
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Roadmap
+
+## Q1
+- ~~Main Docs~~
+- ~~node-sass to sass~~
+- ~~Main internal web app integrations~~
+- ~~Font Awesome 6 Upgrade~~
+
+
+## Q2
+
+- Detailed Doc Exmaples
+- Deprecate Components/Sizes/Colors
+- Centralized Design Token System
+- Mobile/Browser Fixes
+
+## Q3
+- Figma Design File Update
+- Synchronized Design Tokens (Figma ⟵⟶ Design System)
+- Theme Modes
+- Improved Version Control
+
+## Q4
+- Animations
+- CSS Only Build
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 # About Concrete Design System
-
 ### Why update?
 
 As part of the GumGum 2020 rebranding, the design system was overdue for a cosmetic overhaul. Additionally supporting technology had been deprecated and needed to be upgraded. 
@@ -73,7 +132,6 @@ As part of the GumGum 2020 rebranding, the design system was overdue for a cosme
 - New NPM Package [npm install gumgum-design](https://www.npmjs.com/package/gumgum-design)
 - [New Documentation Site](https://concrete-design-system.netlify.app/)
 - Reduced dependencies
-- 
 
 **Upcoming Changes:**
 
@@ -89,6 +147,12 @@ As part of the GumGum 2020 rebranding, the design system was overdue for a cosme
 **Notable Breaking Changes from v1**
 
 .gds-circular-button--tooltip - Deprecated: use normal tooltips
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ### License
 
