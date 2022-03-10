@@ -456,6 +456,7 @@ const Molecules = [
       {
         title: "Add Ons",
         values: [
+          "gds-card--no-top",
           "gds-card__block",
           "gds-card__text",
           "gds-card--no-shadow",
