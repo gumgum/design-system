@@ -15,7 +15,7 @@
   grid-area: main;
   overflow-x: hidden;
   overflow-y: auto;
-  background: #fafafa;
+  background: var(--colorBG);
 }
 .gds-app-layout__left {
   grid-area: left;
