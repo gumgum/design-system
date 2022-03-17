@@ -12,15 +12,15 @@ import {
 } from "gumdrops";
 export default function Login() {
   return (
-    <LayoutContainer>
-      <Row className="-m-t-4">
+    <LayoutContainer style={{ minHeight: `calc(100vh - 100px)` }}>
+      <Row className="-m-t-6">
         <LoginForm
           auth="username"
           capText="Design System"
-          //   logoText="Publisher Center"
+          logoText="Design"
           //   onSubmit={this._login}
-          //   recoveryFn={this._goToRecovery}
-          recoveryText="Trouble signing in?"
+          recoveryFn={() => alert("HELP")}
+          recoveryText="Forgot Password?"
         >
           <FormGroup className="-m-b-1">
             <FormGroupLabel text="username" />
@@ -33,9 +33,6 @@ export default function Login() {
               type="password"
               placeholder="password123"
             />
-          </FormGroup>
-          <FormGroup className="-m-b-2">
-            <Checkbox name="staySignedIn" label="Stay signed in" />
           </FormGroup>
           <Link href="/">
             <a className="gds-button gds-button--primary gds-button--block">

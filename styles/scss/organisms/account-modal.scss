@@ -22,8 +22,8 @@
 .gds-account-modal--logo:before {
   content: "";
   display: block;
-  width: 238px;
-  height: 74px;
+  width: 214px;
+  height: 67px;
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0 auto ($unit * 1.5);
@@ -72,13 +72,13 @@
   left: 0;
   width: 100%;
   text-align: center;
-  padding: 15px 0;
-  background-color: $grayLight2Color;
+  padding-top: 1rem;
+  background-color: var(--colorBG);
   border-radius: $border-radius $border-radius 0 0;
   color: $grayLight5Color;
   font-family: $sec-font-bold;
   font-weight: $font-weight-bolder;
-  letter-spacing: 0.6rem;
+  letter-spacing: 0.25rem;
   text-indent: 0.6rem;
   font-size: 1.1rem;
   line-height: 1.3rem;
