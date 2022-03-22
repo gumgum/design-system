@@ -79,7 +79,7 @@
 
 // Tab navs
 .gds-nav-tabs {
-  border-bottom: $cap-size solid $tabPrimaryUnderlineDefaultColor;
+  border-bottom: 1px solid $tabPrimaryUnderlineDefaultColor;
 
   @media #{$phone-width}, #{$phablet-width} {
     white-space: nowrap;
@@ -90,7 +90,7 @@
 }
 
 .gds-nav-tabs--dark {
-  border-bottom: $cap-size solid $tabPrimaryUnderlineDefaultColor;
+  border-bottom: 1px solid $tabPrimaryUnderlineDefaultColor;
   @media #{$phone-width}, #{$phablet-width} {
     white-space: nowrap;
   }

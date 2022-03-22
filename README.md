@@ -111,6 +111,7 @@ $ yarn dev
 
 ## Q4
 - Animations
+- Unit Testing and Optimization
 - CSS Only Build
 
 <br>

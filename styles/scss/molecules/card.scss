@@ -21,6 +21,11 @@
   }
 }
 
+.gds-card--no-top {
+  border-radius: 0 0 $border-radius $border-radius;
+  border-top: none;
+}
+
 .gds-card--no-shadow {
   border: none;
   box-shadow: none;

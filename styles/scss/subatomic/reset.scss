@@ -11,6 +11,8 @@
 // CSS variables for colors
 // Usage: .element { background-color: --var(--gg-gold); }
 :root {
+  --colorBG: #ffffff;
+  --colorText: #000;
   --primaryColor: $primaryColor;
   --secondaryColor: $secondaryColor;
   --tertiaryColor: $tertiaryColor;
