@@ -537,6 +537,53 @@ const Molecules = [
     </ul>`,
   },
   {
+    id: "checkbox-component",
+    gumdrops: "",
+    variants: [
+      {
+        title: "Size",
+        values: [
+          "gds-form-group__checkbox--xs",
+          "gds-form-group__checkbox--sm",
+        ],
+      },
+      {
+        title: "State",
+        values: ["gds-form-group--disabled"],
+      },
+      {
+        title: "Context (Color)",
+        values: [
+          "gds-form-group__checkbox-label--dark",
+          "gds-form-group--success",
+          "gds-form-group--warning",
+          "gds-form-group--danger",
+        ],
+      },
+      {
+        title: "Position",
+        values: ["gds-form-group__checkbox--inline"],
+      },
+    ],
+    related: [
+      {
+        title: "Inputs",
+        url: "/molecules/input-component",
+      },
+    ],
+
+    code: `
+    <div className="gds-form-group">
+      <div className="gds-form-group__checkbox">
+          <label className="gds-form-group__checkbox-label">
+              <input className="gds-form-group__checkbox-input" type="checkbox" />
+              <span className="gds-form-group__checkbox-indicator"></span>Checkbox Option
+          </label>
+      </div>
+    </div>
+`,
+  },
+  {
     id: "chooser-component",
     gumdrops: "",
     variants: [
