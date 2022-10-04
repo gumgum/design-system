@@ -109,20 +109,12 @@ const Atoms = [
                 url: '/atoms/link-component',
             },
             {
-                title: 'Circular Button',
-                url: '/atoms/circular-button-component',
-            },
-            {
                 title: 'Button Group',
                 url: '/molecules/button-group-component',
             },
             {
                 title: 'Button Dropdown',
                 url: '/molecules/button-dropdown-component',
-            },
-            {
-                title: 'Button Toolbar',
-                url: '/molecules/button-toolbar-component',
             },
         ],
 

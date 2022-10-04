@@ -316,10 +316,6 @@ const Molecules = [
                 title: 'Button Group',
                 url: '/atoms/button-group-component',
             },
-            {
-                title: 'Button Toolbar',
-                url: '/atoms/button-toolbar-component',
-            },
         ],
 
         code: `()=> {
@@ -391,42 +387,6 @@ const Molecules = [
 </div>`,
     },
     {
-        id: 'button-toolbar-component',
-        gumdrops: '',
-        variants: [
-            {
-                title: 'None',
-                values: [],
-            },
-        ],
-        related: [
-            {
-                title: 'Button',
-                url: '/atoms/button-component',
-            },
-            {
-                title: 'Button Dropdown',
-                url: '/atoms/button-dropdown-component',
-            },
-        ],
-
-        code: `
-      <div className="gds-button-toolbar">
-        <div className="gds-button-group gds-button-group--md">
-            <button type="button" className="gds-button-group__button gds-button--default">Default</button>
-            <button type="button" className="gds-button-group__button gds-button--primary">Primary</button>
-            <button type="button" className="gds-button-group__button gds-button--success">Success</button>
-        </div>
-        <div className="gds-button-group gds-button-group--md">
-            <button type="button" className="gds-button-group__button gds-button--info">Info</button>
-            <button type="button" className="gds-button-group__button gds-button--warning">Warning</button>
-        </div>
-        <div className="gds-button-group gds-button-group--md">
-            <button type="button" className="gds-button-group__button gds-button--danger">Danger</button>
-        </div>
-      </div>`,
-    },
-    {
         id: 'card-component',
         gumdrops:
             'https://gumdrops.gumgum.com/?path=/story/molecules-card--default',
@@ -482,63 +442,7 @@ const Molecules = [
       </div>
     </div>`,
     },
-    {
-        id: 'checklist-component',
-        gumdrops: '',
-        variants: [
-            {
-                title: 'Size',
-                values: [
-                    'gds-checklist__item--sm',
-                    'gds-checklist__item--lg',
-                    'gds-checklist__item--inverse',
-                    'gds-checklist__item--active',
-                    'gds-checklist__item--completed',
-                ],
-            },
-            {
-                title: 'State',
-                values: [
-                    'gds-checklist__item--active',
-                    'gds-checklist__item--completed',
-                ],
-            },
-            {
-                title: 'Context (Color)',
-                values: [
-                    'gds-checklist__item--inverse',
-                    'gds-checklist__item--active',
-                    'gds-checklist__item--completed',
-                ],
-            },
-        ],
-        related: [
-            {
-                title: 'Text',
-                url: '/atoms/text-component',
-            },
-            {
-                title: 'Inputs',
-                url: '/molecules/input-component',
-            },
-        ],
 
-        code: `
-    <ul className="gds-checklist">
-      <li className="gds-checklist__item gds-checklist__item--sm gds-checklist__item--completed">
-          <span className="gds-checklist__item-text">Milk</span>
-      </li>
-      <li className="gds-checklist__item gds-checklist__item--sm gds-checklist__item--completed">
-          <span className="gds-checklist__item-text">Bread</span>
-      </li>
-      <li className="gds-checklist__item gds-checklist__item--sm gds-checklist__item--active">
-          <span className="gds-checklist__item-text">Eggs</span>
-      </li>
-      <li className="gds-checklist__item gds-checklist__item--sm">
-          <span className="gds-checklist__item-text">Waffles</span>
-      </li>
-    </ul>`,
-    },
     {
         id: 'chooser-component',
         gumdrops: '',
@@ -1817,11 +1721,10 @@ const Molecules = [
         ],
         related: [
             {
-                title: 'Checklist',
-                url: '/molecules/checklist-component',
+                title: '',
+                url: '',
             },
         ],
-
         code: `
     <div className="gds-table--responsive">
   <table className="gds-table">
@@ -1890,11 +1793,10 @@ const Molecules = [
         ],
         related: [
             {
-                title: 'Checklist',
-                url: '/molecules/checklist-component',
+                title: '',
+                url: '',
             },
         ],
-
         code: `
     <ul>
       <li>
