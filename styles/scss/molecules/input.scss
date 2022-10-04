@@ -255,7 +255,6 @@
 .gds-form-group__text-input--sm,
 .gds-search-select__input--sm,
 .gds-form-group__text-input--lg,
-.gds-toolbelt__item-input,
 .ReactTable .-pagination input,
 .ReactTable .-pagination select,
 .DayPicker-Caption select {
@@ -276,7 +275,6 @@
 
 // Text inputs
 .gds-form-group__text-input,
-.gds-toolbelt__item-input,
 .gds-search-select__input,
 .gds-form-group__text-area-input,
 .gds-form-group__date-group,
@@ -333,8 +331,7 @@
 }
 
 .gds-form-group__text-input--dark,
-.gds-form-group__text-area-input--dark,
-.gds-toolbelt__item-input {
+.gds-form-group__text-area-input--dark {
     background-color: mix($gg-dark-3, white, 90%);
     @include defaultShadows($gg-gray, black, $primaryLight2Color);
 

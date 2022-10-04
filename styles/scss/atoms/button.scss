@@ -176,7 +176,6 @@
 
 .gds-button,
 a.gds-button,
-.gds-toolbelt__item-input-button,
 .gds-corner-content__button,
 .gds-circular-button,
 a.gds-circular-button,
@@ -316,8 +315,7 @@ a.gds-circular-button,
 }
 
 // Button-capped inputs
-.gds-button--button-cap,
-.gds-toolbelt__item-input-button {
+.gds-button--button-cap {
     flex-basis: auto;
     margin-bottom: 0;
     border-top-left-radius: 0;
@@ -787,7 +785,6 @@ a.gds-circular-button--default,
 }
 
 .gds-button--dark,
-.gds-toolbelt__item-input-button,
 .gds-circular-button--dark,
 .gds-button--dark-toggle,
 .gds-circular-button--dark-toggle,

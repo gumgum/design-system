@@ -14,7 +14,6 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts/';
 @import 'variables/_button';
 @import 'variables/_table';
 @import 'variables/_z-index';
-@import 'variables/_slide-nav';
 @import 'variables/_mixins';
 @import 'variables/_drop-shadows';
 @import 'variables/_input';
@@ -77,7 +76,6 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts/';
 @import 'molecules/corner-content';
 @import 'molecules/table-of-contents';
 @import 'molecules/keyboard-shortcuts';
-@import 'molecules/timeline';
 @import 'molecules/landing-pad';
 @import 'molecules/balloon';
 @import 'molecules/search-select';
@@ -86,10 +84,7 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts/';
 @import 'organisms/alert';
 @import 'organisms/page-header';
 @import 'organisms/spa-header';
-@import 'organisms/slide-nav';
 @import 'organisms/account-modal';
-@import 'organisms/ribbon';
-@import 'organisms/toolbelt';
 @import 'organisms/search';
 
 // Pages
