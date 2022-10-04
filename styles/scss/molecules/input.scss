@@ -1,251 +1,249 @@
-@use "sass:math";
+@use 'sass:math';
 
 @mixin defaultShadows($borderColor, $dropShadow, $focusGlow) {
-  box-shadow: inset 0 0 0 0 $borderColor,
-    // Bottom Cap
-    inset 0 0 0 1px $borderColor,
-    // Other Caps
-    0 0 0px 0px rgba($focusGlow, 0),
-    // Focus Ring
-    0 0 0px 0 rgba($dropShadow, 0); // Drop Shadow
+    box-shadow: inset 0 0 0 0 $borderColor,
+        // Bottom Cap
+        inset 0 0 0 1px $borderColor,
+        // Other Caps
+        0 0 0px 0px rgba($focusGlow, 0),
+        // Focus Ring
+        0 0 0px 0 rgba($dropShadow, 0); // Drop Shadow
 }
 @mixin hoverShadows($borderColor, $dropShadow, $focusGlow) {
-  box-shadow: inset 0 0 0 0 $borderColor,
-    // Bottom Cap
-    inset 0 0 0 1px $borderColor,
-    // Other Caps
-    0 0 0px 1px rgba($focusGlow, 0),
-    // Focus Ring
-    0 0 0 0 rgba($dropShadow, 0.2); // Drop Shadow
+    box-shadow: inset 0 0 0 0 $borderColor,
+        // Bottom Cap
+        inset 0 0 0 1px $borderColor,
+        // Other Caps
+        0 0 0px 1px rgba($focusGlow, 0),
+        // Focus Ring
+        0 0 0 0 rgba($dropShadow, 0.2); // Drop Shadow
 }
 @mixin hoverFocusShadows($borderColor, $dropShadow, $focusGlow) {
-  box-shadow: inset 0 0 0 0 $borderColor,
-    // Bottom Cap
-    inset 0 0 0 1px $borderColor,
-    // Other Caps
-    0 0 1px 1px rgba($focusGlow, 1),
-    // Focus Ring
-    0 0 0 2 rgba($borderColor, 0.6); // Drop Shadow
+    box-shadow: inset 0 0 0 0 $borderColor,
+        // Bottom Cap
+        inset 0 0 0 1px $borderColor,
+        // Other Caps
+        0 0 1px 1px rgba($focusGlow, 1),
+        // Focus Ring
+        0 0 0 2 rgba($borderColor, 0.6); // Drop Shadow
 }
 @mixin activeShadows($borderColor, $dropShadow, $focusGlow) {
-  box-shadow: inset 0 0 0 0 $borderColor,
-    // Bottom Cap
-    inset 0 0 0 1px $borderColor,
-    // Other Caps
-    0 0 0px 1px rgba($focusGlow, 0),
-    // Focus Ring
-    0 0 0 2px rgba($borderColor, 0.4); // Drop Shadow
+    box-shadow: inset 0 0 0 0 $borderColor,
+        // Bottom Cap
+        inset 0 0 0 1px $borderColor,
+        // Other Caps
+        0 0 0px 1px rgba($focusGlow, 0),
+        // Focus Ring
+        0 0 0 2px rgba($borderColor, 0.4); // Drop Shadow
 }
 @mixin focusShadows($borderColor, $dropShadow, $focusGlow) {
-  box-shadow: inset 0 0 0 0 $borderColor,
-    // Bottom Cap
-    inset 0 0 0 1px $borderColor,
-    // Other Caps
-    0 0 0 0 rgba($focusGlow, 1),
-    // Focus Ring
-    0 0 0 2px rgba($borderColor, 0.4); // Drop Shadow
+    box-shadow: inset 0 0 0 0 $borderColor,
+        // Bottom Cap
+        inset 0 0 0 1px $borderColor,
+        // Other Caps
+        0 0 0 0 rgba($focusGlow, 1),
+        // Focus Ring
+        0 0 0 2px rgba($borderColor, 0.4); // Drop Shadow
 }
 
 .gds-form-fieldset {
-  border: none;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+    border: none;
+    margin: 0;
+    outline: 0;
+    padding: 0;
 }
 
 // Form groups
 .gds-form-group {
-  color: $gg-dark-4;
-  border-color: $gg-light-3;
-  border-bottom-color: $gg-light-3;
-  @include transition-ease-out(all, 100ms);
+    color: $gg-dark-4;
+    border-color: $gg-light-3;
+    border-bottom-color: $gg-light-3;
+    @include transition-ease-out(all, 100ms);
 }
 
 .gds-form-group--dark {
-  color: white;
-  border-color: $gg-dark-4;
-  border-bottom-color: $gg-dark-4;
+    color: white;
+    border-color: $gg-dark-4;
+    border-bottom-color: $gg-dark-4;
 }
 
 .gds-form-group--inverse {
-  color: white;
-  border-color: white;
-  border-bottom: white;
+    color: white;
+    border-color: white;
+    border-bottom: white;
 }
 
 .gds-form-group--horizontal {
-  margin-right: -($grid-gutter-width * 0.5);
-  margin-left: -($grid-gutter-width * 0.5);
+    margin-right: -($grid-gutter-width * 0.5);
+    margin-left: -($grid-gutter-width * 0.5);
 
-  &:after {
-    content: " ";
-    display: table;
-    clear: both;
-  }
+    &:after {
+        content: ' ';
+        display: table;
+        clear: both;
+    }
 
-  &:before {
-    content: " ";
-    display: table;
-  }
+    &:before {
+        content: ' ';
+        display: table;
+    }
 }
 
 // End of contextual states
 .gds-form-group--inline {
-  display: inline-block;
+    display: inline-block;
 }
 
 // Input labels
 .gds-form-group__label,
 .gds-form-group__range-input-label {
-  font-family: $pri-font-bold;
-  font-weight: $font-weight-bolder;
-  font-size: $font-size-minus-3;
-  letter-spacing: 0.5px;
-  color: $gg-dark-5;
-  display: inline-block;
-  max-width: 100%;
-  margin-bottom: ($unit * 0.25);
-  text-transform: uppercase;
-  @include transition-back(all, 250ms);
+    font-family: $pri-font-bold;
+    font-weight: $font-weight-bolder;
+    font-size: $font-size-minus-3;
+    letter-spacing: 0.5px;
+    color: $gg-dark-5;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: ($unit * 0.25);
+    text-transform: uppercase;
+    @include transition-back(all, 250ms);
 }
 
 .gds-form-group__range-input-label {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 .gds-form-group__range-input-label--active {
-  opacity: 1;
+    opacity: 1;
 }
 
 .gds-form-group__label--dark,
 .gds-form-group__range-input-label--dark {
-  color: $gg-light-4;
+    color: $gg-light-4;
 }
 
 .gds-form-group__label--inline {
-  display: inline-block;
+    display: inline-block;
 }
 
 .gds-form-group__label--horizontal {
-  text-align: right;
-  padding-top: ($unit * 0.5);
+    text-align: right;
+    padding-top: ($unit * 0.5);
 }
 
 .gds-form-group__label--floated {
-  top: ($unit * 2.5);
-  left: $unit;
-  color: $gg-light-2;
-  z-index: $z-index-1;
+    top: ($unit * 2.5);
+    left: $unit;
+    color: $gg-light-2;
+    z-index: $z-index-1;
 }
 
 .gds-form-group--active .gds-form-group__label--floated {
-  top: 0;
-  left: 0;
-  color: $gg-dark-4;
+    top: 0;
+    left: 0;
+    color: $gg-dark-4;
 }
 
 // Help text
 .gds-form-group__text-help,
 .gds-search-select__text-help {
-  background-color: $gg-light-3;
-  border-bottom-left-radius: $input-border-radius;
-  border-bottom-right-radius: $input-border-radius;
-  color: white;
-  display: block;
-  font-family: $pri-font-regular;
-  font-size: $font-size-minus-3;
-  padding: ($unit * 0.125) ($unit * 0.5);
-  position: relative;
-  top: -($cap-size * 1.5);
-  @include transition-ease-out(all, 250ms);
+    background-color: $gg-light-3;
+    border-bottom-left-radius: $input-border-radius;
+    border-bottom-right-radius: $input-border-radius;
+    color: white;
+    display: block;
+    font-family: $pri-font-regular;
+    font-size: $font-size-minus-3;
+    padding: ($unit * 0.125) ($unit * 0.5);
+    position: relative;
+    top: -($cap-size * 1.5);
+    @include transition-ease-out(all, 250ms);
 }
 
 // Input groups
 .gds-form-group__input-group {
-  position: relative;
-  display: flex;
-  border-collapse: separate;
-  color: inherit;
-  border-color: inherit;
-  width: 100%;
-  border-bottom-color: inherit;
+    position: relative;
+    display: flex;
+    border-collapse: separate;
+    color: inherit;
+    border-color: inherit;
+    width: 100%;
+    border-bottom-color: inherit;
 }
 
 .gds-form-group__input-group--inline {
-  width: auto;
+    width: auto;
 }
 
 .gds-form-group__input-group-addon,
-.gds-form-group__date-group-addon,
-.gds-anim-timeline__button--remove {
-  flex-basis: auto;
-  margin-bottom: 0;
-  @include transition-ease-out(all, 100ms);
+.gds-form-group__date-group-addon {
+    flex-basis: auto;
+    margin-bottom: 0;
+    @include transition-ease-out(all, 100ms);
 
-  &:first-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-right: none;
-  }
+    &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: none;
+    }
 
-  &:last-child {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-left: none;
-  }
+    &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left: none;
+    }
 }
 
 .gds-form-group__input-group-cap {
-  color: white;
-  height: 100%;
-  padding: 0.72 * $unit $unit;
-  background-color: $gg-light-3;
-  border-radius: $input-border-radius;
-  box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-4;
+    color: white;
+    height: 100%;
+    padding: 0.72 * $unit $unit;
+    background-color: $gg-light-3;
+    border-radius: $input-border-radius;
+    box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-4;
 
-  &:first-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-right: none;
-  }
+    &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: none;
+    }
 
-  &:last-child {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-left: none;
-  }
+    &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left: none;
+    }
 }
 
 .gds-form-group__input-group-cap--sm {
-  padding: 0.5 * $unit 0.75 * $unit;
+    padding: 0.5 * $unit 0.75 * $unit;
 }
 
 .gds-form-group__input-group-cap--xs {
-  padding: 0.25 * $unit 0.5 * $unit;
+    padding: 0.25 * $unit 0.5 * $unit;
 }
 
 .gds-form-group__input-group-addon--lg {
-  height: $input-height-lg;
-  font-size: $font-size-plus-2;
+    height: $input-height-lg;
+    font-size: $font-size-plus-2;
 }
 
 .gds-form-group__input-group-addon--sm {
-  height: $input-height-sm;
-  font-size: $font-size-minus-2;
+    height: $input-height-sm;
+    font-size: $font-size-minus-2;
 }
 
 .gds-form-group__input-group-addon--xs {
-  height: $input-height-xs;
-  font-size: $font-size-minus-3;
+    height: $input-height-xs;
+    font-size: $font-size-minus-3;
 }
 
 .gds-form-group--active .gds-form-group__input-group-addon {
-  border-color: $primaryColor;
+    border-color: $primaryColor;
 }
 
 // Common input styles
 .gds-form-group__input-common,
 .gds-form-group__select-input,
-.gds-anim-timeline__select-input,
 .gds-search-select__input,
 .gds-form-group__select-multiple[multiple],
 .gds-form-group__range-input,
@@ -261,19 +259,19 @@
 .ReactTable .-pagination input,
 .ReactTable .-pagination select,
 .DayPicker-Caption select {
-  display: block;
-  width: 100%;
-  padding: $input-padding-md;
-  font-size: $font-size;
-  line-height: 1;
-  border-radius: $input-border-radius;
-  letter-spacing: 0.5px;
-  color: $gg-dark-4;
+    display: block;
+    width: 100%;
+    padding: $input-padding-md;
+    font-size: $font-size;
+    line-height: 1;
+    border-radius: $input-border-radius;
+    letter-spacing: 0.5px;
+    color: $gg-dark-4;
 }
 
 // Button inputs
 .gds-form-group__button-input {
-  transform: translateY(0px);
+    transform: translateY(0px);
 }
 
 // Text inputs
@@ -288,82 +286,82 @@
 .gds-search-select__input--sm,
 .gds-form-group__text-input--lg,
 .ReactTable .-pagination input {
-  background-size: auto 75%;
-  color: inherit;
-  border: none;
-  border-bottom-color: inherit;
-  @include defaultShadows($gg-light-3, black, $primaryLight2Color);
-  @include transition-ease-out(all, 100ms);
-  height: $input-height-md;
+    background-size: auto 75%;
+    color: inherit;
+    border: none;
+    border-bottom-color: inherit;
+    @include defaultShadows($gg-light-3, black, $primaryLight2Color);
+    @include transition-ease-out(all, 100ms);
+    height: $input-height-md;
 
-  &::-webkit-input-placeholder {
-    color: $gg-light-2;
-  }
-
-  &:-moz-placeholder {
-    color: $gg-light-2;
-  }
-
-  &::-moz-placeholder {
-    color: $gg-light-2;
-  }
-
-  &:-ms-input-placeholder {
-    color: $gg-light-2;
-  }
-
-  &:hover {
-    border-color: $primaryColor;
-    color: $gg-dark-4;
-    @include hoverShadows($primaryColor, black, $primaryLight2Color);
-    & + .gds-form-group__text-help {
-      background-color: $primaryColor;
+    &::-webkit-input-placeholder {
+        color: $gg-light-2;
     }
-  }
-  &:hover:focus {
-    @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
-  }
-  &:focus {
-    color: $gg-dark-4;
-    @include focusShadows($primaryColor, black, $primaryLight2Color);
-    outline: none;
 
-    & + .gds-form-group__text-help {
-      background-color: $primaryColor;
+    &:-moz-placeholder {
+        color: $gg-light-2;
     }
-  }
+
+    &::-moz-placeholder {
+        color: $gg-light-2;
+    }
+
+    &:-ms-input-placeholder {
+        color: $gg-light-2;
+    }
+
+    &:hover {
+        border-color: $primaryColor;
+        color: $gg-dark-4;
+        @include hoverShadows($primaryColor, black, $primaryLight2Color);
+        & + .gds-form-group__text-help {
+            background-color: $primaryColor;
+        }
+    }
+    &:hover:focus {
+        @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
+    }
+    &:focus {
+        color: $gg-dark-4;
+        @include focusShadows($primaryColor, black, $primaryLight2Color);
+        outline: none;
+
+        & + .gds-form-group__text-help {
+            background-color: $primaryColor;
+        }
+    }
 }
 
 .gds-form-group__text-input--dark,
 .gds-form-group__text-area-input--dark,
 .gds-toolbelt__item-input {
-  background-color: mix($gg-dark-3, white, 90%);
-  @include defaultShadows($gg-gray, black, $primaryLight2Color);
+    background-color: mix($gg-dark-3, white, 90%);
+    @include defaultShadows($gg-gray, black, $primaryLight2Color);
 
-  &::-webkit-input-placeholder {
-    color: $gg-gray;
-  }
+    &::-webkit-input-placeholder {
+        color: $gg-gray;
+    }
 
-  &:-moz-placeholder {
-    color: $gg-gray;
-  }
+    &:-moz-placeholder {
+        color: $gg-gray;
+    }
 
-  &::-moz-placeholder {
-    color: $gg-gray;
-  }
+    &::-moz-placeholder {
+        color: $gg-gray;
+    }
 
-  &:-ms-input-placeholder {
-    color: $gg-gray;
-  }
+    &:-ms-input-placeholder {
+        color: $gg-gray;
+    }
 
-  &:hover {
-    color: white;
-  }
-  &:hover:focus,
-  &:focus {
-    color: $gg-dark-4;
-    background-color: white;
-  }
+    &:hover {
+        color: white;
+    }
+    &:hover:focus,
+    &:focus {
+        color: $gg-dark-4;
+        background-color: white;
+    }
 }
 
 //search text input
@@ -371,595 +369,594 @@
 .gds-form-group__text-input-icon--xs,
 .gds-form-group__text-input-icon--sm,
 .gds-form-group__text-input-icon--lg {
-  position: absolute;
-  top: $unit;
-  right: $unit;
-  left: auto;
-  z-index: 1;
-  font-size: $font-size-plus-1;
-  opacity: 0.5;
-  @include transition-ease-out(all, 300ms);
+    position: absolute;
+    top: $unit;
+    right: $unit;
+    left: auto;
+    z-index: 1;
+    font-size: $font-size-plus-1;
+    opacity: 0.5;
+    @include transition-ease-out(all, 300ms);
 }
 
 .gds-form-group__text-input-icon--xs {
-  top: math.div($unit, 1.7);
-  font-size: $font-size-minus-2;
+    top: math.div($unit, 1.7);
+    font-size: $font-size-minus-2;
 }
 
 .gds-form-group__text-input-icon--sm {
-  top: math.div($unit, 1.5);
-  font-size: $font-size;
+    top: math.div($unit, 1.5);
+    font-size: $font-size;
 }
 
 .gds-form-group__text-input-icon--lg {
-  top: $unit * 1.5;
-  font-size: $font-size-plus-3;
+    top: $unit * 1.5;
+    font-size: $font-size-plus-3;
 }
 
 .gds-form-group__text-input-icon--right {
-  right: $unit;
-  left: auto;
+    right: $unit;
+    left: auto;
 }
 
 .gds-form-group__text-input-icon--left {
-  left: $unit;
-  right: auto;
+    left: $unit;
+    right: auto;
 }
 
 .gds-form-group__text-input:placeholder-shown
-  + .gds-form-group__text-input-icon {
-  opacity: 0.5;
+    + .gds-form-group__text-input-icon {
+    opacity: 0.5;
 }
 
 // Xtra small text inputs
 .gds-form-group__text-input--xs,
 .gds-search-select__input--xs {
-  height: $input-height-xs;
-  font-size: $font-size-minus-3;
-  padding: $input-padding-xs;
+    height: $input-height-xs;
+    font-size: $font-size-minus-3;
+    padding: $input-padding-xs;
 }
 
 // Small text inputs
 .gds-form-group__text-input--sm,
 .gds-search-select__input--sm {
-  height: $input-height-sm;
-  font-size: $font-size-minus-2;
-  padding: $input-padding-sm;
+    height: $input-height-sm;
+    font-size: $font-size-minus-2;
+    padding: $input-padding-sm;
 }
 
 // Large text inputs
 .gds-form-group__text-input--lg,
 .gds-search-select__input--lg {
-  height: $input-height-lg;
-  font-size: $font-size-plus-2;
-  padding: $input-padding-lg;
+    height: $input-height-lg;
+    font-size: $font-size-plus-2;
+    padding: $input-padding-lg;
 }
 
 // Remove border-radius on left edge
 .gds-form-group__text-input--left-edge {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 // Remove border-radius on right edge
 .gds-form-group__text-input--right-edge {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 //Deprecate this eventually
 .gds-form-group__text-input--button-cap {
-  display: flex;
+    display: flex;
 }
 
 .gds-form-group__text-input--inline {
-  display: inline-block;
-  width: auto;
+    display: inline-block;
+    width: auto;
 }
 
 .gds-form-group__text-input--no-border {
-  border-left: none;
-  border-right: none;
-  border-top: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
 }
 
 .gds-form-group__text-input--addon {
-  // border-radius: 0;
+    // border-radius: 0;
 
-  &:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-left: none;
-  }
-  &:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-right: none;
-  }
+    &:not(:first-child) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left: none;
+    }
+    &:not(:last-child) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: none;
+    }
 }
 
 .gds-form-group__text-input--addon-inline {
-  display: table-cell;
+    display: table-cell;
 }
 
 // Date inputs
 .gds-form-group__date-group {
-  padding: 0;
-  background-color: white;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+    padding: 0;
+    background-color: white;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 
-  // FIX DATE
+    // FIX DATE
 
-  @include defaultShadows($gg-light-3, black, $primaryLight2Color);
+    @include defaultShadows($gg-light-3, black, $primaryLight2Color);
 
-  &:hover {
-    border-color: $primaryColor;
-    color: $gg-dark-4;
-    @include hoverShadows($primaryColor, black, $primaryLight2Color);
-  }
-  &:hover:focus {
-    @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
-  }
-  &:focus {
-    color: $gg-dark-4;
-    @include focusShadows($primaryColor, black, $primaryLight2Color);
-    outline: none;
-  }
+    &:hover {
+        border-color: $primaryColor;
+        color: $gg-dark-4;
+        @include hoverShadows($primaryColor, black, $primaryLight2Color);
+    }
+    &:hover:focus {
+        @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
+    }
+    &:focus {
+        color: $gg-dark-4;
+        @include focusShadows($primaryColor, black, $primaryLight2Color);
+        outline: none;
+    }
 }
 
 .gds-form-group__date-group--lg {
-  height: $input-height-lg;
+    height: $input-height-lg;
 }
 
 .gds-form-group__date-group--sm {
-  height: $input-height-sm;
+    height: $input-height-sm;
 }
 
 .gds-form-group__date-group--xs {
-  height: $input-height-xs;
+    height: $input-height-xs;
 }
 
 .gds-form-group__date-input {
-  height: $input-height-md;
-  width: calc((100% / 3) - #{($unit * math.div(2, 3))});
-  border: none;
-  background: transparent;
-  padding: $unit ($unit * 0.5);
-  text-align: center;
-  color: inherit;
-  font-size: $font-size;
-  line-height: 1;
+    height: $input-height-md;
+    width: calc((100% / 3) - #{($unit * math.div(2, 3))});
+    border: none;
+    background: transparent;
+    padding: $unit ($unit * 0.5);
+    text-align: center;
+    color: inherit;
+    font-size: $font-size;
+    line-height: 1;
 
-  &:focus {
-    outline: none;
-  }
+    &:focus {
+        outline: none;
+    }
 }
 
 // Large text inputs
 .gds-form-group__date-input--lg,
 .gds-button--button-cap-lg {
-  height: $input-height-lg;
-  font-size: $font-size-plus-2;
-  padding: $input-padding-lg;
+    height: $input-height-lg;
+    font-size: $font-size-plus-2;
+    padding: $input-padding-lg;
 }
 
 .gds-form-group__date-input--sm,
 .gds-button--button-cap-sm {
-  height: $input-height-sm;
-  font-size: $font-size-minus-2;
-  padding: $input-padding-sm;
+    height: $input-height-sm;
+    font-size: $font-size-minus-2;
+    padding: $input-padding-sm;
 }
 
 .gds-form-group__date-input--xs,
 .gds-button--button-cap-xs {
-  height: $input-height-xs;
-  font-size: $font-size-minus-3;
-  padding: $input-padding-xs;
+    height: $input-height-xs;
+    font-size: $font-size-minus-3;
+    padding: $input-padding-xs;
 }
 
 .gds-form-group__date-group-addon {
-  background-color: $primaryColor;
-  padding: 0;
+    background-color: $primaryColor;
+    padding: 0;
 }
 
 .gds-form-group__date-group-button {
-  padding: $unit;
-  display: block;
-  height: $input-height-md;
-  margin-bottom: 0;
-  margin-top: 0;
-  width: 100%;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-
-  &:before {
+    padding: $unit;
+    display: block;
+    height: $input-height-md;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+    border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-  }
 
-  &:active {
-    top: 0;
-  }
+    &:before {
+        border-bottom-left-radius: 0;
+    }
+
+    &:active {
+        top: 0;
+    }
 }
 
 .gds-form-group__date-group-button--sm {
-  height: $input-height-sm;
-  padding: $input-padding-sm;
+    height: $input-height-sm;
+    padding: $input-padding-sm;
 }
 
 .gds-form-group__date-group-button--lg {
-  height: $input-height-lg;
+    height: $input-height-lg;
 }
 
 .gds-form-group__date-input--inline {
-  max-width: ($unit * 4);
+    max-width: ($unit * 4);
 }
 
 .gds-form-group__date-divider {
-  width: $unit;
-  color: $gg-light-2;
-  font-size: $unit;
+    width: $unit;
+    color: $gg-light-2;
+    font-size: $unit;
 }
 
 .gds-form-group__date-divider--sm {
-  font-size: $font-size-minus-2;
+    font-size: $font-size-minus-2;
 }
 
 .gds-form-group__date-divider--lg {
-  font-size: $font-size-plus-2;
+    font-size: $font-size-plus-2;
 }
 
 .gds-form-group--active .gds-form-group__date-group {
-  color: $gg-dark-4;
-  border-color: $primaryColor;
-  box-shadow: inset 0 #{-$cap-size} 0 0 $primaryColor,
-    inset 0 0 0 1px rgba(0, 0, 0, 0.1) !important;
-  outline: none;
+    color: $gg-dark-4;
+    border-color: $primaryColor;
+    box-shadow: inset 0 #{-$cap-size} 0 0 $primaryColor,
+        inset 0 0 0 1px rgba(0, 0, 0, 0.1) !important;
+    outline: none;
 
-  & + .gds-form-group__text-help {
-    background-color: $primaryColor;
-  }
+    & + .gds-form-group__text-help {
+        background-color: $primaryColor;
+    }
 }
 
 // Text areas
 .gds-form-group__text-area-input {
-  background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($gg-light-3)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E");
-  background-position: bottom right;
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  height: auto;
+    background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($gg-light-3)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E');
+    background-position: bottom right;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    height: auto;
 
-  &:hover {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryLight3Color)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E");
-  }
+    &:hover {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryLight3Color)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E');
+    }
 
-  &:focus {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryColor)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E");
-  }
+    &:focus {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryColor)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E');
+    }
 }
 
 .gds-form-group__text-area-input--dark {
-  background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($gg-dark-4)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E");
+    background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($gg-dark-4)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E');
 }
 
 // Large textarea inputs
 .gds-form-group__text-area-input--lg {
-  height: $input-height-lg;
-  font-size: $font-size-plus-2;
-  padding: $input-padding-lg;
+    height: $input-height-lg;
+    font-size: $font-size-plus-2;
+    padding: $input-padding-lg;
 }
 
 // Small textarea inputs
 .gds-form-group__text-area-input--sm {
-  height: $input-height-sm;
-  font-size: $font-size-minus-2;
-  padding: $input-padding-sm;
+    height: $input-height-sm;
+    font-size: $font-size-minus-2;
+    padding: $input-padding-sm;
 }
 
 // Xtra Small textarea inputs
 .gds-form-group__text-area-input--xs {
-  height: $input-height-xs;
-  font-size: $font-size-minus-3;
-  padding: $input-padding-xs;
+    height: $input-height-xs;
+    font-size: $font-size-minus-3;
+    padding: $input-padding-xs;
 }
 
 .gds-form-group__text-area-input--resize-v {
-  resize: vertical;
-  overflow: auto;
+    resize: vertical;
+    overflow: auto;
 }
 
 .gds-form-group__text-area-input--resize-h {
-  resize: horizontal;
-  overflow: auto;
+    resize: horizontal;
+    overflow: auto;
 }
 
 .gds-form-group__text-area-input--no-resize {
-  resize: none;
+    resize: none;
 }
 
 // Select inputs
 .gds-form-group__select-input,
-.gds-anim-timeline__select-input,
 .DayPicker-Caption select,
 .ReactTable .-pagination select,
 .gds-search-select__input,
 .gds-form-group__select-multiple[multiple] {
-  height: $input-height-md;
-  top: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  vertical-align: top;
-  line-height: 1.2;
-  background-color: white;
-  background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($gg-light-4)}%3B%22/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right $unit center;
-  background-size: auto 15%;
-  padding-right: ($unit * 2.5);
-  outline: none;
-  border: none;
-  @include defaultShadows($gg-light-3, black, $primaryLight2Color);
-  @include transition-ease-out(all, 100ms);
+    height: $input-height-md;
+    top: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    vertical-align: top;
+    line-height: 1.2;
+    background-color: white;
+    background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($gg-light-4)}%3B%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right $unit center;
+    background-size: auto 15%;
+    padding-right: ($unit * 2.5);
+    outline: none;
+    border: none;
+    @include defaultShadows($gg-light-3, black, $primaryLight2Color);
+    @include transition-ease-out(all, 100ms);
 
-  &:focus {
-    @include focusShadows($primaryColor, black, $primaryLight2Color);
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
-  }
-  &:hover {
-    @include hoverShadows($primaryColor, black, $primaryLight2Color);
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
-  }
-  &:hover:focus {
-    @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
-  }
+    &:focus {
+        @include focusShadows($primaryColor, black, $primaryLight2Color);
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
+    }
+    &:hover {
+        @include hoverShadows($primaryColor, black, $primaryLight2Color);
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
+    }
+    &:hover:focus {
+        @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
+    }
 }
 
 .gds-form-group__select-input--dark,
 .gds-search-select__input--dark {
-  background-color: mix($gg-dark-3, white, 90%);
-  color: white;
-  background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A#FFFFFF%3B%22/%3E%3C/svg%3E");
-  @include defaultShadows($gg-gray, black, $primaryLight2Color);
-  &:hover {
-    color: white;
-  }
-  &:hover:focus,
-  &:focus {
-    color: white;
     background-color: mix($gg-dark-3, white, 90%);
-  }
+    color: white;
+    background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A#FFFFFF%3B%22/%3E%3C/svg%3E');
+    @include defaultShadows($gg-gray, black, $primaryLight2Color);
+    &:hover {
+        color: white;
+    }
+    &:hover:focus,
+    &:focus {
+        color: white;
+        background-color: mix($gg-dark-3, white, 90%);
+    }
 }
 
 .gds-form-group__select-multiple[multiple] {
-  height: auto;
-  background-image: none !important;
-  padding: 0;
+    height: auto;
+    background-image: none !important;
+    padding: 0;
 }
 
 .gds-form-group__select-multiple-option {
-  padding: ($unit * 0.25) $unit;
-  border-width: 0;
-  border: none !important;
-  outline: none;
+    padding: ($unit * 0.25) $unit;
+    border-width: 0;
+    border: none !important;
+    outline: none;
 
-  &:checked {
-    background-color: $primaryColor !important;
-    background: $primaryColor
-      linear-gradient(0deg, $primaryColor 0%, $primaryColor 100%);
-    color: #ffffff !important;
-  }
+    &:checked {
+        background-color: $primaryColor !important;
+        background: $primaryColor
+            linear-gradient(0deg, $primaryColor 0%, $primaryColor 100%);
+        color: #ffffff !important;
+    }
 }
 
 .gds-form-group__text-input--button-cap {
-  display: flex;
+    display: flex;
 }
 
 .gds-form-group__select-input--lg,
 .gds-search-select__input--lg {
-  height: $input-height-lg;
-  font-size: $font-size-plus-2;
-  padding: $input-padding-lg;
+    height: $input-height-lg;
+    font-size: $font-size-plus-2;
+    padding: $input-padding-lg;
 }
 
 .gds-form-group__select-input--sm,
 .gds-search-select__input--sm {
-  height: $input-height-sm;
-  font-size: $font-size-minus-2;
-  padding: $input-padding-sm;
-  background-position: right ($unit * 0.75) center;
+    height: $input-height-sm;
+    font-size: $font-size-minus-2;
+    padding: $input-padding-sm;
+    background-position: right ($unit * 0.75) center;
 }
 
 .gds-form-group__select-input--xs,
 .gds-search-select__input--xs {
-  height: $input-height-xs;
-  font-size: $font-size-minus-3;
-  padding: $input-padding-xs;
-  background-position: right ($unit * 0.4) center;
+    height: $input-height-xs;
+    font-size: $font-size-minus-3;
+    padding: $input-padding-xs;
+    background-position: right ($unit * 0.4) center;
 }
 
 .gds-form-group__select-input--button-cap {
-  display: flex;
+    display: flex;
 }
 
 // Remove border-radius on right edge
 .gds-form-group__select-input--right-edge {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .gds-form-group__select-input--left-edge {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .gds-form-group__color-input {
-  display: block;
+    display: block;
 }
 
 .gds-form-group__select-input--inline {
-  display: inline-block;
-  width: auto;
-  min-width: ($unit * 5);
-  margin-top: -($unit * 0.125);
-  margin-left: ($unit * 0.25);
+    display: inline-block;
+    width: auto;
+    min-width: ($unit * 5);
+    margin-top: -($unit * 0.125);
+    margin-left: ($unit * 0.25);
 }
 
 .gds-form-group__select-input--no-border {
-  border: none;
+    border: none;
 }
 
 .gds-form-group__select-input--primary {
-  @include defaultShadows($primaryColor, black, $primaryLight2Color);
-  background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
-  &:hover {
-    @include hoverShadows($primaryColor, black, $primaryLight2Color);
-  }
+    @include defaultShadows($primaryColor, black, $primaryLight2Color);
+    background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
+    &:hover {
+        @include hoverShadows($primaryColor, black, $primaryLight2Color);
+    }
 
-  &:focus {
-    @include focusShadows($primaryColor, black, $primaryLight2Color);
-  }
+    &:focus {
+        @include focusShadows($primaryColor, black, $primaryLight2Color);
+    }
 }
 
 .gds-form-group__select-input--secondary {
-  background-color: $gg-light-2;
-  border-color: $gg-light-4;
-  box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-4;
-  color: white;
+    background-color: $gg-light-2;
+    border-color: $gg-light-4;
+    box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-4;
+    color: white;
 
-  &:hover {
-    box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-4,
-      inset 0 0 0 1px rgba($gg-light-4, 1);
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash(#ffffff)}%3B%22/%3E%3C/svg%3E");
-  }
+    &:hover {
+        box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-4,
+            inset 0 0 0 1px rgba($gg-light-4, 1);
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash(#ffffff)}%3B%22/%3E%3C/svg%3E');
+    }
 
-  &:focus {
-    box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-4,
-      inset 0 0 0 1px rgba($gg-light-4, 1);
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash(#ffffff)}%3B%22/%3E%3C/svg%3E");
-  }
+    &:focus {
+        box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-4,
+            inset 0 0 0 1px rgba($gg-light-4, 1);
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash(#ffffff)}%3B%22/%3E%3C/svg%3E');
+    }
 }
 
 // Checkboxes
 .gds-form-group__checkbox--inverse {
-  .gds-form-group__checkbox-label:hover,
-  .gds-search-select__checkbox:hover {
-    .gds-form-group__checkbox-indicator,
-    .gds-search-select__checkbox-indicator {
-      border-color: $primaryLight4Color;
+    .gds-form-group__checkbox-label:hover,
+    .gds-search-select__checkbox:hover {
+        .gds-form-group__checkbox-indicator,
+        .gds-search-select__checkbox-indicator {
+            border-color: $primaryLight4Color;
+        }
     }
-  }
 }
 
 .gds-form-group__checkbox--sm {
-  .gds-form-group__checkbox-label,
-  .gds-search-select__checkbox {
-    font-size: $font-size-minus-2;
-  }
-  .gds-form-group__checkbox-indicator,
-  .gds-search-select__checkbox-indicator {
-    width: ($unit * 1);
-    height: ($unit * 1);
-    margin-right: 7px;
-    border-radius: 5px;
-  }
+    .gds-form-group__checkbox-label,
+    .gds-search-select__checkbox {
+        font-size: $font-size-minus-2;
+    }
+    .gds-form-group__checkbox-indicator,
+    .gds-search-select__checkbox-indicator {
+        width: ($unit * 1);
+        height: ($unit * 1);
+        margin-right: 7px;
+        border-radius: 5px;
+    }
 }
 
 .gds-form-group__checkbox--xs {
-  .gds-form-group__checkbox-label,
-  .gds-search-select__checkbox {
-    font-size: $font-size-minus-3;
-  }
-  .gds-form-group__checkbox-indicator,
-  .gds-search-select__checkbox-indicator {
-    width: ($unit * 0.9);
-    height: ($unit * 0.9);
-    margin-right: 6px;
-    border-radius: 4px;
-  }
+    .gds-form-group__checkbox-label,
+    .gds-search-select__checkbox {
+        font-size: $font-size-minus-3;
+    }
+    .gds-form-group__checkbox-indicator,
+    .gds-search-select__checkbox-indicator {
+        width: ($unit * 0.9);
+        height: ($unit * 0.9);
+        margin-right: 6px;
+        border-radius: 4px;
+    }
 }
 
 .gds-form-group__checkbox-label,
 .gds-search-select__checkbox {
-  display: inline-block;
-  cursor: pointer;
-  padding-right: ($unit * 0.5);
+    display: inline-block;
+    cursor: pointer;
+    padding-right: ($unit * 0.5);
 
-  &:hover .gds-form-group__checkbox-indicator,
-  &:hover .gds-search-select__checkbox-indicator {
-    border-color: $primaryLight2Color;
-  }
+    &:hover .gds-form-group__checkbox-indicator,
+    &:hover .gds-search-select__checkbox-indicator {
+        border-color: $primaryLight2Color;
+    }
 }
 
 .gds-form-group__checkbox-label--dark {
-  color: $gg-gray;
+    color: $gg-gray;
 }
 
 .gds-form-group__checkbox--inline {
-  display: inline-block;
+    display: inline-block;
 }
 
 .gds-form-group__checkbox-input,
 .gds-search-select__checkbox-input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
 
 .gds-form-group__checkbox-indicator,
 .gds-search-select__checkbox-indicator {
-  display: inline-block;
-  width: ($unit * 1.2);
-  height: ($unit * 1.2);
-  margin: -3px 8px 0 0;
-  vertical-align: middle;
-  background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23#{strip-hash($primaryColor)}%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-  pointer-events: none;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 0% 0%;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $gg-light-3;
-  border-bottom-width: $cap-size;
-  border-radius: $input-border-radius;
-  transform: scale(1);
-  opacity: 1;
-  @include transition-back(all, 100ms);
+    display: inline-block;
+    width: ($unit * 1.2);
+    height: ($unit * 1.2);
+    margin: -3px 8px 0 0;
+    vertical-align: middle;
+    background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23#{strip-hash($primaryColor)}%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+    pointer-events: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 0% 0%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $gg-light-3;
+    border-bottom-width: $cap-size;
+    border-radius: $input-border-radius;
+    transform: scale(1);
+    opacity: 1;
+    @include transition-back(all, 100ms);
 }
 
 .gds-form-group__checkbox-indicator--dark,
 .gds-search-select__checkbox-indicator--dark {
-  border-color: $gg-light-4;
+    border-color: $gg-light-4;
 }
 
 .gds-form-group__checkbox-indicator--inverse,
 .gds-search-select__checkbox-indicator--inverse {
-  background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23#{strip-hash(#ffffff)}%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+    background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23#{strip-hash(#ffffff)}%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
 }
 
 .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
 .gds-search-select__checkbox-input:checked
-  + .gds-form-group__checkbox-indicator,
+    + .gds-form-group__checkbox-indicator,
 .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
 .gds-search-select__checkbox-input:checked
-  + .gds-search-select__checkbox-indicator {
-  border-color: $primaryColor;
-  background-position: center center;
-  background-size: 100% 100%;
+    + .gds-search-select__checkbox-indicator {
+    border-color: $primaryColor;
+    background-position: center center;
+    background-size: 100% 100%;
 }
 
 .gds-form-group__checkbox-input:checked
-  + .gds-form-group__checkbox-indicator--inverse,
+    + .gds-form-group__checkbox-indicator--inverse,
 .gds-search-select__checkbox-input:checked
-  + .gds-form-group__checkbox-indicator--inverse,
+    + .gds-form-group__checkbox-indicator--inverse,
 .gds-form-group__checkbox-input:checked
-  + .gds-search-select__checkbox-indicator--inverse,
+    + .gds-search-select__checkbox-indicator--inverse,
 .gds-search-select__checkbox-input:checked
-  + .gds-search-select__checkbox-indicator--inverse {
-  border-color: white;
+    + .gds-search-select__checkbox-indicator--inverse {
+    border-color: white;
 }
 
 // Checkbox focus effect
@@ -967,136 +964,136 @@
 .gds-search-select__checkbox-input:focus + .gds-form-group__checkbox-indicator,
 .gds-form-group__checkbox-input:focus + .gds-search-select__checkbox-indicator,
 .gds-search-select__checkbox-input:focus
-  + .gds-search-select__checkbox-indicator {
-  box-shadow: $input-focus-effect;
+    + .gds-search-select__checkbox-indicator {
+    box-shadow: $input-focus-effect;
 }
 
 // Radio buttons
 .gds-form-group__radio--sm {
-  .gds-form-group__radio-label {
-    font-size: $font-size-minus-2;
-  }
-  .gds-form-group__radio-indicator {
-    width: ($unit * 1);
-    height: ($unit * 1);
-    margin-right: 7px;
-  }
+    .gds-form-group__radio-label {
+        font-size: $font-size-minus-2;
+    }
+    .gds-form-group__radio-indicator {
+        width: ($unit * 1);
+        height: ($unit * 1);
+        margin-right: 7px;
+    }
 }
 
 .gds-form-group__radio--xs {
-  .gds-form-group__radio-label {
-    font-size: $font-size-minus-3;
-  }
-  .gds-form-group__radio-indicator {
-    width: ($unit * 0.9);
-    height: ($unit * 0.9);
-    margin-right: 6px;
-  }
+    .gds-form-group__radio-label {
+        font-size: $font-size-minus-3;
+    }
+    .gds-form-group__radio-indicator {
+        width: ($unit * 0.9);
+        height: ($unit * 0.9);
+        margin-right: 6px;
+    }
 }
 
 .gds-form-group__radio:hover .gds-form-group__radio-indicator {
-  border-color: $primaryLight2Color;
+    border-color: $primaryLight2Color;
 }
 
 .gds-form-group__radio--inline {
-  display: inline-block;
+    display: inline-block;
 }
 
 .gds-form-group__radio-input {
-  position: absolute;
-  opacity: 0;
+    position: absolute;
+    opacity: 0;
 }
 
 .gds-form-group__radio-label {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .gds-form-group__radio-label--dark {
-  color: $gg-gray;
+    color: $gg-gray;
 }
 
 .gds-form-group__radio-indicator {
-  display: inline-block;
-  width: ($unit * 1.2);
-  height: ($unit * 1.2);
-  margin: -3px 8px 0 0;
-  vertical-align: middle;
-  background-image: url("data:image/svg+xml;uft8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20500%20500%22%20style%3D%22enable-background%3Anew%200%200%20500%20500%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Ccircle%20cx%3D%22247.3%22%20cy%3D%22250.1%22%20r%3D%22199.6%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22%2F%3E%0A%3C%2Fsvg%3E");
-  border-radius: 50%;
-  pointer-events: none;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: $unit center;
-  background-size: auto 100%;
-  border: 1px solid $gg-light-3;
-  transform: scale(1);
-  opacity: 1;
-  @include transition-back(all, 100ms);
+    display: inline-block;
+    width: ($unit * 1.2);
+    height: ($unit * 1.2);
+    margin: -3px 8px 0 0;
+    vertical-align: middle;
+    background-image: url('data:image/svg+xml;uft8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20500%20500%22%20style%3D%22enable-background%3Anew%200%200%20500%20500%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Ccircle%20cx%3D%22247.3%22%20cy%3D%22250.1%22%20r%3D%22199.6%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22%2F%3E%0A%3C%2Fsvg%3E');
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: $unit center;
+    background-size: auto 100%;
+    border: 1px solid $gg-light-3;
+    transform: scale(1);
+    opacity: 1;
+    @include transition-back(all, 100ms);
 }
 
 .gds-form-group__radio-indicator--dark {
-  border-color: $gg-light-4;
+    border-color: $gg-light-4;
 }
 
 .gds-form-group__radio-input:checked + .gds-form-group__radio-indicator {
-  border-color: $primaryColor;
-  background-position: center center;
+    border-color: $primaryColor;
+    background-position: center center;
 }
 
 // Radio button focus effect
 .gds-form-group__radio-input:focus + .gds-form-group__radio-indicator {
-  box-shadow: $input-focus-effect;
+    box-shadow: $input-focus-effect;
 }
 
 // Toggle switches
 .gds-form-group__toggleswitch--sm {
-  .gds-form-group__toggleswitch-label {
-    font-size: $font-size-minus-2;
-  }
-  .gds-form-group__toggleswitch-input {
-    width: ($unit * 2.5);
-  }
-  .gds-form-group__toggleswitch-indicator {
-    width: ($unit * 2.5);
-    height: ($unit * 1.25);
-    margin-right: 7px;
-    top: -(math.div($unit, 6));
-  }
+    .gds-form-group__toggleswitch-label {
+        font-size: $font-size-minus-2;
+    }
+    .gds-form-group__toggleswitch-input {
+        width: ($unit * 2.5);
+    }
+    .gds-form-group__toggleswitch-indicator {
+        width: ($unit * 2.5);
+        height: ($unit * 1.25);
+        margin-right: 7px;
+        top: -(math.div($unit, 6));
+    }
 }
 
 .gds-form-group__toggleswitch--xs {
-  .gds-form-group__toggleswitch-label {
-    font-size: $font-size-minus-3;
-  }
-  .gds-form-group__toggleswitch-input {
-    width: ($unit * 2);
-  }
-  .gds-form-group__toggleswitch-indicator {
-    width: ($unit * 2);
-    height: ($unit * 1);
-    margin-right: 6px;
-    top: -($unit * 0.05);
-  }
+    .gds-form-group__toggleswitch-label {
+        font-size: $font-size-minus-3;
+    }
+    .gds-form-group__toggleswitch-input {
+        width: ($unit * 2);
+    }
+    .gds-form-group__toggleswitch-indicator {
+        width: ($unit * 2);
+        height: ($unit * 1);
+        margin-right: 6px;
+        top: -($unit * 0.05);
+    }
 }
 
 .gds-form-group__toggleswitch-label {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .gds-form-group__toggleswitch:hover {
-  .gds-form-group__toggleswitch-indicator:after {
-    background-color: $primaryLight2Color !important;
-  }
+    .gds-form-group__toggleswitch-indicator:after {
+        background-color: $primaryLight2Color !important;
+    }
 }
 
 .gds-form-group__toggleswitch--inline {
-  display: inline-block;
-  width: auto;
+    display: inline-block;
+    width: auto;
 }
 
 .gds-form-group__toggleswitch-input {
-  width: ($unit * 3);
-  opacity: 0;
+    width: ($unit * 3);
+    opacity: 0;
 }
 
 // Toggleswitch focus effect
@@ -1105,100 +1102,100 @@
 // }
 
 .gds-form-group__toggleswitch-indicator {
-  background: white;
-  box-shadow: inset 0 0 0 1px $gg-light-3;
-  border-radius: ($input-border-radius * 0.5);
-  display: block;
-  height: ($unit * 1.5);
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: -($unit * 0.25);
-  width: ($unit * 3);
-  z-index: 0;
-  border: none !important;
-
-  &:after {
-    content: "";
+    background: white;
+    box-shadow: inset 0 0 0 1px $gg-light-3;
+    border-radius: ($input-border-radius * 0.5);
+    display: block;
+    height: ($unit * 1.5);
+    left: 0;
+    overflow: hidden;
     position: absolute;
-    left: calc(0% + 2px);
-    color: white;
-    top: 2px;
-    bottom: 2px;
-    width: calc(50% - 2px);
-    background-color: $gg-light-3;
-    border-radius: math.div($input-border-radius, 1.8);
-    box-sizing: border-box;
-    @include transition-back(all, 250ms);
+    top: -($unit * 0.25);
+    width: ($unit * 3);
+    z-index: 0;
     border: none !important;
-  }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: calc(0% + 2px);
+        color: white;
+        top: 2px;
+        bottom: 2px;
+        width: calc(50% - 2px);
+        background-color: $gg-light-3;
+        border-radius: math.div($input-border-radius, 1.8);
+        box-sizing: border-box;
+        @include transition-back(all, 250ms);
+        border: none !important;
+    }
 }
 
 .gds-form-group__toggleswitch-indicator--dark {
-  background-color: $gg-dark-3;
-  box-shadow: inset 0 0 0 1px $gg-dark-4;
-  &:after {
-    background-color: $gg-light-3;
-  }
+    background-color: $gg-dark-3;
+    box-shadow: inset 0 0 0 1px $gg-dark-4;
+    &:after {
+        background-color: $gg-light-3;
+    }
 }
 
 .gds-form-group__toggleswitch-indicator-labels {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-
-  &:after {
-    content: attr(gg-enabled-text);
     position: absolute;
-    color: $gg-light-4;
-    font-size: $font-size-minus-4;
-    left: -50%;
-    width: 50%;
+    left: 0;
+    top: 0;
     height: 100%;
-    text-align: center;
-    vertical-align: middle;
-    line-height: ($unit * 1.3);
-    @include transition-back(all, 250ms);
-  }
+    width: 100%;
+    z-index: 1;
 
-  &:before {
-    content: attr(gg-disabled-text);
-    position: absolute;
-    color: $gg-light-4;
-    font-size: $font-size-minus-4;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    text-align: center;
-    vertical-align: middle;
-    line-height: ($unit * 1.3);
-    @include transition-back(all, 250ms);
-  }
-}
-
-.gds-form-group__toggleswitch-input:checked
-  ~ .gds-form-group__toggleswitch-indicator {
-  background: transparent;
-  background-image: none;
-
-  &:after {
-    left: 50%;
-    background-color: $primaryColor;
-  }
-
-  .gds-form-group__toggleswitch-indicator-labels {
     &:after {
-      left: 0;
-      color: $primaryColor;
+        content: attr(gg-enabled-text);
+        position: absolute;
+        color: $gg-light-4;
+        font-size: $font-size-minus-4;
+        left: -50%;
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        vertical-align: middle;
+        line-height: ($unit * 1.3);
+        @include transition-back(all, 250ms);
     }
 
     &:before {
-      left: 100%;
+        content: attr(gg-disabled-text);
+        position: absolute;
+        color: $gg-light-4;
+        font-size: $font-size-minus-4;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        vertical-align: middle;
+        line-height: ($unit * 1.3);
+        @include transition-back(all, 250ms);
     }
-  }
+}
+
+.gds-form-group__toggleswitch-input:checked
+    ~ .gds-form-group__toggleswitch-indicator {
+    background: transparent;
+    background-image: none;
+
+    &:after {
+        left: 50%;
+        background-color: $primaryColor;
+    }
+
+    .gds-form-group__toggleswitch-indicator-labels {
+        &:after {
+            left: 0;
+            color: $primaryColor;
+        }
+
+        &:before {
+            left: 100%;
+        }
+    }
 }
 
 // .gds-form-group__toggleswitch-input:focus + .gds-form-group__toggleswitch-indicator--dark {
@@ -1206,224 +1203,375 @@
 // }
 
 .gds-form-group__toggleswitch-input:checked
-  ~ .gds-form-group__toggleswitch-indicator--dark {
-  background-image: none;
+    ~ .gds-form-group__toggleswitch-indicator--dark {
+    background-image: none;
 }
 
 // File input
 .gds-form-group__file {
-  position: relative;
-  display: block;
-  height: $input-height-md;
-  cursor: pointer;
-  border-color: inherit;
+    position: relative;
+    display: block;
+    height: $input-height-md;
+    cursor: pointer;
+    border-color: inherit;
 }
 
 .gds-form-group__file--lg {
-  height: $input-height-lg;
-  font-size: $font-size-plus-2;
-  padding: $input-padding-lg;
+    height: $input-height-lg;
+    font-size: $font-size-plus-2;
+    padding: $input-padding-lg;
 }
 
 .gds-form-group__file--sm {
-  height: $input-height-sm;
-  font-size: $font-size-minus-2;
-  padding: $input-padding-sm;
+    height: $input-height-sm;
+    font-size: $font-size-minus-2;
+    padding: $input-padding-sm;
 }
 
 .gds-form-group__file--xs {
-  height: $input-height-xs;
-  font-size: $font-size-minus-3;
-  padding: $input-padding-xs;
+    height: $input-height-xs;
+    font-size: $font-size-minus-3;
+    padding: $input-padding-xs;
 }
 
 .gds-form-group__file-input {
-  min-width: ($unit * 14);
-  margin: 0;
-  filter: alpha(opacity=0);
-  opacity: 0;
+    min-width: ($unit * 14);
+    margin: 0;
+    filter: alpha(opacity=0);
+    opacity: 0;
 }
 
 // File indicator
 .gds-form-group__file-indicator {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 5;
-  height: $input-height-md;
-  padding: $unit;
-  line-height: 1.1;
-  color: $gg-dark-4;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: white;
-  border: none;
-  box-sizing: border-box;
-  box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-3,
-    inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-  border-radius: $border-radius;
-  @include transition-ease-out(all, 150ms);
-
-  &:before {
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
-    z-index: 6;
-    display: block;
+    left: 0;
+    z-index: 5;
     height: $input-height-md;
     padding: $unit;
     line-height: 1.1;
-    color: white;
-    content: "Browse";
-    background-color: $primaryColor;
+    color: $gg-dark-4;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: white;
     border: none;
-    border-radius: 0 $input-border-radius $input-border-radius 0;
     box-sizing: border-box;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0),
-      inset 0 0 120px 0 rgba(255, 255, 255, 0),
-      inset 0 #{-$cap-size} 0 0 $primaryDark2Color;
+    box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-3,
+        inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    border-radius: $border-radius;
     @include transition-ease-out(all, 150ms);
-  }
 
-  &:after {
-    content: "Choose file...";
-    box-sizing: border-box;
-    @include transition-ease-out(all, 150ms);
-  }
-
-  &:hover {
-    box-shadow: inset 0 #{-$cap-size} 0 0 $primaryColor,
-      inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 6;
+        display: block;
+        height: $input-height-md;
+        padding: $unit;
+        line-height: 1.1;
+        color: white;
+        content: 'Browse';
+        background-color: $primaryColor;
+        border: none;
+        border-radius: 0 $input-border-radius $input-border-radius 0;
+        box-sizing: border-box;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0),
+            inset 0 0 120px 0 rgba(255, 255, 255, 0),
+            inset 0 #{-$cap-size} 0 0 $primaryDark2Color;
+        @include transition-ease-out(all, 150ms);
+    }
 
     &:after {
-      color: $primaryLight2Color !important;
+        content: 'Choose file...';
+        box-sizing: border-box;
+        @include transition-ease-out(all, 150ms);
     }
 
-    &:before {
-      border-bottom-width: $cap-size;
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-        inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
-        inset 0 #{-$cap-size} 0 0 $primaryDark2Color;
-      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
-    }
-  }
+    &:hover {
+        box-shadow: inset 0 #{-$cap-size} 0 0 $primaryColor,
+            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 
-  &:active {
-    box-shadow: inset 0 #{-$cap-size} 0 0 $primaryColor,
-      inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+        &:after {
+            color: $primaryLight2Color !important;
+        }
 
-    &:before {
-      border-bottom-width: $cap-size;
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-        inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
-        inset 0 #{-$cap-size} 0 0 $primaryDark2Color;
+        &:before {
+            border-bottom-width: $cap-size;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
+                inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
+                inset 0 #{-$cap-size} 0 0 $primaryDark2Color;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+        }
     }
-  }
+
+    &:active {
+        box-shadow: inset 0 #{-$cap-size} 0 0 $primaryColor,
+            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+
+        &:before {
+            border-bottom-width: $cap-size;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
+                inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
+                inset 0 #{-$cap-size} 0 0 $primaryDark2Color;
+        }
+    }
 } // /.gds-form-group__file-indicator
 
 .gds-form-group__file-indicator--lg,
 .gds-form-group__file-indicator--lg:before {
-  height: $input-height-lg;
-  font-size: $font-size-plus-2;
-  padding: $input-padding-lg;
-  line-height: 1.7;
+    height: $input-height-lg;
+    font-size: $font-size-plus-2;
+    padding: $input-padding-lg;
+    line-height: 1.7;
 }
 
 .gds-form-group__file-indicator--sm,
 .gds-form-group__file-indicator--sm:before {
-  height: $input-height-sm;
-  font-size: $font-size-minus-2;
-  padding: $input-padding-sm;
-  line-height: 1.5;
+    height: $input-height-sm;
+    font-size: $font-size-minus-2;
+    padding: $input-padding-sm;
+    line-height: 1.5;
 }
 
 .gds-form-group__file-indicator--xs,
 .gds-form-group__file-indicator--xs:before {
-  height: $input-height-xs;
-  font-size: $font-size-minus-3;
-  padding: $input-padding-xs;
-  line-height: 1.7;
+    height: $input-height-xs;
+    font-size: $font-size-minus-3;
+    padding: $input-padding-xs;
+    line-height: 1.7;
 }
 
 .gds-form-group__file--inline {
-  display: inline-block;
+    display: inline-block;
 }
 
 $thumb-width: ($unit * 0.75);
 
 .gds-form-group__range-input {
-  -webkit-appearance: none;
-  background: transparent;
-  padding: ($unit * 0.5) 0;
-  margin: 0;
+    -webkit-appearance: none;
+    background: transparent;
+    padding: ($unit * 0.5) 0;
+    margin: 0;
 }
 
 .gds-form-group__range-input::-moz-focus-outer {
-  border: 0;
+    border: 0;
 }
 
 .gds-form-group__range-input::-moz-focus-inner {
-  border: 0;
+    border: 0;
 }
 
 .gds-form-group__range-input:focus {
-  outline: none;
-  border: none;
+    outline: none;
+    border: none;
 }
 
 .gds-form-group__range-input:-ms-track {
-  width: 100%;
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
 }
 
 // Some kind of bug in Chrome prevents me from extending a single class for all browser prefixes of this shadow DOM element. Maybe, one day, this won't suck so much.
 .gds-form-group__range-input {
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    // border-color: $gg-light-2;
-    // border-bottom-color: $gg-light-2;
-    // border-left-width: 1px;
-    // border-right-width: 1px;
-    // border-top-width: 1px;
-    // border-bottom-width: $cap-size;
-    // border-style: solid;
-    height: ($unit * 1.25);
-    width: ($unit * 1.25);
-    border-radius: 100%;
-    background: white;
-    cursor: pointer;
-    margin-top: -($unit * 0.33);
-    @include defaultShadows($gg-light-3, black, $primaryLight2Color);
-    @include transition-ease-out(all, 150ms);
-  }
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        // border-color: $gg-light-2;
+        // border-bottom-color: $gg-light-2;
+        // border-left-width: 1px;
+        // border-right-width: 1px;
+        // border-top-width: 1px;
+        // border-bottom-width: $cap-size;
+        // border-style: solid;
+        height: ($unit * 1.25);
+        width: ($unit * 1.25);
+        border-radius: 100%;
+        background: white;
+        cursor: pointer;
+        margin-top: -($unit * 0.33);
+        @include defaultShadows($gg-light-3, black, $primaryLight2Color);
+        @include transition-ease-out(all, 150ms);
+    }
 
-  &::-moz-range-thumb {
-    // border-color: $gg-light-2;
-    // border-bottom-color: $gg-light-2;
-    // border-left-width: 1px;
-    // border-right-width: 1px;
-    // border-top-width: 1px;
-    // border-bottom-width: $cap-size;
-    border-style: none;
-    height: ($unit * 1.25);
-    width: ($unit * 1.25);
-    border-radius: 100%;
-    background: white;
-    cursor: pointer;
-    margin-top: -($unit * 0.33);
-    @include defaultShadows($gg-light-3, black, $primaryLight2Color);
-    @include transition-ease-out(all, 150ms);
-  }
+    &::-moz-range-thumb {
+        // border-color: $gg-light-2;
+        // border-bottom-color: $gg-light-2;
+        // border-left-width: 1px;
+        // border-right-width: 1px;
+        // border-top-width: 1px;
+        // border-bottom-width: $cap-size;
+        border-style: none;
+        height: ($unit * 1.25);
+        width: ($unit * 1.25);
+        border-radius: 100%;
+        background: white;
+        cursor: pointer;
+        margin-top: -($unit * 0.33);
+        @include defaultShadows($gg-light-3, black, $primaryLight2Color);
+        @include transition-ease-out(all, 150ms);
+    }
 
-  &::-ms-thumb {
+    &::-ms-thumb {
+        border-color: $gg-light-2;
+        border-bottom-color: $gg-light-2;
+        border-left-width: 1px;
+        border-right-width: 1px;
+        border-top-width: 1px;
+        border-bottom-width: $cap-size;
+        border-style: solid;
+        height: $unit * 1.5;
+        width: $thumb-width;
+        border-radius: $border-radius;
+        background: white;
+        cursor: pointer;
+        margin-top: -$unit * 0.5;
+        @include defaultShadows($gg-light-3, black, $primaryLight2Color);
+        @include transition-ease-out(all, 150ms);
+    }
+
+    &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: $unit * 0.5;
+        cursor: pointer;
+        // background-color: $gg-light-1;
+        background: linear-gradient(
+            to left,
+            $dangerLight1Color,
+            $warningLight2Color,
+            $successLight1Color
+        );
+        border-radius: $cap-size;
+        @include transition-ease-out(all, 150ms);
+    }
+    &::-moz-range-track {
+        width: 100%;
+        height: $unit * 0.5;
+        cursor: pointer;
+        background-color: $gg-light-1;
+        border-radius: $cap-size;
+        @include transition-ease-out(all, 150ms);
+    }
+    &:-ms-track {
+        width: 100%;
+        height: $unit * 0.5;
+        cursor: pointer;
+        background-color: $gg-light-1;
+        border-radius: $cap-size;
+        @include transition-ease-out(all, 150ms);
+    }
+
+    &::-ms-fill-upper {
+        background-color: none;
+    }
+
+    &::-webkit-progress-bar {
+        background-color: none;
+    }
+
+    &::-moz-range-progress {
+        background-color: none;
+    }
+
+    &:hover {
+        &::-webkit-slider-thumb {
+            background: $primaryColor;
+            @include hoverShadows($primaryColor, black, $primaryLight2Color);
+        }
+        &::-moz-range-thumb {
+            background: $primaryColor;
+            @include hoverShadows($primaryColor, black, $primaryLight2Color);
+        }
+        &::-ms-thumb {
+            background: $primaryColor;
+            @include hoverShadows($primaryColor, black, $primaryLight2Color);
+        }
+        &::-webkit-slider-runnable-track {
+            background-color: $gg-light-2;
+        }
+        &::-moz-range-track {
+            background-color: $gg-light-2;
+        }
+        &::-ms-track {
+            background-color: $gg-light-2;
+        }
+    }
+    &:active,
+    &:focus:active {
+        &::-webkit-slider-thumb {
+            @include focusShadows($primaryColor, black, $primaryLight2Color);
+        }
+        &::-moz-range-thumb {
+            @include focusShadows($primaryColor, black, $primaryLight2Color);
+        }
+        &::-ms-thumb {
+            @include focusShadows($primaryColor, black, $primaryLight2Color);
+        }
+        &::-ms-fill-upper {
+            background-color: none;
+        }
+        &::-moz-range-progress {
+            background-color: none;
+        }
+    }
+    &:focus {
+        &::-webkit-slider-thumb {
+            @include focusShadows($primaryColor, black, $primaryLight2Color);
+        }
+        &::-moz-range-thumb {
+            @include focusShadows($primaryColor, black, $primaryLight2Color);
+        }
+        &::-ms-thumb {
+            @include focusShadows($primaryColor, black, $primaryLight2Color);
+        }
+    }
+}
+
+.gds-form-group__range-input--gradient {
+    // background color none and then set background to be gradient
+    &::-webkit-slider-runnable-track {
+        background-color: none;
+        background: linear-gradient(
+            to left,
+            $dangerLight1Color,
+            $warningLight2Color,
+            $successLight1Color
+        );
+    }
+    &::-moz-range-track {
+        background-color: none;
+        background: linear-gradient(
+            to left,
+            $dangerLight1Color,
+            $warningLight2Color,
+            $successLight1Color
+        );
+    }
+    &:-ms-track {
+        background-color: none;
+        background: linear-gradient(
+            to left,
+            $dangerLight1Color,
+            $warningLight2Color,
+            $successLight1Color
+        );
+    }
+}
+
+.gds-form-group__range-input--numbers {
+    margin-bottom: $unit;
+}
+
+.gds-form-group__range-thumb--dual {
+    position: absolute;
     border-color: $gg-light-2;
     border-bottom-color: $gg-light-2;
     border-left-width: 1px;
@@ -1435,825 +1583,693 @@ $thumb-width: ($unit * 0.75);
     width: $thumb-width;
     border-radius: $border-radius;
     background: white;
-    cursor: pointer;
     margin-top: -$unit * 0.5;
-    @include defaultShadows($gg-light-3, black, $primaryLight2Color);
-    @include transition-ease-out(all, 150ms);
-  }
-
-  &::-webkit-slider-runnable-track {
-    width: 100%;
-    height: $unit * 0.5;
-    cursor: pointer;
-    // background-color: $gg-light-1;
-    background: linear-gradient(
-      to left,
-      $dangerLight1Color,
-      $warningLight2Color,
-      $successLight1Color
-    );
-    border-radius: $cap-size;
-    @include transition-ease-out(all, 150ms);
-  }
-  &::-moz-range-track {
-    width: 100%;
-    height: $unit * 0.5;
-    cursor: pointer;
-    background-color: $gg-light-1;
-    border-radius: $cap-size;
-    @include transition-ease-out(all, 150ms);
-  }
-  &:-ms-track {
-    width: 100%;
-    height: $unit * 0.5;
-    cursor: pointer;
-    background-color: $gg-light-1;
-    border-radius: $cap-size;
-    @include transition-ease-out(all, 150ms);
-  }
-
-  &::-ms-fill-upper {
-    background-color: none;
-  }
-
-  &::-webkit-progress-bar {
-    background-color: none;
-  }
-
-  &::-moz-range-progress {
-    background-color: none;
-  }
-
-  &:hover {
-    &::-webkit-slider-thumb {
-      background: $primaryColor;
-      @include hoverShadows($primaryColor, black, $primaryLight2Color);
+    z-index: $z-index-1;
+    cursor: -webkit-grab !important;
+    cursor: -moz-grab !important;
+    cursor: grab !important;
+    &:hover {
+        border-color: $gg-light-4;
     }
-    &::-moz-range-thumb {
-      background: $primaryColor;
-      @include hoverShadows($primaryColor, black, $primaryLight2Color);
+    &:active,
+    &:active:focus {
+        border-color: $primaryDark2Color;
+        background-color: $primaryColor;
+        box-shadow: $input-focus-effect;
+        cursor: -webkit-grabbing !important;
+        cursor: -moz-grabbing !important;
+        cursor: grabbing !important;
     }
-    &::-ms-thumb {
-      background: $primaryColor;
-      @include hoverShadows($primaryColor, black, $primaryLight2Color);
+    &:focus {
+        border-color: $primaryColor;
+        background-color: white;
+        box-shadow: $input-focus-effect;
     }
-    &::-webkit-slider-runnable-track {
-      background-color: $gg-light-2;
+    &:last-child {
+        left: 100%;
     }
-    &::-moz-range-track {
-      background-color: $gg-light-2;
-    }
-    &::-ms-track {
-      background-color: $gg-light-2;
-    }
-  }
-  &:active,
-  &:focus:active {
-    &::-webkit-slider-thumb {
-      @include focusShadows($primaryColor, black, $primaryLight2Color);
-    }
-    &::-moz-range-thumb {
-      @include focusShadows($primaryColor, black, $primaryLight2Color);
-    }
-    &::-ms-thumb {
-      @include focusShadows($primaryColor, black, $primaryLight2Color);
-    }
-    &::-ms-fill-upper {
-      background-color: none;
-    }
-    &::-moz-range-progress {
-      background-color: none;
-    }
-  }
-  &:focus {
-    &::-webkit-slider-thumb {
-      @include focusShadows($primaryColor, black, $primaryLight2Color);
-    }
-    &::-moz-range-thumb {
-      @include focusShadows($primaryColor, black, $primaryLight2Color);
-    }
-    &::-ms-thumb {
-      @include focusShadows($primaryColor, black, $primaryLight2Color);
-    }
-  }
-}
-
-.gds-form-group__range-input--gradient {
-  // background color none and then set background to be gradient
-  &::-webkit-slider-runnable-track {
-    background-color: none;
-    background: linear-gradient(
-      to left,
-      $dangerLight1Color,
-      $warningLight2Color,
-      $successLight1Color
-    );
-  }
-  &::-moz-range-track {
-    background-color: none;
-    background: linear-gradient(
-      to left,
-      $dangerLight1Color,
-      $warningLight2Color,
-      $successLight1Color
-    );
-  }
-  &:-ms-track {
-    background-color: none;
-    background: linear-gradient(
-      to left,
-      $dangerLight1Color,
-      $warningLight2Color,
-      $successLight1Color
-    );
-  }
-}
-
-.gds-form-group__range-input--numbers {
-  margin-bottom: $unit;
-}
-
-.gds-form-group__range-thumb--dual {
-  position: absolute;
-  border-color: $gg-light-2;
-  border-bottom-color: $gg-light-2;
-  border-left-width: 1px;
-  border-right-width: 1px;
-  border-top-width: 1px;
-  border-bottom-width: $cap-size;
-  border-style: solid;
-  height: $unit * 1.5;
-  width: $thumb-width;
-  border-radius: $border-radius;
-  background: white;
-  margin-top: -$unit * 0.5;
-  z-index: $z-index-1;
-  cursor: -webkit-grab !important;
-  cursor: -moz-grab !important;
-  cursor: grab !important;
-  &:hover {
-    border-color: $gg-light-4;
-  }
-  &:active,
-  &:active:focus {
-    border-color: $primaryDark2Color;
-    background-color: $primaryColor;
-    box-shadow: $input-focus-effect;
-    cursor: -webkit-grabbing !important;
-    cursor: -moz-grabbing !important;
-    cursor: grabbing !important;
-  }
-  &:focus {
-    border-color: $primaryColor;
-    background-color: white;
-    box-shadow: $input-focus-effect;
-  }
-  &:last-child {
-    left: 100%;
-  }
 }
 
 .gds-form-group__range-thumb--numbers {
-  &:after {
-    content: attr(data-gds-current-value);
-    position: absolute;
-    bottom: -20px;
-    left: -50%;
-    font-size: $font-size-minus-3;
-    color: $gg-light-4;
-  }
+    &:after {
+        content: attr(data-gds-current-value);
+        position: absolute;
+        bottom: -20px;
+        left: -50%;
+        font-size: $font-size-minus-3;
+        color: $gg-light-4;
+    }
 }
 
 .gds-form-group__range-track {
-  width: 100%;
-  height: $unit * 0.5;
-  background-color: $gg-light-1;
-  border-radius: $cap-size;
-  @include transition-ease-out(all, 150ms);
-  &:hover {
-    background-color: $gg-light-2;
-  }
+    width: 100%;
+    height: $unit * 0.5;
+    background-color: $gg-light-1;
+    border-radius: $cap-size;
+    @include transition-ease-out(all, 150ms);
+    &:hover {
+        background-color: $gg-light-2;
+    }
 }
 
 .gds-form-group__range-wrapper {
-  position: absolute;
-  left: 0px;
-  top: 25%;
-  width: calc(100% - #{$thumb-width} + 2px);
-  height: 50%;
+    position: absolute;
+    left: 0px;
+    top: 25%;
+    width: calc(100% - #{$thumb-width} + 2px);
+    height: 50%;
 }
 
 .gds-form-group__range-selected {
-  position: absolute;
-  left: 0px;
-  top: 0%;
-  width: 100%;
-  height: 100%;
-  transform-origin: 50% 50%;
-  cursor: -webkit-grab !important;
-  cursor: -moz-grab !important;
-  cursor: grab !important;
-  &:hover:after,
-  &:active:after {
-    top: 18%;
-    height: 64%;
-  }
-  &:active,
-  &:active:focus {
-    cursor: -webkit-grabbing !important;
-    cursor: -moz-grabbing !important;
-    cursor: grabbing !important;
-  }
-  &:after {
-    content: "";
     position: absolute;
-    top: 25%;
-    left: 0;
-    height: 50%;
+    left: 0px;
+    top: 0%;
     width: 100%;
-    background-color: $primaryColor;
-    @include transition-ease-out(all, 150ms);
-  }
+    height: 100%;
+    transform-origin: 50% 50%;
+    cursor: -webkit-grab !important;
+    cursor: -moz-grab !important;
+    cursor: grab !important;
+    &:hover:after,
+    &:active:after {
+        top: 18%;
+        height: 64%;
+    }
+    &:active,
+    &:active:focus {
+        cursor: -webkit-grabbing !important;
+        cursor: -moz-grabbing !important;
+        cursor: grabbing !important;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 25%;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        background-color: $primaryColor;
+        @include transition-ease-out(all, 150ms);
+    }
 }
 
 // success form groups
 .gds-form-group--success {
-  color: $successColor;
-  border-color: $successColor;
-  border-bottom-color: $successColor;
-
-  .gds-form-group__text-help {
-    background-color: $successColor;
-  }
-
-  .gds-form-group__text-input,
-  .gds-search-select__input,
-  .gds-form-group__text-area-input {
-    @include defaultShadows($successColor, black, $primaryLight2Color);
-    &:hover {
-      @include hoverShadows($primaryColor, black, $primaryLight2Color);
-    }
-    &:focus {
-      @include focusShadows($primaryColor, black, $primaryLight2Color);
-    }
-  }
-
-  .gds-form-group__select-input,
-  .gds-search-select__input {
-    @include defaultShadows($successColor, black, $primaryLight2Color);
     color: $successColor;
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($successColor)}%3B%22/%3E%3C/svg%3E");
-
-    &:focus {
-      color: $gg-dark-4;
-      @include focusShadows($primaryColor, black, $primaryLight2Color);
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
-    }
-    &:hover {
-      color: $gg-dark-4;
-      @include hoverShadows($primaryColor, black, $primaryLight2Color);
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
-    }
-    &:hover:focus {
-      color: $gg-dark-4;
-      @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
-    }
-  }
-
-  .gds-form-group__text-area-input {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($successColor)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E");
-    &:hover {
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryLight2Color)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E");
-    }
-    &:focus {
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryColor)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E");
-    }
-  }
-
-  .gds-form-group__radio-indicator {
-    background-image: url("data:image/svg+xml;uft8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20500%20500%22%20style%3D%22enable-background%3Anew%200%200%20500%20500%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Ccircle%20cx%3D%22247.3%22%20cy%3D%22250.1%22%20r%3D%22199.6%22%20style%3D%22fill%3A%23#{strip-hash($successColor)}%3B%22%2F%3E%0A%3C%2Fsvg%3E");
-    border: 1px solid $successColor;
-  }
-
-  .gds-form-group__radio-input:checked + .gds-form-group__radio-indicator {
     border-color: $successColor;
-  }
+    border-bottom-color: $successColor;
 
-  .gds-form-group__checkbox-indicator,
-  .gds-search-select__checkbox-indicator {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23#{strip-hash($successColor)}%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-    border-color: $successColor;
-  }
-
-  .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
-  .gds-search-select__checkbox-input:checked
-    + .gds-form-group__checkbox-indicator,
-  .gds-form-group__checkbox-input:checked
-    + .gds-search-select__checkbox-indicator,
-  .gds-search-select__checkbox-input:checked
-    + .gds-search-select__checkbox-indicator {
-    border-color: $successColor;
-  }
-
-  .gds-form-group__toggleswitch-indicator {
-    background: white;
-
-    &:after {
-      color: white;
-      background-color: $successColor;
-    }
-  }
-
-  .gds-form-group__toggleswitch-indicator-labels {
-    &:before,
-    &:after {
-      color: $successColor;
-    }
-  }
-
-  .gds-form-group__toggleswitch-input:checked
-    ~ .gds-form-group__toggleswitch-indicator {
-    &:after {
-      background-color: $successColor;
+    .gds-form-group__text-help {
+        background-color: $successColor;
     }
 
-    .gds-form-group__toggleswitch-indicator-labels:after {
-      color: $successColor;
-    }
-  }
-
-  .gds-form-group__file-indicator:before {
-    background-color: $successColor;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0),
-      inset 0 0 120px 0 rgba(255, 255, 255, 0),
-      inset 0 #{-$cap-size} 0 0 $successDark2Color;
-  }
-
-  .gds-form-group__file-indicator:hover {
-    box-shadow: inset 0 #{-$cap-size} 0 0 $successColor,
-      inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-
-    &:after {
-      color: $successLight2Color !important;
+    .gds-form-group__text-input,
+    .gds-search-select__input,
+    .gds-form-group__text-area-input {
+        @include defaultShadows($successColor, black, $primaryLight2Color);
+        &:hover {
+            @include hoverShadows($primaryColor, black, $primaryLight2Color);
+        }
+        &:focus {
+            @include focusShadows($primaryColor, black, $primaryLight2Color);
+        }
     }
 
-    &:before {
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-        inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
-        inset 0 #{-$cap-size} 0 0 $successDark2Color;
-    }
-  }
+    .gds-form-group__select-input,
+    .gds-search-select__input {
+        @include defaultShadows($successColor, black, $primaryLight2Color);
+        color: $successColor;
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($successColor)}%3B%22/%3E%3C/svg%3E');
 
-  .gds-form-group__file-indicator:active {
-    box-shadow: inset 0 #{-$cap-size} 0 0 $successColor,
-      inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-
-    &:before {
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-        inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
-        inset 0 #{-$cap-size} 0 0 $successDark2Color;
+        &:focus {
+            color: $gg-dark-4;
+            @include focusShadows($primaryColor, black, $primaryLight2Color);
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
+        }
+        &:hover {
+            color: $gg-dark-4;
+            @include hoverShadows($primaryColor, black, $primaryLight2Color);
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
+        }
+        &:hover:focus {
+            color: $gg-dark-4;
+            @include hoverFocusShadows(
+                $primaryColor,
+                black,
+                $primaryLight2Color
+            );
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
+        }
     }
-  }
+
+    .gds-form-group__text-area-input {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($successColor)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E');
+        &:hover {
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryLight2Color)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E');
+        }
+        &:focus {
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryColor)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E');
+        }
+    }
+
+    .gds-form-group__radio-indicator {
+        background-image: url('data:image/svg+xml;uft8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20500%20500%22%20style%3D%22enable-background%3Anew%200%200%20500%20500%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Ccircle%20cx%3D%22247.3%22%20cy%3D%22250.1%22%20r%3D%22199.6%22%20style%3D%22fill%3A%23#{strip-hash($successColor)}%3B%22%2F%3E%0A%3C%2Fsvg%3E');
+        border: 1px solid $successColor;
+    }
+
+    .gds-form-group__radio-input:checked + .gds-form-group__radio-indicator {
+        border-color: $successColor;
+    }
+
+    .gds-form-group__checkbox-indicator,
+    .gds-search-select__checkbox-indicator {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23#{strip-hash($successColor)}%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+        border-color: $successColor;
+    }
+
+    .gds-form-group__checkbox-input:checked
+        + .gds-form-group__checkbox-indicator,
+    .gds-search-select__checkbox-input:checked
+        + .gds-form-group__checkbox-indicator,
+    .gds-form-group__checkbox-input:checked
+        + .gds-search-select__checkbox-indicator,
+    .gds-search-select__checkbox-input:checked
+        + .gds-search-select__checkbox-indicator {
+        border-color: $successColor;
+    }
+
+    .gds-form-group__toggleswitch-indicator {
+        background: white;
+
+        &:after {
+            color: white;
+            background-color: $successColor;
+        }
+    }
+
+    .gds-form-group__toggleswitch-indicator-labels {
+        &:before,
+        &:after {
+            color: $successColor;
+        }
+    }
+
+    .gds-form-group__toggleswitch-input:checked
+        ~ .gds-form-group__toggleswitch-indicator {
+        &:after {
+            background-color: $successColor;
+        }
+
+        .gds-form-group__toggleswitch-indicator-labels:after {
+            color: $successColor;
+        }
+    }
+
+    .gds-form-group__file-indicator:before {
+        background-color: $successColor;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0),
+            inset 0 0 120px 0 rgba(255, 255, 255, 0),
+            inset 0 #{-$cap-size} 0 0 $successDark2Color;
+    }
+
+    .gds-form-group__file-indicator:hover {
+        box-shadow: inset 0 #{-$cap-size} 0 0 $successColor,
+            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+
+        &:after {
+            color: $successLight2Color !important;
+        }
+
+        &:before {
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
+                inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
+                inset 0 #{-$cap-size} 0 0 $successDark2Color;
+        }
+    }
+
+    .gds-form-group__file-indicator:active {
+        box-shadow: inset 0 #{-$cap-size} 0 0 $successColor,
+            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+
+        &:before {
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
+                inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
+                inset 0 #{-$cap-size} 0 0 $successDark2Color;
+        }
+    }
 } // /.gds-form-group--success
 
 // Warning form groups
 .gds-form-group--warning {
-  color: $warningColor;
-  border-color: $warningColor;
-  border-bottom-color: $warningColor;
-
-  .gds-form-group__text-help {
-    background-color: $warningColor;
-  }
-
-  .gds-form-group__text-input,
-  .gds-search-select__input,
-  .gds-form-group__text-area-input {
-    @include defaultShadows($warningColor, black, $primaryLight2Color);
-    &:hover {
-      @include hoverShadows($primaryColor, black, $primaryLight2Color);
-    }
-    &:focus {
-      @include focusShadows($primaryColor, black, $primaryLight2Color);
-    }
-  }
-
-  .gds-form-group__select-input,
-  .gds-search-select__input {
-    @include defaultShadows($warningColor, black, $primaryLight2Color);
     color: $warningColor;
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($warningColor)}%3B%22/%3E%3C/svg%3E");
-
-    &:focus {
-      color: $gg-dark-4;
-      @include focusShadows($primaryColor, black, $primaryLight2Color);
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
-    }
-    &:hover {
-      color: $gg-dark-4;
-      @include hoverShadows($primaryColor, black, $primaryLight2Color);
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
-    }
-    &:hover:focus {
-      color: $gg-dark-4;
-      @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
-    }
-  }
-
-  .gds-form-group__text-area-input {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($warningColor)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E");
-    &:hover {
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryLight2Color)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E");
-    }
-    &:focus {
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryColor)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E");
-    }
-  }
-
-  .gds-form-group__radio-indicator {
-    background-image: url("data:image/svg+xml;uft8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20500%20500%22%20style%3D%22enable-background%3Anew%200%200%20500%20500%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Ccircle%20cx%3D%22247.3%22%20cy%3D%22250.1%22%20r%3D%22199.6%22%20style%3D%22fill%3A%23#{strip-hash($warningColor)}%3B%22%2F%3E%0A%3C%2Fsvg%3E");
-    border: 1px solid $warningColor;
-  }
-
-  .gds-form-group__radio-input:checked + .gds-form-group__radio-indicator {
     border-color: $warningColor;
-  }
+    border-bottom-color: $warningColor;
 
-  .gds-form-group__checkbox-indicator,
-  .gds-search-select__checkbox-indicator {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23#{strip-hash($warningColor)}%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-    border-color: $warningColor;
-  }
-
-  .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
-  .gds-search-select__checkbox-input:checked
-    + .gds-form-group__checkbox-indicator,
-  .gds-form-group__checkbox-input:checked
-    + .gds-search-select__checkbox-indicator,
-  .gds-search-select__checkbox-input:checked
-    + .gds-search-select__checkbox-indicator {
-    border-color: $warningColor;
-  }
-
-  .gds-form-group__toggleswitch-indicator {
-    background: white;
-
-    &:after {
-      color: white;
-      background-color: $warningColor;
-    }
-  }
-
-  .gds-form-group__toggleswitch-indicator-labels {
-    &:before,
-    &:after {
-      color: $warningColor;
-    }
-  }
-
-  .gds-form-group__toggleswitch-input:checked
-    ~ .gds-form-group__toggleswitch-indicator {
-    &:after {
-      background-color: $warningColor;
+    .gds-form-group__text-help {
+        background-color: $warningColor;
     }
 
-    .gds-form-group__toggleswitch-indicator-labels:after {
-      color: $warningColor;
-    }
-  }
-
-  .gds-form-group__file-indicator:before {
-    background-color: $warningColor;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0),
-      inset 0 0 120px 0 rgba(255, 255, 255, 0),
-      inset 0 #{-$cap-size} 0 0 $warningDark2Color;
-  }
-
-  .gds-form-group__file-indicator:hover {
-    box-shadow: inset 0 #{-$cap-size} 0 0 $warningColor,
-      inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-
-    &:after {
-      color: $warningLight2Color !important;
+    .gds-form-group__text-input,
+    .gds-search-select__input,
+    .gds-form-group__text-area-input {
+        @include defaultShadows($warningColor, black, $primaryLight2Color);
+        &:hover {
+            @include hoverShadows($primaryColor, black, $primaryLight2Color);
+        }
+        &:focus {
+            @include focusShadows($primaryColor, black, $primaryLight2Color);
+        }
     }
 
-    &:before {
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-        inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
-        inset 0 #{-$cap-size} 0 0 $warningDark2Color;
-    }
-  }
+    .gds-form-group__select-input,
+    .gds-search-select__input {
+        @include defaultShadows($warningColor, black, $primaryLight2Color);
+        color: $warningColor;
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($warningColor)}%3B%22/%3E%3C/svg%3E');
 
-  .gds-form-group__file-indicator:active {
-    box-shadow: inset 0 #{-$cap-size} 0 0 $warningColor,
-      inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-
-    &:before {
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-        inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
-        inset 0 #{-$cap-size} 0 0 $warningDark2Color;
+        &:focus {
+            color: $gg-dark-4;
+            @include focusShadows($primaryColor, black, $primaryLight2Color);
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
+        }
+        &:hover {
+            color: $gg-dark-4;
+            @include hoverShadows($primaryColor, black, $primaryLight2Color);
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
+        }
+        &:hover:focus {
+            color: $gg-dark-4;
+            @include hoverFocusShadows(
+                $primaryColor,
+                black,
+                $primaryLight2Color
+            );
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
+        }
     }
-  }
+
+    .gds-form-group__text-area-input {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($warningColor)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E');
+        &:hover {
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryLight2Color)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E');
+        }
+        &:focus {
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryColor)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E');
+        }
+    }
+
+    .gds-form-group__radio-indicator {
+        background-image: url('data:image/svg+xml;uft8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20500%20500%22%20style%3D%22enable-background%3Anew%200%200%20500%20500%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Ccircle%20cx%3D%22247.3%22%20cy%3D%22250.1%22%20r%3D%22199.6%22%20style%3D%22fill%3A%23#{strip-hash($warningColor)}%3B%22%2F%3E%0A%3C%2Fsvg%3E');
+        border: 1px solid $warningColor;
+    }
+
+    .gds-form-group__radio-input:checked + .gds-form-group__radio-indicator {
+        border-color: $warningColor;
+    }
+
+    .gds-form-group__checkbox-indicator,
+    .gds-search-select__checkbox-indicator {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23#{strip-hash($warningColor)}%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+        border-color: $warningColor;
+    }
+
+    .gds-form-group__checkbox-input:checked
+        + .gds-form-group__checkbox-indicator,
+    .gds-search-select__checkbox-input:checked
+        + .gds-form-group__checkbox-indicator,
+    .gds-form-group__checkbox-input:checked
+        + .gds-search-select__checkbox-indicator,
+    .gds-search-select__checkbox-input:checked
+        + .gds-search-select__checkbox-indicator {
+        border-color: $warningColor;
+    }
+
+    .gds-form-group__toggleswitch-indicator {
+        background: white;
+
+        &:after {
+            color: white;
+            background-color: $warningColor;
+        }
+    }
+
+    .gds-form-group__toggleswitch-indicator-labels {
+        &:before,
+        &:after {
+            color: $warningColor;
+        }
+    }
+
+    .gds-form-group__toggleswitch-input:checked
+        ~ .gds-form-group__toggleswitch-indicator {
+        &:after {
+            background-color: $warningColor;
+        }
+
+        .gds-form-group__toggleswitch-indicator-labels:after {
+            color: $warningColor;
+        }
+    }
+
+    .gds-form-group__file-indicator:before {
+        background-color: $warningColor;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0),
+            inset 0 0 120px 0 rgba(255, 255, 255, 0),
+            inset 0 #{-$cap-size} 0 0 $warningDark2Color;
+    }
+
+    .gds-form-group__file-indicator:hover {
+        box-shadow: inset 0 #{-$cap-size} 0 0 $warningColor,
+            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+
+        &:after {
+            color: $warningLight2Color !important;
+        }
+
+        &:before {
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
+                inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
+                inset 0 #{-$cap-size} 0 0 $warningDark2Color;
+        }
+    }
+
+    .gds-form-group__file-indicator:active {
+        box-shadow: inset 0 #{-$cap-size} 0 0 $warningColor,
+            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+
+        &:before {
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
+                inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
+                inset 0 #{-$cap-size} 0 0 $warningDark2Color;
+        }
+    }
 } // /.gds-form-group--warning
 
 // Danger form groups
 .gds-form-group--danger {
-  color: $dangerColor;
-  border-color: $dangerColor;
-  border-bottom-color: $dangerColor;
-
-  .gds-form-group__text-help {
-    background-color: $dangerColor;
-  }
-
-  .gds-form-group__text-input,
-  .gds-search-select__input,
-  .gds-form-group__text-area-input {
-    @include defaultShadows($dangerColor, black, $primaryLight2Color);
-    &:hover {
-      @include hoverShadows($primaryColor, black, $primaryLight2Color);
-    }
-    &:focus {
-      @include focusShadows($primaryColor, black, $primaryLight2Color);
-    }
-  }
-
-  .gds-form-group__select-input,
-  .gds-search-select__input {
-    @include defaultShadows($dangerColor, black, $primaryLight2Color);
     color: $dangerColor;
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($dangerColor)}%3B%22/%3E%3C/svg%3E");
-
-    &:focus {
-      color: $gg-dark-4;
-      @include focusShadows($primaryColor, black, $primaryLight2Color);
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
-    }
-    &:hover {
-      color: $gg-dark-4;
-      @include hoverShadows($primaryColor, black, $primaryLight2Color);
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
-    }
-    &:hover:focus {
-      color: $gg-dark-4;
-      @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E");
-    }
-  }
-
-  .gds-form-group__text-area-input {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($dangerColor)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E");
-    &:hover {
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryLight2Color)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E");
-    }
-    &:focus {
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryColor)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E");
-    }
-  }
-
-  .gds-form-group__radio-indicator {
-    background-image: url("data:image/svg+xml;uft8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20500%20500%22%20style%3D%22enable-background%3Anew%200%200%20500%20500%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Ccircle%20cx%3D%22247.3%22%20cy%3D%22250.1%22%20r%3D%22199.6%22%20style%3D%22fill%3A%23#{strip-hash($dangerColor)}%3B%22%2F%3E%0A%3C%2Fsvg%3E");
-    border: 1px solid $dangerColor;
-  }
-
-  .gds-form-group__radio-input:checked + .gds-form-group__radio-indicator {
     border-color: $dangerColor;
-  }
+    border-bottom-color: $dangerColor;
 
-  .gds-form-group__checkbox-indicator,
-  .gds-search-select__checkbox-indicator {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23#{strip-hash($dangerColor)}%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-    border-color: $dangerColor;
-  }
-
-  .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
-  .gds-search-select__checkbox-input:checked
-    + .gds-form-group__checkbox-indicator,
-  .gds-form-group__checkbox-input:checked
-    + .gds-search-select__checkbox-indicator,
-  .gds-search-select__checkbox-input:checked
-    + .gds-search-select__checkbox-indicator {
-    border-color: $dangerColor;
-  }
-
-  .gds-form-group__toggleswitch-indicator {
-    background: white;
-
-    &:after {
-      color: white;
-      background-color: $dangerColor;
-    }
-  }
-
-  .gds-form-group__toggleswitch-indicator-labels {
-    &:before,
-    &:after {
-      color: $dangerColor;
-    }
-  }
-
-  .gds-form-group__toggleswitch-input:checked
-    ~ .gds-form-group__toggleswitch-indicator {
-    &:after {
-      background-color: $dangerColor;
+    .gds-form-group__text-help {
+        background-color: $dangerColor;
     }
 
-    .gds-form-group__toggleswitch-indicator-labels:after {
-      color: $dangerColor;
-    }
-  }
-
-  .gds-form-group__file-indicator:before {
-    background-color: $dangerColor;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0),
-      inset 0 0 120px 0 rgba(255, 255, 255, 0),
-      inset 0 #{-$cap-size} 0 0 $dangerDark2Color;
-  }
-
-  .gds-form-group__file-indicator:hover {
-    box-shadow: inset 0 #{-$cap-size} 0 0 $dangerColor,
-      inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-
-    &:after {
-      color: $dangerLight2Color !important;
+    .gds-form-group__text-input,
+    .gds-search-select__input,
+    .gds-form-group__text-area-input {
+        @include defaultShadows($dangerColor, black, $primaryLight2Color);
+        &:hover {
+            @include hoverShadows($primaryColor, black, $primaryLight2Color);
+        }
+        &:focus {
+            @include focusShadows($primaryColor, black, $primaryLight2Color);
+        }
     }
 
-    &:before {
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-        inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
-        inset 0 #{-$cap-size} 0 0 $dangerDark2Color;
-    }
-  }
+    .gds-form-group__select-input,
+    .gds-search-select__input {
+        @include defaultShadows($dangerColor, black, $primaryLight2Color);
+        color: $dangerColor;
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($dangerColor)}%3B%22/%3E%3C/svg%3E');
 
-  .gds-form-group__file-indicator:active {
-    box-shadow: inset 0 #{-$cap-size} 0 0 $dangerColor,
-      inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-
-    &:before {
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-        inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
-        inset 0 #{-$cap-size} 0 0 $dangerDark2Color;
+        &:focus {
+            color: $gg-dark-4;
+            @include focusShadows($primaryColor, black, $primaryLight2Color);
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
+        }
+        &:hover {
+            color: $gg-dark-4;
+            @include hoverShadows($primaryColor, black, $primaryLight2Color);
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
+        }
+        &:hover:focus {
+            color: $gg-dark-4;
+            @include hoverFocusShadows(
+                $primaryColor,
+                black,
+                $primaryLight2Color
+            );
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
+        }
     }
-  }
+
+    .gds-form-group__text-area-input {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($dangerColor)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E');
+        &:hover {
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryLight2Color)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E');
+        }
+        &:focus {
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($primaryColor)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E');
+        }
+    }
+
+    .gds-form-group__radio-indicator {
+        background-image: url('data:image/svg+xml;uft8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20500%20500%22%20style%3D%22enable-background%3Anew%200%200%20500%20500%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Ccircle%20cx%3D%22247.3%22%20cy%3D%22250.1%22%20r%3D%22199.6%22%20style%3D%22fill%3A%23#{strip-hash($dangerColor)}%3B%22%2F%3E%0A%3C%2Fsvg%3E');
+        border: 1px solid $dangerColor;
+    }
+
+    .gds-form-group__radio-input:checked + .gds-form-group__radio-indicator {
+        border-color: $dangerColor;
+    }
+
+    .gds-form-group__checkbox-indicator,
+    .gds-search-select__checkbox-indicator {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%271.1%27%20preserveAspectRatio%3D%27none%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20height%3D%27100%25%27%20width%3D%27100%25%27%20viewBox%3D%270%200%20500%20500%27%20enable-background%3D%27new%200%200%20500%20500%27%20xml%3Aspace%3D%27preserve%27%3E%3Cg%3E%3Cpath%20d%3D%27M399.6%2C46.4L193.6%2C252.3l-88.4-88.2L29%2C240.4l88.2%2C88.4l76.4%2C76.4l76.3-76.4L476%2C122.9L399.6%2C46.4z%20M399.6%2C46.4%27%20style%3D%27fill%3A%23#{strip-hash($dangerColor)}%3B%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+        border-color: $dangerColor;
+    }
+
+    .gds-form-group__checkbox-input:checked
+        + .gds-form-group__checkbox-indicator,
+    .gds-search-select__checkbox-input:checked
+        + .gds-form-group__checkbox-indicator,
+    .gds-form-group__checkbox-input:checked
+        + .gds-search-select__checkbox-indicator,
+    .gds-search-select__checkbox-input:checked
+        + .gds-search-select__checkbox-indicator {
+        border-color: $dangerColor;
+    }
+
+    .gds-form-group__toggleswitch-indicator {
+        background: white;
+
+        &:after {
+            color: white;
+            background-color: $dangerColor;
+        }
+    }
+
+    .gds-form-group__toggleswitch-indicator-labels {
+        &:before,
+        &:after {
+            color: $dangerColor;
+        }
+    }
+
+    .gds-form-group__toggleswitch-input:checked
+        ~ .gds-form-group__toggleswitch-indicator {
+        &:after {
+            background-color: $dangerColor;
+        }
+
+        .gds-form-group__toggleswitch-indicator-labels:after {
+            color: $dangerColor;
+        }
+    }
+
+    .gds-form-group__file-indicator:before {
+        background-color: $dangerColor;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0),
+            inset 0 0 120px 0 rgba(255, 255, 255, 0),
+            inset 0 #{-$cap-size} 0 0 $dangerDark2Color;
+    }
+
+    .gds-form-group__file-indicator:hover {
+        box-shadow: inset 0 #{-$cap-size} 0 0 $dangerColor,
+            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+
+        &:after {
+            color: $dangerLight2Color !important;
+        }
+
+        &:before {
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
+                inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
+                inset 0 #{-$cap-size} 0 0 $dangerDark2Color;
+        }
+    }
+
+    .gds-form-group__file-indicator:active {
+        box-shadow: inset 0 #{-$cap-size} 0 0 $dangerColor,
+            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+
+        &:before {
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
+                inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
+                inset 0 #{-$cap-size} 0 0 $dangerDark2Color;
+        }
+    }
 } // /.gds-form-group--danger
 
 // Disabled form groups
-.gds-form-group[disabled="disabled"],
+.gds-form-group[disabled='disabled'],
 .gds-form-group[disabled],
 .gds-form-group--disabled {
-  opacity: 0.5;
-  filter: grayscale(75%);
-  pointer-events: none;
-
-  // Prevent input fields from being focusable
-  * {
-    pointer-events: none;
-  }
-
-  .gds-form-group__text-input,
-  .gds-search-select__input {
-    background-color: $gg-light-1;
-    border: 1px solid $gg-light-2;
-  }
-
-  .gds-form-group__text-help {
-    background-color: $gg-light-2;
-  }
-
-  .gds-form-group__text-area-input {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($gg-light-2)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E");
-  }
-
-  .gds-form-group__checkbox-indicator,
-  .gds-search-select__checkbox-indicator,
-  .gds-form-group__radio-indicator,
-  .gds-form-group__toggleswitch-indicator {
     opacity: 0.5;
-  }
+    filter: grayscale(75%);
+    pointer-events: none;
+
+    // Prevent input fields from being focusable
+    * {
+        pointer-events: none;
+    }
+
+    .gds-form-group__text-input,
+    .gds-search-select__input {
+        background-color: $gg-light-1;
+        border: 1px solid $gg-light-2;
+    }
+
+    .gds-form-group__text-help {
+        background-color: $gg-light-2;
+    }
+
+    .gds-form-group__text-area-input {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Aa%3D%22http%3A//ns.adobe.com/AdobeSVGViewerExtensions/3.0/%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%25%20100%25%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%20fill%3A%23#{strip-hash($gg-light-2)}%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C20%2020%2C0%2020%2C20%20%22/%3E%3C/svg%3E');
+    }
+
+    .gds-form-group__checkbox-indicator,
+    .gds-search-select__checkbox-indicator,
+    .gds-form-group__radio-indicator,
+    .gds-form-group__toggleswitch-indicator {
+        opacity: 0.5;
+    }
 }
 
 // React Select Override - WORK IN PROGRESS
 
 .gds-react-select {
-  //parent wrapper
-  // this is where we could set the size
-  // font-size: 16px;
-  // &--sm {
-  //   font-size: 13px;
-  // }
-  // &--xs {
-  //   font-size: 11px;
-  // }
+    //parent wrapper
+    // this is where we could set the size
+    // font-size: 16px;
+    // &--sm {
+    //   font-size: 13px;
+    // }
+    // &--xs {
+    //   font-size: 11px;
+    // }
 }
 
 .gds-react-select__control {
-  // input area
-  color: inherit;
-  border: none !important;
-  border-radius: $input-border-radius;
-  height: $input-height-md;
-  @include defaultShadows($gg-light-3, black, $primaryLight2Color);
-  @include transition-ease-out(all, 100ms);
+    // input area
+    color: inherit;
+    border: none !important;
+    border-radius: $input-border-radius;
+    height: $input-height-md;
+    @include defaultShadows($gg-light-3, black, $primaryLight2Color);
+    @include transition-ease-out(all, 100ms);
 
-  &:hover {
-    color: $gg-dark-4;
-    @include hoverShadows($primaryColor, black, $primaryLight2Color);
-  }
-  &:hover &--is-focused {
-    color: $redColor !important;
-    @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
-  }
-  // &:focus {
-  //   color: $gg-dark-4;
-  //   @include focusShadows($primaryColor, black, $primaryLight2Color);
-  //   outline: none;
-  // }
-
-  &:focus,
-  &--is-focused {
-    //focused input
-    color: $gg-dark-4;
-    border-radius: $input-border-radius !important;
-    @include focusShadows($primaryColor, black, $primaryLight2Color);
-    outline: none;
-    &:hover:focus {
-      @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
+    &:hover {
+        color: $gg-dark-4;
+        @include hoverShadows($primaryColor, black, $primaryLight2Color);
     }
-  }
+    &:hover &--is-focused {
+        color: $redColor !important;
+        @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
+    }
+    // &:focus {
+    //   color: $gg-dark-4;
+    //   @include focusShadows($primaryColor, black, $primaryLight2Color);
+    //   outline: none;
+    // }
 
-  &--menu-is-open {
-    // drop down open
-  }
+    &:focus,
+    &--is-focused {
+        //focused input
+        color: $gg-dark-4;
+        border-radius: $input-border-radius !important;
+        @include focusShadows($primaryColor, black, $primaryLight2Color);
+        outline: none;
+        &:hover:focus {
+            @include hoverFocusShadows(
+                $primaryColor,
+                black,
+                $primaryLight2Color
+            );
+        }
+    }
+
+    &--menu-is-open {
+        // drop down open
+    }
 }
 
 .gds-react-select__value-container {
-  //part of input
-  &--is-multi {
-    // does something
-  }
+    //part of input
+    &--is-multi {
+        // does something
+    }
 
-  &--has-value {
-    //
-  }
+    &--has-value {
+        //
+    }
 }
 
 .gds-react-select__multi-value {
-  //
-  &__label {
     //
-  }
+    &__label {
+        //
+    }
 
-  &__remove {
-    // X
-  }
+    &__remove {
+        // X
+    }
 }
 
 .gds-react-select__indicators {
-  //
+    //
 }
 
 .gds-react-select__indicator {
-  //
+    //
 }
 
 .gds-react-select__clear-indicator {
-  //
+    //
 }
 
 .gds-react-select__dropdown-indicator {
-  // arrow down
+    // arrow down
 }
 
 .gds-react-select__indicator-separator {
-  // |
+    // |
 }
 
 .gds-react-select__input {
-  //might be able to ignore this one
+    //might be able to ignore this one
 }
 
 .gds-react-select__menu {
-  //
-  font-size: 14px !important;
+    //
+    font-size: 14px !important;
 }
 
 .gds-react-select__menu-list {
-  font-size: 14px !important;
+    font-size: 14px !important;
 }
 
 .gds-react-select__option {
-  font-size: 14px !important;
+    font-size: 14px !important;
 }
 
 .gds-react-select {
-  &--sm > .gds-react-select__control {
-    font-size: 13px;
-    height: $input-height-sm;
-  }
-  &--xs > .gds-react-select__control {
-    font-size: 11px;
-    height: $input-height-xs;
-  }
+    &--sm > .gds-react-select__control {
+        font-size: 13px;
+        height: $input-height-sm;
+    }
+    &--xs > .gds-react-select__control {
+        font-size: 11px;
+        height: $input-height-xs;
+    }
 }

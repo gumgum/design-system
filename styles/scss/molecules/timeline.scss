@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 .gds-timeline__items {
     list-style: none;
@@ -42,7 +42,7 @@
             content: none !important;
         }
     }
-    
+
     &:last-child {
         .gds-timeline__item-icon:after {
             content: none !important;
@@ -51,7 +51,6 @@
 }
 
 .gds-timeline__item--active {
-
     &:hover {
         .gds-timeline__item-icon {
             background-color: $timelineBackgroundActiveColor;
@@ -65,7 +64,7 @@
         border-color: white;
         box-shadow: 0 0 0 2px $timelineBorderActiveColor;
         &:before {
-            border-right: 8px solid $timelineBorderActiveColor; 
+            border-right: 8px solid $timelineBorderActiveColor;
             transform: scale(1, 1);
         }
     }
@@ -74,8 +73,6 @@
     }
 }
 
-
-
 .gds-timeline__item--completed {
     color: $timelineTextCompletedColor;
 
@@ -83,27 +80,27 @@
         background-color: $timelineBackgroundCompletedColor;
         border-color: white;
         transform: scale(1);
-        box-shadow: 0 0 0 8px rgba($timelineBorderCompletedColor, 0),  0 0 0 2px $timelineBorderCompletedColor;
+        box-shadow: 0 0 0 8px rgba($timelineBorderCompletedColor, 0),
+            0 0 0 2px $timelineBorderCompletedColor;
         &:before {
-            border-right: 8px solid $timelineBorderCompletedColor; 
+            border-right: 8px solid $timelineBorderCompletedColor;
             transform: scale(1, 1);
         }
         &:after {
-            border-left: 8px solid $timelineBorderCompletedColor; 
+            border-left: 8px solid $timelineBorderCompletedColor;
             transform: scale(1, 1);
         }
     }
 
     &:hover {
-
         .gds-timeline__item-icon {
             background-color: $timelineBackgroundActiveColor;
             &:before {
-                border-right: 8px solid $timelineBorderActiveColor; 
+                border-right: 8px solid $timelineBorderActiveColor;
                 transform: scale(1, 1);
             }
             &:after {
-                border-left: 8px solid $timelineBorderActiveColor; 
+                border-left: 8px solid $timelineBorderActiveColor;
                 transform: scale(1, 1);
             }
         }
@@ -169,11 +166,11 @@
         position: absolute;
         left: -9px;
         top: calc(50% - 7px);
-        width: 0; 
-        height: 0; 
+        width: 0;
+        height: 0;
         border-top: 7px solid transparent;
         border-bottom: 7px solid transparent;
-        border-right: 7px solid transparent; 
+        border-right: 7px solid transparent;
         transform-origin: 100% 50%;
         transform: scale(0, 1);
         @include transition-ease-out(all, 150ms);
@@ -183,11 +180,11 @@
         position: absolute;
         right: -9px;
         top: calc(50% - 7px);
-        width: 0; 
-        height: 0; 
+        width: 0;
+        height: 0;
         border-top: 7px solid transparent;
         border-bottom: 7px solid transparent;
-        border-left: 7px solid transparent; 
+        border-left: 7px solid transparent;
         transform-origin: 0 50%;
         transform: scale(0, 1);
         @include transition-ease-out(all, 150ms);
@@ -200,13 +197,13 @@
     &:before {
         border-top: 4px solid transparent;
         border-bottom: 4px solid transparent;
-        border-right: 4px solid transparent; 
+        border-right: 4px solid transparent;
         top: calc(50% - 4px);
     }
     &:after {
         border-top: 4px solid transparent;
         border-bottom: 4px solid transparent;
-        border-left: 4px solid transparent; 
+        border-left: 4px solid transparent;
         top: calc(50% - 4px);
     }
 }
@@ -218,18 +215,18 @@
         top: calc(50% - 8px);
         border-top: 8px solid transparent;
         border-bottom: 8px solid transparent;
-        border-right: 8px solid transparent; 
+        border-right: 8px solid transparent;
     }
     &:after {
         top: calc(50% - 8px);
         border-top: 8px solid transparent;
         border-bottom: 8px solid transparent;
-        border-left: 8px solid transparent; 
+        border-left: 8px solid transparent;
     }
 }
 
 .gds-timeline__item-icon--white {
-    background-color:white;
+    background-color: white;
 }
 
 .gds-timeline__progress-wrapper {
@@ -285,7 +282,7 @@
     background-color: $timelineProgressCompletedColor;
     height: 100%;
     width: 0%;
-    @include transition-ease-out(all,150ms);
+    @include transition-ease-out(all, 150ms);
 }
 
 // Loop for sizing progress indicator
@@ -293,8 +290,11 @@
     $w: math.div(100, -1 + $i);
 
     @for $g from 1 through $i {
-        $s: $w*(-1 + $g);
-        .gds-timeline__item:first-child:nth-last-of-type(#{$i}) ~ .gds-timeline__item--active:nth-of-type(#{$g}) ~ .gds-timeline__progress-wrapper .gds-timeline__progress-indicator{
+        $s: $w * (-1 + $g);
+        .gds-timeline__item:first-child:nth-last-of-type(#{$i})
+            ~ .gds-timeline__item--active:nth-of-type(#{$g})
+            ~ .gds-timeline__progress-wrapper
+            .gds-timeline__progress-indicator {
             width: #{$s}$percentage;
         }
     }
