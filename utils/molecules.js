@@ -442,54 +442,6 @@ const Molecules = [
       </div>
     </div>`,
     },
-
-    {
-        id: 'chooser-component',
-        gumdrops: '',
-        variants: [
-            {
-                title: 'Context (Color)',
-                values: [
-                    'gds-chooser--secondary',
-                    'gds-chooser--tertiary',
-                    'gds-chooser__menu--secondary',
-                    'gds-chooser__menu--tertiary',
-                ],
-            },
-            {
-                title: 'State',
-                values: ['gds-chooser__console--active'],
-            },
-        ],
-        related: [
-            {
-                title: 'Navigation',
-                url: '/molecules/nav-component',
-            },
-        ],
-
-        code: `()=> {
-      const [isOpen, setIsOpen] = React.useState(false);
-      let classToggle = isOpen ? "gds-chooser__console gds-chooser__console--active" : "gds-chooser__console";
-
-      return (
-        <div className="gds-chooser">
-          <button className="gds-chooser__button gds-chooser__button--left"><i className="btl bt-fw bt-angle-left"></i></button>
-          <div className={classToggle}>
-              <div onClick={()=>setIsOpen(!isOpen)} className="gds-chooser__currentItem">
-                <span className="gds-chooser__item-name">This is the current Item<i className="gds-chooser__item-icon fa fa-caret-right" aria-hidden="true"></i></span>
-              </div>
-              <ul className="gds-chooser__menu">
-                  <li className="gds-chooser__menu-item"><a className="gds-chooser__menu-link">Link</a></li>
-                  <li className="gds-chooser__menu-item"><a className="gds-chooser__menu-link">Link</a></li>
-                  <li className="gds-chooser__menu-item"><a className="gds-chooser__menu-link">Link</a></li>
-              </ul>
-          </div>
-          <button className="gds-chooser__button gds-chooser__button--right"><i className="btl bt-fw bt-angle-right"></i></button>
-        </div>   
-      )
-    }`,
-    },
     {
         id: 'html-preview-component',
         gumdrops: '',
@@ -568,8 +520,8 @@ const Molecules = [
         ],
         related: [
             {
-                title: 'Hotkey',
-                url: '/atoms/hotkey-component',
+                title: '',
+                url: '',
             },
         ],
 
@@ -655,130 +607,6 @@ const Molecules = [
       </div>
       <p className="gds-landing-pad__text">Click or Drag Logo Here</p>
     </div>`,
-    },
-    {
-        id: 'legend-component',
-        gumdrops: '',
-        variants: [
-            {
-                title: 'Display',
-                values: [
-                    'gds-legend--overlay',
-                    'gds-legend--overlay-center',
-                    'gds-legend__items--stacked',
-                    'gds-legend__item--stacked',
-                    'gds-legend__swatch--tip',
-                    'gds-legend__swatch--square',
-                ],
-            },
-            {
-                title: 'Size',
-                values: [
-                    'gds-legend__value--xs',
-                    'gds-legend__value--sm',
-                    'gds-legend__value--md',
-                    'gds-legend__value--lg',
-                    'gds-legend__value--xl',
-                ],
-            },
-            {
-                title: 'Context (Color) [set by data attr]',
-                values: [
-                    'data-gds-color=red',
-                    'data-gds-color=red-dk-1',
-                    'data-gds-color=red-dk-2',
-                    'data-gds-color=red-dk-3',
-                    'data-gds-color=red-dk-4',
-                    'data-gds-color=red-lt-1',
-                    'data-gds-color=red-lt-2',
-                    'data-gds-color=red-lt-3',
-                    'data-gds-color=red-lt-4',
-                    'data-gds-color=green',
-                    'data-gds-color=green-dk-1',
-                    'data-gds-color=green-dk-2',
-                    'data-gds-color=green-dk-3',
-                    'data-gds-color=green-dk-4',
-                    'data-gds-color=green-lt-1',
-                    'data-gds-color=green-lt-2',
-                    'data-gds-color=green-lt-3',
-                    'data-gds-color=green-lt-4',
-                    'data-gds-color=blue',
-                    'data-gds-color=blue-dk-1',
-                    'data-gds-color=blue-dk-2',
-                    'data-gds-color=blue-dk-3',
-                    'data-gds-color=blue-dk-4',
-                    'data-gds-color=blue-lt-1',
-                    'data-gds-color=blue-lt-2',
-                    'data-gds-color=blue-lt-3',
-                    'data-gds-color=blue-lt-4',
-                    'data-gds-color=gold',
-                    'data-gds-color=gold-dk-1',
-                    'data-gds-color=gold-dk-2',
-                    'data-gds-color=gold-dk-3',
-                    'data-gds-color=gold-dk-4',
-                    'data-gds-color=gold-lt-1',
-                    'data-gds-color=gold-lt-2',
-                    'data-gds-color=gold-lt-3',
-                    'data-gds-color=gold-lt-4',
-                    'data-gds-color=purple',
-                    'data-gds-color=purple-dk-1',
-                    'data-gds-color=purple-dk-2',
-                    'data-gds-color=purple-dk-3',
-                    'data-gds-color=purple-dk-4',
-                    'data-gds-color=purple-lt-1',
-                    'data-gds-color=purple-lt-2',
-                    'data-gds-color=purple-lt-3',
-                    'data-gds-color=purple-lt-4',
-                    'data-gds-color=dkgreen',
-                    'data-gds-color=dkgreen-dk-1',
-                    'data-gds-color=dkgreen-dk-2',
-                    'data-gds-color=dkgreen-dk-3',
-                    'data-gds-color=dkgreen-dk-4',
-                    'data-gds-color=dkgreen-lt-1',
-                    'data-gds-color=dkgreen-lt-2',
-                    'data-gds-color=dkgreen-lt-3',
-                    'data-gds-color=dkgreen-lt-4',
-                    'data-gds-color=orange',
-                    'data-gds-color=orange-dk-1',
-                    'data-gds-color=orange-dk-2',
-                    'data-gds-color=orange-dk-3',
-                    'data-gds-color=orange-dk-4',
-                    'data-gds-color=orange-lt-1',
-                    'data-gds-color=orange-lt-2',
-                    'data-gds-color=orange-lt-3',
-                    'data-gds-color=orange-lt-4',
-                ],
-            },
-        ],
-        related: [
-            {
-                title: 'Badge',
-                url: '/atoms/badge-component',
-            },
-        ],
-
-        code: `
-    <div className="gds-legend">
-      <ul className="gds-legend__items">
-        <li className="gds-legend__item">
-          <span className="gds-legend__swatch" data-gds-color="red"></span>
-          <span className="gds-legend__label">Label</span>
-        </li>
-        <li className="gds-legend__item">
-          <span className="gds-legend__swatch" data-gds-color="green"></span>
-          <span className="gds-legend__label">Label</span>
-        </li>
-        <li className="gds-legend__item">
-          <span className="gds-legend__swatch" data-gds-color="blue"></span>
-          <span className="gds-legend__label">Label</span>
-        </li>
-        <li className="gds-legend__item">
-          <span className="gds-legend__swatch" data-gds-color="gold"></span>
-          <span className="gds-legend__label">Label</span>
-        </li>
-      </ul>
-    </div>
-    `,
     },
     {
         id: 'modal-component',
