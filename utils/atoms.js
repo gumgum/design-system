@@ -457,97 +457,6 @@ const Atoms = [
 </div>`,
     },
     {
-        id: 'number-circle-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/atoms-numbercircle--default',
-        variants: [
-            {
-                title: 'Size',
-                values: [
-                    'gds-number-circle--xs',
-                    'gds-number-circle--sm',
-                    'gds-number-circle--lg',
-                    'gds-number-circle--xl',
-                ],
-            },
-            {
-                title: 'Context (Color)',
-                values: [
-                    'gds-number-circle--secondary',
-                    'gds-number-circle--success',
-                    'gds-number-circle--warning',
-                    'gds-number-circle--info',
-                    'gds-number-circle--danger',
-                    'gds-number-circle--white',
-                ],
-            },
-        ],
-        related: [
-            {
-                title: 'Ranker Card',
-                url: '/organisms/ranker-card-component',
-            },
-        ],
-
-        code: `<div
-    style={{
-      minHeight: 100
-    }}>
-      <span className="gds-number-circle">1</span>
-      <span className="-clear-both" />
-    </div>`,
-    },
-    {
-        id: 'progress-bar-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/atoms-progressbar--default',
-        variants: [
-            {
-                title: 'Size',
-                values: [
-                    'gds-progress-bar--lg',
-                    'gds-progress-bar--sm',
-                    'gds-progress-bar--xs',
-                ],
-            },
-            {
-                title: 'Context (Color)',
-                values: [
-                    'gds-progress-bar--striped-primary',
-                    'gds-progress-bar--secondary',
-                    'gds-progress-bar--striped-secondary',
-                    'gds-progress-bar--animated',
-                    'gds-progress-bar--value-colors',
-                ],
-            },
-        ],
-        related: [
-            {
-                title: 'Timeline',
-                url: '/organisms/timeline-component',
-            },
-            {
-                title: 'Legend',
-                url: '/molecules/legend-component',
-            },
-            {
-                title: 'Input',
-                url: '/molecules/input-component',
-            },
-            {
-                title: 'Skeleton',
-                url: '/atoms/skeleton-component',
-            },
-        ],
-
-        code: `<div className="-p-a-3">
-    <div className="gds-progress-bar -m-b-3" data-value="35"></div>
-    <div className="gds-progress-bar gds-progress-bar--sm -m-b-3" data-value="42"></div>
-    <div className="gds-progress-bar gds-progress-bar--lg -m-b-3" data-value="53"></div>
-    <div className="gds-progress-bar gds-progress-bar--striped-primary gds-progress-bar--animated" data-value="55"></div>
-</div>`,
-    },
-    {
         id: 'segment-component',
         gumdrops: '',
         variants: [
@@ -587,37 +496,6 @@ const Atoms = [
         </div>
       );
     }`,
-    },
-    {
-        id: 'skeleton-component',
-        gumdrops: '',
-        variants: [
-            {
-                title: 'Required',
-                values: ['gds-skeleton'],
-            },
-            {
-                title: 'Size',
-                values: ['gds-skeleton--header'],
-            },
-        ],
-        related: [
-            {
-                title: 'Inputs',
-                url: '/molecules/input-component',
-            },
-            {
-                title: 'Text',
-                url: '/atoms/text-component',
-            },
-        ],
-
-        code: `<div className="-p-a-3">
-    <div className="gds-skeleton gds-skeleton--header" style={{width: "30%"}}></div>
-    <div className="gds-skeleton" style={{width: "90%"}}></div>
-    <div className="gds-skeleton" style={{width: "70%"}}></div>
-    <div className="gds-skeleton" style={{width: "80%"}}></div>
-    </div>`,
     },
     {
         id: 'snackbar-component',
