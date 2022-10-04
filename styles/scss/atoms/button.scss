@@ -184,7 +184,6 @@ a.gds-circular-button,
 .gds-multi-select__button,
 .gds-button-group__button,
 .gds-button-dropdown--in-group > .gds-button-dropdown__button,
-.gds-onboarder__button,
 .react-datepicker__today-button,
 .ReactTable .-pagination .-btn,
 .DayPicker-TodayButton {
@@ -551,7 +550,6 @@ a.gds-circular-button--default,
 .ReactTable .-pagination .-btn,
 .gds-circular-button--primary,
 .gds-multi-select__button--primary,
-.gds-onboarder__button,
 .DayPicker-TodayButton {
     @include backgroundGradient(
         $primaryLight1Color,
