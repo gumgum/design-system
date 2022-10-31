@@ -280,6 +280,14 @@ $dividerTextColor: $grayLight4Color !default;
 $dividerArrowColor: $grayLight4Color !default;
 $dividerLineColor: $grayLight4Color !default;
 $paginationLinkColor: $blueLight1Color !default;
+// To deprecate
+$progressBarPrimaryColor: $darkBlueColor !default;
+$progressBarSecondaryColor: $secondaryColor !default;
+$progressBarPrimaryUnderlineColor: $blueDark3Color !default;
+$progressBarSecondaryUnderlineColor: $secondaryDark3Color !default;
+$numberCircleTextColor: $darkBlueColor !default;
+$numberCircleBorderColor: $darkBlueColor !default;
+
 $modalHeaderPrimaryBackgroundColor: $blueDark5Color !default;
 $modalHeaderPrimaryUnderlineColor: $secondaryColor !default;
 $modalHeaderSecondaryBackgroundColor: $secondaryColor !default;

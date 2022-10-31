@@ -58,6 +58,11 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts/';
 @import 'atoms/snackbar';
 @import 'atoms/well';
 
+// To deprecate
+@import 'atoms/number-circle';
+@import 'atoms/circular-thumbnail';
+@import 'atoms/progress-bar';
+
 // Molecules
 @import 'molecules/accordion';
 @import 'molecules/bubble-menu';
