@@ -10,11 +10,9 @@ section: utilities
 <button className="gds-button gds-button--default -disabled">Disabled Button</button>
 
 ```html
-<button className="gds-button gds-button--default -disabled">
-  Disabled Button
-</button>
+<button className="gds-button gds-button--default -disabled">Disabled Button</button>
 ```
 
 **Optional classes:**
 
-- `-disabled`
+-   `-disabled`

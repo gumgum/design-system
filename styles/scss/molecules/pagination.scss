@@ -1,224 +1,223 @@
-@use "sass:math";
+@use 'sass:math';
 
 .gds-pagination {
-  position: relative;
-  display: block;
-  border-radius: $border-radius;
-  border: 1px solid rgba(black, 0.1);
+    position: relative;
+    display: block;
+    border-radius: $border-radius;
+    border: 1px solid rgba(black, 0.1);
 }
 
 .gds-pagination--fixed {
-  display: inline-block;
-  width: auto;
+    display: inline-block;
+    width: auto;
 }
 
 .gds-pagination__page-item {
-  display: inline-block;
-  z-index: $z-index-2;
-  border-right: 1px solid rgba(black, 0.1);
+    display: inline-block;
+    z-index: $z-index-2;
+    border-right: 1px solid rgba(black, 0.1);
 
-  font-family: $pri-font-regular;
-  color: $primaryColor;
-  @include no-select();
+    font-family: $pri-font-regular;
+    color: $primaryColor;
+    @include no-select();
 
-  // Previous and next arrows
-  &:first-of-type:after,
-  &:last-of-type:after {
-    content: "";
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xmlns%3Aa%3D%22http%3A%2F%2Fns.adobe.com%2FAdobeSVGViewerExtensions%2F3.0%2F%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2216px%22%20height%3D%2219px%22%20viewBox%3D%220%200%2016%2019%22%20style%3D%22enable-background%3Anew%200%200%2016%2019%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23#{strip-hash($primaryColor)}%3B%7D%3C%2Fstyle%3E%3Cpolygon%20class%3D%22st0%22%20points%3D%220%2C0%200%2C19%2016%2C9.5%20%22%2F%3E%3C%2Fsvg%3E");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 14px 14px;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    @include transition-back(all, 250ms);
-  }
+    // Previous and next arrows
+    &:first-of-type:after,
+    &:last-of-type:after {
+        content: '';
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xmlns%3Aa%3D%22http%3A%2F%2Fns.adobe.com%2FAdobeSVGViewerExtensions%2F3.0%2F%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2216px%22%20height%3D%2219px%22%20viewBox%3D%220%200%2016%2019%22%20style%3D%22enable-background%3Anew%200%200%2016%2019%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23#{strip-hash($primaryColor)}%3B%7D%3C%2Fstyle%3E%3Cpolygon%20class%3D%22st0%22%20points%3D%220%2C0%200%2C19%2016%2C9.5%20%22%2F%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 14px 14px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        @include transition-back(all, 250ms);
+    }
 
-  &:first-of-type:hover:after,
-  &:last-of-type:hover:after {
-    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xmlns%3Aa%3D%22http%3A%2F%2Fns.adobe.com%2FAdobeSVGViewerExtensions%2F3.0%2F%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2216px%22%20height%3D%2219px%22%20viewBox%3D%220%200%2016%2019%22%20style%3D%22enable-background%3Anew%200%200%2016%2019%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23#{strip-hash($paginationLinkColor)}%3B%7D%3C%2Fstyle%3E%3Cpolygon%20class%3D%22st0%22%20points%3D%220%2C0%200%2C19%2016%2C9.5%20%22%2F%3E%3C%2Fsvg%3E");
-  }
+    &:first-of-type:hover:after,
+    &:last-of-type:hover:after {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xmlns%3Aa%3D%22http%3A%2F%2Fns.adobe.com%2FAdobeSVGViewerExtensions%2F3.0%2F%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2216px%22%20height%3D%2219px%22%20viewBox%3D%220%200%2016%2019%22%20style%3D%22enable-background%3Anew%200%200%2016%2019%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23#{strip-hash($paginationLinkColor)}%3B%7D%3C%2Fstyle%3E%3Cpolygon%20class%3D%22st0%22%20points%3D%220%2C0%200%2C19%2016%2C9.5%20%22%2F%3E%3C%2Fsvg%3E');
+    }
 
-  // Previous (left) arrow
-  &:first-of-type:after {
-    transform: rotate(180deg);
-  }
+    // Previous (left) arrow
+    &:first-of-type:after {
+        transform: rotate(180deg);
+    }
 
-  &:last-of-type {
-    border-right: none;
-  }
+    &:last-of-type {
+        border-right: none;
+    }
 }
 
 .gds-pagination__page-item--fixed {
-  height: ($unit * 3);
-  width: ($unit * 3) !important;
+    height: ($unit * 3);
+    width: ($unit * 3) !important;
 }
 
 .gds-pagination__page-link {
-  width: 100%;
-  display: block;
-  text-align: center;
-  padding: ($unit * 0.5) 0;
-  font-size: $font-size-minus-1;
-  color: inherit;
-  cursor: pointer;
-  @include transition-back(all, 250ms);
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: ($unit * 0.5) 0;
+    font-size: $font-size-minus-1;
+    color: inherit;
+    cursor: pointer;
+    @include transition-back(all, 250ms);
 
-  &:hover {
-    text-decoration: none;
-    color: $paginationLinkColor;
-  }
+    &:hover {
+        text-decoration: none;
+        color: $paginationLinkColor;
+    }
 }
 
 .gds-pagination__page-link--fixed {
-  height: 100%;
-  padding: ($unit * 0.7) 0 0 0;
+    height: 100%;
+    padding: ($unit * 0.7) 0 0 0;
 }
 
 .gds-pagination__page-indicator {
-  background-color: $primaryColor;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  z-index: $z-index-1;
-  @include transition-ease-out(all, 250ms);
+    background-color: $primaryColor;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: $z-index-1;
+    @include transition-ease-out(all, 250ms);
 }
 
 .gds-pagination__page-item--active {
-  color: white;
-  background-color: $primaryColor;
-  border-right: none;
+    color: white;
+    background-color: $primaryColor;
+    border-right: none;
 
-  .gds-pagination__page-link:hover {
-    color: inherit;
-  }
+    .gds-pagination__page-link:hover {
+        color: inherit;
+    }
 }
 
 .gds-pagination--xl .gds-pagination__page-link {
-  padding: ($unit * 2) 0;
-  font-size: $font-size-plus-1;
+    padding: ($unit * 2) 0;
+    font-size: $font-size-plus-1;
 }
 
 .gds-pagination--xl .gds-pagination__page-item--fixed {
-  height: ($unit * 6) !important;
-  width: ($unit * 6) !important;
+    height: ($unit * 6) !important;
+    width: ($unit * 6) !important;
 }
 
 .gds-pagination--lg .gds-pagination__page-link {
-  padding: ($unit * 1.2) 0;
-  font-size: $font-size;
+    padding: ($unit * 1.2) 0;
+    font-size: $font-size;
 }
 
 .gds-pagination--lg .gds-pagination__page-item--fixed {
-  height: ($unit * 4) !important;
-  width: ($unit * 4) !important;
+    height: ($unit * 4) !important;
+    width: ($unit * 4) !important;
 }
 
 .gds-pagination--md .gds-pagination__page-link {
-  padding: ($unit * 0.75) 0;
-  font-size: $font-size-minus-1;
+    padding: ($unit * 0.75) 0;
+    font-size: $font-size-minus-1;
 }
 
 .gds-pagination--md .gds-pagination__page-item--fixed {
-  height: ($unit * 3) !important;
-  width: ($unit * 3) !important;
+    height: ($unit * 3) !important;
+    width: ($unit * 3) !important;
 }
 
 .gds-pagination--sm {
-  height: ($unit * 2);
+    height: ($unit * 2);
 }
 
 .gds-pagination--sm .gds-pagination__page-link {
-  padding: ($unit * 0.25) 0;
-  font-size: $font-size-minus-3;
-  height: 100%;
+    padding: ($unit * 0.25) 0;
+    font-size: $font-size-minus-3;
+    height: 100%;
 }
 
 .gds-pagination--sm .gds-pagination__page-item,
 .gds-pagination--sm .gds-pagination__page-item--fixed {
-  height: 100% !important;
+    height: 100% !important;
 }
 
 .gds-pagination--sm .gds-pagination__page-item--fixed {
-  width: ($unit * 1.75) !important;
+    width: ($unit * 1.75) !important;
 }
 
 // Sm arrows
 .gds-pagination--sm .gds-pagination__page-item:first-of-type:after,
 .gds-pagination--sm .gds-pagination__page-item:last-of-type:after {
-  background-size: 9px 9px;
+    background-size: 9px 9px;
 }
 
 .gds-pagination--xs {
-  max-height: ($unit * 1.6);
+    max-height: ($unit * 1.6);
 }
 
 .gds-pagination--xs .gds-pagination__page-item {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .gds-pagination--xs .gds-pagination__page-link {
-  padding: math.div($unit, 6) 0;
-  font-size: 10px;
+    padding: math.div($unit, 6) 0;
+    font-size: 10px;
 }
 
 .gds-pagination--xs .gds-pagination__page-item--fixed {
-  width: ($unit * 1.5) !important;
-  height: 100%;
+    width: ($unit * 1.5) !important;
+    height: 100%;
 }
 
 // Xs arrows
 .gds-pagination--xs .gds-pagination__page-item:first-of-type:after,
 .gds-pagination--xs .gds-pagination__page-item:last-of-type:after {
-  background-size: 7px 7px;
+    background-size: 7px 7px;
 }
 
 // Loop for sizing pagination blocks
 @for $i from 1 through 10 {
-  $w: math.div(100, $i);
-  $p: "%";
+    $w: math.div(100, $i);
+    $p: '%';
 
-  .gds-pagination__page-item:first-child:nth-last-of-type(#{$i}),
-  .gds-pagination__page-item:first-child:nth-last-of-type(#{$i})
-    ~ .gds-pagination__page-item,
-  .gds-pagination__page-item:first-child:nth-last-of-type(#{$i})
-    ~ .gds-pagination__page-indicator {
-    width: #{$w}#{$p};
-  }
-
-  @for $g from 1 through $i {
-    $s: -1 + $g;
-
+    .gds-pagination__page-item:first-child:nth-last-of-type(#{$i}),
+    .gds-pagination__page-item:first-child:nth-last-of-type(#{$i}) ~ .gds-pagination__page-item,
     .gds-pagination__page-item:first-child:nth-last-of-type(#{$i})
-      ~ .gds-pagination__page-item--active:nth-of-type(#{$g})
-      ~ .gds-pagination__page-indicator {
-      left: #{$w * $s}#{$p};
+        ~ .gds-pagination__page-indicator {
+        width: #{$w}#{$p};
     }
-  }
+
+    @for $g from 1 through $i {
+        $s: -1 + $g;
+
+        .gds-pagination__page-item:first-child:nth-last-of-type(#{$i})
+            ~ .gds-pagination__page-item--active:nth-of-type(#{$g})
+            ~ .gds-pagination__page-indicator {
+            left: #{$w * $s}#{$p};
+        }
+    }
 }
 
 // Only show previous and next arrows on mobile, no specific page numbers
 .gds-pagination--mobile-arrows {
-  @media #{$phone-width}, #{$phablet-width} {
-    .gds-pagination__page-item,
-    .gds-pagination__page-indicator {
-      display: none;
-    }
+    @media #{$phone-width}, #{$phablet-width} {
+        .gds-pagination__page-item,
+        .gds-pagination__page-indicator {
+            display: none;
+        }
 
-    .gds-pagination__page-item:first-of-type,
-    .gds-pagination__page-item:last-of-type {
-      width: 50% !important;
-      display: inline-block;
-    }
+        .gds-pagination__page-item:first-of-type,
+        .gds-pagination__page-item:last-of-type {
+            width: 50% !important;
+            display: inline-block;
+        }
 
-    // For non-fixed width variants
-    &.gds-pagination--fixed .gds-pagination__page-item:first-of-type,
-    &.gds-pagination--fixed .gds-pagination__page-item:last-of-type {
-      width: ($unit * 4) !important;
+        // For non-fixed width variants
+        &.gds-pagination--fixed .gds-pagination__page-item:first-of-type,
+        &.gds-pagination--fixed .gds-pagination__page-item:last-of-type {
+            width: ($unit * 4) !important;
+        }
     }
-  }
 }

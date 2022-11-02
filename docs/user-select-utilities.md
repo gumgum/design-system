@@ -15,4 +15,4 @@ Disable the user's ability to select text within any element.
 
 **Optional classes:**
 
-- `-user-select--none`
+-   `-user-select--none`

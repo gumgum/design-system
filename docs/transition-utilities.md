@@ -13,12 +13,12 @@ Adds transitions of varying lengths and easing values to any element.
 
 **Optional classes:**
 
-- `-transition-back-100`
-- `-transition-back-250`
-- `-transition-back-500`
-- `-transition-out-100`
-- `-transition-out-250`
-- `-transition-out-500`
-- `-transition-in-100`
-- `-transition-in-250`
-- `-transition-in-500`
+-   `-transition-back-100`
+-   `-transition-back-250`
+-   `-transition-back-500`
+-   `-transition-out-100`
+-   `-transition-out-250`
+-   `-transition-out-500`
+-   `-transition-in-100`
+-   `-transition-in-250`
+-   `-transition-in-500`

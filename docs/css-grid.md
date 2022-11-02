@@ -31,20 +31,20 @@ The CSS grid component, prefixed with `gds-grid`, is used to assemble CSS grid-b
 
 ```html
 <div className="gds-grid__container--3">
-  <div className="gds-card -m-a-0">
-    <p className="gds-card__block">Some content</p>
-  </div>
-  <div className="gds-card -m-a-0">
-    <p className="gds-card__block">Some content</p>
-  </div>
-  <div className="gds-card -m-a-0">
-    <p className="gds-card__block">Some content</p>
-  </div>
-  <div className="gds-card -m-a-0">
-    <p className="gds-card__block">Some content</p>
-  </div>
-  <div className="gds-card -m-a-0">
-    <p className="gds-card__block">Some content</p>
-  </div>
+    <div className="gds-card -m-a-0">
+        <p className="gds-card__block">Some content</p>
+    </div>
+    <div className="gds-card -m-a-0">
+        <p className="gds-card__block">Some content</p>
+    </div>
+    <div className="gds-card -m-a-0">
+        <p className="gds-card__block">Some content</p>
+    </div>
+    <div className="gds-card -m-a-0">
+        <p className="gds-card__block">Some content</p>
+    </div>
+    <div className="gds-card -m-a-0">
+        <p className="gds-card__block">Some content</p>
+    </div>
 </div>
 ```

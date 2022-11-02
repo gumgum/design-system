@@ -19,22 +19,18 @@ export default function AllDocsPage({ allPostsData }) {
             <Card>
                 <CardBlock>
                     <p className="-m-b-2">
-                        GumGum&apos;s Concrete Design System documentation is
-                        currently a work in progress.
+                        GumGum&apos;s Concrete Design System documentation is currently a work in
+                        progress.
                     </p>
                     <Divider />
-                    <p className="gds-text--sm gds-text--bold">
-                        Full Component List
-                    </p>
+                    <p className="gds-text--sm gds-text--bold">Full Component List</p>
                     <ul className="-p-h-4">
                         {allPostsData.map(({ id, section, title }) => (
                             <li key={id}>
                                 <Link href={`/${section}/${id}`}>
                                     <a className="gds-button--link">
                                         {title}
-                                        <span className="gds-badge">
-                                            {section}
-                                        </span>
+                                        <span className="gds-badge">{section}</span>
                                     </a>
                                 </Link>
                             </li>

@@ -15,51 +15,51 @@ For asynchronous live search with typeahead suggestions, use a standard input wi
 
 ```html
 <div className="gds-search" data-gds-search>
-  <div className="gds-search__input-holder" data-gds-search-input-holder>
-    <div className="gds-form-group gds-search__form-group">
-      <div className="gds-form-group__text-input--button-cap">
-        <input
-          className="gds-form-group__text-input"
-          type="text"
-          placeholder="Search..."
-          data-gds-search-input=""
-        />
-        <i className="gds-form-group__text-input-icon btl bt-search"></i>
-      </div>
+    <div className="gds-search__input-holder" data-gds-search-input-holder>
+        <div className="gds-form-group gds-search__form-group">
+            <div className="gds-form-group__text-input--button-cap">
+                <input
+                    className="gds-form-group__text-input"
+                    type="text"
+                    placeholder="Search..."
+                    data-gds-search-input=""
+                />
+                <i className="gds-form-group__text-input-icon btl bt-search"></i>
+            </div>
+        </div>
+        <ul className="gds-search__typeahead">
+            <li
+                className="gds-search__typeahead-item gds-search__typeahead-item--selected"
+                data-gds-typeahead-index="0"
+                data-gds-typahead-selected="true"
+            >
+                <a href="#alabama">Alabama - Selected</a>
+            </li>
+            <li className="gds-search__typeahead-item" data-gds-typeahead-index="1">
+                <a href="#alabama">Alaska</a>
+            </li>
+            <li className="gds-search__typeahead-item" data-gds-typeahead-index="2">
+                <a href="#alabama">Arizona</a>
+            </li>
+            <li className="gds-search__typeahead-item" data-gds-typeahead-index="3">
+                <a href="#alabama">Arkansas</a>
+            </li>
+            <li className="gds-search__typeahead-item" data-gds-typeahead-index="4">
+                <a href="#alabama">California</a>
+            </li>
+            <li
+                className="gds-search__typeahead-item"
+                data-gds-typeahead-index="5"
+                data-gds-no-results
+            >
+                No Results
+            </li>
+        </ul>
     </div>
-    <ul className="gds-search__typeahead">
-      <li
-        className="gds-search__typeahead-item gds-search__typeahead-item--selected"
-        data-gds-typeahead-index="0"
-        data-gds-typahead-selected="true"
-      >
-        <a href="#alabama">Alabama - Selected</a>
-      </li>
-      <li className="gds-search__typeahead-item" data-gds-typeahead-index="1">
-        <a href="#alabama">Alaska</a>
-      </li>
-      <li className="gds-search__typeahead-item" data-gds-typeahead-index="2">
-        <a href="#alabama">Arizona</a>
-      </li>
-      <li className="gds-search__typeahead-item" data-gds-typeahead-index="3">
-        <a href="#alabama">Arkansas</a>
-      </li>
-      <li className="gds-search__typeahead-item" data-gds-typeahead-index="4">
-        <a href="#alabama">California</a>
-      </li>
-      <li
-        className="gds-search__typeahead-item"
-        data-gds-typeahead-index="5"
-        data-gds-no-results
-      >
-        No Results
-      </li>
-    </ul>
-  </div>
 </div>
 ```
 
 **Optional classes:**
 
-- `gds-search--shown`
-- `gds-search--no-result`
+-   `gds-search--shown`
+-   `gds-search--no-result`

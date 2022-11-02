@@ -186,7 +186,6 @@
 }
 
 .DayPickerInput-Overlay {
-    // @include hoverShadows($primaryDark3Color, black, $primaryLight2Color, "true");
     position: absolute;
     z-index: 1;
     background: white;

@@ -6,8 +6,7 @@ export const getAtomData = id => {
 const Atoms = [
     {
         id: 'badge-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/atoms-badge--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/atoms-badge--default',
         variants: [
             {
                 title: 'Context (Color)',
@@ -49,8 +48,7 @@ const Atoms = [
     },
     {
         id: 'button-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/atoms-button--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/atoms-button--default',
         variants: [
             {
                 title: 'Context (Color)',
@@ -79,12 +77,7 @@ const Atoms = [
             },
             {
                 title: 'Size',
-                values: [
-                    'gds-button--xs',
-                    'gds-button--sm',
-                    'gds-button--md',
-                    'gds-button--lg',
-                ],
+                values: ['gds-button--xs', 'gds-button--sm', 'gds-button--md', 'gds-button--lg'],
             },
             {
                 title: 'State',
@@ -278,8 +271,7 @@ const Atoms = [
     },
     {
         id: 'divider-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/molecules-divider--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/molecules-divider--default',
         variants: [
             {
                 title: 'Text Position',
@@ -423,8 +415,7 @@ const Atoms = [
     },
     {
         id: 'loading-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/atoms-loadingdots--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/atoms-loadingdots--default',
         variants: [
             {
                 title: 'Context (Color)',
@@ -491,8 +482,7 @@ const Atoms = [
     },
     {
         id: 'snackbar-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/molecules-snackbar--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/molecules-snackbar--default',
         variants: [
             {
                 title: 'Required',
@@ -508,10 +498,7 @@ const Atoms = [
             },
             {
                 title: 'Add On',
-                values: [
-                    'gds-snackbar__notification-text',
-                    'gds-snackbar__notification-button',
-                ],
+                values: ['gds-snackbar__notification-text', 'gds-snackbar__notification-button'],
             },
             {
                 title: 'Context (Color)',
@@ -566,11 +553,7 @@ const Atoms = [
             },
             {
                 title: 'Add Ons',
-                values: [
-                    'gds-tag--with-button',
-                    'gds-tag__button',
-                    'gds-tag__option',
-                ],
+                values: ['gds-tag--with-button', 'gds-tag__button', 'gds-tag__option'],
             },
             {
                 title: 'Size',
@@ -720,11 +703,7 @@ const Atoms = [
             },
             {
                 title: 'Size - Body',
-                values: [
-                    'gds-text--body-xs',
-                    'gds-text--body-sm',
-                    'gds-text--body-md',
-                ],
+                values: ['gds-text--body-xs', 'gds-text--body-sm', 'gds-text--body-md'],
             },
             {
                 title: 'Weight',
@@ -824,10 +803,7 @@ const Atoms = [
             },
             {
                 title: 'List',
-                values: [
-                    'gds-text__list-item--disc',
-                    'gds-text__list-item--number',
-                ],
+                values: ['gds-text__list-item--disc', 'gds-text__list-item--number'],
             },
         ],
         related: [
@@ -870,8 +846,7 @@ const Atoms = [
     },
     {
         id: 'tooltip-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/atoms-tooltip--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/atoms-tooltip--default',
         variants: [
             {
                 title: 'Position',
@@ -899,11 +874,7 @@ const Atoms = [
             },
             {
                 title: 'State',
-                values: [
-                    'gds-tooltip--always',
-                    'gds-tooltip--no-animate',
-                    'gds-tooltip--bounce',
-                ],
+                values: ['gds-tooltip--always', 'gds-tooltip--no-animate', 'gds-tooltip--bounce'],
             },
         ],
         related: [
@@ -923,8 +894,7 @@ const Atoms = [
     },
     {
         id: 'well-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/molecules-well--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/molecules-well--default',
         variants: [
             {
                 title: 'Required',

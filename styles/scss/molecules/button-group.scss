@@ -1,125 +1,117 @@
 // Button group
 .gds-button-group {
-  border-radius: $btn-border-radius;
-  display: inline-block;
+    border-radius: $btn-border-radius;
+    display: inline-block;
 }
 
 .gds-button-group__button,
 .gds-button-dropdown--in-group > .gds-button-dropdown__button {
-  margin-right: 0;
-  border-radius: 0;
-
-  + .gds-button-dropdown {
-    display: inline-block;
-  }
-
-  + .gds-button,
-  + small,
-  + p {
-    margin-left: 0;
-    border-top-left-radius: 0;
-  }
-
-  &:not(:first-child):not(:last-child) {
+    margin-right: 0;
     border-radius: 0;
-    margin-left: -1px;
-  }
 
-  &:last-child {
-    margin-left: -1px;
-    border-bottom-right-radius: $border-radius;
-    border-top-right-radius: $border-radius;
-  }
-  &:first-child {
-    border-bottom-left-radius: $border-radius;
-    border-top-left-radius: $border-radius;
-  }
-  &:hover,
-  &:focus,
-  &:focus:hover {
-    z-index: $z-index-1;
-  }
+    + .gds-button-dropdown {
+        display: inline-block;
+    }
+
+    + .gds-button,
+    + small,
+    + p {
+        margin-left: 0;
+        border-top-left-radius: 0;
+    }
+
+    &:not(:first-child):not(:last-child) {
+        border-radius: 0;
+        margin-left: -1px;
+    }
+
+    &:last-child {
+        margin-left: -1px;
+        border-bottom-right-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+    }
+    &:first-child {
+        border-bottom-left-radius: $border-radius;
+        border-top-left-radius: $border-radius;
+    }
+    &:hover,
+    &:focus,
+    &:focus:hover {
+        z-index: $z-index-1;
+    }
 }
 
 // Button-group - large
 .gds-button-group--lg {
-  .gds-button,
-  .gds-button-group__button {
-    font-size: $btn-font-size-large;
-    padding: $btn-padding-large;
-  }
+    .gds-button,
+    .gds-button-group__button {
+        font-size: $btn-font-size-large;
+        padding: $btn-padding-large;
+    }
 }
 
 // Button-group - small
 .gds-button-group--sm {
-  .gds-button,
-  .gds-button-group__button {
-    font-size: $btn-font-size-small;
-    padding: $btn-padding-small;
-    &:active {
-      &:before {
-        bottom: 0 !important;
-      }
+    .gds-button,
+    .gds-button-group__button {
+        font-size: $btn-font-size-small;
+        padding: $btn-padding-small;
+        &:active {
+            &:before {
+                bottom: 0 !important;
+            }
+        }
     }
-  }
 }
 
 // Button-group - xsmall
 .gds-button-group--xs {
-  .gds-button,
-  .gds-button-group__button {
-    font-size: $btn-font-size-xsmall;
-    padding: $btn-padding-xsmall;
+    .gds-button,
+    .gds-button-group__button {
+        font-size: $btn-font-size-xsmall;
+        padding: $btn-padding-xsmall;
 
-    &:active {
-      &:before {
-        bottom: 0 !important;
-      }
+        &:active {
+            &:before {
+                bottom: 0 !important;
+            }
+        }
     }
-  }
 }
 
 // Set buttons to block at phone width
 @media #{$phone-width}, #{$phablet-width} {
-  .gds-button-group--responsive,
-  .gds-button-group__button--responsive {
-    display: block;
-    width: 100%;
-  }
-
-  .gds-button-group__button--responsive {
-    &:not(first-child):not(last-child) {
-      border-radius: $btn-border-radius !important;
-      border: none;
+    .gds-button-group--responsive,
+    .gds-button-group__button--responsive {
+        display: block;
+        width: 100%;
     }
 
-    &:first-child {
-      border-radius: $btn-border-radius !important;
-      border: none;
+    .gds-button-group__button--responsive {
+        &:not(first-child):not(last-child) {
+            border-radius: $btn-border-radius !important;
+            border: none;
+        }
+
+        &:first-child {
+            border-radius: $btn-border-radius !important;
+            border: none;
+        }
+
+        &:last-child {
+            border-radius: $btn-border-radius !important;
+            border: none;
+        }
     }
 
-    &:last-child {
-      border-radius: $btn-border-radius !important;
-      border: none;
+    .gds-button-group--responsive {
+        margin-left: 0 !important;
     }
-  }
 
-  .gds-button-group--responsive {
-    margin-left: 0 !important;
-  }
-
-  .gds-button-group--responsive
-    .gds-button--responsive
-    + .gds-button--responsive,
-  .gds-button-group--responsive
-    .gds-button--responsive
-    + .gds-button-group--responsive,
-  .gds-button-group--responsive
-    .gds-button-group--responsive
-    + .gds-button--responsive,
-  .gds-button-group--responsive
-    .gds-button-group--responsive
-    + .gds-button-group--responsive {
-    margin-left: 0;
-  }
+    .gds-button-group--responsive .gds-button--responsive + .gds-button--responsive,
+    .gds-button-group--responsive .gds-button--responsive + .gds-button-group--responsive,
+    .gds-button-group--responsive .gds-button-group--responsive + .gds-button--responsive,
+    .gds-button-group--responsive .gds-button-group--responsive + .gds-button-group--responsive {
+        margin-left: 0;
+    }
 }

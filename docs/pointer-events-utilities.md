@@ -12,14 +12,12 @@ section: utilities
 
 ```html
 <button className="gds-button gds-button--default -pointer-events--auto -m-b-2">
-  Default Pointer-Events</button
+    Default Pointer-Events</button
 ><br />
-<button className="gds-button gds-button--default -pointer-events--none">
-  No Pointer-Events
-</button>
+<button className="gds-button gds-button--default -pointer-events--none">No Pointer-Events</button>
 ```
 
 **Optional classes:**
 
-- `-pointer-events--auto`
-- `-pointer-events--none`
+-   `-pointer-events--auto`
+-   `-pointer-events--none`

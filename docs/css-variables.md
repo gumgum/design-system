@@ -18,7 +18,7 @@ Use any of these colors in your CSS by wrapping them in `var()`:
 
 ## Example
 
-The following are the CSS variables provided with the `blue` theme. All semantic colors (such as 'primary', 'secondary', 'success', 'danger', etc...) are relative to the current theme, and each individual color is also provided along with 4 light and 4 dark variations provided. 
+The following are the CSS variables provided with the `blue` theme. All semantic colors (such as 'primary', 'secondary', 'success', 'danger', etc...) are relative to the current theme, and each individual color is also provided along with 4 light and 4 dark variations provided.
 
 ```css
 --primaryColor: #00a7cf;

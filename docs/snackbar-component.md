@@ -15,26 +15,26 @@ To hide a notification, add `gds-snackbar__notification--hidden` to it.
 
 ```html
 <ul className="gds-snackbar">
-  <li className="gds-snackbar__notification">
-    <p className="gds-snackbar__notification-text">Some text goes here.</p>
-    <button className="gds-snackbar__notification-button"></button>
-  </li>
-  <li className="gds-snackbar__notification">
-    <p className="gds-snackbar__notification-text">Some text goes here.</p>
-    <button className="gds-snackbar__notification-button"></button>
-  </li>
+    <li className="gds-snackbar__notification">
+        <p className="gds-snackbar__notification-text">Some text goes here.</p>
+        <button className="gds-snackbar__notification-button"></button>
+    </li>
+    <li className="gds-snackbar__notification">
+        <p className="gds-snackbar__notification-text">Some text goes here.</p>
+        <button className="gds-snackbar__notification-button"></button>
+    </li>
 </ul>
 ```
 
 **Optional classes:**
 
-- `gds-snackbar__notification--success`
-- `gds-snackbar__notification--info`
-- `gds-snackbar__notification--warning`
-- `gds-snackbar__notification--danger`
-- `gds-snackbar__notification--hidden`
-- `gds-snackbar__notification-button--dark`
-- `gds-snackbar__notification-button--success`
-- `gds-snackbar__notification-button--info`
-- `gds-snackbar__notification-button--warning`
-- `gds-snackbar__notification-button--danger`
+-   `gds-snackbar__notification--success`
+-   `gds-snackbar__notification--info`
+-   `gds-snackbar__notification--warning`
+-   `gds-snackbar__notification--danger`
+-   `gds-snackbar__notification--hidden`
+-   `gds-snackbar__notification-button--dark`
+-   `gds-snackbar__notification-button--success`
+-   `gds-snackbar__notification-button--info`
+-   `gds-snackbar__notification-button--warning`
+-   `gds-snackbar__notification-button--danger`
