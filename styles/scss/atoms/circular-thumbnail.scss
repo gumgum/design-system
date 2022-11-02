@@ -1,76 +1,76 @@
 .gds-circular-thumbnail,
 .gds-ranker-ensign__thumbnail {
-  width: ($unit * 4.5);
-  height: ($unit * 4.5);
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto;
-  border: 1px solid white;
-  box-shadow: 0 0 0 1px $primaryColor;
-  @include no-select();
-  @include transition-ease-out(all, 250ms);
+    width: ($unit * 4.5);
+    height: ($unit * 4.5);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 1px solid white;
+    box-shadow: 0 0 0 1px $primaryColor;
+    @include no-select();
+    @include transition-ease-out(all, 250ms);
 }
 
 .gds-circular-thumbnail--dark {
-  border: 1px solid $gg-dark-4;
+    border: 1px solid $gg-dark-4;
 }
 
 .gds-circular-thumbnail--xs,
 .gds-ranker-ensign__thumbnail--xs {
-  width: ($unit * 2);
-  height: ($unit * 2);
-  border: 1px solid white;
+    width: ($unit * 2);
+    height: ($unit * 2);
+    border: 1px solid white;
 }
 
 .gds-circular-thumbnail--sm,
 .gds-ranker-ensign__thumbnail--sm {
-  width: ($unit * 3);
-  height: ($unit * 3);
+    width: ($unit * 3);
+    height: ($unit * 3);
 }
 
 .gds-circular-thumbnail--lg,
 .gds-ranker-ensign__thumbnail--lg {
-  width: ($unit * 6);
-  height: ($unit * 6);
+    width: ($unit * 6);
+    height: ($unit * 6);
 }
 
 .gds-circular-thumbnail--xl,
 .gds-ranker-ensign__thumbnail--xl {
-  width: ($unit * 8);
-  height: ($unit * 8);
+    width: ($unit * 8);
+    height: ($unit * 8);
 }
 
 .gds-circular-thumbnail--secondary,
 .gds-ranker-ensign__thumbnail--secondary {
-  box-shadow: 0 0 0 1px $secondaryColor;
+    box-shadow: 0 0 0 1px $secondaryColor;
 }
 
 .gds-circular-thumbnail--tertiary,
 .gds-ranker-ensign__thumbnail--tertiary {
-  box-shadow: 0 0 0 1px $tertiaryColor;
+    box-shadow: 0 0 0 1px $tertiaryColor;
 }
 
 .gds-circular-thumbnail--success,
 .gds-ranker-ensign__thumbnail--success {
-  box-shadow: 0 0 0 1px $successColor;
+    box-shadow: 0 0 0 1px $successColor;
 }
 
 .gds-circular-thumbnail--warning,
 .gds-ranker-ensign__thumbnail--warning {
-  box-shadow: 0 0 0 1px $warningColor;
+    box-shadow: 0 0 0 1px $warningColor;
 }
 
 .gds-circular-thumbnail--info,
 .gds-ranker-ensign__thumbnail--info {
-  box-shadow: 0 0 0 1px $infoColor;
+    box-shadow: 0 0 0 1px $infoColor;
 }
 
 .gds-circular-thumbnail--danger,
 .gds-ranker-ensign__thumbnail--danger {
-  box-shadow: 0 0 0 1px $dangerColor;
+    box-shadow: 0 0 0 1px $dangerColor;
 }
 
 .gds-circular-thumbnail--white {
-  border: 1px solid $gg-dark-4;
-  box-shadow: 0 0 0 1px white;
+    border: 1px solid $gg-dark-4;
+    box-shadow: 0 0 0 1px white;
 }
