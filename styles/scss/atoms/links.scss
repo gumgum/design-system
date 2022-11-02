@@ -1,45 +1,45 @@
 .gds-text--link {
-  color: $primaryColor;
+    color: $primaryColor;
 
-  &:hover {
-    text-decoration: underline;
-    color: $primaryLight2Color;
-  }
+    &:hover {
+        text-decoration: underline;
+        color: $primaryLight2Color;
+    }
 }
 
 .gds-text--link-secondary {
-  color: $secondaryColor;
+    color: $secondaryColor;
 
-  &:hover {
-    text-decoration: underline;
-    color: $secondaryLight2Color;
-  }
+    &:hover {
+        text-decoration: underline;
+        color: $secondaryLight2Color;
+    }
 }
 
 .gds-text--link-grey,
 .gds-text--link-gray {
-  color: $grayDark2Color;
+    color: $grayDark2Color;
 
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-    color: $primaryColor;
-  }
-  &:active {
-    color: $primaryDark3Color;
-  }
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+        color: $primaryColor;
+    }
+    &:active {
+        color: $primaryDark3Color;
+    }
 }
 
 .gds-text--link-light-grey,
 .gds-text--link-light-gray {
-  color: $grayLight3Color;
+    color: $grayLight3Color;
 
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-    color: $primaryColor;
-  }
-  &:active {
-    color: $primaryDark3Color;
-  }
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+        color: $primaryColor;
+    }
+    &:active {
+        color: $primaryDark3Color;
+    }
 }

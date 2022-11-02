@@ -54,28 +54,27 @@
 //   );
 // }
 
-import { useRouter } from "next/router";
-import { Modal, ModalBody, ModalForm, ModalHeader } from "gumdrops";
+import { useRouter } from 'next/router';
+import { Modal, ModalBody, ModalForm, ModalHeader } from 'gumdrops';
 
 export default function ModalWrapper({ isOpen, content, title }) {
-  const router = useRouter();
+    const router = useRouter();
 
-  return (
-    <Modal
-      className=""
-      isOpen={isOpen}
-      md="6"
-      onClose={() => router.back()}
-      overlayClassName=""
-      style={{}}
-    >
-      <ModalForm onSubmit={() => router.back()}>
-        <ModalHeader size="sm" onClose={() => router.back()} title={title} />
-        <ModalBody>
-          <h1>Hello Here I Am</h1>
-          {console.log("this ran", router)}
-        </ModalBody>
-      </ModalForm>
-    </Modal>
-  );
+    return (
+        <Modal
+            className=""
+            isOpen={isOpen}
+            md="6"
+            onClose={() => router.back()}
+            overlayClassName=""
+            style={{}}>
+            <ModalForm onSubmit={() => router.back()}>
+                <ModalHeader size="sm" onClose={() => router.back()} title={title} />
+                <ModalBody>
+                    <h1>Hello Here I Am</h1>
+                    {console.log('this ran', router)}
+                </ModalBody>
+            </ModalForm>
+        </Modal>
+    );
 }

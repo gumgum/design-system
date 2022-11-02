@@ -13,11 +13,11 @@ Adjust the `overflow` property.
 
 **Optional classes:**
 
-- `-overflow-hidden`
-- `-overflow-visible`
-- `-overflow-x-hidden`
-- `-overflow-x-scroll`
-- `-overflow-x-auto`
-- `-overflow-y-hidden`
-- `-overflow-y-scroll`
-- `-overflow-y-auto`
+-   `-overflow-hidden`
+-   `-overflow-visible`
+-   `-overflow-x-hidden`
+-   `-overflow-x-scroll`
+-   `-overflow-x-auto`
+-   `-overflow-y-hidden`
+-   `-overflow-y-scroll`
+-   `-overflow-y-auto`

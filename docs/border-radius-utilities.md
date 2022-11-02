@@ -11,27 +11,27 @@ The classes are named using the format: `-bor-rad-{sides}-{size}`. `{sides}` can
 
 ```html
 <div className="gds-container -bor-rad-a-0">
-  <p>Container with border-radius: 0</p>
+    <p>Container with border-radius: 0</p>
 </div>
 ```
 
 **Optional classes:**
 
-- `-bor-rad-a-0`
-- `-bor-rad-a-1`
-- `-bor-rad-tl-0`
-- `-bor-rad-tl-1`
-- `-bor-rad-tr-0`
-- `-bor-rad-tr-1`
-- `-bor-rad-bl-0`
-- `-bor-rad-bl-1`
-- `-bor-rad-br-0`
-- `-bor-rad-br-1`
-- `-bor-rad-t-0`
-- `-bor-rad-t-1`
-- `-bor-rad-r-0`
-- `-bor-rad-r-1`
-- `-bor-rad-b-0`
-- `-bor-rad-b-1`
-- `-bor-rad-l-0`
-- `-bor-rad-l-1`
+-   `-bor-rad-a-0`
+-   `-bor-rad-a-1`
+-   `-bor-rad-tl-0`
+-   `-bor-rad-tl-1`
+-   `-bor-rad-tr-0`
+-   `-bor-rad-tr-1`
+-   `-bor-rad-bl-0`
+-   `-bor-rad-bl-1`
+-   `-bor-rad-br-0`
+-   `-bor-rad-br-1`
+-   `-bor-rad-t-0`
+-   `-bor-rad-t-1`
+-   `-bor-rad-r-0`
+-   `-bor-rad-r-1`
+-   `-bor-rad-b-0`
+-   `-bor-rad-b-1`
+-   `-bor-rad-l-0`
+-   `-bor-rad-l-1`

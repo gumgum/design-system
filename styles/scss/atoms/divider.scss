@@ -1,38 +1,37 @@
-@use "sass:math";
+@use 'sass:math';
 
 .gds-divider {
-    width:100%;
-    height:$unit;
-    color:$gg-light-3;
-    display:flex;
-    margin-bottom:$unit;
-
+    width: 100%;
+    height: $unit;
+    color: $gg-light-3;
+    display: flex;
+    margin-bottom: $unit;
 }
 
 .gds-divider--reversed {
     flex-direction: row-reverse;
     .gds-divider__label {
-        margin-left:$unit*0.25;
-        margin-right:0;
+        margin-left: $unit * 0.25;
+        margin-right: 0;
     }
     .gds-divider__arrow {
-        margin-right:$unit*0.25;
-        margin-left:0;
+        margin-right: $unit * 0.25;
+        margin-left: 0;
     }
 }
 
 .gds-divider--centered {
     .gds-divider__label {
-        margin-left:$unit*0.25;
+        margin-left: $unit * 0.25;
     }
 }
 
 .gds-divider--collapsible {
-    cursor:pointer;
+    cursor: pointer;
     &:hover {
         color: $dividerTextColor;
         .gds-divider__line {
-            background-color:$dividerLineColor;
+            background-color: $dividerLineColor;
         }
         .gds-divider__arrow {
             border-top: math.div($unit, 3) solid $dividerArrowColor;
@@ -41,34 +40,34 @@
 }
 
 .gds-divider__label {
-    display:block;
-    font-size:$unit*0.75;
-    flex-basis:auto;
-    margin-right:$unit*0.25;
-    @include transition-ease-out(all,250ms);
+    display: block;
+    font-size: $unit * 0.75;
+    flex-basis: auto;
+    margin-right: $unit * 0.25;
+    @include transition-ease-out(all, 250ms);
 }
 
 .gds-divider__line {
-    flex:1;
-    display:block;
-    height:1px;
+    flex: 1;
+    display: block;
+    height: 1px;
     background-color: $gg-light-2;
-    top:$unit*0.6;
-    @include transition-ease-out(all,250ms);
+    top: $unit * 0.6;
+    @include transition-ease-out(all, 250ms);
 }
 
 .gds-divider__arrow {
     width: 0;
     height: 0;
-    top:0.5*$unit;
+    top: 0.5 * $unit;
     border-left: math.div($unit, 3) solid transparent;
     border-right: math.div($unit, 3) solid transparent;
     border-top: math.div($unit, 3) solid $gg-light-2;
-    margin-left:$unit*0.25;
-    transform:rotate(0deg);
-    @include transition-ease-out(all,250ms);
+    margin-left: $unit * 0.25;
+    transform: rotate(0deg);
+    @include transition-ease-out(all, 250ms);
 }
 
 .gds-divider__arrow--collapse {
-    transform:rotate(180deg);
+    transform: rotate(180deg);
 }

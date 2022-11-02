@@ -28,7 +28,7 @@
     .-float-none--sm,
     .-float-none--md,
     .-float-none--lg,
-    .-float-none--xl  {
+    .-float-none--xl {
         float: none !important;
     }
 }
@@ -45,7 +45,7 @@
 @media #{$tablet-width} {
     .-float-none--md,
     .-float-none--lg,
-    .-float-none--xl  {
+    .-float-none--xl {
         float: none !important;
     }
 }

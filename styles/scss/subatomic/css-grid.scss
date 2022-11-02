@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 $columnCounts: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16;
 $columnGap: ($unit * 0.5);
@@ -50,7 +50,6 @@ $columnGap: ($unit * 0.5);
     }
 }
 
-
 @mixin make-containers($breakpoints, $columns) {
     @each $colNum in $columnCounts {
         @include make-standard-pct-container($colNum);
@@ -71,7 +70,6 @@ $columnGap: ($unit * 0.5);
 .gds-grid__container--no-gap {
     grid-gap: 0;
 }
-
 
 // Col Spans
 @mixin make-standard-col-span($columnCount) {

@@ -1,10 +1,10 @@
 // -------------------------------------------------- //
 // Smart columns
 // -------------------------------------------------- //
-@use "sass:math";
+@use 'sass:math';
 
 .gds-smart-fill {
-    display:block;
+    display: block;
 }
 
 .gds-smart-fill__col {
@@ -13,12 +13,12 @@
     min-height: 1px;
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
-    @include transition-back(all,250ms);
+    @include transition-back(all, 250ms);
 }
 
 .gds-smart-fill__col--animated {
     width: 0;
-    @include transition-back(all,250ms);
+    @include transition-back(all, 250ms);
 }
 
 @for $i from 1 through 12 {
@@ -30,7 +30,8 @@
     }
 
     .gds-smart-fill__col--animated:first-child:nth-last-child(#{$i}),
-    .gds-smart-fill__col--animated:first-child:nth-last-child(#{$i}) ~ .gds-smart-fill__col--animated {
+    .gds-smart-fill__col--animated:first-child:nth-last-child(#{$i})
+        ~ .gds-smart-fill__col--animated {
         width: 0;
     }
 

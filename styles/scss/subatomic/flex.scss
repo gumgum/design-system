@@ -101,8 +101,7 @@
     }
 }
 
-@mixin make-flex-rules ($breakpoints) {
-
+@mixin make-flex-rules($breakpoints) {
     .gds-flex--direction-row {
         flex-direction: row !important;
     }
@@ -263,7 +262,7 @@ $basis-types: 'fix', 'pct';
     @each $type in $basis-types {
         @each $factor in $basis-factors {
             @if $type == 'fix' {
-                $amount: #{$factor*10};
+                $amount: #{$factor * 10};
                 .gds-flex__item--basis-fix-#{$amount} {
                     flex-basis: #{$amount}px !important;
                 }
@@ -281,7 +280,7 @@ $basis-types: 'fix', 'pct';
     @each $type in $basis-types {
         @each $factor in $basis-factors {
             @if $type == 'fix' {
-                $amount: #{$factor*10};
+                $amount: #{$factor * 10};
                 .gds-flex__item--basis-fix-#{$breakpoint}-#{$amount} {
                     flex-basis: #{$amount}px !important;
                 }

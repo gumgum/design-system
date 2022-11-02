@@ -27,16 +27,16 @@ The layout component, prefixed with `gds-layout`, is used for centering containe
 
 ```html
 <div className="gds-layout__container">
-  <div className="gds-layout__row">
-    <div className="gds-layout__column--md-4">
-      <p>Left column</p>
+    <div className="gds-layout__row">
+        <div className="gds-layout__column--md-4">
+            <p>Left column</p>
+        </div>
+        <div className="gds-layout__column--md-4">
+            <p>Center column</p>
+        </div>
+        <div className="gds-layout__column--md-4">
+            <p>Right column</p>
+        </div>
     </div>
-    <div className="gds-layout__column--md-4">
-      <p>Center column</p>
-    </div>
-    <div className="gds-layout__column--md-4">
-      <p>Right column</p>
-    </div>
-  </div>
 </div>
 ```

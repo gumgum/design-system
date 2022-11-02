@@ -10,7 +10,7 @@
 @mixin clearfix() {
     &:before,
     &:after {
-        content: " ";
+        content: ' ';
         display: table;
     }
 
@@ -26,12 +26,12 @@
     user-select: none;
 }
 
-@mixin createNubbin( $direction, $size, $baseColor, $borderColor) {
+@mixin createNubbin($direction, $size, $baseColor, $borderColor) {
     &:before,
     &:after {
-        content:'';
-        width: 0; 
-        height: 0; 
+        content: '';
+        width: 0;
+        height: 0;
         position: absolute;
         border-style: solid;
         border-color: transparent;
@@ -41,15 +41,15 @@
             top: calc(50% - #{$size});
             right: calc(100% + 1px);
             border-top: $size solid transparent;
-            border-bottom: $size solid transparent; 
+            border-bottom: $size solid transparent;
             border-right: #{$size + 1px} solid $borderColor;
         }
         &:after {
             top: calc(50% - #{$size});
             right: 100%;
             border-top: $balloon-arrow-size solid transparent;
-            border-bottom: $balloon-arrow-size solid transparent; 
-            border-right:$balloon-arrow-size solid $baseColor;
+            border-bottom: $balloon-arrow-size solid transparent;
+            border-right: $balloon-arrow-size solid $baseColor;
         }
     }
     @if $direction == 'right' {
@@ -57,15 +57,15 @@
             top: calc(50% - #{$size});
             left: calc(100% + 1px);
             border-top: $size solid transparent;
-            border-bottom: $size solid transparent; 
+            border-bottom: $size solid transparent;
             border-left: #{$size + 1px} solid $borderColor;
         }
         &:after {
             top: calc(50% - #{$size});
             left: 100%;
             border-top: $balloon-arrow-size solid transparent;
-            border-bottom: $balloon-arrow-size solid transparent; 
-            border-left:$balloon-arrow-size solid $baseColor;
+            border-bottom: $balloon-arrow-size solid transparent;
+            border-left: $balloon-arrow-size solid $baseColor;
         }
     }
     @if $direction == 'up' {
@@ -73,15 +73,15 @@
             left: calc(50% - #{$size});
             bottom: calc(100% + 1px);
             border-left: $size solid transparent;
-            border-right: $size solid transparent; 
+            border-right: $size solid transparent;
             border-bottom: #{$size + 1px} solid $borderColor;
         }
         &:after {
             left: calc(50% - #{$size});
             bottom: 100%;
             border-left: $balloon-arrow-size solid transparent;
-            border-right: $balloon-arrow-size solid transparent; 
-            border-bottom:$balloon-arrow-size solid $baseColor;
+            border-right: $balloon-arrow-size solid transparent;
+            border-bottom: $balloon-arrow-size solid $baseColor;
         }
     }
     @if $direction == 'down' {
@@ -89,15 +89,15 @@
             left: calc(50% - #{$size});
             top: calc(100% + 1px);
             border-left: $size solid transparent;
-            border-right: $size solid transparent; 
+            border-right: $size solid transparent;
             border-top: #{$size + 1px} solid $borderColor;
         }
         &:after {
             left: calc(50% - #{$size});
             top: 100%;
             border-left: $balloon-arrow-size solid transparent;
-            border-right: $balloon-arrow-size solid transparent; 
-            border-top:$balloon-arrow-size solid $baseColor;
+            border-right: $balloon-arrow-size solid transparent;
+            border-top: $balloon-arrow-size solid $baseColor;
         }
     }
 }

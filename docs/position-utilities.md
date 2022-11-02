@@ -7,10 +7,10 @@ section: utilities
 
 Change an element's position property:
 
-- `-pos-rel` Relative (default)
-- `-pos-abs` Absolute
-- `-pos-fix` Fixed
-- `-pos-stc` Static
+-   `-pos-rel` Relative (default)
+-   `-pos-abs` Absolute
+-   `-pos-fix` Fixed
+-   `-pos-stc` Static
 
 ## Absolute Position
 

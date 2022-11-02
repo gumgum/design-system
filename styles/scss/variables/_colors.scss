@@ -99,26 +99,32 @@ $gg-magenta-dark-3: mix($gg-magenta, black, 70%);
 $gg-magenta-dark-4: mix($gg-magenta, black, 60%);
 
 // Transparent colors
-$trans-black-dark: rgba(0,0,0,0.87);
-$trans-black-medium: rgba(0,0,0,0.54);
-$trans-black-light: rgba(0,0,0,0.38);
-$trans-black-x-light: rgba(0,0,0,0.05);
+$trans-black-dark: rgba(0, 0, 0, 0.87);
+$trans-black-medium: rgba(0, 0, 0, 0.54);
+$trans-black-light: rgba(0, 0, 0, 0.38);
+$trans-black-x-light: rgba(0, 0, 0, 0.05);
 
-$trans-white-dark: rgba(255,255,255,0.87);
-$trans-white-medium: rgba(255,255,255,0.54);
-$trans-white-light: rgba(255,255,255,0.2);
-$trans-white-x-light: rgba(255,255,255,0.1);
-
+$trans-white-dark: rgba(255, 255, 255, 0.87);
+$trans-white-medium: rgba(255, 255, 255, 0.54);
+$trans-white-light: rgba(255, 255, 255, 0.2);
+$trans-white-x-light: rgba(255, 255, 255, 0.1);
 
 // Gradients
-$white-gray-diag: linear-gradient(45deg, rgba(241,241,241,1) 0%,rgba(251,251,251,1) 100%);
-$white-gray-diag-invert: linear-gradient(45deg, rgba(251,251,251,1) 0%, rgba(241,241,241,1) 100%);
-$white-gray-vert: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(226,226,226,1) 100%);
-$gg-blue-diag: linear-gradient(45deg, rgba($gg-blue,1) 0%,rgba($gg-blue-dark-1,1) 100%);
-$gg-blue-diag-invert: linear-gradient(45deg, rgba($gg-blue-dark-1,1) 0%,rgba($gg-blue,1) 100%);
-
+$white-gray-diag: linear-gradient(45deg, rgba(241, 241, 241, 1) 0%, rgba(251, 251, 251, 1) 100%);
+$white-gray-diag-invert: linear-gradient(
+    45deg,
+    rgba(251, 251, 251, 1) 0%,
+    rgba(241, 241, 241, 1) 100%
+);
+$white-gray-vert: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(226, 226, 226, 1) 100%
+);
+$gg-blue-diag: linear-gradient(45deg, rgba($gg-blue, 1) 0%, rgba($gg-blue-dark-1, 1) 100%);
+$gg-blue-diag-invert: linear-gradient(45deg, rgba($gg-blue-dark-1, 1) 0%, rgba($gg-blue, 1) 100%);
 
 @function strip-hash($color) {
     $c: inspect($color);
-    @return str-slice($c,2);
+    @return str-slice($c, 2);
 }

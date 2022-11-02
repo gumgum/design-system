@@ -7,78 +7,78 @@
 
 // Grid Layout Items
 .gds-app-layout__top {
-  grid-area: top;
-  overflow: visible;
+    grid-area: top;
+    overflow: visible;
 }
 .gds-app-layout__main {
-  padding: 1rem 2rem;
-  grid-area: main;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background: var(--colorBG);
+    padding: 1rem 2rem;
+    grid-area: main;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: var(--colorBG);
 }
 .gds-app-layout__left {
-  grid-area: left;
-  overflow: visible;
+    grid-area: left;
+    overflow: visible;
 }
 .gds-app-layout__right {
-  grid-area: right;
-  overflow: visible;
+    grid-area: right;
+    overflow: visible;
 }
 .gds-app-layout__bottom {
-  grid-area: bottom;
+    grid-area: bottom;
 }
 
 // Desktop
 .gds-app-layout__container {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  display: grid;
-  gap: 0;
-  grid-template-columns: max-content 1fr max-content;
-  grid-template-rows: max-content 1fr max-content;
-  grid-template-areas:
-    "top top top"
-    "left main right"
-    "bottom bottom bottom";
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+    gap: 0;
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-rows: max-content 1fr max-content;
+    grid-template-areas:
+        'top top top'
+        'left main right'
+        'bottom bottom bottom';
 }
 
 // Tablet - Mobile & Tablet
 @media (max-width: $tablet) {
-  .gds-app-layout__main {
-    padding: 0.5rem;
-  }
-  .gds-app-layout__left.gds-nav__side,
-  .gds-app-layout__right.gds-nav__side {
-    display: none;
-  }
+    .gds-app-layout__main {
+        padding: 0.5rem;
+    }
+    .gds-app-layout__left.gds-nav__side,
+    .gds-app-layout__right.gds-nav__side {
+        display: none;
+    }
 
-  .gds-app-layout__container {
-    height: 100vh;
-    grid-template-columns: 100%;
-    grid-template-rows: max-content 1fr max-content;
-    grid-template-areas:
-      "top"
-      "main"
-      "bottom";
-  }
+    .gds-app-layout__container {
+        height: 100vh;
+        grid-template-columns: 100%;
+        grid-template-rows: max-content 1fr max-content;
+        grid-template-areas:
+            'top'
+            'main'
+            'bottom';
+    }
 
-  .gds-app-layout__left.gds-app-layout__left--open {
-    display: flex;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: $z-index-5;
-  }
-  .gds-app-layout__right.gds-app-layout__right--open {
-    display: flex;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    z-index: $z-index-5;
-  }
+    .gds-app-layout__left.gds-app-layout__left--open {
+        display: flex;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: $z-index-5;
+    }
+    .gds-app-layout__right.gds-app-layout__right--open {
+        display: flex;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: $z-index-5;
+    }
 }

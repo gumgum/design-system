@@ -59,58 +59,58 @@ The item classes indicate how many items should flow across in each row before w
 
 ```html
 <div className="gds-flex-grid__container">
-  <div className="gds-flex-grid__row">
-    <div
-      className="gds-flex-grid__item gds-flex-grid__item--desktop-2 gds-flex-grid__item--tablet-1 gds-flex-grid__item--mobile-1 -m-b-3"
-    >
-      <div className="gds-flex-grid__row">
+    <div className="gds-flex-grid__row">
         <div
-          className="gds-flex-grid__item gds-flex-grid__item--desktop-2 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3"
+            className="gds-flex-grid__item gds-flex-grid__item--desktop-2 gds-flex-grid__item--tablet-1 gds-flex-grid__item--mobile-1 -m-b-3"
         >
-          <div className="gds-card gds-flex-grid__item--full-height">
-            <div className="gds-card__block -p-a-3">
-              <p>Content</p>
+            <div className="gds-flex-grid__row">
+                <div
+                    className="gds-flex-grid__item gds-flex-grid__item--desktop-2 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3"
+                >
+                    <div className="gds-card gds-flex-grid__item--full-height">
+                        <div className="gds-card__block -p-a-3">
+                            <p>Content</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    className="gds-flex-grid__item gds-flex-grid__item--desktop-2 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3"
+                >
+                    <div className="gds-card gds-flex-grid__item--full-height">
+                        <div className="gds-card__block -p-a-3">
+                            <p>Content</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    className="gds-flex-grid__item gds-flex-grid__item--desktop-2 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3-xs"
+                >
+                    <div className="gds-card gds-flex-grid__item--full-height">
+                        <div className="gds-card__block -p-a-3">
+                            <p>Content</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    className="gds-flex-grid__item gds-flex-grid__item--desktop-2 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1"
+                >
+                    <div className="gds-card gds-flex-grid__item--full-height">
+                        <div className="gds-card__block -p-a-3">
+                            <p>Content</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
         <div
-          className="gds-flex-grid__item gds-flex-grid__item--desktop-2 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3"
+            className="gds-flex-grid__item gds-flex-grid__item--desktop-2 gds-flex-grid__item--tablet-1 gds-flex-grid__item--mobile-1 -m-b-3"
         >
-          <div className="gds-card gds-flex-grid__item--full-height">
-            <div className="gds-card__block -p-a-3">
-              <p>Content</p>
+            <div className="gds-card gds-flex-grid__item--full-height">
+                <div className="gds-card__block -p-a-3">
+                    <p>Content</p>
+                </div>
             </div>
-          </div>
         </div>
-        <div
-          className="gds-flex-grid__item gds-flex-grid__item--desktop-2 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3-xs"
-        >
-          <div className="gds-card gds-flex-grid__item--full-height">
-            <div className="gds-card__block -p-a-3">
-              <p>Content</p>
-            </div>
-          </div>
-        </div>
-        <div
-          className="gds-flex-grid__item gds-flex-grid__item--desktop-2 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1"
-        >
-          <div className="gds-card gds-flex-grid__item--full-height">
-            <div className="gds-card__block -p-a-3">
-              <p>Content</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-    <div
-      className="gds-flex-grid__item gds-flex-grid__item--desktop-2 gds-flex-grid__item--tablet-1 gds-flex-grid__item--mobile-1 -m-b-3"
-    >
-      <div className="gds-card gds-flex-grid__item--full-height">
-        <div className="gds-card__block -p-a-3">
-          <p>Content</p>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 ```

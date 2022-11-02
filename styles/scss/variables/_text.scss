@@ -2,32 +2,27 @@
 // @import "@fontsource/public-sans/300.css";
 // @import "@fontsource/public-sans/500.css";
 
-@import "~@fontsource/public-sans/200.css";
-@import "~@fontsource/public-sans/300.css";
-@import "~@fontsource/public-sans/500.css";
-@import "~@fontsource/public-sans/700.css";
+@import '~@fontsource/public-sans/200.css';
+@import '~@fontsource/public-sans/300.css';
+@import '~@fontsource/public-sans/500.css';
+@import '~@fontsource/public-sans/700.css';
 
 // -------------------------------------------------- //
 // Text variables
 // -------------------------------------------------- //
 // Public Sans Fonts provided by fontsource. This helps provide font files to projects using CRA, Gatsby, Next, etc.
 
-$pri-font: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$pri-font-regular: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-  Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$pri-font-semibold: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-  Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$pri-font-bold: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-  Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
+$pri-font: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$pri-font-regular: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$pri-font-semibold: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$pri-font-bold: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
-$sec-font-bold: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-  Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
+$sec-font-bold: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
 // Reduced to force only 3 different font weights
 $font-weight-lighter: 200;

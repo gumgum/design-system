@@ -21,9 +21,9 @@ To adjust text alignment at a specified breakpoint, use the format `-text-{direc
 
 **Optional classes:**
 
-- `-text-left`
-- `-text-center`
-- `-text-right`
-- `-text-left--*`
-- `-text-center--*`
-- `-text-right--*`
+-   `-text-left`
+-   `-text-center`
+-   `-text-right`
+-   `-text-left--*`
+-   `-text-center--*`
+-   `-text-right--*`
