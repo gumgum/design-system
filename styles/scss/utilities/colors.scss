@@ -1,7 +1,39 @@
 // Theme color utilities
-$color-sfx:('pri','sec','ter', 'quat', 'suc','war','dan','inf','red','blue','gold','green','purple','orange','dkblue','dkgreen','dkred','dkgold','magenta');
-$shade-sfx:('', '-lt-1', '-lt-2', '-lt-3', '-lt-4', '-lt-5', '-dk-1', '-dk-2', '-dk-3', '-dk-4', '-dk-5');
-$defaults:(
+$color-sfx: (
+    'pri',
+    'sec',
+    'ter',
+    'quat',
+    'suc',
+    'war',
+    'dan',
+    'inf',
+    'red',
+    'blue',
+    'gold',
+    'green',
+    'purple',
+    'orange',
+    'dkblue',
+    'dkgreen',
+    'dkred',
+    'dkgold',
+    'magenta'
+);
+$shade-sfx: (
+    '',
+    '-lt-1',
+    '-lt-2',
+    '-lt-3',
+    '-lt-4',
+    '-lt-5',
+    '-dk-1',
+    '-dk-2',
+    '-dk-3',
+    '-dk-4',
+    '-dk-5'
+);
+$defaults: (
     (
         $primaryColor,
         $primaryLight1Color,
@@ -274,23 +306,11 @@ $defaults:(
 }
 
 // Grayscale color utilities
-$grayscale-sfx: ('lt','dk');
-$grayscale-shade-sfx: ('-1','-2','-3','-4','-5');
+$grayscale-sfx: ('lt', 'dk');
+$grayscale-shade-sfx: ('-1', '-2', '-3', '-4', '-5');
 $grayscale-defaults: (
-    (
-        $gg-light-1,
-        $gg-light-2,
-        $gg-light-3,
-        $gg-light-4,
-        $gg-light-5
-    ),
-    (
-        $gg-dark-1,
-        $gg-dark-2,
-        $gg-dark-3,
-        $gg-dark-4,
-        $gg-dark-5
-    )
+    ($gg-light-1, $gg-light-2, $gg-light-3, $gg-light-4, $gg-light-5),
+    ($gg-dark-1, $gg-dark-2, $gg-dark-3, $gg-dark-4, $gg-dark-5)
 );
 
 @for $i from 0 to length($grayscale-defaults) {

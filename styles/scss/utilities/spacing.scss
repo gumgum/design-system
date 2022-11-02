@@ -1,4 +1,4 @@
-@each $index2, $spacing in $spacings{
+@each $index2, $spacing in $spacings {
     // Standard
     .-m-r-#{$spacing} {
         margin-right: #{nth($increments, ($index2 + 1))} !important;
@@ -61,23 +61,20 @@
 }
 
 .-m-h-c {
-    margin-left:auto !important;
-    margin-right:auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
-
 // Breakpoint-specific
-@each $index2, $affix in $affixes{
-
-    $bp: unquote(nth($breakpoints,$index2));
+@each $index2, $affix in $affixes {
+    $bp: unquote(nth($breakpoints, $index2));
 
     .-m-h-c-#{$affix} {
-        margin-left:auto !important;
-        margin-right:auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
-    @each $index, $spacing in $spacings{
-
+    @each $index, $spacing in $spacings {
         .-m-r-#{$spacing}-#{$affix} {
             @media #{$bp} {
                 margin-right: #{nth($increments, ($index + 1))} !important;
@@ -166,4 +163,4 @@
             }
         }
     }
-};
+} ;

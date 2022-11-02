@@ -401,8 +401,7 @@
     right: auto;
 }
 
-.gds-form-group__text-input:placeholder-shown
-    + .gds-form-group__text-input-icon {
+.gds-form-group__text-input:placeholder-shown + .gds-form-group__text-input-icon {
     opacity: 0.5;
 }
 
@@ -607,8 +606,7 @@
 .gds-form-group--active .gds-form-group__date-group {
     color: $gg-dark-4;
     border-color: $primaryColor;
-    box-shadow: inset 0 #{-$cap-size} 0 0 $primaryColor,
-        inset 0 0 0 1px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: inset 0 #{-$cap-size} 0 0 $primaryColor, inset 0 0 0 1px rgba(0, 0, 0, 0.1) !important;
     outline: none;
 
     & + .gds-form-group__text-help {
@@ -740,8 +738,7 @@
 
     &:checked {
         background-color: $primaryColor !important;
-        background: $primaryColor
-            linear-gradient(0deg, $primaryColor 0%, $primaryColor 100%);
+        background: $primaryColor linear-gradient(0deg, $primaryColor 0%, $primaryColor 100%);
         color: #ffffff !important;
     }
 }
@@ -823,14 +820,12 @@
     color: white;
 
     &:hover {
-        box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-4,
-            inset 0 0 0 1px rgba($gg-light-4, 1);
+        box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-4, inset 0 0 0 1px rgba($gg-light-4, 1);
         background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash(#ffffff)}%3B%22/%3E%3C/svg%3E');
     }
 
     &:focus {
-        box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-4,
-            inset 0 0 0 1px rgba($gg-light-4, 1);
+        box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-4, inset 0 0 0 1px rgba($gg-light-4, 1);
         background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash(#ffffff)}%3B%22/%3E%3C/svg%3E');
     }
 }
@@ -935,24 +930,18 @@
 }
 
 .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
-.gds-search-select__checkbox-input:checked
-    + .gds-form-group__checkbox-indicator,
+.gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator,
 .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
-.gds-search-select__checkbox-input:checked
-    + .gds-search-select__checkbox-indicator {
+.gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator {
     border-color: $primaryColor;
     background-position: center center;
     background-size: 100% 100%;
 }
 
-.gds-form-group__checkbox-input:checked
-    + .gds-form-group__checkbox-indicator--inverse,
-.gds-search-select__checkbox-input:checked
-    + .gds-form-group__checkbox-indicator--inverse,
-.gds-form-group__checkbox-input:checked
-    + .gds-search-select__checkbox-indicator--inverse,
-.gds-search-select__checkbox-input:checked
-    + .gds-search-select__checkbox-indicator--inverse {
+.gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator--inverse,
+.gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator--inverse,
+.gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator--inverse,
+.gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator--inverse {
     border-color: white;
 }
 
@@ -960,8 +949,7 @@
 .gds-form-group__checkbox-input:focus + .gds-form-group__checkbox-indicator,
 .gds-search-select__checkbox-input:focus + .gds-form-group__checkbox-indicator,
 .gds-form-group__checkbox-input:focus + .gds-search-select__checkbox-indicator,
-.gds-search-select__checkbox-input:focus
-    + .gds-search-select__checkbox-indicator {
+.gds-search-select__checkbox-input:focus + .gds-search-select__checkbox-indicator {
     box-shadow: $input-focus-effect;
 }
 
@@ -1173,8 +1161,7 @@
     }
 }
 
-.gds-form-group__toggleswitch-input:checked
-    ~ .gds-form-group__toggleswitch-indicator {
+.gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator {
     background: transparent;
     background-image: none;
 
@@ -1199,8 +1186,7 @@
 //     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1), $input-focus-effect !important;
 // }
 
-.gds-form-group__toggleswitch-input:checked
-    ~ .gds-form-group__toggleswitch-indicator--dark {
+.gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator--dark {
     background-image: none;
 }
 
@@ -1256,8 +1242,7 @@
     background-color: white;
     border: none;
     box-sizing: border-box;
-    box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-3,
-        inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 #{-$cap-size} 0 0 $gg-light-3, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
     border-radius: $border-radius;
     @include transition-ease-out(all, 150ms);
 
@@ -1278,8 +1263,7 @@
         border-radius: 0 $input-border-radius $input-border-radius 0;
         box-sizing: border-box;
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0),
-            inset 0 0 120px 0 rgba(255, 255, 255, 0),
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0), inset 0 0 120px 0 rgba(255, 255, 255, 0),
             inset 0 #{-$cap-size} 0 0 $primaryDark2Color;
         @include transition-ease-out(all, 150ms);
     }
@@ -1291,8 +1275,7 @@
     }
 
     &:hover {
-        box-shadow: inset 0 #{-$cap-size} 0 0 $primaryColor,
-            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 #{-$cap-size} 0 0 $primaryColor, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 
         &:after {
             color: $primaryLight2Color !important;
@@ -1300,21 +1283,18 @@
 
         &:before {
             border-bottom-width: $cap-size;
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-                inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
                 inset 0 #{-$cap-size} 0 0 $primaryDark2Color;
             text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
         }
     }
 
     &:active {
-        box-shadow: inset 0 #{-$cap-size} 0 0 $primaryColor,
-            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 #{-$cap-size} 0 0 $primaryColor, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 
         &:before {
             border-bottom-width: $cap-size;
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-                inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
                 inset 0 #{-$cap-size} 0 0 $primaryDark2Color;
         }
     }
@@ -1710,11 +1690,7 @@ $thumb-width: ($unit * 0.75);
         }
         &:hover:focus {
             color: $gg-dark-4;
-            @include hoverFocusShadows(
-                $primaryColor,
-                black,
-                $primaryLight2Color
-            );
+            @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
             background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
         }
     }
@@ -1744,14 +1720,10 @@ $thumb-width: ($unit * 0.75);
         border-color: $successColor;
     }
 
-    .gds-form-group__checkbox-input:checked
-        + .gds-form-group__checkbox-indicator,
-    .gds-search-select__checkbox-input:checked
-        + .gds-form-group__checkbox-indicator,
-    .gds-form-group__checkbox-input:checked
-        + .gds-search-select__checkbox-indicator,
-    .gds-search-select__checkbox-input:checked
-        + .gds-search-select__checkbox-indicator {
+    .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+    .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+    .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator,
+    .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator {
         border-color: $successColor;
     }
 
@@ -1771,8 +1743,7 @@ $thumb-width: ($unit * 0.75);
         }
     }
 
-    .gds-form-group__toggleswitch-input:checked
-        ~ .gds-form-group__toggleswitch-indicator {
+    .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator {
         &:after {
             background-color: $successColor;
         }
@@ -1784,33 +1755,28 @@ $thumb-width: ($unit * 0.75);
 
     .gds-form-group__file-indicator:before {
         background-color: $successColor;
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0),
-            inset 0 0 120px 0 rgba(255, 255, 255, 0),
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0), inset 0 0 120px 0 rgba(255, 255, 255, 0),
             inset 0 #{-$cap-size} 0 0 $successDark2Color;
     }
 
     .gds-form-group__file-indicator:hover {
-        box-shadow: inset 0 #{-$cap-size} 0 0 $successColor,
-            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 #{-$cap-size} 0 0 $successColor, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 
         &:after {
             color: $successLight2Color !important;
         }
 
         &:before {
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-                inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
                 inset 0 #{-$cap-size} 0 0 $successDark2Color;
         }
     }
 
     .gds-form-group__file-indicator:active {
-        box-shadow: inset 0 #{-$cap-size} 0 0 $successColor,
-            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 #{-$cap-size} 0 0 $successColor, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 
         &:before {
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-                inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
                 inset 0 #{-$cap-size} 0 0 $successDark2Color;
         }
     }
@@ -1856,11 +1822,7 @@ $thumb-width: ($unit * 0.75);
         }
         &:hover:focus {
             color: $gg-dark-4;
-            @include hoverFocusShadows(
-                $primaryColor,
-                black,
-                $primaryLight2Color
-            );
+            @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
             background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
         }
     }
@@ -1890,14 +1852,10 @@ $thumb-width: ($unit * 0.75);
         border-color: $warningColor;
     }
 
-    .gds-form-group__checkbox-input:checked
-        + .gds-form-group__checkbox-indicator,
-    .gds-search-select__checkbox-input:checked
-        + .gds-form-group__checkbox-indicator,
-    .gds-form-group__checkbox-input:checked
-        + .gds-search-select__checkbox-indicator,
-    .gds-search-select__checkbox-input:checked
-        + .gds-search-select__checkbox-indicator {
+    .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+    .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+    .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator,
+    .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator {
         border-color: $warningColor;
     }
 
@@ -1917,8 +1875,7 @@ $thumb-width: ($unit * 0.75);
         }
     }
 
-    .gds-form-group__toggleswitch-input:checked
-        ~ .gds-form-group__toggleswitch-indicator {
+    .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator {
         &:after {
             background-color: $warningColor;
         }
@@ -1930,33 +1887,28 @@ $thumb-width: ($unit * 0.75);
 
     .gds-form-group__file-indicator:before {
         background-color: $warningColor;
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0),
-            inset 0 0 120px 0 rgba(255, 255, 255, 0),
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0), inset 0 0 120px 0 rgba(255, 255, 255, 0),
             inset 0 #{-$cap-size} 0 0 $warningDark2Color;
     }
 
     .gds-form-group__file-indicator:hover {
-        box-shadow: inset 0 #{-$cap-size} 0 0 $warningColor,
-            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 #{-$cap-size} 0 0 $warningColor, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 
         &:after {
             color: $warningLight2Color !important;
         }
 
         &:before {
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-                inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
                 inset 0 #{-$cap-size} 0 0 $warningDark2Color;
         }
     }
 
     .gds-form-group__file-indicator:active {
-        box-shadow: inset 0 #{-$cap-size} 0 0 $warningColor,
-            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 #{-$cap-size} 0 0 $warningColor, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 
         &:before {
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-                inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
                 inset 0 #{-$cap-size} 0 0 $warningDark2Color;
         }
     }
@@ -2002,11 +1954,7 @@ $thumb-width: ($unit * 0.75);
         }
         &:hover:focus {
             color: $gg-dark-4;
-            @include hoverFocusShadows(
-                $primaryColor,
-                black,
-                $primaryLight2Color
-            );
+            @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
             background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A%23#{strip-hash($primaryColor)}%3B%22/%3E%3C/svg%3E');
         }
     }
@@ -2036,14 +1984,10 @@ $thumb-width: ($unit * 0.75);
         border-color: $dangerColor;
     }
 
-    .gds-form-group__checkbox-input:checked
-        + .gds-form-group__checkbox-indicator,
-    .gds-search-select__checkbox-input:checked
-        + .gds-form-group__checkbox-indicator,
-    .gds-form-group__checkbox-input:checked
-        + .gds-search-select__checkbox-indicator,
-    .gds-search-select__checkbox-input:checked
-        + .gds-search-select__checkbox-indicator {
+    .gds-form-group__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+    .gds-search-select__checkbox-input:checked + .gds-form-group__checkbox-indicator,
+    .gds-form-group__checkbox-input:checked + .gds-search-select__checkbox-indicator,
+    .gds-search-select__checkbox-input:checked + .gds-search-select__checkbox-indicator {
         border-color: $dangerColor;
     }
 
@@ -2063,8 +2007,7 @@ $thumb-width: ($unit * 0.75);
         }
     }
 
-    .gds-form-group__toggleswitch-input:checked
-        ~ .gds-form-group__toggleswitch-indicator {
+    .gds-form-group__toggleswitch-input:checked ~ .gds-form-group__toggleswitch-indicator {
         &:after {
             background-color: $dangerColor;
         }
@@ -2076,33 +2019,28 @@ $thumb-width: ($unit * 0.75);
 
     .gds-form-group__file-indicator:before {
         background-color: $dangerColor;
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0),
-            inset 0 0 120px 0 rgba(255, 255, 255, 0),
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0), inset 0 0 120px 0 rgba(255, 255, 255, 0),
             inset 0 #{-$cap-size} 0 0 $dangerDark2Color;
     }
 
     .gds-form-group__file-indicator:hover {
-        box-shadow: inset 0 #{-$cap-size} 0 0 $dangerColor,
-            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 #{-$cap-size} 0 0 $dangerColor, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 
         &:after {
             color: $dangerLight2Color !important;
         }
 
         &:before {
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-                inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), inset 0 0 120px 0 rgba(255, 255, 255, 0.35),
                 inset 0 #{-$cap-size} 0 0 $dangerDark2Color;
         }
     }
 
     .gds-form-group__file-indicator:active {
-        box-shadow: inset 0 #{-$cap-size} 0 0 $dangerColor,
-            inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 #{-$cap-size} 0 0 $dangerColor, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 
         &:before {
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2),
-                inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), inset 0 0 2px 1px rgba(255, 255, 255, 0.35),
                 inset 0 #{-$cap-size} 0 0 $dangerDark2Color;
         }
     }
@@ -2188,11 +2126,7 @@ $thumb-width: ($unit * 0.75);
         @include focusShadows($primaryColor, black, $primaryLight2Color);
         outline: none;
         &:hover:focus {
-            @include hoverFocusShadows(
-                $primaryColor,
-                black,
-                $primaryLight2Color
-            );
+            @include hoverFocusShadows($primaryColor, black, $primaryLight2Color);
         }
     }
 

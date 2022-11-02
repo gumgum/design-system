@@ -294,8 +294,7 @@
     color: $buttonDropdownMenuPrimaryDarkBackgroundColor;
 }
 
-.gds-button-dropdown__button--dark-secondary
-    + .gds-button-dropdown__menu--dark {
+.gds-button-dropdown__button--dark-secondary + .gds-button-dropdown__menu--dark {
     color: $buttonDropdownMenuSecondaryDarkBackgroundColor;
 }
 

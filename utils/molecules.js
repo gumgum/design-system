@@ -6,8 +6,7 @@ export const getMoleculesData = id => {
 const Molecules = [
     {
         id: 'accordion-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/molecules-accordion--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/molecules-accordion--default',
         variants: [
             {
                 title: 'State',
@@ -105,15 +104,11 @@ const Molecules = [
     },
     {
         id: 'avatar-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/molecules-avatar--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/molecules-avatar--default',
         variants: [
             {
                 title: 'State',
-                values: [
-                    'gds-bubble__menu--menu-open',
-                    'gds-avatar__image--active',
-                ],
+                values: ['gds-bubble__menu--menu-open', 'gds-avatar__image--active'],
             },
             {
                 title: 'Color (Context)',
@@ -249,10 +244,7 @@ const Molecules = [
             },
             {
                 title: 'Add Ons',
-                values: [
-                    `gds-balloon__group--divide-bottom`,
-                    `gds-balloon__group--divide-top`,
-                ],
+                values: [`gds-balloon__group--divide-bottom`, `gds-balloon__group--divide-top`],
             },
         ],
         related: [
@@ -280,10 +272,7 @@ const Molecules = [
         variants: [
             {
                 title: 'State',
-                values: [
-                    'gds-button-dropdown__button--no-rotate',
-                    'gds-button-dropdown--active',
-                ],
+                values: ['gds-button-dropdown__button--no-rotate', 'gds-button-dropdown--active'],
             },
             {
                 title: 'Context (Color)',
@@ -338,8 +327,7 @@ const Molecules = [
     },
     {
         id: 'button-group-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/atoms-buttongroup--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/atoms-buttongroup--default',
         variants: [
             {
                 title: 'Size',
@@ -354,10 +342,7 @@ const Molecules = [
             },
             {
                 title: 'Display',
-                values: [
-                    'gds-button-group--responsive',
-                    'gds-button-group__button--responsive',
-                ],
+                values: ['gds-button-group--responsive', 'gds-button-group__button--responsive'],
             },
         ],
         related: [
@@ -388,8 +373,7 @@ const Molecules = [
     },
     {
         id: 'card-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/molecules-card--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/molecules-card--default',
         variants: [
             {
                 title: 'Context (Color)',
@@ -469,8 +453,7 @@ const Molecules = [
     },
     {
         id: 'input-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/atoms-textinput--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/atoms-textinput--default',
         variants: [
             {
                 title: 'Size',
@@ -565,10 +548,7 @@ const Molecules = [
             },
             {
                 title: 'Context (Color)',
-                values: [
-                    'gds-landing-pad__status--success',
-                    'gds-landing-pad__status--danger',
-                ],
+                values: ['gds-landing-pad__status--success', 'gds-landing-pad__status--danger'],
             },
         ],
         related: [
@@ -610,8 +590,7 @@ const Molecules = [
     },
     {
         id: 'modal-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/molecules-modal--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/molecules-modal--default',
         variants: [
             {
                 title: 'State',
@@ -703,8 +682,7 @@ const Molecules = [
     },
     {
         id: 'multiselect-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/molecules-multiselect--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/molecules-multiselect--default',
         variants: [
             { title: 'State', values: ['gds-button-dropdown--active '] },
             {
@@ -864,10 +842,7 @@ const Molecules = [
             },
             {
                 title: 'Context (Color)',
-                values: [
-                    'gds-nav-tabs--underline-primary',
-                    'gds-nav-tabs--underline-secondary',
-                ],
+                values: ['gds-nav-tabs--underline-primary', 'gds-nav-tabs--underline-secondary'],
             },
         ],
         related: [
@@ -1087,8 +1062,7 @@ const Molecules = [
     },
     {
         id: 'pagination-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/molecules-pagination--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/molecules-pagination--default',
         variants: [
             {
                 title: 'State',
@@ -1105,10 +1079,7 @@ const Molecules = [
             },
             {
                 title: 'Display',
-                values: [
-                    'gds-pagination--fixed',
-                    'gds-pagination__page-item--fixed',
-                ],
+                values: ['gds-pagination--fixed', 'gds-pagination__page-item--fixed'],
             },
             {
                 title: 'Add Ons',
@@ -1166,8 +1137,7 @@ const Molecules = [
     },
     {
         id: 'search-select-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/molecules-searchmultiselect--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/molecules-searchmultiselect--default',
         variants: [
             {
                 title: 'Optional Classes',
@@ -1328,8 +1298,7 @@ const Molecules = [
     },
     {
         id: 'table-component',
-        gumdrops:
-            'https://gumdrops.gumgum.com/?path=/story/molecules-table--default',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/molecules-table--default',
         variants: [
             {
                 title: 'Display',
@@ -1337,12 +1306,7 @@ const Molecules = [
             },
             {
                 title: 'Display',
-                values: [
-                    'gds-table--xs',
-                    'gds-table--sm',
-                    'gds-table--lg',
-                    'gds-table--xl',
-                ],
+                values: ['gds-table--xs', 'gds-table--sm', 'gds-table--lg', 'gds-table--xl'],
             },
             {
                 title: 'Context (Color)',

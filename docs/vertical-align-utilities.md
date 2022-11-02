@@ -13,10 +13,10 @@ Adjust vertical alignment. Vertical alignment defaults to `baseline`.
 
 **Optional classes:**
 
-- `-va-sub`
-- `-va-super`
-- `-va-top`
-- `-va-middle`
-- `-va-bottom`
-- `-va-text-top`
-- `-va-text-bottom`
+-   `-va-sub`
+-   `-va-super`
+-   `-va-top`
+-   `-va-middle`
+-   `-va-bottom`
+-   `-va-text-top`
+-   `-va-text-bottom`

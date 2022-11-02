@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 .gds-table-of-contents .nav > li > a {
     border-left: math.div($unit, 6) solid transparent;

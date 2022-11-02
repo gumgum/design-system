@@ -19,6 +19,6 @@ section: utilities
 
 **Optional classes:**
 
-- `-text-tr-up`
-- `-text-tr-low`
-- `-text-tr-cap`
+-   `-text-tr-up`
+-   `-text-tr-low`
+-   `-text-tr-cap`

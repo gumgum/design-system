@@ -17,58 +17,58 @@ It is strongly encouraged that you refer to the prototypes page for this compone
 
 ```html
 <div className="gds-flex">
-  <div className="gds-flex__item">Flex Item</div>
-  <div className="gds-flex__item">Flex Item</div>
-  <div className="gds-flex__item">Flex Item</div>
-  <div className="gds-flex__item">Flex Item</div>
+    <div className="gds-flex__item">Flex Item</div>
+    <div className="gds-flex__item">Flex Item</div>
+    <div className="gds-flex__item">Flex Item</div>
+    <div className="gds-flex__item">Flex Item</div>
 </div>
 ```
 
 **Optional classes:**
 
-- `gds-flex--direction-row`
-- `gds-flex--direction-row-*`
-- `gds-flex--direction-rowrev`
-- `gds-flex--direction-rowrev-*`
-- `gds-flex--direction-col`
-- `gds-flex--direction-col-*`
-- `gds-flex--direction-colrev`
-- `gds-flex--direction-colrev-*`
-- `gds-flex--wrap`
-- `gds-flex--wrap-*`
-- `gds-flex--wrap-no`
-- `gds-flex--wrap-no-*`
-- `gds-flex--wrap-rev`
-- `gds-flex--wrap-rev-*`
-- `gds-flex--justify-start`
-- `gds-flex--justify-start-*`
-- `gds-flex--justify-end`
-- `gds-flex--justify-end-*`
-- `gds-flex--justify-center`
-- `gds-flex--justify-center-*`
-- `gds-flex--justify-between`
-- `gds-flex--justify-between-*`
-- `gds-flex--justify-around`
-- `gds-flex--justify-around-*`
-- `gds-flex--align-start`
-- `gds-flex--align-start-*`
-- `gds-flex--align-end`
-- `gds-flex--align-end-*`
-- `gds-flex--align-center`
-- `gds-flex--align-center-*`
-- `gds-flex--align-baseline`
-- `gds-flex--align-baseline-*`
-- `gds-flex--align-stretch`
-- `gds-flex--align-stretch-*`
-- `gds-flex--content-start`
-- `gds-flex--content-start-*`
-- `gds-flex--content-end`
-- `gds-flex--content-end-*`
-- `gds-flex--content-center`
-- `gds-flex--content-center-*`
-- `gds-flex--content-between`
-- `gds-flex--content-between-*`
-- `gds-flex--content-around`
-- `gds-flex--content-around-*`
-- `gds-flex--content-stretch`
-- `gds-flex--content-stretch-*`
+-   `gds-flex--direction-row`
+-   `gds-flex--direction-row-*`
+-   `gds-flex--direction-rowrev`
+-   `gds-flex--direction-rowrev-*`
+-   `gds-flex--direction-col`
+-   `gds-flex--direction-col-*`
+-   `gds-flex--direction-colrev`
+-   `gds-flex--direction-colrev-*`
+-   `gds-flex--wrap`
+-   `gds-flex--wrap-*`
+-   `gds-flex--wrap-no`
+-   `gds-flex--wrap-no-*`
+-   `gds-flex--wrap-rev`
+-   `gds-flex--wrap-rev-*`
+-   `gds-flex--justify-start`
+-   `gds-flex--justify-start-*`
+-   `gds-flex--justify-end`
+-   `gds-flex--justify-end-*`
+-   `gds-flex--justify-center`
+-   `gds-flex--justify-center-*`
+-   `gds-flex--justify-between`
+-   `gds-flex--justify-between-*`
+-   `gds-flex--justify-around`
+-   `gds-flex--justify-around-*`
+-   `gds-flex--align-start`
+-   `gds-flex--align-start-*`
+-   `gds-flex--align-end`
+-   `gds-flex--align-end-*`
+-   `gds-flex--align-center`
+-   `gds-flex--align-center-*`
+-   `gds-flex--align-baseline`
+-   `gds-flex--align-baseline-*`
+-   `gds-flex--align-stretch`
+-   `gds-flex--align-stretch-*`
+-   `gds-flex--content-start`
+-   `gds-flex--content-start-*`
+-   `gds-flex--content-end`
+-   `gds-flex--content-end-*`
+-   `gds-flex--content-center`
+-   `gds-flex--content-center-*`
+-   `gds-flex--content-between`
+-   `gds-flex--content-between-*`
+-   `gds-flex--content-around`
+-   `gds-flex--content-around-*`
+-   `gds-flex--content-stretch`
+-   `gds-flex--content-stretch-*`
