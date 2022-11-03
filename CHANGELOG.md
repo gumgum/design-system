@@ -1,5 +1,9 @@
 # Concrete Changelog
 
+# 2.1.2
+
+-   Added checkbox and toggle
+
 # 2.1.0
 
 -   BREAKING CHANGE: Deprecate components not being used:
