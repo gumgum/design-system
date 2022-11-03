@@ -912,7 +912,6 @@
     border-width: 1px;
     border-style: solid;
     border-color: $gg-light-3;
-    border-bottom-width: $cap-size;
     border-radius: $input-border-radius;
     transform: scale(1);
     opacity: 1;
@@ -1042,7 +1041,7 @@
         width: ($unit * 2.5);
         height: ($unit * 1.25);
         margin-right: 7px;
-        top: -(math.div($unit, 6));
+        top: -(math.div($unit, 7));
     }
 }
 
@@ -1057,11 +1056,13 @@
         width: ($unit * 2);
         height: ($unit * 1);
         margin-right: 6px;
-        top: -($unit * 0.05);
+        top: (math.div($unit, 5));
     }
 }
 
 .gds-form-group__toggleswitch-label {
+    position: relative;
+    display: inline-block;
     cursor: pointer;
 }
 
@@ -1089,13 +1090,13 @@
 .gds-form-group__toggleswitch-indicator {
     background: white;
     box-shadow: inset 0 0 0 1px $gg-light-3;
-    border-radius: ($input-border-radius * 0.5);
+    border-radius: ($unit * 1.5);
     display: block;
     height: ($unit * 1.5);
     left: 0;
     overflow: hidden;
     position: absolute;
-    top: -($unit * 0.25);
+    top: ($unit * 0.12);
     width: ($unit * 3);
     z-index: 0;
     border: none !important;
@@ -1107,9 +1108,9 @@
         color: white;
         top: 2px;
         bottom: 2px;
-        width: calc(50% - 2px);
+        width: calc(50% - 4px);
         background-color: $gg-light-3;
-        border-radius: math.div($input-border-radius, 1.8);
+        border-radius: 100%;
         box-sizing: border-box;
         @include transition-back(all, 250ms);
         border: none !important;
@@ -1166,8 +1167,8 @@
     background-image: none;
 
     &:after {
-        left: 50%;
-        background-color: $primaryColor;
+        left: calc(50% + 2px);
+        background-color: $primaryDark1Color;
     }
 
     .gds-form-group__toggleswitch-indicator-labels {

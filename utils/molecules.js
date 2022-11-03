@@ -452,6 +452,49 @@ const Molecules = [
     </div>`,
     },
     {
+        id: 'checkbox-component',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/story/molecules-toggle--default',
+        variants: [
+            {
+                title: 'Size',
+                values: ['gds-form-group__checkbox--xs', 'gds-form-group__checkbox--sm'],
+            },
+            {
+                title: 'State',
+                values: ['gds-form-group--disabled'],
+            },
+            {
+                title: 'Context (Color)',
+                values: [
+                    'gds-form-group__checkbox-label--dark',
+                    'gds-form-group--success',
+                    'gds-form-group--warning',
+                    'gds-form-group--danger',
+                ],
+            },
+            {
+                title: 'Position',
+                values: ['gds-form-group__checkbox--inline'],
+            },
+        ],
+        related: [
+            {
+                title: 'Inputs',
+                url: '/molecules/input-component',
+            },
+        ],
+        code: `
+    <div className="gds-form-group">
+      <div className="gds-form-group__checkbox">
+          <label className="gds-form-group__checkbox-label">
+              <input className="gds-form-group__checkbox-input" type="checkbox" />
+              <span className="gds-form-group__checkbox-indicator"></span>Checkbox Option
+          </label>
+      </div>
+    </div>
+`,
+    },
+    {
         id: 'input-component',
         gumdrops: 'https://gumdrops.gumgum.com/?path=/story/atoms-textinput--default',
         variants: [
@@ -1382,6 +1425,41 @@ const Molecules = [
 </div>
     
     `,
+    },
+    {
+        id: 'toggle-component',
+        gumdrops: 'https://gumdrops.gumgum.com/?path=/docs/molecules-toggle--default',
+        variants: [
+            {
+                title: 'Size',
+                values: ['gds-form-group__toggleswitch--xs', 'gds-form-group__toggleswitch--sm'],
+            },
+        ],
+        related: [
+            {
+                title: 'Inputs',
+                url: '/molecules/input-component',
+            },
+            {
+                title: 'Checkbox',
+                url: '/molecules/checkbox-component',
+            },
+        ],
+        code: `
+          <div className="gds-form-group">
+            <label className="gds-form-group__toggleswitch-label">
+              <input className="gds-form-group__toggleswitch-input" type="checkbox" />
+              <span className="gds-form-group__toggleswitch-indicator">
+              <span
+                className="gds-form-group__toggleswitch-indicator-labels"
+                gg-enabled-text="On"
+                gg-disabled-text="Off"
+              />
+          </span>
+            Label
+          </label>
+        </div>
+      `,
     },
 ];
 
