@@ -27,7 +27,7 @@ body.-has-persist-nav {
 .gds-persist-nav__sidebar {
     width: $persistant-menu-width;
     padding: ($unit * 0.75) 0 ($unit * 2);
-    background-color: mix($gg-light-1, white, 35);
+    background-color: mix($gg-light-1, white, 35%);
     transition: all 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     white-space: nowrap;
     overflow-y: auto;
@@ -60,7 +60,7 @@ body.-has-persist-nav {
 }
 
 .gds-persist-nav__sidebar--dark {
-    background-color: mix($gg-dark-2, white, 95);
+    background-color: mix($gg-dark-2, white, 95%);
     box-shadow: inset -1px 0 0 0 $gg-light-4;
 }
 
@@ -171,7 +171,7 @@ body.-has-persist-nav {
             top: calc(50% - 2.5px);
             left: 2px;
             background-color: $gg-light-3;
-            border: 1px solid mix($gg-light-1, white, 35);
+            border: 1px solid mix($gg-light-1, white, 35%);
             box-shadow: 0px 0px 0px 1px $gg-light-3;
             @include transition-ease-out(all, 150ms);
             z-index: $z-index-2;
@@ -205,7 +205,7 @@ body.-has-persist-nav {
 
     &:before {
         background-color: $gg-gray;
-        border: 1px solid mix($gg-dark-2, white, 95) !important;
+        border: 1px solid mix($gg-dark-2, white, 95%) !important;
         box-shadow: 0px 0px 0px 1px $gg-gray;
     }
 }
