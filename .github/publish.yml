@@ -1,0 +1,41 @@
+name: Publish to NPM
+
+on:
+    push:
+        tags:
+            - '*'
+        tags-ignore:
+            - 2.1.*
+            - 2.0.*
+            - 1.*
+
+jobs:
+    publish:
+        name: 'Publish to NPM Registry'
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout branch
+              uses: actions/checkout@v3
+
+            - name: Setup Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16.x
+                  cache: 'yarn'
+                  always-auth: true
+
+            - name: Install Yarn
+              uses: DerYeger/yarn-setup-action@master
+              with:
+                  node-version: 16.x
+
+            - name: Install Dependencies
+              run: yarn install --frozen-lockfile
+
+            - name: Build package files
+              run: yarn build
+
+            - name: Publish to GitHub Package Registry
+              run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc && yarn publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_SECRET }}
