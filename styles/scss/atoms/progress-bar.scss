@@ -35,16 +35,16 @@
 
 // Colored by value
 @for $i from 0 through 50 {
-    $border-color: mix($gg-gold, $gg-red, $i * 2);
+    $border-color: mix($gg-gold, $gg-red, $i * 2%);
 
     .gds-progress-bar--value-colors[data-value='#{$i}']:after {
-        background: mix($gg-gold, $gg-red, $i * 2);
+        background: mix($gg-gold, $gg-red, $i * 2%);
         border-color: mix(black, $border-color, 10%);
     }
 }
 
 @for $i from 51 through 100 {
-    $inc: (($i - 50) * 2);
+    $inc: (($i - 50) * 2%);
     $border-color: mix($gg-green, $gg-gold, $inc);
 
     .gds-progress-bar--value-colors[data-value='#{$i}']:after {
@@ -99,11 +99,11 @@
 
 // Colored by value
 @for $i from 0 through 50 {
-    $border-color: mix($gg-gold, $gg-red, $i * 2);
-    $border-color-invert: mix($gg-gold, $gg-green, $i * 2);
+    $border-color: mix($gg-gold, $gg-red, $i * 2%);
+    $border-color-invert: mix($gg-gold, $gg-green, $i * 2%);
 
     .gds-progress-bar--value-colors[data-value='#{$i}']:after {
-        background: mix($gg-gold, $gg-red, $i * 2);
+        background: mix($gg-gold, $gg-red, $i * 2%);
         border-color: mix(black, $border-color, 10%);
     }
     .gds-progress-bar--value-colors-invert[data-value='#{$i}']:after {

@@ -1,0 +1,17 @@
+{
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.fontSize": 14,
+    "editor.formatOnSave": true,
+    "editor.lineHeight": 1.8,
+    "editor.matchBrackets": "always",
+    "editor.renderWhitespace": "all",
+    "files.trimTrailingWhitespace": true,
+    "git.autofetch": true,
+    "npm.packageManager": "yarn",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "typescript.tsdk": "node_modules/typescript/lib"
+}
