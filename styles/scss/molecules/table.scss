@@ -106,7 +106,7 @@
     }
 }
 
-.gds-table__row {
+.gds-table__row:not(.gds-table--expandable-row) {
     background-color: rgba($gg-light-4, 0);
     @include transition-ease-out(all, 250ms);
 
@@ -261,14 +261,14 @@
 
 // Striped table
 .gds-table--striped {
-    tr:nth-of-type(even) {
+    tr:nth-child(even of :not(.gds-table--expandable-row)) {
         background-color: rgba($gg-light-4, 0.1);
         &:hover {
             background-color: rgba($gg-light-4, 0.2);
         }
     }
     .gds-table__row--selected,
-    .gds-table__row--selected:nth-of-type(even) {
+    .gds-table__row--selected:nth-child(even of :not(.gds-table--expandable-row)) {
         background-color: rgba($tableRowPrimaryColor, 0.65);
         color: white;
         &:hover {
@@ -285,15 +285,15 @@
 // Inverse striped table
 .gds-table--inverse-striped {
     tr:hover,
-    tr:nth-of-type(even):hover {
+    tr:nth-child(even of :not(.gds-table--expandable-row)):hover {
         background-color: $gg-dark-3;
     }
 
-    tr:nth-of-type(even) {
+    tr:nth-child(even of :not(.gds-table--expandable-row)) {
         background-color: mix($gg-dark-2, white, 96%);
     }
     .gds-table__row--inverse-selected,
-    .gds-table__row--inverse-selected:nth-of-type(even) {
+    .gds-table__row--inverse-selected:nth-of-type(even of :not(.gds-table--expandable-row)) {
         background-color: rgba($gg-dark-4, 1);
         color: white;
         &:hover {
@@ -301,7 +301,6 @@
         }
     }
 }
-
 .gds-table__row--inverse-selected {
     background-color: rgba($gg-dark-4, 1);
     color: white;
@@ -408,5 +407,31 @@
     opacity: 0;
     > .gds-table__row {
         display: none;
+    }
+}
+
+.gds-table--expandable tbody tr {
+    &.gds-table--expandable-row {
+        td {
+            border-bottom: 0;
+            padding: 0;
+            .gds-table--collapsible {
+                overflow: hidden;
+                transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+                transition-property: opacity;
+                transition-duration: 1s;
+                opacity: 1;
+                > div {
+                    padding: 1.5rem;
+                    border-bottom: 1px solid $grayLight2Color;
+                }
+            }
+        }
+    }
+    &:not(:has(.expanded)) + tr.gds-table--expandable-row {
+        td .gds-table--collapsible {
+            opacity: 0;
+            transition-duration: 0.25s;
+        }
     }
 }
