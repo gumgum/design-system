@@ -1,5 +1,9 @@
 # Concrete Changelog
 
+# 2.1.4
+
+-   Add styles for table expandable row
+
 # 2.1.3
 
 -   Fixed the interpolation issue with root colors and added the required unit type for the $weight sass function
