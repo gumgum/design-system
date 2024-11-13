@@ -122,11 +122,9 @@ export default function Header() {
             <button
                 className="gds-nav__menu gds-nav__auto-hide"
                 onClick={() => setLeftNav(!leftNav)}></button>
-            <Link href="/">
-                <a className="gds-nav__logo"></a>
-            </Link>
-            <Link href="/">
-                <a className="gds-nav__title gds-nav__item--grow-0">Design System</a>
+            <Link href="/" className="gds-nav__logo"></Link>
+            <Link href="/" className="gds-nav__title gds-nav__item--grow-0">
+                Design System
             </Link>
         </header>
     );

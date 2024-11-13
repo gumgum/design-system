@@ -49,10 +49,8 @@ export default function Breadcrumbs() {
                 {breadcrumbs.map(breadcrumb => {
                     return (
                         <li className="gds-breadcrumb__item" key={breadcrumb.href}>
-                            <Link href={breadcrumb.href}>
-                                <a className="gds-breadcrumb__link">
-                                    {convertBreadcrumb(breadcrumb.breadcrumb)}
-                                </a>
+                            <Link href={breadcrumb.href} className="gds-breadcrumb__link">
+                                {convertBreadcrumb(breadcrumb.breadcrumb)}
                             </Link>
                         </li>
                     );

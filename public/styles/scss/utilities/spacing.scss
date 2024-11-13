@@ -67,7 +67,7 @@
 
 // Breakpoint-specific
 @each $index2, $affix in $affixes {
-    $bp: unquote(nth($breakpoints, $index2));
+    $bp: nth($breakpoints, $index2);
 
     .-m-h-c-#{$affix} {
         margin-left: auto !important;

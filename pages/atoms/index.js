@@ -24,19 +24,16 @@ export default function AllDocsPage({ allPostsData }) {
                 These atoms include basic HTML elements like form labels, inputs, buttons, and
                 others that can’t be broken down any further without ceasing to be functional.
             </p>
-            <Card>
-                <CardBlock>
-                    <ul>
-                        {allPostsData.map(({ id, title, section }) => (
-                            <li key={id}>
-                                <Link href={`/${section}/${id}`}>
-                                    <a className="gds-button--link">{title}</a>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </CardBlock>
-            </Card>
+
+            <ul>
+                {allPostsData.map(({ id, title, section }) => (
+                    <li key={id}>
+                        <Link href={`/${section}/${id}`} className="gds-button--link">
+                            {title}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
         </section>
     );
 }

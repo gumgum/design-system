@@ -5,11 +5,14 @@ export default function GlobalSearch() {
     const [inputValue, setInputValue] = useState('Summ');
     const { globalSearch, setGlobalSearch } = useAppContext();
 
-    const escFunction = useCallback(event => {
-        if (event.keyCode === 27) {
-            setGlobalSearch(false);
-        }
-    }, []);
+    const escFunction = useCallback(
+        event => {
+            if (event.keyCode === 27) {
+                setGlobalSearch(false);
+            }
+        },
+        [setGlobalSearch]
+    );
 
     useEffect(() => {
         document.addEventListener('keydown', escFunction, false);
@@ -17,7 +20,8 @@ export default function GlobalSearch() {
         return () => {
             document.removeEventListener('keydown', escFunction, false);
         };
-    }, []);
+    }, [escFunction]);
+
     return (
         <div className={`gds-search ${globalSearch ? 'gds-search--shown' : null}`}>
             <button

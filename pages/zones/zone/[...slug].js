@@ -52,8 +52,8 @@ const ZonePage = () => {
                                 className={`gds-nav-tabs__list-item ${
                                     tab.slug == route ? 'gds-nav-tabs__list-item--active' : null
                                 }`}>
-                                <Link href={tab.slug}>
-                                    <a className="gds-nav-tabs__link">{tab.label}</a>
+                                <Link href={tab.slug} className="gds-nav-tabs__link">
+                                    {tab.label}
                                 </Link>
                             </li>
                         );

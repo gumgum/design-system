@@ -58,21 +58,17 @@ export default function Left() {
             <div className="gds-nav__close-wrapper">
                 <button className="gds-nav__close" onClick={() => setLeftNav(!leftNav)}></button>
             </div>
-            <Link href="/">
-                <a className="gds-nav__logo" data-site-title="Publisher Manager"></a>
-            </Link>
-            <Link href="/">
-                <a className="gds-nav__title gds-nav__item--grow-0">Design System</a>
+            <Link href="/" className="gds-nav__logo" data-site-title="Publisher Manager"></Link>
+            <Link href="/" className="gds-nav__title gds-nav__item--grow-0">
+                Design System
             </Link>
             <ul className="gds-nav__links">
                 {navItems.map((item, i) => {
                     return (
                         <li key={i}>
-                            <Link href={item.url}>
-                                <a className="gds-nav__link">
-                                    <i className={`fas  fa-${item.icon} gds-nav__link-icon`} />
-                                    <span className="gds-nav__link-text">{item.title}</span>
-                                </a>
+                            <Link href={item.url} className="gds-nav__link">
+                                <i className={`fas  fa-${item.icon} gds-nav__link-icon`} />
+                                <span className="gds-nav__link-text">{item.title}</span>
                             </Link>
                         </li>
                     );
@@ -89,11 +85,9 @@ export default function Left() {
                 </li>
             </ul>
             <div className="gds-nav__item--grow-0 -m-b-3">
-                <Link href="/login">
-                    <a className="gds-nav__link">
-                        <i className={`fas  fa-sign-out-alt gds-nav__link-icon`} />
-                        <span className="gds-nav__link-text">Logout</span>
-                    </a>
+                <Link href="/login" className="gds-nav__link">
+                    <i className={`fas  fa-sign-out-alt gds-nav__link-icon`} />
+                    <span className="gds-nav__link-text">Logout</span>
                 </Link>
             </div>
         </nav>

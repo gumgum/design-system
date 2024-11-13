@@ -25,20 +25,25 @@ export default function Footer() {
             <div>
                 <p className="gds-text--body-sm">
                     Copyright &copy; {new Date().getFullYear()}{' '}
-                    <Link href="https://gumgum.com/" passHref={true}>
-                        <a className="gds-text-button--light-grey">GumGum Inc.</a>
+                    <Link
+                        href="https://gumgum.com/"
+                        passHref={true}
+                        className="gds-text-button--light-grey">
+                        GumGum Inc.
                     </Link>{' '}
                     All rights reserved.
                 </p>
-                <Link href="https://gumgum.com/" passHref={true}>
-                    <a className="gds-text-button--light-grey -p-a-1">
-                        <i className="fab fa-linkedin-in"></i>
-                    </a>
+                <Link
+                    href="https://gumgum.com/"
+                    passHref={true}
+                    className="gds-text-button--light-grey -p-a-1">
+                    <i className="fab fa-linkedin-in"></i>
                 </Link>
-                <Link href="https://gumgum.com/" passHref={true}>
-                    <a className="gds-text-button--light-grey -p-a-1">
-                        <i className="fab fa-twitter"></i>
-                    </a>
+                <Link
+                    href="https://gumgum.com/"
+                    passHref={true}
+                    className="gds-text-button--light-grey -p-a-1">
+                    <i className="fab fa-twitter"></i>
                 </Link>
             </div>
             <div>
@@ -46,10 +51,10 @@ export default function Footer() {
                     {FooterLinks.map((item, i) => {
                         return (
                             <li className={`${i !== 0 ? '-m-l-2' : null}`} key={i}>
-                                <Link href={item.url} passHref={true}>
-                                    <a className="gds-text-button--light-grey gds-text--body-sm">
-                                        {item.title}
-                                    </a>
+                                <Link
+                                    href={item.url}
+                                    className="gds-text-button--light-grey gds-text--body-sm">
+                                    {item.title}
                                 </Link>
                             </li>
                         );

@@ -29,8 +29,8 @@ export default function Login() {
                         <FormGroupLabel text="Password" />
                         <TextInput name="password" type="password" placeholder="password123" />
                     </FormGroup>
-                    <Link href="/">
-                        <a className="gds-button gds-button--primary gds-button--block">Login</a>
+                    <Link href="/" className="gds-button gds-button--primary gds-button--block">
+                        Login
                     </Link>
                 </LoginForm>
             </Row>

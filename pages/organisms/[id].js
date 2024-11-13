@@ -32,13 +32,13 @@ export default function DocsPage({ docData }) {
             <div className="gds-flex gds-flex--justify-between">
                 <PageTitle title={docData.title} />
                 {data && data.gumdrops && (
-                    <a
+                    <Link
                         href={data.gumdrops}
                         target="_blank"
                         rel="noref noreferrer"
                         className="gds-text--link">
                         GumDrops<i className="fas fa-external-link-alt -m-l-2"></i>
-                    </a>
+                    </Link>
                 )}
             </div>
             <Row>
@@ -102,10 +102,11 @@ export default function DocsPage({ docData }) {
                                         <Divider label="Related Items" />
                                         {data.related.map(item => {
                                             return (
-                                                <Link key={item.title} href={item.url}>
-                                                    <a className="gds-tag gds-tag--sm">
-                                                        {item.title}
-                                                    </a>
+                                                <Link
+                                                    key={item.title}
+                                                    href={item.url}
+                                                    className="gds-tag gds-tag--sm">
+                                                    {item.title}
                                                 </Link>
                                             );
                                         })}

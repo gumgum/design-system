@@ -18,11 +18,9 @@ export default function AllDocsPage({ allPostsData }) {
             <ul>
                 {allPostsData.map(({ id, section, title }) => (
                     <li key={id}>
-                        <Link href={`/docs/${id}`}>
-                            <a className="gds-button--link">
-                                {title}
-                                <span className="gds-badge">{section}</span>
-                            </a>
+                        <Link href={`/docs/${id}`} className="gds-button--link">
+                            {title}
+                            <span className="gds-badge">{section}</span>
                         </Link>
                     </li>
                 ))}
