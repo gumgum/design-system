@@ -1,10 +1,11 @@
 {
     "plugins": ["stylelint-scss"],
+    "customSyntax": "postcss-scss",
     "rules": {
         "scss/no-global-function-names": true,
         "scss/operator-no-unspaced": true,
         "scss/at-function-pattern": "^[-a-z]+$",
-        "scss/dollar-variable-pattern": "^[-a-z]+$",
+        "scss/dollar-variable-pattern": null,
         "scss/no-duplicate-mixins": true
     }
 }
