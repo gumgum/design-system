@@ -29,8 +29,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "lint:scss": "stylelint './public/styles/scss/**/*.scss'",
-        "lint:scss:fix": "yarn run lint:scss --fix"
+        "lint:scss": "stylelint './styles/scss/**/*.scss'"
     },
     "dependencies": {
         "@fontsource/public-sans": "^5.1.1",
