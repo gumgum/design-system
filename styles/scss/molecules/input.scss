@@ -332,7 +332,7 @@
 
 .gds-form-group__text-input--dark,
 .gds-form-group__text-area-input--dark {
-    background-color: mix($gg-dark-3, white, 90%);
+    background-color: color.mix($gg-dark-3, white, 90%);
     @include defaultShadows($gg-gray, black, $primaryLight2Color);
 
     &::-webkit-input-placeholder {
@@ -710,7 +710,7 @@
 
 .gds-form-group__select-input--dark,
 .gds-search-select__input--dark {
-    background-color: mix($gg-dark-3, white, 90%);
+    background-color: color.mix($gg-dark-3, white, 90%);
     color: white;
     background-image: url('data:image/svg+xml;utf8,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20478.87%20249%22%3E%3Cpath%20d%3D%22M478.85%2C0S264.32%2C233.49%2C255.7%2C242.33s-24.33%2C8.94-32.56%2C0L0%2C0H478.85Z%22%20transform%3D%22translate%280.02%200%29%22%20style%3D%22fill%3A#FFFFFF%3B%22/%3E%3C/svg%3E');
     @include defaultShadows($gg-gray, black, $primaryLight2Color);
@@ -720,7 +720,7 @@
     &:hover:focus,
     &:focus {
         color: white;
-        background-color: mix($gg-dark-3, white, 90%);
+        background-color: color.mix($gg-dark-3, white, 90%);
     }
 }
 

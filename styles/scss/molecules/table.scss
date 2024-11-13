@@ -290,7 +290,7 @@
     }
 
     tr:nth-child(even of :not(.gds-table--expandable-row)) {
-        background-color: mix($gg-dark-2, white, 96%);
+        background-color: color.mix($gg-dark-2, white, 96%);
     }
     .gds-table__row--inverse-selected,
     .gds-table__row--inverse-selected:nth-of-type(even of :not(.gds-table--expandable-row)) {
@@ -339,7 +339,7 @@
 }
 
 .gds-table__sub-section--inverse {
-    background-color: mix($gg-dark-2, $gg-dark-1, 50%);
+    background-color: color.mix($gg-dark-2, $gg-dark-1, 50%);
     color: white;
     box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 1), inset 0px 1px 0px rgba(0, 0, 0, 0.75);
     &.gds-table__sub-section--primary {

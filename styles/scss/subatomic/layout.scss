@@ -42,19 +42,19 @@
 }
 
 @mixin make-col-span($size, $columns: $grid-columns) {
-    width: percentage(math.div($size, $columns));
+    width: math.percentage(math.div($size, $columns));
 }
 
 @mixin make-col-offset($size, $columns: $grid-columns) {
-    margin-left: percentage(math.div($size, $columns));
+    margin-left: math.percentage(math.div($size, $columns));
 }
 
 @mixin make-col-push($size, $columns: $grid-columns) {
-    left: if($size > 0, percentage(math.div($size, $columns)), auto);
+    left: if($size > 0, math.percentage(math.div($size, $columns)), auto);
 }
 
 @mixin make-col-pull($size, $columns: $grid-columns) {
-    right: if($size > 0, percentage(math.div($size, $columns)), auto);
+    right: if($size > 0, math.percentage(math.div($size, $columns)), auto);
 }
 
 @mixin make-col-modifier($type, $size, $columns) {
@@ -69,7 +69,7 @@
 }
 
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-    $min: map-get($breakpoints, $name);
+    $min: map.get($breakpoints, $name);
     @return if($min != 0, $min, null);
 }
 
@@ -110,7 +110,7 @@
     $gutter: $grid-gutter-width,
     $breakpoints: $grid-breakpoints
 ) {
-    @each $breakpoint in map-keys($grid-breakpoints) {
+    @each $breakpoint in map.keys($grid-breakpoints) {
         @for $i from 1 through $columns {
             .gds-layout__column--#{$breakpoint}-#{$i} {
                 position: relative;

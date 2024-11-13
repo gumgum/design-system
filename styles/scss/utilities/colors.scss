@@ -283,13 +283,13 @@ $defaults: (
     )
 );
 
-@for $i from 0 to length($defaults) {
-    $cl: nth($color-sfx, $i + 1);
-    $color-set: nth($defaults, $i + 1);
+@for $i from 0 to list.length($defaults) {
+    $cl: list.nth($color-sfx, $i + 1);
+    $color-set: list.nth($defaults, $i + 1);
 
-    @for $g from 0 to length($color-set) {
-        $sd: nth($shade-sfx, $g + 1);
-        $value: nth($color-set, $g + 1);
+    @for $g from 0 to list.length($color-set) {
+        $sd: list.nth($shade-sfx, $g + 1);
+        $value: list.nth($color-set, $g + 1);
 
         .-color-bg-#{$cl + $sd} {
             background-color: $value !important;
@@ -313,13 +313,13 @@ $grayscale-defaults: (
     ($gg-dark-1, $gg-dark-2, $gg-dark-3, $gg-dark-4, $gg-dark-5)
 );
 
-@for $i from 0 to length($grayscale-defaults) {
-    $cl: nth($grayscale-sfx, $i + 1);
-    $color-set: nth($grayscale-defaults, $i + 1);
+@for $i from 0 to list.length($grayscale-defaults) {
+    $cl: list.nth($grayscale-sfx, $i + 1);
+    $color-set: list.nth($grayscale-defaults, $i + 1);
 
-    @for $g from 0 to length($color-set) {
-        $sd: nth($grayscale-shade-sfx, $g + 1);
-        $value: nth($color-set, $g + 1);
+    @for $g from 0 to list.length($color-set) {
+        $sd: list.nth($grayscale-shade-sfx, $g + 1);
+        $value: list.nth($color-set, $g + 1);
 
         .-color-bg-#{$cl + $sd} {
             background-color: $value !important;

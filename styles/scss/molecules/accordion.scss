@@ -151,7 +151,7 @@
 
 .gds-accordion__item-title--dark {
     &:hover {
-        background-color: mix($gg-gray, $gg-dark-4, 50%);
+        background-color: color.mix($gg-gray, $gg-dark-4, 50%);
     }
 }
 

@@ -269,7 +269,7 @@ $basis-types: 'fix', 'pct';
             } @else {
                 $amount: #{$factor};
                 .gds-flex__item--basis-pct-#{$amount} {
-                    flex-basis: $amount + unquote('%') !important;
+                    flex-basis: $amount + string.unquote('%') !important;
                 }
             }
         }
@@ -287,7 +287,7 @@ $basis-types: 'fix', 'pct';
             } @else {
                 $amount: #{$factor};
                 .gds-flex__item--basis-pct-#{$breakpoint}-#{$amount} {
-                    flex-basis: $amount + unquote('%') !important;
+                    flex-basis: $amount + string.unquote('%') !important;
                 }
             }
         }
