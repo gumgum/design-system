@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+$ds-nd-1: 0 0 ($unit * 0.25) rgba(0, 0, 0, 0.25);
+$ds-nd-2: 0 0 math.div($unit, 3) rgba(0, 0, 0, 0.15);
+$ds-nd-3: 0 0 ($unit * 0.5) rgba(0, 0, 0, 0.1);
+
+$ds-dn-1: 0 ($unit * 0.125) ($unit * 0.25) rgba(0, 0, 0, 0.15);
+$ds-dn-2: 0 ($unit * 0.25) math.div($unit, 3) rgba(0, 0, 0, 0.2);
+$ds-dn-3: 0 ($unit * 0.5) ($unit * 0.5) rgba(0, 0, 0, 0.1);

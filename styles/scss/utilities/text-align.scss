@@ -1,0 +1,112 @@
+.-text-center {
+    text-align: center !important;
+}
+
+.-text-right {
+    text-align: right !important;
+}
+
+.-text-left {
+    text-align: left !important;
+}
+
+// Breakpoint-specific text alignment
+@media #{$phone-width} {
+    .-text-center--xs,
+    .-text-center--sm,
+    .-text-center--md,
+    .-text-center--lg,
+    .-text-center--xl {
+        text-align: center !important;
+    }
+
+    .-text-right--xs,
+    .-text-right--sm,
+    .-text-right--md,
+    .-text-right--lg,
+    .-text-right--xl {
+        text-align: right !important;
+    }
+
+    .-text-left--xs,
+    .-text-left--sm,
+    .-text-left--md,
+    .-text-left--lg,
+    .-text-left--xl {
+        text-align: left !important;
+    }
+}
+
+@media #{$phablet-width} {
+    .-text-center--sm,
+    .-text-center--md,
+    .-text-center--lg,
+    .-text-center--xl {
+        text-align: center !important;
+    }
+
+    .-text-right--sm,
+    .-text-right--md,
+    .-text-right--lg,
+    .-text-right--xl {
+        text-align: right !important;
+    }
+
+    .-text-left--sm,
+    .-text-left--md,
+    .-text-left--lg,
+    .-text-left--xl {
+        text-align: left !important;
+    }
+}
+
+@media #{$tablet-width} {
+    .-text-center--md,
+    .-text-center--lg,
+    .-text-center--xl {
+        text-align: center !important;
+    }
+
+    .-text-right--md,
+    .-text-right--lg,
+    .-text-right--xl {
+        text-align: right !important;
+    }
+
+    .-text-left--md,
+    .-text-left--lg,
+    .-text-left--xl {
+        text-align: left !important;
+    }
+}
+
+@media #{$laptop-width} {
+    .-text-center--lg,
+    .-text-center--xl {
+        text-align: center !important;
+    }
+
+    .-text-right--lg,
+    .-text-right--xl {
+        text-align: right !important;
+    }
+
+    .-text-left--lg,
+    .-text-left--xl {
+        text-align: left !important;
+    }
+}
+
+@media #{$desktop-width} {
+    .-text-center--xl {
+        text-align: center !important;
+    }
+
+    .-text-right--xl {
+        text-align: right !important;
+    }
+
+    .-text-left--xl {
+        text-align: left !important;
+    }
+}

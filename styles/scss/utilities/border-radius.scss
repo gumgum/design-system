@@ -1,0 +1,148 @@
+// Adding Borders v2.0
+.-bor-t {
+    border-top: 1px solid $grayLight2Color;
+}
+.-bor-r {
+    border-right: 1px solid $grayLight2Color;
+}
+.-bor-b {
+    border-bottom: 1px solid $grayLight2Color;
+}
+.-bor-l {
+    border-left: 1px solid $grayLight2Color;
+}
+
+.-bor-none {
+    border: none !important;
+}
+
+// Breakpoint-specific text alignment
+@media #{$phone-width} {
+    .-bor-none--xs,
+    .-bor-none--sm,
+    .-bor-none--md,
+    .-bor-none--lg,
+    .-bor-none--xl {
+        border: none !important;
+    }
+}
+
+@media #{$phablet-width} {
+    .-bor-none--sm,
+    .-bor-none--md,
+    .-bor-none--lg,
+    .-bor-none--xl {
+        border: none !important;
+    }
+}
+
+@media #{$tablet-width} {
+    .-bor-none--md,
+    .-bor-none--lg,
+    .-bor-none--xl {
+        border: none !important;
+    }
+}
+
+@media #{$laptop-width} {
+    .-bor-none--lg,
+    .-bor-none--xl {
+        border: none !important;
+    }
+}
+
+@media #{$desktop-width} {
+    .-bor-none--xl {
+        border: none !important;
+    }
+}
+
+// RADIUS
+// All sides
+.-bor-rad-a-0 {
+    border-radius: 0 !important;
+}
+
+.-bor-rad-a-1 {
+    border-radius: $border-radius !important;
+}
+
+// Top left
+.-bor-rad-tl-0 {
+    border-top-left-radius: 0 !important;
+}
+
+.-bor-rad-tl-1 {
+    border-top-left-radius: $border-radius !important;
+}
+
+// Top right
+.-bor-rad-tr-0 {
+    border-top-right-radius: 0 !important;
+}
+
+.-bor-rad-tr-1 {
+    border-top-right-radius: $border-radius !important;
+}
+
+// Bottom left
+.-bor-rad-bl-0 {
+    border-bottom-left-radius: 0 !important;
+}
+
+.-bor-rad-bl-1 {
+    border-bottom-left-radius: $border-radius !important;
+}
+
+// Bottom right
+.-bor-rad-br-0 {
+    border-bottom-right-radius: 0 !important;
+}
+
+.-bor-rad-br-1 {
+    border-bottom-right-radius: $border-radius !important;
+}
+
+// Top left & right
+.-bor-rad-t-0 {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.-bor-rad-t-1 {
+    border-top-left-radius: $border-radius !important;
+    border-top-right-radius: $border-radius !important;
+}
+
+// Top right & bottom right
+.-bor-rad-r-0 {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.-bor-rad-r-1 {
+    border-top-right-radius: $border-radius !important;
+    border-bottom-right-radius: $border-radius !important;
+}
+
+// Bottom left & bottom right
+.-bor-rad-b-0 {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.-bor-rad-b-1 {
+    border-bottom-left-radius: $border-radius !important;
+    border-bottom-right-radius: $border-radius !important;
+}
+
+// Top left & bottom left
+.-bor-rad-l-0 {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.-bor-rad-l-1 {
+    border-top-left-radius: $border-radius !important;
+    border-bottom-left-radius: $border-radius !important;
+}

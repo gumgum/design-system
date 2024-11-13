@@ -1,0 +1,10 @@
+// -------------------------------------------------- //
+// Table variables
+// -------------------------------------------------- //
+$table-font-size-normal: ($unit * 0.8);
+
+$table-padding-extraloose: $unit * 2;
+$table-padding-loose: $unit;
+$table-padding-normal: ($unit * 0.5) $unit;
+$table-padding-tight: ($unit * 0.5) ($unit * 0.3);
+$table-padding-extratight: ($unit * 0.25) ($unit * 0.15);

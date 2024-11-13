@@ -1,4 +1,5 @@
-import '../public/styles/scss/index.scss';
+import '../styles/scss/index.scss';
+
 import { AppWrapper } from '../context/state';
 import { useRouter } from 'next/router';
 import Header from '../components/layout/Header';

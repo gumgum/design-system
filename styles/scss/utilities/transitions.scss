@@ -1,0 +1,35 @@
+.-transition-back-100 {
+    @include transition-back(all, 100ms);
+}
+
+.-transition-out-100 {
+    @include transition-ease-out(all, 100ms);
+}
+
+.-transition-in-100 {
+    @include transition-ease-in(all, 100ms);
+}
+
+.-transition-back-250 {
+    @include transition-back(all, 250ms);
+}
+
+.-transition-out-250 {
+    @include transition-ease-out(all, 250ms);
+}
+
+.-transition-in-250 {
+    @include transition-ease-in(all, 250ms);
+}
+
+.-transition-back-500 {
+    @include transition-back(all, 500ms);
+}
+
+.-transition-out-500 {
+    @include transition-ease-out(all, 500ms);
+}
+
+.-transition-in-500 {
+    @include transition-ease-in(all, 500ms);
+}

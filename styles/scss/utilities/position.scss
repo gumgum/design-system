@@ -1,0 +1,39 @@
+.-pos-abs {
+    position: absolute !important;
+}
+
+.-pos-rel {
+    position: relative !important;
+}
+
+.-pos-fix {
+    position: fixed !important;
+}
+
+.-pos-stc {
+    position: static !important;
+}
+
+.-abs-t-r {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+}
+
+.-abs-t-l {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+}
+
+.-abs-b-l {
+    position: absolute !important;
+    bottom: 0;
+    left: 0;
+}
+
+.-abs-b-r {
+    position: absolute !important;
+    bottom: 0;
+    right: 0;
+}

@@ -1,0 +1,103 @@
+// -------------------------------------------------- //
+// Mixins
+// -------------------------------------------------- //
+@mixin retina($width, $height) {
+    width: ($width * 0.5);
+    height: ($height * 0.5);
+    background-size: ($width * 0.5) ($height * 0.5);
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: ' ';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin no-select() {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin createNubbin($direction, $size, $baseColor, $borderColor) {
+    &:before,
+    &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-style: solid;
+        border-color: transparent;
+    }
+    @if $direction == 'left' {
+        &:before {
+            top: calc(50% - #{$size});
+            right: calc(100% + 1px);
+            border-top: $size solid transparent;
+            border-bottom: $size solid transparent;
+            border-right: #{$size + 1px} solid $borderColor;
+        }
+        &:after {
+            top: calc(50% - #{$size});
+            right: 100%;
+            border-top: $balloon-arrow-size solid transparent;
+            border-bottom: $balloon-arrow-size solid transparent;
+            border-right: $balloon-arrow-size solid $baseColor;
+        }
+    }
+    @if $direction == 'right' {
+        &:before {
+            top: calc(50% - #{$size});
+            left: calc(100% + 1px);
+            border-top: $size solid transparent;
+            border-bottom: $size solid transparent;
+            border-left: #{$size + 1px} solid $borderColor;
+        }
+        &:after {
+            top: calc(50% - #{$size});
+            left: 100%;
+            border-top: $balloon-arrow-size solid transparent;
+            border-bottom: $balloon-arrow-size solid transparent;
+            border-left: $balloon-arrow-size solid $baseColor;
+        }
+    }
+    @if $direction == 'up' {
+        &:before {
+            left: calc(50% - #{$size});
+            bottom: calc(100% + 1px);
+            border-left: $size solid transparent;
+            border-right: $size solid transparent;
+            border-bottom: #{$size + 1px} solid $borderColor;
+        }
+        &:after {
+            left: calc(50% - #{$size});
+            bottom: 100%;
+            border-left: $balloon-arrow-size solid transparent;
+            border-right: $balloon-arrow-size solid transparent;
+            border-bottom: $balloon-arrow-size solid $baseColor;
+        }
+    }
+    @if $direction == 'down' {
+        &:before {
+            left: calc(50% - #{$size});
+            top: calc(100% + 1px);
+            border-left: $size solid transparent;
+            border-right: $size solid transparent;
+            border-top: #{$size + 1px} solid $borderColor;
+        }
+        &:after {
+            left: calc(50% - #{$size});
+            top: 100%;
+            border-left: $balloon-arrow-size solid transparent;
+            border-right: $balloon-arrow-size solid transparent;
+            border-top: $balloon-arrow-size solid $baseColor;
+        }
+    }
+}

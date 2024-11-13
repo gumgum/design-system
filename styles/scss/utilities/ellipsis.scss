@@ -1,0 +1,56 @@
+.-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// Breakpoint-specific
+@media #{$phone-width} {
+    .-ellipsis--xs,
+    .-ellipsis--sm,
+    .-ellipsis--md,
+    .-ellipsis--lg,
+    .-ellipsis--xl {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media #{$phablet-width} {
+    .-ellipsis--sm,
+    .-ellipsis--md,
+    .-ellipsis--lg,
+    .-ellipsis--xl {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media #{$tablet-width} {
+    .-ellipsis--md,
+    .-ellipsis--lg,
+    .-ellipsis--xl {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media #{$laptop-width} {
+    .-ellipsis--lg,
+    .-ellipsis--xl {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media #{$desktop-width} {
+    .-ellipsis--xl {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

@@ -1,0 +1,166 @@
+@each $index2, $spacing in $spacings {
+    // Standard
+    .-m-r-#{$spacing} {
+        margin-right: #{nth($increments, ($index2 + 1))} !important;
+    }
+    .-m-l-#{$spacing} {
+        margin-left: #{nth($increments, ($index2 + 1))} !important;
+    }
+
+    .-m-t-#{$spacing} {
+        margin-top: #{nth($increments, ($index2 + 1))} !important;
+    }
+
+    .-m-b-#{$spacing} {
+        margin-bottom: #{nth($increments, ($index2 + 1))} !important;
+    }
+
+    .-m-v-#{$spacing} {
+        margin-top: #{nth($increments, ($index2 + 1))} !important;
+        margin-bottom: #{nth($increments, ($index2 + 1))} !important;
+    }
+
+    .-m-h-#{$spacing} {
+        margin-left: #{nth($increments, ($index2 + 1))} !important;
+        margin-right: #{nth($increments, ($index2 + 1))} !important;
+    }
+
+    .-m-a-#{$spacing} {
+        margin: #{nth($increments, ($index2 + 1))} !important;
+    }
+
+    .-p-r-#{$spacing} {
+        padding-right: #{nth($increments, ($index2 + 1))} !important;
+    }
+
+    .-p-l-#{$spacing} {
+        padding-left: #{nth($increments, ($index2 + 1))} !important;
+    }
+
+    .-p-t-#{$spacing} {
+        padding-top: #{nth($increments, ($index2 + 1))} !important;
+    }
+
+    .-p-b-#{$spacing} {
+        padding-bottom: #{nth($increments, ($index2 + 1))} !important;
+    }
+
+    .-p-v-#{$spacing} {
+        padding-top: #{nth($increments, ($index2 + 1))} !important;
+        padding-bottom: #{nth($increments, ($index2 + 1))} !important;
+    }
+
+    .-p-h-#{$spacing} {
+        padding-left: #{nth($increments, ($index2 + 1))} !important;
+        padding-right: #{nth($increments, ($index2 + 1))} !important;
+    }
+
+    .-p-a-#{$spacing} {
+        padding: #{nth($increments, ($index2 + 1))} !important;
+    }
+}
+
+.-m-h-c {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+// Breakpoint-specific
+@each $index2, $affix in $affixes {
+    $bp: unquote(nth($breakpoints, $index2));
+
+    .-m-h-c-#{$affix} {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    @each $index, $spacing in $spacings {
+        .-m-r-#{$spacing}-#{$affix} {
+            @media #{$bp} {
+                margin-right: #{nth($increments, ($index + 1))} !important;
+            }
+        }
+
+        .-m-l-#{$spacing}-#{$affix} {
+            @media #{$bp} {
+                margin-left: #{nth($increments, ($index + 1))} !important;
+            }
+        }
+
+        .-m-t-#{$spacing}-#{$affix} {
+            @media #{$bp} {
+                margin-top: #{nth($increments, ($index + 1))} !important;
+            }
+        }
+
+        .-m-b-#{$spacing}-#{$affix} {
+            @media #{$bp} {
+                margin-bottom: #{nth($increments, ($index + 1))} !important;
+            }
+        }
+
+        .-m-v-#{$spacing}-#{$affix} {
+            @media #{$bp} {
+                margin-top: #{nth($increments, ($index + 1))} !important;
+                margin-bottom: #{nth($increments, ($index + 1))} !important;
+            }
+        }
+
+        .-m-h-#{$spacing}-#{$affix} {
+            @media #{$bp} {
+                margin-left: #{nth($increments, ($index + 1))} !important;
+                margin-right: #{nth($increments, ($index + 1))} !important;
+            }
+        }
+
+        .-m-a-#{$spacing}-#{$affix} {
+            @media #{$bp} {
+                margin: #{nth($increments, ($index + 1))} !important;
+            }
+        }
+
+        .-p-r-#{$spacing}-#{$affix} {
+            @media #{$bp} {
+                padding-right: #{nth($increments, ($index + 1))} !important;
+            }
+        }
+
+        .-p-l-#{$spacing}-#{$affix} {
+            @media #{$bp} {
+                padding-left: #{nth($increments, ($index + 1))} !important;
+            }
+        }
+
+        .-p-t-#{$spacing}-#{$affix} {
+            @media #{$bp} {
+                padding-top: #{nth($increments, ($index + 1))} !important;
+            }
+        }
+
+        .-p-b-#{$spacing}-#{$affix} {
+            @media #{$bp} {
+                padding-bottom: #{nth($increments, ($index + 1))} !important;
+            }
+        }
+
+        .-p-v-#{$spacing}-#{$affix} {
+            @media #{$bp} {
+                padding-top: #{nth($increments, ($index + 1))} !important;
+                padding-bottom: #{nth($increments, ($index + 1))} !important;
+            }
+        }
+
+        .-p-h-#{$spacing}-#{$affix} {
+            @media #{$bp} {
+                padding-left: #{nth($increments, ($index + 1))} !important;
+                padding-right: #{nth($increments, ($index + 1))} !important;
+            }
+        }
+
+        .-p-a-#{$spacing}-#{$affix} {
+            @media #{$bp} {
+                padding: #{nth($increments, ($index + 1))} !important;
+            }
+        }
+    }
+} ;

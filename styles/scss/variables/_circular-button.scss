@@ -1,0 +1,52 @@
+// -------------------------------------------------- //
+// Circular Button variables
+// -------------------------------------------------- //
+$c-btn-font-size-xsmall: $font-size-minus-3;
+$c-btn-font-size-small: $font-size-minus-2;
+$c-btn-font-size-normal: $font-size;
+$c-btn-font-size-large: $font-size-plus-3;
+
+$c-btn-padding-xsmall: ($unit * 0.45) ($unit * 0.45) ($unit * 0.5) ($unit * 0.5);
+$c-btn-padding-small: ($unit * 0.6) ($unit * 0.6) ($unit * 0.7) ($unit * 0.7);
+$c-btn-padding-normal: ($unit * 1.1);
+$c-btn-padding-large: ($unit * 1.35) ($unit * 1.35);
+
+$c-btn-padding-h: $unit !default;
+$c-btn-padding-v: ($unit * 0.375) !default;
+$c-btn-font-weight: normal !default;
+
+$c-btn-primary-color: white !default;
+$c-btn-primary-bg: $primaryColor !default;
+$c-btn-primary-border: $primaryDark1Color !default;
+
+$c-btn-secondary-color: $gg-dark-3 !default;
+$c-btn-secondary-bg: #fff !default;
+$c-btn-secondary-border: #ccc !default;
+
+$c-btn-info-color: #fff !default;
+$c-btn-info-bg: $infoLight1Color !default;
+$c-btn-info-border: $infoLight2Color !default;
+
+$c-btn-success-color: #fff !default;
+$c-btn-success-bg: $successColor !default;
+$c-btn-success-border: $successDark1Color !default;
+
+$c-btn-warning-color: #fff !default;
+$c-btn-warning-bg: $warningColor !default;
+$c-btn-warning-border: $warningDark1Color !default;
+
+$c-btn-danger-color: #fff !default;
+$c-btn-danger-bg: $dangerColor !default;
+$c-btn-danger-border: $dangerDark1Color !default;
+
+$c-btn-link-disabled-color: $gg-light-3 !default;
+
+$c-btn-padding-h-sm: ($unit * 0.75) !default;
+$c-btn-padding-v-sm: ($unit * 0.25) !default;
+
+$c-btn-padding-h-lg: ($unit * 1.25) !default;
+$c-btn-padding-v-lg: ($unit * 0.75) !default;
+
+// Allows for customizing button radius independently from global border radius
+$c-btn-border-width: 1px;
+$c-btn-border-radius: $border-radius;

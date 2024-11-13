@@ -1,0 +1,146 @@
+.-block {
+    display: block !important;
+}
+
+.-inline-block {
+    display: inline-block !important;
+}
+
+.-flex {
+    display: flex !important;
+}
+
+.-none,
+.-sr-only {
+    display: none !important;
+}
+
+.-vis-hidden {
+    visibility: hidden !important;
+}
+
+// Breakpoint-specific
+@media #{$phone-width} {
+    .-block--xs,
+    .-block--sm,
+    .-block--md,
+    .-block--lg,
+    .-block--xl {
+        display: block !important;
+    }
+
+    .-inline-block--xs,
+    .-inline-block--sm,
+    .-inline-block--md,
+    .-inline-block--lg,
+    .-inline-block--xl {
+        display: inline-block !important;
+    }
+
+    .-none--xs,
+    .-none--sm,
+    .-none--md,
+    .-none--lg,
+    .-none--xl {
+        display: none !important;
+    }
+    .-flex--xs,
+    .-flex--sm,
+    .-flex--md,
+    .-flex--lg,
+    .-flex--xl {
+        display: flex !important;
+    }
+}
+
+@media #{$phablet-width} {
+    .-block--sm,
+    .-block--md,
+    .-block--lg,
+    .-block--xl {
+        display: block !important;
+    }
+
+    .-inline-block--sm,
+    .-inline-block--md,
+    .-inline-block--lg,
+    .-inline-block--xl {
+        display: inline-block !important;
+    }
+
+    .-none--sm,
+    .-none--md,
+    .-none--lg,
+    .-none--xl {
+        display: none !important;
+    }
+    .-flex--sm,
+    .-flex--md,
+    .-flex--lg,
+    .-flex--xl {
+        display: flex !important;
+    }
+}
+
+@media #{$tablet-width} {
+    .-block--md,
+    .-block--lg,
+    .-block--xl {
+        display: block !important;
+    }
+
+    .-inline-block--md,
+    .-inline-block--lg,
+    .-inline-block--xl {
+        display: inline-block !important;
+    }
+
+    .-none--md,
+    .-none--lg,
+    .-none--xl {
+        display: none !important;
+    }
+    .-flex--md,
+    .-flex--lg,
+    .-flex--xl {
+        display: flex !important;
+    }
+}
+
+@media #{$laptop-width} {
+    .-block--lg,
+    .-block--xl {
+        display: block !important;
+    }
+
+    .-inline-block--lg,
+    .-inline-block--xl {
+        display: inline-block !important;
+    }
+
+    .-none--lg,
+    .-none--xl {
+        display: none !important;
+    }
+    .-flex--lg,
+    .-flex--xl {
+        display: flex !important;
+    }
+}
+
+@media #{$desktop-width} {
+    .-block--xl {
+        display: block !important;
+    }
+
+    .-inline-block--xl {
+        display: inline-block !important;
+    }
+
+    .-none--xl {
+        display: none !important;
+    }
+    .-flex--xl {
+        display: flex !important;
+    }
+}
