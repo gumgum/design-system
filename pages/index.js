@@ -5,8 +5,9 @@ import { getSortedDocsData } from '../utils/docs';
 import Head from 'next/head';
 import { APP_NAME } from '../utils'
 
-export async function getStaticProps() {
-    const allPostsData = getSortedDocsData();
+export async function getServerSideProps() {
+    const fs = await import('fs').then(mod => mod.default);
+    const allPostsData = getSortedDocsData(fs);
     return {
         props: {
             allPostsData,
@@ -15,10 +16,11 @@ export async function getStaticProps() {
 }
 
 export default function AllDocsPage({ allPostsData }) {
+    const pageTitle = APP_NAME;
     return (
         <>
             <Head>
-                <title>{APP_NAME}</title>
+                <title>{pageTitle}</title>
             </Head>
             <PageTitle title={APP_NAME} />
             <Card>

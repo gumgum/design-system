@@ -1,5 +1,5 @@
 // if login page then do not load this component
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/compat/router';
 import { hideForLogin } from '../../utils/helper';
 
 export default function Right({ children }) {

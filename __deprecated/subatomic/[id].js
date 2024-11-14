@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import PageTitle from '../../components/common/title/pageTitle';
-import { getAllDocIds, getDocData } from '../../utils/docs';
+import PageTitle from '../../../components/common/title/pageTitle';
+import { getAllDocIds, getDocData } from '../../../utils/docs';
 
 export default function DocsPage({ docData }) {
     return (

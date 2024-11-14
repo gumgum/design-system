@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import PageTitle from '../../../components/common/title/pageTitle';
-import { getAllDocIds, getDocData } from '../../../utils/docs';
+import { getDocData } from '../../../utils/docs';
 import { useState, useEffect } from 'react';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import { themes } from 'prism-react-renderer';
@@ -18,12 +18,14 @@ export default function DocsPage({ docData }) {
             setData(response);
             setCode(response.code);
         }
-    }, [docData.id]);
+    }, [docData.id, docData.section]);
+
+    const pageTitle = docData.title + ' | ' + APP_NAME;
 
     return (
         <>
             <Head>
-                <title>{docData.title} | {APP_NAME}</title>
+                <title>{pageTitle}</title>
             </Head>
             <section style={{ minHeight: 'calc(100vh - 113px)' }}>
                 <PageTitle title={docData.title} />
@@ -58,16 +60,9 @@ export default function DocsPage({ docData }) {
     );
 }
 
-export async function getStaticPaths() {
-    const paths = getAllDocIds(); // This should return paths in the format of [{ params: { type: 'atom', id: 'componentId' } }]
-    return {
-        paths,
-        fallback: false,
-    };
-}
-
-export async function getStaticProps({ params }) {
-    const docData = await getDocData(params.id);
+export async function getServerSideProps({ params }) {
+    const fs = await import('fs').then(mod => mod.default);
+    const docData = await getDocData(fs, params.id);
     return {
         props: {
             docData,

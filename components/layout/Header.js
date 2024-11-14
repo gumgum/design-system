@@ -1,9 +1,10 @@
 import { useState } from 'react';
 // if login page then do not load this component
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/compat/router';
 import { hideForLogin } from '../../utils/helper';
 import Link from 'next/link';
 import { useAppContext } from '../../context/state';
+import { APP_NAME } from '../../utils';
 
 export default function Header() {
     const [subNav, setSubNav] = useState(false);
@@ -124,7 +125,7 @@ export default function Header() {
                 onClick={() => setLeftNav(!leftNav)}></button>
             <Link href="/" className="gds-nav__logo"></Link>
             <Link href="/" className="gds-nav__title gds-nav__item--grow-0">
-                Design System
+                {APP_NAME}
             </Link>
         </header>
     );

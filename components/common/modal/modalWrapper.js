@@ -54,7 +54,7 @@
 //   );
 // }
 
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/compat/router';
 import { Modal, ModalBody, ModalForm, ModalHeader } from 'gumdrops';
 
 export default function ModalWrapper({ isOpen, content, title }) {

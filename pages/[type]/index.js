@@ -4,15 +4,19 @@ import { getSectionDocsData } from '../../utils/docs';
 import { Card, CardBlock } from 'gumdrops';
 import Head from 'next/head';
 import { APP_NAME } from '../../utils'
+import { navItems } from '../../utils/nav'
 
-export async function getStaticPaths() {
-    const types = ['atoms', 'molecules', 'subatomic', 'utilities', 'organisms', 'pages'];
-    const paths = types.map(type => ({ params: { type } }));
-    return { paths, fallback: false };
-}
+export async function getServerSideProps({ params }) {
 
-export async function getStaticProps({ params }) {
-    const allPostsData = getSectionDocsData(params.type);
+    if (navItems.filter(item => item.url === `/${params.type}`).length === 0) {
+        return {
+            notFound: true,
+        };
+    }
+
+    const fs = await import('fs').then(mod => mod.default);
+    const allPostsData = getSectionDocsData(fs, params.type);
+
     return {
         props: {
             allPostsData,
@@ -22,10 +26,13 @@ export async function getStaticProps({ params }) {
 }
 
 export default function AllDocsPage({ allPostsData, params }) {
+    const capitalizedType = params?.type ? params.type.charAt(0).toUpperCase() + params.type.slice(1) : '';
+    const pageTitle = capitalizedType + ' | ' + APP_NAME;
+
     return (
         <>
             <Head>
-                <title>{params?.type} | {APP_NAME}</title>
+                <title>{pageTitle}</title>
             </Head>
 
             <section style={{ minHeight: 'calc(100vh - 113px)' }}>

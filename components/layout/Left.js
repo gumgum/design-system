@@ -1,41 +1,10 @@
 // if login page then do not load this component
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/compat/router';
 import { hideForLogin } from '../../utils/helper';
 import { useAppContext } from '../../context/state';
+import { navItems } from '../../utils/nav'
 
-const navItems = [
-    {
-        title: 'Subatomic',
-        url: '/subatomic',
-        icon: 'atom',
-    },
-    {
-        title: 'Atoms',
-        url: '/atoms',
-        icon: 'bacterium',
-    },
-    {
-        title: 'Molecules',
-        url: '/molecules',
-        icon: 'bacteria',
-    },
-    {
-        title: 'Organisms',
-        url: '/organisms',
-        icon: 'dna',
-    },
-    {
-        title: 'Pages',
-        url: '/pages',
-        icon: 'desktop',
-    },
-    {
-        title: 'Utilities',
-        url: '/utilities',
-        icon: 'wrench',
-    },
-];
 
 export default function Left() {
     const router = useRouter();

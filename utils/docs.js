@@ -1,4 +1,3 @@
-import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
@@ -6,7 +5,7 @@ import html from 'remark-html';
 
 const docsDirectory = path.join(process.cwd(), 'docs');
 
-export function getSortedDocsData() {
+export function getSortedDocsData(fs) {
     // Get file names under /posts
     const fileNames = fs.readdirSync(docsDirectory);
     const allPostsData = fileNames.map(fileName => {
@@ -39,7 +38,7 @@ export function getSortedDocsData() {
     });
 }
 
-export function getSectionDocsData(section) {
+export function getSectionDocsData(fs, section) {
     // Get file names under /posts
     const fileNames = fs.readdirSync(docsDirectory);
     const allPostsData = fileNames.map(fileName => {
@@ -80,7 +79,7 @@ export function getAllDocIds() {
     });
 }
 
-export async function getDocData(id) {
+export async function getDocData(fs, id) {
     const fullPath = path.join(docsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 

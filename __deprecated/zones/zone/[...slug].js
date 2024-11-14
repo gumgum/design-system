@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/compat/router';
 import Link from 'next/link';
-import PageTitle from '../../../components/common/title/pageTitle';
-import Overview from '../../../components/zones/Overview';
-import Slots from '../../../components/zones/Slots';
-import Blocking from '../../../components/zones/Blocking';
+import PageTitle from '../../../../components/common/title/pageTitle';
+import Overview from '../../../../components/zones/Overview';
+import Slots from '../../../../components/zones/Slots';
+import Blocking from '../../../../components/zones/Blocking';
 
 const ZonePage = () => {
     const router = useRouter();

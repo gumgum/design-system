@@ -26,7 +26,7 @@
     "homepage": "https://github.com/gumgum/design-system#readme",
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
+        "build": "export NODE_ENV=production && next build",
         "start": "next start",
         "lint": "next lint",
         "lint:scss": "stylelint './styles/scss/**/*.scss'"

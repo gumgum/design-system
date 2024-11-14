@@ -1,8 +1,8 @@
-import { useRouter } from 'next/router';
-import PageTitle from '../../components/common/title/pageTitle';
+import { useRouter } from 'next/compat/router';
+import PageTitle from '../../../components/common/title/pageTitle';
 import { Button, Card, Table, Checkbox, TextInput } from 'gumdrops';
-import TableFooter from '../../components/common/table/TableFooter';
-import BulkMenu from '../../components/common/bulk/BulkMenu';
+import TableFooter from '../../../components/common/table/TableFooter';
+import BulkMenu from '../../../components/common/bulk/BulkMenu';
 
 const ActionIcons = () => {
     return (

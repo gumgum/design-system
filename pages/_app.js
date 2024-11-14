@@ -1,7 +1,7 @@
 import '../styles/scss/index.scss';
 
 import { AppWrapper } from '../context/state';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/compat/router';
 import Header from '../components/layout/Header';
 import Main from '../components/layout/Main';
 import Left from '../components/layout/Left';
