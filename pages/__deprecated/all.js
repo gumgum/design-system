@@ -16,10 +16,11 @@ export default function AllDocsPage({ allPostsData }) {
         <section>
             <PageTitle title="All Items" />
             <ul>
-                {allPostsData.map(({ id, title }) => (
+                {allPostsData.map(({ id, section, title }) => (
                     <li key={id}>
                         <Link href={`/docs/${id}`} className="gds-button--link">
                             {title}
+                            <span className="gds-badge">{section}</span>
                         </Link>
                     </li>
                 ))}

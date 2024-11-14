@@ -45,9 +45,8 @@ export default function Left() {
 
     return (
         <nav
-            className={`gds-app-layout__left gds-nav__side ${
-                leftNav ? 'gds-app-layout__left--open' : ''
-            }
+            className={`gds-app-layout__left gds-nav__side ${leftNav ? 'gds-app-layout__left--open' : ''
+                }
     ${leftNavCollapsed ? 'gds-nav__side--collapsed' : ''}
     `}>
             <div className="gds-nav__side--collapse-wrapper">
@@ -84,12 +83,12 @@ export default function Left() {
                     </a>
                 </li>
             </ul>
-            <div className="gds-nav__item--grow-0 -m-b-3">
+            {/* <div className="gds-nav__item--grow-0 -m-b-3">
                 <Link href="/login" className="gds-nav__link">
                     <i className={`fas  fa-sign-out-alt gds-nav__link-icon`} />
                     <span className="gds-nav__link-text">Logout</span>
                 </Link>
-            </div>
+            </div> */}
         </nav>
     );
 }

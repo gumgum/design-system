@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import PageTitle from '../../components/common/title/pageTitle';
-import { getSectionDocsData } from '../../utils/docs';
+import PageTitle from '../../../components/common/title/pageTitle';
+import { getSectionDocsData } from '../../../utils/docs';
 
-const section = 'pages';
+const section = 'subatomic';
 
 export async function getStaticProps() {
     const allPostsData = getSectionDocsData(section);

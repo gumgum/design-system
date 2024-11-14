@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import PageTitle from '../components/common/title/pageTitle';
-import { getSortedDocsData } from '../utils/docs';
+import PageTitle from '../../../components/common/title/pageTitle';
+import { getSortedDocsData } from '../../../utils/docs';
 
 export async function getStaticProps() {
     const allPostsData = getSortedDocsData();
@@ -16,11 +16,10 @@ export default function AllDocsPage({ allPostsData }) {
         <section>
             <PageTitle title="All Items" />
             <ul>
-                {allPostsData.map(({ id, section, title }) => (
+                {allPostsData.map(({ id, title }) => (
                     <li key={id}>
                         <Link href={`/docs/${id}`} className="gds-button--link">
                             {title}
-                            <span className="gds-badge">{section}</span>
                         </Link>
                     </li>
                 ))}

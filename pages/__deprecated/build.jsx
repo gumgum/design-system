@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Card } from 'gumdrops';
-import PageTitle from '../components/common/title/pageTitle';
+import PageTitle from '../../components/common/title/pageTitle';
 
 const RangeItems = [
     {
