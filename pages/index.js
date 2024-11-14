@@ -2,6 +2,8 @@ import { Card, CardBlock, Divider } from 'gumdrops';
 import Link from 'next/link';
 import PageTitle from '../components/common/title/pageTitle';
 import { getSortedDocsData } from '../utils/docs';
+import Head from 'next/head';
+import { APP_NAME } from '../utils'
 
 export async function getStaticProps() {
     const allPostsData = getSortedDocsData();
@@ -14,8 +16,11 @@ export async function getStaticProps() {
 
 export default function AllDocsPage({ allPostsData }) {
     return (
-        <section>
-            <PageTitle title="Concrete Design System" />
+        <>
+            <Head>
+                <title>{APP_NAME}</title>
+            </Head>
+            <PageTitle title={APP_NAME} />
             <Card>
                 <CardBlock>
                     <p className="-m-b-2">
@@ -36,6 +41,6 @@ export default function AllDocsPage({ allPostsData }) {
                     </ul>
                 </CardBlock>
             </Card>
-        </section>
+        </>
     );
 }
